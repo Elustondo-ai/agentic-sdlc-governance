@@ -1,0 +1,11 @@
+# Generated presentation exports and per-deck build evidence.
+/docs/presentations/*/build/
+# Historical central build output retained only until local migration is verified.
+/build/
+*.pptx
+*.ppt
+# Local Python tools and OS metadata.
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store

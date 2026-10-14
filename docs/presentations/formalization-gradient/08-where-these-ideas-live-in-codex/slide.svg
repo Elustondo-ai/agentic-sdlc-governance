@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><title>Where these ideas live in Codex</title><desc>AI-MODIFIED - 2026-09-28T14:23Z. SDLC2 formalization chapter. Draft for human review.</desc><rect width="1600" height="900" fill="white"/><rect width="1600" height="11" fill="#0b5ed7"/><defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1,1 L8,4.5 L1,8" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<text x="80" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">SDLC2  /  FORMALIZATION</text>
+<text x="1440" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">FG06</text>
+<text x="80" y="127" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#102447">Where these ideas live in Codex</text>
+<text x="82" y="173" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">A skill can coordinate judgment and executable mechanics</text>
+<rect x="82" y="244" width="440" height="161" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="104" y="282" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Project guidance</text>
+<text x="104" y="320" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">AGENTS.md</text>
+<text x="104" y="351" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Applicable instructions and scope</text>
+<rect x="602" y="244" width="436" height="161" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="624" y="282" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Reusable workflow</text>
+<text x="624" y="320" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">SKILL.md</text>
+<text x="624" y="351" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Task procedure and references</text>
+<rect x="1118" y="244" width="400" height="161" rx="8" fill="#eaf5f1" stroke="#08785e" stroke-width="2"/>
+<text x="1140" y="282" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#08785e">Callable capability</text>
+<text x="1140" y="320" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Tools and MCP</text>
+<text x="1140" y="351" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">External reads and actions</text>
+<path d="M522,324 H587" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<path d="M1038,324 H1103" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="326" y="510" width="440" height="157" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="348" y="548" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Schemas and validators</text>
+<text x="348" y="586" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Check record shape</text>
+<text x="348" y="617" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Check implemented conditions</text>
+<rect x="856" y="510" width="440" height="157" rx="8" fill="#eaf5f1" stroke="#08785e" stroke-width="2"/>
+<text x="878" y="548" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#08785e">Scripts</text>
+<text x="878" y="586" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Perform stable mechanics</text>
+<text x="878" y="617" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Return explicit outcomes</text>
+<path d="M740,405 V464 H546 V498" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<path d="M902,405 V464 H1076 V498" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<text x="85" y="741" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">SDLC2 mapping: instructions explain the policy; the skill coordinates; checks and controls enforce specifics.</text>
+<rect x="80" y="807" width="1440" height="58" rx="8" fill="#102447"/>
+<text x="102" y="845" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="white">Instructions guide behavior. Enforcement depends on actual checks and controls.</text>
+</svg>

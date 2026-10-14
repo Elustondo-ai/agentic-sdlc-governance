@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><title>The formalization gradient</title><desc>AI-MODIFIED - 2026-09-28T14:23Z. SDLC2 formalization chapter. Draft for human review.</desc><rect width="1600" height="900" fill="white"/><rect width="1600" height="11" fill="#0b5ed7"/><defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1,1 L8,4.5 L1,8" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<text x="80" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">SDLC2  /  FORMALIZATION</text>
+<text x="1440" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">FG02</text>
+<text x="80" y="127" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#102447">The formalization gradient</text>
+<text x="82" y="173" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">Increasing precision can coexist with ordinary language</text>
+<rect x="82" y="227" width="1436" height="80" rx="0" fill="#edf3fc"/>
+<text x="103" y="277" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0b5ed7">01</text>
+<text x="170" y="277" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#102447">Prose</text>
+<text x="550" y="277" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#102447">“Prepare the sprint for review.”</text>
+<text x="1250" y="276" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#516585">Intent and rationale</text>
+<rect x="82" y="322" width="1436" height="80" rx="0" fill="#edf3fc"/>
+<text x="103" y="372" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0b5ed7">02</text>
+<text x="170" y="372" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#102447">Defined vocabulary</text>
+<text x="550" y="372" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#102447">ReadyForReview has an agreed meaning</text>
+<text x="1250" y="371" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#516585">Shared concepts</text>
+<rect x="82" y="417" width="1436" height="80" rx="0" fill="#edf3fc"/>
+<text x="103" y="467" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0b5ed7">03</text>
+<text x="170" y="467" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#102447">Structured records</text>
+<text x="550" y="467" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#102447">Sprint ID, target state, evidence references</text>
+<text x="1250" y="466" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#516585">Required shape</text>
+<rect x="82" y="512" width="1436" height="80" rx="0" fill="#eaf5f1"/>
+<text x="103" y="562" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0b5ed7">04</text>
+<text x="170" y="562" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#102447">Contracts</text>
+<text x="550" y="562" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#102447">Allowed transition and required evidence</text>
+<text x="1250" y="561" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#08785e">Checkable conditions</text>
+<rect x="82" y="607" width="1436" height="80" rx="0" fill="#eaf5f1"/>
+<text x="103" y="657" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0b5ed7">05</text>
+<text x="170" y="657" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#102447">Executable behavior</text>
+<text x="550" y="657" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#102447">Validate the candidate and return a result</text>
+<text x="1250" y="656" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#08785e">Operational effect</text>
+<path d="M116,310 V320" fill="none" stroke="#0b5ed7" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M116,405 V415" fill="none" stroke="#0b5ed7" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M116,500 V510" fill="none" stroke="#0b5ed7" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M116,595 V605" fill="none" stroke="#0b5ed7" stroke-width="2" marker-end="url(#arr)"/>
+<text x="84" y="755" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">A skill may combine several levels. A formal contract may be more precise than its implementation.</text>
+<rect x="80" y="807" width="1440" height="58" rx="8" fill="#102447"/>
+<text x="102" y="845" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="white">Choose the representation for the ambiguity or failure you need to address.</text>
+</svg>

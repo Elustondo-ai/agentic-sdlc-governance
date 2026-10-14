@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<title>Why an adapter exists at all</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#0b5fea" stroke-width="2.2"/></marker></defs>
+<rect x="0" y="0" width="1600" height="900" rx="0" fill="#fff"/>
+<rect x="0" y="0" width="1600" height="9" rx="0" fill="#0b5fea"/>
+<text x="86" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#0b5fea">ASDLC  /  CODEX • CLAUDE • COPILOT</text>
+<text x="86" y="142" font-family="Inter,Arial,Helvetica,sans-serif" font-size="52" font-weight="760" fill="#102148">Why an adapter exists at all</text>
+<text x="88" y="190" font-family="Inter,Arial,Helvetica,sans-serif" font-size="25" font-weight="430" fill="#5f6f87">Codex and Copilot do not automatically scan arbitrary ASDLC directories.</text>
+<rect x="86" y="803" width="1428" height="62" rx="12" fill="#102148"/>
+<text x="114" y="844" font-family="Inter,Arial,Helvetica,sans-serif" font-size="24" font-weight="620" fill="#ffffff">One governing definition; small platform adapters; smoke-test both.</text>
+<text x="1506" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="600" fill="#5f6f87" text-anchor="end">06 / 13</text>
+<rect x="350" y="245" width="900" height="190" rx="22" fill="#eaf3ff" stroke="#98c0f7" stroke-width="2"/>
+<text x="800" y="295" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="780" fill="#0b5fea" text-anchor="middle">CANONICAL CAPABILITY</text>
+<text x="800" y="353" font-family="DejaVu Sans Mono,monospace" font-size="33" font-weight="700" fill="#102148" text-anchor="middle">asdlc/skills/&lt;name&gt;/</text>
+<text x="800" y="396" font-family="Inter,Arial,Helvetica,sans-serif" font-size="23" font-weight="440" fill="#5f6f87" text-anchor="middle">SKILL.md · docs · src · tests</text>
+<path d="M655 442 L450 535" fill="none" stroke="#0b5fea" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M945 442 L1150 535" fill="none" stroke="#0b5fea" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="100" y="544" width="653" height="202" rx="19" fill="#f5f8fc" stroke="#dbe4f1" stroke-width="1.6"/>
+<text x="130" y="593" font-family="Inter,Arial,Helvetica,sans-serif" font-size="28" font-weight="740" fill="#102148">Codex + Copilot</text>
+<text x="130" y="642" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="600" fill="#0b5fea">.agents/skills/&lt;name&gt;/SKILL.md</text>
+<text x="130" y="705" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#5f6f87">Thin forwarding entry</text>
+<rect x="845" y="544" width="653" height="202" rx="19" fill="#f5f8fc" stroke="#dbe4f1" stroke-width="1.6"/>
+<text x="875" y="593" font-family="Inter,Arial,Helvetica,sans-serif" font-size="28" font-weight="740" fill="#102148">Claude Code</text>
+<text x="875" y="642" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="600" fill="#0b5fea">.claude/skills/&lt;name&gt;/SKILL.md</text>
+<text x="875" y="705" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#5f6f87">Thin forwarding entry / symlink</text>
+</svg>

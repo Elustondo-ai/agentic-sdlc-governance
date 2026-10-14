@@ -1,0 +1,17 @@
+#!/bin/sh
+# Internal compatibility entry point; prefer ./asdg install. No network access or sudo.
+set -eu
+if [ "$#" -ne 0 ]; then
+    printf '%s\n' 'Usage: ./asdg install (no options)' >&2
+    exit 2
+fi
+ROOT=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
+if ! command -v python3 >/dev/null 2>&1; then
+    printf '%s\n' 'Python 3.9 or newer is required. Install Python, then rerun ./asdg install.' >&2
+    exit 1
+fi
+python3 -c 'import sys; sys.exit(0 if sys.version_info >= (3, 9) else 1)' || {
+    printf '%s\n' 'Python 3.9 or newer is required.' >&2
+    exit 1
+}
+exec python3 -B "$ROOT/asdlc/00-governance/src/cli_install.py"

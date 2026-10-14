@@ -1,0 +1,1 @@
+The product lifecycle preserves context, intent, the system model and its evidence over time. The sprint lifecycle governs a particular increment. A sprint may rely on existing intent and use cases; it does not automatically regenerate them. It needs to reference the relevant approved knowledge.

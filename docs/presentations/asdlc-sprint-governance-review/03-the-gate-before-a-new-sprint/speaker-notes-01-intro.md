@@ -1,0 +1,1 @@
+Before drafting and executing the next sprint, verify that the previous sprint has left a trustworthy integration baseline. This gate prevents agents from building new work on an ambiguous branch history.

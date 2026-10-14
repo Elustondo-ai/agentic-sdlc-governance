@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<title>Compatibility is measured, not assumed</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#0b5fea" stroke-width="2.2"/></marker></defs>
+<rect x="0" y="0" width="1600" height="900" rx="0" fill="#fff"/>
+<rect x="0" y="0" width="1600" height="9" rx="0" fill="#0b5fea"/>
+<text x="86" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#0b5fea">ASDLC  /  CODEX • CLAUDE • COPILOT</text>
+<text x="86" y="142" font-family="Inter,Arial,Helvetica,sans-serif" font-size="52" font-weight="760" fill="#102148">Compatibility is measured, not assumed</text>
+<text x="88" y="190" font-family="Inter,Arial,Helvetica,sans-serif" font-size="25" font-weight="430" fill="#5f6f87">A mapping table is a design; execution tests establish interoperability.</text>
+<rect x="86" y="803" width="1428" height="62" rx="12" fill="#102148"/>
+<text x="114" y="844" font-family="Inter,Arial,Helvetica,sans-serif" font-size="24" font-weight="620" fill="#ffffff">Run the same acceptance task in every supported runtime, then record differences.</text>
+<text x="1506" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="600" fill="#5f6f87" text-anchor="end">12 / 13</text>
+<rect x="88" y="241" width="1425" height="68" rx="12" fill="#102148"/>
+<text x="105" y="285" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="740" fill="#fff">Concept</text>
+<text x="420" y="285" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="740" fill="#fff">Codex</text>
+<text x="760" y="285" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="740" fill="#fff">Claude Code</text>
+<text x="1110" y="285" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="740" fill="#fff">GitHub Copilot</text>
+<rect x="88" y="318" width="1425" height="81" rx="8" fill="#f1f6fd"/>
+<text x="105" y="351" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="710" fill="#102148">Standing rules</text>
+<text x="420" y="351" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">AGENTS.md</text>
+<text x="760" y="351" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">AGENTS.md* /</text><text x="760" y="378" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">CLAUDE.md</text>
+<text x="1110" y="351" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">AGENTS.md /</text><text x="1110" y="378" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">.github/...</text>
+<rect x="88" y="406" width="1425" height="81" rx="8" fill="#fff"/>
+<text x="105" y="439" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="710" fill="#102148">Reusable skill</text>
+<text x="420" y="439" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">.agents/skills/</text>
+<text x="760" y="439" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">.claude/skills/</text>
+<text x="1110" y="439" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">.agents/skills/</text>
+<rect x="88" y="494" width="1425" height="81" rx="8" fill="#f1f6fd"/>
+<text x="105" y="527" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="710" fill="#102148">Named agent</text>
+<text x="420" y="527" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">.codex/agents/*.toml</text>
+<text x="760" y="527" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">.claude/agents/*.md</text>
+<text x="1110" y="527" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">.github/agents/*.agent.md</text>
+<rect x="88" y="582" width="1425" height="81" rx="8" fill="#fff"/>
+<text x="105" y="615" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="710" fill="#102148">Configuration</text>
+<text x="420" y="615" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">.codex/config.toml</text>
+<text x="760" y="615" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">.claude/settings.json</text>
+<text x="1110" y="615" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">IDE / CLI / GitHub</text><text x="1110" y="642" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">settings</text>
+<rect x="88" y="670" width="1425" height="81" rx="8" fill="#f1f6fd"/>
+<text x="105" y="703" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="710" fill="#102148">Tool</text><text x="105" y="730" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="710" fill="#102148">integrations</text>
+<text x="420" y="703" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">MCP / scripts</text>
+<text x="760" y="703" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">MCP / tools / hooks</text>
+<text x="1110" y="703" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="480" fill="#5f6f87">MCP / tools / hooks</text>
+<text x="104" y="767" font-family="Inter,Arial,Helvetica,sans-serif" font-size="19" font-weight="610" fill="#0b5fea">* Claude AGENTS.md is a fallback, subject to version and CLAUDE.md precedence.</text>
+</svg>

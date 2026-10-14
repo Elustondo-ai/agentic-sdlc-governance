@@ -1,0 +1,1 @@
+The article proposes memory, context graphs, risk scoring, specialist agents and rollback as ways to strengthen coding-agent systems. These are useful design patterns, not evidence that every repository needs a multi-agent team.

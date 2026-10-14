@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<title>Codex: five mechanisms, five readers</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#0b5fea" stroke-width="2.2"/></marker></defs>
+<rect x="0" y="0" width="1600" height="900" rx="0" fill="#fff"/>
+<rect x="0" y="0" width="1600" height="9" rx="0" fill="#0b5fea"/>
+<text x="86" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#0b5fea">ASDLC  /  CODEX • CLAUDE • COPILOT</text>
+<text x="86" y="142" font-family="Inter,Arial,Helvetica,sans-serif" font-size="52" font-weight="760" fill="#102148">Codex: five mechanisms, five readers</text>
+<text x="88" y="190" font-family="Inter,Arial,Helvetica,sans-serif" font-size="25" font-weight="430" fill="#5f6f87">Do not mistake a documented convention for a callable operation.</text>
+<rect x="86" y="803" width="1428" height="62" rx="12" fill="#102148"/>
+<text x="114" y="844" font-family="Inter,Arial,Helvetica,sans-serif" font-size="24" font-weight="620" fill="#ffffff">Descriptions guide behavior; tools and validators produce observable effects.</text>
+<text x="1506" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="600" fill="#5f6f87" text-anchor="end">02 / 13</text>
+<rect x="88" y="241" width="1425" height="64" rx="12" fill="#102148"/>
+<text x="104" y="284" font-family="Inter,Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#ffffff">Artifact / location</text>
+<text x="564" y="284" font-family="Inter,Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#ffffff">Who reads it</text>
+<text x="1013" y="284" font-family="Inter,Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#ffffff">Actual purpose</text>
+<rect x="88" y="318" width="1425" height="83" rx="8" fill="#f1f6fd"/>
+<text x="104" y="352" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="650" fill="#102148">AGENTS.md</text>
+<text x="564" y="352" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">Codex instruction loader</text>
+<text x="1013" y="352" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">Standing, scoped project</text><text x="1013" y="380" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">guidance</text>
+<rect x="88" y="409" width="1425" height="83" rx="8" fill="#fff"/>
+<text x="104" y="443" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="650" fill="#102148">SKILL.md  ·  .agents/skills/</text>
+<text x="564" y="443" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">Codex skill loader</text>
+<text x="1013" y="443" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">Conditional workflow +</text><text x="1013" y="471" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">resources</text>
+<rect x="88" y="500" width="1425" height="83" rx="8" fill="#f1f6fd"/>
+<text x="104" y="534" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="650" fill="#102148">*.toml  ·  .codex/agents/</text>
+<text x="564" y="534" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">Custom-agent loader</text>
+<text x="1013" y="534" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">Named spawned-agent</text><text x="1013" y="562" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">configuration</text>
+<rect x="88" y="591" width="1425" height="83" rx="8" fill="#fff"/>
+<text x="104" y="625" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="650" fill="#102148">config.toml  ·  .codex/</text>
+<text x="564" y="625" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">Codex configuration</text>
+<text x="1013" y="625" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">Defaults, overrides, subagent</text><text x="1013" y="653" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">settings</text>
+<rect x="88" y="682" width="1425" height="83" rx="8" fill="#f1f6fd"/>
+<text x="104" y="716" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="650" fill="#102148">Scripts / MCP tools</text>
+<text x="564" y="716" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">Shell / MCP runtime</text>
+<text x="1013" y="716" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">Real checks, data access,</text><text x="1013" y="744" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="430" fill="#5f6f87">side effects</text>
+</svg>

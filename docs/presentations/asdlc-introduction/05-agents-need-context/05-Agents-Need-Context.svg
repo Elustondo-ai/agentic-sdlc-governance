@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Agents cannot read our minds</title>
+<desc id="desc">Scattered knowledge and assumptions are organized into versioned project context: intent, use cases, architecture, policies, and current status. Agents use this context to produce code, tests, and questions.</desc>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#122142}
+.title{font-size:67px;font-weight:700;fill:#fff}
+.sub{font-size:29px;fill:#bfcfee}
+.kicker{font-size:22px;font-weight:700;letter-spacing:1px;fill:#8de5ee}
+.heading{font-size:29px;font-weight:700}
+.body{font-size:24px}
+.note{font-size:21px}
+.white{fill:#fff}.muted{fill:#a6b9db}.dark{fill:#122142}.blue{fill:#1767d2}.teal{fill:#0a836f}
+</style>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c2356"/><stop offset="1" stop-color="#081630"/></linearGradient>
+<linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eaf3ff"/></linearGradient>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto"><path d="M1 1L11 6 1 11" fill="none" stroke="#55c8e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<path d="M0 0H1600V12H0Z" fill="#50b9e9"/>
+<text x="95" y="100" class="title">Agents cannot read our minds</text>
+<text x="97" y="147" class="sub">A task needs the context that makes the right implementation possible.</text>
+
+<g transform="translate(92 236)">
+ <text x="0" y="0" class="kicker" fill="#e6a7a5">SCATTERED KNOWLEDGE</text>
+ <rect x="0" y="34" width="379" height="474" rx="18" fill="#142d5c" stroke="#526a9b" stroke-width="2"/>
+ <g font-size="24" font-weight="700" fill="#fff">
+  <rect x="26" y="60" width="258" height="67" rx="13" fill="#6f4e79"/><text x="49" y="104" class="white">Meeting notes</text>
+  <rect x="85" y="146" width="264" height="67" rx="13" fill="#73516d"/><text x="111" y="190" class="white">Unwritten intent</text>
+  <rect x="25" y="233" width="252" height="67" rx="13" fill="#6c536f"/><text x="49" y="276" class="white">Issue tracker</text>
+  <rect x="92" y="319" width="249" height="67" rx="13" fill="#765571"/><text x="119" y="363" class="white">Old diagrams</text>
+ </g>
+ <text x="27" y="452" class="note muted">Findable by people who were there.</text>
+ <text x="27" y="480" class="note muted">Incomplete for a new agent.</text>
+</g>
+<path d="M485 496H583" fill="none" stroke="#55c8e5" stroke-width="5" marker-end="url(#arrow)"/>
+<g transform="translate(617 221)">
+ <text x="0" y="0" class="kicker" fill="#69d7ed">SHARED PROJECT CONTEXT</text>
+ <rect x="0" y="30" width="491" height="526" rx="21" fill="url(#paper)" stroke="#70c6ed" stroke-width="4"/>
+ <path d="M32 99H458" stroke="#9bb9dd" stroke-width="2"/>
+ <text x="33" y="76" class="heading blue">In the repository</text>
+ <g class="body">
+  <circle cx="54" cy="147" r="8" fill="#206acf"/><text x="78" y="155">Intent and success criteria</text>
+  <circle cx="54" cy="218" r="8" fill="#206acf"/><text x="78" y="226">Use cases and system model</text>
+  <circle cx="54" cy="289" r="8" fill="#206acf"/><text x="78" y="297">Architecture and design</text>
+  <circle cx="54" cy="360" r="8" fill="#206acf"/><text x="78" y="368">Policies and quality gates</text>
+  <circle cx="54" cy="431" r="8" fill="#206acf"/><text x="78" y="439">Release and sprint status</text>
+ </g>
+ <path d="M32 467H458" stroke="#9bb9dd" stroke-width="2"/>
+ <text x="246" y="512" class="body teal" text-anchor="middle" font-weight="700">Versioned · scoped · reviewable</text>
+</g>
+<path d="M1127 496H1217" fill="none" stroke="#55c8e5" stroke-width="5" marker-end="url(#arrow)"/>
+<g transform="translate(1240 243)">
+ <text x="0" y="0" class="kicker" fill="#8ce7bd">AGENT WORK</text>
+ <circle cx="135" cy="139" r="80" fill="#123e70" stroke="#76d7e7" stroke-width="4"/>
+ <circle cx="109" cy="126" r="10" fill="#78e0ec"/><circle cx="160" cy="126" r="10" fill="#78e0ec"/>
+ <path d="M106 162Q135 182 164 162" fill="none" stroke="#78e0ec" stroke-width="6" stroke-linecap="round"/>
+ <path d="M135 57V35M119 35H151" stroke="#78e0ec" stroke-width="5" stroke-linecap="round"/>
+ <text x="18" y="285" class="body white">Implementation</text>
+ <text x="18" y="330" class="body white">Tests and evidence</text>
+ <text x="18" y="375" class="body white">Questions for humans</text>
+</g>
+<rect x="0" y="833" width="1600" height="67" fill="#1557a1"/>
+<text x="800" y="876" class="body white" font-weight="700" text-anchor="middle">Make the relevant knowledge available where agents work.</text>
+</svg>

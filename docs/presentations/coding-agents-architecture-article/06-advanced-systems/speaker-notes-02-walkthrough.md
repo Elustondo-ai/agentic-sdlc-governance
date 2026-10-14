@@ -1,0 +1,1 @@
+Memory keeps task history and architectural decisions. Risk controls change authority according to potential impact. Specialist review can provide independent checks when needed. Recovery preserves reversibility and auditability.

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><title>What is a domain-specific language?</title><desc>AI-MODIFIED - 2026-09-28T14:23Z. SDLC2 formalization chapter. Draft for human review.</desc><rect width="1600" height="900" fill="white"/><rect width="1600" height="11" fill="#0b5ed7"/><defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1,1 L8,4.5 L1,8" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<text x="80" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">SDLC2  /  FORMALIZATION</text>
+<text x="1440" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">FG03</text>
+<text x="80" y="127" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#102447">What is a domain-specific language?</text>
+<text x="82" y="173" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">A language for expressing concepts and operations within a bounded domain</text>
+<rect x="82" y="234" width="432" height="195" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="104" y="272" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Vocabulary</text>
+<text x="104" y="310" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Sprint</text>
+<text x="104" y="341" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Evidence</text>
+<text x="104" y="372" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Approval</text>
+<rect x="584" y="234" width="432" height="195" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="606" y="272" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Rules of expression</text>
+<text x="606" y="310" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">How terms form records</text>
+<text x="606" y="341" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">How requests name operations</text>
+<text x="606" y="372" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Which combinations are valid</text>
+<rect x="1086" y="234" width="432" height="195" rx="8" fill="#eaf5f1" stroke="#08785e" stroke-width="2"/>
+<text x="1108" y="272" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#08785e">Meaning and constraints</text>
+<text x="1108" y="310" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">What approval means</text>
+<text x="1108" y="341" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">When a state may change</text>
+<text x="1108" y="372" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">What evidence must establish</text>
+<text x="82" y="498" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#516585">Illustrative SDLC2 request</text>
+<text x="82" y="558" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" fill="#102447">Move</text>
+<path d="M82,578 H384" fill="none" stroke="#0b5ed7" stroke-width="3"/>
+<text x="82" y="616" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#0b5ed7">OPERATION</text>
+<text x="423" y="558" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" fill="#102447">sprint-007</text>
+<path d="M423,578 H725" fill="none" stroke="#0b5ed7" stroke-width="3"/>
+<text x="423" y="616" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#0b5ed7">SUBJECT</text>
+<text x="764" y="558" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" fill="#102447">to ReadyForReview</text>
+<path d="M764,578 H1066" fill="none" stroke="#0b5ed7" stroke-width="3"/>
+<text x="764" y="616" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#0b5ed7">TARGET STATE</text>
+<text x="1105" y="558" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" fill="#102447">using evidence-42</text>
+<path d="M1105,578 H1407" fill="none" stroke="#0b5ed7" stroke-width="3"/>
+<text x="1105" y="616" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#0b5ed7">EVIDENCE</text>
+<text x="82" y="706" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="400" fill="#102447">A glossary defines the words. A language also defines how expressions mean something.</text>
+<text x="82" y="745" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="400" fill="#102447">The same terms can appear inside English prose, diagrams, records and code.</text>
+<rect x="80" y="807" width="1440" height="58" rx="8" fill="#102447"/>
+<text x="102" y="845" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="white">Its SDLC2 role: preserve meaning between human intent and agent action.</text>
+</svg>

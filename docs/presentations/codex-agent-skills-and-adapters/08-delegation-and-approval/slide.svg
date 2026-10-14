@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<title>Delegation is a workflow; approval is a boundary</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#0b5fea" stroke-width="2.2"/></marker></defs>
+<rect x="0" y="0" width="1600" height="900" rx="0" fill="#fff"/>
+<rect x="0" y="0" width="1600" height="9" rx="0" fill="#0b5fea"/>
+<text x="86" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#0b5fea">ASDLC  /  CODEX • CLAUDE • COPILOT</text>
+<text x="86" y="142" font-family="Inter,Arial,Helvetica,sans-serif" font-size="52" font-weight="760" fill="#102148">Delegation is a workflow; approval is a boundary</text>
+<text x="88" y="190" font-family="Inter,Arial,Helvetica,sans-serif" font-size="25" font-weight="430" fill="#5f6f87">A custom agent runs only when selected and assigned a bounded task.</text>
+<rect x="86" y="803" width="1428" height="62" rx="12" fill="#102148"/>
+<text x="114" y="844" font-family="Inter,Arial,Helvetica,sans-serif" font-size="24" font-weight="620" fill="#ffffff">Review output does not imply approval, staging, commit, or push.</text>
+<text x="1506" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="600" fill="#5f6f87" text-anchor="end">08 / 13</text>
+<rect x="88" y="303" width="245" height="331" rx="18" fill="#f6f9fd" stroke="#dbe4f1" stroke-width="1.6"/>
+<rect x="88" y="303" width="245" height="12" rx="5" fill="#0b5fea"/>
+<text x="113" y="371" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="760" fill="#0b5fea">01</text>
+<text x="113" y="441" font-family="Inter,Arial,Helvetica,sans-serif" font-size="23" font-weight="750" fill="#102148">REQUEST</text>
+<text x="113" y="505" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#5f6f87">Human asks for</text><text x="113" y="539" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#5f6f87">review</text>
+<path d="M335 467 L367 467" fill="none" stroke="#0b5fea" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="375" y="303" width="245" height="331" rx="18" fill="#f6f9fd" stroke="#dbe4f1" stroke-width="1.6"/>
+<rect x="375" y="303" width="245" height="12" rx="5" fill="#008d86"/>
+<text x="400" y="371" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="760" fill="#0b5fea">02</text>
+<text x="400" y="441" font-family="Inter,Arial,Helvetica,sans-serif" font-size="23" font-weight="750" fill="#102148">DELEGATE</text>
+<text x="400" y="505" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#5f6f87">Coordinator</text><text x="400" y="539" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#5f6f87">spawns reviewer</text>
+<path d="M622 467 L654 467" fill="none" stroke="#0b5fea" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="662" y="303" width="245" height="331" rx="18" fill="#f6f9fd" stroke="#dbe4f1" stroke-width="1.6"/>
+<rect x="662" y="303" width="245" height="12" rx="5" fill="#0b5fea"/>
+<text x="687" y="371" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="760" fill="#0b5fea">03</text>
+<text x="687" y="441" font-family="Inter,Arial,Helvetica,sans-serif" font-size="23" font-weight="750" fill="#102148">INSPECT</text>
+<text x="687" y="505" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#5f6f87">Agent checks</text><text x="687" y="539" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#5f6f87">files + tests</text>
+<path d="M909 467 L941 467" fill="none" stroke="#0b5fea" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="949" y="303" width="245" height="331" rx="18" fill="#f6f9fd" stroke="#dbe4f1" stroke-width="1.6"/>
+<rect x="949" y="303" width="245" height="12" rx="5" fill="#7350bb"/>
+<text x="974" y="371" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="760" fill="#0b5fea">04</text>
+<text x="974" y="441" font-family="Inter,Arial,Helvetica,sans-serif" font-size="23" font-weight="750" fill="#102148">REPORT</text>
+<text x="974" y="505" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#5f6f87">Evidence and</text><text x="974" y="539" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#5f6f87">concerns</text>
+<path d="M1196 467 L1228 467" fill="none" stroke="#0b5fea" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="1236" y="303" width="245" height="331" rx="18" fill="#f6f9fd" stroke="#dbe4f1" stroke-width="1.6"/>
+<rect x="1236" y="303" width="245" height="12" rx="5" fill="#147d68"/>
+<text x="1261" y="371" font-family="Inter,Arial,Helvetica,sans-serif" font-size="22" font-weight="760" fill="#0b5fea">05</text>
+<text x="1261" y="441" font-family="Inter,Arial,Helvetica,sans-serif" font-size="23" font-weight="750" fill="#102148">DECIDE</text>
+<text x="1261" y="505" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#5f6f87">Human approves</text><text x="1261" y="539" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="400" fill="#5f6f87">or rejects</text>
+<text x="115" y="707" font-family="Inter,Arial,Helvetica,sans-serif" font-size="23" font-weight="530" fill="#5f6f87">What crosses a boundary: a specific candidate, tools, evidence, then a human decision.</text>
+</svg>

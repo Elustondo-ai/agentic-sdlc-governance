@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><title>Three languages working together</title><desc>AI-MODIFIED - 2026-09-28T14:23Z. SDLC2 formalization chapter. Draft for human review.</desc><rect width="1600" height="900" fill="white"/><rect width="1600" height="11" fill="#0b5ed7"/><defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1,1 L8,4.5 L1,8" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<text x="80" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">SDLC2  /  FORMALIZATION</text>
+<text x="1440" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">FG05</text>
+<text x="80" y="127" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#102447">Three languages working together</text>
+<text x="82" y="173" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">Product meaning, development governance and agent operation</text>
+<rect x="82" y="242" width="620" height="181" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="104" y="280" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">LifeBuckets: product domain</text>
+<text x="104" y="318" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Bucket, category, item, status</text>
+<text x="104" y="349" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">What the system represents and does</text>
+<rect x="898" y="242" width="620" height="181" rx="8" fill="#eaf5f1" stroke="#08785e" stroke-width="2"/>
+<text x="920" y="280" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#08785e">SDLC2: development domain</text>
+<text x="920" y="318" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Sprint, release, evidence, approval</text>
+<text x="920" y="349" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">How we govern changes to the system</text>
+<path d="M702,304 H884" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<text x="739" y="287" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#516585">change intent</text>
+<rect x="490" y="543" width="620" height="177" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="512" y="581" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Codex: operating mechanisms</text>
+<text x="512" y="619" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Project instructions, skills and tools</text>
+<text x="512" y="650" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">How the agent receives and performs work</text>
+<path d="M392,423 V492 H635 V530" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<path d="M1208,423 V492 H969 V530" fill="none" stroke="#08785e" stroke-width="3" marker-end="url(#arr)"/>
+<text x="85" y="479" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#516585">Product definitions</text>
+<text x="1234" y="478" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#516585">Workflow rules</text>
+<text x="83" y="763" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="400" fill="#516585">A LifeBuckets item status and an SDLC2 sprint status belong to different domains.</text>
+<rect x="80" y="807" width="1440" height="58" rx="8" fill="#102447"/>
+<text x="102" y="845" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="white">Keep SDLC2 meaning portable. Map it explicitly to the chosen agent platform.</text>
+</svg>

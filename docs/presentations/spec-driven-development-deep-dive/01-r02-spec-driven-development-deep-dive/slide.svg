@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><title>R02 — Spec Driven Development: comparison with SDLC2</title><desc>AI-MODIFIED - 2026-09-27T17:04:47Z. Practitioner reference by Neo Kim, September 27, 2026. A conceptual synthesis, not a measured effectiveness comparison.</desc><rect width="1600" height="900" fill="white"/><rect width="1600" height="11" fill="#0b5ed7"/><defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#0b5ed7" stroke-width="1.5"/></marker></defs>
+<text x="82" y="65" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#0b5ed7">ANNEX / R02 / PRACTITIONER REFERENCE</text>
+<text x="82" y="128" font-family="Arial, Helvetica, sans-serif" font-size="51" font-weight="700" fill="#102447">Spec Driven Development — A Deep Dive</text>
+<text x="84" y="169" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#516585">Neo Kim · The System Design Newsletter · 27 September 2026 · Blitzy case study</text>
+<text x="84" y="216" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#0b5ed7">A shared direction: make agent work inspectable before and after coding</text>
+<rect x="84" y="241" width="310" height="182" rx="16" fill="#edf3fc"/>
+<text x="104" y="276" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#0b5ed7">01</text>
+<text x="104" y="309" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#102447">System context</text>
+<text x="104" y="343" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#102447">Architecture and modules</text>
+<text x="104" y="372" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#102447">Dependencies and impact</text>
+<text x="104" y="401" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#102447">Code → structured context</text>
+<rect x="451" y="241" width="310" height="182" rx="16" fill="#edf3fc"/>
+<text x="471" y="276" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#0b5ed7">02</text>
+<text x="471" y="309" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#102447">Reviewed plan</text>
+<text x="471" y="343" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#102447">Intent, scope, constraints</text>
+<text x="471" y="372" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#102447">Changes and preservation</text>
+<text x="471" y="401" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#102447">Human review before code</text>
+<rect x="818" y="241" width="310" height="182" rx="16" fill="#edf3fc"/>
+<text x="838" y="276" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#0b5ed7">03</text>
+<text x="838" y="309" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#102447">Agent execution</text>
+<text x="838" y="343" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#102447">Dependency-aware work</text>
+<text x="838" y="372" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#102447">Implementation and checks</text>
+<text x="838" y="401" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#102447">Evidence against intent</text>
+<rect x="1185" y="241" width="330" height="182" rx="16" fill="#eaf5f1"/>
+<text x="1205" y="276" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#08785e">04</text>
+<text x="1205" y="309" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#102447">Human review</text>
+<text x="1205" y="343" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#102447">Guide + actual code diff</text>
+<text x="1205" y="372" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#102447">Delivered work and gaps</text>
+<text x="1205" y="401" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#102447">Run it. Test it. Decide.</text>
+<path d="M400,330 H438" stroke="#0b5ed7" stroke-width="3" marker-end="url(#a)"/>
+<path d="M767,330 H805" stroke="#0b5ed7" stroke-width="3" marker-end="url(#a)"/>
+<path d="M1134,330 H1172" stroke="#0b5ed7" stroke-width="3" marker-end="url(#a)"/>
+<path d="M1350,429 V463 H236 V434" fill="none" stroke="#08785e" stroke-width="2.5" stroke-dasharray="7 6"/>
+<rect x="492" y="442" width="604" height="40" rx="16" fill="white"/>
+<text x="511" y="468" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#08785e">Findings feed back into context, intent and the next plan</text>
+<path d="M84,496 H1515" stroke="#d7dfeb" stroke-width="2"/>
+<text x="84" y="538" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#102447">Where it meets SDLC2 — and what we formalize</text>
+<rect x="84" y="558" width="687" height="213" rx="16" fill="#edf3fc"/>
+<rect x="790" y="558" width="725" height="213" rx="16" fill="#eaf5f1"/>
+<text x="107" y="596" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#0b5ed7">Shared practices</text>
+<text x="107" y="635" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Structured knowledge to guide agents</text>
+<text x="107" y="668" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Human review of plans and delivered changes</text>
+<text x="107" y="701" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Generated explanations checked against real code</text>
+<text x="107" y="734" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Governance and monitoring remain necessary</text>
+<text x="813" y="596" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#08785e">Our repository-level operating model</text>
+<text x="813" y="635" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">12 steps in sprint + release; a product roadmap</text>
+<text x="813" y="668" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Module folders: HLD → LLD → types and contracts</text>
+<text x="813" y="701" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Human-only staging; mandatory code walkthrough</text>
+<text x="813" y="734" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Explicit state, policy conflicts and real-system UAT</text>
+<rect x="84" y="799" width="1431" height="65" rx="16" fill="#102b59"/>
+<text x="107" y="839" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="white">Adopt: dependency impact maps, preserved-behavior checks, explicit rule-conflict decisions.</text>
+</svg>

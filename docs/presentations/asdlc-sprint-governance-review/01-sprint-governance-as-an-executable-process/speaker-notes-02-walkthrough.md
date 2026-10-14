@@ -1,0 +1,1 @@
+Four ideas anchor the model. A precondition prevents starting on an uncertain baseline. A contract defines the authorized scope. Evidence proves what actually happened. The outcome is a reviewable increment, not simply a build that happened to pass.

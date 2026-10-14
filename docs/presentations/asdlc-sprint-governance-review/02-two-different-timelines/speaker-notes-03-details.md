@@ -1,0 +1,1 @@
+The distinction matters for agent prompts. The agent must know what knowledge is authoritative and separately what operation is permitted now. An old document being readable does not authorize a code change.

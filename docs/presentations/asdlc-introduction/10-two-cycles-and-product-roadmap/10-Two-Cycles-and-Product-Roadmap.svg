@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Two twelve-step cycles guided by a product roadmap</title>
+<desc id="desc">The product roadmap sets direction, sequence, and intended outcomes. Release and sprint are the two nested twelve-step cycles. Context flows inward and verified outcomes flow outward. Governance records the active release and sprint and their stages.</desc>
+<defs><style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#11254b}.kicker{font-size:21px;font-weight:700;letter-spacing:1.4px;fill:#1161d9}.title{font-size:52px;font-weight:700}.sub{font-size:23px;fill:#526585}.heading{font-size:29px;font-weight:700}.body{font-size:22px}.small{font-size:19px}.micro{font-size:17px;font-weight:700}.blue{fill:#0c5bdd}.green{fill:#08785a}.white{fill:#fff}
+</style><marker id="arr" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto"><path d="M1 1L11 6 1 11" fill="none" stroke="#1b64d3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="back" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto"><path d="M1 1L11 6 1 11" fill="none" stroke="#0d9474" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect width="1600" height="900" fill="#fff"/><rect width="1600" height="10" fill="#0b5fea"/>
+<text x="80" y="66" class="kicker">PILLAR 2  /  STRUCTURED KNOWLEDGE</text>
+<text x="80" y="132" class="title">Two cycles. One product roadmap.</text>
+<text x="82" y="168" class="sub">The roadmap sets direction. Release and sprint each run the twelve steps.</text>
+
+<rect x="116" y="195" width="675" height="602" rx="23" fill="#f2f7ff" stroke="#7ea9ee" stroke-width="4"/>
+<text x="454" y="236" class="heading blue" text-anchor="middle">PRODUCT ROADMAP</text>
+<text x="454" y="264" class="small" text-anchor="middle">direction · sequence · outcomes</text>
+<circle cx="454" cy="528" r="251" fill="#effaf7" stroke="#54b89e" stroke-width="5"/>
+<circle cx="454" cy="528" r="126" fill="#fff7e9" stroke="#e5ad5e" stroke-width="5"/>
+<text x="454" y="322" class="heading green" text-anchor="middle">RELEASE</text>
+<text x="454" y="350" class="small" text-anchor="middle">12 steps · milestone</text>
+<text x="454" y="508" class="heading" text-anchor="middle" fill="#aa6425">SPRINT</text>
+<text x="454" y="541" class="body" text-anchor="middle">12 steps</text>
+<text x="454" y="573" class="small" text-anchor="middle">focused increment</text>
+<path d="M771 480h71" stroke="#1b64d3" stroke-width="4" marker-end="url(#arr)"/>
+
+<rect x="864" y="210" width="635" height="437" rx="20" fill="#fff" stroke="#ccd9ef" stroke-width="2"/>
+<rect x="864" y="210" width="10" height="437" rx="5" fill="#0b5fea"/>
+<text x="901" y="255" class="heading blue">WHAT EACH LAYER RECORDS</text>
+<text x="901" y="315" class="heading">Roadmap</text><text x="1071" y="315" class="body">purpose, priorities, outcomes</text>
+<path d="M902 338h552" stroke="#dce5f3" stroke-width="2"/>
+<text x="901" y="382" class="heading green">Release</text><text x="1071" y="382" class="body">milestone, scope, readiness</text>
+<path d="M902 405h552" stroke="#dce5f3" stroke-width="2"/>
+<text x="901" y="449" class="heading" fill="#ad6b25">Sprint</text><text x="1071" y="449" class="body">focused intent, build, evidence</text>
+<path d="M902 474h552" stroke="#dce5f3" stroke-width="2"/>
+<rect x="900" y="510" width="550" height="97" rx="13" fill="#f2f7ff"/>
+<text x="924" y="546" class="micro blue">GOVERNANCE STATUS</text>
+<text x="924" y="580" class="body">Active release · sprint · current stage · review state</text>
+
+<rect x="862" y="682" width="637" height="125" rx="17" fill="#f2fbf7" stroke="#a5d7c2" stroke-width="2"/>
+<path d="M902 727h518" stroke="#1b64d3" stroke-width="4" marker-end="url(#arr)"/>
+<text x="906" y="710" class="micro blue">CONTEXT MOVES INWARD</text>
+<path d="M1420 766H902" stroke="#0d9474" stroke-width="4" marker-end="url(#back)"/>
+<text x="1198" y="793" class="micro green">EVIDENCE MOVES OUTWARD</text>
+<text x="80" y="849" class="body">Step 11 · Sprint: human acceptance in development / staging</text>
+<text x="850" y="849" class="body">Release: human acceptance in production</text>
+</svg>

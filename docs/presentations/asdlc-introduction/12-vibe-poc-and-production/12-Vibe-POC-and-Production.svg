@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Vibe is for proof of concept, production needs the full cycle</title>
+<desc id="desc">Proof of concept explores an uncertainty and records evidence. Production adds agreed behavior, quality gates, human review, user acceptance, and operation. High-level architecture proposes an approach before the proof of concept checks it.</desc>
+<defs><style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#14234b}.kicker{font-size:21px;font-weight:700;letter-spacing:1.3px;fill:#1161d9}.title{font-size:58px;font-weight:700}.sub{font-size:23px;fill:#526585}.panelhead{font-size:33px;font-weight:700}.section{font-size:23px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.number{font-size:20px;font-weight:700}.blue{fill:#0c5bdd}.purple{fill:#6c32ba}.white{fill:#fff}
+</style></defs>
+<rect width="1600" height="900" fill="#fff"/><rect width="1600" height="9" fill="#0b5fea"/>
+<text x="76" y="64" class="kicker">PILLAR 3  /  ITERATIVE</text>
+<text x="76" y="154" class="title">Vibe ≠ Production.</text>
+<text x="76" y="222" class="title blue">Vibe = POC.</text>
+<path d="M76 251h98" stroke="#0c5bdd" stroke-width="5" stroke-linecap="round"/>
+<text x="76" y="296" class="sub">Use a POC to explore a risk. Use the lifecycle to ship.</text>
+
+<rect x="76" y="359" width="596" height="322" rx="18" fill="#fff" stroke="#d5e0f1" stroke-width="2"/>
+<circle cx="128" cy="416" r="29" fill="#eaf2ff"/><path d="M112 425l13-18 11 10 11-18" fill="none" stroke="#0c5bdd" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="179" y="407" class="section">Start from an architectural question</text>
+<text x="179" y="437" class="small">What is still uncertain after high-level design?</text>
+<path d="M102 462h543" stroke="#dbe4f1" stroke-width="2"/>
+<circle cx="128" cy="520" r="29" fill="#eaf2ff"/><circle cx="128" cy="520" r="14" fill="none" stroke="#0c5bdd" stroke-width="3"/><circle cx="128" cy="520" r="4" fill="#0c5bdd"/>
+<text x="179" y="512" class="section">Build just enough to test it</text>
+<text x="179" y="542" class="small">Set a success criterion and gather evidence.</text>
+<path d="M102 568h543" stroke="#dbe4f1" stroke-width="2"/>
+<circle cx="128" cy="622" r="29" fill="#eaf2ff"/><path d="M113 623l10 10 21-24" fill="none" stroke="#0c5bdd" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="179" y="617" class="section">Keep the learning</text>
+<text x="179" y="647" class="small">Change the design if the evidence says so.</text>
+
+<rect x="733" y="209" width="375" height="472" rx="20" fill="#faf6ff" stroke="#d7c8ed" stroke-width="2.3"/>
+<rect x="733" y="209" width="375" height="9" rx="4" fill="#6c32ba"/>
+<path d="M898 258v31l-17 27q-8 14 7 17h65q15-3 7-17l-17-27v-31" fill="none" stroke="#6c32ba" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M895 286h50m-48 28h46" stroke="#6c32ba" stroke-width="3"/>
+<text x="920" y="385" text-anchor="middle" class="panelhead purple">VIBE / POC</text>
+<path d="M839 405h163" stroke="#b490df" stroke-width="3"/>
+<text x="783" y="452" class="body">Explore a specific uncertainty</text>
+<text x="783" y="497" class="body">Implement quickly</text>
+<text x="783" y="542" class="body">Check a success criterion</text>
+<text x="783" y="587" class="body">Record the learning</text>
+<rect x="782" y="620" width="278" height="43" rx="10" fill="#6c32ba"/>
+<text x="921" y="649" text-anchor="middle" class="section white">LEARN</text>
+
+<rect x="1126" y="209" width="399" height="472" rx="20" fill="#f3f8ff" stroke="#bdd6fb" stroke-width="2.3"/>
+<rect x="1126" y="209" width="399" height="9" rx="4" fill="#0c5bdd"/>
+<path d="M1325 251l39 16v33c0 30-17 48-39 61-22-13-39-31-39-61v-33z" fill="none" stroke="#0c5bdd" stroke-width="4" stroke-linejoin="round"/><path d="M1308 303l13 13 26-28" fill="none" stroke="#0c5bdd" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1325" y="385" text-anchor="middle" class="panelhead blue">PRODUCTION</text>
+<path d="M1239 405h171" stroke="#72a8f3" stroke-width="3"/>
+<text x="1174" y="452" class="body">Meet agreed behavior</text>
+<text x="1174" y="497" class="body">Pass quality and security checks</text>
+<text x="1174" y="542" class="body">Human review and acceptance</text>
+<text x="1174" y="587" class="body">Deploy, observe, support</text>
+<rect x="1180" y="620" width="289" height="43" rx="10" fill="#0c5bdd"/>
+<text x="1325" y="649" text-anchor="middle" class="section white">SHIP &amp; OPERATE</text>
+
+<circle cx="1117" cy="447" r="29" fill="#fff" stroke="#d8dfee" stroke-width="2"/>
+<text x="1117" y="455" text-anchor="middle" class="number">VS</text>
+
+<rect x="76" y="728" width="1449" height="113" rx="18" fill="#f3f7ff" stroke="#c9d9f3" stroke-width="2"/>
+<text x="105" y="772" class="section">Step 5 proposes the architecture. Step 6 tests a risky assumption.</text>
+<text x="105" y="813" class="body">The later steps determine whether the resulting change is ready for people to use.</text>
+</svg>

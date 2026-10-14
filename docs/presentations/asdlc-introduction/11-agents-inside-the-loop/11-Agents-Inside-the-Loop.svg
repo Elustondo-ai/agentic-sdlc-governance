@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Agents work inside the SDLC loop</title>
+<desc id="desc">Steps one through eight establish intent, tests, and design. Agents iterate on code and tests in step nine. A human deeply reviews and approves the changes in step ten, then tests them in a real system in step eleven. Step twelve returns evidence and learning to the next pass. A sprint uses development or staging; a release uses production.</desc>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#14234b}.kicker{font-size:21px;font-weight:700;letter-spacing:1.3px;fill:#1161d9}.title{font-size:53px;font-weight:700}.subtitle{font-size:23px;fill:#516483}.number{font-size:25px;font-weight:700}.head{font-size:22px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.white{fill:#fff}.blue{fill:#115bd3}.violet{fill:#6733b5}.orange{fill:#cb541e}.green{fill:#08785a}
+</style>
+<marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" viewBox="0 0 12 12"><path d="M1 1L11 6 1 11" fill="none" stroke="#165ed3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="back" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" viewBox="0 0 12 12"><path d="M1 1L11 6 1 11" fill="none" stroke="#0d9073" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="turn" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" viewBox="0 0 10 10"><path d="M1 1L9 5 1 9" fill="none" stroke="#d36d3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="1600" height="900" fill="#fff"/><rect width="1600" height="9" fill="#1265e8"/>
+<text x="76" y="65" class="kicker">PILLAR 3  /  ITERATIVE</text>
+<text x="76" y="132" class="title">AI works best inside the loop</text>
+<text x="78" y="173" class="subtitle">Project context guides the agent. Human review and real-world results steer the next pass.</text>
+
+<!-- Four distinct responsibilities: the first card groups steps that establish direction. -->
+<rect x="75" y="245" width="328" height="375" rx="19" fill="#f3f7ff" stroke="#aac7f5" stroke-width="2.3"/>
+<rect x="75" y="245" width="328" height="9" rx="4" fill="#1765dc"/>
+<text x="102" y="301" class="number blue">01–08</text>
+<text x="102" y="349" class="head">SET THE DIRECTION</text>
+<text x="102" y="392" class="body"><tspan x="102">Context and intent</tspan><tspan x="102" dy="34">Use cases and tests</tspan><tspan x="102" dy="34">Architecture and POC</tspan><tspan x="102" dy="34">Plan and component design</tspan></text>
+<path d="M101 554H372" stroke="#cad9ef" stroke-width="2"/>
+<text x="102" y="586" class="small blue">Human intent becomes agent context</text>
+
+<rect x="449" y="245" width="328" height="375" rx="19" fill="#fff7f1" stroke="#edbea7" stroke-width="2.3"/>
+<rect x="449" y="245" width="328" height="9" rx="4" fill="#d3602d"/>
+<text x="476" y="301" class="number orange">09</text>
+<text x="476" y="349" class="head">BUILD &amp; TEST CYCLE</text>
+<text x="476" y="396" class="body"><tspan x="476">Agent implements, tests,</tspan><tspan x="476" dy="34">and verifies against intent.</tspan></text>
+<path d="M509 486C485 514 502 553 548 555H665C715 553 733 501 700 478" fill="none" stroke="#d36d3a" stroke-width="4" marker-end="url(#turn)"/>
+<text x="570" y="524" class="small orange">iterate</text>
+<text x="476" y="586" class="small orange">Code, tests, and evidence evolve</text>
+
+<rect x="823" y="245" width="328" height="375" rx="19" fill="#f8f5ff" stroke="#cdb8ec" stroke-width="2.3"/>
+<rect x="823" y="245" width="328" height="9" rx="4" fill="#7645bc"/>
+<text x="850" y="301" class="number violet">10</text>
+<text x="850" y="349" class="head"><tspan x="850">DOCUMENT, REVIEW</tspan><tspan x="850" dy="28">AND RELEASE</tspan></text>
+<text x="850" y="435" class="body"><tspan x="850">Agent explains the changes.</tspan><tspan x="850" dy="34">Human understands and</tspan><tspan x="850" dy="34">approves the code.</tspan></text>
+<path d="M849 554H1121" stroke="#e0d4f0" stroke-width="2"/>
+<text x="850" y="586" class="small violet">Ready for end-to-end testing</text>
+
+<rect x="1197" y="245" width="328" height="375" rx="19" fill="#f0fbf7" stroke="#a9d9c9" stroke-width="2.3"/>
+<rect x="1197" y="245" width="328" height="9" rx="4" fill="#138e72"/>
+<text x="1224" y="301" class="number green">11</text>
+<text x="1224" y="349" class="head"><tspan x="1224">DEVOPS &amp;</tspan><tspan x="1224" dy="28">USER ACCEPTANCE</tspan></text>
+<text x="1224" y="435" class="body"><tspan x="1224">Human tests the change</tspan><tspan x="1224" dy="34">in a running system.</tspan></text>
+<path d="M1223 513H1496" stroke="#c6e8dd" stroke-width="2"/>
+<text x="1224" y="544" class="small green">Sprint: development / staging</text>
+<text x="1224" y="579" class="small green">Release: production</text>
+
+<path d="M407 433H441M781 433H815M1155 433H1189" stroke="#165ed3" stroke-width="3.4" marker-end="url(#arrow)"/>
+
+<rect x="449" y="691" width="1076" height="125" rx="18" fill="#f2f9f7" stroke="#9dd4c3" stroke-width="2"/>
+<text x="479" y="734" class="number green">12  OBSERVABILITY, INSIGHTS &amp; LEARNING</text>
+<text x="479" y="776" class="body">Tests and runtime evidence update the release, the roadmap, and the next sprint.</text>
+<path d="M1369 639V682" fill="none" stroke="#0d9073" stroke-width="3.5" marker-end="url(#back)"/>
+<path d="M441 753H220V639" fill="none" stroke="#0d9073" stroke-width="3.5" marker-end="url(#back)"/>
+<text x="76" y="855" class="small">The inner build/test iteration and the wider SDLC feedback loop serve different purposes.</text>
+</svg>

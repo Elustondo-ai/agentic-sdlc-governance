@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><title>Worked example: the SDLC2 commit</title><desc>AI-MODIFIED - 2026-09-28T14:23Z. SDLC2 formalization chapter. Draft for human review.</desc><rect width="1600" height="900" fill="white"/><rect width="1600" height="11" fill="#0b5ed7"/><defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1,1 L8,4.5 L1,8" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<text x="80" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">SDLC2  /  FORMALIZATION</text>
+<text x="1440" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">FG07</text>
+<text x="80" y="127" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#102447">Worked example: the SDLC2 commit</text>
+<text x="82" y="173" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">Proposed contract: commit exactly the content the human reviewed and staged</text>
+<text x="82" y="270" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#0b5ed7">AGENT</text>
+<rect x="255" y="227" width="713" height="98" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="277" y="265" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Prepare changes + status</text>
+<text x="277" y="303" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Evidence describes the candidate</text>
+<path d="M610,325 V339" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<text x="82" y="393" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#a35311">HUMAN</text>
+<rect x="255" y="350" width="713" height="98" rx="8" fill="#fff3e7" stroke="#a35311" stroke-width="2"/>
+<text x="277" y="388" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#a35311">Review and stage</text>
+<text x="277" y="426" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Approval applies to that content</text>
+<path d="M610,448 V462" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<text x="82" y="516" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#0b5ed7">CHECKER</text>
+<rect x="255" y="473" width="713" height="98" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="277" y="511" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Validate staged snapshot</text>
+<text x="277" y="549" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Evidence, scope and approval match</text>
+<path d="M610,571 V585" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<text x="82" y="639" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#08785e">SCRIPT</text>
+<rect x="255" y="596" width="713" height="98" rx="8" fill="#eaf5f1" stroke="#08785e" stroke-width="2"/>
+<text x="277" y="634" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#08785e">Commit approved snapshot</text>
+<text x="277" y="672" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Return the resulting commit SHA</text>
+<rect x="1098" y="350" width="420" height="114" rx="8" fill="#fff3e7" stroke="#a35311" stroke-width="2"/>
+<text x="1120" y="388" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#a35311">Content changed</text>
+<text x="1120" y="426" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Human review / staging again</text>
+<rect x="1098" y="496" width="420" height="113" rx="8" fill="#fff3e7" stroke="#ac3344" stroke-width="2"/>
+<text x="1120" y="534" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#ac3344">Check failed</text>
+<text x="1120" y="572" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Stop and report the reason</text>
+<path d="M968,522 H1082" fill="none" stroke="#ac3344" stroke-width="3" marker-end="url(#arr)"/>
+<text x="986" y="503" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#ac3344">fail</text>
+<rect x="1098" y="640" width="420" height="112" rx="8" fill="#eaf5f1" stroke="#08785e" stroke-width="2"/>
+<text x="1120" y="678" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#08785e">Push separately</text>
+<text x="1120" y="716" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Verify the remote result</text>
+<path d="M968,645 H1027 V692 H1082" fill="none" stroke="#08785e" stroke-width="3" marker-end="url(#arr)"/>
+<path d="M1307,350 V279 H968" fill="none" stroke="#a35311" stroke-width="2" marker-end="url(#arr)" stroke-dasharray="7 6"/>
+<text x="84" y="759" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#516585">Report the new commit SHA separately from the tracked status.</text>
+<rect x="80" y="807" width="1440" height="58" rx="8" fill="#102447"/>
+<text x="102" y="845" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="white">No agent staging. No silent edits to approved content. Commit and push have separate outcomes.</text>
+</svg>

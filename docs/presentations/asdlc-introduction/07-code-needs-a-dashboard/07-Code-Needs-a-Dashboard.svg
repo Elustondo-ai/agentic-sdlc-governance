@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Code needs a dashboard</title>
+<desc id="desc">Analogy: raw data becomes visual dashboards and actionable insight. Rapidly produced code and test evidence can become a navigable system view for human understanding and review. Specifications guide implementation, while implementation-derived explanations flow back for reconciliation.</desc>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#102448}
+.title{font-size:66px;font-weight:700;fill:#fff}.subtitle{font-size:28px;fill:#c6d8f7}
+.kicker{font-size:22px;font-weight:700;letter-spacing:2px}.heading{font-size:31px;font-weight:700}.body{font-size:23px}.small{font-size:20px}
+.white{fill:#fff}.cyan{fill:#89e6f1}.gold{fill:#ffc77c}.pale{fill:#d6e6fa}.navy{fill:#102448}
+</style>
+<linearGradient id="back" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081935"/><stop offset="1" stop-color="#113775"/></linearGradient>
+<marker id="arr" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="11" markerHeight="11" orient="auto"><path d="M1 1L11 6 1 11" fill="none" stroke="#7edeea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="1600" height="900" fill="url(#back)"/>
+<path d="M0 0H1600V12H0Z" fill="#5bd2e8"/>
+<text x="94" y="100" class="title">Code needs a dashboard</text>
+<text x="97" y="149" class="subtitle">When output grows, people need a view that reveals meaning.</text>
+
+<g transform="translate(84 210)">
+ <rect width="1432" height="240" rx="24" fill="#f0f9fc" stroke="#72d1df" stroke-width="3"/>
+ <rect width="175" height="240" rx="24" fill="#187c93"/>
+ <text x="88" y="107" class="heading white" text-anchor="middle">DATA</text>
+ <text x="88" y="143" class="small white" text-anchor="middle">Analogy</text>
+ <g transform="translate(209 31)">
+  <text x="0" y="22" class="kicker navy">RAW RECORDS</text>
+  <text x="0" y="72" class="body">Events · transactions · logs</text>
+  <text x="0" y="112" class="small">Too much detail to scan row by row</text>
+  <path d="M0 145h21m10 0h46m12 0h31m12 0h41m-173 18h43m13 0h20m12 0h43m16 0h34m-168 18h27m11 0h53m14 0h44" stroke="#1e7897" stroke-width="5" stroke-linecap="round"/>
+ </g>
+ <path d="M663 117h71" stroke="#1e7897" stroke-width="5" marker-end="url(#arr)"/>
+ <g transform="translate(765 28)">
+  <text x="0" y="22" class="kicker navy">DASHBOARD</text>
+  <rect x="6" y="48" width="261" height="143" rx="12" fill="#fff" stroke="#57b7ca" stroke-width="3"/>
+  <path d="M31 162V71M31 162h213" stroke="#8db0c7" stroke-width="3"/>
+  <path d="M42 141L80 125 119 136 160 83 200 100 235 72" fill="none" stroke="#168caf" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="160" cy="83" r="7" fill="#168caf"/>
+ </g>
+ <path d="M1080 117h52" stroke="#1e7897" stroke-width="5" marker-end="url(#arr)"/>
+ <g transform="translate(1156 57)">
+  <text x="0" y="20" class="kicker navy">INSIGHT</text>
+  <text x="0" y="69" class="body">Trends</text>
+  <text x="0" y="105" class="body">Anomalies</text>
+  <text x="0" y="141" class="body">Decisions</text>
+ </g>
+</g>
+
+<g transform="translate(84 488)">
+ <rect width="1432" height="250" rx="24" fill="#fff8ef" stroke="#e7ae70" stroke-width="3"/>
+ <rect width="175" height="250" rx="24" fill="#b35c36"/>
+ <text x="88" y="103" class="heading white" text-anchor="middle">CODE</text>
+ <text x="88" y="141" class="small white" text-anchor="middle">New need</text>
+ <g transform="translate(209 33)">
+  <text x="0" y="22" class="kicker navy">IMPLEMENTATION</text>
+  <text x="0" y="70" class="body">Code · diffs · tests · runtime</text>
+  <text x="0" y="108" class="small">Hard to understand by reading it all</text>
+  <text x="0" y="160" class="body" font-weight="700">&lt;/&gt;  { }  →  ✓</text>
+ </g>
+ <path d="M663 119h71" stroke="#bd7a47" stroke-width="5" marker-end="url(#arr)"/>
+ <g transform="translate(761 28)">
+  <text x="0" y="22" class="kicker navy">SYSTEM VIEW</text>
+  <rect x="7" y="48" width="278" height="153" rx="12" fill="#fff" stroke="#d9995c" stroke-width="3"/>
+  <rect x="31" y="77" width="67" height="34" rx="6" fill="#f4d9b8" stroke="#b96633" stroke-width="2"/>
+  <rect x="193" y="77" width="67" height="34" rx="6" fill="#f4d9b8" stroke="#b96633" stroke-width="2"/>
+  <rect x="112" y="139" width="67" height="34" rx="6" fill="#f4d9b8" stroke="#b96633" stroke-width="2"/>
+  <path d="M98 94h95M65 111v45h47m115-45v45h-48" fill="none" stroke="#b96633" stroke-width="3"/>
+ </g>
+ <path d="M1080 120h52" stroke="#bd7a47" stroke-width="5" marker-end="url(#arr)"/>
+ <g transform="translate(1156 55)">
+  <text x="0" y="20" class="kicker navy">UNDERSTANDING</text>
+  <text x="0" y="69" class="body">Components</text>
+  <text x="0" y="105" class="body">Behavior</text>
+  <text x="0" y="141" class="body">Review</text>
+ </g>
+</g>
+<path d="M101 798H1499" stroke="#749bc8" stroke-width="2"/>
+<text x="800" y="842" class="body white" text-anchor="middle" font-weight="700">Intent guides the build. The built system yields explanations to compare with that intent.</text>
+</svg>

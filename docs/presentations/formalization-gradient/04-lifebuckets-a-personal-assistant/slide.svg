@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><title>LifeBuckets: a personal assistant</title><desc>AI-MODIFIED - 2026-09-28T14:50Z. SDLC2 formalization chapter. Draft for human review.</desc><rect width="1600" height="900" fill="white"/><rect width="1600" height="11" fill="#0b5ed7"/><defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M1,1 L8,4.5 L1,8" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<text x="80" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">SDLC2  /  FORMALIZATION</text>
+<text x="1440" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">FG03a</text>
+<text x="80" y="127" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#102447">LifeBuckets: a personal assistant</text>
+<text x="82" y="173" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">An open-source project in development, shown here through its target architecture</text>
+<rect x="82" y="235" width="600" height="121" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="104" y="273" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">LifeBuckets UI and chat</text>
+<text x="104" y="311" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Ask, organize and review actions</text>
+<rect x="970" y="235" width="548" height="121" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="992" y="273" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">ChatGPT or Gemini</text>
+<text x="992" y="311" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Work with the shared Drive context</text>
+<rect x="82" y="429" width="600" height="145" rx="8" fill="#eaf5f1" stroke="#08785e" stroke-width="2"/>
+<text x="104" y="467" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#08785e">LifeBuckets cloud agent</text>
+<text x="104" y="505" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Coordinates work across life domains</text>
+<text x="104" y="536" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Plans tasks and uses connected services</text>
+<rect x="970" y="429" width="548" height="145" rx="8" fill="#eaf5f1" stroke="#08785e" stroke-width="2"/>
+<text x="992" y="467" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#08785e">Google Drive workspace</text>
+<text x="992" y="505" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Buckets, documents and shared context</text>
+<text x="992" y="536" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Readable by people and connected agents</text>
+<path d="M382,356 V415" fill="none" stroke="#0b5ed7" stroke-width="3" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="400" y="395" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#516585">Requests and results</text>
+<path d="M1244,356 V415" fill="none" stroke="#0b5ed7" stroke-width="3" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="1265" y="395" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#516585">Connected access</text>
+<path d="M682,502 H956" fill="none" stroke="#08785e" stroke-width="3" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="722" y="480" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#08785e">Read and update</text>
+<rect x="82" y="650" width="780" height="121" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="104" y="688" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Everyday apps and information</text>
+<text x="104" y="726" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Apple Reminders, Google Calendar and email</text>
+<path d="M382,574 V636" fill="none" stroke="#0b5ed7" stroke-width="3" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="400" y="614" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#516585">Read and update through integrations</text>
+<text x="970" y="659" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" fill="#516585">Health, career, workspace</text>
+<text x="970" y="698" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" fill="#516585">and everyday responsibilities.</text>
+<text x="970" y="737" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" fill="#516585">One shared context across interfaces.</text>
+<rect x="80" y="807" width="1440" height="58" rx="8" fill="#102447"/>
+<text x="102" y="845" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="white">A central coordinator built around organized knowledge and the tools people already use.</text>
+</svg>

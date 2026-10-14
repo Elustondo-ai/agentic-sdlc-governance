@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><title>Choose the right degree of formalization</title><desc>AI-MODIFIED - 2026-09-28T14:23Z. SDLC2 formalization chapter. Draft for human review.</desc><rect width="1600" height="900" fill="white"/><rect width="1600" height="11" fill="#0b5ed7"/><defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1,1 L8,4.5 L1,8" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<text x="80" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">SDLC2  /  FORMALIZATION</text>
+<text x="1440" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">FG08</text>
+<text x="80" y="127" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#102447">Choose the right degree of formalization</text>
+<text x="82" y="173" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">Compare implementations of the same readiness assessment</text>
+<rect x="82" y="239" width="305" height="67" rx="0" fill="#102447"/>
+<text x="100" y="282" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="white">Decision factor</text>
+<rect x="405" y="239" width="365" height="67" rx="0" fill="#102447"/>
+<text x="423" y="282" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="white">Interpretative</text>
+<rect x="790" y="239" width="370" height="67" rx="0" fill="#102447"/>
+<text x="808" y="282" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="white">Hybrid</text>
+<rect x="1180" y="239" width="338" height="67" rx="0" fill="#102447"/>
+<text x="1198" y="282" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="white">Executable</text>
+<rect x="82" y="319" width="305" height="63" rx="0" fill="#edf3fc"/>
+<text x="97" y="360" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#102447">Representation</text>
+<rect x="405" y="319" width="365" height="63" rx="0" fill="#edf3fc"/>
+<text x="420" y="360" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Prose checklist</text>
+<rect x="790" y="319" width="370" height="63" rx="0" fill="#eaf5f1"/>
+<text x="805" y="360" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Skill + validators</text>
+<rect x="1180" y="319" width="338" height="63" rx="0" fill="#edf3fc"/>
+<text x="1195" y="360" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Program + contracts</text>
+<rect x="82" y="392" width="305" height="63" rx="0" fill="#edf3fc"/>
+<text x="97" y="433" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#102447">Contextual judgment</text>
+<rect x="405" y="392" width="365" height="63" rx="0" fill="#edf3fc"/>
+<text x="420" y="433" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Agent reasons through it</text>
+<rect x="790" y="392" width="370" height="63" rx="0" fill="#eaf5f1"/>
+<text x="805" y="433" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Agent handles exceptions</text>
+<rect x="1180" y="392" width="338" height="63" rx="0" fill="#edf3fc"/>
+<text x="1195" y="433" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Escalation rules required</text>
+<rect x="82" y="465" width="305" height="63" rx="0" fill="#edf3fc"/>
+<text x="97" y="506" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#102447">Mechanical checking</text>
+<rect x="405" y="465" width="365" height="63" rx="0" fill="#edf3fc"/>
+<text x="420" y="506" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Depends on execution</text>
+<rect x="790" y="465" width="370" height="63" rx="0" fill="#eaf5f1"/>
+<text x="805" y="506" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Automate stable checks</text>
+<rect x="1180" y="465" width="338" height="63" rx="0" fill="#edf3fc"/>
+<text x="1195" y="506" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Checks encoded in code</text>
+<rect x="82" y="538" width="305" height="63" rx="0" fill="#edf3fc"/>
+<text x="97" y="579" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#102447">Changing the policy</text>
+<rect x="405" y="538" width="365" height="63" rx="0" fill="#edf3fc"/>
+<text x="420" y="579" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Edit and review prose</text>
+<rect x="790" y="538" width="370" height="63" rx="0" fill="#eaf5f1"/>
+<text x="805" y="579" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Revise affected layer</text>
+<rect x="1180" y="538" width="338" height="63" rx="0" fill="#edf3fc"/>
+<text x="1195" y="579" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Change code and tests</text>
+<rect x="82" y="611" width="305" height="63" rx="0" fill="#edf3fc"/>
+<text x="97" y="652" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#102447">Maintenance burden</text>
+<rect x="405" y="611" width="365" height="63" rx="0" fill="#edf3fc"/>
+<text x="420" y="652" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Ambiguity and drift</text>
+<rect x="790" y="611" width="370" height="63" rx="0" fill="#eaf5f1"/>
+<text x="805" y="652" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Mappings between layers</text>
+<rect x="1180" y="611" width="338" height="63" rx="0" fill="#edf3fc"/>
+<text x="1195" y="652" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#102447">Edge cases and code upkeep</text>
+<text x="82" y="745" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">Formalization defines meaning. Determinism concerns repeatability. Correctness concerns the intended result.</text>
+<rect x="80" y="807" width="1440" height="58" rx="8" fill="#102447"/>
+<text x="102" y="845" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="white">The agent presents the choices and tradeoffs. The human chooses the architectural direction.</text>
+</svg>

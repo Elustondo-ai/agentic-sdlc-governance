@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><title>One meaning, several representations</title><desc>AI-MODIFIED - 2026-09-28T14:23Z. SDLC2 formalization chapter. Draft for human review.</desc><rect width="1600" height="900" fill="white"/><rect width="1600" height="11" fill="#0b5ed7"/><defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1,1 L8,4.5 L1,8" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<text x="80" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">SDLC2  /  FORMALIZATION</text>
+<text x="1440" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">FG09</text>
+<text x="80" y="127" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#102447">One meaning, several representations</text>
+<text x="82" y="173" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">Traceability connects explanation, design, implementation and evidence</text>
+<rect x="535" y="227" width="530" height="111" rx="8" fill="#eaf5f1" stroke="#08785e" stroke-width="2"/>
+<text x="557" y="265" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#08785e">Governing domain definition</text>
+<text x="557" y="303" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Concepts, constraints and rationale</text>
+<rect x="82" y="419" width="431" height="155" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="104" y="457" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Human explanation</text>
+<text x="104" y="495" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Concise text and visual</text>
+<text x="104" y="526" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">What it means and why</text>
+<rect x="585" y="419" width="431" height="155" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="607" y="457" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Design and contracts</text>
+<text x="607" y="495" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Modules and interactions</text>
+<text x="607" y="526" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Types, inputs and outputs</text>
+<rect x="1087" y="419" width="431" height="155" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="1109" y="457" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Workflow and code</text>
+<text x="1109" y="495" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Skills and operations</text>
+<text x="1109" y="526" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Checks and side effects</text>
+<path d="M800,338 V379 H298 V406" fill="none" stroke="#08785e" stroke-width="3" marker-end="url(#arr)"/>
+<path d="M800,338 V406" fill="none" stroke="#08785e" stroke-width="3" marker-end="url(#arr)"/>
+<path d="M800,379 H1302 V406" fill="none" stroke="#08785e" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="535" y="655" width="530" height="103" rx="8" fill="#eaf5f1" stroke="#08785e" stroke-width="2"/>
+<text x="557" y="693" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#08785e">Evidence and human review</text>
+<text x="557" y="731" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Tests, actual changes, walkthrough</text>
+<path d="M298,574 V614 H646 V642" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<path d="M800,574 V642" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<path d="M1302,574 V614 H953 V642" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<path d="M1065,707 H1551 V274 H1079" fill="none" stroke="#08785e" stroke-width="2" marker-end="url(#arr)" stroke-dasharray="7 6"/>
+<text x="1114" y="755" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#08785e">Resolve mismatches explicitly</text>
+<rect x="80" y="807" width="1440" height="58" rx="8" fill="#102447"/>
+<text x="102" y="845" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="white">SDLC2 keeps human meaning connected to agent work and observed results.</text>
+</svg>

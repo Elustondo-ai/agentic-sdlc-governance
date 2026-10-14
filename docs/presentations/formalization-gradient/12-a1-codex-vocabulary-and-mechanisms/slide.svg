@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><title>Codex vocabulary and mechanisms</title><desc>AI-MODIFIED - 2026-09-28T14:23Z. SDLC2 formalization chapter. Draft for human review.</desc><rect width="1600" height="900" fill="white"/><rect width="1600" height="11" fill="#0b5ed7"/><defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1,1 L8,4.5 L1,8" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<text x="80" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">SDLC2  /  FORMALIZATION</text>
+<text x="1440" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">A1</text>
+<text x="80" y="127" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#102447">Codex vocabulary and mechanisms</text>
+<text x="82" y="173" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">Technical annex: mechanisms have different interpreters and effects</text>
+<text x="82" y="241" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">CONSTRUCT</text>
+<text x="464" y="241" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">READER / INTERPRETER</text>
+<text x="983" y="241" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">ROLE</text>
+<rect x="82" y="265" width="1436" height="51" rx="0" fill="#edf3fc"/>
+<text x="94" y="299" font-family="DejaVu Sans Mono" font-size="23" font-weight="700" fill="#102447">AGENTS.md</text>
+<text x="476" y="299" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Project instruction discovery</text>
+<text x="995" y="299" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Applicable project guidance</text>
+<rect x="82" y="323" width="1436" height="51" rx="0" fill="white"/>
+<text x="94" y="357" font-family="DejaVu Sans Mono" font-size="23" font-weight="700" fill="#102447">SKILL.md</text>
+<text x="476" y="357" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Skill discovery, then the agent</text>
+<text x="995" y="357" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Reusable workflow and resources</text>
+<rect x="82" y="381" width="1436" height="51" rx="0" fill="#edf3fc"/>
+<text x="94" y="415" font-family="DejaVu Sans Mono" font-size="23" font-weight="700" fill="#102447">$skill-name</text>
+<text x="476" y="415" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Codex CLI / IDE skill selection</text>
+<text x="995" y="415" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Select an available skill</text>
+<rect x="82" y="439" width="1436" height="51" rx="0" fill="white"/>
+<text x="94" y="473" font-family="DejaVu Sans Mono" font-size="23" font-weight="700" fill="#102447">/command</text>
+<text x="476" y="473" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Supported interface parser</text>
+<text x="995" y="473" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Invoke an interface feature</text>
+<rect x="82" y="497" width="1436" height="51" rx="0" fill="#edf3fc"/>
+<text x="94" y="531" font-family="DejaVu Sans Mono" font-size="23" font-weight="700" fill="#102447">config.toml</text>
+<text x="476" y="531" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Codex configuration loader</text>
+<text x="995" y="531" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Configure runtime behavior</text>
+<rect x="82" y="555" width="1436" height="51" rx="0" fill="white"/>
+<text x="94" y="589" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#102447">MCP tool</text>
+<text x="476" y="589" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Registered tool interface</text>
+<text x="995" y="589" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Expose a callable capability</text>
+<rect x="82" y="613" width="1436" height="51" rx="0" fill="#edf3fc"/>
+<text x="94" y="647" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#102447">Rules / permissions</text>
+<text x="476" y="647" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Applicable execution controls</text>
+<text x="995" y="647" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Constrain permitted actions</text>
+<text x="83" y="719" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#516585">ChatGPT Work uses its available skills and connections. CLI/IDE discovery and commands are surface-specific.</text>
+<text x="83" y="764" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#516585">Documentation checked 28 Sep 2026. Exact configuration and controls depend on the environment.</text>
+<rect x="80" y="807" width="1440" height="58" rx="8" fill="#102447"/>
+<text x="102" y="845" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="white">A recognized name selects a mechanism. It does not grant authority to act.</text>
+</svg>

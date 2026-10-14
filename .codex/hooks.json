@@ -1,0 +1,54 @@
+{
+  "description": "ASDLC per-agent activity logging; review and trust before local execution. No approval decisions or network I/O.",
+  "hooks": {
+    "SubagentStart": [
+      {
+        "matcher": "^asdlc_(coordinator|0[1-9]|1[0-2])$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/asdlc/00-governance/src/agent_log_hook.py\"",
+            "timeout": 10,
+            "additionalContextLimit": 700
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": "^asdlc_(coordinator|0[1-9]|1[0-2])$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/asdlc/00-governance/src/agent_log_hook.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/asdlc/00-governance/src/agent_log_hook.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/asdlc/00-governance/src/agent_log_hook.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

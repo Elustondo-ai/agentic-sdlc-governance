@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Human review at agent speed</title>
+<desc id="desc">Several streams of agent output are condensed into a focused walkthrough: what changed, how it was verified, and what needs a human decision. The human reviews evidence and decides.</desc>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#102044}
+.title{font-size:66px;font-weight:700}
+.sub{font-size:29px;fill:#425a79}
+.kicker{font-size:21px;font-weight:700;letter-spacing:1.6px}
+.heading{font-size:32px;font-weight:700}
+.body{font-size:25px}
+.small{font-size:21px;fill:#49617c}
+.white{fill:#fff}.blue{fill:#1654b7}.orange{fill:#a24826}.green{fill:#166e4d}
+</style>
+<marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto"><path d="M1 1L11 6 1 11" fill="none" stroke="#1e66bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="1600" height="900" fill="#fff"/>
+<rect width="1600" height="12" fill="#1654b8"/>
+<text x="94" y="105" class="title">Human review at agent speed</text>
+<text x="97" y="154" class="sub">Agents can explain the work as well as produce it.</text>
+<path d="M96 191H1504" stroke="#ccdbef" stroke-width="2"/>
+
+<g transform="translate(92 240)">
+ <text x="0" y="0" class="kicker orange">PARALLEL AGENT WORK</text>
+ <rect x="0" y="40" width="408" height="450" rx="18" fill="#fff7f3" stroke="#e1a389" stroke-width="3"/>
+ <g class="body">
+  <path d="M34 128H375M34 223H375M34 318H375" stroke="#e7c4b7" stroke-width="2"/>
+  <circle cx="67" cy="89" r="22" fill="#c66139"/><text x="57" y="99" class="white" font-weight="700">A</text><text x="110" y="98" font-weight="700">Code and design</text>
+  <circle cx="67" cy="181" r="22" fill="#c66139"/><text x="57" y="191" class="white" font-weight="700">B</text><text x="110" y="191" font-weight="700">Tests and QA</text>
+  <circle cx="67" cy="277" r="22" fill="#c66139"/><text x="57" y="287" class="white" font-weight="700">C</text><text x="110" y="287" font-weight="700">Review and risks</text>
+  <text x="33" y="386" class="small">Many artifacts arrive quickly.</text>
+  <text x="33" y="417" class="small">Human attention remains finite.</text>
+ </g>
+</g>
+<path d="M526 527H610" fill="none" stroke="#1e66bf" stroke-width="5" marker-end="url(#arrow)"/>
+<g transform="translate(643 227)">
+ <text x="0" y="0" class="kicker blue">FOCUSED WALKTHROUGH</text>
+ <rect x="0" y="52" width="468" height="488" rx="22" fill="#edf5ff" stroke="#3271c5" stroke-width="4"/>
+ <text x="34" y="109" class="heading blue">A review package</text>
+ <path d="M33 131H434" stroke="#9bc0e7" stroke-width="2"/>
+ <g class="body">
+  <circle cx="50" cy="189" r="14" fill="#1f6cca"/><text x="43" y="198" class="white" font-weight="700">1</text><text x="83" y="198">What changed?</text>
+  <circle cx="50" cy="273" r="14" fill="#1f6cca"/><text x="43" y="282" class="white" font-weight="700">2</text><text x="83" y="282">How was it verified?</text>
+  <circle cx="50" cy="357" r="14" fill="#1f6cca"/><text x="43" y="366" class="white" font-weight="700">3</text><text x="83" y="366">What needs a decision?</text>
+ </g>
+ <path d="M32 404H435" stroke="#9bc0e7" stroke-width="2"/>
+ <text x="35" y="452" class="small">Short text + component diagram</text>
+ <text x="35" y="484" class="small">+ tests + links to detail</text>
+</g>
+<path d="M1135 527H1224" fill="none" stroke="#1e66bf" stroke-width="5" marker-end="url(#arrow)"/>
+<g transform="translate(1237 246)">
+ <text x="0" y="0" class="kicker green">HUMAN JUDGMENT</text>
+ <circle cx="135" cy="154" r="106" fill="#eaf8f0" stroke="#6abb8d" stroke-width="4"/>
+ <circle cx="135" cy="127" r="34" fill="none" stroke="#16764f" stroke-width="6"/>
+ <path d="M74 204Q77 167 135 167Q193 167 196 204" fill="none" stroke="#16764f" stroke-width="6"/>
+ <text x="27" y="333" class="body" font-weight="700">Understand</text>
+ <text x="27" y="379" class="body" font-weight="700">Question</text>
+ <text x="27" y="425" class="body" font-weight="700">Approve or redirect</text>
+</g>
+<path d="M103 787H1495" stroke="#d9e4f1" stroke-width="2"/>
+<text x="800" y="832" class="body blue" font-weight="700" text-anchor="middle">The agent prepares the explanation. The human reviews the evidence and decides.</text>
+<rect x="0" y="872" width="1600" height="28" fill="#0e2a62"/>
+</svg>

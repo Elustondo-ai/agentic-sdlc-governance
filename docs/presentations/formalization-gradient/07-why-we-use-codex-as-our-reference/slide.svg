@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><title>Why we use Codex as our reference</title><desc>AI-MODIFIED - 2026-09-28T14:59Z. SDLC2 formalization chapter. Draft for human review.</desc><rect width="1600" height="900" fill="white"/><rect width="1600" height="11" fill="#0b5ed7"/><defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1,1 L8,4.5 L1,8" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<text x="80" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">SDLC2  /  FORMALIZATION</text>
+<text x="1440" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">FG05a</text>
+<text x="80" y="127" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#102447">Why we use Codex as our reference</text>
+<text x="82" y="173" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">A concrete implementation today, with vendor-neutral SDLC2 definitions</text>
+<rect x="82" y="223" width="700" height="163" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="104" y="261" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Open standards are converging</text>
+<text x="104" y="299" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Agentic AI Foundation · Linux Foundation</text>
+<text x="104" y="330" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">AGENTS.md: project instructions</text>
+<text x="104" y="361" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">MCP: connections to tools and context</text>
+<rect x="822" y="223" width="696" height="163" rx="8" fill="#eaf5f1" stroke="#08785e" stroke-width="2"/>
+<text x="844" y="261" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#08785e">Why Codex today?</text>
+<text x="844" y="299" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Our primary development agent</text>
+<text x="844" y="330" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">A concrete home for skills, tools and scripts</text>
+<text x="844" y="361" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">A working reference for the formalization gradient</text>
+<rect x="400" y="437" width="800" height="108" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="422" y="475" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Shared project meaning</text>
+<text x="422" y="513" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">SDLC2 policies, domain terms and AGENTS.md</text>
+<path d="M610,545 V579 H370 V605" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<path d="M995,545 V579 H1225 V605" fill="none" stroke="#0b5ed7" stroke-width="3" marker-end="url(#arr)"/>
+<text x="636" y="588" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#516585">Tool-specific mappings</text>
+<rect x="82" y="615" width="615" height="105" rx="8" fill="#eaf5f1" stroke="#08785e" stroke-width="2"/>
+<text x="104" y="653" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#08785e">Codex</text>
+<text x="104" y="691" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Our reference implementation</text>
+<rect x="903" y="615" width="615" height="105" rx="8" fill="#edf3fc" stroke="#0b5ed7" stroke-width="2"/>
+<text x="925" y="653" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#0b5ed7">Other agents</text>
+<text x="925" y="691" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#102447">Claude Code now supports AGENTS.md*</text>
+<text x="84" y="769" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#516585">* CLAUDE.md remains supported; instruction loading depends on version and settings.</text>
+<rect x="80" y="807" width="1440" height="58" rx="8" fill="#102447"/>
+<text x="102" y="845" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="white">Our design preference: neutral project rules, isolated tool-specific configuration.</text>
+</svg>

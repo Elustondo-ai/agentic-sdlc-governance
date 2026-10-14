@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><title>A small SDLC2 implementation</title><desc>AI-MODIFIED - 2026-09-28T14:23Z. SDLC2 formalization chapter. Draft for human review.</desc><rect width="1600" height="900" fill="white"/><rect width="1600" height="11" fill="#0b5ed7"/><defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1,1 L8,4.5 L1,8" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker></defs>
+<text x="80" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">SDLC2  /  FORMALIZATION</text>
+<text x="1440" y="62" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0b5ed7">A2</text>
+<text x="80" y="127" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" fill="#102447">A small SDLC2 implementation</text>
+<text x="82" y="173" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#516585">Technical annex: proposed module layout and contract, not existing repository code</text>
+<rect x="82" y="233" width="680" height="491" rx="0" fill="#edf3fc"/>
+<text x="105" y="272" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#0b5ed7">REPOSITORY RESPONSIBILITIES</text>
+<text x="107" y="320" font-family="DejaVu Sans Mono" font-size="22" font-weight="700" fill="#102447">AGENTS.md</text>
+<text x="107" y="352" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#516585">Repository guidance</text>
+<text x="107" y="402" font-family="DejaVu Sans Mono" font-size="22" font-weight="700" fill="#102447">governance/commit/</text>
+<text x="107" y="434" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#516585">Definition, schema, status record</text>
+<text x="107" y="484" font-family="DejaVu Sans Mono" font-size="22" font-weight="700" fill="#102447">.agents/skills/sdlc2-commit/</text>
+<text x="107" y="516" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#516585">SKILL.md + workflow references</text>
+<text x="107" y="566" font-family="DejaVu Sans Mono" font-size="22" font-weight="700" fill="#102447">tools/sdlc2-commit/</text>
+<text x="107" y="598" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#516585">Node.js / TypeScript implementation</text>
+<text x="107" y="648" font-family="DejaVu Sans Mono" font-size="22" font-weight="700" fill="#102447">tools/sdlc2-commit/tests/</text>
+<text x="107" y="680" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#516585">Failure and concurrency cases</text>
+<rect x="803" y="233" width="715" height="264" rx="0" fill="#102447"/>
+<text x="828" y="273" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#94c1ff">OPERATION CONTRACT</text>
+<text x="828" y="320" font-family="DejaVu Sans Mono" font-size="23" font-weight="400" fill="white">commitApprovedSnapshot(</text>
+<text x="828" y="358" font-family="DejaVu Sans Mono" font-size="23" font-weight="400" fill="white">  candidate: ApprovedSnapshot,</text>
+<text x="828" y="396" font-family="DejaVu Sans Mono" font-size="23" font-weight="400" fill="white">  evidence: CompletionEvidence</text>
+<text x="828" y="434" font-family="DejaVu Sans Mono" font-size="23" font-weight="400" fill="white">): CommitResult</text>
+<text x="824" y="544" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#08785e">STATUS RECORD</text>
+<text x="824" y="581" font-family="DejaVu Sans Mono" font-size="23" font-weight="400" fill="#102447">sprint: sprint-007</text>
+<text x="824" y="615" font-family="DejaVu Sans Mono" font-size="23" font-weight="400" fill="#102447">target: ReadyForReview</text>
+<text x="824" y="649" font-family="DejaVu Sans Mono" font-size="23" font-weight="400" fill="#102447">evidenceRef: evidence-42</text>
+<text x="824" y="713" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#08785e">Results: Committed, Blocked, Failed</text>
+<text x="83" y="765" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" fill="#516585">Test: missing evidence, changed index, stale approval, commit failure and separately requested push failure.</text>
+<rect x="80" y="807" width="1440" height="58" rx="8" fill="#102447"/>
+<text x="102" y="845" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="white">Passing a schema check establishes record validity. Evidence must establish the underlying claim.</text>
+</svg>
