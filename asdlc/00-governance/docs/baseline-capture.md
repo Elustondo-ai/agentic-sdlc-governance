@@ -1,4 +1,4 @@
-AI-MODIFIED - 2026-10-14T16:14:00Z
+AI-MODIFIED - 2026-10-14T20:39:10Z
 
 # Brownfield baseline capture — v0.1.4 trial contract
 
@@ -27,6 +27,7 @@ Separate Codex processes load catalogued roles; native named-subagent execution 
 See [R01 execution, environment and provenance](baseline-validation-r01.md).
 
 ## Observable records
+See [progress, diagnostics and private rejected-output bundles](baseline-observability.md).
 Every invocation has its own compact start/end Markdown log in its stage's `logs/` directory.
 Coordinator routing and synthesis are distinct invocations and therefore have distinct logs.
 Logs include actual timestamps, role/task, completion status, artifact count, role/prompt hashes,

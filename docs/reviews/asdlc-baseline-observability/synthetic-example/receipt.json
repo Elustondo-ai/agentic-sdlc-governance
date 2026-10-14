@@ -1,0 +1,239 @@
+{
+  "status": "ERROR",
+  "run_id": "20261014T204306Z-b82fb3e6fa",
+  "selected_stages": [
+    1,
+    4,
+    5,
+    8,
+    11
+  ],
+  "agent_sessions": {
+    "00-routing": "offline-42d010411493457c94f7414cfaafec3f",
+    "01": "offline-2efb70c20e6444a2b0f6d19e5da2bc6a"
+  },
+  "invocations": [
+    {
+      "role_id": "ASDLC-COORDINATOR",
+      "phase": "00-routing",
+      "started": "2026-10-14T20:43:06Z",
+      "run_id": "20261014T204306Z-b82fb3e6fa",
+      "role_name": "ASDLC Coordinator",
+      "stage_name": "Governance",
+      "task": "Justify specialist routing and evidence-scoped assignments",
+      "task_display_truncated": false,
+      "status": "OK",
+      "session_id": "offline-42d010411493457c94f7414cfaafec3f",
+      "log_path": "/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpnwoifx5n/consumer/docs/asdlc/00-governance/logs/20261014T204306Z-b82fb3e6fa__baseline-capture__00-routing.md",
+      "role_sha256": "2c92a77ae1dda43acd813c6a0e97dfd58e8c0ff8a5149049cb998c3587de5e07",
+      "prompt_sha256": "5fca86c704af3132b0e86596074616d3aa24bce943dd43ccd5b39c9d72b1fdeb",
+      "artifacts": [],
+      "execution_kind": "isolated_codex_process",
+      "loaded_role": "ASDLC-COORDINATOR",
+      "native_subagent": false,
+      "execution_status": "OK",
+      "validation_status": "OK",
+      "promotion_status": "NOT_APPLICABLE",
+      "validated_artifacts": 0,
+      "promoted_artifacts": 0,
+      "result": "source code and plan",
+      "result_origin": "agent_self_report",
+      "finished": "2026-10-14T20:43:06Z",
+      "elapsed_seconds": 0.436,
+      "runtime_summary": {
+        "exit_code": 0,
+        "session_id": "offline-42d010411493457c94f7414cfaafec3f",
+        "elapsed_seconds": 0.432,
+        "event_lines_omitted": 0,
+        "event_line_limit_bytes": 65536,
+        "termination_signals": [],
+        "cleanup_errors": []
+      }
+    },
+    {
+      "role_id": "ASDLC-01",
+      "phase": "01",
+      "started": "2026-10-14T20:43:06Z",
+      "run_id": "20261014T204306Z-b82fb3e6fa",
+      "role_name": "Context and Domain Agent",
+      "stage_name": "Context and Domain Analysis",
+      "task": "Capture stage evidence",
+      "task_display_truncated": false,
+      "status": "ERROR",
+      "session_id": "offline-2efb70c20e6444a2b0f6d19e5da2bc6a",
+      "log_path": "/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpnwoifx5n/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T204306Z-b82fb3e6fa__baseline-capture__01.md",
+      "role_sha256": "155f7230c39f363e1aa691b3d30d46d11b54b53135dec12df4bf7cd4748f42e6",
+      "prompt_sha256": "7343666d5df4e6403ffd03569347ba278641e42e2ff5c21f5bc9d90452bc0209",
+      "artifacts": [],
+      "execution_kind": "isolated_codex_process",
+      "loaded_role": "ASDLC-01",
+      "native_subagent": false,
+      "execution_status": "OK",
+      "validation_status": "ERROR",
+      "promotion_status": "SKIPPED",
+      "validated_artifacts": 0,
+      "promoted_artifacts": 0,
+      "result": "External or unsupported citation; declare it as an unverified narrative citation.",
+      "failure_phase": "validation",
+      "result_origin": "runner_observation",
+      "diagnostic": {
+        "code": "BASELINE_CITATION_UNSUPPORTED",
+        "artifact": "01-topic/speaker-notes.md",
+        "line": 7,
+        "target": "https://example.invalid/evidence",
+        "rule": "Inline citations must resolve to snapshot or authored-artifact files.",
+        "expected": "Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.",
+        "run_id": "20261014T204306Z-b82fb3e6fa",
+        "role_id": "ASDLC-01",
+        "phase": "01",
+        "session_id": "offline-2efb70c20e6444a2b0f6d19e5da2bc6a",
+        "failure_phase": "validation"
+      },
+      "diagnostic_bundle": "/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpnwoifx5n/consumer/docs/asdlc/00-governance/diagnostics/20261014T204306Z-b82fb3e6fa/01",
+      "diagnostic_manifest": {
+        "path": "docs/asdlc/00-governance/diagnostics/20261014T204306Z-b82fb3e6fa/01",
+        "manifest_path": "docs/asdlc/00-governance/diagnostics/20261014T204306Z-b82fb3e6fa/01/manifest.json",
+        "manifest_sha256": "06365dd7813d8d79c0f4d013473bebf5771a798ec79093c0979a30ef57d66515",
+        "artifacts": [
+          {
+            "artifact": "output/01-topic/speaker-notes.md",
+            "copy": "rejected-001-speaker-notes.md.txt",
+            "original_bytes": 225,
+            "original_sha256": "ad81f9d0240932be334f6fc79dfc570bd9d102be28a76597bec2e103fc4c5323",
+            "retained_bytes": 225,
+            "retained_sha256": "ad81f9d0240932be334f6fc79dfc570bd9d102be28a76597bec2e103fc4c5323",
+            "sanitized": false,
+            "redacted": false,
+            "truncated": false,
+            "status": "REJECTED_UNVALIDATED"
+          },
+          {
+            "artifact": "output/01-topic/visual.mmd",
+            "copy": "rejected-002-visual.mmd.txt",
+            "original_bytes": 41,
+            "original_sha256": "3857f4de12fdd9dc4b6a3860254f182a9214845a09d7e7c768cbd729a82a1950",
+            "retained_bytes": 41,
+            "retained_sha256": "3857f4de12fdd9dc4b6a3860254f182a9214845a09d7e7c768cbd729a82a1950",
+            "sanitized": false,
+            "redacted": false,
+            "truncated": false,
+            "status": "REJECTED_UNVALIDATED"
+          }
+        ],
+        "omissions": [],
+        "truncations": [],
+        "status": "REJECTED_UNVALIDATED_DIAGNOSTIC_EVIDENCE"
+      },
+      "finished": "2026-10-14T20:43:07Z",
+      "elapsed_seconds": 0.132,
+      "runtime_summary": {
+        "exit_code": 0,
+        "session_id": "offline-2efb70c20e6444a2b0f6d19e5da2bc6a",
+        "elapsed_seconds": 0.118,
+        "event_lines_omitted": 0,
+        "event_line_limit_bytes": 65536,
+        "termination_signals": [],
+        "cleanup_errors": []
+      }
+    }
+  ],
+  "written_artifacts": [],
+  "source_files": 2,
+  "source": "/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpnwoifx5n/legacy",
+  "project": "/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpnwoifx5n/consumer",
+  "methodology": "/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpnwoifx5n/provider",
+  "source_inventory": [
+    {
+      "path": "Plan.md",
+      "size": 19,
+      "sha256": "fb0b606547ed24e542ad99c4060df4d033b94a6cb239099252594c8a604774a7"
+    },
+    {
+      "path": "index.html",
+      "size": 16,
+      "sha256": "7e3a9b5e8899c167293d256ef69e6ad468ffc659ffbf33c18ed3eac5a6be7d02"
+    }
+  ],
+  "max_agents": null,
+  "timeout_per_agent": 60,
+  "sprint_state_at_start": {
+    "status": "inactive",
+    "sprint_id": null,
+    "objective": null,
+    "scope": [],
+    "acceptance_criteria": []
+  },
+  "source_inventory_sha256": "225b51c757b446af042a87f4347da8a2d50b06a3041f39f9e48fa788070023a4",
+  "source_skipped": [
+    ".env (private/unsupported)",
+    ".git (excluded directory/symlink)"
+  ],
+  "unavailable_stages": {},
+  "sprint_changed": false,
+  "source_modified": false,
+  "approval_granted": false,
+  "report_path": "/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpnwoifx5n/consumer/docs/asdlc/00-governance/logs/20261014T204306Z-b82fb3e6fa__baseline-run.json",
+  "codex_executable": "/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpnwoifx5n/fake-codex",
+  "permissions_profile": "asdg_baseline",
+  "execution_kind": "isolated_codex_process",
+  "native_subagent": false,
+  "authentication_policy": "persisted_login_no_inherited_secret_variables",
+  "planned_stages": [
+    1,
+    4,
+    5,
+    8,
+    11
+  ],
+  "planned_count": 5,
+  "partial": false,
+  "routing_plan": {
+    "selected_stages": [
+      1,
+      4,
+      5,
+      8,
+      11
+    ],
+    "reason": "source code and plan",
+    "questions": [],
+    "assignments": [
+      {
+        "stage": 1,
+        "task": "Capture stage evidence",
+        "evidence": [
+          "source/Plan.md"
+        ]
+      },
+      {
+        "stage": 4,
+        "task": "Capture stage evidence",
+        "evidence": [
+          "source/Plan.md"
+        ]
+      },
+      {
+        "stage": 5,
+        "task": "Capture stage evidence",
+        "evidence": [
+          "source/Plan.md"
+        ]
+      },
+      {
+        "stage": 8,
+        "task": "Capture stage evidence",
+        "evidence": [
+          "source/Plan.md"
+        ]
+      },
+      {
+        "stage": 11,
+        "task": "Capture stage evidence",
+        "evidence": [
+          "source/Plan.md"
+        ]
+      }
+    ]
+  },
+  "error": "External or unsupported citation; declare it as an unverified narrative citation."
+}

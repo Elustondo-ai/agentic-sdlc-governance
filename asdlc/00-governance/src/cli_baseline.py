@@ -5,11 +5,11 @@ import json
 import os
 import re
 import shutil
-import signal
 import stat
 import subprocess
 import sys
 import tempfile
+import time
 import uuid
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -19,6 +19,28 @@ from cli_baseline_safety import (compact, copy_inventory, digest, docs_from_outp
 from cli_files import Conflict, apply, atomic_replace, plan, read_bytes, safe_path
 from cli_model import ARTIFACTS, REPO, catalogue, json_bytes, now
 from cli_project import inspect
+from cli_baseline_diagnostics import sanitize_record, sanitize_text
+from cli_baseline_evidence import retain_failure
+from cli_baseline_process import observe_process
+
+HEARTBEAT_SECONDS = 15.0
+STAGE_NAMES = (
+    'Governance', 'Context and Domain Analysis', 'Intent', 'System Model and Use Cases',
+    'Benchmarks, Test Strategy and Success Criteria', 'High-Level Solution Design and Architecture',
+    'Viable Proof of Concept', 'Planning', 'Low-Level Design', 'Build and Test Cycle',
+    'Document, Review and Release', 'Operational Reality, DevOps and User Acceptance',
+    'Observability, Insights and Learning',
+)
+
+
+def progress(text: str) -> None:
+    print(sanitize_text(text, limit=4096), file=sys.stderr, flush=True)
+
+
+def role_label(agent: dict) -> str:
+    stage = agent['stage']
+    return (f"{agent['role_id']} — {agent['title']}" if stage == 0 else
+            f"{agent['role_id']} — {agent['title']} | Stage {stage:02d}: {STAGE_NAMES[stage]}")
 
 ENV_NAMES = ('PATH', 'HOME', 'USER', 'LOGNAME', 'TMPDIR', 'TMP', 'TEMP',
              'LANG', 'LC_ALL', 'LC_CTYPE', 'SystemRoot', 'WINDIR',
@@ -82,7 +104,7 @@ def log_body(agent: dict, started: str, task: str, *, status: str,
              role_hash: str = '', prompt_hash: str = '') -> bytes:
     lines = [f'AI-MODIFIED - {now()}', '', '# Baseline agent invocation', '',
              f"Agent: {agent['role_id']} — {agent['title']}", f'Phase: {phase}',
-             f'Started: {started}', f'Task: {compact(task)}', f'Status: {status}',
+             f'Started: {started}', f'Task: {sanitize_text(task)}', f'Status: {status}',
              'Execution: separate Codex process; native subagent: no',
              f'Role/context SHA-256: {role_hash}', f'Prompt SHA-256: {prompt_hash}']
     if session:
@@ -90,7 +112,7 @@ def log_body(agent: dict, started: str, task: str, *, status: str,
     if finished:
         lines.extend([f'Finished: {finished}', f'Validated artifact files: {files}',
                       f'Result ({"agent self-report" if status == "OK" else "runner observation"}): '
-                      f'{compact(result or "No result reported.")}'])
+                      f'{sanitize_text(result or "No result reported.")}'])
     return ('\n'.join(lines) + '\n').encode()
 
 
@@ -151,19 +173,32 @@ def workspace_snapshot(workspace: Path) -> dict[str, str]:
     return values
 
 
-def sandbox_settings(workspace: Path) -> list[str]:
+def resolve_codex(codex: str) -> str:
+    """Pin the selected executable, including directory and file symlinks."""
+    try:
+        selected = shutil.which(codex)
+        executable = Path(selected).resolve(strict=True) if selected else None
+        if executable is not None and executable.is_file() and os.access(executable, os.X_OK):
+            return str(executable)
+    except (OSError, RuntimeError, ValueError):
+        pass
+    raise Conflict('Codex CLI is unavailable; select a regular executable and check codex exec --help.')
+
+
+def sandbox_settings(workspace: Path, codex: str) -> list[str]:
+    executable = resolve_codex(codex)
     roots = {':root': 'deny', ':minimal': 'read', ':slash_tmp': 'deny', ':tmpdir': 'deny',
              str(Path.home()): 'deny', str(workspace): 'read', str(workspace / 'output'): 'write',
-             str(Path(sys.executable).resolve().parent.parent): 'read'}
+             executable: 'read'}
     filesystem = '{' + ','.join(json.dumps(path) + '=' + json.dumps(access) for path, access in roots.items()) + '}'
     return ['-c', 'default_permissions="asdg_baseline"',
             '-c', 'permissions.asdg_baseline.filesystem=' + filesystem,
             '-c', 'permissions.asdg_baseline.network.enabled=false']
 
 
-def codex_options(workspace: Path) -> list[str]:
+def codex_options(workspace: Path, codex: str) -> list[str]:
     # An isolated named profile grants evidence read access and output-only writes.
-    return ['-a', 'never', *sandbox_settings(workspace),
+    return ['-a', 'never', *sandbox_settings(workspace, codex),
             '-c', 'mcp_servers={}', '-c', 'web_search="disabled"',
             '-c', 'agents.enabled=false', '-c', 'allow_login_shell=false',
             '-c', shell_environment_policy(),
@@ -173,43 +208,26 @@ def codex_options(workspace: Path) -> list[str]:
             '--output-last-message', str(workspace / '.agent-last-message.txt'), '-']
 
 
-def event_session(output: str) -> str | None:
-    for line in output.splitlines():
-        try:
-            event = json.loads(line)
-        except ValueError:
-            continue
-        if isinstance(event, dict) and event.get('type') == 'thread.started':
-            value = event.get('thread_id')
-            if isinstance(value, str) and re.fullmatch(r'[A-Za-z0-9_-]{1,128}', value):
-                return value
-    return None
-
-
-def codex_run(codex: str, workspace: Path, prompt: str, timeout: int) -> tuple[str, str | None]:
+def codex_run(codex: str, workspace: Path, prompt: str, timeout: int, *,
+              heartbeat=None, runtime: dict | None = None) -> tuple[str, str | None]:
     before = workspace_snapshot(workspace)
-    process = None
-    output, session = '', None
+    session = None
+    runtime = runtime if runtime is not None else {}
     try:
-        process = subprocess.Popen([codex, *codex_options(workspace)], stdin=subprocess.PIPE,
-                                   stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+        codex = resolve_codex(codex)
+        process = subprocess.Popen([codex, *codex_options(workspace, codex)], stdin=subprocess.PIPE,
+                                   stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                                    start_new_session=True, env=subprocess_environment())
         try:
-            output, errors = process.communicate(input=prompt, timeout=timeout)
-        except (subprocess.TimeoutExpired, KeyboardInterrupt):
-            os.killpg(process.pid, signal.SIGTERM)
-            try:
-                output, errors = process.communicate(timeout=5)
-            except subprocess.TimeoutExpired:
-                os.killpg(process.pid, signal.SIGKILL)
-                output, errors = process.communicate()
-            session = event_session(output)
-            raise InvocationError(f'Codex invocation interrupted or exceeded {timeout}s timeout.', session)
-        session = event_session(output)
+            session, errors = observe_process(process, prompt, timeout, heartbeat=heartbeat,
+                                             interval=HEARTBEAT_SECONDS, runtime=runtime)
+        except (subprocess.TimeoutExpired, KeyboardInterrupt) as exc:
+            session = getattr(exc, 'session', None) or runtime.get('session_id')
+            raise InvocationError(f'Codex invocation interrupted or exceeded {timeout}s timeout.', session) from exc
         if workspace_snapshot(workspace) != before:
             raise InvocationError('Agent changed sandbox material outside output/; no artifacts promoted.', session)
         if process.returncode:
-            raise InvocationError(f'Codex failed (exit {process.returncode}): {compact(errors)}', session)
+            raise InvocationError(f'Codex failed (exit {process.returncode}): {sanitize_text(errors)}', session)
         last = workspace / '.agent-last-message.txt'
         if last.is_symlink() or not last.is_file() or last.stat().st_size > 64000:
             raise InvocationError('Codex returned without a safe bounded final message.', session)
@@ -219,7 +237,7 @@ def codex_run(codex: str, workspace: Path, prompt: str, timeout: int) -> tuple[s
     except InvocationError:
         raise
     except (OSError, ValueError, Conflict) as exc:
-        raise InvocationError(f'Codex execution/validation failed: {compact(str(exc))}', session) from exc
+        raise InvocationError(f'Codex execution/validation failed: {sanitize_text(str(exc))}', session) from exc
 
 
 def parse_json(text: str) -> dict:
@@ -264,7 +282,7 @@ def parse_agent_result(message: str, agent: dict) -> str:
     obj = parse_json(message)
     if obj.get('role_id') != agent['role_id'] or not isinstance(obj.get('result'), str) or not obj['result'].strip():
         raise Conflict('Agent report does not identify the expected stage owner and outcome.')
-    return compact(obj['result'])
+    return sanitize_text(obj['result'])
 
 
 def persist_docs(root: Path, agent: dict, run_id: str, entries: list[tuple[Path, bytes]]) -> list[str]:
@@ -336,9 +354,7 @@ def capture(root: Path, source: Path, *, repo: Path = REPO, codex: str = 'codex'
                 'source_skipped': skipped, 'source_inventory_sha256': digest(json_bytes(manifest)),
                 'available_stages': sorted(n for n in available if n), 'unavailable_stages': unavailable,
                 'project': str(root), 'source': str(source)}
-    executable = shutil.which(codex)
-    if not executable or not os.access(executable, os.X_OK):
-        raise Conflict('Codex CLI is unavailable; install/sign in and check codex exec --help.')
+    executable = resolve_codex(codex)
     run_id = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ') + '-' + uuid.uuid4().hex[:10]
     report_path = stage_path(agents[0]) / 'logs' / f'{run_id}__baseline-run.json'
     if safe_path(root, report_path).exists():
@@ -366,60 +382,132 @@ def capture(root: Path, source: Path, *, repo: Path = REPO, codex: str = 'codex'
         if any(read_bytes(safe_path(root, p)) != before for p, before in protected.items()):
             raise Conflict('Canonical sprint/binding/lifecycle/hook policy changed during capture.')
 
-    def invoke(agent, phase, workspace, prompt, task, validate):
+    def invoke(agent, phase, workspace, prompt, task, validate, position=None):
         started, session, count = now(), None, 0
+        clock_start = time.monotonic()
+        label = role_label(agent)
+        activity = {'00-routing': 'Coordinator routing', '00-summary': 'Coordinator synthesis'}.get(phase, 'Specialist')
+        if position:
+            activity += f' {position[0]} of {position[1]}'
+        label += f' | {activity}'
+        runtime, failure_phase = {}, 'execution'
         log_path = stage_path(agent) / 'logs' / f'{run_id}__baseline-capture__{phase}.md'
         instructions = available[agent['stage']]
         full_prompt = (instructions + '\n\nEXPLICIT USER-AUTHORIZED BASELINE-ONLY TASK:\n' + prompt)
-        metadata = {'role_id': agent['role_id'], 'phase': phase, 'started': started,
+        metadata = {'role_id': agent['role_id'], 'phase': phase, 'started': started, 'run_id': run_id,
+                    'role_name': agent['title'], 'stage_name': STAGE_NAMES[agent['stage']],
+                    'task': sanitize_text(task, limit=2048),
+                    'task_display_truncated': len(sanitize_text(task, limit=2049)) > 2048,
                     'status': 'RUNNING', 'session_id': None, 'log_path': str(root / log_path),
                     'role_sha256': digest(instructions.encode()), 'prompt_sha256': digest(full_prompt.encode()),
                     'artifacts': [], 'execution_kind': 'isolated_codex_process',
-                    'loaded_role': agent['role_id'], 'native_subagent': False}
+                    'loaded_role': agent['role_id'], 'native_subagent': False,
+                    'execution_status': 'RUNNING', 'validation_status': 'NOT_STARTED',
+                    'promotion_status': 'NOT_STARTED', 'validated_artifacts': 0, 'promoted_artifacts': 0}
         report['invocations'].append(metadata)
         write_log(root, log_path, log_body(agent, started, task, status='RUNNING', phase=phase,
                   role_hash=metadata['role_sha256'], prompt_hash=metadata['prompt_sha256']))
         persist_report()
-        print(f"{agent['role_id']} {phase}: START", file=sys.stderr, flush=True)
+        progress(f'{label}: execution started. Task: {metadata["task"]}'
+                 + (' [task display truncated]' if metadata['task_display_truncated'] else ''))
         try:
-            message, session = codex_run(executable, workspace, full_prompt, timeout)
-            metadata['session_id'] = session
+            message, session = codex_run(executable, workspace, full_prompt, timeout, runtime=runtime,
+                heartbeat=lambda elapsed: progress(f'{label}: still running; elapsed {elapsed:.1f}s.'))
+            metadata.update(session_id=session, execution_status='OK', validation_status='RUNNING')
+            progress(f'{label}: execution completed in {time.monotonic()-clock_start:.1f}s; session {session}. Validation started.')
+            failure_phase = 'validation'
             if session in report['agent_sessions'].values():
                 raise Conflict('Codex reused a session identifier; independent execution not established.')
             report['agent_sessions'][phase] = session
             result, entries = validate(message, workspace)
             protected_unchanged()
+            for relative, data in entries:
+                if relative.name == 'speaker-notes.md':
+                    stamp = data.decode('utf-8').splitlines()[0].removeprefix('AI-MODIFIED - ')
+                    changed = datetime.strptime(stamp, '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc)
+                    begin = datetime.strptime(started, '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc)
+                    if changed < begin - timedelta(minutes=2) or changed > datetime.now(timezone.utc) + timedelta(minutes=2):
+                        raise Conflict('Artifact AI-MODIFIED timestamp is not from this invocation.')
+            metadata.update(validation_status='OK', validated_artifacts=len(entries))
+            progress(f'{label}: validation passed; {len(entries)} artifacts validated.')
+            failure_phase = 'promotion'
+            metadata['promotion_status'] = 'RUNNING' if entries else 'NOT_APPLICABLE'
             if entries:
-                for relative, data in entries:
-                    if relative.name == 'speaker-notes.md':
-                        stamp = data.decode('utf-8').splitlines()[0].removeprefix('AI-MODIFIED - ')
-                        changed = datetime.strptime(stamp, '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc)
-                        begin = datetime.strptime(started, '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc)
-                        if changed < begin - timedelta(minutes=2) or changed > datetime.now(timezone.utc) + timedelta(minutes=2):
-                            raise Conflict('Artifact AI-MODIFIED timestamp is not from this invocation.')
                 created = persist_docs(root, agent, run_id, entries)
                 report['written_artifacts'].extend(created)
                 metadata['artifacts'] = [{'path': str(stage_path(agent) / 'baselines' / run_id / rel),
                                          'sha256': digest(data), 'owner': agent['role_id'], 'session_id': session}
                                         for rel, data in entries]
                 count = len(entries)
-            metadata['status'], metadata['result'] = 'OK', compact(result)
+                metadata.update(promotion_status='OK', promoted_artifacts=count)
+                progress(f'{label}: promotion completed; {count} artifacts. Evidence: {root / stage_path(agent) / "baselines" / run_id}')
+            else:
+                progress(f'{label}: promotion not applicable; 0 artifacts.')
+            metadata['status'], metadata['result'] = 'OK', sanitize_text(result)
             metadata['result_origin'] = 'agent_self_report'
             return message
         except (Exception, KeyboardInterrupt) as exc:
-            session = session or getattr(exc, 'session', None)
-            metadata.update(status='ERROR', session_id=session, result=compact(str(exc)),
-                            result_origin='runner_observation')
+            session = session or getattr(exc, 'session', None) or runtime.get('session_id')
+            metadata.update(status='ERROR', session_id=session, result=sanitize_text(str(exc)),
+                            failure_phase=failure_phase, result_origin='runner_observation')
+            metadata[f'{failure_phase}_status'] = 'ERROR'
+            if metadata['promotion_status'] == 'NOT_STARTED':
+                metadata['promotion_status'] = 'SKIPPED'
             if session:
                 report['agent_sessions'][phase] = session
+            diagnostic = dict(getattr(exc, 'diagnostic', {
+                'code': f'BASELINE_{failure_phase.upper()}_FAILED', 'artifact': None, 'line': None,
+                'target': None, 'rule': sanitize_text(str(exc)),
+                'expected': 'Successful execution and validated stage-owned output are required before promotion.'}))
+            diagnostic.update(run_id=run_id, role_id=agent['role_id'], phase=phase, session_id=session,
+                              failure_phase=failure_phase)
+            metadata['diagnostic'] = diagnostic
+            progress(f'{label}: {failure_phase} FAILED after {time.monotonic()-clock_start:.1f}s; '
+                     f'{metadata["validated_artifacts"]} validated, {count} promoted. {diagnostic["code"]}: {diagnostic["rule"]}')
+            if diagnostic.get('artifact'):
+                progress(f'Artifact: {diagnostic["artifact"]}:{diagnostic.get("line") or "?"}; '
+                         f'target: {diagnostic.get("target") or "unavailable"}. Expected: {diagnostic["expected"]}')
+            bundle = stage_path(agents[0]) / 'diagnostics' / run_id / phase
+            try:
+                bundle_metadata = {key: metadata[key] for key in (
+                    'run_id', 'role_id', 'role_name', 'stage_name', 'phase', 'session_id', 'task',
+                    'failure_phase', 'execution_status', 'validation_status', 'promotion_status',
+                    'validated_artifacts', 'promoted_artifacts', 'role_sha256', 'prompt_sha256')}
+                bundle_metadata.update(started_at=started, finished_at=now(),
+                                       elapsed_seconds=round(time.monotonic() - clock_start, 3))
+                retained = retain_failure(root, bundle, workspace,
+                                          bundle_metadata, diagnostic, runtime)
+                metadata['diagnostic_bundle'] = str(root / bundle)
+                metadata['diagnostic_manifest'] = retained
+                progress(f'Diagnostic bundle (rejected, not promoted): {root / bundle}')
+            except (Exception, KeyboardInterrupt) as preservation:
+                metadata['evidence_preservation_error'] = {
+                    'code': 'BASELINE_EVIDENCE_PRESERVATION_FAILED',
+                    'message': sanitize_text(str(preservation)), 'path': str(root / bundle)}
+                progress(f'Evidence preservation FAILED separately at {root / bundle}: {sanitize_text(str(preservation))}')
             raise
         finally:
             metadata['finished'] = now()
-            write_log(root, log_path, log_body(agent, started, task, status=metadata['status'],
-                      finished=metadata['finished'], result=metadata.get('result'), session=session,
-                      files=count, phase=phase, role_hash=metadata['role_sha256'], prompt_hash=metadata['prompt_sha256']))
-            persist_report()
-            print(f"{agent['role_id']} {phase}: {metadata['status']}", file=sys.stderr, flush=True)
+            metadata['elapsed_seconds'] = round(time.monotonic() - clock_start, 3)
+            metadata['runtime_summary'] = {key: value for key, value in runtime.items() if key not in ('stdout', 'stderr')}
+            try:
+                body = log_body(agent, started, task, status=metadata['status'],
+                    finished=metadata['finished'], result=metadata.get('result'), session=session,
+                    files=metadata['validated_artifacts'], phase=phase,
+                    role_hash=metadata['role_sha256'], prompt_hash=metadata['prompt_sha256'])
+                if metadata['status'] == 'ERROR':
+                    body += ('Diagnostic: ' + sanitize_text(json.dumps(metadata.get('diagnostic', {})), limit=1800) + '\n'
+                             'Failure phase: ' + failure_phase + '\n'
+                             'Diagnostic bundle: ' + sanitize_text(metadata.get('diagnostic_bundle', 'not retained')) + '\n').encode()
+                    if metadata.get('evidence_preservation_error'):
+                        body += ('Evidence preservation: ' + sanitize_text(json.dumps(metadata['evidence_preservation_error'])) + '\n').encode()
+                write_log(root, log_path, body)
+                persist_report()
+            except Exception as evidence_error:
+                if metadata['status'] != 'ERROR':
+                    raise
+                progress(f'Operational evidence write FAILED separately: {sanitize_text(str(evidence_error))}')
+            progress(f'{label}: {metadata["status"]}; elapsed {metadata["elapsed_seconds"]:.1f}s. Log: {root / log_path}')
 
     try:
         with tempfile.TemporaryDirectory(prefix='asdg-baseline-') as location:
@@ -446,9 +534,10 @@ def capture(root: Path, source: Path, *, repo: Path = REPO, codex: str = 'codex'
             selected = planned[:max_agents] if max_agents else planned
             report.update(selected_stages=selected, planned_stages=planned, planned_count=len(planned),
                           partial=len(selected) < len(planned))
-            report['routing_plan'] = route
+            report['routing_plan'] = sanitize_record(route)
             persist_report()
-            for number in selected:
+            progress('Selected specialists (' + str(len(selected)) + '): ' + '; '.join(role_label(agents[n]) for n in selected))
+            for position, number in enumerate(selected, 1):
                 agent = agents[number]
                 workspace = fresh_workspace(base, source, manifest, agent, repo, staged, report)
                 assignment = next(item for item in route['assignments'] if item['stage'] == number)
@@ -458,7 +547,8 @@ def capture(root: Path, source: Path, *, repo: Path = REPO, codex: str = 'codex'
                                                                                evidence_root=workspace)
 
                 invoke(agent, f'{number:02d}', workspace,
-                       documentation_prompt(agent, run_id, assignment['task']), assignment['task'], validate_docs)
+                       documentation_prompt(agent, run_id, assignment['task']), assignment['task'], validate_docs,
+                       position=(position, len(selected)))
                 staged[number] = workspace / 'output'
             workspace = fresh_workspace(base, source, manifest, agents[0], repo, staged, report)
             summary_task = ('Reconcile ONLY governance routing, actual execution records, specialist disagreements '
@@ -477,12 +567,15 @@ def capture(root: Path, source: Path, *, repo: Path = REPO, codex: str = 'codex'
             persist_report()
             return report
     except (Exception, KeyboardInterrupt) as exc:
-        report.update(status='ERROR', error=compact(str(exc)))
+        report.update(status='ERROR', error=sanitize_text(str(exc)))
         report['sprint_changed'] = read_bytes(safe_path(root, '.asdlc/sprint.json')) != protected['.asdlc/sprint.json']
         try:
             after, after_skipped = source_manifest(source)
             report['source_modified'] = after != manifest or after_skipped != skipped
         except (OSError, ValueError):
             report['source_modified'] = None
-        persist_report()
-        raise Conflict(f'{compact(str(exc))} Run evidence: {root / report_path}') from exc
+        try:
+            persist_report()
+        except Exception as evidence_error:
+            progress(f'Run receipt write FAILED separately: {sanitize_text(str(evidence_error))}')
+        raise Conflict(f'{sanitize_text(str(exc))} Run evidence: {sanitize_text(str(root / report_path), limit=1024)}') from exc

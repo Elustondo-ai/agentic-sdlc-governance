@@ -1,0 +1,185 @@
+test_invalid_cli_arguments_exit_nonzero (test_baseline.BaselineCliTests.test_invalid_cli_arguments_exit_nonzero) ... ok
+test_real_cli_registration_dry_run_json_and_state_preservation (test_baseline.BaselineCliTests.test_real_cli_registration_dry_run_json_and_state_preservation) ... ok
+test_bad_output_retains_failure_session_and_previous_success (test_baseline.BaselineSafetyTests.test_bad_output_retains_failure_session_and_previous_success) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: ERROR
+ok
+test_canonical_sprint_mutation_is_detected_and_reported (test_baseline.BaselineSafetyTests.test_canonical_sprint_mutation_is_detected_and_reported) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: ERROR
+ok
+test_capture_invokes_and_records_canonical_executable (test_baseline.BaselineSafetyTests.test_capture_invokes_and_records_canonical_executable) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-COORDINATOR 00-summary: START
+ASDLC-COORDINATOR 00-summary: OK
+ok
+test_changed_source_snapshot_is_rejected (test_baseline.BaselineSafetyTests.test_changed_source_snapshot_is_rejected) ... ok
+test_distinct_invocation_logs_and_byte_authorship_manifest (test_baseline.BaselineSafetyTests.test_distinct_invocation_logs_and_byte_authorship_manifest) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: OK
+ASDLC-COORDINATOR 00-summary: START
+ASDLC-COORDINATOR 00-summary: OK
+ok
+test_empty_directory_outside_output_is_detected (test_baseline.BaselineSafetyTests.test_empty_directory_outside_output_is_detected) ... ok
+test_empty_topic_directory_is_rejected (test_baseline.BaselineSafetyTests.test_empty_topic_directory_is_rejected) ... ok
+test_environment_sentinels_never_reach_child_or_evidence (test_baseline.BaselineSafetyTests.test_environment_sentinels_never_reach_child_or_evidence) ... ok
+test_fabricated_provenance_blocks_promotion_in_offline_capture (test_baseline.BaselineSafetyTests.test_fabricated_provenance_blocks_promotion_in_offline_capture) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ok
+test_fabricated_traversal_external_and_escaped_provenance_rejected (test_baseline.BaselineSafetyTests.test_fabricated_traversal_external_and_escaped_provenance_rejected) ... ok
+test_invalid_auth_location_is_reported_without_value (test_baseline.BaselineSafetyTests.test_invalid_auth_location_is_reported_without_value) ... ok
+test_invalid_executable_targets_fail_closed (test_baseline.BaselineSafetyTests.test_invalid_executable_targets_fail_closed) ... ok
+test_invalid_limits_are_rejected_even_during_dry_run (test_baseline.BaselineSafetyTests.test_invalid_limits_are_rejected_even_during_dry_run) ... ok
+test_narrative_autolinks_are_unverified_not_source_evidence (test_baseline.BaselineSafetyTests.test_narrative_autolinks_are_unverified_not_source_evidence) ... ok
+test_non_object_and_unjustified_plan_rejected (test_baseline.BaselineSafetyTests.test_non_object_and_unjustified_plan_rejected) ... ok
+test_output_only_profile_does_not_bypass_hook_trust (test_baseline.BaselineSafetyTests.test_output_only_profile_does_not_bypass_hook_trust) ... ok
+test_output_ownership_format_approval_and_line_limit (test_baseline.BaselineSafetyTests.test_output_ownership_format_approval_and_line_limit) ... ok
+test_provenance_accepts_formats_links_spaces_and_passage_suffixes (test_baseline.BaselineSafetyTests.test_provenance_accepts_formats_links_spaces_and_passage_suffixes) ... ok
+test_sensitive_binary_and_symlink_evidence_are_excluded (test_baseline.BaselineSafetyTests.test_sensitive_binary_and_symlink_evidence_are_excluded) ... ok
+test_standalone_symlink_resolution_grants_only_pinned_binary (test_baseline.BaselineSafetyTests.test_standalone_symlink_resolution_grants_only_pinned_binary) ... ok
+test_svg_active_and_external_content_is_rejected (test_baseline.BaselineSafetyTests.test_svg_active_and_external_content_is_rejected) ... ok
+test_timeout_preserves_emitted_session (test_baseline.BaselineSafetyTests.test_timeout_preserves_emitted_session) ... ok
+test_unsupported_citations_block_offline_promotion (test_baseline.BaselineSafetyTests.test_unsupported_citations_block_offline_promotion) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ok
+test_unsupported_citations_fail_complete_artifact_validation (test_baseline.BaselineSafetyTests.test_unsupported_citations_fail_complete_artifact_validation) ... ok
+test_valid_mermaid_comments_and_dialects_are_preserved (test_baseline.BaselineSafetyTests.test_valid_mermaid_comments_and_dialects_are_preserved) ... ok
+test_dry_run_no_agent_or_files (test_baseline.BaselineTests.test_dry_run_no_agent_or_files) ... ok
+test_full_thirteen_roles_have_distinct_outputs_and_logs (test_baseline.BaselineTests.test_full_thirteen_roles_have_distinct_outputs_and_logs) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: OK
+ASDLC-03 03: START
+ASDLC-03 03: OK
+ASDLC-04 04: START
+ASDLC-04 04: OK
+ASDLC-05 05: START
+ASDLC-05 05: OK
+ASDLC-06 06: START
+ASDLC-06 06: OK
+ASDLC-07 07: START
+ASDLC-07 07: OK
+ASDLC-08 08: START
+ASDLC-08 08: OK
+ASDLC-09 09: START
+ASDLC-09 09: OK
+ASDLC-10 10: START
+ASDLC-10 10: OK
+ASDLC-11 11: START
+ASDLC-11 11: OK
+ASDLC-12 12: START
+ASDLC-12 12: OK
+ASDLC-COORDINATOR 00-summary: START
+ASDLC-COORDINATOR 00-summary: OK
+ok
+test_invalid_artifact_is_rejected_and_logged (test_baseline.BaselineTests.test_invalid_artifact_is_rejected_and_logged) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: ERROR
+ok
+test_invalid_routing (test_baseline.BaselineTests.test_invalid_routing) ... ok
+test_missing_runner_fails_before_creating_logs (test_baseline.BaselineTests.test_missing_runner_fails_before_creating_logs) ... ok
+test_simulated_distinct_roles_and_tiny_logs (test_baseline.BaselineTests.test_simulated_distinct_roles_and_tiny_logs) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: OK
+ASDLC-COORDINATOR 00-summary: START
+ASDLC-COORDINATOR 00-summary: OK
+ok
+test_source_snapshot_mutation_rejected (test_baseline.BaselineTests.test_source_snapshot_mutation_rejected) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: ERROR
+ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 6.354s
+
+OK

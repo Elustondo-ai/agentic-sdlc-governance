@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "status": "REJECTED_UNVALIDATED_DIAGNOSTIC_EVIDENCE",
+  "validated": false,
+  "promoted": false,
+  "approved": false,
+  "retained_at": "2026-10-14T20:43:07Z",
+  "invocation": {
+    "run_id": "20261014T204306Z-b82fb3e6fa",
+    "role_id": "ASDLC-01",
+    "role_name": "Context and Domain Agent",
+    "stage_name": "Context and Domain Analysis",
+    "phase": "01",
+    "session_id": "offline-2efb70c20e6444a2b0f6d19e5da2bc6a",
+    "task": "Capture stage evidence",
+    "failure_phase": "validation",
+    "execution_status": "OK",
+    "validation_status": "ERROR",
+    "promotion_status": "SKIPPED",
+    "validated_artifacts": 0,
+    "promoted_artifacts": 0,
+    "role_sha256": "155f7230c39f363e1aa691b3d30d46d11b54b53135dec12df4bf7cd4748f42e6",
+    "prompt_sha256": "7343666d5df4e6403ffd03569347ba278641e42e2ff5c21f5bc9d90452bc0209",
+    "started_at": "2026-10-14T20:43:06Z",
+    "finished_at": "2026-10-14T20:43:07Z",
+    "elapsed_seconds": 0.13
+  },
+  "diagnostic": {
+    "code": "BASELINE_CITATION_UNSUPPORTED",
+    "artifact": "01-topic/speaker-notes.md",
+    "line": 7,
+    "target": "https://example.invalid/evidence",
+    "rule": "Inline citations must resolve to snapshot or authored-artifact files.",
+    "expected": "Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.",
+    "run_id": "20261014T204306Z-b82fb3e6fa",
+    "role_id": "ASDLC-01",
+    "phase": "01",
+    "session_id": "offline-2efb70c20e6444a2b0f6d19e5da2bc6a",
+    "failure_phase": "validation"
+  },
+  "runtime": {
+    "stdout": {
+      "text": "{\"type\": \"thread.started\", \"thread_id\": \"offline-2efb70c20e6444a2b0f6d19e5da2bc6a\"}\n",
+      "bytes_seen": 84,
+      "retained_bytes": 84,
+      "capture_limit_bytes": 65536,
+      "truncated": false,
+      "omitted_bytes": 0,
+      "incomplete_tail_omitted_bytes": 0,
+      "sanitized": false
+    },
+    "stderr": {
+      "text": "",
+      "bytes_seen": 0,
+      "retained_bytes": 0,
+      "capture_limit_bytes": 65536,
+      "truncated": false,
+      "omitted_bytes": 0,
+      "incomplete_tail_omitted_bytes": 0,
+      "sanitized": false
+    },
+    "exit_code": 0,
+    "session_id": "offline-2efb70c20e6444a2b0f6d19e5da2bc6a",
+    "elapsed_seconds": 0.118,
+    "event_lines_omitted": 0,
+    "event_line_limit_bytes": 65536,
+    "termination_signals": [],
+    "cleanup_errors": []
+  },
+  "record_processing": {
+    "redacted": 0,
+    "sanitized": 0,
+    "truncated": 0
+  },
+  "artifacts": [
+    {
+      "artifact": "output/01-topic/speaker-notes.md",
+      "copy": "rejected-001-speaker-notes.md.txt",
+      "original_bytes": 225,
+      "original_sha256": "ad81f9d0240932be334f6fc79dfc570bd9d102be28a76597bec2e103fc4c5323",
+      "retained_bytes": 225,
+      "retained_sha256": "ad81f9d0240932be334f6fc79dfc570bd9d102be28a76597bec2e103fc4c5323",
+      "sanitized": false,
+      "redacted": false,
+      "truncated": false,
+      "status": "REJECTED_UNVALIDATED"
+    },
+    {
+      "artifact": "output/01-topic/visual.mmd",
+      "copy": "rejected-002-visual.mmd.txt",
+      "original_bytes": 41,
+      "original_sha256": "3857f4de12fdd9dc4b6a3860254f182a9214845a09d7e7c768cbd729a82a1950",
+      "retained_bytes": 41,
+      "retained_sha256": "3857f4de12fdd9dc4b6a3860254f182a9214845a09d7e7c768cbd729a82a1950",
+      "sanitized": false,
+      "redacted": false,
+      "truncated": false,
+      "status": "REJECTED_UNVALIDATED"
+    }
+  ],
+  "omissions": [],
+  "truncations": [],
+  "limits": {
+    "entries": 128,
+    "artifacts": 30,
+    "scan_file_bytes": 2097152,
+    "scan_total_bytes": 4194304,
+    "copy_file_bytes": 131072,
+    "copy_total_bytes": 524288
+  },
+  "copy_format": "Inert UTF-8 .txt copies; content may be sanitized or truncated.",
+  "observed": {
+    "entries": 3,
+    "scanned": 266,
+    "retained": 266
+  }
+}

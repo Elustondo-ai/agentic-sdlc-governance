@@ -1,0 +1,29 @@
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.0s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.1s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.1s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.1s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.2s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.2s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.2s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.2s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.3s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.3s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.3s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.4s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.4s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: still running; elapsed 0.4s.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.4s; session offline-42d010411493457c94f7414cfaafec3f. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.4s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpnwoifx5n/consumer/docs/asdlc/00-governance/logs/20261014T204306Z-b82fb3e6fa__baseline-capture__00-routing.md
+Selected specialists (5): ASDLC-01 — Context and Domain Agent | Stage 01: Context and Domain Analysis; ASDLC-04 — Benchmark and Test Strategy Agent | Stage 04: Benchmarks, Test Strategy and Success Criteria; ASDLC-05 — High-Level Architecture Agent | Stage 05: High-Level Solution Design and Architecture; ASDLC-08 — Low-Level Design Agent | Stage 08: Low-Level Design; ASDLC-11 — Operational Reality, DevOps and User Acceptance Agent | Stage 11: Operational Reality, DevOps and User Acceptance
+ASDLC-01 — Context and Domain Agent | Stage 01: Context and Domain Analysis | Specialist 1 of 5: execution started. Task: Capture stage evidence
+ASDLC-01 — Context and Domain Agent | Stage 01: Context and Domain Analysis | Specialist 1 of 5: still running; elapsed 0.0s.
+ASDLC-01 — Context and Domain Agent | Stage 01: Context and Domain Analysis | Specialist 1 of 5: still running; elapsed 0.1s.
+ASDLC-01 — Context and Domain Agent | Stage 01: Context and Domain Analysis | Specialist 1 of 5: still running; elapsed 0.1s.
+ASDLC-01 — Context and Domain Agent | Stage 01: Context and Domain Analysis | Specialist 1 of 5: execution completed in 0.1s; session offline-2efb70c20e6444a2b0f6d19e5da2bc6a. Validation started.
+ASDLC-01 — Context and Domain Agent | Stage 01: Context and Domain Analysis | Specialist 1 of 5: validation FAILED after 0.1s; 0 validated, 0 promoted. BASELINE_CITATION_UNSUPPORTED: Inline citations must resolve to snapshot or authored-artifact files.
+Artifact: 01-topic/speaker-notes.md:7; target: https://example.invalid/evidence. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpnwoifx5n/consumer/docs/asdlc/00-governance/diagnostics/20261014T204306Z-b82fb3e6fa/01
+ASDLC-01 — Context and Domain Agent | Stage 01: Context and Domain Analysis | Specialist 1 of 5: ERROR; elapsed 0.1s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpnwoifx5n/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T204306Z-b82fb3e6fa__baseline-capture__01.md

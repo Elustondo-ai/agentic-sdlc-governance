@@ -1,0 +1,255 @@
+diff --git a/asdlc/00-governance/src/cli_baseline.py b/asdlc/00-governance/src/cli_baseline.py
+--- a/asdlc/00-governance/src/cli_baseline.py
++++ b/asdlc/00-governance/src/cli_baseline.py
+@@ -151,19 +151,32 @@
+     return values
+ 
+ 
+-def sandbox_settings(workspace: Path) -> list[str]:
++def resolve_codex(codex: str) -> str:
++    """Pin the selected executable, including directory and file symlinks."""
++    try:
++        selected = shutil.which(codex)
++        executable = Path(selected).resolve(strict=True) if selected else None
++        if executable is not None and executable.is_file() and os.access(executable, os.X_OK):
++            return str(executable)
++    except (OSError, RuntimeError, ValueError):
++        pass
++    raise Conflict('Codex CLI is unavailable; select a regular executable and check codex exec --help.')
++
++
++def sandbox_settings(workspace: Path, codex: str) -> list[str]:
++    executable = resolve_codex(codex)
+     roots = {':root': 'deny', ':minimal': 'read', ':slash_tmp': 'deny', ':tmpdir': 'deny',
+              str(Path.home()): 'deny', str(workspace): 'read', str(workspace / 'output'): 'write',
+-             str(Path(sys.executable).resolve().parent.parent): 'read'}
++             executable: 'read'}
+     filesystem = '{' + ','.join(json.dumps(path) + '=' + json.dumps(access) for path, access in roots.items()) + '}'
+     return ['-c', 'default_permissions="asdg_baseline"',
+             '-c', 'permissions.asdg_baseline.filesystem=' + filesystem,
+             '-c', 'permissions.asdg_baseline.network.enabled=false']
+ 
+ 
+-def codex_options(workspace: Path) -> list[str]:
++def codex_options(workspace: Path, codex: str) -> list[str]:
+     # An isolated named profile grants evidence read access and output-only writes.
+-    return ['-a', 'never', *sandbox_settings(workspace),
++    return ['-a', 'never', *sandbox_settings(workspace, codex),
+             '-c', 'mcp_servers={}', '-c', 'web_search="disabled"',
+             '-c', 'agents.enabled=false', '-c', 'allow_login_shell=false',
+             '-c', shell_environment_policy(),
+@@ -191,7 +204,8 @@
+     process = None
+     output, session = '', None
+     try:
+-        process = subprocess.Popen([codex, *codex_options(workspace)], stdin=subprocess.PIPE,
++        codex = resolve_codex(codex)
++        process = subprocess.Popen([codex, *codex_options(workspace, codex)], stdin=subprocess.PIPE,
+                                    stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+                                    start_new_session=True, env=subprocess_environment())
+         try:
+@@ -336,9 +350,7 @@
+                 'source_skipped': skipped, 'source_inventory_sha256': digest(json_bytes(manifest)),
+                 'available_stages': sorted(n for n in available if n), 'unavailable_stages': unavailable,
+                 'project': str(root), 'source': str(source)}
+-    executable = shutil.which(codex)
+-    if not executable or not os.access(executable, os.X_OK):
+-        raise Conflict('Codex CLI is unavailable; install/sign in and check codex exec --help.')
++    executable = resolve_codex(codex)
+     run_id = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ') + '-' + uuid.uuid4().hex[:10]
+     report_path = stage_path(agents[0]) / 'logs' / f'{run_id}__baseline-run.json'
+     if safe_path(root, report_path).exists():
+diff --git a/asdlc/00-governance/tests/test_baseline.py b/asdlc/00-governance/tests/test_baseline.py
+--- a/asdlc/00-governance/tests/test_baseline.py
++++ b/asdlc/00-governance/tests/test_baseline.py
+@@ -234,7 +234,7 @@
+ 
+     def test_output_only_profile_does_not_bypass_hook_trust(self):
+         from cli_baseline import codex_options
+-        args = codex_options(self.path)
++        args = codex_options(self.path, str(self.fake))
+         self.assertEqual(args[args.index('--cd') + 1], str(self.path / 'output'))
+         self.assertIn('default_permissions="asdg_baseline"', args)
+         self.assertIn('permissions.asdg_baseline.network.enabled=false', args)
+@@ -253,6 +253,66 @@
+         before = workspace_snapshot(work)
+         (work / 'unauthorized').mkdir()
+         self.assertNotEqual(workspace_snapshot(work), before)
++
++    def test_standalone_symlink_resolution_grants_only_pinned_binary(self):
++        from cli_baseline import resolve_codex, sandbox_settings
++        import re
++        install = self.path / 'home/.codex/packages/standalone'
++        binary = install / 'releases/v1/bin/codex'
++        binary.parent.mkdir(parents=True)
++        binary.write_text('#!/bin/sh\nexit 0\n')
++        binary.chmod(0o755)
++        current = install / 'current'
++        current.symlink_to('releases/v1', target_is_directory=True)
++        shim = self.path / 'home/.local/bin/codex'
++        shim.parent.mkdir(parents=True)
++        shim.symlink_to(current / 'bin/codex')
++        with patch.dict(os.environ, {'PATH': str(shim.parent)}):
++            selected = resolve_codex('codex')
++        self.assertEqual(selected, str(binary.resolve()))
++        self.assertEqual(resolve_codex(str(shim)), selected)
++        work = self.path / 'isolated'
++        args = sandbox_settings(work, str(shim))
++        config = next(arg for arg in args if arg.startswith('permissions.asdg_baseline.filesystem='))
++        reads = {json.loads(key) for key in re.findall(r'("(?:\\.|[^"\\])*")="read"', config)}
++        self.assertEqual(reads, {':minimal', str(work), selected})
++        self.assertIn(json.dumps(str(Path.home())) + '="deny"', config)
++        self.assertIn(json.dumps(str(work / 'output')) + '="write"', config)
++        self.assertIn('permissions.asdg_baseline.network.enabled=false', args)
++        current.unlink()
++        current.symlink_to('releases/missing', target_is_directory=True)
++        self.assertEqual(sandbox_settings(work, selected), args)
++
++    def test_invalid_executable_targets_fail_closed(self):
++        from cli_baseline import resolve_codex
++        nonexec = self.path / 'nonexec'
++        nonexec.write_text('not executable')
++        nonexec.chmod(0o600)
++        dangling = self.path / 'dangling'
++        dangling.symlink_to('missing')
++        loop = self.path / 'loop'
++        loop.symlink_to('loop')
++        for target in (nonexec, dangling, loop, self.path, self.path / 'missing'):
++            with self.subTest(target=target), self.assertRaisesRegex(Conflict, 'Codex CLI is unavailable'):
++                resolve_codex(str(target))
++
++    def test_capture_invokes_and_records_canonical_executable(self):
++        import subprocess
++        binary = self.fake
++        shim = self.path / 'codex-shim'
++        shim.symlink_to(binary)
++        self.fake = shim
++        with patch('cli_baseline.subprocess.Popen', wraps=subprocess.Popen) as launch:
++            result = self.call_capture(max_agents=1)
++        report = json.loads(Path(result['report_path']).read_text())
++        selected = str(binary.resolve())
++        self.assertEqual(report['codex_executable'], selected)
++        for call in launch.call_args_list:
++            argv = call.args[0]
++            self.assertEqual(argv[0], selected)
++            config = next(arg for arg in argv if arg.startswith('permissions.asdg_baseline.filesystem='))
++            self.assertIn(json.dumps(selected) + '="read"', config)
++            self.assertNotIn(json.dumps(str(shim)) + '="read"', config)
+ 
+     def test_bad_output_retains_failure_session_and_previous_success(self):
+         with patch.dict(os.environ, {'ASDLC_TEST_BAD_OUTPUT': '1'}):
+diff --git a/asdlc/00-governance/tests/probe_baseline_sandbox.py b/asdlc/00-governance/tests/probe_baseline_sandbox.py
+new file mode 100644
+--- /dev/null
++++ b/asdlc/00-governance/tests/probe_baseline_sandbox.py
+@@ -0,0 +1,88 @@
++"""No-model macOS Codex sandbox probe; uses only disposable synthetic fixtures."""
++from pathlib import Path
++import argparse, hashlib, json, os, signal, subprocess, sys, tempfile
++from datetime import datetime, timezone
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--repo', type=Path, required=True)
++    parser.add_argument('--codex', required=True)
++    parser.add_argument('--evidence-dir', type=Path, required=True)
++    args = parser.parse_args()
++    sys.path.insert(0, str(args.repo / 'asdlc/00-governance/src'))
++    from cli_baseline import resolve_codex, sandbox_settings, subprocess_environment
++    if sys.platform != 'darwin':
++        raise SystemExit('This native probe requires macOS Seatbelt.')
++    args.evidence_dir.mkdir(parents=True, exist_ok=True)
++    executable = resolve_codex(args.codex)
++    results = {'started': datetime.now(timezone.utc).isoformat(), 'selected': args.codex,
++               'resolved': executable, 'executable_sha256': hashlib.sha256(Path(executable).read_bytes()).hexdigest(),
++               'no_model': True, 'cases': []}
++    with tempfile.TemporaryDirectory(prefix='asdg-native-probe-') as temporary, tempfile.TemporaryDirectory(
++            prefix='.asdg-runtime-canary-', dir=args.repo.parent) as home_temporary:
++        base = Path(temporary).resolve()
++        work = base / 'workspace'
++        for folder in ('output', 'source', 'context'):
++            (work / folder).mkdir(parents=True)
++        source = work / 'source/evidence.txt'
++        source.write_text('synthetic source\n'); source.chmod(0o600)
++        context = work / 'context/evidence.txt'
++        context.write_text('synthetic context\n'); context.chmod(0o600)
++        canary = Path(home_temporary) / 'unrelated-canary.txt'
++        canary.write_text('synthetic unrelated canary\n'); canary.chmod(0o600)
++        state = base / 'synthetic-codex-home'; state.mkdir()
++        credential = state / 'auth.json'
++        credential.write_text('{"synthetic":true}\n'); credential.chmod(0o600)
++        env = subprocess_environment(); env['CODEX_HOME'] = str(state)
++        settings = sandbox_settings(work, executable)
++        results['filesystem_settings'] = settings
++        results['fixtures'] = {'source_mode': oct(source.stat().st_mode & 0o777), 'canary': str(canary),
++                               'synthetic_auth': str(credential), 'real_credentials_accessed': False}
++        def run(name, command, allowed, profile=None, launcher=None):
++            argv = [launcher or executable, 'sandbox', *(profile if profile is not None else settings),
++                    '-P', 'asdg_baseline', '-C', str(work / 'output'), '--', *command]
++            process = subprocess.Popen(argv, cwd=work / 'output', env=env, text=True,
++                                       stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True)
++            try:
++                stdout, stderr = process.communicate(timeout=15)
++            except subprocess.TimeoutExpired:
++                os.killpg(process.pid, signal.SIGKILL)
++                stdout, stderr = process.communicate()
++                stderr += '\nProbe timed out (not a successful denial).'
++            passed = process.returncode == 0 if allowed else process.returncode != 0 and 'Operation not permitted' in stderr
++            item = {'name': name, 'argv': argv, 'exit_code': process.returncode,
++                    'expected': 'allowed' if allowed else 'sandbox denial', 'passed': passed,
++                    'stdout': stdout, 'stderr': stderr}
++            results['cases'].append(item)
++            print(name, 'PASS' if passed else 'FAIL', 'exit', process.returncode, flush=True)
++            (args.evidence_dir / 'native-probe.json').write_text(json.dumps(results, indent=2) + '\n')
++        omitted = [value.replace(',' + json.dumps(executable) + '="read"', '') for value in settings]
++        run('control-original-symlink-without-grant', [args.codex, '--version'], False, omitted, args.codex)
++        run('resolved-runtime-version', [executable, '--version'], True)
++        run('source-readable', ['/bin/cat', str(source)], True)
++        run('source-overwrite-blocked', ['/bin/sh', '-c', 'printf changed > "$1"', 'probe', str(source)], False)
++        run('source-create-blocked', ['/bin/sh', '-c', 'printf changed > "$1"', 'probe', str(source.parent / 'new.txt')], False)
++        run('source-delete-blocked', ['/bin/rm', str(source)], False)
++        run('context-overwrite-blocked', ['/bin/sh', '-c', 'printf changed > "$1"', 'probe', str(context)], False)
++        output = work / 'output/result.txt'
++        run('output-write-read', ['/bin/sh', '-c', 'printf produced > "$1" && /bin/cat "$1"', 'probe', str(output)], True)
++        run('unrelated-home-canary-unreadable', ['/bin/sh', '-c', '/bin/cat "$1" >/dev/null', 'probe', str(canary)], False)
++        run('synthetic-credential-unreadable', ['/bin/sh', '-c', '/bin/cat "$1" >/dev/null', 'probe', str(credential)], False)
++        run('network-bind-blocked', ['/usr/bin/nc', '-l', '127.0.0.1', '0'], False)
++        results['postconditions'] = {
++            'source_unchanged': source.read_text() == 'synthetic source\n',
++            'source_create_absent': not (source.parent / 'new.txt').exists(),
++            'context_unchanged': context.read_text() == 'synthetic context\n',
++            'output_written': output.read_text() == 'produced' if output.exists() else False,
++            'canary_unchanged': canary.read_text() == 'synthetic unrelated canary\n',
++            'synthetic_credential_unchanged': credential.read_text() == '{"synthetic":true}\n'}
++        results['passed'] = all(c['passed'] for c in results['cases']) and all(results['postconditions'].values())
++    results['finished'] = datetime.now(timezone.utc).isoformat()
++    results['fixtures_cleaned'] = True
++    (args.evidence_dir / 'native-probe.json').write_text(json.dumps(results, indent=2) + '\n')
++    return 0 if results['passed'] else 1
++
++
++if __name__ == '__main__':
++    raise SystemExit(main())
+diff --git a/asdlc/00-governance/docs/baseline-safety.md b/asdlc/00-governance/docs/baseline-safety.md
+--- a/asdlc/00-governance/docs/baseline-safety.md
++++ b/asdlc/00-governance/docs/baseline-safety.md
+@@ -1,10 +1,12 @@
+-AI-MODIFIED - 2026-10-14T19:27:16Z
++AI-MODIFIED - 2026-10-14T20:13:21Z
+ 
+ # Baseline isolation and validation
+ 
+ Baseline agents use an ephemeral named `asdg_baseline` permissions profile.
+ Its default root, home and broad temp reads are denied; platform/runtime paths and the isolated
+ snapshot are readable. Only that invocation's `output/` subtree is writable.
++The selected Codex executable is resolved through symlinks, invoked by its canonical path and granted exact-file read access.
++Standalone Codex uses `:minimal` system libraries; no HOME, `~/.codex`, release-directory or unrelated Python-prefix read grant is added.
+ Explicit temp denials matter: the macOS probe found root-deny alone left a temp canary readable.
+ Both source-write denial and outside-canary read denial were verified with actual Codex Seatbelt
+ probes. No hook-trust bypass or global configuration/registry change is used.
+@@ -43,3 +45,4 @@
+ Managed/runtime policy may further restrict the profile; incompatible hosts fail rather than
+ falling back to broad writes. Windows execution is not established by this Mac/Linux implementation.
+ No automatic retention, deletion, evidence approval or lifecycle completion is inferred.
++The repeatable no-model check is `tests/probe_baseline_sandbox.py` (macOS); see the [runtime-fix review](../../../docs/reviews/asdlc-baseline-runtime-fix/README.md).

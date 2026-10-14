@@ -1,0 +1,1981 @@
+diff --git a/asdlc/00-governance/docs/baseline-capture.md b/asdlc/00-governance/docs/baseline-capture.md
+--- a/asdlc/00-governance/docs/baseline-capture.md
++++ b/asdlc/00-governance/docs/baseline-capture.md
+@@ -1,4 +1,4 @@
+-AI-MODIFIED - 2026-10-14T16:14:00Z
++AI-MODIFIED - 2026-10-14T20:39:10Z
+ 
+ # Brownfield baseline capture — v0.1.4 trial contract
+ 
+@@ -27,6 +27,7 @@
+ See [R01 execution, environment and provenance](baseline-validation-r01.md).
+ 
+ ## Observable records
++See [progress, diagnostics and private rejected-output bundles](baseline-observability.md).
+ Every invocation has its own compact start/end Markdown log in its stage's `logs/` directory.
+ Coordinator routing and synthesis are distinct invocations and therefore have distinct logs.
+ Logs include actual timestamps, role/task, completion status, artifact count, role/prompt hashes,
+diff --git a/asdlc/00-governance/docs/baseline-observability.md b/asdlc/00-governance/docs/baseline-observability.md
+new file mode 100644
+--- /dev/null
++++ b/asdlc/00-governance/docs/baseline-observability.md
+@@ -0,0 +1,41 @@
++AI-MODIFIED - 2026-10-14T20:39:10Z
++
++# Baseline progress and rejected-output evidence
++
++Progress is written only to stderr. Successful `--json` stdout remains one report; failed commands keep stdout empty.
++Names use stable role IDs plus full role/stage names, including Context and Domain Analysis and Intent.
++Routing reports selected specialists; each specialist reports its position and actual assigned task.
++Execution starts/completes separately from validation and promotion. Counts describe observed artifacts, not estimated work.
++A running child emits an elapsed-time heartbeat every 15 seconds; no percentages or internal activities are inferred.
++Task displays are sanitized, limited to 2048 characters and explicitly marked when shortened.
++
++## Diagnostics and compatibility
++Existing receipt statuses, sessions and `written_artifacts` retain their meaning.
++Invocation records add execution/validation/promotion status, validated/promoted counts, elapsed time and failure phase.
++Citation errors keep their existing rejection text and add `BASELINE_CITATION_*` codes, original line numbers,
++artifact-relative paths, bounded sanitized targets, violated rules and expected formats.
++Run/role/phase/session identifiers connect diagnostics, invocation logs and the run receipt.
++Missing context is recorded as null; an unknown target is never guessed from a generic error.
++
++## Private diagnostic bundles
++Before failed invocation cleanup, the runner writes `docs/asdlc/00-governance/diagnostics/<run-id>/<phase>/`.
++`manifest.json` contains invocation identifiers, timestamps, hashes, structured diagnostics and bounded runtime records.
++Copies are explicitly REJECTED/UNVALIDATED, never accepted artifacts, approved output or promotion counts.
++Only expected shallow output topic notes and text visuals are eligible; copies use inert `.txt` names.
++Source/context, prompts, credential files, arbitrary workspace contents, links, hardlinks and binary visuals are not copied.
++Recognized sensitive artifact content causes whole-file omission; display sanitization redacts credentials and terminal controls.
++Every omission, redaction and truncation is recorded. New directories are 0700 and files 0600; existing bundles are never overwritten.
++Scanning stops at 128 entries, 30 artifacts, 2 MiB per file and 4 MiB total; retained copies cap at 128 KiB/file and 512 KiB total.
++Runtime capture drains continuously but retains at most 64 KiB per stream; incomplete truncated tails are omitted.
++Session events are parsed independently of retained output, with a 64 KiB JSONL record limit and explicit omission count.
++Bundle metadata limits include 4096 characters/string and 128 nodes; truncation/redaction counters are recorded.
++A preservation failure is reported separately and never replaces the original execution/validation failure.
++
++## Boundaries
++Validation decisions, citation grammar, sandbox permissions, environment filtering, selection and promotion rules are unchanged.
++There is no automatic repair, retry, model call or approval in this observability feature.
++The prior failed experiment's removed draft is not recovered; new bundles are prospective only.
++Secret detection is conservative, not an exhaustive detector of arbitrary confidential prose; diagnostic material remains private.
++Timeout/interruption still terminates the process group, waits five seconds, then escalates to KILL when needed.
++The offline tests cover actual child-process cleanup, noisy/quiet streams, CLI JSON separation and evidence retention.
++See the [observability review and synthetic example](../../../docs/reviews/asdlc-baseline-observability/README.md).
+diff --git a/asdlc/00-governance/src/cli_baseline.py b/asdlc/00-governance/src/cli_baseline.py
+--- a/asdlc/00-governance/src/cli_baseline.py
++++ b/asdlc/00-governance/src/cli_baseline.py
+@@ -5,11 +5,11 @@
+ import os
+ import re
+ import shutil
+-import signal
+ import stat
+ import subprocess
+ import sys
+ import tempfile
++import time
+ import uuid
+ from datetime import datetime, timezone, timedelta
+ from pathlib import Path
+@@ -19,6 +19,28 @@
+ from cli_files import Conflict, apply, atomic_replace, plan, read_bytes, safe_path
+ from cli_model import ARTIFACTS, REPO, catalogue, json_bytes, now
+ from cli_project import inspect
++from cli_baseline_diagnostics import sanitize_record, sanitize_text
++from cli_baseline_evidence import retain_failure
++from cli_baseline_process import observe_process
++
++HEARTBEAT_SECONDS = 15.0
++STAGE_NAMES = (
++    'Governance', 'Context and Domain Analysis', 'Intent', 'System Model and Use Cases',
++    'Benchmarks, Test Strategy and Success Criteria', 'High-Level Solution Design and Architecture',
++    'Viable Proof of Concept', 'Planning', 'Low-Level Design', 'Build and Test Cycle',
++    'Document, Review and Release', 'Operational Reality, DevOps and User Acceptance',
++    'Observability, Insights and Learning',
++)
++
++
++def progress(text: str) -> None:
++    print(sanitize_text(text, limit=4096), file=sys.stderr, flush=True)
++
++
++def role_label(agent: dict) -> str:
++    stage = agent['stage']
++    return (f"{agent['role_id']} — {agent['title']}" if stage == 0 else
++            f"{agent['role_id']} — {agent['title']} | Stage {stage:02d}: {STAGE_NAMES[stage]}")
+ 
+ ENV_NAMES = ('PATH', 'HOME', 'USER', 'LOGNAME', 'TMPDIR', 'TMP', 'TEMP',
+              'LANG', 'LC_ALL', 'LC_CTYPE', 'SystemRoot', 'WINDIR',
+@@ -82,7 +104,7 @@
+              role_hash: str = '', prompt_hash: str = '') -> bytes:
+     lines = [f'AI-MODIFIED - {now()}', '', '# Baseline agent invocation', '',
+              f"Agent: {agent['role_id']} — {agent['title']}", f'Phase: {phase}',
+-             f'Started: {started}', f'Task: {compact(task)}', f'Status: {status}',
++             f'Started: {started}', f'Task: {sanitize_text(task)}', f'Status: {status}',
+              'Execution: separate Codex process; native subagent: no',
+              f'Role/context SHA-256: {role_hash}', f'Prompt SHA-256: {prompt_hash}']
+     if session:
+@@ -90,7 +112,7 @@
+     if finished:
+         lines.extend([f'Finished: {finished}', f'Validated artifact files: {files}',
+                       f'Result ({"agent self-report" if status == "OK" else "runner observation"}): '
+-                      f'{compact(result or "No result reported.")}'])
++                      f'{sanitize_text(result or "No result reported.")}'])
+     return ('\n'.join(lines) + '\n').encode()
+ 
+ 
+@@ -186,44 +208,26 @@
+             '--output-last-message', str(workspace / '.agent-last-message.txt'), '-']
+ 
+ 
+-def event_session(output: str) -> str | None:
+-    for line in output.splitlines():
+-        try:
+-            event = json.loads(line)
+-        except ValueError:
+-            continue
+-        if isinstance(event, dict) and event.get('type') == 'thread.started':
+-            value = event.get('thread_id')
+-            if isinstance(value, str) and re.fullmatch(r'[A-Za-z0-9_-]{1,128}', value):
+-                return value
+-    return None
+-
+-
+-def codex_run(codex: str, workspace: Path, prompt: str, timeout: int) -> tuple[str, str | None]:
++def codex_run(codex: str, workspace: Path, prompt: str, timeout: int, *,
++              heartbeat=None, runtime: dict | None = None) -> tuple[str, str | None]:
+     before = workspace_snapshot(workspace)
+-    process = None
+-    output, session = '', None
++    session = None
++    runtime = runtime if runtime is not None else {}
+     try:
+         codex = resolve_codex(codex)
+         process = subprocess.Popen([codex, *codex_options(workspace, codex)], stdin=subprocess.PIPE,
+-                                   stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
++                                   stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                    start_new_session=True, env=subprocess_environment())
+         try:
+-            output, errors = process.communicate(input=prompt, timeout=timeout)
+-        except (subprocess.TimeoutExpired, KeyboardInterrupt):
+-            os.killpg(process.pid, signal.SIGTERM)
+-            try:
+-                output, errors = process.communicate(timeout=5)
+-            except subprocess.TimeoutExpired:
+-                os.killpg(process.pid, signal.SIGKILL)
+-                output, errors = process.communicate()
+-            session = event_session(output)
+-            raise InvocationError(f'Codex invocation interrupted or exceeded {timeout}s timeout.', session)
+-        session = event_session(output)
++            session, errors = observe_process(process, prompt, timeout, heartbeat=heartbeat,
++                                             interval=HEARTBEAT_SECONDS, runtime=runtime)
++        except (subprocess.TimeoutExpired, KeyboardInterrupt) as exc:
++            session = getattr(exc, 'session', None) or runtime.get('session_id')
++            raise InvocationError(f'Codex invocation interrupted or exceeded {timeout}s timeout.', session) from exc
+         if workspace_snapshot(workspace) != before:
+             raise InvocationError('Agent changed sandbox material outside output/; no artifacts promoted.', session)
+         if process.returncode:
+-            raise InvocationError(f'Codex failed (exit {process.returncode}): {compact(errors)}', session)
++            raise InvocationError(f'Codex failed (exit {process.returncode}): {sanitize_text(errors)}', session)
+         last = workspace / '.agent-last-message.txt'
+         if last.is_symlink() or not last.is_file() or last.stat().st_size > 64000:
+             raise InvocationError('Codex returned without a safe bounded final message.', session)
+@@ -233,7 +237,7 @@
+     except InvocationError:
+         raise
+     except (OSError, ValueError, Conflict) as exc:
+-        raise InvocationError(f'Codex execution/validation failed: {compact(str(exc))}', session) from exc
++        raise InvocationError(f'Codex execution/validation failed: {sanitize_text(str(exc))}', session) from exc
+ 
+ 
+ def parse_json(text: str) -> dict:
+@@ -278,7 +282,7 @@
+     obj = parse_json(message)
+     if obj.get('role_id') != agent['role_id'] or not isinstance(obj.get('result'), str) or not obj['result'].strip():
+         raise Conflict('Agent report does not identify the expected stage owner and outcome.')
+-    return compact(obj['result'])
++    return sanitize_text(obj['result'])
+ 
+ 
+ def persist_docs(root: Path, agent: dict, run_id: str, entries: list[tuple[Path, bytes]]) -> list[str]:
+@@ -378,60 +382,132 @@
+         if any(read_bytes(safe_path(root, p)) != before for p, before in protected.items()):
+             raise Conflict('Canonical sprint/binding/lifecycle/hook policy changed during capture.')
+ 
+-    def invoke(agent, phase, workspace, prompt, task, validate):
++    def invoke(agent, phase, workspace, prompt, task, validate, position=None):
+         started, session, count = now(), None, 0
++        clock_start = time.monotonic()
++        label = role_label(agent)
++        activity = {'00-routing': 'Coordinator routing', '00-summary': 'Coordinator synthesis'}.get(phase, 'Specialist')
++        if position:
++            activity += f' {position[0]} of {position[1]}'
++        label += f' | {activity}'
++        runtime, failure_phase = {}, 'execution'
+         log_path = stage_path(agent) / 'logs' / f'{run_id}__baseline-capture__{phase}.md'
+         instructions = available[agent['stage']]
+         full_prompt = (instructions + '\n\nEXPLICIT USER-AUTHORIZED BASELINE-ONLY TASK:\n' + prompt)
+-        metadata = {'role_id': agent['role_id'], 'phase': phase, 'started': started,
++        metadata = {'role_id': agent['role_id'], 'phase': phase, 'started': started, 'run_id': run_id,
++                    'role_name': agent['title'], 'stage_name': STAGE_NAMES[agent['stage']],
++                    'task': sanitize_text(task, limit=2048),
++                    'task_display_truncated': len(sanitize_text(task, limit=2049)) > 2048,
+                     'status': 'RUNNING', 'session_id': None, 'log_path': str(root / log_path),
+                     'role_sha256': digest(instructions.encode()), 'prompt_sha256': digest(full_prompt.encode()),
+                     'artifacts': [], 'execution_kind': 'isolated_codex_process',
+-                    'loaded_role': agent['role_id'], 'native_subagent': False}
++                    'loaded_role': agent['role_id'], 'native_subagent': False,
++                    'execution_status': 'RUNNING', 'validation_status': 'NOT_STARTED',
++                    'promotion_status': 'NOT_STARTED', 'validated_artifacts': 0, 'promoted_artifacts': 0}
+         report['invocations'].append(metadata)
+         write_log(root, log_path, log_body(agent, started, task, status='RUNNING', phase=phase,
+                   role_hash=metadata['role_sha256'], prompt_hash=metadata['prompt_sha256']))
+         persist_report()
+-        print(f"{agent['role_id']} {phase}: START", file=sys.stderr, flush=True)
++        progress(f'{label}: execution started. Task: {metadata["task"]}'
++                 + (' [task display truncated]' if metadata['task_display_truncated'] else ''))
+         try:
+-            message, session = codex_run(executable, workspace, full_prompt, timeout)
+-            metadata['session_id'] = session
++            message, session = codex_run(executable, workspace, full_prompt, timeout, runtime=runtime,
++                heartbeat=lambda elapsed: progress(f'{label}: still running; elapsed {elapsed:.1f}s.'))
++            metadata.update(session_id=session, execution_status='OK', validation_status='RUNNING')
++            progress(f'{label}: execution completed in {time.monotonic()-clock_start:.1f}s; session {session}. Validation started.')
++            failure_phase = 'validation'
+             if session in report['agent_sessions'].values():
+                 raise Conflict('Codex reused a session identifier; independent execution not established.')
+             report['agent_sessions'][phase] = session
+             result, entries = validate(message, workspace)
+             protected_unchanged()
++            for relative, data in entries:
++                if relative.name == 'speaker-notes.md':
++                    stamp = data.decode('utf-8').splitlines()[0].removeprefix('AI-MODIFIED - ')
++                    changed = datetime.strptime(stamp, '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc)
++                    begin = datetime.strptime(started, '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc)
++                    if changed < begin - timedelta(minutes=2) or changed > datetime.now(timezone.utc) + timedelta(minutes=2):
++                        raise Conflict('Artifact AI-MODIFIED timestamp is not from this invocation.')
++            metadata.update(validation_status='OK', validated_artifacts=len(entries))
++            progress(f'{label}: validation passed; {len(entries)} artifacts validated.')
++            failure_phase = 'promotion'
++            metadata['promotion_status'] = 'RUNNING' if entries else 'NOT_APPLICABLE'
+             if entries:
+-                for relative, data in entries:
+-                    if relative.name == 'speaker-notes.md':
+-                        stamp = data.decode('utf-8').splitlines()[0].removeprefix('AI-MODIFIED - ')
+-                        changed = datetime.strptime(stamp, '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc)
+-                        begin = datetime.strptime(started, '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc)
+-                        if changed < begin - timedelta(minutes=2) or changed > datetime.now(timezone.utc) + timedelta(minutes=2):
+-                            raise Conflict('Artifact AI-MODIFIED timestamp is not from this invocation.')
+                 created = persist_docs(root, agent, run_id, entries)
+                 report['written_artifacts'].extend(created)
+                 metadata['artifacts'] = [{'path': str(stage_path(agent) / 'baselines' / run_id / rel),
+                                          'sha256': digest(data), 'owner': agent['role_id'], 'session_id': session}
+                                         for rel, data in entries]
+                 count = len(entries)
+-            metadata['status'], metadata['result'] = 'OK', compact(result)
++                metadata.update(promotion_status='OK', promoted_artifacts=count)
++                progress(f'{label}: promotion completed; {count} artifacts. Evidence: {root / stage_path(agent) / "baselines" / run_id}')
++            else:
++                progress(f'{label}: promotion not applicable; 0 artifacts.')
++            metadata['status'], metadata['result'] = 'OK', sanitize_text(result)
+             metadata['result_origin'] = 'agent_self_report'
+             return message
+         except (Exception, KeyboardInterrupt) as exc:
+-            session = session or getattr(exc, 'session', None)
+-            metadata.update(status='ERROR', session_id=session, result=compact(str(exc)),
+-                            result_origin='runner_observation')
++            session = session or getattr(exc, 'session', None) or runtime.get('session_id')
++            metadata.update(status='ERROR', session_id=session, result=sanitize_text(str(exc)),
++                            failure_phase=failure_phase, result_origin='runner_observation')
++            metadata[f'{failure_phase}_status'] = 'ERROR'
++            if metadata['promotion_status'] == 'NOT_STARTED':
++                metadata['promotion_status'] = 'SKIPPED'
+             if session:
+                 report['agent_sessions'][phase] = session
++            diagnostic = dict(getattr(exc, 'diagnostic', {
++                'code': f'BASELINE_{failure_phase.upper()}_FAILED', 'artifact': None, 'line': None,
++                'target': None, 'rule': sanitize_text(str(exc)),
++                'expected': 'Successful execution and validated stage-owned output are required before promotion.'}))
++            diagnostic.update(run_id=run_id, role_id=agent['role_id'], phase=phase, session_id=session,
++                              failure_phase=failure_phase)
++            metadata['diagnostic'] = diagnostic
++            progress(f'{label}: {failure_phase} FAILED after {time.monotonic()-clock_start:.1f}s; '
++                     f'{metadata["validated_artifacts"]} validated, {count} promoted. {diagnostic["code"]}: {diagnostic["rule"]}')
++            if diagnostic.get('artifact'):
++                progress(f'Artifact: {diagnostic["artifact"]}:{diagnostic.get("line") or "?"}; '
++                         f'target: {diagnostic.get("target") or "unavailable"}. Expected: {diagnostic["expected"]}')
++            bundle = stage_path(agents[0]) / 'diagnostics' / run_id / phase
++            try:
++                bundle_metadata = {key: metadata[key] for key in (
++                    'run_id', 'role_id', 'role_name', 'stage_name', 'phase', 'session_id', 'task',
++                    'failure_phase', 'execution_status', 'validation_status', 'promotion_status',
++                    'validated_artifacts', 'promoted_artifacts', 'role_sha256', 'prompt_sha256')}
++                bundle_metadata.update(started_at=started, finished_at=now(),
++                                       elapsed_seconds=round(time.monotonic() - clock_start, 3))
++                retained = retain_failure(root, bundle, workspace,
++                                          bundle_metadata, diagnostic, runtime)
++                metadata['diagnostic_bundle'] = str(root / bundle)
++                metadata['diagnostic_manifest'] = retained
++                progress(f'Diagnostic bundle (rejected, not promoted): {root / bundle}')
++            except (Exception, KeyboardInterrupt) as preservation:
++                metadata['evidence_preservation_error'] = {
++                    'code': 'BASELINE_EVIDENCE_PRESERVATION_FAILED',
++                    'message': sanitize_text(str(preservation)), 'path': str(root / bundle)}
++                progress(f'Evidence preservation FAILED separately at {root / bundle}: {sanitize_text(str(preservation))}')
+             raise
+         finally:
+             metadata['finished'] = now()
+-            write_log(root, log_path, log_body(agent, started, task, status=metadata['status'],
+-                      finished=metadata['finished'], result=metadata.get('result'), session=session,
+-                      files=count, phase=phase, role_hash=metadata['role_sha256'], prompt_hash=metadata['prompt_sha256']))
+-            persist_report()
+-            print(f"{agent['role_id']} {phase}: {metadata['status']}", file=sys.stderr, flush=True)
++            metadata['elapsed_seconds'] = round(time.monotonic() - clock_start, 3)
++            metadata['runtime_summary'] = {key: value for key, value in runtime.items() if key not in ('stdout', 'stderr')}
++            try:
++                body = log_body(agent, started, task, status=metadata['status'],
++                    finished=metadata['finished'], result=metadata.get('result'), session=session,
++                    files=metadata['validated_artifacts'], phase=phase,
++                    role_hash=metadata['role_sha256'], prompt_hash=metadata['prompt_sha256'])
++                if metadata['status'] == 'ERROR':
++                    body += ('Diagnostic: ' + sanitize_text(json.dumps(metadata.get('diagnostic', {})), limit=1800) + '\n'
++                             'Failure phase: ' + failure_phase + '\n'
++                             'Diagnostic bundle: ' + sanitize_text(metadata.get('diagnostic_bundle', 'not retained')) + '\n').encode()
++                    if metadata.get('evidence_preservation_error'):
++                        body += ('Evidence preservation: ' + sanitize_text(json.dumps(metadata['evidence_preservation_error'])) + '\n').encode()
++                write_log(root, log_path, body)
++                persist_report()
++            except Exception as evidence_error:
++                if metadata['status'] != 'ERROR':
++                    raise
++                progress(f'Operational evidence write FAILED separately: {sanitize_text(str(evidence_error))}')
++            progress(f'{label}: {metadata["status"]}; elapsed {metadata["elapsed_seconds"]:.1f}s. Log: {root / log_path}')
+ 
+     try:
+         with tempfile.TemporaryDirectory(prefix='asdg-baseline-') as location:
+@@ -458,9 +534,10 @@
+             selected = planned[:max_agents] if max_agents else planned
+             report.update(selected_stages=selected, planned_stages=planned, planned_count=len(planned),
+                           partial=len(selected) < len(planned))
+-            report['routing_plan'] = route
++            report['routing_plan'] = sanitize_record(route)
+             persist_report()
+-            for number in selected:
++            progress('Selected specialists (' + str(len(selected)) + '): ' + '; '.join(role_label(agents[n]) for n in selected))
++            for position, number in enumerate(selected, 1):
+                 agent = agents[number]
+                 workspace = fresh_workspace(base, source, manifest, agent, repo, staged, report)
+                 assignment = next(item for item in route['assignments'] if item['stage'] == number)
+@@ -470,7 +547,8 @@
+                                                                                evidence_root=workspace)
+ 
+                 invoke(agent, f'{number:02d}', workspace,
+-                       documentation_prompt(agent, run_id, assignment['task']), assignment['task'], validate_docs)
++                       documentation_prompt(agent, run_id, assignment['task']), assignment['task'], validate_docs,
++                       position=(position, len(selected)))
+                 staged[number] = workspace / 'output'
+             workspace = fresh_workspace(base, source, manifest, agents[0], repo, staged, report)
+             summary_task = ('Reconcile ONLY governance routing, actual execution records, specialist disagreements '
+@@ -489,12 +567,15 @@
+             persist_report()
+             return report
+     except (Exception, KeyboardInterrupt) as exc:
+-        report.update(status='ERROR', error=compact(str(exc)))
++        report.update(status='ERROR', error=sanitize_text(str(exc)))
+         report['sprint_changed'] = read_bytes(safe_path(root, '.asdlc/sprint.json')) != protected['.asdlc/sprint.json']
+         try:
+             after, after_skipped = source_manifest(source)
+             report['source_modified'] = after != manifest or after_skipped != skipped
+         except (OSError, ValueError):
+             report['source_modified'] = None
+-        persist_report()
+-        raise Conflict(f'{compact(str(exc))} Run evidence: {root / report_path}') from exc
++        try:
++            persist_report()
++        except Exception as evidence_error:
++            progress(f'Run receipt write FAILED separately: {sanitize_text(str(evidence_error))}')
++        raise Conflict(f'{sanitize_text(str(exc))} Run evidence: {sanitize_text(str(root / report_path), limit=1024)}') from exc
+diff --git a/asdlc/00-governance/src/cli_baseline_diagnostics.py b/asdlc/00-governance/src/cli_baseline_diagnostics.py
+new file mode 100644
+--- /dev/null
++++ b/asdlc/00-governance/src/cli_baseline_diagnostics.py
+@@ -0,0 +1,123 @@
++"""Bounded, display-safe diagnostic detail; no artifact acceptance policy."""
++from __future__ import annotations
++
++import math
++import re
++import unicodedata
++
++from cli_files import Conflict
++
++# Shared unchanged with artifact/source screening. Display redaction below is
++# additional protection only; it never decides whether an artifact is accepted.
++SECRET = re.compile(rb'(?:sk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{16,}|AKIA[0-9A-Z]{16}|'
++                    rb'-----BEGIN [A-Z ]*PRIVATE KEY-----|'
++                    rb'(?i:api[_-]?key|password|secret|access[_-]?token)\s*[:=]\s*[\"\']?[A-Za-z0-9_/+=-]{16,})')
++ANSI = re.compile(r'\x1b(?:\][^\x07\x1b]*(?:\x07|\x1b\\|$)|\[[0-?]*[ -/]*[@-~]|[@-_])')
++URL = re.compile(r'(?i)(?:\b[a-z][a-z0-9+.-]*:)?//[^\s<>\"\x27`]+')
++QUERY = re.compile(r'\?[^\s<>\"\x27`]+')
++ASSIGNMENT = re.compile(
++    r'(?i)(\b(?:[A-Za-z0-9]+_)*(?:password|api[_-]?key|access[_-]?token|secret|authorization|'
++    r'client[_-]?secret|refresh[_-]?token|id[_-]?token)\b[\"\x27]?\s*[:=]\s*)'
++    r'(?:Bearer\s+)?(?:\"[^\"\n]*\"|\x27[^\x27\n]*\x27|[^\s;,&]+)')
++PRIVATE_KEY = re.compile(r'-----BEGIN [A-Z ]*PRIVATE KEY-----.*?'
++                         r'(?:-----END [A-Z ]*PRIVATE KEY-----|$)', re.S)
++SENSITIVE_FIELD = re.compile(r'(?i)(?:[A-Za-z0-9]+_)*(?:password|api[_-]?key|access[_-]?token|'
++                             r'secret|authorization|client[_-]?secret|refresh[_-]?token|id[_-]?token|token|credentials?)')
++
++
++def _safe_url(match: re.Match) -> str:
++    value = match.group()
++    prefix, address = value.split('//', 1)
++    boundary = re.search(r'[/#?]', address)
++    end = boundary.start() if boundary else len(address)
++    authority, suffix = address[:end], address[end:]
++    if '@' in authority:
++        authority = '[REDACTED]@' + authority.rsplit('@', 1)[1]
++    # Query/fragment values can be credentials even with an innocuous field name.
++    suffix = re.sub(r'[?#].*', '?[REDACTED]', suffix)
++    return prefix + '//' + authority + suffix
++
++
++def sanitize_text(value: object, limit: int = 320, multiline: bool = False) -> str:
++    """Remove terminal controls and redact credentials before applying a bound."""
++    text = value.decode('utf-8', errors='replace') if isinstance(value, bytes) else str(value)
++    text = ANSI.sub('', text).replace('\r\n', '\n').replace('\r', '\n')
++    text = ''.join(character for character in text
++                   if unicodedata.category(character) not in {'Cc', 'Cf', 'Cs'}
++                   or character in '\n\t')
++    text = URL.sub(_safe_url, text)
++    text = QUERY.sub('?[REDACTED]', text)
++    text = ASSIGNMENT.sub(lambda match: match.group(1) + '[REDACTED]', text)
++    text = PRIVATE_KEY.sub('[REDACTED PRIVATE KEY]', text)
++    text = SECRET.sub(b'[REDACTED]', text.encode('utf-8')).decode('utf-8', errors='replace')
++    if not multiline:
++        text = re.sub(r'\s+', ' ', text).strip()
++    return text[:max(0, limit)]
++
++
++def sanitize_record(value: object) -> object:
++    """Copy JSON-like evidence for display; never use this to make decisions.
++
++    Preserve ordinary structure/types, with explicit markers for oversized or
++    unsupported material. Always sanitize complete string values before clipping.
++    Final agent messages are already limited to 64,000 bytes by the runner.
++    """
++    remaining = [4096]
++
++    def safe_string(text: str) -> str:
++        cleaned = sanitize_text(text, limit=2049)
++        return cleaned[:2036] + ' [TRUNCATED]' if len(cleaned) > 2048 else cleaned
++
++    def visit(item: object, depth: int) -> object:
++        if remaining[0] <= 0 or depth > 12:
++            return '[OMITTED: record limit]'
++        remaining[0] -= 1
++        if isinstance(item, str):
++            return safe_string(item)
++        if item is None or isinstance(item, (bool, int)):
++            return item
++        if isinstance(item, float):
++            return item if math.isfinite(item) else '[OMITTED: non-finite number]'
++        if isinstance(item, list):
++            result = []
++            for index, child in enumerate(item):
++                if index >= 128 or remaining[0] <= 0:
++                    result.append('[OMITTED: record limit]')
++                    break
++                result.append(visit(child, depth + 1))
++            return result
++        if isinstance(item, dict):
++            result = {}
++            for index, (key, child) in enumerate(item.items()):
++                if index >= 128 or remaining[0] <= 0:
++                    result['[OMITTED: remaining entries]'] = 'record limit'
++                    break
++                safe_key = safe_string(key) if isinstance(key, str) else '[OMITTED: non-string key]'
++                if safe_key in result:
++                    safe_key = safe_key[:2000] + f' [duplicate sanitized key {index}]'
++                if isinstance(key, str) and isinstance(child, str) and SENSITIVE_FIELD.fullmatch(key):
++                    remaining[0] -= 1
++                    result[safe_key] = '[REDACTED]'
++                else:
++                    result[safe_key] = visit(child, depth + 1)
++            return result
++        return '[OMITTED: unsupported record type]'
++
++    return visit(value, 0)
++
++
++class ValidationDiagnostic(Conflict):
++    """Keep existing exception wording while adding safe structured context."""
++
++    def __init__(self, message: str, *, code: str, rule: str, expected: str,
++                 target: str | None = None, artifact: str | None = None,
++                 line: int | None = None):
++        super().__init__(message)
++        self.diagnostic = {
++            'code': sanitize_text(code, 80),
++            'artifact': sanitize_text(artifact) if artifact is not None else None,
++            'line': line,
++            'target': sanitize_text(target) if target is not None else None,
++            'rule': sanitize_text(rule),
++            'expected': sanitize_text(expected),
++        }
+diff --git a/asdlc/00-governance/src/cli_baseline_evidence.py b/asdlc/00-governance/src/cli_baseline_evidence.py
+new file mode 100644
+--- /dev/null
++++ b/asdlc/00-governance/src/cli_baseline_evidence.py
+@@ -0,0 +1,270 @@
++"""Bounded, private diagnostic copies; never accepted baseline artifacts."""
++from __future__ import annotations
++
++import hashlib
++import json
++import os
++import re
++import stat
++from datetime import datetime, timezone
++from pathlib import Path
++
++from cli_baseline_diagnostics import SECRET, sanitize_text
++from cli_files import Conflict, safe_path
++
++PREFIX = Path('docs/asdlc/00-governance/diagnostics')
++MAX_ENTRIES, MAX_ARTIFACTS = 128, 30
++MAX_SCAN_FILE, MAX_SCAN_TOTAL = 2 * 1024 * 1024, 4 * 1024 * 1024
++MAX_COPY_FILE, MAX_COPY_TOTAL = 128 * 1024, 512 * 1024
++MAX_RECORD_STRING, MAX_RECORD_NODES = 4096, 128
++TEXT_NAMES = {'speaker-notes.md', 'visual.mmd', 'visual.puml', 'visual.svg'}
++BINARY_NAMES = {'visual.png', 'visual.jpg', 'visual.jpeg', 'visual.webp'}
++UNIT = re.compile(r'\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*\Z')
++DIR_FLAGS = os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW
++
++
++def _digest(data: bytes) -> str:
++    return hashlib.sha256(data).hexdigest()
++
++
++def _record(value, changes: dict, budget: list[int], depth: int = 0):
++    """Bound metadata defensively even when a caller supplies unexpected records."""
++    budget[0] -= 1
++    if budget[0] < 0 or depth > 5:
++        changes['truncated'] += 1
++        return '[OMITTED: record limit]'
++    if isinstance(value, str):
++        cleaned = sanitize_text(value, limit=max(MAX_RECORD_STRING, len(value) * 4 + 64),
++                                multiline=True)
++        if '[REDACTED' in cleaned and cleaned != value:
++            changes['redacted'] += 1
++        if len(cleaned) > MAX_RECORD_STRING:
++            changes['truncated'] += 1
++        if cleaned != value:
++            changes['sanitized'] += 1
++        return cleaned[:MAX_RECORD_STRING]
++    if isinstance(value, dict):
++        result = {}
++        for index, (key, item) in enumerate(value.items()):
++            if index >= 32 or budget[0] < 1:
++                changes['truncated'] += 1
++                result['_omitted'] = 'record limit'
++                break
++            raw_key = str(key)
++            safe_key = sanitize_text(raw_key, limit=max(80, len(raw_key) * 4 + 64))
++            if safe_key != raw_key:
++                changes['sanitized'] += 1
++                if '[REDACTED' in safe_key:
++                    changes['redacted'] += 1
++            if len(safe_key) > 80:
++                changes['truncated'] += 1
++            result[safe_key[:80]] = _record(item, changes, budget, depth + 1)
++        return result
++    if isinstance(value, (list, tuple)):
++        result = []
++        for index, item in enumerate(value):
++            if index >= 32 or budget[0] < 1:
++                changes['truncated'] += 1
++                result.append('[OMITTED: record limit]')
++                break
++            result.append(_record(item, changes, budget, depth + 1))
++        return result
++    if value is None or isinstance(value, (bool, int, float)):
++        return value
++    changes['sanitized'] += 1
++    return '[OMITTED: unsupported record type]'
++
++
++def _open_destination(root: Path, relative: Path) -> int:
++    """Create a new bundle without following links or changing existing folders."""
++    if (relative.is_absolute() or relative.parts[:len(PREFIX.parts)] != PREFIX.parts
++            or len(relative.parts) != len(PREFIX.parts) + 2
++            or any(not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,95}', part)
++                   for part in relative.parts[len(PREFIX.parts):])):
++        raise Conflict('Unsafe failure-evidence destination.')
++    safe_path(root, relative)
++    current = os.open(root, DIR_FLAGS)
++    try:
++        for index, part in enumerate(relative.parts):
++            created = False
++            try:
++                os.mkdir(part, mode=0o700, dir_fd=current)
++                created = True
++            except FileExistsError:
++                if index == len(relative.parts) - 1:
++                    raise Conflict('Failure-evidence bundle already exists; refusing overwrite.')
++            next_fd = os.open(part, DIR_FLAGS, dir_fd=current)
++            os.close(current)
++            current = next_fd
++            if index >= len(PREFIX.parts) - 1:
++                mode = stat.S_IMODE(os.fstat(current).st_mode)
++                if mode & 0o077:
++                    raise Conflict('Failure-evidence directory must have private permissions.')
++            if created:
++                os.fchmod(current, 0o700)
++        return current
++    except BaseException:
++        os.close(current)
++        raise
++
++
++def _write(directory: int, name: str, data: bytes) -> None:
++    fd = os.open(name, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW,
++                 0o600, dir_fd=directory)
++    with os.fdopen(fd, 'wb') as stream:
++        os.fchmod(stream.fileno(), 0o600)
++        stream.write(data)
++        stream.flush()
++        os.fsync(stream.fileno())
++
++
++def retain_failure(root: Path, relative: Path, workspace: Path, metadata: dict,
++                   diagnostic: dict, runtime: dict) -> dict:
++    """Retain safe rejected output before cleanup; preservation errors propagate."""
++    relative = Path(relative)
++    bundle_fd = _open_destination(Path(root), relative)
++    changes = {'redacted': 0, 'sanitized': 0, 'truncated': 0}
++    budget = [MAX_RECORD_NODES]
++    manifest = {
++        'schema_version': 1,
++        'status': 'REJECTED_UNVALIDATED_DIAGNOSTIC_EVIDENCE',
++        'validated': False, 'promoted': False, 'approved': False,
++        'retained_at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
++        'invocation': _record(metadata, changes, budget),
++        'diagnostic': _record(diagnostic, changes, budget),
++        'runtime': _record(runtime, changes, budget),
++        'record_processing': changes,
++        'artifacts': [], 'omissions': [], 'truncations': [],
++        'limits': {'entries': MAX_ENTRIES, 'artifacts': MAX_ARTIFACTS,
++                   'scan_file_bytes': MAX_SCAN_FILE, 'scan_total_bytes': MAX_SCAN_TOTAL,
++                   'copy_file_bytes': MAX_COPY_FILE, 'copy_total_bytes': MAX_COPY_TOTAL},
++        'copy_format': 'Inert UTF-8 .txt copies; content may be sanitized or truncated.',
++    }
++    counters = {'entries': 0, 'scanned': 0, 'retained': 0}
++
++    def omit(path, reason):
++        manifest['omissions'].append({'path': sanitize_text(path, limit=320), 'reason': reason})
++
++    def count_entry() -> bool:
++        counters['entries'] += 1
++        if counters['entries'] > MAX_ENTRIES:
++            if not any(item['reason'] == 'entry_limit' for item in manifest['omissions']):
++                omit('output/', 'entry_limit')
++            return False
++        return True
++
++    def copy_file(unit_fd: int, name: str, source_path: str) -> None:
++        if name in BINARY_NAMES:
++            omit(source_path, 'binary_visual_not_retained')
++            return
++        if name not in TEXT_NAMES:
++            omit(source_path, 'unsupported_artifact_path')
++            return
++        if len(manifest['artifacts']) >= MAX_ARTIFACTS:
++            omit(source_path, 'artifact_limit')
++            return
++        try:
++            fd = os.open(name, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=unit_fd)
++        except OSError:
++            omit(source_path, 'unreadable_or_symlink')
++            return
++        with os.fdopen(fd, 'rb') as stream:
++            info = os.fstat(stream.fileno())
++            if not stat.S_ISREG(info.st_mode) or info.st_nlink != 1:
++                omit(source_path, 'nonregular_or_hardlinked')
++                return
++            if info.st_size > MAX_SCAN_FILE or counters['scanned'] + info.st_size > MAX_SCAN_TOTAL:
++                omit(source_path, 'scan_byte_limit')
++                return
++            data = stream.read(info.st_size)
++            after = os.fstat(stream.fileno())
++            counters['scanned'] += len(data)
++            if (len(data) != info.st_size or after.st_size != info.st_size
++                    or after.st_mtime_ns != info.st_mtime_ns or after.st_nlink != 1):
++                omit(source_path, 'changed_during_read')
++                return
++        if SECRET.search(data):
++            omit(source_path, 'sensitive_content_entire_artifact_omitted')
++            return
++        try:
++            text = data.decode('utf-8')
++        except UnicodeError:
++            omit(source_path, 'non_utf8_binary')
++            return
++        if '\0' in text:
++            omit(source_path, 'binary_content')
++            return
++        available = min(MAX_COPY_FILE, MAX_COPY_TOTAL - counters['retained'])
++        if available <= 0:
++            omit(source_path, 'copy_byte_limit')
++            return
++        # Sanitize the complete scanned text before clipping so a secret or unsafe
++        # escape split at a truncation boundary cannot leak its prefix.
++        cleaned = sanitize_text(text, limit=len(text) * 4 + 64, multiline=True)
++        encoded = cleaned.encode('utf-8')
++        retained = encoded[:available].decode('utf-8', errors='ignore').encode('utf-8')
++        truncated = len(retained) < len(encoded)
++        target = f'rejected-{len(manifest["artifacts"]) + 1:03d}-{name}.txt'
++        _write(bundle_fd, target, retained)
++        counters['retained'] += len(retained)
++        entry = {'artifact': sanitize_text(source_path, limit=320), 'copy': target,
++                 'original_bytes': len(data), 'original_sha256': _digest(data),
++                 'retained_bytes': len(retained), 'retained_sha256': _digest(retained),
++                 'sanitized': cleaned != text,
++                 'redacted': '[REDACTED' in cleaned and cleaned != text,
++                 'truncated': truncated,
++                 'status': 'REJECTED_UNVALIDATED'}
++        manifest['artifacts'].append(entry)
++        if truncated:
++            manifest['truncations'].append({'artifact': entry['artifact'], 'reason': 'copy_byte_limit',
++                                            'original_bytes': len(data), 'retained_bytes': len(retained)})
++
++    try:
++        try:
++            workspace_fd = os.open(workspace, DIR_FLAGS)
++        except OSError:
++            omit('output/', 'workspace_unreadable_or_symlink')
++        else:
++            try:
++                try:
++                    output_fd = os.open('output', DIR_FLAGS, dir_fd=workspace_fd)
++                except OSError:
++                    omit('output/', 'output_absent_nonregular_or_symlink')
++                else:
++                    try:
++                        with os.scandir(output_fd) as units:
++                            for unit in units:
++                                if not count_entry():
++                                    break
++                                unit_path = 'output/' + unit.name
++                                if not UNIT.fullmatch(unit.name) or not unit.is_dir(follow_symlinks=False):
++                                    omit(unit_path, 'unexpected_unit_or_symlink')
++                                    continue
++                                try:
++                                    unit_fd = os.open(unit.name, DIR_FLAGS, dir_fd=output_fd)
++                                except OSError:
++                                    omit(unit_path, 'unit_unreadable_or_symlink')
++                                    continue
++                                try:
++                                    with os.scandir(unit_fd) as files:
++                                        for item in files:
++                                            if not count_entry():
++                                                break
++                                            copy_file(unit_fd, item.name, unit_path + '/' + item.name)
++                                finally:
++                                    os.close(unit_fd)
++                                if counters['entries'] > MAX_ENTRIES:
++                                    break
++                    finally:
++                        os.close(output_fd)
++            finally:
++                os.close(workspace_fd)
++        manifest['observed'] = counters
++        encoded = (json.dumps(manifest, indent=2, ensure_ascii=True, allow_nan=False) + '\n').encode('utf-8')
++        _write(bundle_fd, 'manifest.json', encoded)
++    finally:
++        os.close(bundle_fd)
++    return {'path': relative.as_posix(), 'manifest_path': (relative / 'manifest.json').as_posix(),
++            'manifest_sha256': _digest(encoded), 'artifacts': manifest['artifacts'],
++            'omissions': manifest['omissions'], 'truncations': manifest['truncations'],
++            'status': manifest['status']}
+diff --git a/asdlc/00-governance/src/cli_baseline_process.py b/asdlc/00-governance/src/cli_baseline_process.py
+new file mode 100644
+--- /dev/null
++++ b/asdlc/00-governance/src/cli_baseline_process.py
+@@ -0,0 +1,226 @@
++"""Bounded offline-observable process transport for baseline invocations."""
++from __future__ import annotations
++
++import json
++import os
++import re
++import selectors
++import signal
++import subprocess
++import time
++
++from cli_baseline_diagnostics import sanitize_text
++
++CAPTURE_LIMIT = 64 * 1024
++EVENT_LINE_LIMIT = 64 * 1024
++TERMINATION_GRACE = 5.0
++READ_SIZE = 16 * 1024
++
++
++class _Capture:
++    def __init__(self):
++        self.data = bytearray()
++        self.bytes_seen = 0
++
++    def feed(self, data: bytes) -> None:
++        self.bytes_seen += len(data)
++        remaining = CAPTURE_LIMIT - len(self.data)
++        if remaining > 0:
++            self.data.extend(data[:remaining])
++
++    def record(self) -> dict:
++        data = bytes(self.data)
++        truncated = self.bytes_seen > len(data)
++        # Never retain a cut-off credential prefix or unfinished JSON record.
++        tail = 0
++        if truncated and data and not data.endswith(b'\n'):
++            end = data.rfind(b'\n') + 1
++            tail = len(data) - end
++            data = data[:end]
++        text = sanitize_text(data.decode('utf-8', errors='replace'),
++                             limit=CAPTURE_LIMIT, multiline=True)
++        return {'text': text, 'bytes_seen': self.bytes_seen,
++                'retained_bytes': len(data), 'capture_limit_bytes': CAPTURE_LIMIT,
++                'truncated': truncated, 'omitted_bytes': self.bytes_seen - len(data),
++                'incomplete_tail_omitted_bytes': tail,
++                'sanitized': text != data.decode('utf-8', errors='replace')}
++
++
++class _Events:
++    """Scan JSONL independently of capture, using only a thread.started ID.
++
++    Lines larger than EVENT_LINE_LIMIT are counted and skipped, even if they
++    might contain a session. No other event fields establish validation,
++    progress, acceptance or promotion; those require runner observations.
++    """
++    def __init__(self):
++        self.pending = bytearray()
++        self.discarding = False
++        self.omitted = 0
++        self.session = None
++
++    def feed(self, data: bytes) -> None:
++        for index, part in enumerate(data.split(b'\n')):
++            if index:
++                self.finish_line()
++            if not self.discarding:
++                if len(self.pending) + len(part) > EVENT_LINE_LIMIT:
++                    self.pending.clear()
++                    self.discarding = True
++                    self.omitted += 1
++                else:
++                    self.pending.extend(part)
++
++    def finish_line(self) -> None:
++        if not self.discarding and self.pending:
++            try:
++                event = json.loads(self.pending)
++            except (ValueError, UnicodeDecodeError, RecursionError):
++                event = None
++            if isinstance(event, dict) and event.get('type') == 'thread.started':
++                value = event.get('thread_id')
++                if isinstance(value, str) and re.fullmatch(r'[A-Za-z0-9_-]{1,128}', value):
++                    self.session = self.session or value
++        self.pending.clear()
++        self.discarding = False
++
++
++def observe_process(process: subprocess.Popen, prompt: str, timeout: float, *,
++                    heartbeat=None, interval: float = 15.0,
++                    runtime: dict | None = None) -> tuple[str | None, str]:
++    """Drain a binary PIPE child, return its session and sanitized bounded stderr.
++
++    Callers must launch with start_new_session=True. Heartbeat receives observed
++    elapsed seconds. Timeout and interruption retain their exception type and
++    attach `.session`; both stop the process group using TERM, then KILL after
++    the existing five-second grace. Runtime records are filled even on failure.
++    """
++    if interval <= 0:
++        raise ValueError('Heartbeat interval must be positive.')
++    started = time.monotonic()
++    deadline = started + timeout
++    next_heartbeat = started + interval
++    capture = {'stdout': _Capture(), 'stderr': _Capture()}
++    events = _Events()
++    selector = selectors.DefaultSelector()
++    payload = memoryview(prompt.encode('utf-8'))
++    sent = 0
++    cleanup = []
++    cleanup_errors = []
++
++    def close_pipe(stream) -> None:
++        try:
++            selector.unregister(stream)
++        except KeyError:
++            pass
++        stream.close()
++
++    def read_ready(wait: float) -> None:
++        nonlocal sent
++        for key, _ in selector.select(max(0, wait)):
++            stream, kind = key.fileobj, key.data
++            if kind == 'stdin':
++                try:
++                    sent += os.write(stream.fileno(), payload[sent:sent + READ_SIZE])
++                except (BrokenPipeError, OSError):
++                    close_pipe(stream)
++                    continue
++                if sent == len(payload):
++                    close_pipe(stream)
++                continue
++            try:
++                data = os.read(stream.fileno(), READ_SIZE)
++            except BlockingIOError:
++                continue
++            except OSError:
++                close_pipe(stream)
++                raise
++            if not data:
++                close_pipe(stream)
++                if kind == 'stdout':
++                    events.finish_line()
++                continue
++            capture[kind].feed(data)
++            if kind == 'stdout':
++                events.feed(data)
++
++    def pending() -> bool:
++        return bool(selector.get_map()) or process.poll() is None
++
++    def stop_group() -> None:
++        # A descendant may still own a pipe after the parent exits, so signal
++        # the process group even when poll() already returned an exit code.
++        for sig, grace in ((signal.SIGTERM, TERMINATION_GRACE),
++                           (signal.SIGKILL, 1.0)):
++            try:
++                os.killpg(process.pid, sig)
++                cleanup.append(signal.Signals(sig).name)
++            except ProcessLookupError:
++                pass
++            except OSError as exc:
++                cleanup_errors.append(sanitize_text(str(exc)))
++                # A group can disappear between TERM and KILL (some sandbox
++                # hosts report EPERM for that race). Still stop a live parent.
++                if process.poll() is None:
++                    try:
++                        process.send_signal(sig)
++                        cleanup.append(signal.Signals(sig).name + '_parent_fallback')
++                    except OSError as fallback:
++                        cleanup_errors.append(sanitize_text(str(fallback)))
++            until = time.monotonic() + grace
++            try:
++                while pending() and time.monotonic() < until:
++                    read_ready(min(0.1, until - time.monotonic()))
++            except (Exception, KeyboardInterrupt) as exc:
++                # If transport itself breaks, do not let another read failure
++                # prevent KILL or replace the original exception.
++                cleanup_errors.append(sanitize_text(str(exc)))
++                continue
++            if not pending():
++                break
++        try:
++            process.wait(timeout=1)
++        except subprocess.TimeoutExpired:
++            cleanup_errors.append('Child did not exit after termination attempts.')
++
++    try:
++        for kind in ('stdout', 'stderr', 'stdin'):
++            stream = getattr(process, kind)
++            if stream is None:
++                raise ValueError('Process stdin/stdout/stderr must use binary PIPEs.')
++            os.set_blocking(stream.fileno(), False)
++            if kind == 'stdin' and not payload:
++                stream.close()
++                continue
++            selector.register(stream, selectors.EVENT_WRITE if kind == 'stdin'
++                              else selectors.EVENT_READ, kind)
++        while pending():
++            current = time.monotonic()
++            if current >= deadline:
++                raise subprocess.TimeoutExpired(process.args, timeout)
++            if heartbeat is not None and current >= next_heartbeat and process.poll() is None:
++                heartbeat(current - started)
++                next_heartbeat = current + interval
++            heartbeat_wait = (max(0, next_heartbeat - current)
++                              if heartbeat is not None and process.poll() is None else 0.1)
++            read_ready(min(0.1, deadline - current,
++                           heartbeat_wait))
++        process.wait()
++    except BaseException as exc:
++        stop_group()
++        if isinstance(exc, (subprocess.TimeoutExpired, KeyboardInterrupt)):
++            exc.session = events.session
++        raise
++    finally:
++        for key in list(selector.get_map().values()):
++            close_pipe(key.fileobj)
++        selector.close()
++        if runtime is not None:
++            runtime.update({name: value.record() for name, value in capture.items()})
++            runtime.update({'exit_code': process.poll(), 'session_id': events.session,
++                            'elapsed_seconds': round(time.monotonic() - started, 3),
++                            'event_lines_omitted': events.omitted,
++                            'event_line_limit_bytes': EVENT_LINE_LIMIT,
++                            'termination_signals': cleanup,
++                            'cleanup_errors': cleanup_errors})
++    return events.session, capture['stderr'].record()['text']
+diff --git a/asdlc/00-governance/src/cli_baseline_provenance.py b/asdlc/00-governance/src/cli_baseline_provenance.py
+--- a/asdlc/00-governance/src/cli_baseline_provenance.py
++++ b/asdlc/00-governance/src/cli_baseline_provenance.py
+@@ -6,6 +6,16 @@
+ from urllib.parse import unquote
+ 
+ from cli_files import Conflict, safe_path
++from cli_baseline_diagnostics import ValidationDiagnostic
++
++SNAPSHOT_FORMAT = 'Use an existing source/ or context/ snapshot file; Sources entries are separated by semicolons.'
++INLINE_FORMAT = 'Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.'
++
++
++def citation_error(message: str, code: str, target: str | None, rule: str,
++                   expected: str = SNAPSHOT_FORMAT) -> ValidationDiagnostic:
++    return ValidationDiagnostic(message, code='BASELINE_CITATION_' + code,
++                                target=target, rule=rule, expected=expected)
+ 
+ 
+ def reference_target(value: str) -> str:
+@@ -21,6 +31,7 @@
+ 
+ 
+ def resolve_reference(root: Path, value: str) -> str:
++    original = value
+     value = unquote(reference_target(value))
+     # Anchors and conventional line suffixes identify a passage, not another file.
+     value = value.split('#', 1)[0]
+@@ -29,10 +40,16 @@
+     if (len(parts) < 2 or parts[0] not in {'source', 'context'}
+             or any(part in {'', '.', '..'} for part in parts)
+             or any(character in value for character in ('\\', ':', '?', '\x00'))):
+-        raise Conflict('Unsupported or unsafe evidence reference; use source/ or context/ snapshot files.')
+-    target = safe_path(root, value)
++        raise citation_error('Unsupported or unsafe evidence reference; use source/ or context/ snapshot files.',
++                             'UNSAFE_REFERENCE', original, 'Evidence references must remain inside source/ or context/.')
++    try:
++        target = safe_path(root, value)
++    except Conflict as exc:
++        raise citation_error(str(exc), 'UNSAFE_PATH', original,
++                             'Evidence paths cannot traverse symlinks or non-directory ancestors.') from exc
+     if not target.is_file() or target.stat().st_nlink != 1:
+-        raise Conflict('Evidence reference is missing, linked or not a regular snapshot file.')
++        raise citation_error('Evidence reference is missing, linked or not a regular snapshot file.',
++                             'UNRESOLVED_REFERENCE', original, 'Evidence must resolve to a regular, unlinked snapshot file.')
+     return value
+ 
+ 
+@@ -44,50 +61,78 @@
+     reject reference-style Markdown rather than silently ignoring destinations.
+     """
+     if root.is_symlink() or not root.is_dir():
+-        raise Conflict('Provenance requires a regular isolated evidence workspace.')
++        raise citation_error('Provenance requires a regular isolated evidence workspace.',
++                             'WORKSPACE', None, 'The evidence workspace must be a regular directory.')
+     declarations = list(re.finditer(r'^Sources:[ \t]*(.+)$', text, re.M))
+     if not declarations:
+-        raise Conflict('Missing Sources: snapshot evidence declaration.')
++        raise citation_error('Missing Sources: snapshot evidence declaration.',
++                             'SOURCES_REQUIRED', None, 'Every notes artifact must declare snapshot Sources:.')
+     resolved, masked = set(), list(text)
+ 
+     def mask(start: int, end: int) -> None:
+         masked[start:end] = ' ' * (end - start)
+ 
++    def located(error: ValidationDiagnostic, offset: int) -> ValidationDiagnostic:
++        error.diagnostic['line'] = text.count('\n', 0, offset) + 1
++        return error
++
++    def resolve(value: str, offset: int) -> str:
++        try:
++            return resolve_reference(root, value)
++        except ValidationDiagnostic as exc:
++            raise located(exc, offset) from exc.__cause__
++
+     for declaration in declarations:
++        offset = declaration.start(1)
+         for item in declaration.group(1).split(';'):
+-            resolved.add(resolve_reference(root, item))
++            resolved.add(resolve(item, offset))
++            offset += len(item) + 1
+         mask(declaration.start(), declaration.end())
+ 
+     # This deliberately bounded grammar does not resolve Markdown reference labels.
+     # Reject definitions (also multiline/container forms), full and collapsed
+     # references, including examples and narrative lines. Rejecting definitions
+     # also closes shortcut-reference links without mistaking every [word] for one.
+-    if re.search(r'\[(?:\\.|[^\[\]\\])+\][ \t]*:|\]\s*\[', ''.join(masked)):
+-        raise Conflict('Reference-style citations are unsupported; use inline links to snapshot files.')
++    unsupported = re.search(r'\[(?:\\.|[^\[\]\\])+\][ \t]*:|\]\s*\[', ''.join(masked))
++    if unsupported:
++        excerpt = text[unsupported.start():text.find('\n', unsupported.end()) if '\n' in text[unsupported.end():] else len(text)]
++        raise located(citation_error('Reference-style citations are unsupported; use inline links to snapshot files.',
++                      'REFERENCE_STYLE', excerpt, 'Reference-style Markdown citations are unsupported.', INLINE_FORMAT), unsupported.start())
+ 
+     # External narrative citations are explicitly unverified, never local evidence.
+     for narrative in re.finditer(r'^Narrative citations:[^\n]*$', text, re.M):
+-        if re.search(r'(?<![\w/:])(?:source|context)/', narrative.group()):
+-            raise Conflict('Snapshot references belong in Sources:, not narrative citations.')
++        snapshot = re.search(r'(?<![\w/:])(?:source|context)/', narrative.group())
++        if snapshot:
++            raise located(citation_error('Snapshot references belong in Sources:, not narrative citations.',
++                          'NARRATIVE_SNAPSHOT', narrative.group()[snapshot.start():],
++                          'Narrative citations cannot disguise local snapshot evidence.'), narrative.start() + snapshot.start())
+         mask(narrative.start(), narrative.end())
+ 
+-    if re.search(r'<(?:[A-Za-z][A-Za-z0-9+.-]*:[^<>\s]*|[^<>\s@]+@[^<>\s@]+)>', ''.join(masked)):
+-        raise Conflict('External autolink; declare it as an unverified narrative citation.')
++    autolink = re.search(r'<(?:[A-Za-z][A-Za-z0-9+.-]*:[^<>\s]*|[^<>\s@]+@[^<>\s@]+)>', ''.join(masked))
++    if autolink:
++        raise located(citation_error('External autolink; declare it as an unverified narrative citation.',
++                      'AUTOLINK', autolink.group(), 'External autolinks must be explicitly unverified narrative citations.', INLINE_FORMAT), autolink.start())
+ 
+     for pattern in (r'\[[^\]\n]+\]\(([^)\n]+)\)', r'`((?:source|context)/[^`\n]+)`'):
+         for match in re.finditer(pattern, ''.join(masked)):
+             value = reference_target(match.group(1))
+             if value.startswith(('source/', 'context/')):
+-                resolved.add(resolve_reference(root, value))
++                resolved.add(resolve(value, match.start(1)))
+                 mask(match.start(), match.end())
+             elif not value.startswith('#'):
+                 local = unquote(value).split('#', 1)[0]
+                 if (artifact_dir is None or Path(local).is_absolute() or '..' in Path(local).parts
+                         or any(char in local for char in ('\\', ':', '?', '\x00'))):
+-                    raise Conflict('External or unsupported citation; declare it as an unverified narrative citation.')
+-                target = safe_path(artifact_dir, local)
++                    raise located(citation_error('External or unsupported citation; declare it as an unverified narrative citation.',
++                                  'UNSUPPORTED', match.group(1), 'Inline citations must resolve to snapshot or authored-artifact files.', INLINE_FORMAT), match.start(1))
++                try:
++                    target = safe_path(artifact_dir, local)
++                except Conflict as exc:
++                    raise located(citation_error(str(exc), 'UNSAFE_PATH', match.group(1),
++                                  'Authored-artifact links cannot traverse symlinks or non-directory ancestors.', INLINE_FORMAT), match.start(1)) from exc
+                 if not target.is_file() or target.stat().st_nlink != 1:
+-                    raise Conflict('Citation does not resolve to a source/context file or an authored artifact.')
++                    raise located(citation_error('Citation does not resolve to a source/context file or an authored artifact.',
++                                  'UNRESOLVED_ARTIFACT', match.group(1), 'Citations must resolve to a regular, unlinked authored artifact.', INLINE_FORMAT), match.start(1))
+                 mask(match.start(), match.end())
+     # Already-declared paths with spaces may also be mentioned in plain prose.
+     remaining = ''.join(masked)
+@@ -96,5 +141,5 @@
+             remaining = re.sub(re.escape(value) + r'(?![\w/.-])',
+                                lambda match: ' ' * len(match.group()), remaining)
+     for match in re.finditer(r'(?<![\w/])(?:source|context)/[^\s;,`<>()\[\]]+', remaining):
+-        resolved.add(resolve_reference(root, match.group().rstrip('.!?')))
++        resolved.add(resolve(match.group().rstrip('.!?'), match.start()))
+     return sorted(resolved)
+diff --git a/asdlc/00-governance/src/cli_baseline_safety.py b/asdlc/00-governance/src/cli_baseline_safety.py
+--- a/asdlc/00-governance/src/cli_baseline_safety.py
++++ b/asdlc/00-governance/src/cli_baseline_safety.py
+@@ -10,15 +10,13 @@
+ 
+ from cli_files import Conflict, safe_path
+ from cli_baseline_provenance import validate_provenance
++from cli_baseline_diagnostics import SECRET, ValidationDiagnostic, sanitize_text
+ 
+ VISUALS = {'.puml', '.mmd', '.svg', '.png', '.jpg', '.jpeg', '.webp'}
+ SKIP_DIRS = {'.git', '.asdlc', '.codex', '.ssh', '.aws', 'node_modules', '.venv', 'venv',
+              '__pycache__', '.next', 'dist', 'build', '.pytest_cache', '.cache'}
+ SKIP_NAMES = {'.env', 'id_rsa', 'id_ed25519', 'auth.json', 'credentials.json', 'service-account.json'}
+ MAX_FILES, MAX_FILE, MAX_TOTAL, MAX_ARTIFACTS = 500, 2 * 1024 * 1024, 20 * 1024 * 1024, 30
+-SECRET = re.compile(rb'(?:sk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{16,}|AKIA[0-9A-Z]{16}|'
+-                    rb'-----BEGIN [A-Z ]*PRIVATE KEY-----|'
+-                    rb'(?i:api[_-]?key|password|secret|access[_-]?token)\s*[:=]\s*[\"\']?[A-Za-z0-9_/+=-]{16,})')
+ 
+ 
+ def digest(data: bytes) -> str:
+@@ -172,9 +170,17 @@
+                     for label in ('Sources:', 'Uncertainties:', 'Contradictions:'):
+                         if label not in text:
+                             raise Conflict(f'Missing {label} in {rel}')
+-                    validate_provenance(text, evidence_root or output.parent, artifact_dir=path.parent)
++                    try:
++                        validate_provenance(text, evidence_root or output.parent, artifact_dir=path.parent)
++                    except ValidationDiagnostic as exc:
++                        exc.diagnostic['artifact'] = sanitize_text(rel.as_posix())
++                        raise
+                 elif evidence_root is not None:
+-                    validate_provenance(text, evidence_root, artifact_dir=path.parent)
++                    try:
++                        validate_provenance(text, evidence_root, artifact_dir=path.parent)
++                    except ValidationDiagnostic as exc:
++                        exc.diagnostic['artifact'] = sanitize_text(rel.as_posix())
++                        raise
+             else:
+                 validate_visual(rel, data)
+             entries.append((rel, data))
+diff --git a/asdlc/00-governance/tests/test_baseline_diagnostics.py b/asdlc/00-governance/tests/test_baseline_diagnostics.py
+new file mode 100644
+--- /dev/null
++++ b/asdlc/00-governance/tests/test_baseline_diagnostics.py
+@@ -0,0 +1,194 @@
++"""Offline diagnostics checks; citation acceptance policy remains unchanged."""
++from __future__ import annotations
++
++import sys
++import tempfile
++import unittest
++from pathlib import Path
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
++from cli_baseline_diagnostics import SECRET, ValidationDiagnostic, sanitize_record, sanitize_text
++from cli_baseline_provenance import validate_provenance
++from cli_baseline_safety import docs_from_output
++from cli_files import Conflict
++
++
++class CitationDiagnosticTests(unittest.TestCase):
++    def setUp(self):
++        temporary = tempfile.TemporaryDirectory()
++        self.addCleanup(temporary.cleanup)
++        self.root = Path(temporary.name)
++        (self.root / 'source').mkdir()
++        (self.root / 'source/Plan.md').write_text('Existing evidence.\n')
++        self.output = self.root / 'output'
++        self.unit = self.output / '01-topic'
++        self.unit.mkdir(parents=True)
++        (self.unit / 'visual.mmd').write_text('flowchart LR\nA --> B\n')
++        self.good = ('AI-MODIFIED - 2026-10-14T20:00:00Z\n\n# Observed\n\n'
++                     'Agent: ASDLC-01\nSources: source/Plan.md\n'
++                     'Uncertainties: None in fixture.\nContradictions: None in fixture.\n')
++
++    def diagnostic(self, text, **kwargs):
++        with self.assertRaises(ValidationDiagnostic) as failure:
++            validate_provenance(text, self.root, **kwargs)
++        self.assertIsInstance(failure.exception, Conflict)
++        return failure.exception
++
++    def test_external_citation_reports_original_line_target_and_legacy_message(self):
++        citation = '[report](https://user:shortpass@example.invalid/doc?token=shorttoken)'
++        failure = self.diagnostic(self.good + '\n' + citation + '\n', artifact_dir=self.unit)
++        self.assertEqual(str(failure), 'External or unsupported citation; declare it as an unverified narrative citation.')
++        detail = failure.diagnostic
++        self.assertEqual(detail['code'], 'BASELINE_CITATION_UNSUPPORTED')
++        self.assertEqual(detail['line'], 10)
++        self.assertEqual(detail['target'], 'https://[REDACTED]@example.invalid/doc?[REDACTED]')
++        self.assertIsNone(detail['artifact'])
++        self.assertIn('inline', detail['expected'].lower())
++        self.assertIn('Narrative citations:', detail['expected'])
++        self.assertIn('snapshot', detail['rule'])
++
++    def test_artifact_relative_path_is_attached_in_both_output_validation_modes(self):
++        (self.unit / 'speaker-notes.md').write_text(self.good + '[fake](source/missing.md)\n')
++        for owner in ({'role_id': 'ASDLC-01'}, None):
++            with self.subTest(owner=owner), self.assertRaises(ValidationDiagnostic) as failure:
++                docs_from_output(self.output, owner, evidence_root=self.root)
++            self.assertEqual(failure.exception.diagnostic['artifact'], '01-topic/speaker-notes.md')
++            self.assertEqual(failure.exception.diagnostic['line'], 9)
++            self.assertEqual(failure.exception.diagnostic['target'], 'source/missing.md')
++            self.assertEqual(failure.exception.diagnostic['code'], 'BASELINE_CITATION_UNRESOLVED_REFERENCE')
++
++    def test_each_existing_rejection_branch_has_stable_diagnostic_code(self):
++        fixtures = (
++            ('Sources: source/../outside.md\n', 'UNSAFE_REFERENCE', 1),
++            ('Sources: source/missing.md\n', 'UNRESOLVED_REFERENCE', 1),
++            ('No declared sources.\n', 'SOURCES_REQUIRED', None),
++            ('Sources: source/Plan.md\n[bad]: https://example.invalid\n', 'REFERENCE_STYLE', 2),
++            ('Sources: source/Plan.md\nNarrative citations: source/Plan.md\n', 'NARRATIVE_SNAPSHOT', 2),
++            ('Sources: source/Plan.md\n<https://example.invalid>\n', 'AUTOLINK', 2),
++            ('Sources: source/Plan.md\n[missing](unknown.mmd)\n', 'UNRESOLVED_ARTIFACT', 2),
++        )
++        for text, code, line in fixtures:
++            with self.subTest(code=code):
++                detail = self.diagnostic(text, artifact_dir=self.unit).diagnostic
++                self.assertEqual(detail['code'], 'BASELINE_CITATION_' + code)
++                self.assertEqual(detail['line'], line)
++                self.assertTrue(detail['rule'])
++                self.assertTrue(detail['expected'])
++
++    def test_symlink_and_irregular_workspace_remain_rejected(self):
++        (self.root / 'source/linked.md').symlink_to(self.root / 'source/Plan.md')
++        detail = self.diagnostic('Sources: source/linked.md\n').diagnostic
++        self.assertEqual(detail['code'], 'BASELINE_CITATION_UNSAFE_PATH')
++        self.assertEqual(detail['line'], 1)
++        (self.unit / 'linked.mmd').symlink_to(self.unit / 'visual.mmd')
++        detail = self.diagnostic('Sources: source/Plan.md\n[linked](linked.mmd)\n', artifact_dir=self.unit).diagnostic
++        self.assertEqual(detail['code'], 'BASELINE_CITATION_UNSAFE_PATH')
++        self.assertEqual(detail['line'], 2)
++        with self.assertRaises(ValidationDiagnostic) as failure:
++            validate_provenance('Sources: source/Plan.md\n', self.root / 'missing-workspace')
++        self.assertEqual(failure.exception.diagnostic['code'], 'BASELINE_CITATION_WORKSPACE')
++        self.assertIsNone(failure.exception.diagnostic['line'])
++
++    def test_offsets_survive_masked_declarations_narrative_and_links(self):
++        prefix = ('Sources: source/Plan.md; `source/Plan.md:1`\n'
++                  'Narrative citations: https://example.invalid (unverified).\n'
++                  'See [evidence](source/Plan.md).\n\n')
++        detail = self.diagnostic(prefix + 'See source/missing.md.\n', artifact_dir=self.unit).diagnostic
++        self.assertEqual(detail['line'], 5)
++        self.assertEqual(detail['target'], 'source/missing.md')
++        detail = self.diagnostic(prefix + '[first]\n[second]\n').diagnostic
++        self.assertEqual(detail['line'], 5)
++        self.assertEqual(detail['code'], 'BASELINE_CITATION_REFERENCE_STYLE')
++
++    def test_supported_citations_and_sources_keep_the_same_result(self):
++        text = ('Sources: [plan](source/Plan.md#heading); `source/Plan.md:1`\n'
++                '[visual](visual.mmd)\n[here](#heading)\n'
++                'Narrative citations: <https://example.invalid/doc> (unverified).\n')
++        self.assertEqual(validate_provenance(text, self.root, artifact_dir=self.unit), ['source/Plan.md'])
++        (self.unit / 'speaker-notes.md').write_text(self.good + '[visual](visual.mmd)\n')
++        self.assertEqual(len(docs_from_output(self.output, {'role_id': 'ASDLC-01'}, evidence_root=self.root)), 2)
++
++
++class DiagnosticSanitizerTests(unittest.TestCase):
++    def test_common_secrets_controls_bidi_and_url_values_are_not_exposed(self):
++        key = 'sk-proj-' + 'a' * 24
++        payload = ('\x1b[31mred\x1b[0m\x1b]2;unsafe-title\x07\x00\x1f\u202e '
++                   + key + ' https://user:smallpass@example.invalid/doc?token=shortquery '
++                   'OPENAI_API_KEY=shortkey "password": "smallpwd" Authorization: Bearer smallbearer')
++        actual = sanitize_text(payload, 2000)
++        for secret in (key, 'smallpass', 'shortquery', 'shortkey', 'smallpwd', 'smallbearer', 'unsafe-title'):
++            self.assertNotIn(secret, actual)
++        for control in ('\x1b', '\x00', '\x1f', '\u202e'):
++            self.assertNotIn(control, actual)
++        self.assertIn('red', actual)
++        self.assertIn('https://[REDACTED]@example.invalid/doc?[REDACTED]', actual)
++        self.assertEqual(sanitize_text('//user:shortpass@example.invalid/doc?token=short'),
++                         '//[REDACTED]@example.invalid/doc?[REDACTED]')
++        self.assertEqual(sanitize_text('relative.md?credential=smallvalue'), 'relative.md?[REDACTED]')
++
++    def test_private_key_body_is_redacted_and_multiline_is_explicit(self):
++        payload = 'before\n-----BEGIN RSA PRIVATE KEY-----\nVERY_PRIVATE_BODY\n-----END RSA PRIVATE KEY-----\nafter\n'
++        safe = sanitize_text(payload, 2000, multiline=True)
++        self.assertNotIn('VERY_PRIVATE_BODY', safe)
++        self.assertEqual(safe, 'before\n[REDACTED PRIVATE KEY]\nafter\n')
++        self.assertEqual(sanitize_text('first\r\nsecond\tthird'), 'first second third')
++        self.assertEqual(sanitize_text('first\r\nsecond\tthird', multiline=True), 'first\nsecond\tthird')
++
++    def test_diagnostic_fields_are_bounded_and_redaction_precedes_truncation(self):
++        secret = 'sk-proj-' + 'z' * 80
++        detail = ValidationDiagnostic('Original generic error', code='X' * 200,
++                                      target=secret + 'a' * 500, artifact='a' * 500,
++                                      rule='r' * 500, expected='e' * 500).diagnostic
++        self.assertEqual(len(detail['code']), 80)
++        for key in ('target', 'artifact', 'rule', 'expected'):
++            self.assertLessEqual(len(detail[key]), 320)
++        self.assertNotIn('sk-proj', detail['target'])
++        self.assertTrue(detail['target'].startswith('[REDACTED]'))
++        self.assertEqual(sanitize_text(b'a\xffb', limit=2), 'a\ufffd')
++        self.assertEqual(sanitize_text('value', limit=0), '')
++
++    def test_shared_secret_detection_regex_is_unchanged(self):
++        expected = (rb'(?:sk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{16,}|AKIA[0-9A-Z]{16}|'
++                    rb'-----BEGIN [A-Z ]*PRIVATE KEY-----|'
++                    rb'(?i:api[_-]?key|password|secret|access[_-]?token)\s*[:=]\s*[\"\']?[A-Za-z0-9_/+=-]{16,})')
++        self.assertEqual(SECRET.pattern, expected)
++
++    def test_record_sanitization_preserves_typed_routing_copy_without_mutating_input(self):
++        pem = '-----BEGIN RSA PRIVATE KEY-----\nSYNTHETIC_PRIVATE_BODY\n-----END RSA PRIVATE KEY-----'
++        route = {'selected_stages': [1, 2], 'reason': pem,
++                 'assignments': [{'stage': 1, 'task': 'Inspect\x1b[31m source\x1b[0m',
++                                  'evidence': ['source/Plan.md'], 'details': {'password': 'short',
++                                      'note': 'password=shortvalue'}}],
++                 'questions': ['https://user:shortpass@example.invalid/?token=shortquery'],
++                 'approved': False, 'estimate': 1.5, 'optional': None}
++        recorded = sanitize_record(route)
++        self.assertEqual(recorded['selected_stages'], [1, 2])
++        self.assertEqual(recorded['assignments'][0]['stage'], 1)
++        self.assertIs(recorded['approved'], False)
++        self.assertIsNone(recorded['optional'])
++        self.assertEqual(recorded['estimate'], 1.5)
++        self.assertEqual(recorded['reason'], '[REDACTED PRIVATE KEY]')
++        self.assertEqual(recorded['assignments'][0]['task'], 'Inspect source')
++        self.assertEqual(recorded['assignments'][0]['evidence'], ['source/Plan.md'])
++        self.assertEqual(recorded['assignments'][0]['details']['password'], '[REDACTED]')
++        self.assertNotIn('shortpass', repr(recorded))
++        self.assertNotIn('shortquery', repr(recorded))
++        self.assertNotIn('shortvalue', repr(recorded))
++        self.assertEqual(route['reason'], pem)
++        self.assertIn('\x1b', route['assignments'][0]['task'])
++
++    def test_record_bounds_are_explicit_after_full_value_redaction(self):
++        pem = '-----BEGIN RSA PRIVATE KEY-----\n' + 'sensitive' * 400 + '\n-----END RSA PRIVATE KEY-----'
++        self.assertEqual(sanitize_record({'result': pem})['result'], '[REDACTED PRIVATE KEY]')
++        text = sanitize_record('A' * 5000)
++        self.assertLessEqual(len(text), 2048)
++        self.assertTrue(text.endswith('[TRUNCATED]'))
++        self.assertEqual(len(sanitize_record(list(range(300)))), 129)
++        deep = {'nested': None}
++        for _ in range(30):
++            deep = {'nested': deep}
++        self.assertIn('[OMITTED: record limit]', repr(sanitize_record(deep)))
++
++
++if __name__ == '__main__':
++    unittest.main()
+diff --git a/asdlc/00-governance/tests/test_baseline_evidence.py b/asdlc/00-governance/tests/test_baseline_evidence.py
+new file mode 100644
+--- /dev/null
++++ b/asdlc/00-governance/tests/test_baseline_evidence.py
+@@ -0,0 +1,182 @@
++"""Offline adversarial checks for rejected-output diagnostic retention."""
++from __future__ import annotations
++
++import hashlib
++import json
++import os
++from pathlib import Path
++import shutil
++import stat
++import sys
++import tempfile
++import unittest
++from unittest.mock import patch
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
++import cli_baseline_evidence as evidence
++from cli_files import Conflict
++
++
++class FailureEvidenceTests(unittest.TestCase):
++    def setUp(self):
++        self.temp = tempfile.TemporaryDirectory()
++        self.addCleanup(self.temp.cleanup)
++        self.base = Path(self.temp.name)
++        self.root = self.base / 'consumer'
++        self.workspace = self.base / 'workspace'
++        self.root.mkdir()
++        self.unit = self.workspace / 'output/01-topic'
++        self.unit.mkdir(parents=True)
++        self.relative = evidence.PREFIX / 'offline-run' / '01'
++        self.metadata = {'run_id': 'offline-run', 'role_id': 'ASDLC-01',
++                         'phase': '01', 'failure_phase': 'validation',
++                         'session_id': 'offline-session', 'started_at': '2026-10-14T00:00:00Z'}
++
++    def retain(self, **kwargs):
++        return evidence.retain_failure(self.root, self.relative, self.workspace,
++                                       self.metadata, kwargs.get('diagnostic', {'code': 'CITATION'}),
++                                       kwargs.get('runtime', {'stderr': {'text': 'ordinary failure'}}))
++
++    def manifest(self, result):
++        return json.loads((self.root / result['manifest_path']).read_text())
++
++    def test_retains_only_expected_text_as_private_unvalidated_evidence_after_cleanup(self):
++        note = b'Sources: source/Plan.md\nSee [unknown](external.md).\n'
++        (self.unit / 'speaker-notes.md').write_bytes(note)
++        (self.unit / 'visual.svg').write_text('<svg><script>alert(1)</script></svg>')
++        (self.workspace / 'source').mkdir()
++        (self.workspace / 'source/Plan.md').write_text('SOURCE MUST NOT BE COPIED')
++        (self.workspace / 'context').mkdir()
++        (self.workspace / 'context/auth.json').write_text('AUTH MUST NOT BE COPIED')
++        (self.workspace / 'auth.json').write_text('ROOT AUTH MUST NOT BE COPIED')
++        (self.workspace / 'role.md').write_text('ROLE MUST NOT BE COPIED')
++        result = self.retain()
++        shutil.rmtree(self.workspace)
++        manifest = self.manifest(result)
++        self.assertEqual(len(result['artifacts']), 2)
++        self.assertFalse(manifest['validated'])
++        self.assertFalse(manifest['promoted'])
++        self.assertFalse(manifest['approved'])
++        self.assertEqual(manifest['invocation']['session_id'], 'offline-session')
++        for entry in result['artifacts']:
++            path = self.root / result['path'] / entry['copy']
++            self.assertEqual(path.suffix, '.txt')
++            self.assertEqual(stat.S_IMODE(path.stat().st_mode), 0o600)
++            self.assertEqual(entry['retained_sha256'], hashlib.sha256(path.read_bytes()).hexdigest())
++        self.assertEqual(stat.S_IMODE((self.root / result['path']).stat().st_mode), 0o700)
++        self.assertEqual(stat.S_IMODE((self.root / result['manifest_path']).stat().st_mode), 0o600)
++        merged = b'\n'.join(path.read_bytes() for path in (self.root / result['path']).iterdir())
++        self.assertNotIn(b'MUST NOT BE COPIED', merged)
++        self.assertNotIn(b'PME-APPROVED', merged)
++        self.assertFalse((self.root / 'docs/asdlc/01-context-and-domain-analysis/baselines').exists())
++
++    def test_rejects_symlinks_hardlinks_nonregular_and_unexpected_files(self):
++        outside = self.base / 'private'
++        outside.write_text('UNRELATED CANARY CONTENT')
++        (self.unit / 'speaker-notes.md').symlink_to(outside)
++        os.link(outside, self.unit / 'visual.mmd')
++        os.mkfifo(self.unit / 'visual.svg')
++        (self.unit / 'credentials.json').write_text('CREDENTIAL CANARY')
++        (self.unit / 'nested').mkdir()
++        (self.unit / 'nested/speaker-notes.md').write_text('NESTED CANARY')
++        (self.workspace / 'output/02-linked').symlink_to(self.unit, target_is_directory=True)
++        result = self.retain()
++        self.assertEqual(result['artifacts'], [])
++        reasons = {item['reason'] for item in result['omissions']}
++        self.assertTrue({'unreadable_or_symlink', 'nonregular_or_hardlinked',
++                         'unsupported_artifact_path', 'unexpected_unit_or_symlink'} <= reasons)
++        self.assertNotIn('CANARY', (self.root / result['manifest_path']).read_text())
++
++    def test_output_symlink_never_followed(self):
++        shutil.rmtree(self.workspace / 'output')
++        outside = self.base / 'unrelated'
++        outside.mkdir()
++        (self.workspace / 'output').symlink_to(outside, target_is_directory=True)
++        result = self.retain()
++        self.assertEqual(result['artifacts'], [])
++        self.assertEqual(result['omissions'][0]['reason'], 'output_absent_nonregular_or_symlink')
++
++    def test_sensitive_whole_artifact_binary_and_terminal_controls(self):
++        secret = 'sk-proj-' + 's' * 40
++        (self.unit / 'speaker-notes.md').write_text('draft\n' + secret)
++        (self.unit / 'visual.png').write_bytes(b'\x89PNG\r\n\x1a\nSECRET IMAGE')
++        (self.unit / 'visual.mmd').write_text('flowchart LR\nA\x1b[31m --> B\u202e\n')
++        result = self.retain(runtime={'stdout': {'text': '\x1b[31m' + secret + '\u202e'}})
++        self.assertEqual(len(result['artifacts']), 1)
++        reasons = {item['reason'] for item in result['omissions']}
++        self.assertIn('sensitive_content_entire_artifact_omitted', reasons)
++        self.assertIn('binary_visual_not_retained', reasons)
++        merged = '\n'.join(path.read_text() for path in (self.root / result['path']).iterdir())
++        self.assertNotIn(secret, merged)
++        self.assertNotIn('\x1b', merged)
++        self.assertNotIn('\u202e', merged)
++        self.assertTrue(result['artifacts'][0]['sanitized'])
++        self.assertGreater(self.manifest(result)['record_processing']['redacted'], 0)
++
++    def test_full_scan_precedes_truncation_and_copy_limits_are_explicit(self):
++        secret = 'sk-proj-' + 'z' * 40
++        (self.unit / 'speaker-notes.md').write_text('A' * 200 + secret)
++        (self.unit / 'visual.mmd').write_text('flowchart LR\n' + 'B' * 200)
++        with patch.object(evidence, 'MAX_COPY_FILE', 32):
++            result = self.retain()
++        self.assertEqual(len(result['artifacts']), 1)
++        retained = result['artifacts'][0]
++        self.assertLessEqual(retained['retained_bytes'], 32)
++        self.assertTrue(retained['truncated'])
++        self.assertEqual(len(result['truncations']), 1)
++        self.assertIn('sensitive_content_entire_artifact_omitted',
++                      [item['reason'] for item in result['omissions']])
++
++    def test_entry_artifact_scan_and_total_copy_limits(self):
++        (self.unit / 'speaker-notes.md').write_text('A' * 20)
++        (self.unit / 'visual.mmd').write_text('B' * 20)
++        with patch.object(evidence, 'MAX_ARTIFACTS', 1), patch.object(evidence, 'MAX_COPY_TOTAL', 10):
++            result = self.retain()
++        self.assertEqual(len(result['artifacts']), 1)
++        self.assertEqual(result['artifacts'][0]['retained_bytes'], 10)
++        self.assertIn('artifact_limit', [item['reason'] for item in result['omissions']])
++        self.relative = evidence.PREFIX / 'offline-run' / '02'
++        with patch.object(evidence, 'MAX_SCAN_FILE', 10):
++            result = self.retain()
++        self.assertEqual(result['artifacts'], [])
++        self.assertEqual({item['reason'] for item in result['omissions']}, {'scan_byte_limit'})
++        self.relative = evidence.PREFIX / 'offline-run' / '03'
++        with patch.object(evidence, 'MAX_ENTRIES', 1):
++            result = self.retain()
++        self.assertEqual(result['artifacts'], [])
++        self.assertEqual(result['omissions'][0]['reason'], 'entry_limit')
++
++    def test_manifest_records_are_bounded_sanitized_and_preservation_is_exclusive(self):
++        result = self.retain(runtime={'stdout': {'text': 'x' * 100_000},
++                                      'extra': list(range(500))})
++        manifest = self.manifest(result)
++        self.assertLessEqual(len(manifest['runtime']['stdout']['text']), evidence.MAX_RECORD_STRING)
++        self.assertGreater(manifest['record_processing']['truncated'], 0)
++        original = (self.root / result['manifest_path']).read_bytes()
++        with self.assertRaisesRegex(Conflict, 'already exists'):
++            self.retain()
++        self.assertEqual((self.root / result['manifest_path']).read_bytes(), original)
++
++    def test_unsafe_destination_and_symlink_parents_never_written(self):
++        for bad in (Path('../outside'), self.base / 'outside', evidence.PREFIX / '..' / 'oops',
++                    Path('docs/asdlc/01-context-and-domain-analysis/baselines/run/01')):
++            with self.subTest(path=bad), self.assertRaises(Conflict):
++                evidence.retain_failure(self.root, bad, self.workspace, {}, {}, {})
++        outside = self.base / 'outside'
++        outside.mkdir()
++        (self.root / 'docs').symlink_to(outside, target_is_directory=True)
++        with self.assertRaises(Conflict):
++            self.retain()
++        self.assertEqual(list(outside.iterdir()), [])
++
++    def test_preservation_failure_propagates_without_overwriting_other_evidence(self):
++        protected = self.root / 'existing.txt'
++        protected.write_bytes(b'preserved')
++        with patch.object(evidence, '_write', side_effect=OSError('fixture disk failure')):
++            with self.assertRaisesRegex(OSError, 'fixture disk failure'):
++                self.retain()
++        self.assertEqual(protected.read_bytes(), b'preserved')
++
++
++if __name__ == '__main__':
++    unittest.main()
+diff --git a/asdlc/00-governance/tests/test_baseline_observability.py b/asdlc/00-governance/tests/test_baseline_observability.py
+new file mode 100644
+--- /dev/null
++++ b/asdlc/00-governance/tests/test_baseline_observability.py
+@@ -0,0 +1,178 @@
++"""Offline end-to-end observability; all child executables are synthetic doubles."""
++from __future__ import annotations
++
++import contextlib
++import io
++import json
++from pathlib import Path
++import sys
++import unittest
++from unittest.mock import patch
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
++from cli_files import Conflict
++from test_baseline import BaselineFixture, MOCK_CODEX
++
++
++class ObservabilityTests(BaselineFixture):
++    def rejected_citation(self):
++        self.fake.write_text(MOCK_CODEX.replace('Sources: source/Plan.md\\n',
++            'Sources: source/Plan.md\\nSee [unsupported](https://example.invalid/evidence).\\n'))
++
++    def failure_receipt(self):
++        return json.loads(next(self.root.rglob('*__baseline-run.json')).read_text())
++
++    def test_quiet_heartbeat_and_stage_progress_stay_on_stderr(self):
++        self.fake.write_text(MOCK_CODEX.replace('prompt = sys.stdin.read()',
++                                               'prompt = sys.stdin.read(); import time; time.sleep(0.09)'))
++        stdout, stderr = io.StringIO(), io.StringIO()
++        with contextlib.redirect_stdout(stdout), contextlib.redirect_stderr(stderr), \
++                patch('cli_baseline.HEARTBEAT_SECONDS', 0.02):
++            report = self.call_capture(max_agents=2)
++        self.assertEqual(stdout.getvalue(), '')
++        progress = stderr.getvalue()
++        for text in ('ASDLC-COORDINATOR', 'Coordinator routing', 'Selected specialists (2)',
++                     'Stage 01: Context and Domain Analysis', 'Stage 02: Intent', 'Specialist 1 of 2',
++                     'Specialist 2 of 2', 'Task: Capture stage evidence', 'still running; elapsed',
++                     'execution completed', 'validation passed; 2 artifacts validated',
++                     'promotion completed; 2 artifacts', 'Coordinator synthesis', 'Log:'):
++            self.assertIn(text, progress)
++        self.assertNotIn('%', progress)
++        for invocation in report['invocations']:
++            self.assertEqual(invocation['execution_status'], 'OK')
++            self.assertEqual(invocation['validation_status'], 'OK')
++            self.assertIn(invocation['promotion_status'], ('OK', 'NOT_APPLICABLE'))
++            self.assertGreater(invocation['elapsed_seconds'], 0)
++
++    def test_cli_json_stdout_remains_a_single_report(self):
++        import cli
++        stdout, stderr = io.StringIO(), io.StringIO()
++        with patch('cli.project_root', return_value=self.root), \
++                patch('cli_baseline.capture', side_effect=lambda *a, **kw: self.call_capture(max_agents=1)), \
++                contextlib.redirect_stdout(stdout), contextlib.redirect_stderr(stderr):
++            status = cli.main(['baseline', 'capture', '--source', str(self.source), '--json'])
++        self.assertEqual(status, 0)
++        self.assertEqual(json.loads(stdout.getvalue())['status'], 'PARTIAL_CAPTURE_NEEDS_HUMAN_REVIEW')
++        self.assertIn('Coordinator routing', stderr.getvalue())
++        self.assertNotIn('execution started', stdout.getvalue())
++
++    def test_recorded_model_results_and_routing_are_sanitized_without_changing_assignment(self):
++        import cli_baseline
++        body = 'SYNTHETIC_PRIVATE_KEY_BODY'
++        pem = '-----BEGIN RSA PRIVATE KEY-----\n' + body + '\n-----END RSA PRIVATE KEY-----'
++        task = 'Capture stage evidence; password=synthetic-short-secret\x1b[31m'
++        extra = "\nif 'selected_stages' in message:\n" + \
++                '    message["reason"] = ' + repr(pem) + '\n' + \
++                '    message["assignments"][0]["task"] = ' + repr(task) + '\n' + \
++                '    message["debug"] = {"token": "synthetic-short-token", "key": ' + repr(pem) + '}\n' + \
++                'else:\n    message["result"] = ' + repr(pem) + '\n'
++        self.fake.write_text(MOCK_CODEX.replace('last.write_text(json.dumps(message))',
++                                               extra + '\nlast.write_text(json.dumps(message))'))
++        stderr = io.StringIO()
++        with contextlib.redirect_stderr(stderr), \
++                patch('cli_baseline.documentation_prompt', wraps=cli_baseline.documentation_prompt) as prompt:
++            report = self.call_capture(max_agents=1)
++        self.assertEqual(prompt.call_args_list[0].args[2], task)
++        self.assertEqual(report['selected_stages'], [1])
++        self.assertEqual(report['routing_plan']['assignments'][0]['stage'], 1)
++        self.assertEqual(report['routing_plan']['debug']['token'], '[REDACTED]')
++        evidence = json.dumps(report) + stderr.getvalue() + ''.join(
++            p.read_text() for p in (self.root / 'docs').rglob('*') if p.is_file())
++        for value in (body, 'synthetic-short-secret', 'synthetic-short-token', '\x1b'):
++            self.assertNotIn(value, evidence)
++        self.assertIn('[REDACTED PRIVATE KEY]', evidence)
++
++    def test_precise_citation_bundle_survives_workspace_cleanup_without_promotion(self):
++        self.rejected_citation()
++        import cli_baseline
++        workspaces = []
++        original = cli_baseline.fresh_workspace
++        def remember(*args, **kwargs):
++            path = original(*args, **kwargs)
++            workspaces.append(path)
++            return path
++        stderr = io.StringIO()
++        with patch('cli_baseline.fresh_workspace', side_effect=remember), contextlib.redirect_stderr(stderr):
++            with self.assertRaisesRegex(Conflict, 'External or unsupported citation'):
++                self.call_capture(max_agents=1)
++        self.assertTrue(workspaces)
++        self.assertTrue(all(not p.exists() for p in workspaces))
++        report = self.failure_receipt()
++        failure = report['invocations'][-1]
++        self.assertEqual(failure['execution_status'], 'OK')
++        self.assertEqual(failure['validation_status'], 'ERROR')
++        self.assertEqual(failure['promotion_status'], 'SKIPPED')
++        self.assertEqual(failure['failure_phase'], 'validation')
++        diagnostic = failure['diagnostic']
++        self.assertEqual(diagnostic['code'], 'BASELINE_CITATION_UNSUPPORTED')
++        self.assertEqual(diagnostic['artifact'], '01-topic/speaker-notes.md')
++        self.assertEqual(diagnostic['line'], 7)
++        self.assertEqual(diagnostic['target'], 'https://example.invalid/evidence')
++        self.assertEqual(diagnostic['run_id'], report['run_id'])
++        self.assertEqual(diagnostic['session_id'], failure['session_id'])
++        self.assertTrue(diagnostic['expected'])
++        bundle = Path(failure['diagnostic_bundle'])
++        manifest = json.loads((bundle / 'manifest.json').read_text())
++        self.assertEqual(manifest['diagnostic'], diagnostic)
++        self.assertEqual(manifest['invocation']['failure_phase'], 'validation')
++        self.assertEqual(manifest['runtime']['exit_code'], 0)
++        self.assertFalse(manifest['validated'] or manifest['promoted'] or manifest['approved'])
++        self.assertEqual(len(manifest['artifacts']), 2)
++        rejected = ''.join((bundle / a['copy']).read_text() for a in manifest['artifacts'])
++        self.assertIn('https://example.invalid/evidence', rejected)
++        self.assertEqual(report['written_artifacts'], [])
++        self.assertEqual(failure['artifacts'], [])
++        self.assertFalse(list((self.root / 'docs').rglob('speaker-notes.md')))
++        self.assertIn('01-topic/speaker-notes.md:7', stderr.getvalue())
++        self.assertIn(str(bundle), stderr.getvalue())
++
++    def test_runtime_failure_is_distinct_and_retains_sanitized_streams(self):
++        secret = 'sk-' + 'SyntheticFailureCredential' * 2
++        snippet = "    sys.stderr.write(" + repr('api_key=' + secret + '\x1b[31m\x00\n') + "); sys.exit(9)\n"
++        self.fake.write_text(MOCK_CODEX.replace("    message = {'role_id':rid", snippet + "    message = {'role_id':rid"))
++        stderr = io.StringIO()
++        with contextlib.redirect_stderr(stderr), self.assertRaisesRegex(Conflict, 'Codex failed'):
++            self.call_capture(max_agents=1)
++        failure = self.failure_receipt()['invocations'][-1]
++        self.assertEqual(failure['failure_phase'], 'execution')
++        self.assertEqual(failure['execution_status'], 'ERROR')
++        self.assertEqual(failure['validation_status'], 'NOT_STARTED')
++        self.assertEqual(failure['diagnostic']['code'], 'BASELINE_EXECUTION_FAILED')
++        self.assertIsNotNone(failure['session_id'])
++        bundle = Path(failure['diagnostic_bundle'])
++        manifest = json.loads((bundle / 'manifest.json').read_text())
++        self.assertEqual(manifest['runtime']['exit_code'], 9)
++        self.assertIn('[REDACTED]', manifest['runtime']['stderr']['text'])
++        evidence = stderr.getvalue() + ''.join(p.read_text() for p in (self.root / 'docs').rglob('*') if p.is_file())
++        for value in (secret, '\x1b', '\x00'):
++            self.assertNotIn(value, evidence)
++
++    def test_bundle_preservation_error_does_not_hide_validation_failure(self):
++        self.rejected_citation()
++        stderr = io.StringIO()
++        with patch('cli_baseline.retain_failure', side_effect=OSError('synthetic evidence disk failure')), \
++                contextlib.redirect_stderr(stderr), self.assertRaisesRegex(Conflict, 'External or unsupported citation'):
++            self.call_capture(max_agents=1)
++        failure = self.failure_receipt()['invocations'][-1]
++        self.assertEqual(failure['diagnostic']['code'], 'BASELINE_CITATION_UNSUPPORTED')
++        self.assertEqual(failure['evidence_preservation_error']['code'], 'BASELINE_EVIDENCE_PRESERVATION_FAILED')
++        self.assertIn('Evidence preservation FAILED separately', stderr.getvalue())
++        self.assertIn('synthetic evidence disk failure', stderr.getvalue())
++        self.assertEqual(self.failure_receipt()['written_artifacts'], [])
++
++    def test_cli_json_failure_keeps_stdout_empty(self):
++        import cli
++        self.rejected_citation()
++        stdout, stderr = io.StringIO(), io.StringIO()
++        with patch('cli.project_root', return_value=self.root), \
++                patch('cli_baseline.capture', side_effect=lambda *a, **kw: self.call_capture(max_agents=1)), \
++                contextlib.redirect_stdout(stdout), contextlib.redirect_stderr(stderr):
++            status = cli.main(['baseline', 'capture', '--source', str(self.source), '--json'])
++        self.assertEqual(status, 1)
++        self.assertEqual(stdout.getvalue(), '')
++        self.assertIn('validation FAILED', stderr.getvalue())
++        self.assertEqual(json.loads(stderr.getvalue().splitlines()[-1])['operation'], 'baseline')
++
++
++if __name__ == '__main__':
++    unittest.main()
+diff --git a/asdlc/00-governance/tests/test_baseline_process.py b/asdlc/00-governance/tests/test_baseline_process.py
+new file mode 100644
+--- /dev/null
++++ b/asdlc/00-governance/tests/test_baseline_process.py
+@@ -0,0 +1,189 @@
++"""Offline subprocess transport regression tests; never invokes a model."""
++from __future__ import annotations
++
++import json
++import os
++from pathlib import Path
++import signal
++import subprocess
++import sys
++import tempfile
++import time
++import unittest
++from unittest.mock import patch
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
++from cli_baseline_process import CAPTURE_LIMIT, TERMINATION_GRACE, observe_process
++
++
++class BaselineProcessTests(unittest.TestCase):
++    def launch(self, source):
++        child = subprocess.Popen([sys.executable, '-B', '-c', source], stdin=subprocess.PIPE,
++                                 stdout=subprocess.PIPE, stderr=subprocess.PIPE,
++                                 start_new_session=True)
++        self.addCleanup(self.ensure_stopped, child)
++        return child
++
++    def ensure_stopped(self, child):
++        if child.poll() is None:
++            os.killpg(child.pid, signal.SIGKILL)
++            child.wait()
++        for stream in (child.stdin, child.stdout, child.stderr):
++            if stream is not None and not stream.closed:
++                stream.close()
++
++    def test_quiet_child_reports_observed_elapsed_heartbeats(self):
++        child = self.launch('import time; time.sleep(0.18)')
++        elapsed, runtime = [], {}
++        session, errors = observe_process(child, '', 5, heartbeat=elapsed.append,
++                                          interval=0.04, runtime=runtime)
++        self.assertIsNone(session)
++        self.assertEqual(errors, '')
++        self.assertGreaterEqual(len(elapsed), 2)
++        self.assertEqual(elapsed, sorted(elapsed))
++        self.assertGreaterEqual(elapsed[0], 0.04)
++        self.assertGreaterEqual(runtime['elapsed_seconds'], 0.18)
++        self.assertEqual(runtime['exit_code'], 0)
++        self.assertEqual(runtime['termination_signals'], [])
++
++    def test_large_bidirectional_streams_are_drained_without_unbounded_capture(self):
++        child = self.launch('''import json, os, sys
++os.write(1, b'X' * 262144 + b'\\n')
++os.write(2, b'Y' * 262144 + b'\\n')
++print(json.dumps({'type':'thread.started', 'thread_id':'offline-after-flood'}), flush=True)
++prompt = sys.stdin.read()
++assert len(prompt) == 262144
++''')
++        runtime = {}
++        session, errors = observe_process(child, 'P' * 262144, 5, runtime=runtime)
++        self.assertEqual(session, 'offline-after-flood')
++        self.assertEqual(errors, '')  # Oversized incomplete first line is omitted entirely.
++        self.assertEqual(runtime['event_lines_omitted'], 1)
++        for name in ('stdout', 'stderr'):
++            stream = runtime[name]
++            self.assertTrue(stream['truncated'])
++            self.assertGreater(stream['bytes_seen'], CAPTURE_LIMIT)
++            self.assertLessEqual(stream['retained_bytes'], CAPTURE_LIMIT)
++            self.assertEqual(stream['incomplete_tail_omitted_bytes'], CAPTURE_LIMIT)
++            self.assertEqual(stream['text'], '')
++
++    def test_bounded_capture_omits_partial_final_line_and_keeps_safe_complete_lines(self):
++        child = self.launch("import os; os.write(2, b'observed\\n' + b'S' * 100000)")
++        runtime = {}
++        _, errors = observe_process(child, '', 5, runtime=runtime)
++        self.assertEqual(errors, 'observed\n')
++        self.assertEqual(runtime['stderr']['retained_bytes'], len(b'observed\n'))
++        self.assertEqual(runtime['stderr']['omitted_bytes'], 100000)
++
++    def test_stderr_is_sanitized_and_failed_execution_preserves_session(self):
++        secret = 'sk-' + 'fakeObservationSecret' * 3
++        child = self.launch('import json,sys; '
++                            'print(json.dumps({"type":"thread.started","thread_id":"offline-failure"})); '
++                            'sys.stderr.write(' + repr('OPENAI_API_KEY=' + secret + '\x1b[31m\x00\n') + '); '
++                            'sys.exit(7)')
++        runtime = {}
++        session, errors = observe_process(child, '', 5, runtime=runtime)
++        self.assertEqual(session, 'offline-failure')
++        self.assertEqual(runtime['exit_code'], 7)
++        self.assertNotIn(secret, errors)
++        self.assertNotIn('\x1b', errors)
++        self.assertNotIn('\x00', errors)
++        self.assertEqual(runtime['stderr']['text'], errors)
++
++    def test_invalid_or_oversized_session_event_cannot_pollute_identity(self):
++        child = self.launch('''import json
++print(json.dumps({'type':'thread.started','thread_id':'unsafe\\x1b'}))
++print(json.dumps({'type':'thread.started','thread_id':'x' * 129}))
++print(json.dumps({'type':'thread.started','thread_id':'offline-valid'}), end='')
++''')
++        runtime = {}
++        session, _ = observe_process(child, '', 5, runtime=runtime)
++        self.assertEqual(session, 'offline-valid')
++        self.assertEqual(runtime['session_id'], session)
++
++    def test_oversized_valid_jsonl_is_explicitly_omitted_without_trusting_other_fields(self):
++        child = self.launch('''import json
++print(json.dumps({'type':'thread.started', 'thread_id':'oversized', 'padding':'X' * 100000}))
++print(json.dumps({'type':'promotion.completed', 'validated':True, 'promoted':True}))
++print(json.dumps({'type':'thread.started', 'thread_id':'offline-bounded'}))
++''')
++        runtime = {}
++        session, _ = observe_process(child, '', 5, runtime=runtime)
++        self.assertEqual(session, 'offline-bounded')
++        self.assertEqual(runtime['event_lines_omitted'], 1)
++        self.assertEqual(runtime['event_line_limit_bytes'], 65536)
++        self.assertNotIn('validated', runtime)
++        self.assertNotIn('promoted', runtime)
++
++    def test_timeout_preserves_session_and_terminates_child(self):
++        child = self.launch('import json,time; '
++                            'print(json.dumps({"type":"thread.started","thread_id":"offline-timeout"}),flush=True); '
++                            'time.sleep(30)')
++        runtime = {}
++        with self.assertRaises(subprocess.TimeoutExpired) as failure:
++            observe_process(child, '', 0.15, runtime=runtime)
++        self.assertEqual(failure.exception.session, 'offline-timeout')
++        self.assertEqual(runtime['session_id'], 'offline-timeout')
++        self.assertIn('SIGTERM', runtime['termination_signals'])
++        self.assertIsNotNone(child.poll())
++        self.assertLess(runtime['elapsed_seconds'], 2)
++
++    def test_interrupt_stops_entire_process_group_and_preserves_session(self):
++        with tempfile.TemporaryDirectory() as temporary:
++            marker = Path(temporary) / 'descendant-terminated'
++            descendant = ('import pathlib,signal,time; '
++                          'signal.signal(signal.SIGTERM, lambda *_: '
++                          '(pathlib.Path(' + repr(str(marker)) + ').write_text("TERM"), exit(0))); '
++                          'print("descendant-ready",flush=True); time.sleep(30)')
++            child = self.launch('import subprocess,sys,json,time; '
++                                'subprocess.Popen([sys.executable,"-c",' + repr(descendant) + ']); '
++                                'print(json.dumps({"type":"thread.started","thread_id":"offline-interrupt"}),flush=True); '
++                                'time.sleep(30)')
++            def interrupt(_elapsed):
++                raise KeyboardInterrupt()
++            runtime = {}
++            with self.assertRaises(KeyboardInterrupt) as failure:
++                observe_process(child, '', 5, heartbeat=interrupt, interval=0.3, runtime=runtime)
++            self.assertEqual(failure.exception.session, 'offline-interrupt')
++            self.assertEqual(marker.read_text(), 'TERM')
++            self.assertIsNotNone(child.poll())
++            self.assertEqual(runtime['termination_signals'], ['SIGTERM'])
++
++    def test_timeout_escalates_to_kill_after_existing_five_second_grace(self):
++        child = self.launch('import signal,time,json; signal.signal(signal.SIGTERM,signal.SIG_IGN); '
++                            'print(json.dumps({"type":"thread.started","thread_id":"offline-stubborn"}),flush=True); '
++                            'time.sleep(30)')
++        runtime = {}
++        with self.assertRaises(subprocess.TimeoutExpired):
++            observe_process(child, '', 0.15, runtime=runtime)
++        self.assertEqual(TERMINATION_GRACE, 5.0)
++        self.assertGreaterEqual(runtime['elapsed_seconds'], 5.1)
++        self.assertLess(runtime['elapsed_seconds'], 7)
++        self.assertEqual(runtime['termination_signals'], ['SIGTERM', 'SIGKILL'])
++        self.assertEqual(child.returncode, -signal.SIGKILL)
++
++    def test_callback_exception_cannot_leave_child_running(self):
++        child = self.launch('import time; time.sleep(30)')
++        def broken_callback(_elapsed):
++            raise ValueError('Synthetic heartbeat failure')
++        runtime = {}
++        with self.assertRaisesRegex(ValueError, 'Synthetic heartbeat failure'):
++            observe_process(child, '', 5, heartbeat=broken_callback, interval=0.04,
++                            runtime=runtime)
++        self.assertIsNotNone(child.poll())
++        self.assertEqual(runtime['termination_signals'], ['SIGTERM'])
++
++    def test_repeated_reader_failure_cannot_prevent_child_cleanup(self):
++        child = self.launch('import time; time.sleep(30)')
++        runtime = {}
++        with patch('cli_baseline_process.selectors.DefaultSelector.select',
++                   side_effect=OSError('Synthetic reader failure')):
++            with self.assertRaisesRegex(OSError, 'Synthetic reader failure'):
++                observe_process(child, '', 5, runtime=runtime)
++        self.assertIsNotNone(child.poll())
++        self.assertEqual(runtime['termination_signals'][0], 'SIGTERM')
++        self.assertTrue(runtime['cleanup_errors'])
++
++
++if __name__ == '__main__':
++    unittest.main()

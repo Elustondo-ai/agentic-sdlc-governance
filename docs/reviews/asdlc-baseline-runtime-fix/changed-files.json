@@ -1,0 +1,153 @@
+{
+  "base": "76542498451b45805aa5f14884413aee720ad6d4",
+  "created": "2026-10-14T20:17:19.276171+00:00",
+  "code_diff": [
+    {
+      "path": "asdlc/00-governance/src/cli_baseline.py",
+      "added": 20,
+      "removed": 8,
+      "base_sha256": "4701d5e8a09e455fb2f2116b40ac7c5fbe516695a410076bd6016753f147a636"
+    },
+    {
+      "path": "asdlc/00-governance/tests/test_baseline.py",
+      "added": 61,
+      "removed": 1,
+      "base_sha256": "616e233157d32aa511446faa1b2a747e5681ce824a0c87bd7fd675c0efbf6d18"
+    },
+    {
+      "path": "asdlc/00-governance/tests/probe_baseline_sandbox.py",
+      "added": 88,
+      "removed": 0,
+      "base_sha256": null
+    },
+    {
+      "path": "asdlc/00-governance/docs/baseline-safety.md",
+      "added": 4,
+      "removed": 1,
+      "base_sha256": "59bcaf8d4f547f18532eab0c382448aa2f5672d6f3bd3b3298dccd110076f0ad"
+    }
+  ],
+  "patch_scope": "Four implementation/test/documentation files only; review evidence listed separately. Manifest excludes its own recursive hash.",
+  "entries": [
+    {
+      "path": "asdlc/00-governance/docs/baseline-safety.md",
+      "sha256": "f052a9b6f0e2d63511d6c032c71025bb1954d47556b99bfdbf7e2468c86a8460",
+      "bytes": 3716,
+      "category": "implementation_test_documentation"
+    },
+    {
+      "path": "asdlc/00-governance/src/cli_baseline.py",
+      "sha256": "4678e5ac21dad02884afd9da65b84d30c5fc1885c32546d5393c917fc680db82",
+      "bytes": 29413,
+      "category": "implementation_test_documentation"
+    },
+    {
+      "path": "asdlc/00-governance/tests/probe_baseline_sandbox.py",
+      "sha256": "3dd3321cfcfcbf84602c0d09403b163ef7f691cddc4a322bf8947268315542cc",
+      "bytes": 6023,
+      "category": "implementation_test_documentation"
+    },
+    {
+      "path": "asdlc/00-governance/tests/test_baseline.py",
+      "sha256": "82857cb837bbcac69aa022ab15a1d31016a4366249c5209bd894602d8614166a",
+      "bytes": 36029,
+      "category": "implementation_test_documentation"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/README.md",
+      "sha256": "63359f50b074f75d4c91003536fcf90e1bce102eb10bdd1e2aaba8dd59be791f",
+      "bytes": 4065,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/compile.txt",
+      "sha256": "f8994d7239fa9aeccee388fd1b5b7dea9269ab771e0a3d8f57de8f00dd812692",
+      "bytes": 45,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/consumer-inventory.json",
+      "sha256": "e268ebdbff37f38d1baf1424c2916d1bb31fb50e0978eadb6778881134600694",
+      "bytes": 29635,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/corrections.patch",
+      "sha256": "0311a55560c63ba230c7b4142bd10e739f56d897cc7664e1bf3a7a9864e2300d",
+      "bytes": 15441,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/diff-check.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/focused.txt",
+      "sha256": "1c1cd1ec18811677d60e69326951bc5be8fa1ab705adfa4801b82198d147fa34",
+      "bytes": 8614,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/governance.txt",
+      "sha256": "5523e137b06975334444af74d8241c581c0f86076e93c239fa7839c9f781b95e",
+      "bytes": 24667,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/integrity.json",
+      "sha256": "8d7bb2ae33b009d2573233676a32760f08ffce0cb6248b1e7c161dbc11ce7873",
+      "bytes": 2575,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/investigation.json",
+      "sha256": "97576d67dce6b741c21fdabee1eecb878d94fc6fc7703822c24fe8025f782499",
+      "bytes": 2053,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/legacy-inventory.json",
+      "sha256": "de7d0178695dfe031aa415eabb82a9164cce2fb63309325ff22ac07021922405",
+      "bytes": 15076,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/native-initial-control.json",
+      "sha256": "7a1df57c677a187491f9cff962a488055967b1b76cf53ae63401348ffc04b702",
+      "bytes": 17561,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/native-probe.json",
+      "sha256": "46d598f4b040ddd01ac641a6b3df9d8087e8cdfa722babde8c74074998414be0",
+      "bytes": 17427,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/packages.txt",
+      "sha256": "ef214f9f3b4d3d1292f16d7fb30b4895e014c53878baf79f8a133018476b09ff",
+      "bytes": 193,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/patch-check.json",
+      "sha256": "349fb11265874bb9bd3227fd0a813a21d12fe1dc6ff7798a126649bfc49b0e54",
+      "bytes": 501,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/runtime-libraries.txt",
+      "sha256": "46682c0150b253b6eaf3d9e159410e7d60a19af020726f17fc6e01b67c8faff3",
+      "bytes": 1823,
+      "category": "review_evidence"
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-runtime-fix/verification.json",
+      "sha256": "a131ece8cb545476840d0329cff43bd79b492d8908406c6b428b79711071a1d9",
+      "bytes": 4455,
+      "category": "review_evidence"
+    }
+  ]
+}

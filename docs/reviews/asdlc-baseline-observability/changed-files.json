@@ -1,0 +1,210 @@
+{
+  "base_head": "76542498451b45805aa5f14884413aee720ad6d4",
+  "base": "Pre-task working tree including earlier uncommitted standalone runtime correction",
+  "production_test_documentation_changes": [
+    {
+      "path": "asdlc/00-governance/docs/baseline-capture.md",
+      "change": "modified",
+      "before_sha256": "9fe6a48850b9dbe00c45a3f04992e53b76327c3836b89db720f5dd6e89a07f7a",
+      "after_sha256": "037cc7ac5bdd50ff38d16786c657d6bd62d18457a7f184ee1ee4b7e9b07483a9",
+      "added_lines": 2,
+      "removed_lines": 1
+    },
+    {
+      "path": "asdlc/00-governance/docs/baseline-observability.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "8010a861614e781263179b7edc732cc2db877acd9d9c666a6ab84c727f8adb50",
+      "added_lines": 41,
+      "removed_lines": 0
+    },
+    {
+      "path": "asdlc/00-governance/src/cli_baseline.py",
+      "change": "modified",
+      "before_sha256": "4678e5ac21dad02884afd9da65b84d30c5fc1885c32546d5393c917fc680db82",
+      "after_sha256": "d9f076e80246320d76092766f05c4595d199973a125836ffc6bbed0958b87d9a",
+      "added_lines": 143,
+      "removed_lines": 62
+    },
+    {
+      "path": "asdlc/00-governance/src/cli_baseline_diagnostics.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "b1ae2237723c92e3d0886ab9ae754ae066f65665e5b869b569eae5f0b321fc12",
+      "added_lines": 123,
+      "removed_lines": 0
+    },
+    {
+      "path": "asdlc/00-governance/src/cli_baseline_evidence.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "803838341b7b4a68af7682219c9f7aa1bb92e56bdc7fd078b1b3a8ad9cb4b759",
+      "added_lines": 270,
+      "removed_lines": 0
+    },
+    {
+      "path": "asdlc/00-governance/src/cli_baseline_process.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "c981fcc3af0b6988a564b46dc7909dc7301ef1f3399ec9ad11617855adc62429",
+      "added_lines": 226,
+      "removed_lines": 0
+    },
+    {
+      "path": "asdlc/00-governance/src/cli_baseline_provenance.py",
+      "change": "modified",
+      "before_sha256": "a6f1dac0b01c71d5799e1103053430ba4e835c6c802af578ff0ae66473f804a1",
+      "after_sha256": "d34796973d62b6d655bbe6f222aec5d1ca07b1d9f452af9a3acfbc85b1ea87da",
+      "added_lines": 62,
+      "removed_lines": 17
+    },
+    {
+      "path": "asdlc/00-governance/src/cli_baseline_safety.py",
+      "change": "modified",
+      "before_sha256": "3e08901256b8516ae7b616245306859f32afe932591c57badb14e7c53c832d4f",
+      "after_sha256": "de80f1946868f114a137777b0a86f85de9e56198268292c1563d3d514d072a8a",
+      "added_lines": 11,
+      "removed_lines": 5
+    },
+    {
+      "path": "asdlc/00-governance/tests/test_baseline_diagnostics.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "177cf778619be91890605796695060e0ec449ba8c2346bcee193b7bf1b60174e",
+      "added_lines": 194,
+      "removed_lines": 0
+    },
+    {
+      "path": "asdlc/00-governance/tests/test_baseline_evidence.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "d4ee87a6a2851ff58371cf63652ac5e9617e6802c108983a1adb5282f602c3b8",
+      "added_lines": 182,
+      "removed_lines": 0
+    },
+    {
+      "path": "asdlc/00-governance/tests/test_baseline_observability.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "cece9fb8b8f9f4f1d5c641116a700484cf0f3b3a17d999e6220ceced01850d7c",
+      "added_lines": 178,
+      "removed_lines": 0
+    },
+    {
+      "path": "asdlc/00-governance/tests/test_baseline_process.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "84a75da6de097aeeb1dd500dff3ab9ab105f89e2129bdf7ee98189c2ccee66d0",
+      "added_lines": 189,
+      "removed_lines": 0
+    }
+  ],
+  "patch": {
+    "path": "observability.patch",
+    "sha256": "77484e6fb67cb2f0c2f2bcd0f4d9aa18fdc674edae2e8877bdc0c4b2aa9f427d",
+    "bytes": 109597
+  },
+  "excludes": "Existing runtime patch, prior review evidence, consumer/legacy repositories and derived review evidence",
+  "review_evidence": [
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/README.md",
+      "sha256": "6402134dc394aa5de94e6471c835dfaa349b753ab0a580d08660f72b32af1337",
+      "bytes": 4039
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/compile.txt",
+      "sha256": "388a7d6f8668ffcf0349fd4d3331a60c2cb1acf8d79df5810c101a48f04d329f",
+      "bytes": 45
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/diff-check.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/focused.txt",
+      "sha256": "c6dad3f7f46d9f36ea86c0720d1cdbcc41243f34261e811f304d67da2e190445",
+      "bytes": 89651
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/generate-example.py",
+      "sha256": "05aa9dacbeec15cfdc0273d22fc19e199c7d4b088eb71b35f734370d997a6528",
+      "bytes": 3362
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/governance.txt",
+      "sha256": "d03b7797d436262908652ecda3c0dd2913a85654b93bc5154f448a5e5967615c",
+      "bytes": 105703
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/initial-test-failure.txt",
+      "sha256": "85794adf5c709f639a3acc26821fe7b8e6a55899f867f9969c8c154e8fe2305f",
+      "bytes": 85204
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/integrity.json",
+      "sha256": "999c5ba5c3259b1ca5a6c3eb195f00ef7e395ebe9b788d42634b039a06de8c21",
+      "bytes": 7482
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/observability.patch",
+      "sha256": "77484e6fb67cb2f0c2f2bcd0f4d9aa18fdc674edae2e8877bdc0c4b2aa9f427d",
+      "bytes": 109597
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/packages.txt",
+      "sha256": "ef214f9f3b4d3d1292f16d7fb30b4895e014c53878baf79f8a133018476b09ff",
+      "bytes": 193
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/patch-check.json",
+      "sha256": "a233747cca1f31a5bbc3841602ddda3748162e492716e152c80f4ebcf41866da",
+      "bytes": 2242
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/preservation-before.json",
+      "sha256": "e251be234742dc8dad82eb9dc20f01429db3169ad19eb32aaf85d35d50b39e67",
+      "bytes": 159212
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/synthetic-example/bundle/manifest.json",
+      "sha256": "06365dd7813d8d79c0f4d013473bebf5771a798ec79093c0979a30ef57d66515",
+      "bytes": 3844
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/synthetic-example/bundle/rejected-001-speaker-notes.md.txt",
+      "sha256": "ad81f9d0240932be334f6fc79dfc570bd9d102be28a76597bec2e103fc4c5323",
+      "bytes": 225
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/synthetic-example/bundle/rejected-002-visual.mmd.txt",
+      "sha256": "3857f4de12fdd9dc4b6a3860254f182a9214845a09d7e7c768cbd729a82a1950",
+      "bytes": 41
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/synthetic-example/console.txt",
+      "sha256": "be01c5fe05d12e880f025f8df82b5c135197290ef6a866499420d7d5e216bef3",
+      "bytes": 4247
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/synthetic-example/example.json",
+      "sha256": "c22a6ce6705aaeec0db4ef0146f507d0f1d91d7654add6d3ec304044a4c57150",
+      "bytes": 987
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/synthetic-example/receipt.json",
+      "sha256": "72eb7fc176cc706f817d8bf8ed8ddc392c0bbfb6b9e49962dc8fed21db8930a6",
+      "bytes": 8618
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/synthetic-example/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/reviews/asdlc-baseline-observability/verification.json",
+      "sha256": "b28e1034e40b8809c6444d4012316b438f6eb1d037be89d79a980fe5432d8cbf",
+      "bytes": 4948
+    }
+  ]
+}

@@ -234,7 +234,7 @@ class BaselineSafetyTests(BaselineFixture):
 
     def test_output_only_profile_does_not_bypass_hook_trust(self):
         from cli_baseline import codex_options
-        args = codex_options(self.path)
+        args = codex_options(self.path, str(self.fake))
         self.assertEqual(args[args.index('--cd') + 1], str(self.path / 'output'))
         self.assertIn('default_permissions="asdg_baseline"', args)
         self.assertIn('permissions.asdg_baseline.network.enabled=false', args)
@@ -253,6 +253,66 @@ class BaselineSafetyTests(BaselineFixture):
         before = workspace_snapshot(work)
         (work / 'unauthorized').mkdir()
         self.assertNotEqual(workspace_snapshot(work), before)
+
+    def test_standalone_symlink_resolution_grants_only_pinned_binary(self):
+        from cli_baseline import resolve_codex, sandbox_settings
+        import re
+        install = self.path / 'home/.codex/packages/standalone'
+        binary = install / 'releases/v1/bin/codex'
+        binary.parent.mkdir(parents=True)
+        binary.write_text('#!/bin/sh\nexit 0\n')
+        binary.chmod(0o755)
+        current = install / 'current'
+        current.symlink_to('releases/v1', target_is_directory=True)
+        shim = self.path / 'home/.local/bin/codex'
+        shim.parent.mkdir(parents=True)
+        shim.symlink_to(current / 'bin/codex')
+        with patch.dict(os.environ, {'PATH': str(shim.parent)}):
+            selected = resolve_codex('codex')
+        self.assertEqual(selected, str(binary.resolve()))
+        self.assertEqual(resolve_codex(str(shim)), selected)
+        work = self.path / 'isolated'
+        args = sandbox_settings(work, str(shim))
+        config = next(arg for arg in args if arg.startswith('permissions.asdg_baseline.filesystem='))
+        reads = {json.loads(key) for key in re.findall(r'("(?:\\.|[^"\\])*")="read"', config)}
+        self.assertEqual(reads, {':minimal', str(work), selected})
+        self.assertIn(json.dumps(str(Path.home())) + '="deny"', config)
+        self.assertIn(json.dumps(str(work / 'output')) + '="write"', config)
+        self.assertIn('permissions.asdg_baseline.network.enabled=false', args)
+        current.unlink()
+        current.symlink_to('releases/missing', target_is_directory=True)
+        self.assertEqual(sandbox_settings(work, selected), args)
+
+    def test_invalid_executable_targets_fail_closed(self):
+        from cli_baseline import resolve_codex
+        nonexec = self.path / 'nonexec'
+        nonexec.write_text('not executable')
+        nonexec.chmod(0o600)
+        dangling = self.path / 'dangling'
+        dangling.symlink_to('missing')
+        loop = self.path / 'loop'
+        loop.symlink_to('loop')
+        for target in (nonexec, dangling, loop, self.path, self.path / 'missing'):
+            with self.subTest(target=target), self.assertRaisesRegex(Conflict, 'Codex CLI is unavailable'):
+                resolve_codex(str(target))
+
+    def test_capture_invokes_and_records_canonical_executable(self):
+        import subprocess
+        binary = self.fake
+        shim = self.path / 'codex-shim'
+        shim.symlink_to(binary)
+        self.fake = shim
+        with patch('cli_baseline.subprocess.Popen', wraps=subprocess.Popen) as launch:
+            result = self.call_capture(max_agents=1)
+        report = json.loads(Path(result['report_path']).read_text())
+        selected = str(binary.resolve())
+        self.assertEqual(report['codex_executable'], selected)
+        for call in launch.call_args_list:
+            argv = call.args[0]
+            self.assertEqual(argv[0], selected)
+            config = next(arg for arg in argv if arg.startswith('permissions.asdg_baseline.filesystem='))
+            self.assertIn(json.dumps(selected) + '="read"', config)
+            self.assertNotIn(json.dumps(str(shim)) + '="read"', config)
 
     def test_bad_output_retains_failure_session_and_previous_success(self):
         with patch.dict(os.environ, {'ASDLC_TEST_BAD_OUTPUT': '1'}):

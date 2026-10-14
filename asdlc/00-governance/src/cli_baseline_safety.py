@@ -10,15 +10,13 @@ import xml.etree.ElementTree as ET
 
 from cli_files import Conflict, safe_path
 from cli_baseline_provenance import validate_provenance
+from cli_baseline_diagnostics import SECRET, ValidationDiagnostic, sanitize_text
 
 VISUALS = {'.puml', '.mmd', '.svg', '.png', '.jpg', '.jpeg', '.webp'}
 SKIP_DIRS = {'.git', '.asdlc', '.codex', '.ssh', '.aws', 'node_modules', '.venv', 'venv',
              '__pycache__', '.next', 'dist', 'build', '.pytest_cache', '.cache'}
 SKIP_NAMES = {'.env', 'id_rsa', 'id_ed25519', 'auth.json', 'credentials.json', 'service-account.json'}
 MAX_FILES, MAX_FILE, MAX_TOTAL, MAX_ARTIFACTS = 500, 2 * 1024 * 1024, 20 * 1024 * 1024, 30
-SECRET = re.compile(rb'(?:sk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{16,}|AKIA[0-9A-Z]{16}|'
-                    rb'-----BEGIN [A-Z ]*PRIVATE KEY-----|'
-                    rb'(?i:api[_-]?key|password|secret|access[_-]?token)\s*[:=]\s*[\"\']?[A-Za-z0-9_/+=-]{16,})')
 
 
 def digest(data: bytes) -> str:
@@ -172,9 +170,17 @@ def docs_from_output(output: Path, agent: dict | None = None, *,
                     for label in ('Sources:', 'Uncertainties:', 'Contradictions:'):
                         if label not in text:
                             raise Conflict(f'Missing {label} in {rel}')
-                    validate_provenance(text, evidence_root or output.parent, artifact_dir=path.parent)
+                    try:
+                        validate_provenance(text, evidence_root or output.parent, artifact_dir=path.parent)
+                    except ValidationDiagnostic as exc:
+                        exc.diagnostic['artifact'] = sanitize_text(rel.as_posix())
+                        raise
                 elif evidence_root is not None:
-                    validate_provenance(text, evidence_root, artifact_dir=path.parent)
+                    try:
+                        validate_provenance(text, evidence_root, artifact_dir=path.parent)
+                    except ValidationDiagnostic as exc:
+                        exc.diagnostic['artifact'] = sanitize_text(rel.as_posix())
+                        raise
             else:
                 validate_visual(rel, data)
             entries.append((rel, data))

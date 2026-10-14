@@ -1,0 +1,23 @@
+{
+  "synthetic": true,
+  "no_model": true,
+  "origin": "offline BaselineFixture fake executable",
+  "original_failed_experiment_reconstructed": false,
+  "heartbeat_seconds": 0.03,
+  "production_heartbeat_seconds": 15.0,
+  "selected_stages": [
+    1,
+    4,
+    5,
+    8,
+    11
+  ],
+  "failure": "External or unsupported citation; declare it as an unverified narrative citation. Run evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpnwoifx5n/consumer/docs/asdlc/00-governance/logs/20261014T204306Z-b82fb3e6fa__baseline-run.json",
+  "original_bundle": "/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpnwoifx5n/consumer/docs/asdlc/00-governance/diagnostics/20261014T204306Z-b82fb3e6fa/01",
+  "retained_bundle": "bundle",
+  "workspace_cleanup_confirmed": true,
+  "validated_artifacts": 0,
+  "promoted_artifacts": 0,
+  "note": "Original temporary paths in byte-for-byte records no longer exist; review copy is bundle/.",
+  "fixture_cleanup_confirmed": true
+}

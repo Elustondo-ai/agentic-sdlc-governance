@@ -1,0 +1,9 @@
+AI-MODIFIED - 2026-10-14T20:43:06Z
+
+# Observed
+
+Agent: ASDLC-01
+Sources: source/Plan.md
+See [unsupported](https://example.invalid/evidence).
+Uncertainties: Runtime not observed.
+Contradictions: None observed in this fixture.

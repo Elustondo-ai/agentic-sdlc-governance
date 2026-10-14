@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-10-14T20:16:49.116483+00:00",
+  "methodology_head": "76542498451b45805aa5f14884413aee720ad6d4",
+  "methodology_staged_files": [],
+  "consumer": {
+    "root": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-speaker-coach",
+    "head": "a7411af03bfe87c417d631224f8d9737a7777fbc",
+    "status": "?? docs/asdlc/00-governance/logs/20261014T200637Z-544552583a__baseline-capture__00-routing.md\n?? docs/asdlc/00-governance/logs/20261014T200637Z-544552583a__baseline-run.json\n",
+    "current_file_link_count": 176,
+    "matched_r01_inventory_entries": 174,
+    "reference_inventory_sha256": "f3ea29cd2bf201804251709a9090f25c3634a0f13564bcffeddf30e80b4c0e71",
+    "additional_files": [
+      "docs/asdlc/00-governance/logs/20261014T200637Z-544552583a__baseline-capture__00-routing.md",
+      "docs/asdlc/00-governance/logs/20261014T200637Z-544552583a__baseline-run.json"
+    ]
+  },
+  "legacy": {
+    "root": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/meetingHelper",
+    "head": "7effb09560c77b3eb806f94197576bf6ab0c6405",
+    "status": "",
+    "current_file_link_count": 98,
+    "matched_r01_inventory_entries": 98,
+    "reference_inventory_sha256": "0e1b19fff0593dc0ffff30d477cf0a6ba6dfde8209e3e61c69d1cfc3f94870b4",
+    "additional_files": []
+  },
+  "failed_run": {
+    "metadata_matches_initial_read": true,
+    "current_files": [
+      {
+        "path": "docs/asdlc/00-governance/logs/20261014T200637Z-544552583a__baseline-run.json",
+        "sha256": "2df263a71dc5394762d89f609be609c94e2942400631dc3d28188f583cfedb65",
+        "modified_at": "2026-10-14T20:06:39.342728+00:00"
+      },
+      {
+        "path": "docs/asdlc/00-governance/logs/20261014T200637Z-544552583a__baseline-capture__00-routing.md",
+        "sha256": "8f5a6f61873a020cab138cce09df6961140a899c63dcfc67bf57fca2ecbb9274",
+        "modified_at": "2026-10-14T20:06:39.335330+00:00"
+      }
+    ],
+    "hash_comparison_limit": "No retained pre-fix hashes for these two new run files; current hashes and initially observed run/error metadata are recorded. Both mtimes predate the correction."
+  },
+  "sprint_status": "inactive",
+  "no_app_py": true,
+  "consumer_status_matches_initial": true,
+  "inventory_note": "The temporary pre-fix snapshot path was reused by an exploratory probe. Retained R01 inventory hashes cover the 174 pre-existing consumer and 98 legacy entries; failed-run metadata, timestamps and current hashes supplement them."
+}

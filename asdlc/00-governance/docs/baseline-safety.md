@@ -1,10 +1,12 @@
-AI-MODIFIED - 2026-10-14T19:27:16Z
+AI-MODIFIED - 2026-10-14T20:13:21Z
 
 # Baseline isolation and validation
 
 Baseline agents use an ephemeral named `asdg_baseline` permissions profile.
 Its default root, home and broad temp reads are denied; platform/runtime paths and the isolated
 snapshot are readable. Only that invocation's `output/` subtree is writable.
+The selected Codex executable is resolved through symlinks, invoked by its canonical path and granted exact-file read access.
+Standalone Codex uses `:minimal` system libraries; no HOME, `~/.codex`, release-directory or unrelated Python-prefix read grant is added.
 Explicit temp denials matter: the macOS probe found root-deny alone left a temp canary readable.
 Both source-write denial and outside-canary read denial were verified with actual Codex Seatbelt
 probes. No hook-trust bypass or global configuration/registry change is used.
@@ -43,3 +45,4 @@ Read restrictions were verified against synthetic canaries, not by attempting to
 Managed/runtime policy may further restrict the profile; incompatible hosts fail rather than
 falling back to broad writes. Windows execution is not established by this Mac/Linux implementation.
 No automatic retention, deletion, evidence approval or lifecycle completion is inferred.
+The repeatable no-model check is `tests/probe_baseline_sandbox.py` (macOS); see the [runtime-fix review](../../../docs/reviews/asdlc-baseline-runtime-fix/README.md).

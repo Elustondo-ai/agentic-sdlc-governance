@@ -1,0 +1,524 @@
+test_invalid_cli_arguments_exit_nonzero (test_baseline.BaselineCliTests.test_invalid_cli_arguments_exit_nonzero) ... ok
+test_real_cli_registration_dry_run_json_and_state_preservation (test_baseline.BaselineCliTests.test_real_cli_registration_dry_run_json_and_state_preservation) ... ok
+test_bad_output_retains_failure_session_and_previous_success (test_baseline.BaselineSafetyTests.test_bad_output_retains_failure_session_and_previous_success) ... ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.2s; session offline-e94a35b5642745d5ac5fdd89f403d581. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.2s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp7pa97xlm/consumer/docs/asdlc/00-governance/logs/20261014T203639Z-63a068a5af__baseline-capture__00-routing.md
+Selected specialists (2): ASDLC-01 — Stage 01: Context and Domain Analysis; ASDLC-02 — Stage 02: Intent
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: execution completed in 0.0s; session offline-260a0bb946154026b2ca60e6bf17d8cb. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: validation passed; 2 artifacts validated.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp7pa97xlm/consumer/docs/asdlc/01-context-and-domain-analysis/baselines/20261014T203639Z-63a068a5af
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp7pa97xlm/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203639Z-63a068a5af__baseline-capture__01.md
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: execution started. Task: Capture stage evidence
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: execution completed in 0.0s; session offline-dda96bba62e94d379d2b55f5ec92627f. Validation started.
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_VALIDATION_FAILED: Unexpected artifact type: 01-topic/unexpected.txt
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp7pa97xlm/consumer/docs/asdlc/00-governance/diagnostics/20261014T203639Z-63a068a5af/02
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp7pa97xlm/consumer/docs/asdlc/02-intent/logs/20261014T203639Z-63a068a5af__baseline-capture__02.md
+ok
+test_canonical_sprint_mutation_is_detected_and_reported (test_baseline.BaselineSafetyTests.test_canonical_sprint_mutation_is_detected_and_reported) ... ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.2s; session offline-a116d61c0e154c539142d16fcc5e70ab. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.2s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpdiwtmtvy/consumer/docs/asdlc/00-governance/logs/20261014T203640Z-12de235138__baseline-capture__00-routing.md
+Selected specialists (2): ASDLC-01 — Stage 01: Context and Domain Analysis; ASDLC-02 — Stage 02: Intent
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: execution completed in 0.0s; session offline-f8bafa86d0d34607a33e27b266e3ec4e. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: validation passed; 2 artifacts validated.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpdiwtmtvy/consumer/docs/asdlc/01-context-and-domain-analysis/baselines/20261014T203640Z-12de235138
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpdiwtmtvy/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203640Z-12de235138__baseline-capture__01.md
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: execution started. Task: Capture stage evidence
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: execution completed in 0.0s; session offline-854f72f60c0f4056ba7465c538013364. Validation started.
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_VALIDATION_FAILED: Canonical sprint/binding/lifecycle/hook policy changed during capture.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpdiwtmtvy/consumer/docs/asdlc/00-governance/diagnostics/20261014T203640Z-12de235138/02
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpdiwtmtvy/consumer/docs/asdlc/02-intent/logs/20261014T203640Z-12de235138__baseline-capture__02.md
+ok
+test_capture_invokes_and_records_canonical_executable (test_baseline.BaselineSafetyTests.test_capture_invokes_and_records_canonical_executable) ... ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.2s; session offline-30272575e5c54347a8f6932ca28bc2a5. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.2s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_ievnh3o/consumer/docs/asdlc/00-governance/logs/20261014T203640Z-9429131519__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-d5a687cefbef405d8da6e619ddd2264e. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation passed; 2 artifacts validated.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_ievnh3o/consumer/docs/asdlc/01-context-and-domain-analysis/baselines/20261014T203640Z-9429131519
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_ievnh3o/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203640Z-9429131519__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: execution started. Task: Reconcile ONLY governance routing, actual execution records, specialist disagreements and human decisions pending. Do not rewrite or impersonate specialist documents. Read context/routing-and-executions.json for actual sessions, scope and truncation.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: execution completed in 0.0s; session offline-402e38d6f7d444f298f56c9a6e03a936. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: validation passed; 2 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_ievnh3o/consumer/docs/asdlc/00-governance/baselines/20261014T203640Z-9429131519
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_ievnh3o/consumer/docs/asdlc/00-governance/logs/20261014T203640Z-9429131519__baseline-capture__00-summary.md
+ok
+test_changed_source_snapshot_is_rejected (test_baseline.BaselineSafetyTests.test_changed_source_snapshot_is_rejected) ... ok
+test_distinct_invocation_logs_and_byte_authorship_manifest (test_baseline.BaselineSafetyTests.test_distinct_invocation_logs_and_byte_authorship_manifest) ... ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.2s; session offline-44bf9e97b5fb4f27b179dbf65a63b480. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.2s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp8iipix0_/consumer/docs/asdlc/00-governance/logs/20261014T203640Z-e18cf94133__baseline-capture__00-routing.md
+Selected specialists (2): ASDLC-01 — Stage 01: Context and Domain Analysis; ASDLC-02 — Stage 02: Intent
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: execution completed in 0.0s; session offline-bc242c015c814ec6a3b22fdfc5525085. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: validation passed; 2 artifacts validated.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp8iipix0_/consumer/docs/asdlc/01-context-and-domain-analysis/baselines/20261014T203640Z-e18cf94133
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp8iipix0_/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203640Z-e18cf94133__baseline-capture__01.md
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: execution started. Task: Capture stage evidence
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: execution completed in 0.0s; session offline-e71cb084f8e24c97b3f9cb2371897b32. Validation started.
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: validation passed; 2 artifacts validated.
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp8iipix0_/consumer/docs/asdlc/02-intent/baselines/20261014T203640Z-e18cf94133
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp8iipix0_/consumer/docs/asdlc/02-intent/logs/20261014T203640Z-e18cf94133__baseline-capture__02.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: execution started. Task: Reconcile ONLY governance routing, actual execution records, specialist disagreements and human decisions pending. Do not rewrite or impersonate specialist documents. Read context/routing-and-executions.json for actual sessions, scope and truncation.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: execution completed in 0.0s; session offline-b220fd2f84104e82b59db128533ff537. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: validation passed; 2 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp8iipix0_/consumer/docs/asdlc/00-governance/baselines/20261014T203640Z-e18cf94133
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp8iipix0_/consumer/docs/asdlc/00-governance/logs/20261014T203640Z-e18cf94133__baseline-capture__00-summary.md
+ok
+test_empty_directory_outside_output_is_detected (test_baseline.BaselineSafetyTests.test_empty_directory_outside_output_is_detected) ... ok
+test_empty_topic_directory_is_rejected (test_baseline.BaselineSafetyTests.test_empty_topic_directory_is_rejected) ... ok
+test_environment_sentinels_never_reach_child_or_evidence (test_baseline.BaselineSafetyTests.test_environment_sentinels_never_reach_child_or_evidence) ... ok
+test_fabricated_provenance_blocks_promotion_in_offline_capture (test_baseline.BaselineSafetyTests.test_fabricated_provenance_blocks_promotion_in_offline_capture) ... ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.2s; session offline-c0c09275b8df4cfb9e4e1071d0ed8679. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.2s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpvv0g_l54/consumer/docs/asdlc/00-governance/logs/20261014T203641Z-2cd05c1405__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-311068ba38034c229747e02c521f7980. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_UNRESOLVED_REFERENCE: Evidence must resolve to a regular, unlinked snapshot file.
+Artifact: 01-topic/speaker-notes.md:6; target: source/fabricated.md. Expected: Use an existing source/ or context/ snapshot file; Sources entries are separated by semicolons.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpvv0g_l54/consumer/docs/asdlc/00-governance/diagnostics/20261014T203641Z-2cd05c1405/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpvv0g_l54/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203641Z-2cd05c1405__baseline-capture__01.md
+ok
+test_fabricated_traversal_external_and_escaped_provenance_rejected (test_baseline.BaselineSafetyTests.test_fabricated_traversal_external_and_escaped_provenance_rejected) ... ok
+test_invalid_auth_location_is_reported_without_value (test_baseline.BaselineSafetyTests.test_invalid_auth_location_is_reported_without_value) ... ok
+test_invalid_executable_targets_fail_closed (test_baseline.BaselineSafetyTests.test_invalid_executable_targets_fail_closed) ... ok
+test_invalid_limits_are_rejected_even_during_dry_run (test_baseline.BaselineSafetyTests.test_invalid_limits_are_rejected_even_during_dry_run) ... ok
+test_narrative_autolinks_are_unverified_not_source_evidence (test_baseline.BaselineSafetyTests.test_narrative_autolinks_are_unverified_not_source_evidence) ... ok
+test_non_object_and_unjustified_plan_rejected (test_baseline.BaselineSafetyTests.test_non_object_and_unjustified_plan_rejected) ... ok
+test_output_only_profile_does_not_bypass_hook_trust (test_baseline.BaselineSafetyTests.test_output_only_profile_does_not_bypass_hook_trust) ... ok
+test_output_ownership_format_approval_and_line_limit (test_baseline.BaselineSafetyTests.test_output_ownership_format_approval_and_line_limit) ... ok
+test_provenance_accepts_formats_links_spaces_and_passage_suffixes (test_baseline.BaselineSafetyTests.test_provenance_accepts_formats_links_spaces_and_passage_suffixes) ... ok
+test_sensitive_binary_and_symlink_evidence_are_excluded (test_baseline.BaselineSafetyTests.test_sensitive_binary_and_symlink_evidence_are_excluded) ... ok
+test_standalone_symlink_resolution_grants_only_pinned_binary (test_baseline.BaselineSafetyTests.test_standalone_symlink_resolution_grants_only_pinned_binary) ... ok
+test_svg_active_and_external_content_is_rejected (test_baseline.BaselineSafetyTests.test_svg_active_and_external_content_is_rejected) ... ok
+test_timeout_preserves_emitted_session (test_baseline.BaselineSafetyTests.test_timeout_preserves_emitted_session) ... ok
+test_unsupported_citations_block_offline_promotion (test_baseline.BaselineSafetyTests.test_unsupported_citations_block_offline_promotion) ... ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.2s; session offline-f2fd6f5931c94f0c996e306e4a44c47b. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.2s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203642Z-4a941561f7__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-0121bd6f880f4d5ebe7b394cc982e4a4. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_REFERENCE_STYLE: Reference-style Markdown citations are unsupported.
+Artifact: 01-topic/speaker-notes.md:9; target: ][bad].. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203642Z-4a941561f7/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203642Z-4a941561f7__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-6f98cbad1ca8479a98d1c1e13e626573. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203642Z-520b980715__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-62cb7cb5909342dcadf7795eccb5fdcb. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_REFERENCE_STYLE: Reference-style Markdown citations are unsupported.
+Artifact: 01-topic/speaker-notes.md:9; target: ][bad].. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203642Z-520b980715/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203642Z-520b980715__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-12215868ce2a4e329cb4f536f857c76c. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-2fd2ff1ec5__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-e5ecc446e9614e7797d6a6629430a0ec. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_REFERENCE_STYLE: Reference-style Markdown citations are unsupported.
+Artifact: 01-topic/speaker-notes.md:9; target: ][].. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-2fd2ff1ec5/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-2fd2ff1ec5__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-827dcc715acc4a6ea87db00b91c986a9. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-d71ee16cbb__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-3afce8ed594d4730804a2613bf0641ea. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_REFERENCE_STYLE: Reference-style Markdown citations are unsupported.
+Artifact: 01-topic/speaker-notes.md:10; target: [bad]: /tmp/fabricated-evidence.md. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-d71ee16cbb/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-d71ee16cbb__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-7f5fa581764946739483d65af4b2e871. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-1ed71dd6b7__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-4e0504df219348fc800540caf1154718. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_REFERENCE_STYLE: Reference-style Markdown citations are unsupported.
+Artifact: 01-topic/speaker-notes.md:9; target: [bad]:. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-1ed71dd6b7/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-1ed71dd6b7__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-9d42ecd0ba6c440bb20b4e6ddfd7a4aa. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-874c2dd8e8__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-599bb7a5fdaa45fc918962da22cd36c2. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_REFERENCE_STYLE: Reference-style Markdown citations are unsupported.
+Artifact: 01-topic/speaker-notes.md:9; target: [bad]: /tmp/fabricated-evidence.md. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-874c2dd8e8/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-874c2dd8e8__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-c9a45f38d63b485e971b60340873eb43. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-43d2a1a3ec__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-600428a9f8ef4da1ad1f84f4e45479f2. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_REFERENCE_STYLE: Reference-style Markdown citations are unsupported.
+Artifact: 01-topic/speaker-notes.md:9; target: [bad]: /tmp/fabricated-evidence.md. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-43d2a1a3ec/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-43d2a1a3ec__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-d5d49aa10a8946189def5906fff0c3c6. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-6021bd865e__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-a02734d331e24160a07077a5163369d3. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_REFERENCE_STYLE: Reference-style Markdown citations are unsupported.
+Artifact: 01-topic/speaker-notes.md:9; target: [ba\]d]: /tmp/fabricated-evidence.md. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-6021bd865e/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-6021bd865e__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-573bf9dad89841cdb6cf5ad575476944. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-adbb9e1d53__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-b03e2353ec074f07a6aa36eb88c1be79. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_REFERENCE_STYLE: Reference-style Markdown citations are unsupported.
+Artifact: 01-topic/speaker-notes.md:9; target: [multi line]: /tmp/fabricated-evidence.md. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-adbb9e1d53/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-adbb9e1d53__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-0107acb5832c4d7d8fccd1a21e149b0e. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-b35014dda3__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-3954f9a3aab046318f6ebc6e24db316e. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_REFERENCE_STYLE: Reference-style Markdown citations are unsupported.
+Artifact: 01-topic/speaker-notes.md:9; target: ] [undefined].. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-b35014dda3/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-b35014dda3__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-888ac49c3ee34a3684bfa3e599818a0d. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-88cd344422__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-19f498049f5a4e9eaaf29139432c46ca. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_REFERENCE_STYLE: Reference-style Markdown citations are unsupported.
+Artifact: 01-topic/speaker-notes.md:9; target: ][undefined].. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-88cd344422/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-88cd344422__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-2a699427a5e443f78d1c5ba118e1c9d4. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-3461787588__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-3bff3989b13643458d26eda810b56405. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_REFERENCE_STYLE: Reference-style Markdown citations are unsupported.
+Artifact: 01-topic/speaker-notes.md:9; target: ][undefined]. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-3461787588/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-3461787588__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-03991d4f6b214955a779bc9c36847165. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-4f2fb2f58f__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-15d2e27311e44eb7a16f4c1182ea9c41. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_REFERENCE_STYLE: Reference-style Markdown citations are unsupported.
+Artifact: 01-topic/speaker-notes.md:9; target: [bad]: source/Plan.md. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-4f2fb2f58f/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-4f2fb2f58f__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-a01dcae37a254b4880ec668df2d4f9bf. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-1b4c07e5f2__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-70aae15958de49f19d912491d72bb11b. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_AUTOLINK: External autolinks must be explicitly unverified narrative citations.
+Artifact: 01-topic/speaker-notes.md:9; target: <https://example.invalid/report>. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-1b4c07e5f2/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-1b4c07e5f2__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-71272cdee4bb48259a9d0109f40aac0f. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-6dc3f42d9c__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-e6461ee9c66948c6871aea2ac7589192. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_AUTOLINK: External autolinks must be explicitly unverified narrative citations.
+Artifact: 01-topic/speaker-notes.md:9; target: <file:///tmp/fabricated-evidence.md>. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-6dc3f42d9c/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-6dc3f42d9c__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-8dd79221d8a743069ed00da870678ebc. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-9dc621f649__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-eda9e9ea44914e128d8b8fc07bf82b79. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_AUTOLINK: External autolinks must be explicitly unverified narrative citations.
+Artifact: 01-topic/speaker-notes.md:9; target: <mailto:review@example.invalid>. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-9dc621f649/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-9dc621f649__baseline-capture__01.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.0s; session offline-757e7ee4484c4d14a68191bbb009aa10. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-00fba6a092__baseline-capture__00-routing.md
+Selected specialists (1): ASDLC-01 — Stage 01: Context and Domain Analysis
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: execution completed in 0.0s; session offline-c1315e96f96d4277a7258046b9786c8d. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_CITATION_AUTOLINK: External autolinks must be explicitly unverified narrative citations.
+Artifact: 01-topic/speaker-notes.md:9; target: <review@example.invalid>. Expected: Use an inline source/context or authored-artifact link; put unverified external citations on Narrative citations:.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/00-governance/diagnostics/20261014T203643Z-00fba6a092/01
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 1: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp63fpaw19/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-00fba6a092__baseline-capture__01.md
+ok
+test_unsupported_citations_fail_complete_artifact_validation (test_baseline.BaselineSafetyTests.test_unsupported_citations_fail_complete_artifact_validation) ... ok
+test_valid_mermaid_comments_and_dialects_are_preserved (test_baseline.BaselineSafetyTests.test_valid_mermaid_comments_and_dialects_are_preserved) ... ok
+test_dry_run_no_agent_or_files (test_baseline.BaselineTests.test_dry_run_no_agent_or_files) ... ok
+test_full_thirteen_roles_have_distinct_outputs_and_logs (test_baseline.BaselineTests.test_full_thirteen_roles_have_distinct_outputs_and_logs) ... ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.2s; session offline-a9f3ca85044b4de5b2a44ce9cfc7fc7c. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.2s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-c8145f4f41__baseline-capture__00-routing.md
+Selected specialists (12): ASDLC-01 — Stage 01: Context and Domain Analysis; ASDLC-02 — Stage 02: Intent; ASDLC-03 — Stage 03: System Model and Use Cases; ASDLC-04 — Stage 04: Benchmarks, Test Strategy and Success Criteria; ASDLC-05 — Stage 05: High-Level Solution Design and Architecture; ASDLC-06 — Stage 06: Viable Proof of Concept; ASDLC-07 — Stage 07: Planning; ASDLC-08 — Stage 08: Low-Level Design; ASDLC-09 — Stage 09: Build and Test Cycle; ASDLC-10 — Stage 10: Document, Review and Release; ASDLC-11 — Stage 11: Operational Reality, DevOps and User Acceptance; ASDLC-12 — Stage 12: Observability, Insights and Learning
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 12: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 12: execution completed in 0.0s; session offline-5f128a566f1449069061e32f177b8344. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 12: validation passed; 2 artifacts validated.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 12: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/01-context-and-domain-analysis/baselines/20261014T203643Z-c8145f4f41
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 12: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203643Z-c8145f4f41__baseline-capture__01.md
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 12: execution started. Task: Capture stage evidence
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 12: execution completed in 0.0s; session offline-f6b518fa4b054d3a99733981bc9e851c. Validation started.
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 12: validation passed; 2 artifacts validated.
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 12: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/02-intent/baselines/20261014T203643Z-c8145f4f41
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 12: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/02-intent/logs/20261014T203643Z-c8145f4f41__baseline-capture__02.md
+ASDLC-03 — Stage 03: System Model and Use Cases | Specialist 3 of 12: execution started. Task: Capture stage evidence
+ASDLC-03 — Stage 03: System Model and Use Cases | Specialist 3 of 12: execution completed in 0.0s; session offline-7a6228c1ee254a2d9a741189c6e70b27. Validation started.
+ASDLC-03 — Stage 03: System Model and Use Cases | Specialist 3 of 12: validation passed; 2 artifacts validated.
+ASDLC-03 — Stage 03: System Model and Use Cases | Specialist 3 of 12: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/03-system-model-and-use-cases/baselines/20261014T203643Z-c8145f4f41
+ASDLC-03 — Stage 03: System Model and Use Cases | Specialist 3 of 12: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/03-system-model-and-use-cases/logs/20261014T203643Z-c8145f4f41__baseline-capture__03.md
+ASDLC-04 — Stage 04: Benchmarks, Test Strategy and Success Criteria | Specialist 4 of 12: execution started. Task: Capture stage evidence
+ASDLC-04 — Stage 04: Benchmarks, Test Strategy and Success Criteria | Specialist 4 of 12: execution completed in 0.0s; session offline-e5904c34bf4647d380d8fcdce561e888. Validation started.
+ASDLC-04 — Stage 04: Benchmarks, Test Strategy and Success Criteria | Specialist 4 of 12: validation passed; 2 artifacts validated.
+ASDLC-04 — Stage 04: Benchmarks, Test Strategy and Success Criteria | Specialist 4 of 12: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/04-benchmarks-test-strategy-and-success-criteria/baselines/20261014T203643Z-c8145f4f41
+ASDLC-04 — Stage 04: Benchmarks, Test Strategy and Success Criteria | Specialist 4 of 12: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/04-benchmarks-test-strategy-and-success-criteria/logs/20261014T203643Z-c8145f4f41__baseline-capture__04.md
+ASDLC-05 — Stage 05: High-Level Solution Design and Architecture | Specialist 5 of 12: execution started. Task: Capture stage evidence
+ASDLC-05 — Stage 05: High-Level Solution Design and Architecture | Specialist 5 of 12: execution completed in 0.0s; session offline-e0900a6a4ae64f7fa65f4f3d63be4944. Validation started.
+ASDLC-05 — Stage 05: High-Level Solution Design and Architecture | Specialist 5 of 12: validation passed; 2 artifacts validated.
+ASDLC-05 — Stage 05: High-Level Solution Design and Architecture | Specialist 5 of 12: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/05-high-level-solution-design-and-architecture/baselines/20261014T203643Z-c8145f4f41
+ASDLC-05 — Stage 05: High-Level Solution Design and Architecture | Specialist 5 of 12: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/05-high-level-solution-design-and-architecture/logs/20261014T203643Z-c8145f4f41__baseline-capture__05.md
+ASDLC-06 — Stage 06: Viable Proof of Concept | Specialist 6 of 12: execution started. Task: Capture stage evidence
+ASDLC-06 — Stage 06: Viable Proof of Concept | Specialist 6 of 12: execution completed in 0.0s; session offline-ddd47edfd3aa41e18f71b2086a1f14af. Validation started.
+ASDLC-06 — Stage 06: Viable Proof of Concept | Specialist 6 of 12: validation passed; 2 artifacts validated.
+ASDLC-06 — Stage 06: Viable Proof of Concept | Specialist 6 of 12: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/06-viable-proof-of-concept/baselines/20261014T203643Z-c8145f4f41
+ASDLC-06 — Stage 06: Viable Proof of Concept | Specialist 6 of 12: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/06-viable-proof-of-concept/logs/20261014T203643Z-c8145f4f41__baseline-capture__06.md
+ASDLC-07 — Stage 07: Planning | Specialist 7 of 12: execution started. Task: Capture stage evidence
+ASDLC-07 — Stage 07: Planning | Specialist 7 of 12: execution completed in 0.0s; session offline-23cce5d089ad46b99b688ee02248dd04. Validation started.
+ASDLC-07 — Stage 07: Planning | Specialist 7 of 12: validation passed; 2 artifacts validated.
+ASDLC-07 — Stage 07: Planning | Specialist 7 of 12: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/07-planning/baselines/20261014T203643Z-c8145f4f41
+ASDLC-07 — Stage 07: Planning | Specialist 7 of 12: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/07-planning/logs/20261014T203643Z-c8145f4f41__baseline-capture__07.md
+ASDLC-08 — Stage 08: Low-Level Design | Specialist 8 of 12: execution started. Task: Capture stage evidence
+ASDLC-08 — Stage 08: Low-Level Design | Specialist 8 of 12: execution completed in 0.0s; session offline-13e4ef9019d3451590c85018ef142f89. Validation started.
+ASDLC-08 — Stage 08: Low-Level Design | Specialist 8 of 12: validation passed; 2 artifacts validated.
+ASDLC-08 — Stage 08: Low-Level Design | Specialist 8 of 12: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/08-low-level-design/baselines/20261014T203643Z-c8145f4f41
+ASDLC-08 — Stage 08: Low-Level Design | Specialist 8 of 12: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/08-low-level-design/logs/20261014T203643Z-c8145f4f41__baseline-capture__08.md
+ASDLC-09 — Stage 09: Build and Test Cycle | Specialist 9 of 12: execution started. Task: Capture stage evidence
+ASDLC-09 — Stage 09: Build and Test Cycle | Specialist 9 of 12: execution completed in 0.0s; session offline-86edeaa69916489dbe5d38edd2c1ee47. Validation started.
+ASDLC-09 — Stage 09: Build and Test Cycle | Specialist 9 of 12: validation passed; 2 artifacts validated.
+ASDLC-09 — Stage 09: Build and Test Cycle | Specialist 9 of 12: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/09-build-and-test-cycle/baselines/20261014T203643Z-c8145f4f41
+ASDLC-09 — Stage 09: Build and Test Cycle | Specialist 9 of 12: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/09-build-and-test-cycle/logs/20261014T203643Z-c8145f4f41__baseline-capture__09.md
+ASDLC-10 — Stage 10: Document, Review and Release | Specialist 10 of 12: execution started. Task: Capture stage evidence
+ASDLC-10 — Stage 10: Document, Review and Release | Specialist 10 of 12: execution completed in 0.0s; session offline-3060e6f89c184ebbb6defc959f87fe75. Validation started.
+ASDLC-10 — Stage 10: Document, Review and Release | Specialist 10 of 12: validation passed; 2 artifacts validated.
+ASDLC-10 — Stage 10: Document, Review and Release | Specialist 10 of 12: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/10-document-review-and-release/baselines/20261014T203643Z-c8145f4f41
+ASDLC-10 — Stage 10: Document, Review and Release | Specialist 10 of 12: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/10-document-review-and-release/logs/20261014T203643Z-c8145f4f41__baseline-capture__10.md
+ASDLC-11 — Stage 11: Operational Reality, DevOps and User Acceptance | Specialist 11 of 12: execution started. Task: Capture stage evidence
+ASDLC-11 — Stage 11: Operational Reality, DevOps and User Acceptance | Specialist 11 of 12: execution completed in 0.0s; session offline-7c7f609b7aef4c09b5f42ff9d1e6dcb2. Validation started.
+ASDLC-11 — Stage 11: Operational Reality, DevOps and User Acceptance | Specialist 11 of 12: validation passed; 2 artifacts validated.
+ASDLC-11 — Stage 11: Operational Reality, DevOps and User Acceptance | Specialist 11 of 12: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/11-operational-reality-devops-and-user-acceptance/baselines/20261014T203643Z-c8145f4f41
+ASDLC-11 — Stage 11: Operational Reality, DevOps and User Acceptance | Specialist 11 of 12: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/11-operational-reality-devops-and-user-acceptance/logs/20261014T203643Z-c8145f4f41__baseline-capture__11.md
+ASDLC-12 — Stage 12: Observability, Insights and Learning | Specialist 12 of 12: execution started. Task: Capture stage evidence
+ASDLC-12 — Stage 12: Observability, Insights and Learning | Specialist 12 of 12: execution completed in 0.0s; session offline-493d4f678f1140e493648be35f5a4f3a. Validation started.
+ASDLC-12 — Stage 12: Observability, Insights and Learning | Specialist 12 of 12: validation passed; 2 artifacts validated.
+ASDLC-12 — Stage 12: Observability, Insights and Learning | Specialist 12 of 12: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/12-observability-insights-and-learning/baselines/20261014T203643Z-c8145f4f41
+ASDLC-12 — Stage 12: Observability, Insights and Learning | Specialist 12 of 12: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/12-observability-insights-and-learning/logs/20261014T203643Z-c8145f4f41__baseline-capture__12.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: execution started. Task: Reconcile ONLY governance routing, actual execution records, specialist disagreements and human decisions pending. Do not rewrite or impersonate specialist documents. Read context/routing-and-executions.json for actual sessions, scope and truncation.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: execution completed in 0.0s; session offline-07fd9772925d42ada4fc52b9ef41cea8. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: validation passed; 2 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/00-governance/baselines/20261014T203643Z-c8145f4f41
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp_wa73vxi/consumer/docs/asdlc/00-governance/logs/20261014T203643Z-c8145f4f41__baseline-capture__00-summary.md
+ok
+test_invalid_artifact_is_rejected_and_logged (test_baseline.BaselineTests.test_invalid_artifact_is_rejected_and_logged) ... ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.2s; session offline-afda32c822f44b0781828e4cc3edae41. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.2s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpgkqq7utu/consumer/docs/asdlc/00-governance/logs/20261014T203644Z-5ecd6142c9__baseline-capture__00-routing.md
+Selected specialists (2): ASDLC-01 — Stage 01: Context and Domain Analysis; ASDLC-02 — Stage 02: Intent
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: execution completed in 0.0s; session offline-902627da53974c458f272be963b9ebd2. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: validation passed; 2 artifacts validated.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpgkqq7utu/consumer/docs/asdlc/01-context-and-domain-analysis/baselines/20261014T203644Z-5ecd6142c9
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpgkqq7utu/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203644Z-5ecd6142c9__baseline-capture__01.md
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: execution started. Task: Capture stage evidence
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: execution completed in 0.0s; session offline-f9de016d3aec47f8adc4bcb6da59f8fa. Validation started.
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: validation FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_VALIDATION_FAILED: Unexpected artifact type: 01-topic/unexpected.txt
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpgkqq7utu/consumer/docs/asdlc/00-governance/diagnostics/20261014T203644Z-5ecd6142c9/02
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpgkqq7utu/consumer/docs/asdlc/02-intent/logs/20261014T203644Z-5ecd6142c9__baseline-capture__02.md
+ok
+test_invalid_routing (test_baseline.BaselineTests.test_invalid_routing) ... ok
+test_missing_runner_fails_before_creating_logs (test_baseline.BaselineTests.test_missing_runner_fails_before_creating_logs) ... ok
+test_simulated_distinct_roles_and_tiny_logs (test_baseline.BaselineTests.test_simulated_distinct_roles_and_tiny_logs) ... ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.2s; session offline-431532a1d0c240138f7cde1de9228505. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.2s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp9nkshdiu/consumer/docs/asdlc/00-governance/logs/20261014T203644Z-8c6e4e3b7b__baseline-capture__00-routing.md
+Selected specialists (2): ASDLC-01 — Stage 01: Context and Domain Analysis; ASDLC-02 — Stage 02: Intent
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: execution completed in 0.0s; session offline-a33eb6847adf4596b36b71d219f17bda. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: validation passed; 2 artifacts validated.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp9nkshdiu/consumer/docs/asdlc/01-context-and-domain-analysis/baselines/20261014T203644Z-8c6e4e3b7b
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp9nkshdiu/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203644Z-8c6e4e3b7b__baseline-capture__01.md
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: execution started. Task: Capture stage evidence
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: execution completed in 0.0s; session offline-2a55b4e99c4c4d71b396fd6e5996fbad. Validation started.
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: validation passed; 2 artifacts validated.
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp9nkshdiu/consumer/docs/asdlc/02-intent/baselines/20261014T203644Z-8c6e4e3b7b
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp9nkshdiu/consumer/docs/asdlc/02-intent/logs/20261014T203644Z-8c6e4e3b7b__baseline-capture__02.md
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: execution started. Task: Reconcile ONLY governance routing, actual execution records, specialist disagreements and human decisions pending. Do not rewrite or impersonate specialist documents. Read context/routing-and-executions.json for actual sessions, scope and truncation.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: execution completed in 0.0s; session offline-67bafe8881e146539b0dbbd92cd8cdd7. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: validation passed; 2 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp9nkshdiu/consumer/docs/asdlc/00-governance/baselines/20261014T203644Z-8c6e4e3b7b
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator synthesis: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmp9nkshdiu/consumer/docs/asdlc/00-governance/logs/20261014T203644Z-8c6e4e3b7b__baseline-capture__00-summary.md
+ok
+test_source_snapshot_mutation_rejected (test_baseline.BaselineTests.test_source_snapshot_mutation_rejected) ... ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution started. Task: Justify specialist routing and evidence-scoped assignments
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: execution completed in 0.2s; session offline-604e03927ba146d6b7edb62f8c7b823b. Validation started.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: validation passed; 0 artifacts validated.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: promotion not applicable; 0 artifacts.
+ASDLC-COORDINATOR — ASDLC Coordinator | Coordinator routing: OK; elapsed 0.2s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpdd_5giua/consumer/docs/asdlc/00-governance/logs/20261014T203645Z-b2a5b52bb2__baseline-capture__00-routing.md
+Selected specialists (2): ASDLC-01 — Stage 01: Context and Domain Analysis; ASDLC-02 — Stage 02: Intent
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: execution started. Task: Capture stage evidence
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: execution completed in 0.0s; session offline-cc369c348f004cae92445120b9b22afc. Validation started.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: validation passed; 2 artifacts validated.
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: promotion completed; 2 artifacts. Evidence: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpdd_5giua/consumer/docs/asdlc/01-context-and-domain-analysis/baselines/20261014T203645Z-b2a5b52bb2
+ASDLC-01 — Stage 01: Context and Domain Analysis | Specialist 1 of 2: OK; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpdd_5giua/consumer/docs/asdlc/01-context-and-domain-analysis/logs/20261014T203645Z-b2a5b52bb2__baseline-capture__01.md
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: execution started. Task: Capture stage evidence
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: execution FAILED after 0.0s; 0 validated, 0 promoted. BASELINE_EXECUTION_FAILED: Agent changed sandbox material outside output/; no artifacts promoted.
+Diagnostic bundle (rejected, not promoted): /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpdd_5giua/consumer/docs/asdlc/00-governance/diagnostics/20261014T203645Z-b2a5b52bb2/02
+ASDLC-02 — Stage 02: Intent | Specialist 2 of 2: ERROR; elapsed 0.0s. Log: /private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/tmpdd_5giua/consumer/docs/asdlc/02-intent/logs/20261014T203645Z-b2a5b52bb2__baseline-capture__02.md
+ok
+test_artifact_relative_path_is_attached_in_both_output_validation_modes (test_baseline_diagnostics.CitationDiagnosticTests.test_artifact_relative_path_is_attached_in_both_output_validation_modes) ... ok
+test_each_existing_rejection_branch_has_stable_diagnostic_code (test_baseline_diagnostics.CitationDiagnosticTests.test_each_existing_rejection_branch_has_stable_diagnostic_code) ... ok
+test_external_citation_reports_original_line_target_and_legacy_message (test_baseline_diagnostics.CitationDiagnosticTests.test_external_citation_reports_original_line_target_and_legacy_message) ... ok
+test_offsets_survive_masked_declarations_narrative_and_links (test_baseline_diagnostics.CitationDiagnosticTests.test_offsets_survive_masked_declarations_narrative_and_links) ... ok
+test_supported_citations_and_sources_keep_the_same_result (test_baseline_diagnostics.CitationDiagnosticTests.test_supported_citations_and_sources_keep_the_same_result) ... ok
+test_symlink_and_irregular_workspace_remain_rejected (test_baseline_diagnostics.CitationDiagnosticTests.test_symlink_and_irregular_workspace_remain_rejected) ... ok
+test_common_secrets_controls_bidi_and_url_values_are_not_exposed (test_baseline_diagnostics.DiagnosticSanitizerTests.test_common_secrets_controls_bidi_and_url_values_are_not_exposed) ... ok
+test_diagnostic_fields_are_bounded_and_redaction_precedes_truncation (test_baseline_diagnostics.DiagnosticSanitizerTests.test_diagnostic_fields_are_bounded_and_redaction_precedes_truncation) ... ok
+test_private_key_body_is_redacted_and_multiline_is_explicit (test_baseline_diagnostics.DiagnosticSanitizerTests.test_private_key_body_is_redacted_and_multiline_is_explicit) ... ok
+test_shared_secret_detection_regex_is_unchanged (test_baseline_diagnostics.DiagnosticSanitizerTests.test_shared_secret_detection_regex_is_unchanged) ... ok
+test_entry_artifact_scan_and_total_copy_limits (test_baseline_evidence.FailureEvidenceTests.test_entry_artifact_scan_and_total_copy_limits) ... ok
+test_full_scan_precedes_truncation_and_copy_limits_are_explicit (test_baseline_evidence.FailureEvidenceTests.test_full_scan_precedes_truncation_and_copy_limits_are_explicit) ... ok
+test_manifest_records_are_bounded_sanitized_and_preservation_is_exclusive (test_baseline_evidence.FailureEvidenceTests.test_manifest_records_are_bounded_sanitized_and_preservation_is_exclusive) ... ok
+test_output_symlink_never_followed (test_baseline_evidence.FailureEvidenceTests.test_output_symlink_never_followed) ... ok
+test_preservation_failure_propagates_without_overwriting_other_evidence (test_baseline_evidence.FailureEvidenceTests.test_preservation_failure_propagates_without_overwriting_other_evidence) ... ok
+test_rejects_symlinks_hardlinks_nonregular_and_unexpected_files (test_baseline_evidence.FailureEvidenceTests.test_rejects_symlinks_hardlinks_nonregular_and_unexpected_files) ... ok
+test_retains_only_expected_text_as_private_unvalidated_evidence_after_cleanup (test_baseline_evidence.FailureEvidenceTests.test_retains_only_expected_text_as_private_unvalidated_evidence_after_cleanup) ... ok
+test_sensitive_whole_artifact_binary_and_terminal_controls (test_baseline_evidence.FailureEvidenceTests.test_sensitive_whole_artifact_binary_and_terminal_controls) ... ok
+test_unsafe_destination_and_symlink_parents_never_written (test_baseline_evidence.FailureEvidenceTests.test_unsafe_destination_and_symlink_parents_never_written) ... ok
+test_bounded_capture_omits_partial_final_line_and_keeps_safe_complete_lines (test_baseline_process.BaselineProcessTests.test_bounded_capture_omits_partial_final_line_and_keeps_safe_complete_lines) ... ok
+test_callback_exception_cannot_leave_child_running (test_baseline_process.BaselineProcessTests.test_callback_exception_cannot_leave_child_running) ... ok
+test_interrupt_stops_entire_process_group_and_preserves_session (test_baseline_process.BaselineProcessTests.test_interrupt_stops_entire_process_group_and_preserves_session) ... ok
+test_invalid_or_oversized_session_event_cannot_pollute_identity (test_baseline_process.BaselineProcessTests.test_invalid_or_oversized_session_event_cannot_pollute_identity) ... ok
+test_large_bidirectional_streams_are_drained_without_unbounded_capture (test_baseline_process.BaselineProcessTests.test_large_bidirectional_streams_are_drained_without_unbounded_capture) ... ok
+test_quiet_child_reports_observed_elapsed_heartbeats (test_baseline_process.BaselineProcessTests.test_quiet_child_reports_observed_elapsed_heartbeats) ... ok
+test_repeated_reader_failure_cannot_prevent_child_cleanup (test_baseline_process.BaselineProcessTests.test_repeated_reader_failure_cannot_prevent_child_cleanup) ... FAIL
+test_stderr_is_sanitized_and_failed_execution_preserves_session (test_baseline_process.BaselineProcessTests.test_stderr_is_sanitized_and_failed_execution_preserves_session) ... ok
+test_timeout_escalates_to_kill_after_existing_five_second_grace (test_baseline_process.BaselineProcessTests.test_timeout_escalates_to_kill_after_existing_five_second_grace) ... ok
+test_timeout_preserves_session_and_terminates_child (test_baseline_process.BaselineProcessTests.test_timeout_preserves_session_and_terminates_child) ... ok
+
+======================================================================
+FAIL: test_repeated_reader_failure_cannot_prevent_child_cleanup (test_baseline_process.BaselineProcessTests.test_repeated_reader_failure_cannot_prevent_child_cleanup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/src/cli_baseline_process.py", line 158, in stop_group
+    read_ready(min(0.1, until - time.monotonic()))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/src/cli_baseline_process.py", line 115, in read_ready
+    for key, _ in selector.select(max(0, wait)):
+                  ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/unittest/mock.py", line 1176, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/unittest/mock.py", line 1180, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/unittest/mock.py", line 1241, in _execute_mock_call
+    raise effect
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/src/cli_baseline_process.py", line 188, in observe_process
+    read_ready(min(0.1, deadline - current,
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   heartbeat_wait))
+                   ^^^^^^^^^^^^^^^^
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/src/cli_baseline_process.py", line 115, in read_ready
+    for key, _ in selector.select(max(0, wait)):
+                  ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/unittest/mock.py", line 1176, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/unittest/mock.py", line 1180, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/unittest/mock.py", line 1241, in _execute_mock_call
+    raise effect
+OSError: Synthetic reader failure
+
+During handling of the above exception, another exception occurred:
+
+PermissionError: [Errno 1] Operation not permitted
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_baseline_process.py", line 167, in test_repeated_reader_failure_cannot_prevent_child_cleanup
+    with self.assertRaisesRegex(OSError, 'Synthetic reader failure'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "Synthetic reader failure" does not match "[Errno 1] Operation not permitted"
+
+----------------------------------------------------------------------
+Ran 63 tests in 12.771s
+
+FAILED (failures=1)

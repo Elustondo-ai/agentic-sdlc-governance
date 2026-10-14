@@ -1,0 +1,104 @@
+{
+  "policy": {
+    "ASDG_NATIVE_CODEX_TESTS": "0",
+    "GIT_OPTIONAL_LOCKS": "0",
+    "no_model": true
+  },
+  "checks": [
+    {
+      "name": "focused",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.15/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "asdlc/00-governance/tests",
+        "-p",
+        "test_baseline.py",
+        "-v"
+      ],
+      "command": "/Library/Frameworks/Python.framework/Versions/3.15/bin/python3 -B -m unittest discover -s asdlc/00-governance/tests -p test_baseline.py -v",
+      "cwd": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance",
+      "started": "2026-10-14T20:13:00.378565+00:00",
+      "finished": "2026-10-14T20:13:06.824846+00:00",
+      "exit_code": 0,
+      "evidence": "focused.txt",
+      "tests": 34,
+      "passed": 34,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "governance",
+      "argv": [
+        "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sandbox/.venv311/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "asdlc/00-governance/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "command": "'/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sandbox/.venv311/bin/python3' -B -m unittest discover -s asdlc/00-governance/tests -p 'test_*.py' -v",
+      "cwd": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance",
+      "started": "2026-10-14T20:13:06.825120+00:00",
+      "finished": "2026-10-14T20:13:30.792126+00:00",
+      "exit_code": 0,
+      "evidence": "governance.txt",
+      "tests": 157,
+      "passed": 154,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 3
+    },
+    {
+      "name": "packages",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.15/bin/python3",
+        "-B",
+        "asdlc/00-governance/src/validate_agents.py"
+      ],
+      "command": "/Library/Frameworks/Python.framework/Versions/3.15/bin/python3 -B asdlc/00-governance/src/validate_agents.py",
+      "cwd": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance",
+      "started": "2026-10-14T20:13:30.792404+00:00",
+      "finished": "2026-10-14T20:13:30.843743+00:00",
+      "exit_code": 0,
+      "evidence": "packages.txt"
+    },
+    {
+      "name": "compile",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.15/bin/python3",
+        "-B",
+        "-c",
+        "from pathlib import Path; import ast; files=list(Path(\"asdlc/00-governance/src\").glob(\"*.py\"))+list(Path(\"asdlc/00-governance/tests\").glob(\"*.py\")); [(compile(p.read_bytes(),str(p),\"exec\"),ast.parse(p.read_text(),feature_version=(3,9))) for p in files]; print(len(files),\"files compiled; Python 3.9 grammar parsed\")"
+      ],
+      "command": "/Library/Frameworks/Python.framework/Versions/3.15/bin/python3 -B -c 'from pathlib import Path; import ast; files=list(Path(\"asdlc/00-governance/src\").glob(\"*.py\"))+list(Path(\"asdlc/00-governance/tests\").glob(\"*.py\")); [(compile(p.read_bytes(),str(p),\"exec\"),ast.parse(p.read_text(),feature_version=(3,9))) for p in files]; print(len(files),\"files compiled; Python 3.9 grammar parsed\")'",
+      "cwd": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance",
+      "started": "2026-10-14T20:13:30.843863+00:00",
+      "finished": "2026-10-14T20:13:30.904418+00:00",
+      "exit_code": 0,
+      "evidence": "compile.txt"
+    },
+    {
+      "name": "diff-check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "command": "git diff --check",
+      "cwd": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance",
+      "started": "2026-10-14T20:13:30.904543+00:00",
+      "finished": "2026-10-14T20:13:30.918750+00:00",
+      "exit_code": 0,
+      "evidence": "diff-check.txt"
+    }
+  ]
+}

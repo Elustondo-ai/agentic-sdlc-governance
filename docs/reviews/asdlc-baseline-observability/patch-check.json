@@ -1,0 +1,39 @@
+{
+  "recorded_at": "2026-10-14T20:45:21.125260+00:00",
+  "base": "Immutable pre-task before-tree, not HEAD alone",
+  "patch_sha256": "77484e6fb67cb2f0c2f2bcd0f4d9aa18fdc674edae2e8877bdc0c4b2aa9f427d",
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "apply",
+        "--check",
+        "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/docs/reviews/asdlc-baseline-observability/observability.patch"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "argv": [
+        "git",
+        "apply",
+        "--stat",
+        "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/docs/reviews/asdlc-baseline-observability/observability.patch"
+      ],
+      "exit_code": 0,
+      "output": " asdlc/00-governance/docs/baseline-capture.md       |    3 \n asdlc/00-governance/docs/baseline-observability.md |   41 +++\n asdlc/00-governance/src/cli_baseline.py            |  205 +++++++++++----\n .../00-governance/src/cli_baseline_diagnostics.py  |  123 +++++++++\n asdlc/00-governance/src/cli_baseline_evidence.py   |  270 ++++++++++++++++++++\n asdlc/00-governance/src/cli_baseline_process.py    |  226 +++++++++++++++++\n asdlc/00-governance/src/cli_baseline_provenance.py |   79 +++++-\n asdlc/00-governance/src/cli_baseline_safety.py     |   16 +\n .../tests/test_baseline_diagnostics.py             |  194 ++++++++++++++\n .../00-governance/tests/test_baseline_evidence.py  |  182 +++++++++++++\n .../tests/test_baseline_observability.py           |  178 +++++++++++++\n asdlc/00-governance/tests/test_baseline_process.py |  189 ++++++++++++++\n 12 files changed, 1621 insertions(+), 85 deletions(-)\n"
+    },
+    {
+      "argv": [
+        "git",
+        "apply",
+        "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/docs/reviews/asdlc-baseline-observability/observability.patch"
+      ],
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "applied_in_disposable_directory": true,
+  "applied_files_match_current": true,
+  "files": 12
+}

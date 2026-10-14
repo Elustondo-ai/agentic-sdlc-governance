@@ -1,0 +1,13 @@
+{
+  "command": [
+    "git",
+    "apply",
+    "--check",
+    "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/docs/reviews/asdlc-baseline-runtime-fix/corrections.patch"
+  ],
+  "base": "76542498451b45805aa5f14884413aee720ad6d4",
+  "cwd_note": "Disposable before-image populated using git show for the three modified tracked files; the new probe is absent.",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}
