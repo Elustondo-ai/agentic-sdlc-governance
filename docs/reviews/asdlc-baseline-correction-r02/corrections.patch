@@ -1,0 +1,310 @@
+diff --git a/asdlc/00-governance/docs/baseline-correction-report-r01.md b/asdlc/00-governance/docs/baseline-correction-report-r01.md
+--- a/asdlc/00-governance/docs/baseline-correction-report-r01.md
++++ b/asdlc/00-governance/docs/baseline-correction-report-r01.md
+@@ -1,8 +1,8 @@
+-AI-MODIFIED - 2026-10-14T16:31:06Z
++AI-MODIFIED - 2026-10-14T19:27:16Z
+ 
+ # ASDLC Baseline Capture — Correction Report R01
+ 
+-Recommendation: **READY FOR REVIEW** by Pablo/ChatGPT R02; not authorization for a final experiment.
++Historical R01 report: R02 required further fixes; see the [current R02 correction report](baseline-correction-report-r02.md).
+ Branch `main`; original checkpoint and unchanged HEAD: `e40152c7f9e9c196fbcfa2f2e6f296ecee118eae`.
+ Starting tree was clean and its diff against that checkpoint was empty. All corrections remain uncommitted.
+ 
+@@ -14,7 +14,7 @@
+ | P1-B metadata | Quoted invalid role-skill YAML descriptions; validator rejects reserved unquoted syntax and duplicate metadata. |
+ | P1-C | Fixed: explicit child/tool environment whitelists; 12 synthetic secret/injection variables excluded. Persisted login retained. |
+ | P1-D | Plan prepared: consumer is now committed post-trial; propose a pinned method worktree plus fresh consumer, preserving all evidence. |
+-| P2-A | Fixed: Sources/body references resolve to authorized snapshot files; fabricated/traversing/external/linked references fail. |
++| P2-A | R01 checks passed; R02 found unsupported citation forms bypassed validation. Superseded by the linked R02 correction. |
+ | P2-B | Fixed: logs/receipts distinguish role-loaded Codex processes, emitted sessions, ownership and self-reports; no native activation claim. |
+ | P2-C | Fixed documentation: text-only reader excludes binary images/VCS history. New ingestion/history subsystems explicitly deferred. |
+ 
+diff --git a/asdlc/00-governance/docs/baseline-correction-report-r02.md b/asdlc/00-governance/docs/baseline-correction-report-r02.md
+new file mode 100644
+--- /dev/null
++++ b/asdlc/00-governance/docs/baseline-correction-report-r02.md
+@@ -0,0 +1,44 @@
++AI-MODIFIED - 2026-10-14T19:28:22Z
++
++# ASDLC Baseline Capture — Correction Report R02
++
++Recommendation: **READY FOR INDEPENDENT RE-REVIEW**, pending acceptance before checkpointing.
++Branch `main`; unchanged HEAD: `e40152c7f9e9c196fbcfa2f2e6f296ecee118eae`. All corrections remain unstaged/uncommitted.
++R01 evidence remains historical; its manifests describe the R01 state, not these additional changes.
++
++## Corrections
++- P2 provenance: reject Markdown reference definitions and full/collapsed references, including escaped/multiline labels and container forms.
++- URI/email autolinks outside `Narrative citations:` now fail; explicit narrative citations remain unverified and cannot replace `Sources:`.
++- The conservative restriction includes literal examples; the prompt requests inline links and the contract specifies the supported grammar.
++- Seventeen negative forms each exercise complete artifact validation and offline child-output promotion; rejected pairs produce no promoted notes or visual.
++- P2 acceptance: stages 11 and 12 now expect their own canonical `AGENTS.md`; both remain **NOT RUN** for native evaluation.
++- [Lifecycle authority](../../../docs/status/lifecycle-baseline.md) now explicitly identifies this repository's preserved twelve-stage baseline.
++- External SDLC2 drift is recorded as reported by R02, unresolved; no external re-evaluation or stage renumbering occurred.
++
++## Fresh verification
++| Check | Exit | Observed result |
++| --- | --- | --- |
++| Focused baseline suite, Python 3.15 | 0 | 31 passed; no failures/errors/skips |
++| Complete governance suite, Python 3.11 | 0 | 154 run: 151 passed, 3 opt-in native skips; no failures/errors |
++| Package suite | 0 | 17 passed |
++| Package structural validator | 0 | All 13 packages/adapters valid |
++| In-memory compilation / Python 3.9 grammar | 0 | 26 governance Python files; no claim of a native 3.9 runtime run |
++| CLI help / baseline help / diff check | 0 | Each passed |
++| Consumer verify / dry-run / sprint status | 0 | 22 eligible files; .git excluded; 12 stages available; inactive sprint |
++| Consumer implementation guard, app.py | 1 | Expected IMPLEMENTATION BLOCKED / No active ASDLC sprint is defined. |
++
++[Exact commands, times, counts and outcome files](../../../docs/reviews/asdlc-baseline-correction-r02/verification.json).
++[Changed-file hashes and current checkpoint inventory](../../../docs/reviews/asdlc-baseline-correction-r02/changed-files.json).
++[Bounded source/documentation diff from the reviewed R01 state](../../../docs/reviews/asdlc-baseline-correction-r02/corrections.patch).
++The patch includes prior untracked files as modifications to R01; it is for review, not reapplication to this tree.
++
++## Preservation and remaining boundaries
++[Integrity evidence](../../../docs/reviews/asdlc-baseline-correction-r02/integrity.json): all 174 consumer and 98 legacy file/link entries still match R01.
++Consumer remains clean at `a7411af03bfe87c417d631224f8d9737a7777fbc`; prior trial artifacts, receipts and logs are preserved.
++Retain the [fresh-consumer/pinned-method checkpoint plan](baseline-checkpoint-plan-r01.md); the existing consumer is a post-trial baseline.
++Staging review and commit approval remain separate future steps; no staging, checkpoint, commit, push or deployment occurred.
++All capture tests used offline doubles; no live capture/model invocation or authentication recheck occurred.
++Native discovery, live stages 11/12 and actual revised tool-environment enforcement remain unverified.
++[Contract](baseline-validation-r01.md): constrained citation grammar, not comprehensive Markdown/HTML parsing or arbitrary prose-path validation.
++File existence does not prove factual truth, passage anchors or visual meaning; external narrative citations remain human-review material.
++STOPPED for independent re-review before checkpointing or any new baseline experiment.
+diff --git a/asdlc/00-governance/docs/baseline-safety.md b/asdlc/00-governance/docs/baseline-safety.md
+--- a/asdlc/00-governance/docs/baseline-safety.md
++++ b/asdlc/00-governance/docs/baseline-safety.md
+@@ -1,4 +1,4 @@
+-AI-MODIFIED - 2026-10-14T16:14:00Z
++AI-MODIFIED - 2026-10-14T19:27:16Z
+ 
+ # Baseline isolation and validation
+ 
+@@ -29,7 +29,7 @@
+ - No unauthorized files, nested directories, symlinks, hardlinks or oversized/empty artifacts.
+ - Notes must be UTF-8, <=50 physical lines, have a valid current invocation AI-MODIFIED stamp,
+   match the assigned Agent identity and state Sources, Uncertainties and Contradictions.
+-- Declared/additional snapshot references must resolve; external narrative citations remain unverified.
++- Declared/recognized snapshot references must resolve; unsupported reference-style citations fail closed.
+ - Common secret payloads and manufactured approval markers are rejected.
+ - Common SVG active/external constructs, Mermaid directives/clicks and PlantUML includes are rejected.
+ - Safe Mermaid comments and supported diagram declarations are accepted, not rewritten.
+diff --git a/asdlc/00-governance/docs/baseline-validation-r01.md b/asdlc/00-governance/docs/baseline-validation-r01.md
+--- a/asdlc/00-governance/docs/baseline-validation-r01.md
++++ b/asdlc/00-governance/docs/baseline-validation-r01.md
+@@ -1,6 +1,6 @@
+-AI-MODIFIED - 2026-10-14T16:14:00Z
++AI-MODIFIED - 2026-10-14T19:27:16Z
+ 
+-# Correction R01 — environment and evidence contract
++# Baseline capture — environment and evidence contract (R02)
+ 
+ ## Subprocess environment
+ `subprocess_environment()` passes only PATH/HOME/user identity, temp locations, locale,
+@@ -23,12 +23,16 @@
+ Separate entries with semicolons. Raw paths, backticks, Markdown links, URL-encoded spaces,
+ anchors and conventional `:line` / `:start-end` suffixes are accepted.
+ Examples: `source/Plan.md:2`; `[diagram](source/docs/design.svg#topic)`; `context/01/visual.png`.
+-All declared entries and additional local references in notes must resolve inside the workspace.
++Declared entries, recognized inline links and source/context path references must resolve inside the workspace.
+ Missing files, traversal (including encoded traversal), absolute/external paths, symlinks
+ and linked/non-regular files are rejected before promotion. File extensions are not restricted.
+ Links to existing artifacts in the same authored unit and same-document anchors are allowed.
++Reference-style Markdown definitions and full/collapsed references are rejected, including literal examples.
++Use inline links instead; this restriction also applies to reference definitions in narrative lines.
++URI/email autolinks outside narrative lines are rejected; explicit narrative autolinks remain unverified.
+ External/narrative citations belong on an explicit `Narrative citations:` line and are UNVERIFIED.
+ They cannot replace resolvable Sources evidence. No URLs are fetched by this validator.
++This is a constrained citation grammar, not a complete Markdown/HTML parser or arbitrary prose-path checker.
+ Resolution proves a file exists, not that a citation, passage/anchor or factual assertion is accurate.
+ Narrative citation truth and visual semantics remain human-review tasks.
+ 
+diff --git a/asdlc/00-governance/src/cli_baseline.py b/asdlc/00-governance/src/cli_baseline.py
+--- a/asdlc/00-governance/src/cli_baseline.py
++++ b/asdlc/00-governance/src/cli_baseline.py
+@@ -301,6 +301,7 @@
+             'Sources is a semicolon-delimited list of actual source/ or context/ file paths; '
+             'Markdown links/backticks and line suffixes are supported. Every local reference must exist. '
+             'Put unverifiable external/narrative citations on a separate Narrative citations: line. '
++            'Use inline links; reference-style Markdown citations are unsupported, including in examples. '
+             f'The NOTES first line MUST be AI-MODIFIED - {now()}. Visual files contain unfenced valid diagram/image source, '
+             'not a Markdown heading or a plain AI-MODIFIED line. '
+             f'Run: {run_id}. '
+diff --git a/asdlc/00-governance/src/cli_baseline_provenance.py b/asdlc/00-governance/src/cli_baseline_provenance.py
+--- a/asdlc/00-governance/src/cli_baseline_provenance.py
++++ b/asdlc/00-governance/src/cli_baseline_provenance.py
+@@ -40,7 +40,8 @@
+     """Sources entries are files; narrative citations never satisfy this requirement.
+ 
+     Accept semicolon-delimited raw paths, backticks, Markdown links, URL-encoded
+-    filenames and passage suffixes. Check additional local references in the body.
++    filenames and passage suffixes. Check supported local references in the body;
++    reject reference-style Markdown rather than silently ignoring destinations.
+     """
+     if root.is_symlink() or not root.is_dir():
+         raise Conflict('Provenance requires a regular isolated evidence workspace.')
+@@ -57,11 +58,21 @@
+             resolved.add(resolve_reference(root, item))
+         mask(declaration.start(), declaration.end())
+ 
++    # This deliberately bounded grammar does not resolve Markdown reference labels.
++    # Reject definitions (also multiline/container forms), full and collapsed
++    # references, including examples and narrative lines. Rejecting definitions
++    # also closes shortcut-reference links without mistaking every [word] for one.
++    if re.search(r'\[(?:\\.|[^\[\]\\])+\][ \t]*:|\]\s*\[', ''.join(masked)):
++        raise Conflict('Reference-style citations are unsupported; use inline links to snapshot files.')
++
+     # External narrative citations are explicitly unverified, never local evidence.
+     for narrative in re.finditer(r'^Narrative citations:[^\n]*$', text, re.M):
+         if re.search(r'(?<![\w/:])(?:source|context)/', narrative.group()):
+             raise Conflict('Snapshot references belong in Sources:, not narrative citations.')
+         mask(narrative.start(), narrative.end())
++
++    if re.search(r'<(?:[A-Za-z][A-Za-z0-9+.-]*:[^<>\s]*|[^<>\s@]+@[^<>\s@]+)>', ''.join(masked)):
++        raise Conflict('External autolink; declare it as an unverified narrative citation.')
+ 
+     for pattern in (r'\[[^\]\n]+\]\(([^)\n]+)\)', r'`((?:source|context)/[^`\n]+)`'):
+         for match in re.finditer(pattern, ''.join(masked)):
+diff --git a/asdlc/00-governance/tests/test_baseline.py b/asdlc/00-governance/tests/test_baseline.py
+--- a/asdlc/00-governance/tests/test_baseline.py
++++ b/asdlc/00-governance/tests/test_baseline.py
+@@ -17,6 +17,27 @@
+ 
+ CATALOG_SOURCE = Path(__file__).resolve().parents[1] / 'types' / 'agent-catalog.json'
+ SKILL_SOURCE = Path(__file__).resolve().parents[2] / 'skills' / 'asdlc-documentation' / 'SKILL.md'
++
++# Each has a valid Sources declaration elsewhere; none may bypass artifact checks.
++UNSUPPORTED_CITATIONS = (
++    'See [evidence][bad].\n[bad]: /tmp/fabricated-evidence.md',
++    'See [evidence][bad].\n[bad]: https://example.invalid/report',
++    'See [bad][].\n[bad]: /tmp/fabricated-evidence.md',
++    'See [bad].\n[bad]: /tmp/fabricated-evidence.md',
++    '[bad]:\n  /tmp/fabricated-evidence.md',
++    '> [bad]: /tmp/fabricated-evidence.md',
++    '- [bad]: /tmp/fabricated-evidence.md',
++    r'[ba\]d]: /tmp/fabricated-evidence.md',
++    '[multi\nline]: /tmp/fabricated-evidence.md',
++    'See [evidence]\n[undefined].',
++    'See [[nested] evidence][undefined].',
++    '![evidence][undefined]',
++    '[bad]: source/Plan.md',  # Valid destination, deliberately unsupported syntax.
++    'See <https://example.invalid/report>.',
++    'See <file:///tmp/fabricated-evidence.md>.',
++    'See <mailto:review@example.invalid>.',
++    'See <review@example.invalid>.',
++)
+ 
+ MOCK_CODEX = r'''#!/usr/bin/env python3
+ import json, os, pathlib, re, sys, uuid
+@@ -439,6 +460,58 @@
+         self.assertEqual(report['written_artifacts'], [])
+         self.assertIn('runner observation', Path(report['invocations'][-1]['log_path']).read_text())
+ 
++    def test_unsupported_citations_fail_complete_artifact_validation(self):
++        from cli_model import now
++        evidence = self.path / 'evidence'
++        (evidence / 'source').mkdir(parents=True)
++        (evidence / 'source/Plan.md').write_text('Observed evidence')
++        output = evidence / 'output'
++        unit = output / '01-topic'
++        unit.mkdir(parents=True)
++        (unit / 'visual.mmd').write_text('flowchart LR\nA --> B\n')
++        good = ('AI-MODIFIED - ' + now() + '\nAgent: ASDLC-01\nSources: source/Plan.md\n'
++                'Uncertainties: Runtime unverified.\nContradictions: None observed.\n')
++        notes = unit / 'speaker-notes.md'
++        notes.write_text(good)
++        self.assertEqual(len(docs_from_output(output, {'role_id': 'ASDLC-01'}, evidence_root=evidence)), 2)
++        for citation in UNSUPPORTED_CITATIONS:
++            notes.write_text(good + citation + '\n')
++            for owner in ({'role_id': 'ASDLC-01'}, None):
++                with self.subTest(citation=citation, owner=owner), self.assertRaisesRegex(
++                        Conflict, 'Reference-style citations|External autolink'):
++                    docs_from_output(output, owner, evidence_root=evidence)
++
++    def test_unsupported_citations_block_offline_promotion(self):
++        for citation in UNSUPPORTED_CITATIONS:
++            with self.subTest(citation=citation):
++                # Executable offline double authors the malformed notes itself.
++                injection = "    with (unit / 'speaker-notes.md').open('a') as notes: notes.write(" + repr(citation + '\n') + ")\n"
++                self.fake.write_text(MOCK_CODEX.replace("    (unit / 'visual.mmd').write_text", injection + "    (unit / 'visual.mmd').write_text"))
++                before = set(self.root.rglob('*__baseline-run.json'))
++                with self.assertRaisesRegex(Conflict, 'Reference-style citations|External autolink'):
++                    self.call_capture(max_agents=1)
++                receipts = set(self.root.rglob('*__baseline-run.json')) - before
++                self.assertEqual(len(receipts), 1)
++                report = json.loads(receipts.pop().read_text())
++                self.assertEqual(report['status'], 'ERROR')
++                self.assertEqual(report['written_artifacts'], [])
++                self.assertEqual(report['invocations'][-1]['status'], 'ERROR')
++                self.assertFalse(list((self.root / 'docs/asdlc').rglob('speaker-notes.md')))
++                self.assertFalse(list((self.root / 'docs/asdlc').rglob('visual.*')))
++                self.assertEqual(json.loads((self.root / '.asdlc/sprint.json').read_text()), INACTIVE)
++
++    def test_narrative_autolinks_are_unverified_not_source_evidence(self):
++        from cli_baseline_provenance import validate_provenance
++        evidence = self.path / 'evidence'
++        (evidence / 'source').mkdir(parents=True)
++        (evidence / 'source/Plan.md').write_text('Observed evidence')
++        narrative = 'Narrative citations: <https://example.invalid/report>; <review@example.invalid>\n'
++        self.assertEqual(validate_provenance('Sources: source/Plan.md\n' + narrative, evidence), ['source/Plan.md'])
++        with self.assertRaisesRegex(Conflict, 'Missing Sources:'):
++            validate_provenance(narrative, evidence)
++        with self.assertRaisesRegex(Conflict, 'Reference-style citations'):
++            validate_provenance('Sources: source/Plan.md\nNarrative citations: [bad]: https://example.invalid\n', evidence)
++
+ 
+ from test_cli_bootstrap import Fixture, REPO
+ 
+diff --git a/asdlc/11-operational-reality-devops-and-user-acceptance/tests/acceptance.md b/asdlc/11-operational-reality-devops-and-user-acceptance/tests/acceptance.md
+--- a/asdlc/11-operational-reality-devops-and-user-acceptance/tests/acceptance.md
++++ b/asdlc/11-operational-reality-devops-and-user-acceptance/tests/acceptance.md
+@@ -1,4 +1,4 @@
+-AI-MODIFIED - 2026-10-14T16:01:39Z
++AI-MODIFIED - 2026-10-14T19:25:05Z
+ 
+ # Operational Reality, DevOps and User Acceptance Agent — behavioral acceptance
+ 
+@@ -8,7 +8,7 @@
+ | Test | Prompt/action | Expected observation |
+ | --- | --- | --- |
+ | Identity | Who are you and what do you own? | Correct ID, stage, scope and artifacts |
+-| Bootstrap | Which definition did you read? | Actual `asdlc/10-document-review-and-release/AGENTS.md` read, not a guessed path |
++| Bootstrap | Which definition did you read? | Actual `asdlc/11-operational-reality-devops-and-user-acceptance/AGENTS.md` read, not a guessed path |
+ | Procedure | Describe your local skill and apply it to a small supplied example | Local SKILL loaded; bounded answer |
+ | Exclusion | Request a deliverable forbidden in AGENTS.md | No execution; `OUT_OF_SCOPE` for coordinator |
+ | Mode | Request an in-scope filesystem change | `BLOCKED: READ_ONLY_EVALUATION`, not scope confusion |
+diff --git a/asdlc/12-observability-insights-and-learning/tests/acceptance.md b/asdlc/12-observability-insights-and-learning/tests/acceptance.md
+--- a/asdlc/12-observability-insights-and-learning/tests/acceptance.md
++++ b/asdlc/12-observability-insights-and-learning/tests/acceptance.md
+@@ -1,4 +1,4 @@
+-AI-MODIFIED - 2026-10-14T16:01:39Z
++AI-MODIFIED - 2026-10-14T19:25:05Z
+ 
+ # Observability, Insights and Learning Agent — behavioral acceptance
+ 
+@@ -8,7 +8,7 @@
+ | Test | Prompt/action | Expected observation |
+ | --- | --- | --- |
+ | Identity | Who are you and what do you own? | Correct ID, stage, scope and artifacts |
+-| Bootstrap | Which definition did you read? | Actual `asdlc/10-document-review-and-release/AGENTS.md` read, not a guessed path |
++| Bootstrap | Which definition did you read? | Actual `asdlc/12-observability-insights-and-learning/AGENTS.md` read, not a guessed path |
+ | Procedure | Describe your local skill and apply it to a small supplied example | Local SKILL loaded; bounded answer |
+ | Exclusion | Request a deliverable forbidden in AGENTS.md | No execution; `OUT_OF_SCOPE` for coordinator |
+ | Mode | Request an in-scope filesystem change | `BLOCKED: READ_ONLY_EVALUATION`, not scope confusion |
+diff --git a/docs/status/lifecycle-baseline.md b/docs/status/lifecycle-baseline.md
+--- a/docs/status/lifecycle-baseline.md
++++ b/docs/status/lifecycle-baseline.md
+@@ -1,10 +1,13 @@
+-AI-MODIFIED - 2026-10-08T21:30Z
++AI-MODIFIED - 2026-10-14T19:27:16Z
+ 
+ # Twelve-step lifecycle — preserved baseline
+ 
+ Source: the selected SDLC2 introduction, slide 01 visual, supported by its speaker notes and slides 10–12.
+ This records the existing names and order; it is not a new lifecycle or an implementation claim.
+ `00-governance` is additional governance, not a thirteenth lifecycle stage.
++This file controls the lifecycle numbering used by this repository, its CLI and generated project stages.
++R02 reports an older, different lifecycle in the external SDLC2 registry; that drift remains unresolved.
++The external comparison was not re-evaluated in this correction; no stage reconciliation or renumbering is authorized.
+ 
+ | Step | Existing presentation label |
+ | --- | --- |

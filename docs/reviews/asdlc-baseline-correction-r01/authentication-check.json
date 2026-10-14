@@ -1,0 +1,5 @@
+{
+  "command": "codex -c <explicit shell policy> login status",
+  "exit_code": 0,
+  "output": "WARNING: proceeding, even though we could not create PATH aliases: Operation not permitted (os error 1)\nLogged in using ChatGPT"
+}

@@ -1,8 +1,8 @@
 ---
 name: asdlc-propose-architecture
-description: High-Level Architecture Agent: propose architecture, in read-only evaluation.
+description: "High-Level Architecture Agent: propose architecture, in read-only evaluation."
 ---
-AI-MODIFIED - 2026-10-10T04:17:45Z
+AI-MODIFIED - 2026-10-14T16:22:04Z
 
 # Propose Architecture
 

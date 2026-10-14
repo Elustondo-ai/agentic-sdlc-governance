@@ -1,0 +1,231 @@
+.....................EEEEEEEEEEEEE..ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: ERROR
+.ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: ERROR
+..ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: OK
+ASDLC-COORDINATOR 00-summary: START
+ASDLC-COORDINATOR 00-summary: OK
+............ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: OK
+ASDLC-03 03: START
+ASDLC-03 03: OK
+ASDLC-04 04: START
+ASDLC-04 04: OK
+ASDLC-05 05: START
+ASDLC-05 05: OK
+ASDLC-06 06: START
+ASDLC-06 06: OK
+ASDLC-07 07: START
+ASDLC-07 07: OK
+ASDLC-08 08: START
+ASDLC-08 08: OK
+ASDLC-09 09: START
+ASDLC-09 09: OK
+ASDLC-10 10: START
+ASDLC-10 10: OK
+ASDLC-11 11: START
+ASDLC-11 11: OK
+ASDLC-12 12: START
+ASDLC-12 12: OK
+ASDLC-COORDINATOR 00-summary: START
+ASDLC-COORDINATOR 00-summary: OK
+.ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: ERROR
+...ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: OK
+ASDLC-COORDINATOR 00-summary: START
+ASDLC-COORDINATOR 00-summary: OK
+.ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: ERROR
+............................................Python 3.9 or newer is required.
+..Run ./asdg install as your normal user, without sudo.
+............sss.........................
+======================================================================
+ERROR: test_broken_role_link (test_agent_packages.AgentPackageTests.test_broken_role_link)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_agent_packages.py", line 29, in setUp
+    shutil.copyfile(src, dest)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/shutil.py", line 313, in copyfile
+    with open(src, 'rb') as fsrc:
+         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/README.md'
+
+======================================================================
+ERROR: test_duplicate_identity (test_agent_packages.AgentPackageTests.test_duplicate_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_agent_packages.py", line 29, in setUp
+    shutil.copyfile(src, dest)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/shutil.py", line 313, in copyfile
+    with open(src, 'rb') as fsrc:
+         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/README.md'
+
+======================================================================
+ERROR: test_extra_agent (test_agent_packages.AgentPackageTests.test_extra_agent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_agent_packages.py", line 29, in setUp
+    shutil.copyfile(src, dest)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/shutil.py", line 313, in copyfile
+    with open(src, 'rb') as fsrc:
+         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/README.md'
+
+======================================================================
+ERROR: test_legacy_bootstrap_path (test_agent_packages.AgentPackageTests.test_legacy_bootstrap_path)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_agent_packages.py", line 29, in setUp
+    shutil.copyfile(src, dest)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/shutil.py", line 313, in copyfile
+    with open(src, 'rb') as fsrc:
+         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/README.md'
+
+======================================================================
+ERROR: test_legacy_file_duplicate (test_agent_packages.AgentPackageTests.test_legacy_file_duplicate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_agent_packages.py", line 29, in setUp
+    shutil.copyfile(src, dest)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/shutil.py", line 313, in copyfile
+    with open(src, 'rb') as fsrc:
+         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/README.md'
+
+======================================================================
+ERROR: test_line_limit (test_agent_packages.AgentPackageTests.test_line_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_agent_packages.py", line 29, in setUp
+    shutil.copyfile(src, dest)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/shutil.py", line 313, in copyfile
+    with open(src, 'rb') as fsrc:
+         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/README.md'
+
+======================================================================
+ERROR: test_missing_baseline (test_agent_packages.AgentPackageTests.test_missing_baseline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_agent_packages.py", line 29, in setUp
+    shutil.copyfile(src, dest)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/shutil.py", line 313, in copyfile
+    with open(src, 'rb') as fsrc:
+         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/README.md'
+
+======================================================================
+ERROR: test_missing_contract (test_agent_packages.AgentPackageTests.test_missing_contract)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_agent_packages.py", line 29, in setUp
+    shutil.copyfile(src, dest)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/shutil.py", line 313, in copyfile
+    with open(src, 'rb') as fsrc:
+         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/README.md'
+
+======================================================================
+ERROR: test_missing_package_directory (test_agent_packages.AgentPackageTests.test_missing_package_directory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_agent_packages.py", line 29, in setUp
+    shutil.copyfile(src, dest)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/shutil.py", line 313, in copyfile
+    with open(src, 'rb') as fsrc:
+         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/README.md'
+
+======================================================================
+ERROR: test_missing_skill (test_agent_packages.AgentPackageTests.test_missing_skill)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_agent_packages.py", line 29, in setUp
+    shutil.copyfile(src, dest)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/shutil.py", line 313, in copyfile
+    with open(src, 'rb') as fsrc:
+         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/README.md'
+
+======================================================================
+ERROR: test_path_escape (test_agent_packages.AgentPackageTests.test_path_escape)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_agent_packages.py", line 29, in setUp
+    shutil.copyfile(src, dest)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/shutil.py", line 313, in copyfile
+    with open(src, 'rb') as fsrc:
+         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/README.md'
+
+======================================================================
+ERROR: test_read_only_setting (test_agent_packages.AgentPackageTests.test_read_only_setting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_agent_packages.py", line 29, in setUp
+    shutil.copyfile(src, dest)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/shutil.py", line 313, in copyfile
+    with open(src, 'rb') as fsrc:
+         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/README.md'
+
+======================================================================
+ERROR: test_valid_packages (test_agent_packages.AgentPackageTests.test_valid_packages)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/00-governance/tests/test_agent_packages.py", line 29, in setUp
+    shutil.copyfile(src, dest)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.15/lib/python3.15/shutil.py", line 313, in copyfile
+    with open(src, 'rb') as fsrc:
+         ~~~~^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdlc/README.md'
+
+----------------------------------------------------------------------
+Ran 142 tests in 21.626s
+
+FAILED (errors=13, skipped=3)

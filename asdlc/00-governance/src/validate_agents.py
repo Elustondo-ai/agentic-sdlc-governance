@@ -11,6 +11,25 @@ REQUIRED_DIRS = ('docs', 'types', 'src', 'tests', 'skills')
 REQUIRED_FILES = ('README.md', 'AGENTS.md', 'types/contract.md', 'tests/acceptance.md')
 
 
+def skill_fields(front: str) -> dict[str, str]:
+    """Validate the flat string-only role-skill YAML subset without dependencies."""
+    fields = {}
+    for line in front.splitlines():
+        if not line.strip():
+            continue
+        key, value = line.split(': ', 1)
+        if key not in {'name', 'description'} or key in fields:
+            raise ValueError('Unsupported or duplicate role-skill metadata field')
+        if value.startswith('"'):
+            value = json.loads(value)
+        elif ': ' in value or ' #' in value or value[:1] in "'[{!&*":
+            raise ValueError('Role-skill YAML values with reserved syntax must be double quoted')
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError('Role-skill metadata must contain nonempty strings')
+        fields[key] = value
+    return fields
+
+
 def inside(root: Path, value: str) -> Path:
     """Resolve repository-relative references, refusing absolute/escaping paths."""
     relative = Path(value)
@@ -100,7 +119,7 @@ def validate(root: Path) -> list[str]:
                 issues.append(f'Missing YAML-first skill header: {name}')
             else:
                 front, body = skill_text[4:].split('\n---\n', 1)
-                fields = dict(line.split(': ', 1) for line in front.splitlines())
+                fields = skill_fields(front)
                 if fields.get('name') != row['skill_name'] or not fields.get('description'):
                     issues.append(f'Invalid skill discovery metadata: {name}')
                 if not body.lstrip().startswith('AI-MODIFIED - '):

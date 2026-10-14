@@ -1,0 +1,3 @@
+Baseline dry run complete.
+Eligible source files: 22; excluded: 1.
+No agents invoked. ALL GOOD!

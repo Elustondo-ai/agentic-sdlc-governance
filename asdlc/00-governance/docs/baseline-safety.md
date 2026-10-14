@@ -1,4 +1,4 @@
-AI-MODIFIED - 2026-10-14T14:33:00Z
+AI-MODIFIED - 2026-10-14T19:27:16Z
 
 # Baseline isolation and validation
 
@@ -14,6 +14,9 @@ runtime contract, lifecycle baseline, assigned objective and prior-stage context
 Apps, MCP servers, browser/computer use, web search, additional agents and command networking
 are disabled per invocation. Login shells are disabled; approval policy is never.
 These settings affect only the child invocation; existing consumer hooks and sprint policy remain.
+Processes and their tool environments use explicit whitelists, not unrestricted parent inheritance.
+Authentication uses persisted login; environment-only API keys/tokens are not forwarded.
+See [environment/provenance/execution contract](baseline-validation-r01.md).
 Official interface: https://learn.chatgpt.com/docs/permissions
 
 The runner fingerprints protected workspace files AND directory/mode changes; it rejects changes
@@ -26,6 +29,7 @@ Failure logs preserve emitted sessions and actual end times. Timed-out process g
 - No unauthorized files, nested directories, symlinks, hardlinks or oversized/empty artifacts.
 - Notes must be UTF-8, <=50 physical lines, have a valid current invocation AI-MODIFIED stamp,
   match the assigned Agent identity and state Sources, Uncertainties and Contradictions.
+- Declared/recognized snapshot references must resolve; unsupported reference-style citations fail closed.
 - Common secret payloads and manufactured approval markers are rejected.
 - Common SVG active/external constructs, Mermaid directives/clicks and PlantUML includes are rejected.
 - Safe Mermaid comments and supported diagram declarations are accepted, not rewritten.

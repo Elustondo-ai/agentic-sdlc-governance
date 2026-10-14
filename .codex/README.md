@@ -1,15 +1,16 @@
-AI-MODIFIED - 2026-10-10T01:50Z
+AI-MODIFIED - 2026-10-14T16:23:27Z
 
 # Codex named agents — conversational evaluation
 
 - Thirteen project-local Codex custom-agent configurations, one Coordinator and twelve stage specialists.
-- `asdlc/agents/*.md` remains canonical; `.codex/agents/*.toml` is the Codex-specific adapter layer.
+- Numbered `asdlc/<stage>/AGENTS.md` packages are canonical; `.codex/agents/*.toml` is the adapter layer.
 - All adapters are **read-only by design** for the initial role interviews; they cannot be used to test implementation or state transitions.
 - The root Codex session remains the entry point. Ask it to spawn the named specialist, then inspect the subagent thread.
 - `asdlc_coordinator` represents the proposed default routing role; a plain session does not automatically become this agent merely because a TOML file exists.
 - Out-of-scope results use the textual `OUT_OF_SCOPE` protocol. Direct child-to-coordinator control transfer is not assumed or verified.
 - No model is pinned: each role inherits your running Codex model and reasoning settings.
-- No real sprint state machine, authority enforcement, or Git automation has been activated.
+- Adapter presence grants no sprint-state, implementation, Git or deployment authority.
+- The consumer CLI provides state/gate checks; native hook trust must be verified separately.
 
 ## Suggested interview prompts
 
@@ -18,3 +19,5 @@ AI-MODIFIED - 2026-10-10T01:50Z
 3. `Spawn asdlc_09 and ask it how it distinguishes an approved implementation task from an unapproved coding request. Do not write files.`
 
 Native discovery and handoff behavior still require verification in the Codex IDE extension.
+Baseline capture runs separate Codex processes loaded with these roles; it disables native subagents.
+Its emitted sessions and authored output do not establish native named-agent activation.

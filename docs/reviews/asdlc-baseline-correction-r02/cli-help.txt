@@ -1,0 +1,17 @@
+usage: asdg [-h] [--version]
+            {install,sprint,init,status,verify,next,baseline,dashboard,agent} ...
+
+Elustondo.ai ASDLC CLI: install once, initialize the current Git project.
+
+positional arguments:
+  {install,sprint,init,status,verify,next,baseline,dashboard,agent}
+    install             Install user-local Python launchers and shell PATH
+                        configuration
+    sprint              Manage authoritative project sprint state
+    baseline            Capture existing-system evidence via specialist agents
+    dashboard           Serve the read-only local ASDLC dashboard
+    agent               Inspect definitions; does not run an LLM
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit

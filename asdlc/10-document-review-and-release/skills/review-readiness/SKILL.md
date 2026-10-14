@@ -1,8 +1,8 @@
 ---
 name: asdlc-review-readiness
-description: Document, Review and Release Agent: review readiness, in read-only evaluation.
+description: "Document, Review and Release Agent: review readiness, in read-only evaluation."
 ---
-AI-MODIFIED - 2026-10-10T04:17:45Z
+AI-MODIFIED - 2026-10-14T16:22:04Z
 
 # Review Readiness
 

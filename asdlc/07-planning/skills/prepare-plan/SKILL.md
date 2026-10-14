@@ -1,8 +1,8 @@
 ---
 name: asdlc-prepare-plan
-description: Planning Agent: prepare plan, in read-only evaluation.
+description: "Planning Agent: prepare plan, in read-only evaluation."
 ---
-AI-MODIFIED - 2026-10-10T04:17:45Z
+AI-MODIFIED - 2026-10-14T16:22:04Z
 
 # Prepare Plan
 

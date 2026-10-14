@@ -20,7 +20,8 @@ class AgentPackageTests(unittest.TestCase):
         for p in (ROOT / 'asdlc').iterdir():
             if p.is_dir() and p.name[:2].isdigit():
                 shutil.copytree(p, self.root / 'asdlc' / p.name, ignore=shutil.ignore_patterns('__pycache__'))
-        for relative in ['.codex', 'AGENTS.md', 'asdlc/README.md', 'docs/status/lifecycle-baseline.md']:
+        for relative in ['.codex', 'AGENTS.md', 'asdlc/README.md', 'docs/status/lifecycle-baseline.md',
+                         'asdlc/skills/asdlc-documentation/SKILL.md']:
             src, dest = ROOT / relative, self.root / relative
             dest.parent.mkdir(parents=True, exist_ok=True)
             if src.is_dir():
@@ -41,6 +42,25 @@ class AgentPackageTests(unittest.TestCase):
     def test_valid_packages(self):
         self.assertEqual(validate(self.root), [])
 
+    def test_all_thirteen_actual_role_packages_load_for_baseline(self):
+        from cli_baseline import instruction_text
+        from cli_model import catalogue
+        agents, _ = catalogue(self.root)
+        self.assertEqual(len(agents), 13)
+        for role in agents:
+            with self.subTest(role=role['role_id']):
+                text = instruction_text(self.root, role)
+                self.assertIn(role['role_id'], text)
+                self.assertIn('asdlc/skills/asdlc-documentation/SKILL.md', text)
+                self.assertIn('OUT_OF_SCOPE', text)
+
+    def test_operational_and_learning_roles_preserve_separate_boundaries(self):
+        ops = (self.root / 'asdlc/11-operational-reality-devops-and-user-acceptance/AGENTS.md').read_text()
+        learning = (self.root / 'asdlc/12-observability-insights-and-learning/AGENTS.md').read_text()
+        self.assertIn('Do not deploy or promote releases without explicit authority', ops)
+        self.assertIn('Do not silently change scope, implement fixes, or override product priorities', learning)
+        self.assertNotEqual(ops, learning)
+
     def test_missing_package_directory(self):
         shutil.rmtree(self.root / 'asdlc/02-intent/src')
         self.assert_fails('Missing directory')
@@ -48,6 +68,17 @@ class AgentPackageTests(unittest.TestCase):
     def test_missing_skill(self):
         (self.root / 'asdlc/02-intent/skills/elicit-intent/SKILL.md').unlink()
         self.assert_fails('Invalid entry')
+
+    def test_invalid_native_skill_yaml_is_rejected(self):
+        p = self.root / 'asdlc/02-intent/skills/elicit-intent/SKILL.md'
+        p.write_text(p.read_text().replace('description: "', 'description: ', 1))
+        self.assert_fails('must be double quoted')
+
+    def test_duplicate_skill_metadata_is_rejected(self):
+        p = self.root / 'asdlc/02-intent/skills/elicit-intent/SKILL.md'
+        p.write_text(p.read_text().replace('name: asdlc-elicit-intent',
+                     'name: asdlc-elicit-intent\nname: asdlc-elicit-intent', 1))
+        self.assert_fails('duplicate role-skill metadata')
 
     def test_missing_contract(self):
         (self.root / 'asdlc/02-intent/types/contract.md').unlink()

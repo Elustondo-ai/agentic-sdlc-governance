@@ -1,0 +1,5 @@
+IMPLEMENTATION BLOCKED
+No active ASDLC sprint is defined.
+
+Recommended next action:
+Define project context and domain boundaries.

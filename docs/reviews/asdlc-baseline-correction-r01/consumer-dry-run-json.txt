@@ -1,0 +1,26 @@
+{
+  "status": "DRY_RUN_ONLY",
+  "no_agents_invoked": true,
+  "source_files": 22,
+  "source_skipped": [
+    ".git (excluded directory/symlink)"
+  ],
+  "source_inventory_sha256": "5bd26c5dbaa15da448c7364f34b472d2a7153be0a6ff64af11f37e758e689089",
+  "available_stages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "unavailable_stages": {},
+  "project": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-speaker-coach",
+  "source": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/meetingHelper"
+}

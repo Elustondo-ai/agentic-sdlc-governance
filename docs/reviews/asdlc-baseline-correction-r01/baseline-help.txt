@@ -1,0 +1,12 @@
+usage: asdg baseline capture [-h] --source SOURCE [--dry-run]
+                             [--max-agents MAX_AGENTS] [--timeout TIMEOUT]
+                             [--json]
+
+options:
+  -h, --help            show this help message and exit
+  --source SOURCE       path of pre-ASDLC project, left untouched
+  --dry-run             inventory and validate without invoking agents
+  --max-agents MAX_AGENTS
+                        limit specialist count for a pilot
+  --timeout TIMEOUT     seconds per Codex invocation (60-3600)
+  --json                print resulting report as JSON

@@ -9,6 +9,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 from cli_files import Conflict, safe_path
+from cli_baseline_provenance import validate_provenance
 
 VISUALS = {'.puml', '.mmd', '.svg', '.png', '.jpg', '.jpeg', '.webp'}
 SKIP_DIRS = {'.git', '.asdlc', '.codex', '.ssh', '.aws', 'node_modules', '.venv', 'venv',
@@ -128,7 +129,8 @@ def validate_visual(path: Path, data: bytes) -> None:
         raise Conflict(f'Invalid visual format: {path}; first line: {first}')
 
 
-def docs_from_output(output: Path, agent: dict | None = None) -> list[tuple[Path, bytes]]:
+def docs_from_output(output: Path, agent: dict | None = None, *,
+                     evidence_root: Path | None = None) -> list[tuple[Path, bytes]]:
     if output.is_symlink() or not output.is_dir():
         raise Conflict('Specialist failed to create a regular output/ directory.')
     entries, units = [], set()
@@ -170,8 +172,9 @@ def docs_from_output(output: Path, agent: dict | None = None) -> list[tuple[Path
                     for label in ('Sources:', 'Uncertainties:', 'Contradictions:'):
                         if label not in text:
                             raise Conflict(f'Missing {label} in {rel}')
-                    if not re.search(r'(?:source|context)/', text):
-                        raise Conflict(f'Missing source provenance in {rel}')
+                    validate_provenance(text, evidence_root or output.parent, artifact_dir=path.parent)
+                elif evidence_root is not None:
+                    validate_provenance(text, evidence_root, artifact_dir=path.parent)
             else:
                 validate_visual(rel, data)
             entries.append((rel, data))

@@ -1,6 +1,7 @@
-AI-MODIFIED - 2026-10-14T14:33:00Z
+AI-MODIFIED - 2026-10-14T16:14:00Z
 
 # Baseline capture v0.1.4 — next-agent handoff
+Historical pre-R01 handoff; current corrections/results are in [Correction Report R01](baseline-correction-report-r01.md).
 
 Status: **Partially ready; bounded live trial passed; ready for review.** No human approval granted.
 Read root AGENTS.md, [contract](baseline-capture.md), [safety](baseline-safety.md) and [tests](baseline-verification.md).

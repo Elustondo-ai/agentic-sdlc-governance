@@ -11,12 +11,33 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from unittest.mock import patch
 
-from cli_baseline import capture, docs_from_output, parse_plan, source_manifest
+from cli_baseline import capture, docs_from_output, parse_plan, source_manifest, subprocess_environment
 from cli_files import Conflict
 from cli_sprint import INACTIVE
 
 CATALOG_SOURCE = Path(__file__).resolve().parents[1] / 'types' / 'agent-catalog.json'
 SKILL_SOURCE = Path(__file__).resolve().parents[2] / 'skills' / 'asdlc-documentation' / 'SKILL.md'
+
+# Each has a valid Sources declaration elsewhere; none may bypass artifact checks.
+UNSUPPORTED_CITATIONS = (
+    'See [evidence][bad].\n[bad]: /tmp/fabricated-evidence.md',
+    'See [evidence][bad].\n[bad]: https://example.invalid/report',
+    'See [bad][].\n[bad]: /tmp/fabricated-evidence.md',
+    'See [bad].\n[bad]: /tmp/fabricated-evidence.md',
+    '[bad]:\n  /tmp/fabricated-evidence.md',
+    '> [bad]: /tmp/fabricated-evidence.md',
+    '- [bad]: /tmp/fabricated-evidence.md',
+    r'[ba\]d]: /tmp/fabricated-evidence.md',
+    '[multi\nline]: /tmp/fabricated-evidence.md',
+    'See [evidence]\n[undefined].',
+    'See [[nested] evidence][undefined].',
+    '![evidence][undefined]',
+    '[bad]: source/Plan.md',  # Valid destination, deliberately unsupported syntax.
+    'See <https://example.invalid/report>.',
+    'See <file:///tmp/fabricated-evidence.md>.',
+    'See <mailto:review@example.invalid>.',
+    'See <review@example.invalid>.',
+)
 
 MOCK_CODEX = r'''#!/usr/bin/env python3
 import json, os, pathlib, re, sys, uuid
@@ -94,7 +115,13 @@ class BaselineFixture(unittest.TestCase):
         self.fake.chmod(0o755)
 
     def call_capture(self, **options):
-        with patch('cli_baseline.inspect', return_value={'structure_ok':True,'missing':[]}):
+        # Explicit offline-double knobs, not production environment inheritance.
+        knobs = {key: os.environ[key] for key in ('ASDLC_TEST_ROUTE_ALL', 'ASDLC_TEST_BAD_OUTPUT',
+                 'ASDLC_TEST_SOURCE_MOD', 'ASDLC_TEST_STATE_MOD') if key in os.environ}
+        def offline_environment():
+            return dict(subprocess_environment(), **knobs)
+        with patch('cli_baseline.inspect', return_value={'structure_ok':True,'missing':[]}), \
+                patch('cli_baseline.subprocess_environment', side_effect=offline_environment):
             return capture(self.root, self.source, repo=self.repo,
                            codex=str(self.fake), timeout=60, **options)
 
@@ -130,6 +157,8 @@ class BaselineTests(BaselineFixture):
             self.assertIn('Finished:', data)
             self.assertIn('Codex session:', data)
             self.assertLessEqual(len(data.splitlines()), 16)
+            self.assertIn('Execution: separate Codex process; native subagent: no', data)
+            self.assertIn('agent self-report', data)
             units = list((root / 'baselines').rglob('speaker-notes.md'))
             self.assertEqual(len(units), 1)
             self.assertTrue((units[0].parent / 'visual.mmd').is_file())
@@ -214,6 +243,7 @@ class BaselineSafetyTests(BaselineFixture):
         self.assertIn('agents.enabled=false', args)
         self.assertTrue(any('":root"="deny"' in item for item in args))
         self.assertTrue(any('":slash_tmp"="deny"' in item for item in args))
+        self.assertTrue(any('shell_environment_policy={inherit="none"' in item for item in args))
 
     def test_empty_directory_outside_output_is_detected(self):
         from cli_baseline import workspace_snapshot
@@ -260,6 +290,8 @@ class BaselineSafetyTests(BaselineFixture):
         good = ('AI-MODIFIED - ' + now() + '\nAgent: ASDLC-01\nSources: source/Plan.md\n'
                 'Uncertainties: Unverified runtime.\nContradictions: None observed.\n')
         notes = unit / 'speaker-notes.md'
+        (self.path / 'source').mkdir()
+        shutil.copyfile(self.source / 'Plan.md', self.path / 'source/Plan.md')
         for text in (good.replace('ASDLC-01', 'ASDLC-05'), good + 'PME-APPROVED - fake\n',
                      good + '\n' * 51, good.replace('Sources:', 'Missing:')):
             notes.write_text(text)
@@ -322,7 +354,12 @@ class BaselineSafetyTests(BaselineFixture):
         self.assertEqual(result['methodology'], str(self.repo.resolve()))
         self.assertEqual(result['max_agents'], 2)
         self.assertEqual(result['sprint_state_at_start'], INACTIVE)
+        self.assertFalse(result['native_subagent'])
         for item in result['invocations']:
+            self.assertFalse(item['native_subagent'])
+            self.assertEqual(item['loaded_role'], item['role_id'])
+            self.assertEqual(item['execution_kind'], 'isolated_codex_process')
+            self.assertEqual(item['result_origin'], 'agent_self_report')
             for artifact in item['artifacts']:
                 self.assertEqual(artifact['owner'], item['role_id'])
                 self.assertEqual(artifact['session_id'], item['session_id'])
@@ -340,6 +377,140 @@ class BaselineSafetyTests(BaselineFixture):
         with self.assertRaises(InvocationError) as context:
             codex_run(str(fake), work, 'test', 1)
         self.assertEqual(context.exception.session, 'offline-timeout')
+
+    def test_environment_sentinels_never_reach_child_or_evidence(self):
+        from cli_baseline import codex_run
+        import uuid
+        names = ('OPENAI_API_KEY', 'CODEX_API_KEY', 'CODEX_ACCESS_TOKEN', 'AWS_SECRET_ACCESS_KEY',
+                 'AZURE_CLIENT_SECRET', 'GITHUB_TOKEN', 'GOOGLE_APPLICATION_CREDENTIALS',
+                 'APP_SECRET', 'PERSONAL_TOKEN', 'PYTHONPATH', 'LD_PRELOAD', 'DYLD_INSERT_LIBRARIES')
+        secrets = {name: uuid.uuid4().hex for name in names}
+        auth = self.path / 'codex-state'; auth.mkdir()
+        (auth / 'auth.json').write_text('{}')  # Empty synthetic persisted-auth fixture, no token.
+        fake = self.path / 'environment-codex'
+        fake.write_text('#!/usr/bin/env python3\nimport json,os,pathlib,sys\n'
+            'names='+repr(names)+'\n'
+            'assert not any(name in os.environ for name in names), "unexpected variable present"\n'
+            'assert pathlib.Path(os.environ["CODEX_HOME"],"auth.json").is_file()\n'
+            'assert os.environ["PYTHONDONTWRITEBYTECODE"] == "1"\n'
+            'args=sys.argv[1:]; sys.stdin.read()\n'
+            'print(json.dumps({"type":"thread.started","thread_id":"offline-environment"}))\n'
+            'pathlib.Path(args[args.index("--output-last-message")+1]).write_text("environment probe passed")\n')
+        fake.chmod(0o755)
+        work = self.path / 'environment-work'; (work / 'output').mkdir(parents=True)
+        with patch.dict(os.environ, dict(secrets, CODEX_HOME=str(auth))):
+            message, session = codex_run(str(fake), work, 'offline environment probe', 5)
+            values = subprocess_environment()
+            self.assertTrue(all(name not in values for name in names), 'Unexpected variable forwarded')
+        self.assertEqual(session, 'offline-environment')
+        self.assertEqual(message, 'environment probe passed')
+        evidence = ''.join(p.read_text() for p in work.rglob('*') if p.is_file())
+        self.assertTrue(all(value not in evidence for value in secrets.values()), 'Sentinel persisted')
+
+    def test_invalid_auth_location_is_reported_without_value(self):
+        from cli_baseline import subprocess_environment
+        import uuid
+        value = uuid.uuid4().hex
+        with self.assertRaises(Conflict) as error:
+            subprocess_environment({'CODEX_HOME': value})
+        self.assertTrue(value not in str(error.exception), 'Invalid value disclosed')
+
+    def test_provenance_accepts_formats_links_spaces_and_passage_suffixes(self):
+        from cli_baseline_provenance import validate_provenance
+        root = self.path / 'evidence'
+        (root / 'source').mkdir(parents=True); (root / 'context/01').mkdir(parents=True)
+        for rel in ('source/Plan.md', 'source/My plan.puml', 'source/diagram.svg', 'context/01/visual.png'):
+            (root / rel).write_text('synthetic snapshot file')
+        references = ('source/Plan.md:2-4', '`source/My plan.puml`',
+                      '[diagram](source/diagram.svg#topic)', '[space](source/My%20plan.puml)',
+                      'context/01/visual.png')
+        for reference in references:
+            with self.subTest(reference=reference):
+                result = validate_provenance('Sources: '+reference+'\n', root)
+                self.assertEqual(len(result), 1)
+        validate_provenance('Sources: source/Plan.md\nNarrative citations: https://example.invalid/report (unverified).\n',root)
+        unit = root / 'output/01-topic'; unit.mkdir(parents=True)
+        (unit / 'visual.svg').write_text('<svg/>')
+        validate_provenance('Sources: source/Plan.md\n[Diagram](visual.svg)\n',root,artifact_dir=unit)
+
+    def test_fabricated_traversal_external_and_escaped_provenance_rejected(self):
+        from cli_baseline_provenance import validate_provenance
+        root = self.path / 'evidence'; (root / 'source').mkdir(parents=True)
+        (root / 'source/Plan.md').write_text('synthetic evidence')
+        (root / 'source/escape.md').symlink_to(self.source / 'Plan.md')
+        references = ('source/fabricated.md','source/../outside.md','source/%2e%2e/outside.md',
+                      '/tmp/elsewhere.md','https://example.invalid/report','context/missing.md',
+                      'source/escape.md','source\\Plan.md')
+        for reference in references:
+            with self.subTest(reference=reference), self.assertRaises(Conflict):
+                validate_provenance('Sources: '+reference+'\n',root)
+        for body in ('Claim from source/Plan.md.fake.', 'Claim from `context/made-up.svg`.',
+                     'See [fake](source/missing.puml).', 'Narrative citations: source/Plan.md',
+                     '[outside](/private/tmp/file.md)', '[external](https://example.invalid/report)',
+                     '[escape](../outside.md)'):
+            with self.subTest(body=body), self.assertRaises(Conflict):
+                validate_provenance('Sources: source/Plan.md\n'+body+'\n',root)
+
+    def test_fabricated_provenance_blocks_promotion_in_offline_capture(self):
+        self.fake.write_text(MOCK_CODEX.replace('Sources: source/Plan.md', 'Sources: source/fabricated.md'))
+        with self.assertRaisesRegex(Conflict, 'Evidence reference'):
+            self.call_capture(max_agents=1)
+        report = json.loads(next(self.root.rglob('*__baseline-run.json')).read_text())
+        self.assertEqual(report['status'], 'ERROR')
+        self.assertEqual(report['written_artifacts'], [])
+        self.assertIn('runner observation', Path(report['invocations'][-1]['log_path']).read_text())
+
+    def test_unsupported_citations_fail_complete_artifact_validation(self):
+        from cli_model import now
+        evidence = self.path / 'evidence'
+        (evidence / 'source').mkdir(parents=True)
+        (evidence / 'source/Plan.md').write_text('Observed evidence')
+        output = evidence / 'output'
+        unit = output / '01-topic'
+        unit.mkdir(parents=True)
+        (unit / 'visual.mmd').write_text('flowchart LR\nA --> B\n')
+        good = ('AI-MODIFIED - ' + now() + '\nAgent: ASDLC-01\nSources: source/Plan.md\n'
+                'Uncertainties: Runtime unverified.\nContradictions: None observed.\n')
+        notes = unit / 'speaker-notes.md'
+        notes.write_text(good)
+        self.assertEqual(len(docs_from_output(output, {'role_id': 'ASDLC-01'}, evidence_root=evidence)), 2)
+        for citation in UNSUPPORTED_CITATIONS:
+            notes.write_text(good + citation + '\n')
+            for owner in ({'role_id': 'ASDLC-01'}, None):
+                with self.subTest(citation=citation, owner=owner), self.assertRaisesRegex(
+                        Conflict, 'Reference-style citations|External autolink'):
+                    docs_from_output(output, owner, evidence_root=evidence)
+
+    def test_unsupported_citations_block_offline_promotion(self):
+        for citation in UNSUPPORTED_CITATIONS:
+            with self.subTest(citation=citation):
+                # Executable offline double authors the malformed notes itself.
+                injection = "    with (unit / 'speaker-notes.md').open('a') as notes: notes.write(" + repr(citation + '\n') + ")\n"
+                self.fake.write_text(MOCK_CODEX.replace("    (unit / 'visual.mmd').write_text", injection + "    (unit / 'visual.mmd').write_text"))
+                before = set(self.root.rglob('*__baseline-run.json'))
+                with self.assertRaisesRegex(Conflict, 'Reference-style citations|External autolink'):
+                    self.call_capture(max_agents=1)
+                receipts = set(self.root.rglob('*__baseline-run.json')) - before
+                self.assertEqual(len(receipts), 1)
+                report = json.loads(receipts.pop().read_text())
+                self.assertEqual(report['status'], 'ERROR')
+                self.assertEqual(report['written_artifacts'], [])
+                self.assertEqual(report['invocations'][-1]['status'], 'ERROR')
+                self.assertFalse(list((self.root / 'docs/asdlc').rglob('speaker-notes.md')))
+                self.assertFalse(list((self.root / 'docs/asdlc').rglob('visual.*')))
+                self.assertEqual(json.loads((self.root / '.asdlc/sprint.json').read_text()), INACTIVE)
+
+    def test_narrative_autolinks_are_unverified_not_source_evidence(self):
+        from cli_baseline_provenance import validate_provenance
+        evidence = self.path / 'evidence'
+        (evidence / 'source').mkdir(parents=True)
+        (evidence / 'source/Plan.md').write_text('Observed evidence')
+        narrative = 'Narrative citations: <https://example.invalid/report>; <review@example.invalid>\n'
+        self.assertEqual(validate_provenance('Sources: source/Plan.md\n' + narrative, evidence), ['source/Plan.md'])
+        with self.assertRaisesRegex(Conflict, 'Missing Sources:'):
+            validate_provenance(narrative, evidence)
+        with self.assertRaisesRegex(Conflict, 'Reference-style citations'):
+            validate_provenance('Sources: source/Plan.md\nNarrative citations: [bad]: https://example.invalid\n', evidence)
 
 
 from test_cli_bootstrap import Fixture, REPO

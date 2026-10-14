@@ -1,0 +1,2 @@
+PASS: 13 folder-based agent packages and read-only Codex adapters; local skills and links valid.
+Structural validation only. Native invocation, role behavior and enforcement are not certified.

@@ -1,8 +1,8 @@
 ---
 name: asdlc-review-build-task
-description: Build and Test Agent: review build task, in read-only evaluation.
+description: "Build and Test Agent: review build task, in read-only evaluation."
 ---
-AI-MODIFIED - 2026-10-10T04:17:45Z
+AI-MODIFIED - 2026-10-14T16:22:04Z
 
 # Review Build Task
 

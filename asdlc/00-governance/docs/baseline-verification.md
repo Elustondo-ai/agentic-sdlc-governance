@@ -1,6 +1,7 @@
-AI-MODIFIED - 2026-10-14T14:33:00Z
+AI-MODIFIED - 2026-10-14T16:14:00Z
 
 # Baseline validation record — 2026-10-14
+Historical pre-R01 results; see [Correction Report R01](baseline-correction-report-r01.md) for fresh checks.
 
 ## Automated tests (offline; no model-generated specialist evidence)
 `python3 -B -m unittest discover -s asdlc/00-governance/tests -p test_baseline.py -v`

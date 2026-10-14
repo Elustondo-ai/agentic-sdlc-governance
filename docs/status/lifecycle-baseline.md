@@ -1,10 +1,13 @@
-AI-MODIFIED - 2026-10-08T21:30Z
+AI-MODIFIED - 2026-10-14T19:27:16Z
 
 # Twelve-step lifecycle — preserved baseline
 
 Source: the selected SDLC2 introduction, slide 01 visual, supported by its speaker notes and slides 10–12.
 This records the existing names and order; it is not a new lifecycle or an implementation claim.
 `00-governance` is additional governance, not a thirteenth lifecycle stage.
+This file controls the lifecycle numbering used by this repository, its CLI and generated project stages.
+R02 reports an older, different lifecycle in the external SDLC2 registry; that drift remains unresolved.
+The external comparison was not re-evaluated in this correction; no stage reconciliation or renumbering is authorized.
 
 | Step | Existing presentation label |
 | --- | --- |

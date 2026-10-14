@@ -1,0 +1,20 @@
+{
+  "audited_at": "2026-10-14T16:31:06Z",
+  "methodology_checkpoint": "e40152c7f9e9c196fbcfa2f2e6f296ecee118eae",
+  "consumer": {
+    "root": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-speaker-coach",
+    "files_and_links": 174,
+    "unchanged": true,
+    "inventory_sha256": "7bb43ff9f588c4671fe6de9cb3756c8563f120223f007cba614ecfbd04dd30df"
+  },
+  "legacy": {
+    "root": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/meetingHelper",
+    "files_and_links": 98,
+    "unchanged": true,
+    "inventory_sha256": "e87acc9af3e71193a1e3b4fada5e8f8c910f5db3534f3c04bf04cb7eb3cd2b59"
+  },
+  "sprint": "inactive",
+  "no_application_file_created": true,
+  "previous_receipts_preserved": 2,
+  "previous_invocation_logs_preserved": 7
+}

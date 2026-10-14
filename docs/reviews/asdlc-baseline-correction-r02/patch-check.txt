@@ -1,0 +1,2 @@
+Initial packaging-only check: exit 1 (missing new-file-mode header; no repository file applied).
+Corrected patch metadata; git apply --check against the hash-verified R01 before-image: PASS (exit 0).

@@ -1,4 +1,4 @@
-AI-MODIFIED - 2026-10-14T14:33:00Z
+AI-MODIFIED - 2026-10-14T16:14:00Z
 
 # Brownfield baseline capture — v0.1.4 trial contract
 
@@ -23,6 +23,8 @@ asdg baseline capture --source ../../meetingHelper --max-agents 2
 ```
 `--json` yields only the report on stdout; progress goes to stderr.
 Invalid timeout/count values fail even during dry run. Dry run never invokes agents or writes docs.
+Separate Codex processes load catalogued roles; native named-subagent execution is disabled.
+See [R01 execution, environment and provenance](baseline-validation-r01.md).
 
 ## Observable records
 Every invocation has its own compact start/end Markdown log in its stage's `logs/` directory.
@@ -41,3 +43,5 @@ Documentation is one numbered topic, one visual and one <=50-line notes file wit
 owner identity, sources, uncertainties and contradictions. No PME approval or PPTX is produced.
 The isolated write permission applies only to baseline documentation, not application work.
 See [sandbox and validation](baseline-safety.md) and [trial evidence](baseline-review.md).
+The [text-only reader](baseline-source-scope.md) excludes binary source images and VCS history.
+The [clean checkpoint plan](baseline-checkpoint-plan-r01.md) is proposed only; Git operations need approval.

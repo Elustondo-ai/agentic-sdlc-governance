@@ -1,8 +1,8 @@
 ---
 name: asdlc-model-use-cases
-description: System Model and Use Cases Agent: model use cases, in read-only evaluation.
+description: "System Model and Use Cases Agent: model use cases, in read-only evaluation."
 ---
-AI-MODIFIED - 2026-10-10T04:17:45Z
+AI-MODIFIED - 2026-10-14T16:22:04Z
 
 # Model Use Cases
 

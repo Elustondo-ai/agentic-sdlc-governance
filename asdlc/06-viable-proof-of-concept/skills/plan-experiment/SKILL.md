@@ -1,8 +1,8 @@
 ---
 name: asdlc-plan-experiment
-description: Viable POC Agent: plan experiment, in read-only evaluation.
+description: "Viable POC Agent: plan experiment, in read-only evaluation."
 ---
-AI-MODIFIED - 2026-10-10T04:17:45Z
+AI-MODIFIED - 2026-10-14T16:22:04Z
 
 # Plan Experiment
 

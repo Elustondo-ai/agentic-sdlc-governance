@@ -1,0 +1,23 @@
+{
+  "audited_at": "2026-10-14T19:29:09Z",
+  "methodology_checkpoint": "e40152c7f9e9c196fbcfa2f2e6f296ecee118eae",
+  "methodology_index_empty": true,
+  "consumer": {
+    "root": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-speaker-coach",
+    "files_and_links": 174,
+    "unchanged_since_r01": true,
+    "reference_inventory": "../asdlc-baseline-correction-r01/consumer-inventory.json",
+    "reference_inventory_sha256": "f3ea29cd2bf201804251709a9090f25c3634a0f13564bcffeddf30e80b4c0e71",
+    "head": "a7411af03bfe87c417d631224f8d9737a7777fbc",
+    "clean": true
+  },
+  "legacy": {
+    "root": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/meetingHelper",
+    "files_and_links": 98,
+    "unchanged_since_r01": true,
+    "reference_inventory": "../asdlc-baseline-correction-r01/legacy-inventory.json",
+    "reference_inventory_sha256": "0e1b19fff0593dc0ffff30d477cf0a6ba6dfde8209e3e61c69d1cfc3f94870b4"
+  },
+  "sprint": "inactive",
+  "no_application_file_created": true
+}

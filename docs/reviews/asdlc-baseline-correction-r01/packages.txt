@@ -1,0 +1,22 @@
+test_all_thirteen_actual_role_packages_load_for_baseline (test_agent_packages.AgentPackageTests.test_all_thirteen_actual_role_packages_load_for_baseline) ... ok
+test_broken_role_link (test_agent_packages.AgentPackageTests.test_broken_role_link) ... ok
+test_duplicate_identity (test_agent_packages.AgentPackageTests.test_duplicate_identity) ... ok
+test_duplicate_skill_metadata_is_rejected (test_agent_packages.AgentPackageTests.test_duplicate_skill_metadata_is_rejected) ... ok
+test_extra_agent (test_agent_packages.AgentPackageTests.test_extra_agent) ... ok
+test_invalid_native_skill_yaml_is_rejected (test_agent_packages.AgentPackageTests.test_invalid_native_skill_yaml_is_rejected) ... ok
+test_legacy_bootstrap_path (test_agent_packages.AgentPackageTests.test_legacy_bootstrap_path) ... ok
+test_legacy_file_duplicate (test_agent_packages.AgentPackageTests.test_legacy_file_duplicate) ... ok
+test_line_limit (test_agent_packages.AgentPackageTests.test_line_limit) ... ok
+test_missing_baseline (test_agent_packages.AgentPackageTests.test_missing_baseline) ... ok
+test_missing_contract (test_agent_packages.AgentPackageTests.test_missing_contract) ... ok
+test_missing_package_directory (test_agent_packages.AgentPackageTests.test_missing_package_directory) ... ok
+test_missing_skill (test_agent_packages.AgentPackageTests.test_missing_skill) ... ok
+test_operational_and_learning_roles_preserve_separate_boundaries (test_agent_packages.AgentPackageTests.test_operational_and_learning_roles_preserve_separate_boundaries) ... ok
+test_path_escape (test_agent_packages.AgentPackageTests.test_path_escape) ... ok
+test_read_only_setting (test_agent_packages.AgentPackageTests.test_read_only_setting) ... ok
+test_valid_packages (test_agent_packages.AgentPackageTests.test_valid_packages) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.977s
+
+OK

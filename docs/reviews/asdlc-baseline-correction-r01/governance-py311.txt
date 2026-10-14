@@ -1,0 +1,230 @@
+test_current_adapters_on_older_python (test_agent_config.AgentConfigTests.test_current_adapters_on_older_python) ... ok
+test_multiline_and_basic_escapes (test_agent_config.AgentConfigTests.test_multiline_and_basic_escapes) ... ok
+test_rejects_unknown_syntax_and_duplicate_keys (test_agent_config.AgentConfigTests.test_rejects_unknown_syntax_and_duplicate_keys) ... ok
+test_all_thirteen_routes (test_agent_logging.AgentLoggingTests.test_all_thirteen_routes) ... ok
+test_bad_summary_is_flagged (test_agent_logging.AgentLoggingTests.test_bad_summary_is_flagged) ... ok
+test_concurrent_writers_remain_valid (test_agent_logging.AgentLoggingTests.test_concurrent_writers_remain_valid) ... ok
+test_contract_is_unchanged (test_agent_logging.AgentLoggingTests.test_contract_is_unchanged) ... ok
+test_duplicate_delivery_is_idempotent (test_agent_logging.AgentLoggingTests.test_duplicate_delivery_is_idempotent) ... ok
+test_followup_keeps_child_log (test_agent_logging.AgentLoggingTests.test_followup_keeps_child_log) ... ok
+test_missing_summary_is_not_invented (test_agent_logging.AgentLoggingTests.test_missing_summary_is_not_invented) ... ok
+test_never_store_raw_inputs_outputs_or_transcript (test_agent_logging.AgentLoggingTests.test_never_store_raw_inputs_outputs_or_transcript) ... ok
+test_no_secret_in_failure_output (test_agent_logging.AgentLoggingTests.test_no_secret_in_failure_output) ... ok
+test_non_asdlc_and_unattributed_tools_are_ignored (test_agent_logging.AgentLoggingTests.test_non_asdlc_and_unattributed_tools_are_ignored) ... ok
+test_parallel_instances_are_separate (test_agent_logging.AgentLoggingTests.test_parallel_instances_are_separate) ... ok
+test_redact_report_and_drop_unknown_fields (test_agent_logging.AgentLoggingTests.test_redact_report_and_drop_unknown_fields) ... ok
+test_reject_missing_cwd (test_agent_logging.AgentLoggingTests.test_reject_missing_cwd) ... ok
+test_reject_path_traversal_identifier (test_agent_logging.AgentLoggingTests.test_reject_path_traversal_identifier) ... ok
+test_reject_symlink_logs (test_agent_logging.AgentLoggingTests.test_reject_symlink_logs) ... ok
+test_reject_wrong_workspace (test_agent_logging.AgentLoggingTests.test_reject_wrong_workspace) ... ok
+test_start_and_stop (test_agent_logging.AgentLoggingTests.test_start_and_stop) ... ok
+test_unidentified_deliveries_are_not_silently_merged (test_agent_logging.AgentLoggingTests.test_unidentified_deliveries_are_not_silently_merged) ... ok
+test_all_thirteen_actual_role_packages_load_for_baseline (test_agent_packages.AgentPackageTests.test_all_thirteen_actual_role_packages_load_for_baseline) ... ok
+test_broken_role_link (test_agent_packages.AgentPackageTests.test_broken_role_link) ... ok
+test_duplicate_identity (test_agent_packages.AgentPackageTests.test_duplicate_identity) ... ok
+test_duplicate_skill_metadata_is_rejected (test_agent_packages.AgentPackageTests.test_duplicate_skill_metadata_is_rejected) ... ok
+test_extra_agent (test_agent_packages.AgentPackageTests.test_extra_agent) ... ok
+test_invalid_native_skill_yaml_is_rejected (test_agent_packages.AgentPackageTests.test_invalid_native_skill_yaml_is_rejected) ... ok
+test_legacy_bootstrap_path (test_agent_packages.AgentPackageTests.test_legacy_bootstrap_path) ... ok
+test_legacy_file_duplicate (test_agent_packages.AgentPackageTests.test_legacy_file_duplicate) ... ok
+test_line_limit (test_agent_packages.AgentPackageTests.test_line_limit) ... ok
+test_missing_baseline (test_agent_packages.AgentPackageTests.test_missing_baseline) ... ok
+test_missing_contract (test_agent_packages.AgentPackageTests.test_missing_contract) ... ok
+test_missing_package_directory (test_agent_packages.AgentPackageTests.test_missing_package_directory) ... ok
+test_missing_skill (test_agent_packages.AgentPackageTests.test_missing_skill) ... ok
+test_operational_and_learning_roles_preserve_separate_boundaries (test_agent_packages.AgentPackageTests.test_operational_and_learning_roles_preserve_separate_boundaries) ... ok
+test_path_escape (test_agent_packages.AgentPackageTests.test_path_escape) ... ok
+test_read_only_setting (test_agent_packages.AgentPackageTests.test_read_only_setting) ... ok
+test_valid_packages (test_agent_packages.AgentPackageTests.test_valid_packages) ... ok
+test_invalid_cli_arguments_exit_nonzero (test_baseline.BaselineCliTests.test_invalid_cli_arguments_exit_nonzero) ... ok
+test_real_cli_registration_dry_run_json_and_state_preservation (test_baseline.BaselineCliTests.test_real_cli_registration_dry_run_json_and_state_preservation) ... ok
+test_bad_output_retains_failure_session_and_previous_success (test_baseline.BaselineSafetyTests.test_bad_output_retains_failure_session_and_previous_success) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: ERROR
+ok
+test_canonical_sprint_mutation_is_detected_and_reported (test_baseline.BaselineSafetyTests.test_canonical_sprint_mutation_is_detected_and_reported) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: ERROR
+ok
+test_changed_source_snapshot_is_rejected (test_baseline.BaselineSafetyTests.test_changed_source_snapshot_is_rejected) ... ok
+test_distinct_invocation_logs_and_byte_authorship_manifest (test_baseline.BaselineSafetyTests.test_distinct_invocation_logs_and_byte_authorship_manifest) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: OK
+ASDLC-COORDINATOR 00-summary: START
+ASDLC-COORDINATOR 00-summary: OK
+ok
+test_empty_directory_outside_output_is_detected (test_baseline.BaselineSafetyTests.test_empty_directory_outside_output_is_detected) ... ok
+test_empty_topic_directory_is_rejected (test_baseline.BaselineSafetyTests.test_empty_topic_directory_is_rejected) ... ok
+test_environment_sentinels_never_reach_child_or_evidence (test_baseline.BaselineSafetyTests.test_environment_sentinels_never_reach_child_or_evidence) ... ok
+test_fabricated_provenance_blocks_promotion_in_offline_capture (test_baseline.BaselineSafetyTests.test_fabricated_provenance_blocks_promotion_in_offline_capture) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: ERROR
+ok
+test_fabricated_traversal_external_and_escaped_provenance_rejected (test_baseline.BaselineSafetyTests.test_fabricated_traversal_external_and_escaped_provenance_rejected) ... ok
+test_invalid_auth_location_is_reported_without_value (test_baseline.BaselineSafetyTests.test_invalid_auth_location_is_reported_without_value) ... ok
+test_invalid_limits_are_rejected_even_during_dry_run (test_baseline.BaselineSafetyTests.test_invalid_limits_are_rejected_even_during_dry_run) ... ok
+test_non_object_and_unjustified_plan_rejected (test_baseline.BaselineSafetyTests.test_non_object_and_unjustified_plan_rejected) ... ok
+test_output_only_profile_does_not_bypass_hook_trust (test_baseline.BaselineSafetyTests.test_output_only_profile_does_not_bypass_hook_trust) ... ok
+test_output_ownership_format_approval_and_line_limit (test_baseline.BaselineSafetyTests.test_output_ownership_format_approval_and_line_limit) ... ok
+test_provenance_accepts_formats_links_spaces_and_passage_suffixes (test_baseline.BaselineSafetyTests.test_provenance_accepts_formats_links_spaces_and_passage_suffixes) ... ok
+test_sensitive_binary_and_symlink_evidence_are_excluded (test_baseline.BaselineSafetyTests.test_sensitive_binary_and_symlink_evidence_are_excluded) ... ok
+test_svg_active_and_external_content_is_rejected (test_baseline.BaselineSafetyTests.test_svg_active_and_external_content_is_rejected) ... ok
+test_timeout_preserves_emitted_session (test_baseline.BaselineSafetyTests.test_timeout_preserves_emitted_session) ... ok
+test_valid_mermaid_comments_and_dialects_are_preserved (test_baseline.BaselineSafetyTests.test_valid_mermaid_comments_and_dialects_are_preserved) ... ok
+test_dry_run_no_agent_or_files (test_baseline.BaselineTests.test_dry_run_no_agent_or_files) ... ok
+test_full_thirteen_roles_have_distinct_outputs_and_logs (test_baseline.BaselineTests.test_full_thirteen_roles_have_distinct_outputs_and_logs) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: OK
+ASDLC-03 03: START
+ASDLC-03 03: OK
+ASDLC-04 04: START
+ASDLC-04 04: OK
+ASDLC-05 05: START
+ASDLC-05 05: OK
+ASDLC-06 06: START
+ASDLC-06 06: OK
+ASDLC-07 07: START
+ASDLC-07 07: OK
+ASDLC-08 08: START
+ASDLC-08 08: OK
+ASDLC-09 09: START
+ASDLC-09 09: OK
+ASDLC-10 10: START
+ASDLC-10 10: OK
+ASDLC-11 11: START
+ASDLC-11 11: OK
+ASDLC-12 12: START
+ASDLC-12 12: OK
+ASDLC-COORDINATOR 00-summary: START
+ASDLC-COORDINATOR 00-summary: OK
+ok
+test_invalid_artifact_is_rejected_and_logged (test_baseline.BaselineTests.test_invalid_artifact_is_rejected_and_logged) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: ERROR
+ok
+test_invalid_routing (test_baseline.BaselineTests.test_invalid_routing) ... ok
+test_missing_runner_fails_before_creating_logs (test_baseline.BaselineTests.test_missing_runner_fails_before_creating_logs) ... ok
+test_simulated_distinct_roles_and_tiny_logs (test_baseline.BaselineTests.test_simulated_distinct_roles_and_tiny_logs) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: OK
+ASDLC-COORDINATOR 00-summary: START
+ASDLC-COORDINATOR 00-summary: OK
+ok
+test_source_snapshot_mutation_rejected (test_baseline.BaselineTests.test_source_snapshot_mutation_rejected) ... ASDLC-COORDINATOR 00-routing: START
+ASDLC-COORDINATOR 00-routing: OK
+ASDLC-01 01: START
+ASDLC-01 01: OK
+ASDLC-02 02: START
+ASDLC-02 02: ERROR
+ok
+test_agent_listing_is_definition_inspection (test_cli_bootstrap.InstallTests.test_agent_listing_is_definition_inspection) ... ok
+test_collision_elsewhere_on_path (test_cli_bootstrap.InstallTests.test_collision_elsewhere_on_path) ... ok
+test_edited_owned_launcher_not_overwritten (test_cli_bootstrap.InstallTests.test_edited_owned_launcher_not_overwritten) ... ok
+test_existing_asdg_collision_leaves_home_unchanged (test_cli_bootstrap.InstallTests.test_existing_asdg_collision_leaves_home_unchanged) ... ok
+test_existing_bash_login_file_chosen (test_cli_bootstrap.InstallTests.test_existing_bash_login_file_chosen) ... ok
+test_existing_shell_settings_preserved_and_backed_up (test_cli_bootstrap.InstallTests.test_existing_shell_settings_preserved_and_backed_up) ... ok
+test_install_is_idempotent (test_cli_bootstrap.InstallTests.test_install_is_idempotent) ... ok
+test_install_no_flags_required_and_extra_flags_rejected (test_cli_bootstrap.InstallTests.test_install_no_flags_required_and_extra_flags_rejected) ... ok
+test_modified_managed_path_block_rejected (test_cli_bootstrap.InstallTests.test_modified_managed_path_block_rejected) ... ok
+test_new_shell_finds_cli_without_export_argument (test_cli_bootstrap.InstallTests.test_new_shell_finds_cli_without_export_argument) ... ok
+test_non_executable_drive_copy_can_run_via_python (test_cli_bootstrap.InstallTests.test_non_executable_drive_copy_can_run_via_python) ... ok
+test_root_asdg_install_executes_without_options (test_cli_bootstrap.InstallTests.test_root_asdg_install_executes_without_options) ... ok
+test_source_move_has_diagnostic_and_reinstall_recovers (test_cli_bootstrap.InstallTests.test_source_move_has_diagnostic_and_reinstall_recovers) ... ok
+test_symlink_shell_file_rejected (test_cli_bootstrap.InstallTests.test_symlink_shell_file_rejected) ... ok
+test_unsupported_shell_fails_before_changes (test_cli_bootstrap.InstallTests.test_unsupported_shell_fails_before_changes) ... ok
+test_zdotdir_inside_home (test_cli_bootstrap.InstallTests.test_zdotdir_inside_home) ... ok
+test_zsh_startup_targets_and_syntax (test_cli_bootstrap.InstallTests.test_zsh_startup_targets_and_syntax) ... ok
+test_all_generated_markdown_at_most_fifty_lines (test_cli_bootstrap.ProjectTests.test_all_generated_markdown_at_most_fifty_lines) ... ok
+test_application_and_git_control_files_unchanged (test_cli_bootstrap.ProjectTests.test_application_and_git_control_files_unchanged) ... ok
+test_apply_refuses_changed_snapshot (test_cli_bootstrap.ProjectTests.test_apply_refuses_changed_snapshot) ... ok
+test_binding_has_no_machine_specific_checkout_path (test_cli_bootstrap.ProjectTests.test_binding_has_no_machine_specific_checkout_path) ... ok
+test_broken_existing_bridge_not_overwritten (test_cli_bootstrap.ProjectTests.test_broken_existing_bridge_not_overwritten) ... ok
+test_catalogue_drift_not_silently_adopted (test_cli_bootstrap.ProjectTests.test_catalogue_drift_not_silently_adopted) ... ok
+test_cli_preserves_calling_project_and_detects_nested_root (test_cli_bootstrap.ProjectTests.test_cli_preserves_calling_project_and_detects_nested_root) ... ok
+test_existing_content_and_approval_preserved (test_cli_bootstrap.ProjectTests.test_existing_content_and_approval_preserved) ... ok
+test_fifty_line_rule_blocks_overlong_merge (test_cli_bootstrap.ProjectTests.test_fifty_line_rule_blocks_overlong_merge) ... ok
+test_foreign_metadata_refused_without_any_other_changes (test_cli_bootstrap.ProjectTests.test_foreign_metadata_refused_without_any_other_changes) ... ok
+test_init_and_standalone_verify_have_concise_success_output (test_cli_bootstrap.ProjectTests.test_init_and_standalone_verify_have_concise_success_output) ... ok
+test_init_exception_reports_actionable_error (test_cli_bootstrap.ProjectTests.test_init_exception_reports_actionable_error) ... ok
+test_init_generates_exact_catalogue_folders (test_cli_bootstrap.ProjectTests.test_init_generates_exact_catalogue_folders) ... ok
+test_init_twice_is_no_op (test_cli_bootstrap.ProjectTests.test_init_twice_is_no_op) ... ok
+test_init_verifies_after_writes_and_shares_verify_logic (test_cli_bootstrap.ProjectTests.test_init_verifies_after_writes_and_shares_verify_logic) ... ok
+test_missing_stage_folder_repaired_without_overwriting_others (test_cli_bootstrap.ProjectTests.test_missing_stage_folder_repaired_without_overwriting_others) ... ok
+test_non_git_directory_not_implicitly_initialized (test_cli_bootstrap.ProjectTests.test_non_git_directory_not_implicitly_initialized) ... ok
+test_preflight_conflicting_stage_file_leaves_no_scaffold (test_cli_bootstrap.ProjectTests.test_preflight_conflicting_stage_file_leaves_no_scaffold) ... ok
+test_provider_cannot_be_initialized_as_application (test_cli_bootstrap.ProjectTests.test_provider_cannot_be_initialized_as_application) ... ok
+test_standalone_verify_reports_removed_structure (test_cli_bootstrap.ProjectTests.test_standalone_verify_reports_removed_structure) ... ok
+test_symlink_in_project_path_refused (test_cli_bootstrap.ProjectTests.test_symlink_in_project_path_refused) ... ok
+test_unknown_nonempty_metadata_directory_refused (test_cli_bootstrap.ProjectTests.test_unknown_nonempty_metadata_directory_refused) ... ok
+test_verify_after_init_structural_pass (test_cli_bootstrap.ProjectTests.test_verify_after_init_structural_pass) ... ok
+test_verify_is_read_only (test_cli_bootstrap.ProjectTests.test_verify_is_read_only) ... ok
+test_write_failure_rolls_back_new_files (test_cli_bootstrap.ProjectTests.test_write_failure_rolls_back_new_files) ... ok
+test_yaml_front_matter_not_damaged (test_cli_bootstrap.ProjectTests.test_yaml_front_matter_not_damaged) ... ok
+test_cli_gate_applies_before_dispatch (test_cli_bootstrap.PythonCompatibilityTests.test_cli_gate_applies_before_dispatch) ... Python 3.9 or newer is required.
+ok
+test_cli_modules_parse_as_python39 (test_cli_bootstrap.PythonCompatibilityTests.test_cli_modules_parse_as_python39) ... ok
+test_installer_refuses_sudo_before_writes (test_cli_bootstrap.PythonCompatibilityTests.test_installer_refuses_sudo_before_writes) ... Run ./asdg install as your normal user, without sudo.
+ok
+test_installer_version_gate_accepts_39_and_up (test_cli_bootstrap.PythonCompatibilityTests.test_installer_version_gate_accepts_39_and_up) ... ok
+test_installer_version_gate_rejects_38_before_writes (test_cli_bootstrap.PythonCompatibilityTests.test_installer_version_gate_rejects_38_before_writes) ... ok
+test_python_entry_and_installed_launcher (test_cli_bootstrap.PythonCompatibilityTests.test_python_entry_and_installed_launcher) ... ok
+test_both_commands_share_one_implementation_and_binding (test_cli_bootstrap.RenameTests.test_both_commands_share_one_implementation_and_binding) ... ok
+test_foreign_old_asd_on_path_is_not_touched_or_blocked (test_cli_bootstrap.RenameTests.test_foreign_old_asd_on_path_is_not_touched_or_blocked) ... ok
+test_new_short_name_and_qualified_name (test_cli_bootstrap.RenameTests.test_new_short_name_and_qualified_name) ... ok
+test_python_install_entry_point_still_works (test_cli_bootstrap.RenameTests.test_python_install_entry_point_still_works) ... ok
+test_repository_launcher_preserves_external_working_directory (test_cli_bootstrap.RenameTests.test_repository_launcher_preserves_external_working_directory) ... ok
+test_root_and_installed_help_use_new_name (test_cli_bootstrap.RenameTests.test_root_and_installed_help_use_new_name) ... ok
+test_unknown_agent_error_names_asdg (test_cli_bootstrap.RenameTests.test_unknown_agent_error_names_asdg) ... ok
+test_upgrade_from_asd_keeps_old_command_and_uses_asdg (test_cli_bootstrap.RenameTests.test_upgrade_from_asd_keeps_old_command_and_uses_asdg) ... ok
+test_a_inactive_sprint_blocks_native_write (test_codex_sprint_integration.NativeCodexGateTests.test_a_inactive_sprint_blocks_native_write) ... skipped 'opt-in native Codex/model test'
+test_b_active_sprint_permits_native_scoped_write (test_codex_sprint_integration.NativeCodexGateTests.test_b_active_sprint_permits_native_scoped_write) ... skipped 'opt-in native Codex/model test'
+test_c_active_sprint_blocks_native_outside_scope (test_codex_sprint_integration.NativeCodexGateTests.test_c_active_sprint_blocks_native_outside_scope) ... skipped 'opt-in native Codex/model test'
+test_a_fresh_init_valid_inactive_blocked_and_context_next (test_project_status.StatusTests.test_a_fresh_init_valid_inactive_blocked_and_context_next) ... ok
+test_b_earliest_unmet_stage_and_missing_recorded_file (test_project_status.StatusTests.test_b_earliest_unmet_stage_and_missing_recorded_file) ... ok
+test_bad_evidence_index_readme_symlinks_and_unknown_stage_fail_closed (test_project_status.StatusTests.test_bad_evidence_index_readme_symlinks_and_unknown_stage_fail_closed) ... ok
+test_bridge_and_hook_allow_shared_status_queries (test_project_status.StatusTests.test_bridge_and_hook_allow_shared_status_queries) ... ok
+test_c_active_sprint_fields_and_shared_permission (test_project_status.StatusTests.test_c_active_sprint_fields_and_shared_permission) ... ok
+test_d_outside_scope_and_structural_error_block_same_guard (test_project_status.StatusTests.test_d_outside_scope_and_structural_error_block_same_guard) ... ok
+test_dashboard_http_routes_use_evaluator_and_offer_no_writes (test_project_status.StatusTests.test_dashboard_http_routes_use_evaluator_and_offer_no_writes) ... ok
+test_e_cli_json_and_plain_output_share_model (test_project_status.StatusTests.test_e_cli_json_and_plain_output_share_model) ... ok
+test_f_dashboard_renders_same_object_and_escapes_content (test_project_status.StatusTests.test_f_dashboard_renders_same_object_and_escapes_content) ... ok
+test_g_next_is_deterministic_and_same_recommendation (test_project_status.StatusTests.test_g_next_is_deterministic_and_same_recommendation) ... ok
+test_planning_implementation_and_cycle_recommendations (test_project_status.StatusTests.test_planning_implementation_and_cycle_recommendations) ... ok
+test_poc_can_be_unnecessary_but_other_stages_cannot_be_skipped (test_project_status.StatusTests.test_poc_can_be_unnecessary_but_other_stages_cannot_be_skipped) ... ok
+test_active_sprint_without_binding_is_blocked (test_sprint_gate.SprintTests.test_active_sprint_without_binding_is_blocked) ... ok
+test_arbitrary_tools_and_shell_cannot_bypass_or_start_sprint (test_sprint_gate.SprintTests.test_arbitrary_tools_and_shell_cannot_bypass_or_start_sprint) ... ok
+test_case_a_no_sprint_blocks_hello_creation_and_modification (test_sprint_gate.SprintTests.test_case_a_no_sprint_blocks_hello_creation_and_modification) ... ok
+test_case_b_active_sprint_allows_scoped_patch (test_sprint_gate.SprintTests.test_case_b_active_sprint_allows_scoped_patch) ... ok
+test_case_c_outside_scope_blocks (test_sprint_gate.SprintTests.test_case_c_outside_scope_blocks) ... ok
+test_conflicting_hook_not_overwritten (test_sprint_gate.SprintTests.test_conflicting_hook_not_overwritten) ... ok
+test_conflicting_project_config_is_not_overwritten (test_sprint_gate.SprintTests.test_conflicting_project_config_is_not_overwritten) ... ok
+test_guard_execution_failure_returns_deny (test_sprint_gate.SprintTests.test_guard_execution_failure_returns_deny) ... ok
+test_invalid_start_does_not_mutate_state (test_sprint_gate.SprintTests.test_invalid_start_does_not_mutate_state) ... ok
+test_legacy_bridge_migrates_but_authored_edits_are_preserved (test_sprint_gate.SprintTests.test_legacy_bridge_migrates_but_authored_edits_are_preserved) ... ok
+test_missing_invalid_and_symlink_state_fail_closed (test_sprint_gate.SprintTests.test_missing_invalid_and_symlink_state_fail_closed) ... ok
+test_protected_paths_traversal_symlinks_and_multi_file_patch (test_sprint_gate.SprintTests.test_protected_paths_traversal_symlinks_and_multi_file_patch) ... ok
+test_status_stop_and_repeat_init_preserve_state (test_sprint_gate.SprintTests.test_status_stop_and_repeat_init_preserve_state) ... ok
+
+----------------------------------------------------------------------
+Ran 151 tests in 22.931s
+
+OK (skipped=3)

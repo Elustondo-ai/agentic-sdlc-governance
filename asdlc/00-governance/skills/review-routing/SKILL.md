@@ -1,8 +1,8 @@
 ---
 name: asdlc-review-routing
-description: ASDLC Coordinator: review routing and approval prerequisites, in read-only evaluation.
+description: "ASDLC Coordinator: review routing and approval prerequisites, in read-only evaluation."
 ---
-AI-MODIFIED - 2026-10-10T04:17:45Z
+AI-MODIFIED - 2026-10-14T16:22:04Z
 
 # Review Routing
 

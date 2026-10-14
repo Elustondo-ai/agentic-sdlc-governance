@@ -1,8 +1,8 @@
 ---
 name: asdlc-specify-design
-description: Low-Level Design Agent: specify design, in read-only evaluation.
+description: "Low-Level Design Agent: specify design, in read-only evaluation."
 ---
-AI-MODIFIED - 2026-10-10T04:17:45Z
+AI-MODIFIED - 2026-10-14T16:22:04Z
 
 # Specify Design
 
