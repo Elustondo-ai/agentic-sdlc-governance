@@ -47,3 +47,4 @@ The guard protects this index from agent writes; humans establish authoritative 
 The generated AGENTS bridge directs agents to shared status and recommendations without adding rules.
 Exact previously generated bridges migrate on init; authored changes remain conflicts for review.
 Existing consuming projects need a deliberate init/upgrade before the new structure verifies.
+Optional `project_status` and `release` declarations: see [status metadata](../../../CODEX-SDK-PILOT.md).

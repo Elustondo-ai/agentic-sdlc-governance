@@ -4,9 +4,8 @@ AI-MODIFIED - 2026-10-14T03:05:00Z
 
 Reusable implementation lives only in the methodology repository, under `asdlc/00-governance/`.
 `src/cli_status.py:project_status` evaluates authoritative project/sprint/evidence files.
-`cli_policy.py:implementation_permission` calculates permission once; the CLI guard and hook
-consume the evaluator's result. CLI text, JSON, generated agent guidance and dashboard use it.
-No LLM decides the next action, and the HTML renderer has no lifecycle or policy rules.
+`cli_policy.py:implementation_permission` calculates permission for the CLI guard, hook and views.
+The deterministic engine owns facts/gates; `status` adds advisory coordinator output via the Codex SDK.
 ## Authoritative inputs and model
 - `.asdlc/project.json`: existing provider binding and stage layout.
 - `.asdlc/sprint.json`: existing authoritative sprint identity, scope and acceptance criteria.
@@ -34,10 +33,11 @@ An early active sprint does not fabricate missing evidence. Its path permissions
 missing lifecycle evidence guides work but is not an additional implicit approval/write gate.
 
 ## Views and exit codes
-`asdg status [--json] [--path <target>]`, `asdg next [--json]` render one evaluated model.
+`asdg status` prints facts, then concise advice; `--verbose` saves a [bounded report](status-advice.md).
+`status --json` and `--facts-only` skip AI; `--json --advise` adds it. `next [--json]` stays deterministic.
 `asdg sprint status` uses the same model's sprint. Start/stop remain explicit human CLI operations.
 `asdg verify` and automatic init verification retain the shared structural inspection path.
-A policy block is normal status (exit 0); structural/system/state errors produce ERROR and exit 1.
+A policy block is normal status (exit 0); invalid state or unavailable requested advice exits 1.
 `asdg sprint check-implementation --path <target>` exits 1 when blocked and includes next guidance.
 `asdg dashboard [--port 8765]` runs read-only on 127.0.0.1; `/` renders HTML, `/status.json` renders
 fresh evaluator JSON. No mutation routes, browser scripting or external assets/dependencies exist.
@@ -46,5 +46,5 @@ It refreshes every 30 seconds, rejects non-loopback Host headers, escapes text a
 Runtime hook trust cannot be proven from files; local policy is not an adversarial OS boundary.
 Evidence indexing checks presence, not semantic quality or human approval; registration is manual.
 This is a first ordered-cycle heuristic, not a complete product roadmap/sprint state machine.
-Later-stage 11/12 requirements derive from the baseline; their local detailed contracts are absent.
+Later-stage 11/12 requirements derive from the baseline; detailed contracts are absent.
 See [sprint gate](sprint-gate.md) for activation and tool coverage; [verification](state-engine-verification.md).

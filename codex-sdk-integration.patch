@@ -1,0 +1,43 @@
+--- a/asdlc/00-governance/src/cli.py
++++ b/asdlc/00-governance/src/cli.py
+@@ -37,6 +37,9 @@
+         command = sub.add_parser(name)
+         command.add_argument('--json', action='store_true', help='machine-readable report')
+         if name == 'status':
++            mode = command.add_mutually_exclusive_group()
++            mode.add_argument('--facts-only', action='store_true', help='skip coordinator advice')
++            mode.add_argument('--advise', action='store_true', help='include coordinator advice, also with --json')
+             command.add_argument('--path', action='append', default=None, help='evaluate a proposed implementation target; repeatable')
+     baseline = sub.add_parser('baseline', help='Capture existing-system evidence via specialist agents')
+     baseline_actions = baseline.add_subparsers(dest='action', required=True)
+@@ -99,8 +102,18 @@
+             return 0
+         if args.operation in ('status', 'next'):
+             status = project_status(root, requested_paths=getattr(args, 'path', None))
++            advice = None
++            want_advice = args.operation == 'status' and not args.facts_only and (args.advise or not args.json)
++            if want_advice:
++                from cli_advice import coordinator_advice, render_advice
++                if not args.json:
++                    print(render_status(status).replace('Recommended next action:', 'Mechanical workflow finding:'), flush=True)
++                    print('\nConsulting the ASDG coordinator...', flush=True)
++                advice = coordinator_advice(root, status)
+             if args.json:
+-                print(json.dumps(status, indent=2))
++                print(json.dumps(dict(status, advice=advice) if advice else status, indent=2))
++            elif advice is not None:
++                print(render_advice(advice))
+             else:
+                 print(render_status(status) if args.operation == 'status' else render_next(status))
+             return 1 if status['errors'] else 0
+--- a/asdlc/00-governance/tests/test_project_status.py
++++ b/asdlc/00-governance/tests/test_project_status.py
+@@ -92,7 +92,7 @@
+         result = self.run_cli('status', '--json')
+         self.assertEqual(result.returncode, 0, result.stderr)
+         status = json.loads(result.stdout)
+-        self.assertEqual(self.run_cli('status').stdout, render_status(status) + '\n')
++        self.assertEqual(self.run_cli('status', '--facts-only').stdout, render_status(status) + '\n')
+         self.assertEqual(self.run_cli('sprint', 'status').stdout, 'No active sprint.\n')
+         self.activate()
+         result = self.run_cli('status', '--json', '--path', 'other.py')

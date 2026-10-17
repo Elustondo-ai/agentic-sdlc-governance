@@ -92,13 +92,13 @@ class StatusTests(Fixture):
         result = self.run_cli('status', '--json')
         self.assertEqual(result.returncode, 0, result.stderr)
         status = json.loads(result.stdout)
-        self.assertEqual(self.run_cli('status').stdout, render_status(status) + '\n')
+        self.assertEqual(self.run_cli('status', '--facts-only').stdout, render_status(status) + '\n')
         self.assertEqual(self.run_cli('sprint', 'status').stdout, 'No active sprint.\n')
         self.activate()
         result = self.run_cli('status', '--json', '--path', 'other.py')
         self.assertEqual(result.returncode, 0)  # A policy block is not a system malfunction.
         self.assertEqual(json.loads(result.stdout)['implementation_permission'], 'BLOCKED')
-        self.assertNotIn('ERROR:', self.run_cli('status').stdout)
+        self.assertNotIn('ERROR:', self.run_cli('status', '--facts-only').stdout)
 
     def test_f_dashboard_renders_same_object_and_escapes_content(self):
         status = self.status()
@@ -172,8 +172,8 @@ class StatusTests(Fixture):
                           'artifacts': ['docs/asdlc/01-context-and-domain-analysis/README.md'], 'not_applicable_reason': None}}})):
             (self.project / LIFECYCLE).write_text(value)
             self.assertEqual(self.status()['implementation_permission'], 'BLOCKED')
-            self.assertNotEqual(self.run_cli('status').returncode, 0)
-            self.assertIn('ERROR:', self.run_cli('status').stdout)
+            self.assertNotEqual(self.run_cli('status', '--facts-only').returncode, 0)
+            self.assertIn('ERROR:', self.run_cli('status', '--facts-only').stdout)
             self.assertNotEqual(self.run_cli('verify').returncode, 0)
         value = self.evidence(1)
         file = self.project / value['stages']['01']['artifacts'][0]
@@ -190,3 +190,45 @@ class StatusTests(Fixture):
         (self.project / 'AGENTS.md').write_text('# Rules\n' + SPRINT_BRIDGE)
         initialize(self.project, self.provider)
         self.assertIn(BRIDGE, (self.project / 'AGENTS.md').read_text())
+
+    def test_recorded_project_and_release_are_distinct_from_evidence_and_sprint(self):
+        value = self.evidence(2)
+        value.update(project_status='defining', release=None)
+        path = self.project / LIFECYCLE
+        path.write_text(json.dumps(value))
+        before = path.read_bytes()
+        status = self.status()
+        self.assertEqual(status['project_status'], 'defining')
+        self.assertEqual(status['project_status_basis'], 'RECORDED')
+        self.assertEqual(status['release_status'], 'none')
+        self.assertEqual(status['release_status_basis'], 'RECORDED')
+        self.assertEqual(status['current_stage']['number'], 3)
+        self.assertEqual(status['sprint_status'], 'inactive')
+        self.assertEqual(status['implementation_permission'], 'BLOCKED')
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_absent_metadata_remains_unknown(self):
+        status = self.status()
+        for field in ('project_status', 'release_status'):
+            self.assertEqual(status[field], 'UNKNOWN')
+            self.assertEqual(status[field + '_basis'], 'NOT_RECORDED')
+
+    def test_release_metadata_does_not_start_or_approve_a_sprint(self):
+        value = self.evidence(1)
+        for state in ('planning', 'active', 'in_review', 'closed'):
+            value.update(project_status='defined', release={'release_id': 'R01', 'status': state})
+            (self.project / LIFECYCLE).write_text(json.dumps(value))
+            status = self.status()
+            self.assertEqual(status['release_status'], state)
+            self.assertEqual(status['release_id'], 'R01')
+            self.assertEqual(status['sprint_status'], 'inactive')
+            self.assertEqual(status['implementation_permission'], 'BLOCKED')
+
+    def test_invalid_project_and_release_metadata_fail_closed(self):
+        for fields in ({'project_status': 'approved'}, {'project_status': None},
+                       {'release': {}}, {'release': {'release_id': '', 'status': 'active'}},
+                       {'release': {'release_id': 'R01', 'status': 'approved'}}):
+            (self.project / LIFECYCLE).write_text(json.dumps(dict(EMPTY_LIFECYCLE, **fields)))
+            status = self.status()
+            self.assertTrue(status['errors'])
+            self.assertEqual(status['implementation_permission'], 'BLOCKED')

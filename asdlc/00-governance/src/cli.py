@@ -37,6 +37,10 @@ def main(argv: list[str] | None = None) -> int:
         command = sub.add_parser(name)
         command.add_argument('--json', action='store_true', help='machine-readable report')
         if name == 'status':
+            mode = command.add_mutually_exclusive_group()
+            mode.add_argument('--facts-only', action='store_true', help='skip coordinator advice')
+            mode.add_argument('--advise', action='store_true', help='include coordinator advice, also with --json')
+            command.add_argument('--verbose', action='store_true', help='save detailed advice in the canonical planning folder')
             command.add_argument('--path', action='append', default=None, help='evaluate a proposed implementation target; repeatable')
     baseline = sub.add_parser('baseline', help='Capture existing-system evidence via specialist agents')
     baseline_actions = baseline.add_subparsers(dest='action', required=True)
@@ -55,6 +59,11 @@ def main(argv: list[str] | None = None) -> int:
     description = actions.add_parser('describe')
     description.add_argument('name', help='Native name, stable ID, stage number, architect or coordinator')
     args = parser.parse_args(argv)
+    if args.operation == 'status' and args.verbose:
+        if args.facts_only:
+            parser.error('--facts-only cannot be combined with --verbose')
+        if args.json and not args.advise:
+            parser.error('--json --verbose requires --advise; plain --json never invokes the coordinator')
     if args.operation == 'install':
         from cli_install import main as install_main
         return install_main([])
@@ -99,11 +108,41 @@ def main(argv: list[str] | None = None) -> int:
             return 0
         if args.operation in ('status', 'next'):
             status = project_status(root, requested_paths=getattr(args, 'path', None))
+            want_advice = args.operation == 'status' and not args.facts_only and (args.advise or not args.json)
+            if args.operation == 'status' and not args.json:
+                print(render_status(status), flush=True)
+            advice = None
+            report = None
+            if want_advice:
+                from cli_advice import coordinator_advice, render_advice
+                if not args.json:
+                    print('\nConsulting the ASDG coordinator...', flush=True)
+                advice = coordinator_advice(root, status)
+                if not args.json:
+                    print(render_advice(advice))
+                if args.verbose:
+                    if advice['status'] != 'available':
+                        report = {'status': 'not_saved', 'reason': 'Coordinator advice is unavailable.'}
+                    else:
+                        from cli_advice_report import save_advice
+                        try:
+                            path = save_advice(root, status, advice)
+                            report = {'status': 'saved', 'path': str(path)}
+                        except (OSError, ValueError, KeyError, TypeError) as exc:
+                            report = {'status': 'failed', 'reason': f'Could not save advisory report: {exc}'}
+                    if not args.json:
+                        print('Advisory report: ' + report['path'] if report['status'] == 'saved'
+                              else 'Advisory report not saved: ' + report['reason'])
             if args.json:
-                print(json.dumps(status, indent=2))
-            else:
-                print(render_status(status) if args.operation == 'status' else render_next(status))
-            return 1 if status['errors'] else 0
+                result = dict(status, advice=advice) if advice is not None else status
+                if report is not None:
+                    result = dict(result, advice_report=report)
+                print(json.dumps(result, indent=2))
+            elif args.operation == 'next':
+                print(render_next(status))
+            failed = (advice is not None and advice['status'] != 'available'
+                      or report is not None and report['status'] != 'saved')
+            return 1 if status['errors'] or failed else 0
         if args.operation == 'sprint':
             if args.action == 'check-implementation':
                 allowed, reason = check_implementation(root, args.path, guidance=True)

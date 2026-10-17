@@ -12,6 +12,8 @@ from cli_project import inspect
 
 LIFECYCLE = Path('.asdlc/lifecycle.json')
 EMPTY_LIFECYCLE = {'schema_version': 1, 'stages': {}}
+PROJECT_STATUSES = ('new', 'defining', 'defined')
+RELEASE_STATUSES = ('planning', 'active', 'in_review', 'closed')
 RULES = Path('asdlc/00-governance/types/lifecycle-rules.json')
 
 
@@ -38,9 +40,18 @@ def lifecycle_rules(repo: Path) -> list[dict]:
 def read_lifecycle(root: Path, rules: list[dict]) -> dict:
     raw = read_bytes(safe_path(root, LIFECYCLE))
     value = json.loads(raw) if raw is not None else EMPTY_LIFECYCLE
-    if (not isinstance(value, dict) or set(value) != {'schema_version', 'stages'}
+    if (not isinstance(value, dict) or not {'schema_version', 'stages'} <= set(value)
+            or set(value) - {'schema_version', 'stages', 'project_status', 'release'}
             or type(value['schema_version']) is not int or value['schema_version'] != 1 or not isinstance(value['stages'], dict)):
         raise Conflict('Invalid .asdlc/lifecycle.json; expected schema_version 1 and stages map.')
+    if 'project_status' in value and value['project_status'] not in PROJECT_STATUSES:
+        raise Conflict('Invalid project_status; expected new, defining or defined.')
+    release = value.get('release')
+    if release is not None and (
+            not isinstance(release, dict) or set(release) != {'release_id', 'status'}
+            or not isinstance(release['release_id'], str) or not release['release_id'].strip()
+            or release['status'] not in RELEASE_STATUSES):
+        raise Conflict('Invalid release; expected null or release_id and a supported status.')
     known = {f"{rule['number']:02d}": rule for rule in rules}
     for number, entry in value['stages'].items():
         if number not in known or not isinstance(entry, dict) or set(entry) != {'artifacts', 'not_applicable_reason'}:
@@ -100,7 +111,7 @@ def recommendation(stages: list[dict], sprint: dict | None, errors: list[str]) -
 
 def project_status(root: Path, repo: Path = REPO, requested_paths: list[str] | None = None) -> dict:
     """Read-only evaluator. Views render its result; they never decide readiness or permissions."""
-    errors, stages = [], []
+    errors, stages, lifecycle = [], [], {}
     try:
         report = inspect(root, repo)
         errors.extend(report['missing'])
@@ -110,11 +121,13 @@ def project_status(root: Path, repo: Path = REPO, requested_paths: list[str] | N
         errors.append(str(exc))
     try:
         rules = lifecycle_rules(repo)
-        stages = evidence_status(root, rules, read_lifecycle(root, rules))
+        lifecycle = read_lifecycle(root, rules)
+        stages = evidence_status(root, rules, lifecycle)
     except (OSError, ValueError, TypeError, KeyError) as exc:
         if str(exc) not in errors:
             errors.append(str(exc))
     sprint = report.get('sprint_state')
+    release = lifecycle.get('release')
     permission = implementation_permission(root, sprint, errors, requested_paths)
     next_action = recommendation(stages, sprint, errors)
     current = next_action['stage']
@@ -124,6 +137,11 @@ def project_status(root: Path, repo: Path = REPO, requested_paths: list[str] | N
     if current and current['readiness'] == 'MISSING':
         blockers.append(next_action['reason'])
     return dict(report, project_name=root.name, evaluated_at=now(), errors=errors,
+                project_status=lifecycle.get('project_status', 'UNKNOWN'),
+                project_status_basis='RECORDED' if 'project_status' in lifecycle else 'NOT_RECORDED',
+                release_status=release['status'] if release else 'none' if 'release' in lifecycle else 'UNKNOWN',
+                release_id=release['release_id'] if release else None,
+                release_status_basis='RECORDED' if 'release' in lifecycle else 'NOT_RECORDED',
                 structural_status='PASS' if report['structure_ok'] else 'INVALID',
                 current_stage=current, lifecycle_stages=stages,
                 current_stage_basis='EARLIEST_UNMET_EVIDENCE' if current and current['readiness'] == 'MISSING'
@@ -147,9 +165,19 @@ def stage_label(stage: dict | None) -> str:
 
 def render_status(status: dict) -> str:
     lines = ['ASDLC STATUS', '', f"Project: {status['project_name']}",
-             f"Sprint: {status['sprint_status'].upper()}", f"Implementation: {status['implementation_permission']}",
-             f"Stage: {stage_label(status['current_stage'])}", '', 'Recommended next action:',
+             f"Project status: {status['project_status'].upper()}",
+             'Release: ' + ('None declared' if status['release_status'] == 'none' else
+                            f"{status['release_status'].upper()}" +
+                            (f" — {status['release_id']}" if status['release_id'] else '')),
+             'Sprint: ' + ('None active' if status['sprint_status'] == 'inactive' else
+                           status['sprint_status'].upper() +
+                           (f" — {status['sprint_id']}" if status['sprint_id'] else '')),
+             f"Implementation: {status['implementation_permission']}",
+             f"Evidence focus: {stage_label(status['current_stage'])}",
+             f"Evidence focus basis: {status['current_stage_basis']}", '', 'Mechanical workflow finding:',
              status['recommendation']['action']]
+    if status['project_status_basis'] == 'NOT_RECORDED' or status['release_status_basis'] == 'NOT_RECORDED':
+        lines.extend(['', 'UNKNOWN means not recorded; status does not infer or change workflow state.'])
     if status['errors']:
         lines.extend(f'ERROR: {error}' for error in status['errors'])
     else:
