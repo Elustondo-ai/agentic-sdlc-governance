@@ -1,0 +1,3 @@
+# Asdg actionable — Details
+
+This final slide is an ASDG interpretation, not a direct claim from the article. It closes the loop between the external reading and our practical implementation decisions. Follow-up work should compare Codex, Claude Code and Copilot on the same repository task under identical success criteria.

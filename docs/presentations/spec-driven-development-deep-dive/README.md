@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-08T21:30Z
-
 # Spec-Driven Development — A Deep Dive
 
 The original presentation source content is preserved. Folder numbers express presentation order.
@@ -18,8 +16,8 @@ Generated links work in the local/Drive working copy after building; these artif
 
 From the repository root:
 ```sh
-python3 asdlc/skills/asdlc-presentation/src/build.py --presentation docs/presentations/spec-driven-development-deep-dive
+python3 asdg/skills/asdg-presentation/src/build.py --presentation docs/presentations/spec-driven-development-deep-dive
 ```
 
-[Shared standard](../../../asdlc/skills/asdlc-presentation/docs/presentation-standard.md) · [Back to collection](../README.md)
+[Shared standard](../../../asdg/skills/asdg-presentation/docs/presentation-standard.md) · [Back to collection](../README.md)
 The build preserves proportions, embeds narration, and does not edit source files.

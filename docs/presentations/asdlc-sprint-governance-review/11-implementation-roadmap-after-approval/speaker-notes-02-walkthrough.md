@@ -1,1 +1,0 @@
-Begin with authoritative process decisions and a state machine. Next build tests for allowed and forbidden transitions, missing human approval, stale integration baselines, and premature coding. Only then connect the runtime instruction adapters and Git tooling.

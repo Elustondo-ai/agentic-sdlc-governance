@@ -1,0 +1,149 @@
+{
+  "version": "0.2",
+  "mode": "read-only-evaluation",
+  "agents": [
+    {
+      "stage": 0,
+      "role_id": "ASDG-COORDINATOR",
+      "native_name": "asdg_coordinator",
+      "title": "ASDG Coordinator",
+      "folder": "asdg/00-governance",
+      "entry": "asdg/00-governance/AGENTS.md",
+      "skill": "asdg/00-governance/skills/review-routing/SKILL.md",
+      "skill_name": "asdg-review-routing",
+      "adapter": ".codex/agents/asdg_coordinator.toml"
+    },
+    {
+      "stage": 1,
+      "role_id": "ASDG-01",
+      "native_name": "asdg_01",
+      "title": "Context and Domain Agent",
+      "folder": "asdg/01-context-and-domain-analysis",
+      "entry": "asdg/01-context-and-domain-analysis/AGENTS.md",
+      "skill": "asdg/01-context-and-domain-analysis/skills/analyze-context/SKILL.md",
+      "skill_name": "asdg-analyze-context",
+      "adapter": ".codex/agents/asdg_01.toml"
+    },
+    {
+      "stage": 2,
+      "role_id": "ASDG-02",
+      "native_name": "asdg_02",
+      "title": "Purpose Agent",
+      "folder": "asdg/02-purpose",
+      "entry": "asdg/02-purpose/AGENTS.md",
+      "skill": "asdg/02-purpose/skills/elicit-purpose/SKILL.md",
+      "skill_name": "asdg-elicit-purpose",
+      "adapter": ".codex/agents/asdg_02.toml"
+    },
+    {
+      "stage": 3,
+      "role_id": "ASDG-03",
+      "native_name": "asdg_03",
+      "title": "System Model and Use Cases Agent",
+      "folder": "asdg/03-system-model-and-use-cases",
+      "entry": "asdg/03-system-model-and-use-cases/AGENTS.md",
+      "skill": "asdg/03-system-model-and-use-cases/skills/model-use-cases/SKILL.md",
+      "skill_name": "asdg-model-use-cases",
+      "adapter": ".codex/agents/asdg_03.toml"
+    },
+    {
+      "stage": 4,
+      "role_id": "ASDG-04",
+      "native_name": "asdg_04",
+      "title": "Benchmark and Test Strategy Agent",
+      "folder": "asdg/04-benchmarks-test-strategy-and-success-criteria",
+      "entry": "asdg/04-benchmarks-test-strategy-and-success-criteria/AGENTS.md",
+      "skill": "asdg/04-benchmarks-test-strategy-and-success-criteria/skills/evaluate-alternatives/SKILL.md",
+      "skill_name": "asdg-evaluate-alternatives",
+      "adapter": ".codex/agents/asdg_04.toml"
+    },
+    {
+      "stage": 5,
+      "role_id": "ASDG-05",
+      "native_name": "asdg_05",
+      "title": "High-Level Architecture Agent",
+      "folder": "asdg/05-high-level-solution-design-and-architecture",
+      "entry": "asdg/05-high-level-solution-design-and-architecture/AGENTS.md",
+      "skill": "asdg/05-high-level-solution-design-and-architecture/skills/propose-architecture/SKILL.md",
+      "skill_name": "asdg-propose-architecture",
+      "adapter": ".codex/agents/asdg_05.toml"
+    },
+    {
+      "stage": 6,
+      "role_id": "ASDG-06",
+      "native_name": "asdg_06",
+      "title": "Viable POC Agent",
+      "folder": "asdg/06-viable-proof-of-concept",
+      "entry": "asdg/06-viable-proof-of-concept/AGENTS.md",
+      "skill": "asdg/06-viable-proof-of-concept/skills/plan-experiment/SKILL.md",
+      "skill_name": "asdg-plan-experiment",
+      "adapter": ".codex/agents/asdg_06.toml"
+    },
+    {
+      "stage": 7,
+      "role_id": "ASDG-07",
+      "native_name": "asdg_07",
+      "title": "Planning Agent",
+      "folder": "asdg/07-planning",
+      "entry": "asdg/07-planning/AGENTS.md",
+      "skill": "asdg/07-planning/skills/prepare-plan/SKILL.md",
+      "skill_name": "asdg-prepare-plan",
+      "adapter": ".codex/agents/asdg_07.toml"
+    },
+    {
+      "stage": 8,
+      "role_id": "ASDG-08",
+      "native_name": "asdg_08",
+      "title": "Low-Level Design Agent",
+      "folder": "asdg/08-low-level-design",
+      "entry": "asdg/08-low-level-design/AGENTS.md",
+      "skill": "asdg/08-low-level-design/skills/specify-design/SKILL.md",
+      "skill_name": "asdg-specify-design",
+      "adapter": ".codex/agents/asdg_08.toml"
+    },
+    {
+      "stage": 9,
+      "role_id": "ASDG-09",
+      "native_name": "asdg_09",
+      "title": "Build and Test Agent",
+      "folder": "asdg/09-build-and-test-cycle",
+      "entry": "asdg/09-build-and-test-cycle/AGENTS.md",
+      "skill": "asdg/09-build-and-test-cycle/skills/review-build-task/SKILL.md",
+      "skill_name": "asdg-review-build-task",
+      "adapter": ".codex/agents/asdg_09.toml"
+    },
+    {
+      "stage": 10,
+      "role_id": "ASDG-10",
+      "native_name": "asdg_10",
+      "title": "Document, Review and Release Agent",
+      "folder": "asdg/10-document-review-and-release",
+      "entry": "asdg/10-document-review-and-release/AGENTS.md",
+      "skill": "asdg/10-document-review-and-release/skills/review-readiness/SKILL.md",
+      "skill_name": "asdg-review-readiness",
+      "adapter": ".codex/agents/asdg_10.toml"
+    },
+    {
+      "stage": 11,
+      "role_id": "ASDG-11",
+      "native_name": "asdg_11",
+      "title": "Operational Reality, DevOps and User Acceptance Agent",
+      "folder": "asdg/11-operational-reality-devops-and-user-acceptance",
+      "entry": "asdg/11-operational-reality-devops-and-user-acceptance/AGENTS.md",
+      "skill": "asdg/11-operational-reality-devops-and-user-acceptance/skills/assess-operations/SKILL.md",
+      "skill_name": "asdg-assess-operations",
+      "adapter": ".codex/agents/asdg_11.toml"
+    },
+    {
+      "stage": 12,
+      "role_id": "ASDG-12",
+      "native_name": "asdg_12",
+      "title": "Observability, Insights and Learning Agent",
+      "folder": "asdg/12-observability-insights-and-learning",
+      "entry": "asdg/12-observability-insights-and-learning/AGENTS.md",
+      "skill": "asdg/12-observability-insights-and-learning/skills/derive-insights/SKILL.md",
+      "skill_name": "asdg-derive-insights",
+      "adapter": ".codex/agents/asdg_12.toml"
+    }
+  ]
+}

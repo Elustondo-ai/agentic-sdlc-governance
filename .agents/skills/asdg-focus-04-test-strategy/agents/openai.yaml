@@ -1,0 +1,7 @@
+# AI-MODIFIED - 2026-10-19T02:40:42Z
+interface:
+  display_name: ASDG Focus 04 — Benchmarks & Test Strategy
+  short_description: Focus this chat on stage 04; no parameter needed
+  default_prompt: $asdg-focus-04-test-strategy
+policy:
+  allow_implicit_invocation: false

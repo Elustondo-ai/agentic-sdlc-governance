@@ -1,0 +1,3 @@
+# Two different timelines — Introduction
+
+The twelve ASDG lifecycle areas describe what knowledge and engineering outcomes we maintain across the product. A sprint is a bounded execution cycle. They should not be collapsed into one timeline.

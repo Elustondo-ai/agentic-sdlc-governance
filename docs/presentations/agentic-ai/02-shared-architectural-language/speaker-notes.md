@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-01T13:53Z
-
 # AA02 — A shared architectural language
 
 The common layer defines the meaning of a task, the context it may use, the tools it may invoke, the evidence it must produce, and the policies that constrain it. Approval is a defined event with a particular subject and state, not just a reassuring word in a prompt.

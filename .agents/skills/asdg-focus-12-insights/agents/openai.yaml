@@ -1,0 +1,7 @@
+# AI-MODIFIED - 2026-10-19T02:40:42Z
+interface:
+  display_name: ASDG Focus 12 — Observability, Insights & Learning
+  short_description: Focus this chat on stage 12; no parameter needed
+  default_prompt: $asdg-focus-12-insights
+policy:
+  allow_implicit_invocation: false

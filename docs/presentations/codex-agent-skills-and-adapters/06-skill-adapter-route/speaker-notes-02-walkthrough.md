@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Why an adapter exists at all — Visual walkthrough
 
 The central box is the canonical skill folder: it owns the instructions, documents, scripts,

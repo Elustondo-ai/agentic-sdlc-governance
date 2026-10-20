@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # GitHub Copilot: skills align; named agents differ — Visual walkthrough
 
 The left panel shows the common skill path and two instruction mechanisms. The root

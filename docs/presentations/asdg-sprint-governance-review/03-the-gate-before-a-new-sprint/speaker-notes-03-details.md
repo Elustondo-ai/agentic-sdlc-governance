@@ -1,0 +1,3 @@
+# The gate before a new sprint — Details
+
+The source says the integration branch is project-configured. Dev may be the chosen integration branch, but we must verify it in the actual project instead of assuming every repository uses dev. Branch deletion is consequential and remains human-controlled. The sources explicitly flag branch-timing reconciliation as pending.

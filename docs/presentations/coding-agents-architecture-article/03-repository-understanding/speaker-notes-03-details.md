@@ -1,1 +1,3 @@
-This maps strongly to ASDLC’s structured knowledge orientation. Context, intent, system model and architecture should be usable by the agent where it works. Semantic search, AST analysis and code indexing are techniques, not mandatory technologies.
+# Repository understanding — Details
+
+This maps strongly to ASDG’s structured knowledge orientation. Context, intent, system model and architecture should be usable by the agent where it works. Semantic search, AST analysis and code indexing are techniques, not mandatory technologies.

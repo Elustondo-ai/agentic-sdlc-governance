@@ -1,0 +1,7 @@
+# AI-MODIFIED - 2026-10-19T02:40:42Z
+interface:
+  display_name: ASDG Focus 05 — High-Level Architecture
+  short_description: Focus this chat on stage 05; no parameter needed
+  default_prompt: $asdg-focus-05-architecture
+policy:
+  allow_implicit_invocation: false

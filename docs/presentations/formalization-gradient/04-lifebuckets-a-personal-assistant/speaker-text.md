@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T14:50Z
-
 # FG03a — LifeBuckets: a personal assistant
 
 LifeBuckets is an ambitious open-source project we are developing to help an individual organize everyday life. Its scope includes health, career, email, the personal workspace and other responsibilities that usually live across separate applications.

@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Claude Code: shared meanings, different wrappers — Deeper explanation
 
 The AGENTS.md fallback is version- and configuration-dependent; it is not a promise that

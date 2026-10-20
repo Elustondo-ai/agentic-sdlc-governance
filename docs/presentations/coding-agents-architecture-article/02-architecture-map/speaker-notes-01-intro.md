@@ -1,1 +1,3 @@
+# Architecture map — Introduction
+
 The article describes reasoning, repository knowledge, planning, tool use, feedback, memory, and controls. Rather than adopt its seven-layer count literally, we can organize its observations into four cooperating mechanisms and cross-cutting governance.

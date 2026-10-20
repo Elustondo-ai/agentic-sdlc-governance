@@ -1,0 +1,78 @@
+--- a/docs/presentations/baseline-documentation/build_presentation.py
++++ b/docs/presentations/baseline-documentation/build_presentation.py
+@@ -1,4 +1,4 @@
+-"""Assemble the ordered source folders through the unchanged ASDLC builder."""
++"""Assemble the ordered source folders through the unchanged ASDG builder."""
+ from __future__ import annotations
+ 
+ import base64
+@@ -15,7 +15,7 @@
+ BUILD = DECK / "build"
+ CONSUMER = DECK.parents[2]
+ METHOD = CONSUMER.parent / "agentic-sdlc-governance"
+-SKILL = METHOD / "asdlc/skills/asdlc-presentation"
++SKILL = METHOD / "asdg/skills/asdg-presentation"
+ RUN = "20261014T205435Z-149579087f"
+ CACHE = DECK.parent / f"baseline-review-{RUN}" / "build"
+ sys.path[:0] = [str(CACHE / "python-deps"), str(SKILL / "src"), str(SKILL / "types")]
+--- a/docs/presentations/baseline-review-20261014T205435Z-149579087f/export_review.py
++++ b/docs/presentations/baseline-review-20261014T205435Z-149579087f/export_review.py
+@@ -15,9 +15,9 @@
+ BUILD = DECK / "build"
+ CONSUMER = DECK.parents[2]
+ METHOD = CONSUMER.parent / "agentic-sdlc-governance"
+-SKILL = METHOD / "asdlc/skills/asdlc-presentation"
++SKILL = METHOD / "asdg/skills/asdg-presentation"
+ RUN = "20261014T205435Z-149579087f"
+-RECEIPT = CONSUMER / f"docs/asdlc/00-governance/logs/{RUN}__baseline-run.json"
++RECEIPT = CONSUMER / f"docs/asdg/00-governance/logs/{RUN}__baseline-run.json"
+ sys.path[:0] = [str(BUILD/"python-deps"), str(SKILL/"src"), str(SKILL/"types")]
+ import ctypes
+ ctypes.CDLL("/opt/homebrew/lib/libcairo.2.dylib", mode=ctypes.RTLD_GLOBAL)
+@@ -25,7 +25,7 @@
+ from pptx import Presentation
+ from export import build, stable_pptx
+ 
+-STAGES = {"00":"Governance", "01":"Context and Domain Analysis", "02":"Intent",
++STAGES = {"00":"Governance", "01":"Context and Domain Analysis", "02":"Purpose",
+           "03":"System Model and Use Cases", "04":"Benchmarks, Test Strategy and Success Criteria",
+           "05":"High-Level Solution Design and Architecture", "08":"Low-Level Design",
+           "11":"Operational Reality, DevOps and User Acceptance"}
+@@ -42,15 +42,34 @@
+     path.write_text(json.dumps(value, indent=2, ensure_ascii=False)+"\n")
+ 
+ 
++def recorded_path(value):
++    """Resolve preserved evidence only through the supported migration receipt."""
++    receipt = CONSUMER / "docs/asdg/00-governance/logs/namespace-migration.json"
++    mapping = {row["before_path"]: row["after_path"]
++               for row in json.loads(receipt.read_text())["files"]}
++    old = Path(value)
++    if old.is_absolute():
++        old = old.relative_to(CONSUMER)
++    key = old.as_posix()
++    if key not in mapping:
++        raise FileNotFoundError(f"Historical artifact is absent from the migration receipt: {key}")
++    relative = Path(mapping[key])
++    target = CONSUMER / relative
++    if (relative.is_absolute() or ".." in relative.parts or target.is_symlink()
++            or not target.resolve().is_relative_to(CONSUMER.resolve())):
++        raise ValueError("Invalid migrated evidence path")
++    return relative
++
++
+ def load_topics():
+     receipt = json.loads(RECEIPT.read_text())
+     assert receipt["run_id"] == RUN and receipt["status"] == "CAPTURED_NEEDS_HUMAN_REVIEW"
+-    artifacts = {e["path"]:e for invocation in receipt["invocations"] for e in invocation["artifacts"]}
++    artifacts = {str(recorded_path(e["path"])):e for invocation in receipt["invocations"] for e in invocation["artifacts"]}
+     assert len(artifacts) == 48
+-    assert {str(CONSUMER/p) for p in artifacts} == set(receipt["written_artifacts"])
++    assert {str(CONSUMER/p) for p in artifacts} == {str(CONSUMER / recorded_path(p)) for p in receipt["written_artifacts"]}
+     for rel, entry in artifacts.items():
+         path = CONSUMER/rel
+-        assert RUN in path.parts and "baselines" in path.parts
++        assert path.is_relative_to(CONSUMER / "docs/asdg") and "current" in path.parts
+         assert not path.is_symlink() and path.is_file() and path.stat().st_nlink == 1
+         assert digest(path) == entry["sha256"], rel
+     topics = []

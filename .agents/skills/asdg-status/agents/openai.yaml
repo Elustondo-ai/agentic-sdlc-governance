@@ -1,0 +1,7 @@
+# AI-MODIFIED - 2026-10-18T20:50:25Z
+interface:
+  display_name: "ASDG Status"
+  short_description: "Inspect the current ASDG conversation focus"
+  default_prompt: "$asdg-status"
+policy:
+  allow_implicit_invocation: true

@@ -3,7 +3,7 @@
 <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#0b5fea" stroke-width="2.2"/></marker></defs>
 <rect x="0" y="0" width="1600" height="900" rx="0" fill="#fff"/>
 <rect x="0" y="0" width="1600" height="9" rx="0" fill="#0b5fea"/>
-<text x="86" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#0b5fea">ASDLC  /  CODEX • CLAUDE • COPILOT</text>
+<text x="86" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#0b5fea">ASDG  /  CODEX • CLAUDE • COPILOT</text>
 <text x="86" y="142" font-family="Inter,Arial,Helvetica,sans-serif" font-size="52" font-weight="760" fill="#102148">AGENTS.md: standing instructions with scope</text>
 <text x="88" y="190" font-family="Inter,Arial,Helvetica,sans-serif" font-size="25" font-weight="430" fill="#5f6f87">A root agreement plus local specialization—not a named-agent manifest.</text>
 <rect x="86" y="803" width="1428" height="62" rx="12" fill="#102148"/>
@@ -14,11 +14,11 @@
 <text x="114" y="278" font-family="DejaVu Sans Mono,monospace" font-size="22" font-weight="650" fill="#cde6ff">AGENTS.md  +  optional nested AGENTS.md</text>
 <text x="117" y="339" font-family="DejaVu Sans Mono,monospace" font-size="22" font-weight="470" fill="#d9eeff"># Project root / AGENTS.md</text>
 <text x="117" y="382" font-family="DejaVu Sans Mono,monospace" font-size="22" font-weight="470" fill="#d9eeff">Read intent and relevant design before changes.</text>
-<text x="117" y="425" font-family="DejaVu Sans Mono,monospace" font-size="22" font-weight="470" fill="#d9eeff">Use the ASDLC component convention.</text>
+<text x="117" y="425" font-family="DejaVu Sans Mono,monospace" font-size="22" font-weight="470" fill="#d9eeff">Use the ASDG component convention.</text>
 <text x="117" y="468" font-family="DejaVu Sans Mono,monospace" font-size="22" font-weight="470" fill="#d9eeff">Preserve evidence and human review gates.</text>
 <text x="117" y="511" font-family="DejaVu Sans Mono,monospace" font-size="22" font-weight="470" fill="#8295b7"></text>
 <text x="117" y="554" font-family="DejaVu Sans Mono,monospace" font-size="22" font-weight="470" fill="#d9eeff"># Optional nested instructions:</text>
-<text x="117" y="597" font-family="DejaVu Sans Mono,monospace" font-size="22" font-weight="470" fill="#d9eeff">asdlc/components/video-builder/AGENTS.md</text>
+<text x="117" y="597" font-family="DejaVu Sans Mono,monospace" font-size="22" font-weight="470" fill="#d9eeff">asdg/components/video-builder/AGENTS.md</text>
 <text x="117" y="640" font-family="DejaVu Sans Mono,monospace" font-size="22" font-weight="470" fill="#d9eeff">  → rules scoped to the video builder</text>
 <rect x="1013" y="240" width="498" height="536" rx="18" fill="#f6f9fd" stroke="#dbe4f1" stroke-width="1.6"/>
 <text x="1043" y="285" font-family="Inter,Arial,Helvetica,sans-serif" font-size="28" font-weight="740" fill="#102148">Codex instruction chain</text>

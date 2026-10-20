@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-01T13:53Z
-
 # AA06 — When orchestration becomes explicit
 
 A small agent with a few carefully designed tools is a serious architecture when the request and its control boundary are simple. We should not add a graph merely to look more advanced.

@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T14:23Z
-
 # A2 — A small SDLC2 implementation
 
 This is a proposed implementation shape for a bounded SDLC2 experiment. The repository guidance points to the governing commit definition. That definition, its schema and its status record live together. A discoverable skill coordinates the procedure, while a Node.js implementation owns the stable mechanics.

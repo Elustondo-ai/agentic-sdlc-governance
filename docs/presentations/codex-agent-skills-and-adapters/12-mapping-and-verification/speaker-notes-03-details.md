@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Compatibility is measured, not assumed — Deeper explanation
 
 Our acceptance suite should verify five boundaries: discovery, invocation, tool

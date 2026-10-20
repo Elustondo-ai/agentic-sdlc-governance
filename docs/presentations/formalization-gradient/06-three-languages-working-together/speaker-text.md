@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T14:23Z
-
 # FG05 — Three languages working together
 
 In a LifeBuckets development project, I would distinguish three interacting languages.

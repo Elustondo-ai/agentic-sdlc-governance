@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-01T13:53Z
-
 # AA03 — A bounded runtime agent
 
 Our first runtime design deliberately has one agent and a small set of application tools. The product authenticates the user and supplies a bounded task. The managed harness runs the model and tool loop. The product implements the tools and decides whether each requested effect is permitted.

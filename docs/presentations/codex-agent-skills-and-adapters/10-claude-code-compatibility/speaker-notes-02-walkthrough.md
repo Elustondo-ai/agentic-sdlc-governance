@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Claude Code: shared meanings, different wrappers — Visual walkthrough
 
 The left panel identifies what we can share: project knowledge, skill definitions, and the

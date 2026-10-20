@@ -1,0 +1,7 @@
+# AI-MODIFIED - 2026-10-19T14:15:33Z
+interface:
+  display_name: ASDG Focus 02 — Purpose
+  short_description: Clarify purpose and outcomes; no parameter needed
+  default_prompt: $asdg-focus-02-purpose
+policy:
+  allow_implicit_invocation: false

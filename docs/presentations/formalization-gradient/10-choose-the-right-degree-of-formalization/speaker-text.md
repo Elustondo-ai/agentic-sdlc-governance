@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T14:23Z
-
 # FG08 — Choose the right degree of formalization
 
 The meta-rule is to make the implementation choice visible. For a recurring readiness assessment, we can compare an interpretative procedure, a hybrid skill with validators, and a more executable workflow.

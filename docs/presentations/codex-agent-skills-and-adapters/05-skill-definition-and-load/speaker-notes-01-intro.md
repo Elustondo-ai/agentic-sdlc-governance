@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # SKILL.md: a reusable, task-conditioned capability — Opening narration
 
 A skill is a task-specific package. It contains a required SKILL.md, often with references,

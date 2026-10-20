@@ -1,0 +1,833 @@
+{
+  "local_reconciliations": [
+    {
+      "recorded_at": "2026-10-19T16:18:51Z",
+      "outcome": "BOUNDED_LOCAL_MAINTENANCE_APPLIED_STATIC_VALIDATION_PASSED",
+      "authority": "Pablo explicitly confirmed: Yes, use agentic-sdlc-governance for this pass. Registry remains unchanged; this grants no canonical-home migration, human file approval or consumer write authority.",
+      "git": {
+        "branch": "main",
+        "head": "efaa1b3b88d894244e97226489affe4ca9c21f3d",
+        "origin": "https://github.com/Elustondo-ai/agentic-sdlc-governance.git",
+        "staged_changes": false,
+        "initial_modified_tracked_files": 20,
+        "worktrees": 1,
+        "preserved_existing_work": true,
+        "conflict_names_found": false,
+        "limits": "No search of unrelated directories; no remote fetch or pull. Live Drive synchronization not established."
+      },
+      "routing": {
+        "registry": "https://docs.google.com/document/d/1mQm9Gs20KG5Gh0_kJOWuO38sfAf2SfOrJNZlKpI0r0s",
+        "stable_agent_id": "SDLC2",
+        "registered_home": "https://drive.google.com/drive/folders/1WthXfFM6iJjtPH8JOC1agmwWMPyWI3CF",
+        "registered_manifest": "Not registered in the SDLC2 entry; home listing contains AGENTS.md and README.md",
+        "observed_discrepancy": "Registered home is SDLC2-AGENT with a different historical lifecycle. It is not the handoff source checkout 1CzNrE_O6Vb39BK5d4EXtA3Uj2kSAYoqL.",
+        "decision_needed": null,
+        "writes": "Local target authorized for this pass; registered SDLC2 home remains unresolved and unchanged."
+      },
+      "already_present": {
+        "purpose_display": "Already present in catalogue, lifecycle baseline, Stage 02 definition/contract/procedure, native adapter and fixed Focus metadata.",
+        "perspectives": "Shared contract, map and template present; direct role links 00–10; effective runtime path also covers 11–12.",
+        "focus_status": "Twelve thin fixed-selector adapters plus generic Focus and Status; canonical workflows under asdlc/skills/.",
+        "source_receipt": "All 26 acknowledged/prepared existing or new targets match the earlier record's after hashes; four denied originals match its before hashes. This establishes local alignment with that receipt, not current live sync."
+      },
+      "changed_paths": [
+        "asdlc/README.md",
+        "asdlc/00-governance/types/lifecycle-rules.json",
+        "asdlc/11-operational-reality-devops-and-user-acceptance/AGENTS.md",
+        "asdlc/12-observability-insights-and-learning/AGENTS.md",
+        "asdlc/skills/asdg-focus/rename-chat.md",
+        "asdlc/skills/asdg-focus/TRY-IT.md",
+        "asdlc/skills/asdg-focus/session-policy.md",
+        "asdlc/skills/asdg-status/status-format.md"
+      ],
+      "changes": "Integrated intended candidate deltas into original filenames; added direct shared-perspective links for 11/12, Purpose wording in package index and lifecycle output; corrected Focus/Status examples and acceptance exercise; documented actual exposed rename schema. Markdown timestamps updated; previous PME markers preserved.",
+      "candidate_disposition": [
+        {
+          "candidate": "asdlc/11-operational-reality-devops-and-user-acceptance/AGENTS_NEW.md",
+          "original": "asdlc/11-operational-reality-devops-and-user-acceptance/AGENTS.md",
+          "disposition": "INTEGRATED_IN_ORIGINAL; original matched HEAD before edit; candidate retained byte-for-byte. Markdown original uses actual edit timestamp; all other candidate content matches."
+        },
+        {
+          "candidate": "asdlc/12-observability-insights-and-learning/AGENTS_NEW.md",
+          "original": "asdlc/12-observability-insights-and-learning/AGENTS.md",
+          "disposition": "INTEGRATED_IN_ORIGINAL; original matched HEAD before edit; candidate retained byte-for-byte. Markdown original uses actual edit timestamp; all other candidate content matches."
+        },
+        {
+          "candidate": "asdlc/README_NEW.md",
+          "original": "asdlc/README.md",
+          "disposition": "INTEGRATED_IN_ORIGINAL; original matched HEAD before edit; candidate retained byte-for-byte. Markdown original uses actual edit timestamp; all other candidate content matches."
+        },
+        {
+          "candidate": "asdlc/00-governance/types/lifecycle-rules_NEW.json",
+          "original": "asdlc/00-governance/types/lifecycle-rules.json",
+          "disposition": "INTEGRATED_IN_ORIGINAL; original matched HEAD before edit; candidate retained byte-for-byte. Markdown original uses actual edit timestamp; all other candidate content matches."
+        }
+      ],
+      "coverage": [
+        {
+          "stage": "00",
+          "mapped": true,
+          "effective_shared_contract_path": true,
+          "direct_role_link": "PRESENT"
+        },
+        {
+          "stage": "01",
+          "mapped": true,
+          "effective_shared_contract_path": true,
+          "direct_role_link": "PRESENT"
+        },
+        {
+          "stage": "02",
+          "mapped": true,
+          "effective_shared_contract_path": true,
+          "direct_role_link": "PRESENT"
+        },
+        {
+          "stage": "03",
+          "mapped": true,
+          "effective_shared_contract_path": true,
+          "direct_role_link": "PRESENT"
+        },
+        {
+          "stage": "04",
+          "mapped": true,
+          "effective_shared_contract_path": true,
+          "direct_role_link": "PRESENT"
+        },
+        {
+          "stage": "05",
+          "mapped": true,
+          "effective_shared_contract_path": true,
+          "direct_role_link": "PRESENT"
+        },
+        {
+          "stage": "06",
+          "mapped": true,
+          "effective_shared_contract_path": true,
+          "direct_role_link": "PRESENT"
+        },
+        {
+          "stage": "07",
+          "mapped": true,
+          "effective_shared_contract_path": true,
+          "direct_role_link": "PRESENT"
+        },
+        {
+          "stage": "08",
+          "mapped": true,
+          "effective_shared_contract_path": true,
+          "direct_role_link": "PRESENT"
+        },
+        {
+          "stage": "09",
+          "mapped": true,
+          "effective_shared_contract_path": true,
+          "direct_role_link": "PRESENT"
+        },
+        {
+          "stage": "10",
+          "mapped": true,
+          "effective_shared_contract_path": true,
+          "direct_role_link": "PRESENT"
+        },
+        {
+          "stage": "11",
+          "mapped": true,
+          "effective_shared_contract_path": true,
+          "direct_role_link": "PRESENT"
+        },
+        {
+          "stage": "12",
+          "mapped": true,
+          "effective_shared_contract_path": true,
+          "direct_role_link": "PRESENT"
+        }
+      ],
+      "checks": [
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 python3 asdlc/00-governance/src/validate_agents.py",
+          "exit": 0,
+          "status": "PASSED",
+          "result": "13 package/adapters structurally valid."
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s asdlc/00-governance/tests -p test_agent_packages.py",
+          "exit": 0,
+          "status": "PASSED",
+          "result": "17 tests in 1.144s; OK."
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s asdlc/00-governance/tests -p test_project_status.py",
+          "exit": 0,
+          "status": "PASSED",
+          "result": "16 tests in 8.048s; OK."
+        },
+        {
+          "command": "Read-only Python assertions over current catalogue, adapters, shared skill links and integrated candidates",
+          "exit": 0,
+          "status": "PASSED",
+          "result": "13 direct/effective paths; twelve fixed explicit-only adapters; aliases; current Purpose examples; repository TOML/YAML subset; line limits; four candidates match originals apart from Markdown edit timestamps."
+        },
+        {
+          "command": "git diff --check",
+          "exit": 0,
+          "status": "PASSED"
+        },
+        {
+          "command": "elustondo-asdlc status --json and asdg status --json in provider",
+          "exit": 1,
+          "status": "BLOCKED",
+          "result": "Provider checkout refuses consumer initialization/state inspection. No init, sprint or trust mutation attempted."
+        },
+        {
+          "command": "elustondo-asdlc verify in Speaker Coach during inspection",
+          "exit": 1,
+          "status": "FAILED",
+          "result": "Methodology catalogue changed. Review migration before reinitializing."
+        },
+        {
+          "command": "Native desktop acceptance, picker discovery, title update, retention, independent conversation, resume/compaction",
+          "status": "NOT RUN",
+          "result": "Exercise prepared in asdlc/skills/asdg-focus/TRY-IT.md. Maintenance conversation remains maintainer context; no specialists spawned or activated."
+        }
+      ],
+      "remaining_compatibility": [
+        "ASDLC-02",
+        "asdlc_02",
+        "asdlc/02-intent",
+        "asdlc-elicit-intent",
+        "asdg-focus-02-intent",
+        "purpose / 02-purpose / intent / 02-intent / 02 / ASDLC-02 / asdlc_02 selectors"
+      ],
+      "synchronization_limits": "No search of unrelated directories; no remote fetch or pull. Live Drive synchronization not established.",
+      "official_sources": [
+        "https://developers.openai.com/codex/skills/",
+        "https://developers.openai.com/codex/guides/agents-md/",
+        "https://developers.openai.com/codex/app-server/"
+      ],
+      "speaker_coach": {
+        "root": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-speaker-coach",
+        "head": "9a26fd12fa6b3291f9eb17650c218d6604e6c267",
+        "working_tree": "Clean before and after read-only inspection",
+        "provider": "Installed ~/.local/bin/asdg and elustondo-asdlc wrappers directly reference the supplied agentic-sdlc-governance/asdg. Linked development checkout; installed CLI reports 0.1.4, initialization records 0.1.3.",
+        "binding": "Recorded catalogue hash f6aeb3811207ca069828956aa56f08f4f41f4d0a78dc9d8dd81fffb57ef71358 differs from current catalogue. Structure INVALID; implementation BLOCKED. Do not treat computed MISSING stages as absent artifacts.",
+        "sprint": "Direct .asdlc/sprint.json read: inactive. Status cannot reliably expose sprint while binding invalid.",
+        "recommendation": "asdg next: REPAIR_STATE — Repair ASDLC structure or state, then run asdg verify.",
+        "discovery": "No local .agents directory and no ASDG skills exposed in this conversation's available-skills catalogue. A provider CLI binding does not establish desktop skill discovery.",
+        "separation": "Consumer artifacts in docs/asdlc and state in .asdlc; reusable definitions remain in provider. No copied role packages found in inspected consumer paths.",
+        "purpose_snapshot": {
+          "subject": "Speaker Coach product outcomes",
+          "horizon": "Unspecified",
+          "baseline": "Current checkout 9a26fd12... plus historical documentation baseline 20261014T205435Z-149579087f; static inspection on 19 October 2026",
+          "intended": "Documented aspiration: glanceable speaking-duration feedback to support concise interview answers. Accepted target, exact user population, practice/live use and timing policy are not established.",
+          "actual": "Current app.js/index.html implement microphone volume detection, elapsed-turn timing, GOOD/LAND IT/STOP colors, strict >25/>35-second thresholds, >2500ms silence reset and manual state buttons. These are static code observations; no browser execution, calibrated accuracy or improved interview outcomes observed. Historical notes report 45/75 documented thresholds, a conflict not resolved by current code. Their source/ and context/ provenance paths are not present at the current root, so historical assertions require qualification.",
+          "planned": "No accepted delivery commitment established. Existing Stage 07 advice is advisory and sprint inactive. Speaker identification, transcription and semantic coaching remain historical proposals, not selected work or implemented outcomes."
+        },
+        "proposed_follow_on": [
+          {
+            "paths": [
+              ".asdlc/project.json"
+            ],
+            "change": "Review the precise catalogue migration and use a supported binding migration if approved; no blind reinitialization/hash edit.",
+            "dependencies": "Canonical target decision, provider reconciliation, explicit consumer-scope approval",
+            "validation": "elustondo-asdlc verify and asdg status/next no longer fail on catalogue mismatch; preserve sprint and lifecycle state."
+          },
+          {
+            "paths": [
+              "docs/asdlc/02-intent/README.md"
+            ],
+            "change": "Change current display heading to Purpose; preserve folder identifier and historical baseline records.",
+            "validation": "Current label Purpose; compatibility links unchanged."
+          },
+          {
+            "paths": [
+              "docs/asdlc/02-intent/purpose-snapshot.md"
+            ],
+            "change": "Candidate new derived snapshot referencing existing outcome, capability-status and timing-policy notes; state current code evidence and missing historical source provenance; no changes to goals or timings.",
+            "validation": "Intended/Actual/Planned distinguish documented aspirations, static code, runtime unknowns and candidate work; <=50 lines."
+          },
+          {
+            "paths": [
+              ".agents/skills/asdg-focus-*/SKILL.md",
+              ".agents/skills/asdg-focus-*/agents/openai.yaml",
+              ".agents/skills/asdg-focus/SKILL.md",
+              ".agents/skills/asdg-status/SKILL.md"
+            ],
+            "change": "Proposed only if consumer-native discovery is wanted: twelve thin fixed-role adapters plus shared Focus/Status adapters to verified provider, retaining single-source policy. Exact adapter basenames are the twelve listed in the handoff; a concrete patch requires subsequent approval.",
+            "validation": "Real consumer desktop picker/invocation, target retention and no copied canonical policy. No global install or plugin package."
+          }
+        ],
+        "changes_performed": "None"
+      },
+      "short_manual_test": [
+        "Open a fresh governance conversation; supply Target project: Speaker Coach (read-only).",
+        "Invoke asdg-status; expect no specialist and no rename.",
+        "Select ASDG Focus 02 — Purpose; expect ASDLC-02 canonical reads and 02 Purpose — Speaker Coach title outcome.",
+        "Invoke status and ask What is your role?; expect retained Purpose and accurate title receipt.",
+        "Request Intended / Actual / Planned; then invalid selector, Architecture switch, explicit clear. Test new conversation/resume/compaction separately."
+      ],
+      "not_performed": "No PME approval, release, commit, push, deployment, dependency installation, trust change or lifecycle mutation performed.",
+      "historical_receipts": "All previous top-level fields, file hashes, Drive denial reports and prepared-artifact validation claims are preserved as historical evidence. This local reconciliation event is separate and does not claim a release or human approval."
+    }
+  ],
+  "recorded_at": "2026-10-19T14:32:18Z",
+  "request": "Apply Intended / Actual / Planned to 00 governance and stages 01-12, and rename Stage 02 display name to Purpose.",
+  "workspace": {
+    "name": "agentic-sdlc-governance",
+    "drive_folder_id": "1CzNrE_O6Vb39BK5d4EXtA3Uj2kSAYoqL"
+  },
+  "source_cutoff": "2026-10-19T13:53:00Z",
+  "prepared_at": "2026-10-19T14:15:33Z",
+  "overall_outcome": "PARTIALLY_APPLIED_WITH_EXPLICIT_PERMISSION_BLOCKERS",
+  "counts": {
+    "existing_updates_prepared": 27,
+    "existing_updates_acknowledged": 23,
+    "existing_updates_denied": 4,
+    "new_shared_documents_acknowledged": 3,
+    "role_entries_updated": 11,
+    "role_entries_denied": 2,
+    "role_perspectives_mapped": 13
+  },
+  "meaning": "Shared model applies to all 13 responsibilities through root/runtime guidance and mapping; local entry-point links for stages 11 and 12 remain pending.",
+  "preserved": [
+    "Stable role IDs, native names, paths, skill callable names",
+    "All permission, evaluation, approval and sprint-state boundaries",
+    "Existing project artifacts and state",
+    "Historical slides and records",
+    "Registry routing and legacy SDLC2 home"
+  ],
+  "not_performed": [
+    "No app runtime acceptance test",
+    "No Mac sync verification",
+    "No consuming-project state audit",
+    "No Git commit or push",
+    "No file moves or deletions",
+    "No permission changes or approval markers",
+    "No attempt to bypass denied file access"
+  ],
+  "readback_scope": "Six critical targets; raw byte comparison for picker YAML; all other installed files supported by upload acknowledgements.",
+  "validation": {
+    "all_13_roles_read_and_changed": true,
+    "all_13_roles_link_model": true,
+    "all_13_views_mapped": true,
+    "markdown_at_most_50_lines": true,
+    "stable_catalog_ids_paths_modes": true,
+    "valid_yaml_and_toml": true,
+    "focus_name_compatible_explicit_only": true,
+    "native_permissions_instructions_unchanged": true,
+    "no_human_approval_added": true,
+    "every_existing_target_keeps_drive_id": true,
+    "no_project_state_or_executable_changes": true,
+    "new_reference_targets_resolve": true,
+    "native_codex_test": "NOT RUN",
+    "local_drive_sync": "NOT VERIFIED",
+    "governed_project_actual_state": "NOT AUDITED",
+    "note": "Static checks validate artifact structure and preserved boundaries, not model adherence or runtime enforcement.",
+    "complete_patch_apply_and_reverse_check_in_isolated_replica": true,
+    "purpose_picker_bytes_verified_after_write": true,
+    "prepared_files_match_manifest": true,
+    "validation_scope": "Prepared artifacts only unless explicitly labeled post-write. Four prepared updates were denied by Drive."
+  },
+  "files": [
+    {
+      "key": "role-00.md",
+      "path": "asdlc/00-governance/AGENTS.md",
+      "file_id": "1sT4tGJxVvPHEXwQVQCAe-EOTUlL03Chl",
+      "parent_id": null,
+      "before_sha256": "b183c3c2f5460ba0f04c6e370161ac978d39d171b53a55d2343044b6fbf16f99",
+      "after_sha256": "54567d3d0d01a1c8bf427d1e0853926bc2aa476d3a794d99077786876a611532",
+      "bytes": 2841,
+      "url": "https://drive.google.com/file/d/1sT4tGJxVvPHEXwQVQCAe-EOTUlL03Chl/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "role-01.md",
+      "path": "asdlc/01-context-and-domain-analysis/AGENTS.md",
+      "file_id": "11R5zIJJcN3TvNlNdjko3cKTmxr8JDVbG",
+      "parent_id": null,
+      "before_sha256": "3b268668dc5dbf3d94a15eceec08eb0baf9523d08012ffb59d43fb4b74819db5",
+      "after_sha256": "09403a6a7537a00672073255435db51d74c9656f9ba9514afccd717a2993c234",
+      "bytes": 2738,
+      "url": "https://drive.google.com/file/d/11R5zIJJcN3TvNlNdjko3cKTmxr8JDVbG/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "role-02.md",
+      "path": "asdlc/02-intent/AGENTS.md",
+      "file_id": "19ikhOr3EHAiMQqsDNs9-dMY9KDd7pOto",
+      "parent_id": null,
+      "before_sha256": "19d9428b0764d4230392338de6e70da86fb3e984efd27494bf123b1d3430ebab",
+      "after_sha256": "bfe6269df447b9527f980940ea37e247ac360f4494ec7d1641b6a763c03bdd78",
+      "bytes": 2837,
+      "url": "https://drive.google.com/file/d/19ikhOr3EHAiMQqsDNs9-dMY9KDd7pOto/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Read back full text through Drive fetch."
+    },
+    {
+      "key": "role-03.md",
+      "path": "asdlc/03-system-model-and-use-cases/AGENTS.md",
+      "file_id": "1GoJDB9y1iiyD5_TkF6YazRYCjsQBHHUz",
+      "parent_id": null,
+      "before_sha256": "f4860e01101103a72f963ce370e857d02121ff46b00589a32633b4ecda44aa77",
+      "after_sha256": "0c1e22d018e54fa421d7de224e14fa4e24dc707f1afd1530cdb0c7c5d8efd787",
+      "bytes": 2688,
+      "url": "https://drive.google.com/file/d/1GoJDB9y1iiyD5_TkF6YazRYCjsQBHHUz/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "role-04.md",
+      "path": "asdlc/04-benchmarks-test-strategy-and-success-criteria/AGENTS.md",
+      "file_id": "1Al6Jn7e0t5ZWscPULDJtN_HZxeHod4uv",
+      "parent_id": null,
+      "before_sha256": "43de6769524778ea51f96aec455ab672645414dc6e19628cb5a45a69a47b246c",
+      "after_sha256": "1228cf41e802200797d12f722c4e50fc1d00358cb54004184c4f05daf52c8c94",
+      "bytes": 2792,
+      "url": "https://drive.google.com/file/d/1Al6Jn7e0t5ZWscPULDJtN_HZxeHod4uv/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "role-05.md",
+      "path": "asdlc/05-high-level-solution-design-and-architecture/AGENTS.md",
+      "file_id": "1uPJahqqmRe0kf3BNEFyRyMvBai6_qyOc",
+      "parent_id": null,
+      "before_sha256": "f4234d0aaeb685d6dfac03bd8a3ac1623e7a864a31c02f74a90349709db451d1",
+      "after_sha256": "9dd1cd6ee2ce1f8dc622125dd6596890304f28a9611c3f1059d1e41d853c8238",
+      "bytes": 3131,
+      "url": "https://drive.google.com/file/d/1uPJahqqmRe0kf3BNEFyRyMvBai6_qyOc/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "role-06.md",
+      "path": "asdlc/06-viable-proof-of-concept/AGENTS.md",
+      "file_id": "1YlLwHtIrSE1QMthjG0L9z3WyibamdEZp",
+      "parent_id": null,
+      "before_sha256": "7a1a5f9f5a4ee6ea11d77c06f26b5568e2df83bdba7f07b0a0643e5dc63e9d0b",
+      "after_sha256": "f6f28e84064e6340cc2809cbb464637c3036fd9e5fdd72962e13540c3fa15863",
+      "bytes": 2775,
+      "url": "https://drive.google.com/file/d/1YlLwHtIrSE1QMthjG0L9z3WyibamdEZp/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "role-07.md",
+      "path": "asdlc/07-planning/AGENTS.md",
+      "file_id": "1tIwmf9LK3bFn-LcGDG8k3R9Jhqv0f8CD",
+      "parent_id": null,
+      "before_sha256": "c7b9fdc13327ccd038d9ce0941f1baa4ec5d536663ac9b9c4a0afae2361ed1af",
+      "after_sha256": "f50481cd160f501d51996cbbebf7331bb887d1390e023ca77ccda5abf3069e1f",
+      "bytes": 2698,
+      "url": "https://drive.google.com/file/d/1tIwmf9LK3bFn-LcGDG8k3R9Jhqv0f8CD/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "role-08.md",
+      "path": "asdlc/08-low-level-design/AGENTS.md",
+      "file_id": "1sxEBVfE8M4_iR-r5shV6n0Pzfw75U_Lc",
+      "parent_id": null,
+      "before_sha256": "c261561ea3af30ab1a7f898cbe6abc815a39aa1cb5931779e2a6f8f94c500c66",
+      "after_sha256": "446ce8b0535b817a2b36b6577aa6a93047d03946974b6e83519c7d3ddb7d88cb",
+      "bytes": 2747,
+      "url": "https://drive.google.com/file/d/1sxEBVfE8M4_iR-r5shV6n0Pzfw75U_Lc/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "role-09.md",
+      "path": "asdlc/09-build-and-test-cycle/AGENTS.md",
+      "file_id": "1DJnEkFxOEs-hrhy3iKxfEn3R6sYZX-76",
+      "parent_id": null,
+      "before_sha256": "dbd88aaeae7c9539de7d21605f81e8b12efe10f1081189e2bc41b954a726a650",
+      "after_sha256": "e12fe896e4b20bb9421a7acf1b4598292109593841b46c970c1ebd1f47b15579",
+      "bytes": 2790,
+      "url": "https://drive.google.com/file/d/1DJnEkFxOEs-hrhy3iKxfEn3R6sYZX-76/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "role-10.md",
+      "path": "asdlc/10-document-review-and-release/AGENTS.md",
+      "file_id": "1hkYBs5TD55RHt8EwZQPZzrEJPpx0IRFD",
+      "parent_id": null,
+      "before_sha256": "998c6db80fd015de484953ad50877b65ec68c959db08f45bf6de5b8e92e77125",
+      "after_sha256": "4d1c68cad29a8ffd33a8a1e1e64a5922f5a0b9ca8af7e2eed7bc2a4f31835a38",
+      "bytes": 2831,
+      "url": "https://drive.google.com/file/d/1hkYBs5TD55RHt8EwZQPZzrEJPpx0IRFD/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "role-11.md",
+      "path": "asdlc/11-operational-reality-devops-and-user-acceptance/AGENTS.md",
+      "file_id": "1791TL71OvBHh5nxncbd7OnHBta-pA0Mu",
+      "parent_id": null,
+      "before_sha256": "f7960d0e0ff26d257b3b29e782de7c489784c9e1fce3b9b2c866554528f6bbf8",
+      "after_sha256": "db1b58c4b3973fd50c4ea870b538c7b229761d7f3ac2b7fd6b7b3318f227c4e6",
+      "bytes": 2816,
+      "url": "https://drive.google.com/file/d/1791TL71OvBHh5nxncbd7OnHBta-pA0Mu/view",
+      "write_outcome": "DENIED_UNCHANGED",
+      "readback": "No write performed after app authorization denial.",
+      "error": {
+        "http_status": 403,
+        "reason": "appNotAuthorizedToFile"
+      }
+    },
+    {
+      "key": "role-12.md",
+      "path": "asdlc/12-observability-insights-and-learning/AGENTS.md",
+      "file_id": "1opbqB0oqiwz757T9Y5UPkW9h7uZl_SvY",
+      "parent_id": null,
+      "before_sha256": "a29d6e52f60c6f82bf19537e68b5ce876fe9e3160944bf320b5f7d39c893da38",
+      "after_sha256": "1906d611ef411b2732b14026cb0c483c3fecb68399451ac750a7e53abd007727",
+      "bytes": 2758,
+      "url": "https://drive.google.com/file/d/1opbqB0oqiwz757T9Y5UPkW9h7uZl_SvY/view",
+      "write_outcome": "DENIED_UNCHANGED",
+      "readback": "No write performed after app authorization denial.",
+      "error": {
+        "http_status": 403,
+        "reason": "appNotAuthorizedToFile"
+      }
+    },
+    {
+      "key": "root-AGENTS.md",
+      "path": "AGENTS.md",
+      "file_id": "1uxrUCgD-OWND41Dhl59ptoq-ndoX7Dzq",
+      "parent_id": null,
+      "before_sha256": "9a32fe67034d9dfe2795d29ce960ae5dbac734cec35d70f224c554c1ae71a8fa",
+      "after_sha256": "33ef63ee682d65f04469a2388c1f04cd0095b453c960d040dfb5a60c63848880",
+      "bytes": 4148,
+      "url": "https://drive.google.com/file/d/1uxrUCgD-OWND41Dhl59ptoq-ndoX7Dzq/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Read back full text through Drive fetch."
+    },
+    {
+      "key": "asdlc-README.md",
+      "path": "asdlc/README.md",
+      "file_id": "1YFOsyxUi0Gj7_NTpj3qmGRqpQX5fFvAd",
+      "parent_id": null,
+      "before_sha256": "a2ca0b49dd43f85de22eef5ca3cbc5c9ef6616ad208f8bca22eead839d3d0084",
+      "after_sha256": "7cc53dc24e8761f4c7bbac17b0c95dd3c8a34f73cda69eaa6ea9285646f0ef21",
+      "bytes": 2763,
+      "url": "https://drive.google.com/file/d/1YFOsyxUi0Gj7_NTpj3qmGRqpQX5fFvAd/view",
+      "write_outcome": "DENIED_UNCHANGED",
+      "readback": "No write performed after app authorization denial.",
+      "error": {
+        "http_status": 403,
+        "reason": "appNotAuthorizedToFile"
+      }
+    },
+    {
+      "key": "lifecycle-baseline.md",
+      "path": "docs/status/lifecycle-baseline.md",
+      "file_id": "1t_G4akPp_a7NMgJpFbksW_dWmsWxynE1",
+      "parent_id": null,
+      "before_sha256": "e0962de8879d74aa4638d5ddd523ee8cc23805f5fa2975a133f4e2c1f41e16e1",
+      "after_sha256": "ad442eda7180001c7212647c0bde1db9da54d915bc7c1e68eca36befd5abff6d",
+      "bytes": 2429,
+      "url": "https://drive.google.com/file/d/1t_G4akPp_a7NMgJpFbksW_dWmsWxynE1/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "agent-catalog.json",
+      "path": "asdlc/00-governance/types/agent-catalog.json",
+      "file_id": "1oHK1tHR17k3xSt5Czgd60mcQxHZ98BFy",
+      "parent_id": null,
+      "before_sha256": "f6aeb3811207ca069828956aa56f08f4f41f4d0a78dc9d8dd81fffb57ef71358",
+      "after_sha256": "14d8e63a811552b0e7d7f123819e1ea411b6373d1521407f5efeaeddd70b6563",
+      "bytes": 5771,
+      "url": "https://drive.google.com/file/d/1oHK1tHR17k3xSt5Czgd60mcQxHZ98BFy/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "lifecycle-rules.json",
+      "path": "asdlc/00-governance/types/lifecycle-rules.json",
+      "file_id": "1kS6-RQgzBleo42uW5l0QKh3Z5J1OTb81",
+      "parent_id": null,
+      "before_sha256": "b3601f1d8e0ba9cbc45a55c2f73510ef39e9abfcbe406876db5ce263f4938489",
+      "after_sha256": "82fd286c0c6c9d2385679fa8fffe7338c9735766fdf526732d632a62b0f5640a",
+      "bytes": 2915,
+      "url": "https://drive.google.com/file/d/1kS6-RQgzBleo42uW5l0QKh3Z5J1OTb81/view",
+      "write_outcome": "DENIED_UNCHANGED",
+      "readback": "No write performed after app authorization denial.",
+      "error": {
+        "http_status": 403,
+        "reason": "appNotAuthorizedToFile"
+      }
+    },
+    {
+      "key": "runtime-contract.md",
+      "path": "asdlc/00-governance/docs/runtime-contract.md",
+      "file_id": "1X9zbFdSIp3VQrC1Veqi2OkqMfMo58sMW",
+      "parent_id": null,
+      "before_sha256": "66e3a1f2a0abb0eb9bcbd9bb119988f9752f3b8e098630d057470cd4dbec3311",
+      "after_sha256": "5e40122ec44d6a04478df2c282f3d7a1e301675e7c527c2efac3bf81bbe7e826",
+      "bytes": 3456,
+      "url": "https://drive.google.com/file/d/1X9zbFdSIp3VQrC1Veqi2OkqMfMo58sMW/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "interaction-contract.md",
+      "path": "asdlc/00-governance/types/interaction-contract.md",
+      "file_id": "1lnu2_EHhasG92vgiQVlyoyfu8t0qijOW",
+      "parent_id": null,
+      "before_sha256": "50a10ca512f170fb3fa185427ac9ec5e47cdb1ab4fcf70e0ddc9195f22aa86a3",
+      "after_sha256": "b49cd0bebd02b8cd83e211ac5cdd6364006f13086616c5379b6d70c475561c47",
+      "bytes": 1695,
+      "url": "https://drive.google.com/file/d/1lnu2_EHhasG92vgiQVlyoyfu8t0qijOW/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "purpose-contract.md",
+      "path": "asdlc/02-intent/types/contract.md",
+      "file_id": "1lnMOVxF7Wp7F0LExuZvFAqZ09ppO_mT8",
+      "parent_id": null,
+      "before_sha256": "60f88097a2752dac5a090023d52e43d5dd3b20573686c65d91110360d6b70b6d",
+      "after_sha256": "b870212ec1dc0748348abd6a304e4c58654b14c2d0fc33f299640fc155739850",
+      "bytes": 1903,
+      "url": "https://drive.google.com/file/d/1lnMOVxF7Wp7F0LExuZvFAqZ09ppO_mT8/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "purpose-procedure.md",
+      "path": "asdlc/02-intent/skills/elicit-intent/SKILL.md",
+      "file_id": "11Dwo45Hhtd4Uv3UCmuA5agBwqBayhFAl",
+      "parent_id": null,
+      "before_sha256": "4e74ded40c2eaa3f46bbc15de88c232993d290977be63d3cefad13ff42fda05e",
+      "after_sha256": "7fbbe1a84a31ec12cd10db10adbc139135b28936e5c6c08036bf159123f38fe9",
+      "bytes": 1404,
+      "url": "https://drive.google.com/file/d/11Dwo45Hhtd4Uv3UCmuA5agBwqBayhFAl/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "purpose-README.md",
+      "path": "asdlc/02-intent/README.md",
+      "file_id": "1u5bEFyN4S47d8tdaK3x19rf90BYw_mEL",
+      "parent_id": null,
+      "before_sha256": "1c56947d4bf92504fd6a66b2d5e89701f9ae13ce6f207c80c6f8d9ede69897ab",
+      "after_sha256": "00abffc059488787d4e894b4b02236d21cca673e970b4a349118f4b956e4bc93",
+      "bytes": 1729,
+      "url": "https://drive.google.com/file/d/1u5bEFyN4S47d8tdaK3x19rf90BYw_mEL/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "asdlc_02.toml",
+      "path": ".codex/agents/asdlc_02.toml",
+      "file_id": "1R9D_8H4vElmc5ow_y4X2VkCJWrnuVz35",
+      "parent_id": null,
+      "before_sha256": "377537ef87ec44513c0ee27c06d9eb1fd7c16728c5c1e6c3e812eb076b8e8c31",
+      "after_sha256": "57d43c6e5050f189c851ab47fa39e61cc5273f346794dfd33bdf7bec40bf152e",
+      "bytes": 998,
+      "url": "https://drive.google.com/file/d/1R9D_8H4vElmc5ow_y4X2VkCJWrnuVz35/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "focus-02-SKILL.md",
+      "path": ".agents/skills/asdg-focus-02-intent/SKILL.md",
+      "file_id": "19urt9FjMc5KOiSmXyDtWUMoIw25o2mS-",
+      "parent_id": null,
+      "before_sha256": "8cb954691fd49d9c744d6fdc0c45a0a7c6c487066474d6e521a9f8e83f0f6930",
+      "after_sha256": "caf510a9f760957916beb4134c0fec5be564fd573b57dbe763b350f92857efe8",
+      "bytes": 1372,
+      "url": "https://drive.google.com/file/d/19urt9FjMc5KOiSmXyDtWUMoIw25o2mS-/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    },
+    {
+      "key": "focus-02-openai.yaml",
+      "path": ".agents/skills/asdg-focus-02-intent/agents/openai.yaml",
+      "file_id": "1TZ1I8nAycJoh0_15dstkEMLy2Pz1eXFD",
+      "parent_id": null,
+      "before_sha256": "6dbd25151a60eee0c8008433ea974eb4984185ccb2cf4bd9e8bde53f7b1db36f",
+      "after_sha256": "0bf4eb19a2b06be8bea3d2c5030e7a0723d646ef7c61c97afc62d868fec5042a",
+      "bytes": 244,
+      "url": "https://drive.google.com/file/d/1TZ1I8nAycJoh0_15dstkEMLy2Pz1eXFD/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Downloaded after write and compared SHA-256."
+    },
+    {
+      "key": "focus-choices.md",
+      "path": "asdlc/skills/asdg-focus/focus-choices.md",
+      "file_id": "1b9jaf_BADJR5bDGMuAuDEhjG0acJkJXP",
+      "parent_id": null,
+      "before_sha256": "7fa77aeed8f7e169fe1ec13f58dc117ca74e849a20794a8727f0210d3f0d39bf",
+      "after_sha256": "9573176cf2c86d4fb4bc1b5636911310ce2ded840171c2c9baf05dc5fe6675e6",
+      "bytes": 2250,
+      "url": "https://drive.google.com/file/d/1b9jaf_BADJR5bDGMuAuDEhjG0acJkJXP/view",
+      "write_outcome": "UPDATED_ACKNOWLEDGED",
+      "readback": "Read back full text through Drive fetch."
+    },
+    {
+      "key": "stage-perspectives.md",
+      "path": "asdlc/00-governance/docs/stage-perspectives.md",
+      "file_id": "1zqHaAlbP3oBu5OECeAdozzMY4eVESRZK",
+      "parent_id": "1uvwr41rWZkOCyX51rXCyGoMZ1CccCP4D",
+      "before_sha256": null,
+      "after_sha256": "d152bd7df09a6edc6d06b0b7ca0966152ccbd42267f1be4726b791a1ee63298d",
+      "bytes": 3486,
+      "url": "https://drive.google.com/file/d/1zqHaAlbP3oBu5OECeAdozzMY4eVESRZK/view",
+      "write_outcome": "CREATED_ACKNOWLEDGED",
+      "readback": "Read back full text through Drive fetch."
+    },
+    {
+      "key": "stage-perspectives-map.md",
+      "path": "asdlc/00-governance/docs/stage-perspectives-map.md",
+      "file_id": "1umZi_Ivd-r91o6QNJH13Z-KyHURD08c0",
+      "parent_id": "1uvwr41rWZkOCyX51rXCyGoMZ1CccCP4D",
+      "before_sha256": null,
+      "after_sha256": "e2731073a0bbed0defe97013e65c191e51ad78b77c09f18a4247ec741c995922",
+      "bytes": 4568,
+      "url": "https://drive.google.com/file/d/1umZi_Ivd-r91o6QNJH13Z-KyHURD08c0/view",
+      "write_outcome": "CREATED_ACKNOWLEDGED",
+      "readback": "Read back full text through Drive fetch."
+    },
+    {
+      "key": "stage-snapshot-template.md",
+      "path": "asdlc/00-governance/docs/stage-snapshot-template.md",
+      "file_id": "1vjN2ldUkET6_4I2PWPCJ14jw8sHvGbnM",
+      "parent_id": "1uvwr41rWZkOCyX51rXCyGoMZ1CccCP4D",
+      "before_sha256": null,
+      "after_sha256": "324ac76a9f76b3cf0e9488f43d15c2ed940cbf76a9d20f6304ae29b66a338e35",
+      "bytes": 1774,
+      "url": "https://drive.google.com/file/d/1vjN2ldUkET6_4I2PWPCJ14jw8sHvGbnM/view",
+      "write_outcome": "CREATED_ACKNOWLEDGED",
+      "readback": "Not individually read back after write; connector acknowledgement only."
+    }
+  ],
+  "residual_patch": "pending-permission-edits.patch contains only the four denied changes; not applied automatically.",
+  "namespace_readability_reconciliations": [
+    {
+      "recorded_at": "2026-10-19T19:26:29Z",
+      "outcome": "PROVIDER_REFACTORED_CONSUMER_STATE_MIGRATED_EXPORTER_IMPLEMENTATION_PENDING_NATIVE_TRUST",
+      "authority": "Pablo authorized local provider maintenance, readable documentation, ASDG namespace migration, physical perspectives, Speaker Coach integration, and a narrowly scoped namespace-migration sprint. No human content approval inferred.",
+      "changes": [
+        "Source launcher relocated to bin/asdg before implementation directory relocation to asdg/.",
+        "All thirteen catalogue/native role names, adapter filenames, internal names, fixed selectors, skills, code, configuration and active provider examples use ASDG/asdg.",
+        "Stage 02 uses Purpose and 02-purpose; normal initialization creates all thirteen intended/current/planned views.",
+        "One nonblank-source-line counter is shared by generation, validators and documentation tests. Blank lines and indentation are preserved.",
+        "Active provider Markdown opens with titles or required skill YAML; visible review declarations preserved against old hashes before removal.",
+        "Baseline and advice destinations use each stage current/ directory; technical provenance remains in JSON receipts.",
+        "Speaker Coach state/documentation migrated via migrate-namespace; original identity, initialization revision, evidence and modes preserved.",
+        "Speaker Coach living and presentation navigation uses docs/asdg/ and Purpose; original captures remain intact."
+      ],
+      "consumer": {
+        "migration_receipt": "../agentic-speaker-coach/docs/asdg/00-governance/logs/namespace-migration.json",
+        "file_hashes_and_modes_verified_at_migration": 72,
+        "project_id": "agentic-speaker-coach",
+        "structure_ok": true,
+        "application_files_unchanged": [
+          "app.js",
+          "index.html"
+        ],
+        "original_sprint_preserved_by_migration": true,
+        "subsequent_authorized_transition": {
+          "operation": "asdg sprint start",
+          "sprint_id": "asdg-namespace-migration",
+          "scope": [
+            "docs/presentations/"
+          ],
+          "reason": "Valid subset of the explicitly authorized namespace sprint; governance/policy paths remain excluded.",
+          "application_permission": "BLOCKED: app.js is outside sprint scope",
+          "native_hook_trust": "NOT_ASSESSED; no exporter implementation performed"
+        },
+        "presentation_documentation_units": 16,
+        "maximum_nonblank_source_lines": 42,
+        "broken_living_source_links": 0
+      },
+      "verification": {
+        "governance": {
+          "tests_run": 240,
+          "skipped": 4,
+          "result": "OK",
+          "note": "Native integration skips are not runtime certification."
+        },
+        "component": {
+          "tests_run": 3,
+          "result": "OK"
+        },
+        "package_validator": "PASS: thirteen role packages, TOML identities, skill and definition links; structural only.",
+        "migration_tests": "Nine neutral fixture tests: dry-run, preservation, repeat/init, conflicts, unknown binding, rollback, reference mapping, evidence conflict and linked-source refusal.",
+        "documentation_tests": "50 nonblank passes, 51 fails; blank/whitespace invariance; code indentation and source wrapping semantics; exact-state approval isolation; readable idempotent initialization.",
+        "provider_active_namespace_remnants": [],
+        "source_links": "No broken active provider source links; five absent derived build links are documented build outputs. Historical report citation is archival.",
+        "provider_historical_records_compared": 115,
+        "provider_historical_mismatches": [],
+        "consumer_historical_files_compared_to_HEAD": 85,
+        "consumer_historical_mismatches": [],
+        "four_NEW_candidates": "All unchanged against the pre-namespace snapshot.",
+        "diff_check": "PASS in both repositories",
+        "rendered_review": {
+          "method": "Marked HTML derivatives converted to native RTF and Quick Look previews; source and native text checked.",
+          "sources": [
+            "asdg/00-governance/docs/documentation-standard.md",
+            "asdg/skills/asdg-documentation/example.md",
+            "../agentic-speaker-coach/docs/asdg/02-purpose/README.md"
+          ],
+          "findings": "Readable hierarchy, paragraphs, evidence distinctions and navigation reviewed. Native conversion drops two Purpose headings in its thumbnail despite both appearing in source/HTML/RTF text; that derivative is not a certification of the Codex Markdown renderer.",
+          "limitations": "Browser-based rendering unavailable; no bypass of file-URL policy. Initial dark preview contrast failure corrected in review derivatives only."
+        },
+        "presentation_suite": "NOT RUN successfully: available runtimes lack required defusedxml and/or python-pptx; no dependency install performed.",
+        "skill_quick_validation": "BLOCKED: PyYAML unavailable; static/package validation passed.",
+        "presentation_note_parser": {
+          "actual_function_inputs": 156,
+          "narration_or_metadata_drift_beyond_namespace": [],
+          "method": "Executed actual read_notes function extracted from current source without importing unavailable rendering dependencies; compared old snapshot narration/metadata with the namespace-only transformation.",
+          "limit": "No full presentation build or native slide rendering."
+        }
+      },
+      "intentional_legacy_material": [
+        "Explicit migration module, migration tests, raw legacy catalogue, identity map and unapplied exporter patch under types/migrations/.",
+        "Immutable historical execution reports, logs, review declarations and _NEW source candidates; old spellings retain historical identity.",
+        "Speaker Coach historical capture notes, presentation copies and original migration/review records.",
+        "Two Speaker Coach exporter scripts remain pending native trusted-hook setup; old imports are a known blocked integration dependency, not canonical aliases."
+      ],
+      "pending": [
+        {
+          "dependency": "Native trusted hook",
+          "action": "Review migrated Speaker Coach .codex/hooks.json through Codex /hooks; user confirmation requested. No trust changes made."
+        },
+        {
+          "dependency": "Exporter implementation",
+          "prepared_patch": "asdg/00-governance/types/migrations/speaker-coach-exporters.patch",
+          "state": "UNAPPLIED",
+          "checks": "Both proposed scripts compile; two proposed receipt resolver checks pass. Full export not executed."
+        },
+        {
+          "dependency": "Historical export archive",
+          "missing": "../agentic-speaker-coach/docs/asdg/00-governance/logs/20261014T205435Z-149579087f__baseline-run.json",
+          "action": "Restore the exact original receipt/archive if rebuilding that historical review; never reconstruct or invent it."
+        },
+        {
+          "dependency": "Global launcher",
+          "action": "Separately authorize installation update; existing global wrappers point to the former root source file. Use provider bin/asdg with the configured Python meanwhile."
+        },
+        {
+          "dependency": "Registry routing",
+          "action": "External SDLC2 Registry still points to its prior home; unchanged under the authorized local-target exception."
+        },
+        {
+          "dependency": "Native discovery/execution",
+          "action": "Separate live Codex discovery, invocation and trusted-hook checks required; static validation alone does not establish them."
+        }
+      ],
+      "preservation": {
+        "provider_snapshot": "/private/tmp/asdg-provider-before-7dzypu8w.tar",
+        "current_uncommitted_work": "Preserved; no reset, checkout, commit, push, deployment or human approval.",
+        "Life_Buckets": "Untouched; disposable neutral fixtures only.",
+        "external_registry_global_installation_hook_trust_permissions": "Unchanged."
+      }
+    }
+  ]
+}

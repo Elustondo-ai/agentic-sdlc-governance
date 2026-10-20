@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # GitHub Copilot: skills align; named agents differ — Opening narration
 
 GitHub Copilot gives us a useful simplification: it recognizes repository skills under

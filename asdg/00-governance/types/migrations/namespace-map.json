@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "scope": "Explicit identity-only migration; legacy values are not active aliases",
+  "identities": {
+    "ASDLC-NN": "ASDG-NN",
+    "ASDLC-COORDINATOR": "ASDG-COORDINATOR",
+    "asdlc_NN": "asdg_NN",
+    "asdlc_coordinator": "asdg_coordinator",
+    "elustondo.ai/asdlc": "elustondo.ai/asdg",
+    "asdlc/": "asdg/",
+    "docs/asdlc/": "docs/asdg/",
+    ".asdlc/": ".asdg/",
+    "asdlc-": "asdg-",
+    "02-intent": "02-purpose",
+    "elicit-intent": "elicit-purpose",
+    "root launcher asdg": "bin/asdg"
+  },
+  "preserved": ["stage numbers", "responsibilities", "project identity", "sprint decisions", "historical evidence", "permissions"],
+  "unchanged_platform_names": [".codex/", ".agents/", ".claude/", "AGENTS.md", "SKILL.md"]
+}

@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # AGENTS.md: standing instructions with scope — Visual walkthrough
 
 The code panel shows a short repository-wide agreement. It instructs an agent to consult

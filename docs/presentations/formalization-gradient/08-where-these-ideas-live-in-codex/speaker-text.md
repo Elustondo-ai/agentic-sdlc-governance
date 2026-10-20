@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T14:23Z
-
 # FG06 — Where these ideas live in Codex
 
 Codex gives us several places to express a workflow. Project instructions establish applicable guidance. A skill describes a reusable procedure and can include references or scripts. Tools provide callable capabilities.

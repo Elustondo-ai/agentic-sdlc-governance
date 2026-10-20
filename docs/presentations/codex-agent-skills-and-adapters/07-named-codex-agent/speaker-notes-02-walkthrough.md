@@ -1,8 +1,6 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Named agent: a Codex TOML role, not a skill — Visual walkthrough
 
-Read the example line by line. The name asdlc_reviewer is the Codex runtime identifier. The
+Read the example line by line. The name asdg_reviewer is the Codex runtime identifier. The
 description explains when it should be delegated work.
 
 The read-only sandbox requests a constrained environment. The developer instructions specify

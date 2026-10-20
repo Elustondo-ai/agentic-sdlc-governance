@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # One methodology. Three execution environments. — Opening narration
 
 This chapter is about implementation, not a new methodology. We want Codex to use our

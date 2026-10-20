@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T14:23Z
-
 # FG04 — When “Person” becomes a defined concept
 
 The word person carries many meanings in ordinary conversation. In this illustrative contact system, we give Person a narrower definition: a human contact represented by a stable identifier.

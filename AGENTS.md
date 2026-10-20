@@ -1,27 +1,25 @@
-AI-MODIFIED - 2026-10-14T03:15:33Z
-
 # Agentic SDLC repository instructions
 
-This repository develops ASDLC: a human-governed, agent-operable software development method.
-`docs/` explains the product and records its development; `asdlc/` contains reusable implementation.
+This repository develops ASDG: a human-governed, agent-operable software development method.
+`docs/` explains the product and records its development; `asdg/` contains reusable implementation.
 Read the root README and the task-relevant source material before changing files.
 Current explicit instructions from Pablo override older repository notes or recorded proposals.
 
 ## Presentation work
 
-Use `asdlc/skills/asdlc-presentation/SKILL.md` for presentation creation, maintenance, and builds.
+Use `asdg/skills/asdg-presentation/SKILL.md` for presentation creation, maintenance, and builds.
 The `.agents` entry points to that canonical capability; do not duplicate its standard.
 Presentation source folders under `docs/presentations/` are authoritative; generated exports are not.
 Each presentation owns a local ignored `build/`. Never stage generated decks or previews.
-Preserve original meaning, speaker notes, source references, and existing review markers.
+Preserve meaning, source references and review events through the shared documentation standard.
 
 ## Reusable skills and platform discovery
 
-- Canonical skill definitions and implementations live only under `asdlc/skills/`.
-- `.agents/skills/` exposes the two skills to Codex and GitHub Copilot; `.claude/skills/` exposes them to Claude Code. Adapters are discovery entry points, **not** separate policies or implementation copies.
-- For creating or validating component structure, use `asdlc/skills/asdlc-component/SKILL.md`.
-- For documentation/presentations, use `asdlc/skills/asdlc-presentation/SKILL.md`.
-- For video production, the presentation skill may use `asdlc/components/video-builder/`; its current eSpeak implementation is a proof of concept, not an approved high-quality narration engine.
+- Canonical skill definitions and implementations live only under `asdg/skills/`.
+- `.agents/skills/` exposes skills to Codex and GitHub Copilot; `.claude/skills/` retains the existing Claude adapters. Adapters are discovery entry points, **not** separate policies or implementation copies.
+- For creating or validating component structure, use `asdg/skills/asdg-component/SKILL.md`.
+- For documentation/presentations, use `asdg/skills/asdg-presentation/SKILL.md`.
+- For video production, the presentation skill may use `asdg/components/video-builder/`; its current eSpeak implementation is a proof of concept, not an approved high-quality narration engine.
 - Before declaring a skill operational on a platform, verify its native discovery and an actual invocation on that platform. A folder or successful unit test alone is insufficient.
 - Skills define capabilities; a new named agent requires a distinct responsibility boundary and separate review.
 
@@ -29,17 +27,27 @@ Preserve original meaning, speaker notes, source references, and existing review
 
 Keep changes bounded and reviewable; preserve unrelated local work.
 Distinguish implemented, tested, proposed, and human-approved states.
+For all 13 roles, use [Intended / Actual / Planned](asdg/00-governance/docs/stage-perspectives.md) in stage assessments.
+Canonical identities and Purpose paths follow the catalogue; legacy identities exist only in migration records.
 Do not reconstruct or renumber the lifecycle from memory; read `docs/status/lifecycle-baseline.md`.
 Do not infer authorization for publication, pushes, deployment, deletion, or permission changes from a plan or a review marker.
 Pablo's explicit request to perform a consequential operation applies only to that operation and its stated scope.
 Never add or advance PME-APPROVED without explicit approval of the exact file state.
-For native SKILL YAML, retain valid syntax and fail closed on whole-file approval until the status convention is resolved.
+Follow [the documentation standard](asdg/00-governance/docs/documentation-standard.md) for readable prose and hash-bound review history.
+Native SKILL YAML stays first; exact-state human approval remains fail-closed.
 Report actual verification and any failed operation; never describe unexecuted work as complete.
 
 ## Local CLI bootstrap
-ASDLC-owned automation uses Python >= 3.9; governed applications may use any language.
-Use root `./asdg install`; if its executable bit is absent, use `python3 asdg install`.
-See `asdlc/00-governance/docs/install-cli.md` for startup-file changes and limitations.
+
+ASDG-owned automation uses Python >= 3.9; governed applications may use any language.
+Use root `./bin/asdg install`; if its executable bit is absent, use `python3 bin/asdg install`.
+See `asdg/00-governance/docs/install-cli.md` for startup-file changes and limitations.
 `asdg init` initializes the caller's Git root, using the existing catalogue without copying roles.
 The CLI generates project hook configuration; it never grants hook trust, starts sprints, or grants approval.
-`status`, `next`, guard permissions and the local dashboard share the [state engine](asdlc/00-governance/docs/state-engine.md).
+`status`, `next`, guard permissions and the local dashboard share the [state engine](asdg/00-governance/docs/state-engine.md).
+
+## ASDG conversation focus and status
+
+Use [the session policy](asdg/skills/asdg-focus/session-policy.md) on every turn; a new conversation has no specialist focus unless explicitly activated here.
+Select one of twelve named `asdg-focus-NN-*` skills; generic `asdg-focus <alias>` remains supported. Follow the shared `asdg/skills/asdg-focus/SKILL.md`; use `asdg-status` for inspection.
+Status never activates or clears a role. Keep focus in this conversation only; never infer it from folders, titles, other threads or project/sprint state.

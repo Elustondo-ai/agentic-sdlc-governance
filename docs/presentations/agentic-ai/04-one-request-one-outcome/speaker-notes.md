@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-01T13:53Z
-
 # AA04 — One request, one observable outcome
 
 Let us follow one proposed LifeBuckets request. The user asks for a review of today's open actions. The agent asks the application for a scoped read. The application checks identity and policy, returns records with identifiers, and records the read. The agent can then summarize the day and suggest a next action. At this point, it has changed nothing.

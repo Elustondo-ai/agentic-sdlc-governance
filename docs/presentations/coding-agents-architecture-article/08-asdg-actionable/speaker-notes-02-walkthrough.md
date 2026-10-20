@@ -1,0 +1,3 @@
+# Asdg actionable — Walkthrough
+
+The slide follows four actions. Document domain intent and contracts. Execute using portable skills and deliberately scoped agents. Evaluate against benchmarks and human interpretation. Learn from failures by updating both the system and its governing knowledge.

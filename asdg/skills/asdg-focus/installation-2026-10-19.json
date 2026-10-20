@@ -1,0 +1,324 @@
+{
+  "ai_modified": "2026-10-19T02:57:41Z",
+  "change": "Twelve fixed Focus discovery entries and native current-chat rename step",
+  "scope": "Existing Drive-backed agentic-sdlc-governance checkout; no change to consumer bindings, registry, native subagent definitions, permissions or lifecycle state",
+  "file_manifest": [
+    {
+      "path": ".agents/skills/asdg-focus/SKILL.md",
+      "sha256": "753034d710154ba93bf20620d0590c483c2f96a7339d0b35c6d38d14180bd1bf",
+      "bytes": 785,
+      "lines": 14,
+      "change": "modify",
+      "drive_id": "1Mfi8cSgBGNFwcx2cnCNiOqYz1dTlN7Ct"
+    },
+    {
+      "path": ".agents/skills/asdg-focus/agents/openai.yaml",
+      "sha256": "e6665a9c88bb2f4f0e86de9758f820cb1088458a2b98ef5e93aa0b094d8fd43b",
+      "bytes": 249,
+      "lines": 7,
+      "change": "modify",
+      "drive_id": "11YSSv5bRJFwzsfOGG2aGyeEEwntDDnA_"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-01-context/SKILL.md",
+      "sha256": "c22a86334770381414081c8955b7e7f668fce56f8fe52ee65ac3aabbde1ad047",
+      "bytes": 1315,
+      "lines": 19,
+      "change": "new",
+      "drive_id": "1P8PeIb7noIFijyHPBGWzQQ2GXTUVTUXA"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-01-context/agents/openai.yaml",
+      "sha256": "eda5b1478b40b9fc1a5e3cf41301df648bd15b565f579efd7f7f5e539f9a9cd4",
+      "bytes": 262,
+      "lines": 7,
+      "change": "new",
+      "drive_id": "1gGoAXId1nkGErXfxL2ieDZRae4YI1cdY"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-02-intent/SKILL.md",
+      "sha256": "8cb954691fd49d9c744d6fdc0c45a0a7c6c487066474d6e521a9f8e83f0f6930",
+      "bytes": 1275,
+      "lines": 19,
+      "change": "new",
+      "drive_id": "19urt9FjMc5KOiSmXyDtWUMoIw25o2mS-"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-02-intent/agents/openai.yaml",
+      "sha256": "6dbd25151a60eee0c8008433ea974eb4984185ccb2cf4bd9e8bde53f7b1db36f",
+      "bytes": 242,
+      "lines": 7,
+      "change": "new",
+      "drive_id": "1TZ1I8nAycJoh0_15dstkEMLy2Pz1eXFD"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-03-use-cases/SKILL.md",
+      "sha256": "f82fb9ec03d507abce9668228295b59d40c05f8b242acc05a5640f3722ed3eef",
+      "bytes": 1317,
+      "lines": 19,
+      "change": "new",
+      "drive_id": "1ccS6TMZmKdx5-tp50ruw24XBtd7V_oh6"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-03-use-cases/agents/openai.yaml",
+      "sha256": "62d78714754d7f0a9d20533bd508639b3e8b3b0c3dc739c4da13ee2faf436bbf",
+      "bytes": 263,
+      "lines": 7,
+      "change": "new",
+      "drive_id": "1CH75Z3PgS2NWo8Rz7qpN6KM69yG-7Uks"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-04-test-strategy/SKILL.md",
+      "sha256": "1bc3aa9d692c1a8fd86e6ac0b33df8c85c3feea9569f4b261bd4e33e256ee01a",
+      "bytes": 1329,
+      "lines": 19,
+      "change": "new",
+      "drive_id": "1I1DNz2vf2yBxwNI7R_TfVzQWkwSFGQt8"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-04-test-strategy/agents/openai.yaml",
+      "sha256": "6cceb64b25a9cc2d682674b6becec9c490b7c847a8c16294e52330e1f76d47ea",
+      "bytes": 269,
+      "lines": 7,
+      "change": "new",
+      "drive_id": "1N8W2EGx65lChtdRnIaWt4H-AA2hkFKsH"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-05-architecture/SKILL.md",
+      "sha256": "9190c68b92a32484910e307075451fbab2c5e68d19cf304c7a54530abfbd442d",
+      "bytes": 1321,
+      "lines": 19,
+      "change": "new",
+      "drive_id": "1d4MfsaEnNReStUy1lY31puEutaxTjy0b"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-05-architecture/agents/openai.yaml",
+      "sha256": "ea0116e4e5a06acc9d2e25c0a04a3c78142bf35aca468928417a75c6135ef235",
+      "bytes": 265,
+      "lines": 7,
+      "change": "new",
+      "drive_id": "1gI2PFk2DWj2oaehj6RgYZcw9pHYVD8VT"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-06-poc/SKILL.md",
+      "sha256": "8ff2bbfa3edcbaa49d57b8cc79e7e0fd2333f578b116cc0e91914908eed6e2b6",
+      "bytes": 1303,
+      "lines": 19,
+      "change": "new",
+      "drive_id": "1PEn5uzpYWOPx5t0gx9u-zN8jLfYXBGk6"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-06-poc/agents/openai.yaml",
+      "sha256": "202c02d51ebefed7f325fa937c58727832fcaa63cf457cc2a833326bdb1a1ff7",
+      "bytes": 256,
+      "lines": 7,
+      "change": "new",
+      "drive_id": "1k_blNTV3f-OdazBquW6VzdyWRp9n1QYS"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-07-planning/SKILL.md",
+      "sha256": "b6a9c44314e3fb638754cf2cb3e8ec6214b60a214ec6f22b5c1c72c7dda19ca4",
+      "bytes": 1283,
+      "lines": 19,
+      "change": "new",
+      "drive_id": "1FI2DPR6jJ98srUTSpj1rZ3afoFv28phe"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-07-planning/agents/openai.yaml",
+      "sha256": "ad2daa3de3b64053383e6526ab35f003abf827e4045b153a48e33f94d1956b72",
+      "bytes": 246,
+      "lines": 7,
+      "change": "new",
+      "drive_id": "1pwKWpzhvIQhiKjfiIMrc6Ibs06ODoJHh"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-08-low-level-design/SKILL.md",
+      "sha256": "f3b142feba3c803451ad716440c1fb68c84d830040072ed896945e2f1c9e007a",
+      "bytes": 1315,
+      "lines": 19,
+      "change": "new",
+      "drive_id": "1PC5hWDKWYZFVdLSGmY1n8lAygPndrOai"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-08-low-level-design/agents/openai.yaml",
+      "sha256": "0c6f42eae9d701d43a9ea436bfad261f9e6fbbbbb55638cb7e697edc38487068",
+      "bytes": 262,
+      "lines": 7,
+      "change": "new",
+      "drive_id": "1DioMbaeX_faDmXzr1yu8OUrWeHhQT97Z"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-09-build-test/SKILL.md",
+      "sha256": "c440deaee406a2b6a01e8de12ef370bcb4c7c862feba95a7bdad6862a41a5228",
+      "bytes": 1307,
+      "lines": 19,
+      "change": "new",
+      "drive_id": "1r_mYtC4T2ykUxS3kF__inDknuFz1uW3Z"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-09-build-test/agents/openai.yaml",
+      "sha256": "4eabf9ae6308c26d35a8683e15356690cabcddbe97800e37f4bfbcc301da15fc",
+      "bytes": 258,
+      "lines": 7,
+      "change": "new",
+      "drive_id": "1NFtPo89wo1VhyZEhwjyIvcdgVkvo7D3O"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-10-review-release/SKILL.md",
+      "sha256": "a4b407c8f053a105019e5d9c80bccd676b700e9e3416bbe77c170b86275dafb0",
+      "bytes": 1331,
+      "lines": 19,
+      "change": "new",
+      "drive_id": "1K6NUsdkKsewTmF4oMvOt8au3DEa5OqCy"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-10-review-release/agents/openai.yaml",
+      "sha256": "3dd87f6f9fe1212f6c133e3b8f47532da665a8c9b667894a84203550ee3bf11b",
+      "bytes": 270,
+      "lines": 7,
+      "change": "new",
+      "drive_id": "1f60ZfbWQ6DAyJd5VQch68ZtWfON7qbBJ"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-11-operations/SKILL.md",
+      "sha256": "12f60290ddb7b3b133f79a9d9203779029c40a4686096add2562c8936e639510",
+      "bytes": 1343,
+      "lines": 19,
+      "change": "new",
+      "drive_id": "1XwOZuCn06u0uH5tKjxVSFWKdePdz4i8F"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-11-operations/agents/openai.yaml",
+      "sha256": "03a64b0e04921808f15171d91a18d0660a1e31b714f2f18f301edb939b23f01c",
+      "bytes": 276,
+      "lines": 7,
+      "change": "new",
+      "drive_id": "1_xb7ebykyzondz8b0ARIRiq8EODqZDfe"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-12-insights/SKILL.md",
+      "sha256": "c57d567bf93c33a71f16136d8cedace8342cac50b74372d73a7b70be2f45c335",
+      "bytes": 1335,
+      "lines": 19,
+      "change": "new",
+      "drive_id": "1x9fEXvVAnWbIP2j8bFYLDLdBX-jNE1-m"
+    },
+    {
+      "path": ".agents/skills/asdg-focus-12-insights/agents/openai.yaml",
+      "sha256": "480598624f7b236f700403201b3e0aea34568e8008bacef0f3b42ee0494cfacd",
+      "bytes": 272,
+      "lines": 7,
+      "change": "new",
+      "drive_id": "1uraStTigpRolAVcKSIgjse-HggUvkIK1"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "9a32fe67034d9dfe2795d29ce960ae5dbac734cec35d70f224c554c1ae71a8fa",
+      "bytes": 3920,
+      "lines": 50,
+      "change": "modify",
+      "drive_id": "1uxrUCgD-OWND41Dhl59ptoq-ndoX7Dzq"
+    },
+    {
+      "path": "asdlc/skills/asdg-focus/SKILL.md",
+      "sha256": "364cbe115b965e0feded6caccdb847a4787aeca10086534751fa741a071d7627",
+      "bytes": 3731,
+      "lines": 47,
+      "change": "modify",
+      "drive_id": "1rhKleWLfBD5SidS7GuGpM-6IRrEHXRji"
+    },
+    {
+      "path": "asdlc/skills/asdg-focus/TRY-IT.md",
+      "sha256": "c6d1cbec9a65087cffeca4403de07e572136b059c6b80975fa30b53cc3a0e0ef",
+      "bytes": 3141,
+      "lines": 42,
+      "change": "modify",
+      "drive_id": "1ymRJJHSQJa6jZevwsozlFWAOn_kWGxG-"
+    },
+    {
+      "path": "asdlc/skills/asdg-focus/focus-choices.md",
+      "sha256": "7fa77aeed8f7e169fe1ec13f58dc117ca74e849a20794a8727f0210d3f0d39bf",
+      "bytes": 2167,
+      "lines": 29,
+      "change": "new",
+      "drive_id": "1b9jaf_BADJR5bDGMuAuDEhjG0acJkJXP"
+    },
+    {
+      "path": "asdlc/skills/asdg-focus/rename-chat.md",
+      "sha256": "df16b892b5ae9ac3bda2b69224e4654082426d64c09b1417c2de5a4db489bc48",
+      "bytes": 2860,
+      "lines": 40,
+      "change": "new",
+      "drive_id": "1pZ7yylZtHKgjihaJpgZ5Y0jTgewYBWta"
+    },
+    {
+      "path": "asdlc/skills/asdg-focus/session-policy.md",
+      "sha256": "5c39b975cea1db45c4668197aec1d65d78dc84060bf0ef0f58402ac75b5911f6",
+      "bytes": 3579,
+      "lines": 48,
+      "change": "modify",
+      "drive_id": "1moeGVd5kzeZs9PCj_og3JX1P-xlMFLoH"
+    },
+    {
+      "path": "asdlc/skills/asdg-status/SKILL.md",
+      "sha256": "e50dddfcc76fd68cbfb62eb56b1b8ffcce712ef38760120c08c69333081185a6",
+      "bytes": 2975,
+      "lines": 40,
+      "change": "modify",
+      "drive_id": "1D9yyLkKMFeb7UO0eGrk_dMGZmgsndjM1"
+    },
+    {
+      "path": "asdlc/skills/asdg-status/status-format.md",
+      "sha256": "058843a2dff305109394ab08fbd4559732e9ae0aa74646bc9c8df2cbadfbe5bb",
+      "bytes": 1861,
+      "lines": 37,
+      "change": "modify",
+      "drive_id": "18ItaB0SQ2ginzUW4Blq7ZZDrE0HTw8gj"
+    }
+  ],
+  "verification": {
+    "static_checks": {
+      "yaml_and_frontmatter": "PASS",
+      "all_markdown_at_most_50_lines": "PASS",
+      "twelve_unique_fixed_role_selectors": "PASS",
+      "fixed_entry_default_prompts": "PASS",
+      "explicit_only_focus_selection": "PASS",
+      "relative_workflow_links": "PASS",
+      "all_added_markdown_reference_targets": "PASS",
+      "catalogue_identity_consistency": "PASS",
+      "patch_apply_and_byte_comparison": "PASS",
+      "reverse_patch_check": "PASS"
+    },
+    "manual_review": {
+      "native_rename_only_no_internal_store_edits": true,
+      "rename_failure_preserves_focus": true,
+      "status_never_renames": true,
+      "canonical_roles_catalogue_permissions_unchanged": true
+    },
+    "native_runtime_tests": "NOT RUN",
+    "user_evidence": "Screenshot shows successful direct rename in Codex app; not a test of the updated Focus skills.",
+    "fixture_note": "Initial link test included an unchanged state-engine link outside the staged subset. Corrected test checks all added links and preserves unchanged links; no source change required.",
+    "drive_installation": {
+      "status": "COMPLETED",
+      "root_id": "1CzNrE_O6Vb39BK5d4EXtA3Uj2kSAYoqL",
+      "functional_files_written": 34,
+      "files_updated": 8,
+      "new_files": 26,
+      "named_focus_entries": 12,
+      "confirmed_writes": 34,
+      "metadata_directory_check": "12 new Focus folders plus 4 preserved existing skills observed",
+      "content_readback": [
+        "asdlc/skills/asdg-focus/SKILL.md",
+        "asdlc/skills/asdg-focus/rename-chat.md",
+        ".agents/skills/asdg-focus-02-intent/SKILL.md"
+      ],
+      "mac_sync": "NOT INSPECTED",
+      "app_picker_discovery": "NOT TESTED"
+    }
+  },
+  "deletions": [],
+  "moves": [],
+  "commits_or_pushes": false,
+  "human_approval": "NOT RECORDED",
+  "runtime_check": "Retry the named Intent entry in Codex after synchronization, then inspect ASDG Status and actual title."
+}

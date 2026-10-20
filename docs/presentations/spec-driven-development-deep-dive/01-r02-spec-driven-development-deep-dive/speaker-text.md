@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-27T17:04:47Z
-
 # R02 — Speaker text
 
 This reference is an article by Neo Kim in The System Design Newsletter, called Spec Driven Development — A Deep Dive. It illustrates the approach through Blitzy. We should treat it as a practitioner case study, rather than independent proof that a particular product or process is more effective.

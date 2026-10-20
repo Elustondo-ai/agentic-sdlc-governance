@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T14:23Z
-
 # FG03 — What is a domain-specific language?
 
 A domain-specific language is a language designed to express concepts and operations within a particular domain. It provides a vocabulary, ways to combine that vocabulary, and defined meanings.

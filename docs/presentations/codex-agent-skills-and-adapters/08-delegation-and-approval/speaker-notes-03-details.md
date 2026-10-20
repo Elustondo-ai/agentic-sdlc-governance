@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Delegation is a workflow; approval is a boundary — Deeper explanation
 
 Parallel subagents can reduce context pollution and divide read-heavy tasks, but they use

@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Configuration, tools, and enforcement are separate — Opening narration
 
 This slide closes a frequent gap between a documented workflow and an operating

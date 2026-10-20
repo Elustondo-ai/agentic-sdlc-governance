@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Codex: five mechanisms, five readers — Visual walkthrough
 
 AGENTS.md provides instructions that Codex loads according to its instruction-discovery

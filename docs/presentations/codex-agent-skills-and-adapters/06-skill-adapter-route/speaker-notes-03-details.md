@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Why an adapter exists at all — Deeper explanation
 
 The current repository has a presentation adapter, but the component-creation skill's

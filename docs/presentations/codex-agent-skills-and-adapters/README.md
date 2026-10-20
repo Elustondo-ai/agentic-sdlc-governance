@@ -1,8 +1,6 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Codex Agents, Skills and Platform Adapters
 
-**Purpose:** Implementation reference for ASDLC instruction files, skills, named agents, configuration and platform adapters.
+**Purpose:** Implementation reference for ASDG instruction files, skills, named agents, configuration and platform adapters.
 **Review state:** AI-authored draft, not PME-approved. No runtime integration claim.
 **Audience:** Codex-first engineers; Claude and Copilot compatible concepts.
 
@@ -22,21 +20,23 @@ Each numbered folder contains `slide.svg`, `speaker-notes-01-intro.md`, `speaker
 10. [Claude Code: shared meanings, different wrappers](10-claude-code-compatibility/slide.svg) · [Intro](10-claude-code-compatibility/speaker-notes-01-intro.md) · [Walkthrough](10-claude-code-compatibility/speaker-notes-02-walkthrough.md) · [Details](10-claude-code-compatibility/speaker-notes-03-details.md)
 11. [GitHub Copilot: skills align; named agents differ](11-copilot-compatibility/slide.svg) · [Intro](11-copilot-compatibility/speaker-notes-01-intro.md) · [Walkthrough](11-copilot-compatibility/speaker-notes-02-walkthrough.md) · [Details](11-copilot-compatibility/speaker-notes-03-details.md)
 12. [Compatibility is measured, not assumed](12-mapping-and-verification/slide.svg) · [Intro](12-mapping-and-verification/speaker-notes-01-intro.md) · [Walkthrough](12-mapping-and-verification/speaker-notes-02-walkthrough.md) · [Details](12-mapping-and-verification/speaker-notes-03-details.md)
-13. [ASDLC adoption: implement, inspect, then extend](13-asdlc-adoption-path/slide.svg) · [Intro](13-asdlc-adoption-path/speaker-notes-01-intro.md) · [Walkthrough](13-asdlc-adoption-path/speaker-notes-02-walkthrough.md) · [Details](13-asdlc-adoption-path/speaker-notes-03-details.md)
+13. [ASDG adoption: implement, inspect, then extend](13-asdg-adoption-path/slide.svg) · [Intro](13-asdg-adoption-path/speaker-notes-01-intro.md) · [Walkthrough](13-asdg-adoption-path/speaker-notes-02-walkthrough.md) · [Details](13-asdg-adoption-path/speaker-notes-03-details.md)
 
 ## Generated output
 
 [Open PowerPoint](build/codex-agent-skills-and-adapters.pptx) · [Detailed PowerPoint](build/codex-agent-skills-and-adapters-detailed.pptx) · [Preview](build/preview-detailed.png)
 **Generated files appear after build** and are excluded from Git. SVG and Markdown are authoritative.
-Build from repository root: `python3 asdlc/skills/asdlc-presentation/src/build.py --presentation docs/presentations/codex-agent-skills-and-adapters --narration detailed`.
+Build from repository root: `python3 asdg/skills/asdg-presentation/src/build.py --presentation docs/presentations/codex-agent-skills-and-adapters --narration detailed`.
 
 ## Evidence and caveats
 
 - Vendor docs checked 2026-10-09; exact runtime versions can alter behavior.
 - The shared conceptual role is portable; named agent profiles are **not** byte-for-byte portable across Codex, Claude and Copilot.
-- `.agents/skills/asdlc-component` adapter and platform agent definitions are **proposed**, not claimed installed.
+- `.agents/skills/asdg-component` adapter and platform agent definitions are **proposed**, not claimed installed.
 - Registry routing and repository source-of-truth are separate; this deck changes neither.
+
 ## Official references
+
 - [Codex AGENTS.md discovery](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
 - [Codex skill construction and discovery](https://learn.chatgpt.com/docs/build-skills)
 - [Codex subagents and named TOML](https://learn.chatgpt.com/docs/agent-configuration/subagents)

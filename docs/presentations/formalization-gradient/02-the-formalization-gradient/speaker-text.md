@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T14:23Z
-
 # FG02 — The formalization gradient
 
 Formalization reduces ambiguity by making names, structures, constraints and effects more explicit. The gradient starts with prose and moves through defined vocabulary, structured records and contracts to executable behavior.

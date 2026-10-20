@@ -1,1 +1,0 @@
-This is a review draft. It does not itself activate a sprint, commit a specification, change an agent definition, or grant Git permissions. Primary sources include the SDLC2 Workflow and the branch-lifecycle document.

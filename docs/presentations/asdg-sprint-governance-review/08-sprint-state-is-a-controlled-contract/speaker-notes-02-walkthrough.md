@@ -1,0 +1,3 @@
+# Sprint state is a controlled contract — Walkthrough
+
+The Elustondo.ai model identifies states including DRAFT, READY, IN_PROGRESS, AWAITING_INTEGRATION_TEST, AWAITING_CODE_REVIEW, AWAITING_APPROVAL, CHANGES_REQUIRED, BLOCKED, APPROVED and CLOSED. These are source-derived, not yet a unified approved ASDG state machine.

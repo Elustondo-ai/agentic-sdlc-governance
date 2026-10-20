@@ -1,1 +1,3 @@
+# Plan and execute — Introduction
+
 The article emphasizes planning before editing and shows a concrete sequence for improving performance or adding rate limiting. That discipline matters, but planning by itself is not a security or quality control.

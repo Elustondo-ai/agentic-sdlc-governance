@@ -1,1 +1,0 @@
-The branch lifecycle asks us to confirm the reviewed previous result, remote integration revision, and branch cleanup, and then base the next sprint on verified integration. The SDLC2 workflow says to create and switch to the new sprint branch before drafting its Sprint Plan.

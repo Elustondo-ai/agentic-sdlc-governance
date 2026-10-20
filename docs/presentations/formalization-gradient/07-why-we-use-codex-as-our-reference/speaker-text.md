@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T14:59Z
-
 # FG05a — Why we use Codex as our reference
 
 Why do we use Codex as the concrete reference in this chapter? It is our primary development agent, so we can connect the formalization gradient to mechanisms we actually use: project instructions, skills, tools and scripts. This is a practical architectural choice, rather than a claim that one vendor defines the whole discipline.

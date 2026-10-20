@@ -3,7 +3,7 @@
 <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#0b5fea" stroke-width="2.2"/></marker></defs>
 <rect x="0" y="0" width="1600" height="900" rx="0" fill="#fff"/>
 <rect x="0" y="0" width="1600" height="9" rx="0" fill="#0b5fea"/>
-<text x="86" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#0b5fea">ASDLC  /  CODEX • CLAUDE • COPILOT</text>
+<text x="86" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#0b5fea">ASDG  /  CODEX • CLAUDE • COPILOT</text>
 <text x="86" y="142" font-family="Inter,Arial,Helvetica,sans-serif" font-size="52" font-weight="760" fill="#102148">One methodology. Three execution environments.</text>
 <text x="88" y="190" font-family="Inter,Arial,Helvetica,sans-serif" font-size="25" font-weight="430" fill="#5f6f87">Separate governing meaning from how each agent runtime loads it.</text>
 <rect x="86" y="803" width="1428" height="62" rx="12" fill="#102148"/>
@@ -11,7 +11,7 @@
 <text x="1506" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="600" fill="#5f6f87" text-anchor="end">01 / 13</text>
 <rect x="88" y="260" width="446" height="445" rx="18" fill="#f5f8fc" stroke="#dbe4f1" stroke-width="1.6"/>
 <rect x="88" y="260" width="8" height="445" rx="4" fill="#0b5fea"/>
-<text x="115" y="314" font-family="Inter,Arial,Helvetica,sans-serif" font-size="27" font-weight="720" fill="#102148">ASDLC methodology</text>
+<text x="115" y="314" font-family="Inter,Arial,Helvetica,sans-serif" font-size="27" font-weight="720" fill="#102148">ASDG methodology</text>
 <text x="115" y="367" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="410" fill="#5f6f87">Stages, approvals, contracts,</text><text x="115" y="400" font-family="Inter,Arial,Helvetica,sans-serif" font-size="21" font-weight="410" fill="#5f6f87">evidence</text>
 <text x="115" y="675" font-family="Inter,Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#0b5fea">MEANING</text>
 <text x="115" y="653" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="460" fill="#5f6f87">Shared across tools</text>

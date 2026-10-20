@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Named agent: a Codex TOML role, not a skill — Opening narration
 
 A named agent is where we assign a specialized responsibility. Codex uses a TOML file for a

@@ -1,1 +1,3 @@
+# Plan and execute — Walkthrough
+
 We start with a measurable goal, establish the planned steps, execute only permitted operations, then verify the outcome. A plan does not grant authority for a production change. Execution permissions and decision gates are separate controls.

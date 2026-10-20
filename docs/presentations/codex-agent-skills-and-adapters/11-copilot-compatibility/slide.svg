@@ -3,7 +3,7 @@
 <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#0b5fea" stroke-width="2.2"/></marker></defs>
 <rect x="0" y="0" width="1600" height="900" rx="0" fill="#fff"/>
 <rect x="0" y="0" width="1600" height="9" rx="0" fill="#0b5fea"/>
-<text x="86" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#0b5fea">ASDLC  /  CODEX • CLAUDE • COPILOT</text>
+<text x="86" y="68" font-family="Inter,Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#0b5fea">ASDG  /  CODEX • CLAUDE • COPILOT</text>
 <text x="86" y="142" font-family="Inter,Arial,Helvetica,sans-serif" font-size="52" font-weight="760" fill="#102148">GitHub Copilot: skills align; named agents differ</text>
 <text x="88" y="190" font-family="Inter,Arial,Helvetica,sans-serif" font-size="25" font-weight="430" fill="#5f6f87">Copilot reuses .agents/skills but owns its agent profile format.</text>
 <rect x="86" y="803" width="1428" height="62" rx="12" fill="#102148"/>
@@ -22,9 +22,9 @@
 <rect x="830" y="249" width="699" height="10" rx="4" fill="#008d86"/>
 <text x="864" y="310" font-family="Inter,Arial,Helvetica,sans-serif" font-size="27" font-weight="740" fill="#102148">Copilot agent profile</text>
 <rect x="855" y="341" width="647" height="402" rx="13" fill="#fff"/>
-<text x="882" y="389" font-family="DejaVu Sans Mono,monospace" font-size="21" font-weight="520" fill="#0b5fea">.github/agents/asdlc-reviewer.agent.md</text>
+<text x="882" y="389" font-family="DejaVu Sans Mono,monospace" font-size="21" font-weight="520" fill="#0b5fea">.github/agents/asdg-reviewer.agent.md</text>
 <text x="882" y="436" font-family="DejaVu Sans Mono,monospace" font-size="23" font-weight="520" fill="#102148">---</text>
-<text x="882" y="483" font-family="DejaVu Sans Mono,monospace" font-size="23" font-weight="520" fill="#102148">name: ASDLC Reviewer</text>
+<text x="882" y="483" font-family="DejaVu Sans Mono,monospace" font-size="23" font-weight="520" fill="#102148">name: ASDG Reviewer</text>
 <text x="882" y="530" font-family="DejaVu Sans Mono,monospace" font-size="21" font-weight="520" fill="#102148">description: Review behavior + evidence</text>
 <text x="882" y="577" font-family="DejaVu Sans Mono,monospace" font-size="23" font-weight="520" fill="#102148">tools: [read, search]</text>
 <text x="882" y="624" font-family="DejaVu Sans Mono,monospace" font-size="23" font-weight="520" fill="#102148">---</text>

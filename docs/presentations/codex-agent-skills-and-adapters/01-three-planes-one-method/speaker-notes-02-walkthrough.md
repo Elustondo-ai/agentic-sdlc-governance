@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # One methodology. Three execution environments. — Visual walkthrough
 
 Read the three columns from left to right. The methodology defines engineering concepts and

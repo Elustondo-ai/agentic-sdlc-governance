@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T14:23Z
-
 # A1 — Codex vocabulary and mechanisms
 
 This reference separates the mechanisms that we loosely call the Codex language.

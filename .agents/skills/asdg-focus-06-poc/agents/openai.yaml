@@ -1,0 +1,7 @@
+# AI-MODIFIED - 2026-10-19T02:40:42Z
+interface:
+  display_name: ASDG Focus 06 — Viable Proof of Concept
+  short_description: Focus this chat on stage 06; no parameter needed
+  default_prompt: $asdg-focus-06-poc
+policy:
+  allow_implicit_invocation: false

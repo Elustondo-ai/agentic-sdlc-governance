@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Codex: five mechanisms, five readers — Deeper explanation
 
 This distinction prevents a recurring category error: documenting an intended transition is

@@ -1,0 +1,101 @@
+{
+  "AI-MODIFIED": "2026-10-18T20:58:48.613022+00:00",
+  "operation": "ASDG Focus and Status interactive pilot installation",
+  "authority": "Pablo requested implementation and the new-session -> status -> focus -> status trial on 2026-10-18; parameter aliases added by explicit follow-up.",
+  "destination": "Drive project folder 1CzNrE_O6Vb39BK5d4EXtA3Uj2kSAYoqL (agentic-sdlc-governance)",
+  "status": "FILES_INSTALLED_IN_DRIVE_CHECKOUT; NATIVE_CODEX_TRIAL_PENDING",
+  "remote_readback": {
+    "AGENTS.md": {
+      "file_id": "1uxrUCgD-OWND41Dhl59ptoq-ndoX7Dzq",
+      "readback_response": "turn74",
+      "review": "Fetched content reviewed against intended file",
+      "sha256_intended": "09d1be1da19d9993253725d45604eedb619d45a6a4af4c4ee21d844f37bfb50f"
+    },
+    "asdlc/skills/asdg-focus/SKILL.md": {
+      "file_id": "1rhKleWLfBD5SidS7GuGpM-6IRrEHXRji",
+      "readback_response": "turn77",
+      "review": "Fetched content reviewed against intended file",
+      "sha256_intended": "1d74301a572eea6fcc882d3538f02947f41408c0c299b69e5b4e611476900d35"
+    },
+    "asdlc/skills/asdg-focus/session-policy.md": {
+      "file_id": "1moeGVd5kzeZs9PCj_og3JX1P-xlMFLoH",
+      "readback_response": "turn79",
+      "review": "Fetched content reviewed against intended file",
+      "sha256_intended": "ee60783d3c8d201d45fa851096895a471774e73254a6f18d687a280ee4667ac3"
+    },
+    "asdlc/skills/asdg-focus/TRY-IT.md": {
+      "file_id": "1ymRJJHSQJa6jZevwsozlFWAOn_kWGxG-",
+      "readback_response": "turn83",
+      "review": "Fetched content reviewed against intended file",
+      "sha256_intended": "d12ab2e8444293de7c3eafca5866bb7128e114af69c93fb62ba79f41d18b8c75"
+    },
+    "asdlc/skills/asdg-status/SKILL.md": {
+      "file_id": "1D9yyLkKMFeb7UO0eGrk_dMGZmgsndjM1",
+      "readback_response": "turn78",
+      "review": "Fetched content reviewed against intended file",
+      "sha256_intended": "d86325ded2ca4451aaa2cdd48a26a573d004f69dab4a5d2fbf75b8159194f722"
+    },
+    "asdlc/skills/asdg-status/status-format.md": {
+      "file_id": "18ItaB0SQ2ginzUW4Blq7ZZDrE0HTw8gj",
+      "readback_response": "turn80",
+      "review": "Fetched content reviewed against intended file",
+      "sha256_intended": "9cefe6be999076014b02bf77f5411f4b087775b81df5fd299ff326262dca66b0"
+    },
+    ".agents/skills/asdg-focus/SKILL.md": {
+      "file_id": "1Mfi8cSgBGNFwcx2cnCNiOqYz1dTlN7Ct",
+      "readback_response": "turn75",
+      "review": "Fetched content reviewed against intended file",
+      "sha256_intended": "18fdb161cb18f75ab0b59d3553ac64c6ca6899b0ad8e4b8dbea2a7da2b4f47b5"
+    },
+    ".agents/skills/asdg-focus/agents/openai.yaml": {
+      "file_id": "11YSSv5bRJFwzsfOGG2aGyeEEwntDDnA_",
+      "readback_response": "turn81",
+      "review": "Fetched content reviewed against intended file",
+      "sha256_intended": "d963c4eed03d0231334825fe064b4f2da4fbd4bf8011c079d1aad12781a9179f"
+    },
+    ".agents/skills/asdg-status/SKILL.md": {
+      "file_id": "1lUYDV42IFLfLVhjB9SpCilu0f2S0_UIi",
+      "readback_response": "turn76",
+      "review": "Fetched content reviewed against intended file",
+      "sha256_intended": "978c329fd09841b831ada93dcac1bf98596598d3cf1625ca15a7d1fd5d48717d"
+    },
+    ".agents/skills/asdg-status/agents/openai.yaml": {
+      "file_id": "1VROt5UG5RGwFeDLDAdy8Qc545eD1hMt-",
+      "readback_response": "turn82",
+      "review": "Fetched content reviewed against intended file",
+      "sha256_intended": "a5fd28b0d4fdb204ed6e80b42d351dc90a100b0ed283095c03235c0ebc3bb454"
+    }
+  },
+  "yaml_bytes_compared": [
+    ".agents/skills/asdg-focus/agents/openai.yaml",
+    ".agents/skills/asdg-status/agents/openai.yaml"
+  ],
+  "not_changed": [
+    "Canonical Intent definition and procedure",
+    "Native custom-agent TOML files",
+    "Codex model and permission configuration",
+    "Registry and routing",
+    "Sprint state",
+    "Application files",
+    "Git remote"
+  ],
+  "not_performed": [
+    "Git commits or pushes",
+    "Native Codex discovery/invocation",
+    "Multi-turn behavioral tests",
+    "Read-only sandbox enforcement test",
+    "Local Mac sync verification"
+  ],
+  "codex_executable_in_this_container": null,
+  "next_user_trial": [
+    "$asdg-status",
+    "$asdg-focus intent",
+    "$asdg-status",
+    "What is your role?"
+  ],
+  "static_validation_file": "validation.json",
+  "human_approval": "Not recorded; installation permission is not approval of the exact resulting file state.",
+  "static_checks_passed": 45,
+  "static_checks_total": 45,
+  "static_scope": "YAML syntax, declared aliases, relative references, file integrity, line limits and patch apply/reverse. Not a behavioral test."
+}

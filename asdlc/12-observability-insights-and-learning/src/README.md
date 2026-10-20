@@ -1,8 +1,0 @@
-AI-MODIFIED - 2026-10-14T16:01:39Z
-
-# Observability, Insights and Learning Agent — implementation
-
-The current agent capability is instruction-driven; its procedure lives in `../skills/derive-insights/SKILL.md`.
-No stage-specific execution engine is claimed by this scaffold.
-Shared software remains under `../../components/`; do not duplicate it here.
-Future code must have explicit contracts and tests and remain within the package responsibility.

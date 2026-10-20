@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Compatibility is measured, not assumed — Visual walkthrough
 
 Read the rows horizontally. Instructions have compatible concepts but different loading

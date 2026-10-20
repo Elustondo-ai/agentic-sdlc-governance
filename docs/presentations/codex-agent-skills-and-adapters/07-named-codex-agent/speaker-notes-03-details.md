@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Named agent: a Codex TOML role, not a skill — Deeper explanation
 
 Do not confuse a Codex custom-agent name with the stable Agent IDs in our Personal Agent

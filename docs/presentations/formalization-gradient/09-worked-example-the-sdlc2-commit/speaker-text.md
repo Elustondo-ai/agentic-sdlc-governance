@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T14:23Z
-
 # FG07 — Worked example: the SDLC2 commit
 
 Our SDLC2 commit is the concrete example that motivated this discussion. We want code, documentation and the prepared sprint status to enter one reviewed commit together.

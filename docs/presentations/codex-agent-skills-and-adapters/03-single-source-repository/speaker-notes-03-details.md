@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # One source of truth, thin native adapters — Deeper explanation
 
 A symlink could eliminate forwarding copies, and Codex and Claude support symlinked skill

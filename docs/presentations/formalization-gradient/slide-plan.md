@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T15:00Z
-
 # SDLC2 — Formalization Gradient: Slide Plan
 
 **Scope:** Eleven main slides plus two optional technical annex slides. Pablo authorized production of the complete set on 28 September 2026, with review afterward.

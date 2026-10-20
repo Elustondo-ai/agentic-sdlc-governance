@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "baseline": "docs/status/lifecycle-baseline.md",
+  "rules": [
+    {"stage": 1, "evidence": "Context package with sources, uncertainties and assumptions", "action": "Define project context and domain boundaries.", "source": "asdg/01-context-and-domain-analysis/types/contract.md"},
+    {"stage": 2, "evidence": "Purpose proposal, acceptance questions and review points", "action": "Define project purpose, desired outcomes and acceptance questions.", "source": "asdg/02-purpose/types/contract.md"},
+    {"stage": 3, "evidence": "System model and use cases with open ambiguities", "action": "Establish the system model and observable use cases.", "source": "asdg/03-system-model-and-use-cases/types/contract.md"},
+    {"stage": 4, "evidence": "Alternatives, evaluation protocol and evidence-based comparison", "action": "Establish benchmarks, test strategy and success criteria.", "source": "asdg/04-benchmarks-test-strategy-and-success-criteria/types/contract.md"},
+    {"stage": 5, "evidence": "Architecture proposal, decisions and handoff boundaries", "action": "Define the high-level solution architecture and review its decisions.", "source": "asdg/05-high-level-solution-design-and-architecture/types/contract.md"},
+    {"stage": 6, "evidence": "POC hypotheses, reproducible experiment, measured results and open risks", "action": "Resolve the bounded POC uncertainty, or record why a POC is unnecessary.", "source": "asdg/06-viable-proof-of-concept/types/contract.md", "may_be_not_applicable": true},
+    {"stage": 7, "evidence": "Sprint plan and task proposals for review", "action": "Define and review the sprint plan and scoped tasks.", "source": "asdg/07-planning/types/contract.md"},
+    {"stage": 8, "evidence": "Low-level design and actionable implementation contracts", "action": "Specify low-level design and implementation contracts for the selected scope.", "source": "asdg/08-low-level-design/types/contract.md"},
+    {"stage": 9, "evidence": "Code-change and test-execution evidence with deviations and review handoff", "action": "Work on sprint-scoped implementation and record build/test evidence.", "source": "asdg/09-build-and-test-cycle/types/contract.md"},
+    {"stage": 10, "evidence": "Independent review findings, release recommendation and human decision points", "action": "Document the candidate and obtain independent review and release decisions.", "source": "asdg/10-document-review-and-release/types/contract.md"},
+    {"stage": 11, "evidence": "Operational reality, DevOps and user-acceptance evidence", "action": "Establish operational and user-acceptance evidence in the real system.", "source": "docs/status/lifecycle-baseline.md"},
+    {"stage": 12, "evidence": "Observability findings, insights and learning", "action": "Record observability findings and learning for the next cycle.", "source": "docs/status/lifecycle-baseline.md"}
+  ]
+}

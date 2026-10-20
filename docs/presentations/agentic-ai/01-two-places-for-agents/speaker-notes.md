@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-01T13:53Z
-
 # AA01 — Agents in development and in the product
 
 We use the word agent in two distinct settings. On the left, Codex helps us develop the application. It reads our repository, specifications and working rules, and proposes changes that a human can review. Its output is software and evidence about that software.

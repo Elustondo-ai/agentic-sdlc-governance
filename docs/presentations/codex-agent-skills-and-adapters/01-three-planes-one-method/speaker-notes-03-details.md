@@ -1,8 +1,6 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # One methodology. Three execution environments. — Deeper explanation
 
-Our current repository illustrates this separation. Under asdlc we maintain the reusable
+Our current repository illustrates this separation. Under asdg we maintain the reusable
 presentation and component-creation skills. The root AGENTS.md provides standing project
 instructions.
 

@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Codex: five mechanisms, five readers — Opening narration
 
 The phrase Codex domain-specific language is useful shorthand, but it hides several

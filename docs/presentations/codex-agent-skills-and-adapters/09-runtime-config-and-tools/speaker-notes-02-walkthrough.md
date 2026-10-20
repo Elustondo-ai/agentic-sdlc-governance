@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Configuration, tools, and enforcement are separate — Visual walkthrough
 
 The left panel shows project-scoped config.toml. The agents table sets a concurrent delegate

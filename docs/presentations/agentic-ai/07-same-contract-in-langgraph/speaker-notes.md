@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-01T13:53Z
-
 # AA07 — The same contract in LangGraph
 
 Here is the same request expressed as an explicit workflow. State carries the request, authorized scope, versions of records, proposed action, approval and final outcome. Nodes load context, produce a proposal, validate scope, pause when approval is needed, and execute only after the application permits the effect.

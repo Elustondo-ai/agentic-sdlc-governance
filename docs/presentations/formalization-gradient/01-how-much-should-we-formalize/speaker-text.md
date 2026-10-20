@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T14:23Z
-
 # FG01 — How much should we formalize?
 
 Imagine asking an agent to prepare a sprint for review. The sentence sounds clear, but it leaves important questions open. Which tests are required? What should the walkthrough explain? Which changes does the evidence describe?

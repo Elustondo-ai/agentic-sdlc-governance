@@ -1,13 +1,11 @@
-AI-MODIFIED - 2026-10-09T14:44Z
-
-# ASDLC presentation collection
+# ASDG presentation collection
 
 These source folders are the presentation source of truth in `Elustondo-ai/agentic-sdlc-governance`.
 Canonical location, content approval, and publication to GitHub are separate states.
 
 | Read in this order | Slides | State | PowerPoint |
 | --- | ---: | --- | --- |
-| [ASDLC introduction](asdlc-introduction/README.md) | 13: 12 + R01 | Selected introduction; inherited content preserved. | [Open PPTX](asdlc-introduction/build/asdlc-introduction.pptx) · [Detailed v2](asdlc-introduction/build/asdlc-introduction-detailed.pptx) |
+| [ASDG introduction](asdg-introduction/README.md) | 13: 12 + R01 | Selected introduction; inherited content preserved. | [Open PPTX](asdg-introduction/build/asdg-introduction.pptx) · [Detailed v2](asdg-introduction/build/asdg-introduction-detailed.pptx) |
 | [Formalization Gradient](formalization-gradient/README.md) | 13: 11 + A1–A2 | Review draft; includes the Codex continuation. | [Open PPTX](formalization-gradient/build/formalization-gradient.pptx) |
 | [Codex agents, skills and adapters](codex-agent-skills-and-adapters/README.md) | 13 | Technical draft: Codex implementation, Claude and Copilot mappings. | [Open PPTX](codex-agent-skills-and-adapters/build/codex-agent-skills-and-adapters.pptx) · [Detailed](codex-agent-skills-and-adapters/build/codex-agent-skills-and-adapters-detailed.pptx) |
 | [Agentic AI](agentic-ai/README.md) | 7 | Review draft; development-time and runtime agents. | [Open PPTX](agentic-ai/build/agentic-ai.pptx) |
@@ -27,8 +25,8 @@ Build output is deliberately excluded from Git; it is recreated from the source 
 
 ## Shared capability
 
-The [presentation skill](../../asdlc/skills/asdlc-presentation/README.md) is defined in the methodology implementation.
-Follow its [standard](../../asdlc/skills/asdlc-presentation/docs/presentation-standard.md) and [build instructions](../../asdlc/skills/asdlc-presentation/docs/building.md).
+The [presentation skill](../../asdg/skills/asdg-presentation/README.md) is defined in the methodology implementation.
+Follow its [standard](../../asdg/skills/asdg-presentation/docs/presentation-standard.md) and [build instructions](../../asdg/skills/asdg-presentation/docs/building.md).
 No existing PPTX or PDF is required to rebuild the decks.
 
 ## Retained boundaries

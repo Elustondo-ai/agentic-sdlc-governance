@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # Delegation is a workflow; approval is a boundary — Opening narration
 
 A named agent definition is inert until a runtime delegates work to it. This is the

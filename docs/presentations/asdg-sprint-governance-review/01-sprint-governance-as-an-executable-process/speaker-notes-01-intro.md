@@ -1,0 +1,3 @@
+# Sprint governance as an executable process — Introduction
+
+This presentation recovers the sprint-level rules established in the earlier SDLC2 workflow. The focus is not a new coding feature. It is the engineering protocol that determines when agents can work, what evidence they must produce, and when the human must decide.

@@ -1,0 +1,7 @@
+# AI-MODIFIED - 2026-10-19T02:40:42Z
+interface:
+  display_name: ASDG Focus — alias / clear
+  short_description: Optional alias shortcut; named Focus skills need no parameter
+  default_prompt: $asdg-focus
+policy:
+  allow_implicit_invocation: false

@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-10-09T14:33Z
-
 # AGENTS.md: standing instructions with scope — Opening narration
 
 AGENTS.md is not a place to list every possible agent. It is a standing instruction file.

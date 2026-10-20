@@ -1,0 +1,38 @@
+# ASDG canonical implementation packages
+
+Reusable methodology definitions live here; consuming projects own their state and results.
+The [catalogue](00-governance/types/agent-catalog.json) fixes stable identities and lifecycle order.
+00 is governance; 01–12 are the twelve stages from the [baseline](../docs/status/lifecycle-baseline.md).
+
+| Stage | Role | Canonical definition |
+| --- | --- | --- |
+| 00 | ASDG-COORDINATOR | [ASDG Coordinator](00-governance/AGENTS.md) |
+| 01 | ASDG-01 | [Context and Domain Agent](01-context-and-domain-analysis/AGENTS.md) |
+| 02 | ASDG-02 | [Purpose Agent](02-purpose/AGENTS.md) |
+| 03 | ASDG-03 | [System Model and Use Cases Agent](03-system-model-and-use-cases/AGENTS.md) |
+| 04 | ASDG-04 | [Benchmark and Test Strategy Agent](04-benchmarks-test-strategy-and-success-criteria/AGENTS.md) |
+| 05 | ASDG-05 | [High-Level Architecture Agent](05-high-level-solution-design-and-architecture/AGENTS.md) |
+| 06 | ASDG-06 | [Viable POC Agent](06-viable-proof-of-concept/AGENTS.md) |
+| 07 | ASDG-07 | [Planning Agent](07-planning/AGENTS.md) |
+| 08 | ASDG-08 | [Low-Level Design Agent](08-low-level-design/AGENTS.md) |
+| 09 | ASDG-09 | [Build and Test Agent](09-build-and-test-cycle/AGENTS.md) |
+| 10 | ASDG-10 | [Document, Review and Release Agent](10-document-review-and-release/AGENTS.md) |
+| 11 | ASDG-11 | [Operational Reality, DevOps and User Acceptance Agent](11-operational-reality-devops-and-user-acceptance/AGENTS.md) |
+| 12 | ASDG-12 | [Observability, Insights and Learning Agent](12-observability-insights-and-learning/AGENTS.md) |
+
+## Shared capabilities and runtime
+
+- [Documentation](skills/asdg-documentation/SKILL.md): compact specialist-owned visual/notes units.
+- [Presentation](skills/asdg-presentation/SKILL.md): optional derived presentation exports.
+- [Component](skills/asdg-component/SKILL.md): software-component scaffolding, not agent roles.
+- [Runtime](00-governance/docs/runtime-contract.md): role activation, scope, evidence and gates.
+- [Baseline](00-governance/docs/baseline-capture.md): separate Codex processes loading role packages.
+Read-only native adapters remain under `.codex/agents/`; baseline processes do not activate them.
+Structural validity is not native execution, semantic correctness, approval or implementation authority.
+
+## Intended / Actual / Planned
+
+All thirteen responsibilities use the [shared stage contract](00-governance/docs/stage-perspectives.md).
+Use the [stage mapping](00-governance/docs/stage-perspectives-map.md) and [snapshot template](00-governance/docs/stage-snapshot-template.md).
+Canonical identities and Purpose paths follow the catalogue; legacy identities exist only in migration records.
+These are project-state perspectives, not extra stages, role activations or grants of authority.

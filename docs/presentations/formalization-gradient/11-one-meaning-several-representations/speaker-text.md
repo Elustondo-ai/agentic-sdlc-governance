@@ -1,5 +1,3 @@
-AI-MODIFIED - 2026-09-28T14:23Z
-
 # FG09 — One meaning, several representations
 
 The result of this chapter is an architectural discipline. We define the domain meaning, express it in the forms that help us work, and maintain traceability between those forms.

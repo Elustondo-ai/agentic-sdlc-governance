@@ -1,1 +1,3 @@
+# Feedback and failures — Walkthrough
+
 The left panel shows tests as one source of evidence. The middle panel surfaces the characteristic failure modes. The right panel adds a bounded retry policy and human escalation. A successful test suite does not establish that a business requirement was met.
