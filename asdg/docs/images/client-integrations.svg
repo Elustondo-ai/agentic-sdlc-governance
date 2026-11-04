@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="720" height="340" role="img" aria-labelledby="t d" font-family="Helvetica, Arial, sans-serif">
+  <title id="t">One methodology, thin Codex and Claude integrations</title>
+  <desc id="d">Canonical skills and the root AGENTS.md live once. Each skill's shared adapter template is copied for Codex with its openai.yaml policy and rendered for Claude with disable-model-invocation when the skill is human-only. Codex alone also gets named role agents and guard hooks. Both clients read the same AGENTS.md bootstrap.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3e4c59"/></marker></defs>
+  <rect width="720" height="340" fill="#ffffff"/>
+
+  <rect x="20" y="30" width="200" height="70" rx="8" fill="#f4f6f8" stroke="#7b8794"/>
+  <text x="120" y="58" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2933">Canonical skills</text>
+  <text x="120" y="78" text-anchor="middle" font-size="11" fill="#3e4c59">asdg/skills/&lt;name&gt;/SKILL.md</text>
+
+  <rect x="20" y="130" width="200" height="80" rx="8" fill="#e6f6ff" stroke="#2680c2" stroke-width="2"/>
+  <text x="120" y="158" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2933">Shared adapter template</text>
+  <text x="120" y="177" text-anchor="middle" font-size="11" fill="#3e4c59">asdg/templates/.agents/skills/</text>
+  <text x="120" y="194" text-anchor="middle" font-size="11" fill="#3e4c59">one per skill, thin pointer</text>
+  <path d="M120,130 L120,104" stroke="#3e4c59" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <text x="128" y="121" font-size="10" fill="#3e4c59">loads</text>
+
+  <rect x="20" y="246" width="200" height="70" rx="8" fill="#f4f6f8" stroke="#7b8794"/>
+  <text x="120" y="274" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2933">Root AGENTS.md</text>
+  <text x="120" y="294" text-anchor="middle" font-size="11" fill="#3e4c59">bootstrap read by both clients</text>
+
+  <rect x="300" y="40" width="400" height="130" rx="10" fill="#e3f9e5" stroke="#3f9142"/>
+  <text x="500" y="64" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2933">--client codex</text>
+  <text x="500" y="86" text-anchor="middle" font-size="11" fill="#3e4c59">.agents/skills/&lt;name&gt;/ copied, with openai.yaml</text>
+  <text x="500" y="104" text-anchor="middle" font-size="11" fill="#3e4c59">human-only: allow_implicit_invocation: false</text>
+  <text x="500" y="122" text-anchor="middle" font-size="11" fill="#3e4c59">.codex/agents/*.toml named role agents</text>
+  <text x="500" y="140" text-anchor="middle" font-size="11" fill="#3e4c59">.codex/hooks.json guard, active once trusted</text>
+  <text x="500" y="158" text-anchor="middle" font-size="11" fill="#3e4c59">invoke as $asdg-status</text>
+
+  <rect x="300" y="190" width="400" height="126" rx="10" fill="#f0f4ff" stroke="#4c63b6"/>
+  <text x="500" y="214" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2933">--client claude</text>
+  <text x="500" y="236" text-anchor="middle" font-size="11" fill="#3e4c59">.claude/skills/&lt;name&gt;/SKILL.md rendered from the template</text>
+  <text x="500" y="254" text-anchor="middle" font-size="11" fill="#3e4c59">human-only: disable-model-invocation: true</text>
+  <text x="500" y="272" text-anchor="middle" font-size="11" fill="#3e4c59">@AGENTS.md import only if a CLAUDE.md hides AGENTS.md</text>
+  <text x="500" y="290" text-anchor="middle" font-size="11" fill="#3e4c59">no ASDG guard hook; invoke as /asdg-status</text>
+
+  <path d="M220,160 L296,110" stroke="#3e4c59" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M220,182 L296,244" stroke="#3e4c59" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <text x="234" y="128" font-size="10" fill="#3e4c59">copy</text>
+  <text x="232" y="226" font-size="10" fill="#3e4c59">render</text>
+</svg>

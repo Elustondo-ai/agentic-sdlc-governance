@@ -15,8 +15,9 @@ Use the [shared perspectives contract](stage-perspectives.md) and link authorita
 <Distinguish a written specification, implementation, execution, passing tests, deployment and user value.>
 <Keep stakeholder reports separate from direct observation; missing evidence remains unknown.>
 
-## Planned
+## Planned release / sprint
 
+<Link `03` release and sprint plan files at the stage root; leave unknown horizons explicit.>
 <Explain the selected next change, experiment or decision and the gap it addresses.>
 <Link its authoritative work item, owner, sequence, dependencies and completion evidence when known.>
 <Separate candidate actions from accepted commitments; reference the integrated Stage 07 plan.>

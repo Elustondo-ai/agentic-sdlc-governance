@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+<title id="title">Independent session fields</title><desc id="desc">Goal, role, subject focus and attitude feed a receipt in this chat only. The title shows role, subject and attitude while the goal remains in the receipt.</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#60738c"/></marker></defs>
+<rect width="960" height="520" rx="20" fill="#f4f7fb"/>
+<g font-family="Arial, sans-serif" fill="#172a43">
+<text x="40" y="47" font-size="29" font-weight="700">One chat, four independent choices</text>
+<text x="40" y="80" font-size="20">Changing the approach preserves the outcome, responsibility and subject.</text>
+<g stroke="#c4cede" stroke-width="2">
+<rect x="40" y="111" width="200" height="110" rx="12" fill="#e8edf4"/>
+<rect x="265" y="111" width="200" height="110" rx="12" fill="#e2edff"/>
+<rect x="490" y="111" width="200" height="110" rx="12" fill="#e0f3eb"/>
+<rect x="715" y="111" width="205" height="110" rx="12" fill="#fff0d9"/>
+</g>
+<g font-size="24" font-weight="700">
+<text x="59" y="145">Goal</text><text x="284" y="145">Role</text><text x="509" y="145">Subject focus</text><text x="734" y="145">Attitude</text>
+</g>
+<g font-size="19">
+<text x="59" y="177">Outcome sought</text><text x="59" y="203">Keep it in the receipt</text>
+<text x="284" y="177">Responsibility</text><text x="284" y="203">e.g. Architecture</text>
+<text x="509" y="177">Topic examined</text><text x="509" y="203">e.g. Security</text>
+<text x="734" y="177">Thinking approach</text><text x="734" y="203">e.g. Black</text>
+</g>
+<path d="M140 223V246H480M365 223V246M590 223V246H480M817 223V246H480V274" fill="none" stroke="#60738c" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="130" y="281" width="700" height="80" rx="12" fill="#fff" stroke="#c4cede" stroke-width="2"/>
+<text x="480" y="313" text-anchor="middle" font-size="24" font-weight="700">Receipt in this conversation only</text>
+<text x="480" y="341" text-anchor="middle" font-size="19">Verified selections · temporary expiry · title outcome</text>
+<path d="M480 362V387" stroke="#60738c" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="40" y="397" width="880" height="72" rx="12" fill="#172a43"/>
+<text x="480" y="425" text-anchor="middle" font-size="19" fill="#b9cbdf">VISIBLE TITLE · project binding is retained</text>
+<text x="480" y="453" text-anchor="middle" font-size="22" fill="#fff">05 High-Level Architecture · Security · Black — Project</text>
+<text x="480" y="501" text-anchor="middle" font-size="18">The title reflects state. It never grants approval or implementation permission.</text>
+</g></svg>

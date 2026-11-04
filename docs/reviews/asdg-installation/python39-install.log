@@ -1,0 +1,16 @@
+test_both_routes_both_clients_preview_apply_verify_and_repeat (test_install.InstallTests) ... ok
+test_cli_default_is_preview_and_apply_needs_review_token (test_install.InstallTests) ... ok
+test_failed_verification_rolls_back_distribution_and_integrations (test_install.InstallTests) ... ok
+test_fixed_clock_yields_identical_preview (test_install.InstallTests) ... ok
+test_interrupted_package_write_removes_partial_file_and_previous_additions (test_install.InstallTests) ... ok
+test_invalid_commit_identity_and_paths_do_not_write (test_install.InstallTests) ... ok
+test_source_change_after_preview_requires_another_review (test_install.InstallTests) ... ok
+test_stale_plan_client_change_and_collisions_preserve_target (test_install.InstallTests) ... ok
+test_stale_zip_and_dirty_selected_clone_bytes_fail (test_install.InstallTests) ... ok
+test_symlink_and_distribution_collision_fail_without_writes (test_install.InstallTests) ... ok
+test_unchosen_provider_work_does_not_change_verified_package (test_install.InstallTests) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 14.395s
+
+OK

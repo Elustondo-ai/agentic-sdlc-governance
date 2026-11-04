@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "provider": "elustondo.ai/asdg",
+  "version": "0.3.0-pilot.1",
+  "installation_mode": "embedded-distribution",
+  "source": "https://drive.google.com/drive/folders/1CzNrE_O6Vb39BK5d4EXtA3Uj2kSAYoqL",
+  "source_snapshot_date": "2026-10-20",
+  "python_minimum": "3.9",
+  "supported_os": [
+    "macOS",
+    "Linux"
+  ],
+  "human_approval": null,
+  "native_runtime_enforcement": "NOT_VERIFIED",
+  "layout": "organized-v1",
+  "previous_version": "0.2.0-pilot.2",
+  "canonical_repository": "https://github.com/Elustondo-ai/agentic-sdlc-governance",
+  "distribution_status": "candidate-for-review",
+  "sources": [
+    {
+      "repository": "https://github.com/Elustondo-ai/speakercoach",
+      "branch": "sprint-00",
+      "commit": "f0388497ac781e12631dc573b3a300100c056162",
+      "scope": "asdg/ portable pilot"
+    },
+    {
+      "repository": "https://github.com/Elustondo-ai/agentic-sdlc-governance",
+      "branch": "main",
+      "commit": "7c5d0ca3869ca2bf6472ac7a408b809dc4823cf9",
+      "scope": "canonical provider before promotion"
+    }
+  ]
+}

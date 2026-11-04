@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASDG Sprint start"
+  short_description: "Start a clean sprint on its own Git branch"
+  default_prompt: "Use $asdg-sprint-start to check for a clean worktree, create the sprint branch and start the sprint we have defined."

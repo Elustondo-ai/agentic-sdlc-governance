@@ -1,0 +1,2340 @@
+{
+  "schema_version": 1,
+  "version": "0.2.0-pilot.2",
+  "assembled_at": "2026-10-20T14:41:07Z",
+  "source_folder": "https://drive.google.com/drive/folders/1CzNrE_O6Vb39BK5d4EXtA3Uj2kSAYoqL",
+  "basis": "Current Google Drive working tree snapshot retrieved 2026-10-20; not a Git revision claim.",
+  "files": [
+    {
+      "delivered_path": "00-governance/AGENTS.md",
+      "source": {
+        "path": "asdg/00-governance/AGENTS.md",
+        "sha256": "84c2ee47fd8e9dd0b1f38dac3b2e7795cac4edcad3a30d2cbd1857f41e1baa8a",
+        "bytes": 2808,
+        "id": "1sT4tGJxVvPHEXwQVQCAe-EOTUlL03Chl",
+        "modified_time": "2026-10-19T19:21:53.526Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/AGENTS.md"
+    },
+    {
+      "delivered_path": "00-governance/README.md",
+      "source": {
+        "path": "asdg/00-governance/README.md",
+        "sha256": "3360b00686eb8684256418394ad171aef3fdd205d4c54afb63a86bd3387e86ca",
+        "bytes": 1628,
+        "id": "1EFrp0yd958r8mvlfHg58gsz3dns7HmvX",
+        "modified_time": "2026-10-19T19:21:53.544Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/README.md"
+    },
+    {
+      "delivered_path": "00-governance/docs/README.md",
+      "source": {
+        "path": "asdg/00-governance/docs/README.md",
+        "sha256": "2b232e0bcdafc81cecfb0205c3152ad73f8c8375d08733b0ba6567a22ee1665f",
+        "bytes": 864,
+        "id": "1GrmKlyGe1ZNKqPWB05DUVpCRzPrraylR",
+        "modified_time": "2026-10-19T19:21:53.560Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/docs/README.md"
+    },
+    {
+      "delivered_path": "00-governance/docs/documentation-standard.md",
+      "source": {
+        "path": "asdg/00-governance/docs/documentation-standard.md",
+        "sha256": "f2e17691dfd30e28df36f091d906d45846c65f1620a2bf50312d45e9bb08de98",
+        "bytes": 3221,
+        "id": "1ZHChteFCL_9lNIS1lH33ZnAIS-i2bUNz",
+        "modified_time": "2026-10-19T19:17:50.534Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/docs/documentation-standard.md"
+    },
+    {
+      "delivered_path": "00-governance/docs/lifecycle-evidence.md",
+      "source": {
+        "path": "asdg/00-governance/docs/lifecycle-evidence.md",
+        "sha256": "f628600e8039a57f8f53796e8818223f1d7cfb01030f2b38a46df314abb29213",
+        "bytes": 2026,
+        "id": "10GTk7BfYy8zdDooNIG9jp0N-PlubDnlS",
+        "modified_time": "2026-10-19T19:13:36.501Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/docs/lifecycle-evidence.md"
+    },
+    {
+      "delivered_path": "00-governance/docs/runtime-contract.md",
+      "source": {
+        "path": "asdg/00-governance/docs/runtime-contract.md",
+        "sha256": "b081bb74d18a89676067ba1d9875d736d1b8f28769177b4b0beb5e97e1f6de0b",
+        "bytes": 3527,
+        "id": "1X9zbFdSIp3VQrC1Veqi2OkqMfMo58sMW",
+        "modified_time": "2026-10-19T19:21:53.703Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/docs/runtime-contract.md"
+    },
+    {
+      "delivered_path": "00-governance/docs/session-logging.md",
+      "source": {
+        "path": "asdg/00-governance/docs/session-logging.md",
+        "sha256": "676a1d8e35e810613f6a63f5f1dcfe382c796dd050afdaf109d32a5bf10fe3c7",
+        "bytes": 3153,
+        "id": "1ZbRWUJ-sOMafoDd6Z00GW67Eapg6FPer",
+        "modified_time": "2026-10-19T19:21:53.722Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/docs/session-logging.md"
+    },
+    {
+      "delivered_path": "00-governance/docs/sprint-gate.md",
+      "source": {
+        "path": "asdg/00-governance/docs/sprint-gate.md",
+        "sha256": "69d231d7b2cf6284c706400bd8687483e9497c5836c23031ca666aa92c585875",
+        "bytes": 3247,
+        "id": "1xsak9d74DhltL5ODDtzFEQCLDxCVg78D",
+        "modified_time": "2026-10-19T19:21:53.740Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/docs/sprint-gate.md"
+    },
+    {
+      "delivered_path": "00-governance/docs/sprint-state.md",
+      "source": {
+        "path": "asdg/00-governance/docs/sprint-state.md",
+        "sha256": "0455b3fff51cc3c103a8b1f0a0129471b2f25db66587682680557ace0cdc1351",
+        "bytes": 1374,
+        "id": "1aAWEKS72RlD5l4zM3Zgqeam1f2q9T5z8",
+        "modified_time": "2026-10-19T19:13:36.604Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "00-governance/docs/sprint-state.md"
+    },
+    {
+      "delivered_path": "00-governance/docs/stage-perspectives-map.md",
+      "source": {
+        "path": "asdg/00-governance/docs/stage-perspectives-map.md",
+        "sha256": "41848d7604bf46ce2182575ee02dc9f789c0ca3fbec84c3eca0888dfd54b070f",
+        "bytes": 4534,
+        "id": "1umZi_Ivd-r91o6QNJH13Z-KyHURD08c0",
+        "modified_time": "2026-10-19T19:21:53.759Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/docs/stage-perspectives-map.md"
+    },
+    {
+      "delivered_path": "00-governance/docs/stage-perspectives.md",
+      "source": {
+        "path": "asdg/00-governance/docs/stage-perspectives.md",
+        "sha256": "866a72896537564023c811377b7a3d275e44d7d5c4d150cfb69226a84ac654c8",
+        "bytes": 3539,
+        "id": "1zqHaAlbP3oBu5OECeAdozzMY4eVESRZK",
+        "modified_time": "2026-10-19T19:21:53.777Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "00-governance/docs/stage-perspectives.md"
+    },
+    {
+      "delivered_path": "00-governance/docs/stage-snapshot-template.md",
+      "source": {
+        "path": "asdg/00-governance/docs/stage-snapshot-template.md",
+        "sha256": "12f0c0a9958ace6c8439d7e29e4f80e4bd8dcb2bbb87b9fb5de39aeaeb4f4375",
+        "bytes": 1389,
+        "id": "1vjN2ldUkET6_4I2PWPCJ14jw8sHvGbnM",
+        "modified_time": "2026-10-19T18:56:49.830Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "00-governance/docs/stage-snapshot-template.md"
+    },
+    {
+      "delivered_path": "00-governance/docs/state-engine.md",
+      "source": {
+        "path": "asdg/00-governance/docs/state-engine.md",
+        "sha256": "47aa29f8211125a1526434fd5cd10ca7fdc30bd15b6fd9ae23f691876b627eac",
+        "bytes": 3860,
+        "id": "1Aa13CKVqlcdPg0ekffn9JfKlSIlR9MhK",
+        "modified_time": "2026-10-19T19:21:53.795Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/docs/state-engine.md"
+    },
+    {
+      "delivered_path": "00-governance/docs/status-advice.md",
+      "source": {
+        "path": "asdg/00-governance/docs/status-advice.md",
+        "sha256": "ad7ff6db86d4edb04a8d50e427a7f25e4163b526b07a72d93a32d2cb0f40433f",
+        "bytes": 2777,
+        "id": "13kFUXBDyvdVMrNQu5dT_7y12totFQkIq",
+        "modified_time": "2026-10-19T19:17:50.515Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "00-governance/docs/status-advice.md"
+    },
+    {
+      "delivered_path": "00-governance/skills/review-routing/SKILL.md",
+      "source": {
+        "path": "asdg/00-governance/skills/review-routing/SKILL.md",
+        "sha256": "e6960054f383f756190e30416d6185a19ecd1730dd5e73e4e545ae7584fdbf27",
+        "bytes": 1363,
+        "id": "1J2XN5wrWlfOct3xY4o262qqsVVy3Y0KF",
+        "modified_time": "2026-10-19T19:21:53.831Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "00-governance/skills/review-routing/SKILL.md"
+    },
+    {
+      "delivered_path": "00-governance/src/README.md",
+      "source": {
+        "path": "asdg/00-governance/src/README.md",
+        "sha256": "3a5f80c2a5948adc8b6e1e4a4fe843a6968cce7b535fb843cf675d416e87f61c",
+        "bytes": 436,
+        "id": "1aYVyQLwBF6e1T24q-BJZoPdp3tw1IAUU",
+        "modified_time": "2026-10-19T19:13:36.889Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "scripts/lib/README.md"
+    },
+    {
+      "delivered_path": "00-governance/src/agent_config.py",
+      "source": {
+        "path": "asdg/00-governance/src/agent_config.py",
+        "sha256": "53935212374799ffc1e2ae912c1031682a6e7b400330093e8c0d2b5261c2029e",
+        "bytes": 1505,
+        "id": "1zx8UwBpQq1R1gT_QuybS0zrNx1nfRgwJ",
+        "modified_time": "2026-10-19T19:13:36.908Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "scripts/lib/agent_config.py"
+    },
+    {
+      "delivered_path": "00-governance/src/agent_log_event.py",
+      "source": {
+        "path": "asdg/00-governance/src/agent_log_event.py",
+        "sha256": "155d8d9f121cc9f3d955f86dc4a7533e8e4f334a51ed3d957cdd2488b9ef4065",
+        "bytes": 5503,
+        "id": "11yNsv0HoGFdWPH0xlcZ3NBZKfaDjnzX1",
+        "modified_time": "2026-10-19T19:13:36.928Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "scripts/lib/agent_log_event.py"
+    },
+    {
+      "delivered_path": "00-governance/src/agent_log_hook.py",
+      "source": {
+        "path": "asdg/00-governance/src/agent_log_hook.py",
+        "sha256": "186ba46784c0a14f95977fb6a4333e0740142c0d2aa438c36090699b5822037f",
+        "bytes": 2451,
+        "id": "1uXAWZFOcAXEkgMJkbKTK33HZ1Ju_81q8",
+        "modified_time": "2026-10-19T19:13:36.947Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "scripts/lib/agent_log_hook.py"
+    },
+    {
+      "delivered_path": "00-governance/src/agent_log_store.py",
+      "source": {
+        "path": "asdg/00-governance/src/agent_log_store.py",
+        "sha256": "2ada8ab314a0a0ee9f086fc06a0ec7024d292cbb90d026ac0696f7fd01040646",
+        "bytes": 6752,
+        "id": "1jSqhjX3DMUAXkOPKLtrql4HW17W0o77E",
+        "modified_time": "2026-10-19T19:13:36.967Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "scripts/lib/agent_log_store.py"
+    },
+    {
+      "delivered_path": "00-governance/src/cli.py",
+      "source": {
+        "path": "asdg/00-governance/src/cli.py",
+        "sha256": "b4c41322c040288ddaf28aa7fa3dba0f3290629820d859f9a00cbb26164c0f8a",
+        "bytes": 11720,
+        "id": "1SaHhfn2EJSLLx-MZhM8EMcJH5KEMe1iQ",
+        "modified_time": "2026-10-19T19:13:36.988Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "scripts/lib/cli.py"
+    },
+    {
+      "delivered_path": "00-governance/src/cli_advice.py",
+      "source": {
+        "path": "asdg/00-governance/src/cli_advice.py",
+        "sha256": "07d1313566cf0d89f13c11def811d9ed7abf21a639158d0d5013e68c34a602dc",
+        "bytes": 12009,
+        "id": "1trFavBZ2Fhp4pQyCiqhr1Bgg_lSvmQf0",
+        "modified_time": "2026-10-19T19:13:37.008Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "scripts/lib/cli_advice.py"
+    },
+    {
+      "delivered_path": "00-governance/src/cli_advice_report.py",
+      "source": {
+        "path": "asdg/00-governance/src/cli_advice_report.py",
+        "sha256": "d442ca5076e9499bf3e05a4452a6942f4ac494d864ca3ac15e434bf2bdf32ee9",
+        "bytes": 6674,
+        "id": "1y8gUTW5TNhZ-jDoWuWsRK5I36xkPL-sw",
+        "modified_time": "2026-10-19T19:17:20.566Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "scripts/lib/cli_advice_report.py"
+    },
+    {
+      "delivered_path": "00-governance/src/cli_dashboard.py",
+      "source": {
+        "path": "asdg/00-governance/src/cli_dashboard.py",
+        "sha256": "66e69aace16fcccb71f23956b2ce962ca22d7cd42b890c8794acc64951a632c6",
+        "bytes": 6581,
+        "id": "1gpp4UaBFFLcjMR49RXwJmBDYozToHP49",
+        "modified_time": "2026-10-19T19:13:37.110Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "scripts/lib/cli_dashboard.py"
+    },
+    {
+      "delivered_path": "00-governance/src/cli_files.py",
+      "source": {
+        "path": "asdg/00-governance/src/cli_files.py",
+        "sha256": "2d243a86f96f628261a0f6565946e7d94619e76a016e4348d2272589d41386fd",
+        "bytes": 4514,
+        "id": "1VXeApJ0GnwCA4u-Pjmk-XIbDUizcaVxS",
+        "modified_time": "2026-10-13T19:09:47.488Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "scripts/lib/cli_files.py"
+    },
+    {
+      "delivered_path": "00-governance/src/cli_hook.py",
+      "source": {
+        "path": "asdg/00-governance/src/cli_hook.py",
+        "sha256": "692ed561a3249256fa2fd68ce938f2ed047e458e3dfb385fa79272e8329c5b51",
+        "bytes": 4171,
+        "id": "1tqAeU1zwHJ63z4lIZywQWlUZCzb9k_Za",
+        "modified_time": "2026-10-19T19:13:37.331Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "scripts/lib/cli_hook.py"
+    },
+    {
+      "delivered_path": "00-governance/src/cli_model.py",
+      "source": {
+        "path": "asdg/00-governance/src/cli_model.py",
+        "sha256": "b526ac420ca78fd93204ba65d5eb0c648bc009d0a081052a90053078181c9660",
+        "bytes": 4478,
+        "id": "1XvF_TIPBja7r1yY1osrxaE4SeLgpBRQA",
+        "modified_time": "2026-10-19T19:17:20.320Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "scripts/lib/cli_model.py"
+    },
+    {
+      "delivered_path": "00-governance/src/cli_policy.py",
+      "source": {
+        "path": "asdg/00-governance/src/cli_policy.py",
+        "sha256": "4a30a96e4af62bbc68aa0f7ff7e8617fbd0646d8f68cdd0d7c49133967d2ea75",
+        "bytes": 1530,
+        "id": "1bxJ7oRgG1knlGC2UwZdJYIGguv1bcRnd",
+        "modified_time": "2026-10-14T03:11:40.410Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "scripts/lib/cli_policy.py"
+    },
+    {
+      "delivered_path": "00-governance/src/cli_project.py",
+      "source": {
+        "path": "asdg/00-governance/src/cli_project.py",
+        "sha256": "67686986e5ef1263a61557f0e5e05921985d0bad5a0a65237a53ac1068a9e753",
+        "bytes": 14733,
+        "id": "1yiWIhsnpATS3AqJdwjdibq1CLjWil0mN",
+        "modified_time": "2026-10-19T19:17:20.345Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "scripts/lib/cli_project.py"
+    },
+    {
+      "delivered_path": "00-governance/src/cli_runtime_env.py",
+      "source": {
+        "path": "asdg/00-governance/src/cli_baseline.py",
+        "sha256": "5dc9d10ed18596a2a1158e08b04b585b94675079478b93a6fbdf5abcdf8dce65",
+        "bytes": 36886,
+        "id": "1_I2ecrGkAR6yqaeABdHDE455q-_kAdSo",
+        "modified_time": "2026-10-19T19:17:20.526Z"
+      },
+      "disposition": "extracted",
+      "current_distribution_path": "scripts/lib/cli_runtime_env.py"
+    },
+    {
+      "delivered_path": "00-governance/src/cli_sprint.py",
+      "source": {
+        "path": "asdg/00-governance/src/cli_sprint.py",
+        "sha256": "640c82ddc1d598fa00fa8a4e0f9a5a7d1bb84b6d0c057bb9c7cca247f0fb4bd9",
+        "bytes": 4157,
+        "id": "1YsMXyhevLd-khL14GiByC7xhI7mr4dIf",
+        "modified_time": "2026-10-19T19:13:37.403Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "scripts/lib/cli_sprint.py"
+    },
+    {
+      "delivered_path": "00-governance/src/cli_status.py",
+      "source": {
+        "path": "asdg/00-governance/src/cli_status.py",
+        "sha256": "136a66bf701a66c3e890f9561838bea9af102017ab41819ec3012ecdf7f62b99",
+        "bytes": 11658,
+        "id": "1_9eO8lhwuGC_JynHvPcyLfU_f2XPDBGz",
+        "modified_time": "2026-10-19T19:13:37.421Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "scripts/lib/cli_status.py"
+    },
+    {
+      "delivered_path": "00-governance/src/documentation.py",
+      "source": {
+        "path": "asdg/00-governance/src/documentation.py",
+        "sha256": "26f61718554cca82d09499435e2df007fddc28816c1f5a5a7d2f7bce1b670708",
+        "bytes": 2590,
+        "id": "1BMkCKlHG8NCdPLxobcsKDe0_pGHPuPGi",
+        "modified_time": "2026-10-19T19:13:37.440Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "scripts/lib/documentation.py"
+    },
+    {
+      "delivered_path": "00-governance/tests/acceptance.md",
+      "source": {
+        "path": "asdg/00-governance/tests/acceptance.md",
+        "sha256": "0c662e061c846b514030ab6704f3289831190072db411787ccba646943b8d872",
+        "bytes": 1313,
+        "id": "1qQ2zM5Uyp-30qFIrxMEFgkY082qfOPbo",
+        "modified_time": "2026-10-19T19:13:37.475Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "tests/acceptance.md"
+    },
+    {
+      "delivered_path": "00-governance/tests/test_agent_config.py",
+      "source": {
+        "path": "asdg/00-governance/tests/test_agent_config.py",
+        "sha256": "e8e214afbfaf7454ed7bb78fde35e6add9fa57a72d3f6a93c385af03cb73ca3c",
+        "bytes": 1286,
+        "id": "1X8EaHbMGsnXxjNcsSz2XhSqOGO15BSv_",
+        "modified_time": "2026-10-19T19:13:37.531Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "tests/test_agent_config.py"
+    },
+    {
+      "delivered_path": "00-governance/types/agent-catalog.json",
+      "source": {
+        "path": "asdg/00-governance/types/agent-catalog.json",
+        "sha256": "420313b703dc977e2c88579ccfb8a79294b05d40257a53acd13e2522b851fcf5",
+        "bytes": 5684,
+        "id": "1oHK1tHR17k3xSt5Czgd60mcQxHZ98BFy",
+        "modified_time": "2026-10-19T19:13:38.215Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/types/agent-catalog.json"
+    },
+    {
+      "delivered_path": "00-governance/types/cli-project-contract.md",
+      "source": {
+        "path": "asdg/00-governance/types/cli-project-contract.md",
+        "sha256": "3bba17cd584a65551d1b1d620d28a150d0dc62c85861bb8180c813c3d5ee8f0d",
+        "bytes": 3212,
+        "id": "1avptMqb5OLDqeN36rCSmxyaXZl_VZGmU",
+        "modified_time": "2026-10-19T19:21:53.849Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/types/cli-project-contract.md"
+    },
+    {
+      "delivered_path": "00-governance/types/contract.md",
+      "source": {
+        "path": "asdg/00-governance/types/contract.md",
+        "sha256": "1d8a07987b5c93b432ac20293feb8341a0db8f0fb9c80fa34600b21764958dd3",
+        "bytes": 1422,
+        "id": "1nkKR_kIim5CcNkoOMPR7SZYb6P5ULHj7",
+        "modified_time": "2026-10-19T19:21:53.866Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "00-governance/types/contract.md"
+    },
+    {
+      "delivered_path": "00-governance/types/document-reviews.json",
+      "source": {
+        "path": "asdg/00-governance/types/document-reviews.json",
+        "sha256": "7b84a23a096dc2e0a53c41123ee394a1fa6054895467e00d0ca9422cc5e76cb3",
+        "bytes": 346624,
+        "id": "17bZ-2C9gKdai0HKchFdVvREgYkhcpCY2",
+        "modified_time": "2026-10-19T19:26:29.464Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/types/document-reviews.json"
+    },
+    {
+      "delivered_path": "00-governance/types/interaction-contract.md",
+      "source": {
+        "path": "asdg/00-governance/types/interaction-contract.md",
+        "sha256": "c58e1c341340347a8b8f5653316b95d6c90c0591b7562e914149281d44a58c6b",
+        "bytes": 1660,
+        "id": "1lnu2_EHhasG92vgiQVlyoyfu8t0qijOW",
+        "modified_time": "2026-10-19T19:21:53.886Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "00-governance/types/interaction-contract.md"
+    },
+    {
+      "delivered_path": "00-governance/types/lifecycle-rules.json",
+      "source": {
+        "path": "asdg/00-governance/types/lifecycle-rules.json",
+        "sha256": "0a92306a4f5417ef86a765704b06dcb59a4e78efbe17a7e908c1e4d105d70326",
+        "bytes": 2906,
+        "id": "1kS6-RQgzBleo42uW5l0QKh3Z5J1OTb81",
+        "modified_time": "2026-10-19T19:13:38.275Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/types/lifecycle-rules.json"
+    },
+    {
+      "delivered_path": "00-governance/types/log-contract.md",
+      "source": {
+        "path": "asdg/00-governance/types/log-contract.md",
+        "sha256": "9b0bd56fd9f4f38ba3a022167c373e77bccd47a60d0391aba5e761158722bb22",
+        "bytes": 2545,
+        "id": "1vIWXNmT55pFMt5A9uasWbFW21x9_Lu3F",
+        "modified_time": "2026-10-19T19:21:53.906Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "00-governance/types/log-contract.md"
+    },
+    {
+      "delivered_path": "00-governance/types/migrations/legacy-catalog-v0.2.json",
+      "source": {
+        "path": "asdg/00-governance/types/migrations/legacy-catalog-v0.2.json",
+        "sha256": "f6aeb3811207ca069828956aa56f08f4f41f4d0a78dc9d8dd81fffb57ef71358",
+        "bytes": 5770,
+        "id": "1REiDyDf-q4z9E1UNWOvytgmWIlZUeu_P",
+        "modified_time": "2026-10-19T19:15:03.811Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "00-governance/types/migrations/legacy-catalog-v0.2.json"
+    },
+    {
+      "delivered_path": "00-governance/types/migrations/namespace-map.json",
+      "source": {
+        "path": "asdg/00-governance/types/migrations/namespace-map.json",
+        "sha256": "958b5b813260596e841da4d6e12df17ac3cec5c986ee5356a79ad5fe48896fc6",
+        "bytes": 760,
+        "id": "11NC423O3VxA0RoRY5_C3vwCvKg0xiNK5",
+        "modified_time": "2026-10-19T19:17:50.574Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "00-governance/types/migrations/namespace-map.json"
+    },
+    {
+      "delivered_path": "00-governance/types/migrations/speaker-coach-exporters.patch",
+      "source": {
+        "path": "asdg/00-governance/types/migrations/speaker-coach-exporters.patch",
+        "sha256": "f1de50981bf0172c767efdb647318a8bcc9242d049ea5d26e881e6d519e74cc7",
+        "bytes": 4034,
+        "id": "1gE31UUPMXAzzqCTb29tQGmYBbq8kzBur",
+        "modified_time": "2026-10-19T19:25:55.126Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "00-governance/types/migrations/speaker-coach-exporters.patch"
+    },
+    {
+      "delivered_path": "01-context-and-domain-analysis/AGENTS.md",
+      "source": {
+        "path": "asdg/01-context-and-domain-analysis/AGENTS.md",
+        "sha256": "0a9d8997e1e3d099bcd7fb3ca42ceef2920ae082d214f0b7286cf0f45628378d",
+        "bytes": 2705,
+        "id": "11R5zIJJcN3TvNlNdjko3cKTmxr8JDVbG",
+        "modified_time": "2026-10-19T19:21:53.925Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "01-context-and-domain-analysis/AGENTS.md"
+    },
+    {
+      "delivered_path": "01-context-and-domain-analysis/README.md",
+      "source": {
+        "path": "asdg/01-context-and-domain-analysis/README.md",
+        "sha256": "8e9b94da78654cdd3e331c8f7b55eb22ffc2c9585489c9cf857948c7362143e0",
+        "bytes": 1610,
+        "id": "1yy7nZTBTls95ZEIOPc0hoJl77vGBMoX3",
+        "modified_time": "2026-10-19T19:21:53.944Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "01-context-and-domain-analysis/README.md"
+    },
+    {
+      "delivered_path": "01-context-and-domain-analysis/docs/README.md",
+      "source": {
+        "path": "asdg/01-context-and-domain-analysis/docs/README.md",
+        "sha256": "0810dfce8dcc63d45f6bd1b0417f0913a16b4e9b69d78e953b4d07334333f2c1",
+        "bytes": 873,
+        "id": "1m_RLHIvhe8GH-Zz7KC_js_7LXQeXPvzM",
+        "modified_time": "2026-10-19T19:21:54.064Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "01-context-and-domain-analysis/docs/README.md"
+    },
+    {
+      "delivered_path": "01-context-and-domain-analysis/skills/analyze-context/SKILL.md",
+      "source": {
+        "path": "asdg/01-context-and-domain-analysis/skills/analyze-context/SKILL.md",
+        "sha256": "306c1f4a139a79f3591232de173eb15c298ac7926305a71eb8e149b29f958b8d",
+        "bytes": 1303,
+        "id": "1FcQz0wPwFL_N0jxmOzUOqMxGMZ7o1pAr",
+        "modified_time": "2026-10-19T19:21:54.104Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "01-context-and-domain-analysis/skills/analyze-context/SKILL.md"
+    },
+    {
+      "delivered_path": "01-context-and-domain-analysis/src/README.md",
+      "source": {
+        "path": "asdg/01-context-and-domain-analysis/src/README.md",
+        "sha256": "99115fbe9234e3975dd48dc2df5a1a4c1b321ae46811aff4e38f3454eaf3076a",
+        "bytes": 398,
+        "id": "12yx8kdDIC8jF79rtCUkCj59zN8_PngWJ",
+        "modified_time": "2026-10-19T19:20:10.217Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "01-context-and-domain-analysis/src/README.md"
+    },
+    {
+      "delivered_path": "01-context-and-domain-analysis/tests/acceptance.md",
+      "source": {
+        "path": "asdg/01-context-and-domain-analysis/tests/acceptance.md",
+        "sha256": "70e8b66baa9df4730b470fcf797384c990b0dcd63fb10a6d9a86f62fbecd4116",
+        "bytes": 1329,
+        "id": "1sWBUrEqN0loktUBBE9jbJqQHyh0EqHdN",
+        "modified_time": "2026-10-19T19:13:38.411Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "01-context-and-domain-analysis/tests/acceptance.md"
+    },
+    {
+      "delivered_path": "01-context-and-domain-analysis/types/contract.md",
+      "source": {
+        "path": "asdg/01-context-and-domain-analysis/types/contract.md",
+        "sha256": "e951cb3f3b494c6d0aafe281988d30a41ffc68d204c430c8adafd9d473ce4fc6",
+        "bytes": 1315,
+        "id": "1cJp5O9UI6q0o61Bch2G7JdJlrt-XPSgU",
+        "modified_time": "2026-10-19T19:21:54.122Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "01-context-and-domain-analysis/types/contract.md"
+    },
+    {
+      "delivered_path": "02-purpose/AGENTS.md",
+      "source": {
+        "path": "asdg/02-purpose/AGENTS.md",
+        "sha256": "6a45e72bfb0a4ef100a05feef50f7f351940bcfb8c845a662978e68b2a0ebf22",
+        "bytes": 2812,
+        "id": "19ikhOr3EHAiMQqsDNs9-dMY9KDd7pOto",
+        "modified_time": "2026-10-19T19:21:54.140Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "02-purpose/AGENTS.md"
+    },
+    {
+      "delivered_path": "02-purpose/README.md",
+      "source": {
+        "path": "asdg/02-purpose/README.md",
+        "sha256": "62592a2e8075b5331da104f9c093899fb440e10b03f669765f9f4e05dbf7f993",
+        "bytes": 1946,
+        "id": "1u5bEFyN4S47d8tdaK3x19rf90BYw_mEL",
+        "modified_time": "2026-10-19T19:21:54.157Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "02-purpose/README.md"
+    },
+    {
+      "delivered_path": "02-purpose/docs/README.md",
+      "source": {
+        "path": "asdg/02-purpose/docs/README.md",
+        "sha256": "01387288a994f22751ec0a48b5f44905d96d480fe3baf892bd6ca5e5467764bf",
+        "bytes": 860,
+        "id": "1-9SGho3Bqb2BiMqP6J6geLH1I2bUrwHt",
+        "modified_time": "2026-10-19T19:21:54.174Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "02-purpose/docs/README.md"
+    },
+    {
+      "delivered_path": "02-purpose/skills/elicit-purpose/SKILL.md",
+      "source": {
+        "path": "asdg/02-purpose/skills/elicit-purpose/SKILL.md",
+        "sha256": "22eac421c929b6db5038d3acb04389da19893d3332915203108f28dee6b889b4",
+        "bytes": 1380,
+        "id": "11Dwo45Hhtd4Uv3UCmuA5agBwqBayhFAl",
+        "modified_time": "2026-10-19T19:21:54.209Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "02-purpose/skills/elicit-purpose/SKILL.md"
+    },
+    {
+      "delivered_path": "02-purpose/src/README.md",
+      "source": {
+        "path": "asdg/02-purpose/src/README.md",
+        "sha256": "387619962feb6256d07daa5fe06ebc7fe53bbc76d9e303c8194e25bd68f1bec4",
+        "bytes": 385,
+        "id": "15S18PFoVxOCuJVdT9WUrLvgBHGXSo48J",
+        "modified_time": "2026-10-19T19:13:38.726Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "02-purpose/src/README.md"
+    },
+    {
+      "delivered_path": "02-purpose/tests/acceptance.md",
+      "source": {
+        "path": "asdg/02-purpose/tests/acceptance.md",
+        "sha256": "89543c30c13d8d841b9cda31471336f0b43f80094c01bf4be431d90dfd90f7f2",
+        "bytes": 1297,
+        "id": "1K28zyN16AkDRlRY4knOX7Jmiv942hz0H",
+        "modified_time": "2026-10-19T19:13:38.746Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "02-purpose/tests/acceptance.md"
+    },
+    {
+      "delivered_path": "02-purpose/types/contract.md",
+      "source": {
+        "path": "asdg/02-purpose/types/contract.md",
+        "sha256": "94756a517f9d719430b3b84a156089425eb6f718f919d813cf7c409a135b9289",
+        "bytes": 1872,
+        "id": "1lnMOVxF7Wp7F0LExuZvFAqZ09ppO_mT8",
+        "modified_time": "2026-10-19T19:21:54.228Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "02-purpose/types/contract.md"
+    },
+    {
+      "delivered_path": "03-system-model-and-use-cases/AGENTS.md",
+      "source": {
+        "path": "asdg/03-system-model-and-use-cases/AGENTS.md",
+        "sha256": "0f1c1152ceadbfa74576cd35552fec4ebf5ee33b1cb2df410b777fbd455e8643",
+        "bytes": 2655,
+        "id": "1GoJDB9y1iiyD5_TkF6YazRYCjsQBHHUz",
+        "modified_time": "2026-10-19T19:21:54.247Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "03-system-model-and-use-cases/AGENTS.md"
+    },
+    {
+      "delivered_path": "03-system-model-and-use-cases/README.md",
+      "source": {
+        "path": "asdg/03-system-model-and-use-cases/README.md",
+        "sha256": "f12347030c8a18ec60eb00116c6ad07f802c15d1894eedee947659977df3ca91",
+        "bytes": 1618,
+        "id": "1uF3F3MqqeDA3FdSjVSBJnToHOwRbCVvy",
+        "modified_time": "2026-10-19T19:21:54.266Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "03-system-model-and-use-cases/README.md"
+    },
+    {
+      "delivered_path": "03-system-model-and-use-cases/docs/README.md",
+      "source": {
+        "path": "asdg/03-system-model-and-use-cases/docs/README.md",
+        "sha256": "df3d6e69b32c93433dcf7d3e721936ae7d75fe805ecb7279637fdf27681ec17e",
+        "bytes": 881,
+        "id": "1GfPeyiZ4E_t46VAmz9Fj-hmEPcscDA89",
+        "modified_time": "2026-10-19T19:21:54.285Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "03-system-model-and-use-cases/docs/README.md"
+    },
+    {
+      "delivered_path": "03-system-model-and-use-cases/skills/model-use-cases/SKILL.md",
+      "source": {
+        "path": "asdg/03-system-model-and-use-cases/skills/model-use-cases/SKILL.md",
+        "sha256": "62c20212a97e66ba345421944f51edf32254e5e6f7ce9298c94979b693d26086",
+        "bytes": 1295,
+        "id": "11AQQkN7ryKTwcDH5kUMRe2esIMjaeBaC",
+        "modified_time": "2026-10-19T19:21:54.323Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "03-system-model-and-use-cases/skills/model-use-cases/SKILL.md"
+    },
+    {
+      "delivered_path": "03-system-model-and-use-cases/src/README.md",
+      "source": {
+        "path": "asdg/03-system-model-and-use-cases/src/README.md",
+        "sha256": "717c0cf708a05d0f176cc20701674b996fb43219d3f6080f41f8ca70b7ff8c54",
+        "bytes": 406,
+        "id": "1M3SSd0ldN17riuJGC3CAkAqkyKPXEJCv",
+        "modified_time": "2026-10-19T19:20:10.294Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "03-system-model-and-use-cases/src/README.md"
+    },
+    {
+      "delivered_path": "03-system-model-and-use-cases/tests/acceptance.md",
+      "source": {
+        "path": "asdg/03-system-model-and-use-cases/tests/acceptance.md",
+        "sha256": "e0bdb2e93b5695d6db179c9d1fdaa193a0175140fd0971199d217d69987ec4f6",
+        "bytes": 1336,
+        "id": "1zbPSTUfjYurVf9BG1AYhNdZ_uBaSte-W",
+        "modified_time": "2026-10-19T19:13:38.867Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "03-system-model-and-use-cases/tests/acceptance.md"
+    },
+    {
+      "delivered_path": "03-system-model-and-use-cases/types/contract.md",
+      "source": {
+        "path": "asdg/03-system-model-and-use-cases/types/contract.md",
+        "sha256": "7003037bd0a09972488d0c2d7ddb85f77f429656f16dd9960793736c968fe5c9",
+        "bytes": 1264,
+        "id": "1N8SOA7uM709DlbEDFvt5usxY5S97fgL_",
+        "modified_time": "2026-10-19T19:21:54.341Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "03-system-model-and-use-cases/types/contract.md"
+    },
+    {
+      "delivered_path": "04-benchmarks-and-eval-strategy/AGENTS.md",
+      "source": {
+        "path": "asdg/04-benchmarks-and-eval-strategy/AGENTS.md",
+        "sha256": "804a8b330a70c53073c2414a1fc45b32706def7734c0d2d22f9055c899544d18",
+        "bytes": 2759,
+        "id": "1Al6Jn7e0t5ZWscPULDJtN_HZxeHod4uv",
+        "modified_time": "2026-10-19T19:21:54.358Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "04-benchmarks-and-eval-strategy/AGENTS.md"
+    },
+    {
+      "delivered_path": "04-benchmarks-and-eval-strategy/README.md",
+      "source": {
+        "path": "asdg/04-benchmarks-and-eval-strategy/README.md",
+        "sha256": "5fd22f2ab96208ccd92794a16f15cc17639f0e6628ebe95ec37ffc49799f85fa",
+        "bytes": 1625,
+        "id": "11pAM6mH4Mn0EV6u4vqZQqkeh0ff-5Q_M",
+        "modified_time": "2026-10-19T19:21:54.375Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "04-benchmarks-and-eval-strategy/README.md"
+    },
+    {
+      "delivered_path": "04-benchmarks-and-eval-strategy/docs/README.md",
+      "source": {
+        "path": "asdg/04-benchmarks-and-eval-strategy/docs/README.md",
+        "sha256": "8b87d295d34ee9a5f1fad5e246f03ff84b9d611e822e981952230151ff948b1c",
+        "bytes": 888,
+        "id": "18rpAlbPDg6kzONqTJZskWVadQ5c1g6wF",
+        "modified_time": "2026-10-19T19:21:54.392Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "04-benchmarks-and-eval-strategy/docs/README.md"
+    },
+    {
+      "delivered_path": "04-benchmarks-and-eval-strategy/skills/evaluate-alternatives/SKILL.md",
+      "source": {
+        "path": "asdg/04-benchmarks-and-eval-strategy/skills/evaluate-alternatives/SKILL.md",
+        "sha256": "2b2357bee8013097ca45d6bc33aa95b08faf5f677a71de153474301f752f332d",
+        "bytes": 1358,
+        "id": "1S5uKuqledtqY--6fWtIqY7WgQ7otPc5M",
+        "modified_time": "2026-10-19T19:21:54.427Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "04-benchmarks-and-eval-strategy/skills/evaluate-alternatives/SKILL.md"
+    },
+    {
+      "delivered_path": "04-benchmarks-and-eval-strategy/src/README.md",
+      "source": {
+        "path": "asdg/04-benchmarks-and-eval-strategy/src/README.md",
+        "sha256": "12e1046372806889f9a1adf425d0a2c60b8106d80094d8cfd12caffdaeeb7ec7",
+        "bytes": 413,
+        "id": "1H0D-XQSMbc452NRKqhPlNW65FkIFAudU",
+        "modified_time": "2026-10-19T19:20:10.338Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "04-benchmarks-and-eval-strategy/src/README.md"
+    },
+    {
+      "delivered_path": "04-benchmarks-and-eval-strategy/tests/acceptance.md",
+      "source": {
+        "path": "asdg/04-benchmarks-and-eval-strategy/tests/acceptance.md",
+        "sha256": "53b75b8c503d11d462bdbc709aada4ee9149d8b944ade932221279a80c00adc0",
+        "bytes": 1356,
+        "id": "14HaBHh5mdu1qrtgruEZCNfytPj7MSjMc",
+        "modified_time": "2026-10-19T19:13:39.176Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "04-benchmarks-and-eval-strategy/tests/acceptance.md"
+    },
+    {
+      "delivered_path": "04-benchmarks-and-eval-strategy/types/contract.md",
+      "source": {
+        "path": "asdg/04-benchmarks-and-eval-strategy/types/contract.md",
+        "sha256": "c5b0cbe3ed1245bcedc874fcc5685f67f1b117a1238377ba9fa09ffef266fd5e",
+        "bytes": 1355,
+        "id": "1l0xDi3rMqHJXfv-4EEs7VuPJqZgJsXmV",
+        "modified_time": "2026-10-19T19:21:54.447Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "04-benchmarks-and-eval-strategy/types/contract.md"
+    },
+    {
+      "delivered_path": "05-high-level-design-and-architecture/AGENTS.md",
+      "source": {
+        "path": "asdg/05-high-level-design-and-architecture/AGENTS.md",
+        "sha256": "a28c3da02b98d01531db8540cedcf28ad42e44cb359315ee0d5d66361bf5691d",
+        "bytes": 3100,
+        "id": "1uPJahqqmRe0kf3BNEFyRyMvBai6_qyOc",
+        "modified_time": "2026-10-19T19:21:54.466Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "05-high-level-design-and-architecture/AGENTS.md"
+    },
+    {
+      "delivered_path": "05-high-level-design-and-architecture/README.md",
+      "source": {
+        "path": "asdg/05-high-level-design-and-architecture/README.md",
+        "sha256": "578b469dec0178c307299b124338691830b847d23b6a970c3f49daf7c1b90698",
+        "bytes": 1620,
+        "id": "1tn2y3CLvlMELOtrDLnr_aNEYdvbCi7b4",
+        "modified_time": "2026-10-19T19:21:54.486Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "05-high-level-design-and-architecture/README.md"
+    },
+    {
+      "delivered_path": "05-high-level-design-and-architecture/docs/README.md",
+      "source": {
+        "path": "asdg/05-high-level-design-and-architecture/docs/README.md",
+        "sha256": "2daebfc548cba1ea738b0d90625d91eaffdf1a30200d9464ba9756a7c1b08ae4",
+        "bytes": 883,
+        "id": "1bsPn5UvDtAYs5BmmFdzSuXedVz94Aeyf",
+        "modified_time": "2026-10-19T19:21:54.505Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "05-high-level-design-and-architecture/docs/README.md"
+    },
+    {
+      "delivered_path": "05-high-level-design-and-architecture/skills/propose-architecture/SKILL.md",
+      "source": {
+        "path": "asdg/05-high-level-design-and-architecture/skills/propose-architecture/SKILL.md",
+        "sha256": "c7f90cd80d0fde623a00d0d326699c9060e45fb86cce59dd1cdf05ae61822d88",
+        "bytes": 1337,
+        "id": "1W96XPq_zfGz45cLpZW2wYjCaDwY4a500",
+        "modified_time": "2026-10-19T19:21:54.642Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "05-high-level-design-and-architecture/skills/propose-architecture/SKILL.md"
+    },
+    {
+      "delivered_path": "05-high-level-design-and-architecture/src/README.md",
+      "source": {
+        "path": "asdg/05-high-level-design-and-architecture/src/README.md",
+        "sha256": "0cb2bec39cc910571f12af7ea5037cf5911f5494f69ba4fd2a5f7b974aa2b055",
+        "bytes": 408,
+        "id": "1yXB9djt0Q-DoDQIo6_tB1-G0a1ooSI5Q",
+        "modified_time": "2026-10-19T19:20:10.375Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "05-high-level-design-and-architecture/src/README.md"
+    },
+    {
+      "delivered_path": "05-high-level-design-and-architecture/tests/acceptance.md",
+      "source": {
+        "path": "asdg/05-high-level-design-and-architecture/tests/acceptance.md",
+        "sha256": "3d0a7b454089130c6617d269b41de1a9037474a1d9e052346035b62640ded1c0",
+        "bytes": 1350,
+        "id": "1clX8tdm-ttszQbV8YAvO7RFlLSnu5ESm",
+        "modified_time": "2026-10-19T19:13:39.292Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "05-high-level-design-and-architecture/tests/acceptance.md"
+    },
+    {
+      "delivered_path": "05-high-level-design-and-architecture/types/contract.md",
+      "source": {
+        "path": "asdg/05-high-level-design-and-architecture/types/contract.md",
+        "sha256": "4a5db566db22ead46e1ffbda0da45d7e8475e27a12761fd0e30cc7df119fc0f0",
+        "bytes": 1352,
+        "id": "1iP7W_ibn9byLAwmnEVTGv77nT1FsT5hq",
+        "modified_time": "2026-10-19T19:21:54.661Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "05-high-level-design-and-architecture/types/contract.md"
+    },
+    {
+      "delivered_path": "06-viable-proof-of-concept/AGENTS.md",
+      "source": {
+        "path": "asdg/06-viable-proof-of-concept/AGENTS.md",
+        "sha256": "6ce363b402ca50b315b23b0427da04c0905423e5c382639a2abb59f4f6720466",
+        "bytes": 2742,
+        "id": "1YlLwHtIrSE1QMthjG0L9z3WyibamdEZp",
+        "modified_time": "2026-10-19T19:21:54.681Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "06-viable-proof-of-concept/AGENTS.md"
+    },
+    {
+      "delivered_path": "06-viable-proof-of-concept/README.md",
+      "source": {
+        "path": "asdg/06-viable-proof-of-concept/README.md",
+        "sha256": "a4df3847a8cde2e7e1256d4e22913d17a46a9b5a5f8dcdf369174632b866dfee",
+        "bytes": 1602,
+        "id": "1Wuh8uDfV5lKvBHRSNCrsU1HtjJFMRVlx",
+        "modified_time": "2026-10-19T19:21:54.700Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "06-viable-proof-of-concept/README.md"
+    },
+    {
+      "delivered_path": "06-viable-proof-of-concept/docs/README.md",
+      "source": {
+        "path": "asdg/06-viable-proof-of-concept/docs/README.md",
+        "sha256": "53220316f679f55e7ed17a0f25a1451d68d7596af128705652d8b84ec188a750",
+        "bytes": 865,
+        "id": "1jLucyVQw0F7e_UgBqnqUpp6wiXvCs-i2",
+        "modified_time": "2026-10-19T19:21:54.720Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "06-viable-proof-of-concept/docs/README.md"
+    },
+    {
+      "delivered_path": "06-viable-proof-of-concept/skills/plan-experiment/SKILL.md",
+      "source": {
+        "path": "asdg/06-viable-proof-of-concept/skills/plan-experiment/SKILL.md",
+        "sha256": "a67b26722a239edee365f928b84b7a8acaea2672a7673775c8afa8dbd49f4eae",
+        "bytes": 1303,
+        "id": "1DRV-vV8OFPzsDavcSu63TDkT0sjZR8Lg",
+        "modified_time": "2026-10-19T19:21:54.757Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "06-viable-proof-of-concept/skills/plan-experiment/SKILL.md"
+    },
+    {
+      "delivered_path": "06-viable-proof-of-concept/src/README.md",
+      "source": {
+        "path": "asdg/06-viable-proof-of-concept/src/README.md",
+        "sha256": "aa7a6f9f4b8e626953a4b314882c8082f9f45d06db4a7193640847c41262ae75",
+        "bytes": 390,
+        "id": "1_8UbFEMgyfm5QE-fEJ4q80Bpc99QlNe5",
+        "modified_time": "2026-10-19T19:20:10.408Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "06-viable-proof-of-concept/src/README.md"
+    },
+    {
+      "delivered_path": "06-viable-proof-of-concept/tests/acceptance.md",
+      "source": {
+        "path": "asdg/06-viable-proof-of-concept/tests/acceptance.md",
+        "sha256": "4ac49412461d96705011a81e9595f4276a203a9db93e4d82ba8190892f697ad4",
+        "bytes": 1317,
+        "id": "1DDOuzgWEDT5PJm_VfnrD0R4TabUjnZUq",
+        "modified_time": "2026-10-19T19:13:39.609Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "06-viable-proof-of-concept/tests/acceptance.md"
+    },
+    {
+      "delivered_path": "06-viable-proof-of-concept/types/contract.md",
+      "source": {
+        "path": "asdg/06-viable-proof-of-concept/types/contract.md",
+        "sha256": "5f6bfaa2c3dedcd8b38edff1c6e47bf6519f32278028377b3429be5a97ca3f60",
+        "bytes": 1365,
+        "id": "15WZ4ZHOz-YA9CFY1UcA4hQS17RY4sJuX",
+        "modified_time": "2026-10-19T19:21:54.775Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "06-viable-proof-of-concept/types/contract.md"
+    },
+    {
+      "delivered_path": "07-planning/AGENTS.md",
+      "source": {
+        "path": "asdg/07-planning/AGENTS.md",
+        "sha256": "1e58688baa966ea4b6151782ba35f9319c8e76f83355e762ea561e5353391b7e",
+        "bytes": 2665,
+        "id": "1tIwmf9LK3bFn-LcGDG8k3R9Jhqv0f8CD",
+        "modified_time": "2026-10-19T19:21:54.793Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "07-planning/AGENTS.md"
+    },
+    {
+      "delivered_path": "07-planning/README.md",
+      "source": {
+        "path": "asdg/07-planning/README.md",
+        "sha256": "24232471dfcfdef4fea8f4f9bcbc629dc5126ac4f507f8bdecd0d3f62ae057ec",
+        "bytes": 1597,
+        "id": "1EIxXM4skpCpC-V482CKwzBkhDLERg_5L",
+        "modified_time": "2026-10-19T19:21:54.810Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "07-planning/README.md"
+    },
+    {
+      "delivered_path": "07-planning/docs/README.md",
+      "source": {
+        "path": "asdg/07-planning/docs/README.md",
+        "sha256": "11e0fafa27d4dbf49f277a87c2cea44dcbda85a1693b822a01ff00547aba38b4",
+        "bytes": 860,
+        "id": "1ZZfzeHMAZjMBG5NOyZw9PU178uGtnllz",
+        "modified_time": "2026-10-19T19:21:54.828Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "07-planning/docs/README.md"
+    },
+    {
+      "delivered_path": "07-planning/skills/prepare-plan/SKILL.md",
+      "source": {
+        "path": "asdg/07-planning/skills/prepare-plan/SKILL.md",
+        "sha256": "6180a60a603f0d129376f3143114fc54a93b0af905110ee46c9fcefd54425a24",
+        "bytes": 1282,
+        "id": "1S_rAbWU14KePdGtFReGb_neMQJui_Wp_",
+        "modified_time": "2026-10-19T19:21:54.864Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "07-planning/skills/prepare-plan/SKILL.md"
+    },
+    {
+      "delivered_path": "07-planning/src/README.md",
+      "source": {
+        "path": "asdg/07-planning/src/README.md",
+        "sha256": "9010b6ef1b01188036c6114d7c45ed98b1fc212c2ce5083cb849ff0ab3754bd0",
+        "bytes": 385,
+        "id": "1mLHs64LwpClYuQw89H_nhfv-mFIf8dEo",
+        "modified_time": "2026-10-19T19:20:10.446Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "07-planning/src/README.md"
+    },
+    {
+      "delivered_path": "07-planning/tests/acceptance.md",
+      "source": {
+        "path": "asdg/07-planning/tests/acceptance.md",
+        "sha256": "333b7a7b9a4208864c24daf29fa3219ebc76ccd770758937316d998cbc46d50e",
+        "bytes": 1300,
+        "id": "1CxEoDcM3uceE1iLrHT5rmCRNEgJVuTZL",
+        "modified_time": "2026-10-19T19:13:39.720Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "07-planning/tests/acceptance.md"
+    },
+    {
+      "delivered_path": "07-planning/types/contract.md",
+      "source": {
+        "path": "asdg/07-planning/types/contract.md",
+        "sha256": "60c5cf89b6d5615c8e5e1592c1658f7879d94a5b105f882aa8c991415db082ff",
+        "bytes": 1274,
+        "id": "1jCNzrai0Z2uI1UxsAPqj2M_he-Kq5Cvf",
+        "modified_time": "2026-10-19T19:21:54.882Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "07-planning/types/contract.md"
+    },
+    {
+      "delivered_path": "08-low-level-design/AGENTS.md",
+      "source": {
+        "path": "asdg/08-low-level-design/AGENTS.md",
+        "sha256": "a2f6637672a5769cec53d2d3dd40e65a1cdb13eb660f99817db02b34559b50be",
+        "bytes": 2714,
+        "id": "1sxEBVfE8M4_iR-r5shV6n0Pzfw75U_Lc",
+        "modified_time": "2026-10-19T19:21:54.899Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "08-low-level-design/AGENTS.md"
+    },
+    {
+      "delivered_path": "08-low-level-design/README.md",
+      "source": {
+        "path": "asdg/08-low-level-design/README.md",
+        "sha256": "4ed5ad81b87503bb20d069ca0586a9f158c6204d7f1c34cc2ae174c80e39e8ed",
+        "bytes": 1607,
+        "id": "149ZyULo9xxA_RsKcwOJ6_UR74YvTd4TJ",
+        "modified_time": "2026-10-19T19:21:54.917Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "08-low-level-design/README.md"
+    },
+    {
+      "delivered_path": "08-low-level-design/docs/README.md",
+      "source": {
+        "path": "asdg/08-low-level-design/docs/README.md",
+        "sha256": "3641ffb5a075029e3ee7756c0f24de5608654f0d77b1ae79afb200bf6d16404c",
+        "bytes": 870,
+        "id": "1eXfWJH9l-vf8U7jk6YMFeuThflsVE5Ip",
+        "modified_time": "2026-10-19T19:21:54.934Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "08-low-level-design/docs/README.md"
+    },
+    {
+      "delivered_path": "08-low-level-design/skills/specify-design/SKILL.md",
+      "source": {
+        "path": "asdg/08-low-level-design/skills/specify-design/SKILL.md",
+        "sha256": "c99c87bfd0625877b63e5f91da8137295c5a7a08029b76dd3626d8a6a67d289d",
+        "bytes": 1293,
+        "id": "1jnrXxO5wJ9EFbeEZtce7bW8V8XEju4m0",
+        "modified_time": "2026-10-19T19:21:54.968Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "08-low-level-design/skills/specify-design/SKILL.md"
+    },
+    {
+      "delivered_path": "08-low-level-design/src/README.md",
+      "source": {
+        "path": "asdg/08-low-level-design/src/README.md",
+        "sha256": "aba68f91d8f42822c0fb4c683c24ae31cbb6d6c8fdc8f097c41a083d0f32e8f2",
+        "bytes": 395,
+        "id": "18LBJKFjcAsYqtufvSL2uB8FL6RwNCB9m",
+        "modified_time": "2026-10-19T19:20:10.482Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "08-low-level-design/src/README.md"
+    },
+    {
+      "delivered_path": "08-low-level-design/tests/acceptance.md",
+      "source": {
+        "path": "asdg/08-low-level-design/tests/acceptance.md",
+        "sha256": "dfcf46ad84b8ed27ac99c519db372bd48671d154b8fbce9de9c6a59fdeb1c6f1",
+        "bytes": 1316,
+        "id": "1b4hPxxS__px3d5xVp7K7MEHpbZ5y78do",
+        "modified_time": "2026-10-19T19:13:40.047Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "08-low-level-design/tests/acceptance.md"
+    },
+    {
+      "delivered_path": "08-low-level-design/types/contract.md",
+      "source": {
+        "path": "asdg/08-low-level-design/types/contract.md",
+        "sha256": "ef3e2f4513d47bf034b98a08a0ec9fd9ff9269b2ade1624c050559a8ce88fb73",
+        "bytes": 1315,
+        "id": "1YAZlPNAuYU3n2oqK0jXHhWKbONzsQ4Ce",
+        "modified_time": "2026-10-19T19:21:54.985Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "08-low-level-design/types/contract.md"
+    },
+    {
+      "delivered_path": "09-build-and-test-cycle/AGENTS.md",
+      "source": {
+        "path": "asdg/09-build-and-test-cycle/AGENTS.md",
+        "sha256": "f5bd6b1c28c3b43a8415d970e785b288ce66a5ccc070c414e32dfd0c221ee2f0",
+        "bytes": 2757,
+        "id": "1DJnEkFxOEs-hrhy3iKxfEn3R6sYZX-76",
+        "modified_time": "2026-10-19T19:21:55.002Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "09-build-and-test-cycle/AGENTS.md"
+    },
+    {
+      "delivered_path": "09-build-and-test-cycle/README.md",
+      "source": {
+        "path": "asdg/09-build-and-test-cycle/README.md",
+        "sha256": "3958aa2c6b2dbc5ed86e61d540c6d5edca9ee78f1617c29d85a510bf62c48af5",
+        "bytes": 1608,
+        "id": "1DVaM0PFhPMgVgH1u8C--4nIv2CVKqSEO",
+        "modified_time": "2026-10-19T19:21:55.019Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "09-build-and-test-cycle/README.md"
+    },
+    {
+      "delivered_path": "09-build-and-test-cycle/docs/README.md",
+      "source": {
+        "path": "asdg/09-build-and-test-cycle/docs/README.md",
+        "sha256": "d2db61a7dbb84e4ac51d43ec6414c525ad794bd0edc40634ef095369abea48f0",
+        "bytes": 871,
+        "id": "1lzJrylaTGBiO1eZkMmyF0zA9N-CPrrao",
+        "modified_time": "2026-10-19T19:21:55.035Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "09-build-and-test-cycle/docs/README.md"
+    },
+    {
+      "delivered_path": "09-build-and-test-cycle/skills/review-build-task/SKILL.md",
+      "source": {
+        "path": "asdg/09-build-and-test-cycle/skills/review-build-task/SKILL.md",
+        "sha256": "40ee4c6398fd4e2f823d59014ec035e7b1592dd2a03aa3fbd3c7ae52006ee1be",
+        "bytes": 1306,
+        "id": "1KsL5pKKUb6Y8ptD1tduhQDJF-QrZYDwU",
+        "modified_time": "2026-10-19T19:21:55.185Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "09-build-and-test-cycle/skills/review-build-task/SKILL.md"
+    },
+    {
+      "delivered_path": "09-build-and-test-cycle/src/README.md",
+      "source": {
+        "path": "asdg/09-build-and-test-cycle/src/README.md",
+        "sha256": "661263389cf5fea79768d904a2c7d3329e748a95e47d71f0d0948bc978d7e159",
+        "bytes": 396,
+        "id": "1PlN5EtKKnUnEzIU8NldJgQTwfjUiXAL_",
+        "modified_time": "2026-10-19T19:20:10.524Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "09-build-and-test-cycle/src/README.md"
+    },
+    {
+      "delivered_path": "09-build-and-test-cycle/tests/acceptance.md",
+      "source": {
+        "path": "asdg/09-build-and-test-cycle/tests/acceptance.md",
+        "sha256": "a37995a723c5bd7b2fa86f546271eff835167b0ff65eacffbac96deadf582d92",
+        "bytes": 1318,
+        "id": "1EPS8Ua29OtvdrmBAc2vWzTM--SRBnIac",
+        "modified_time": "2026-10-19T19:13:40.161Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "09-build-and-test-cycle/tests/acceptance.md"
+    },
+    {
+      "delivered_path": "09-build-and-test-cycle/types/contract.md",
+      "source": {
+        "path": "asdg/09-build-and-test-cycle/types/contract.md",
+        "sha256": "6624450dd0f2836596427ca4f5b4fb16d7959c584776c1f008041222449f51aa",
+        "bytes": 1352,
+        "id": "15c6BzJ6HaWxqIKywWDTQHDwmECs5oYBx",
+        "modified_time": "2026-10-19T19:21:55.231Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "09-build-and-test-cycle/types/contract.md"
+    },
+    {
+      "delivered_path": "10-document-review-and-release/AGENTS.md",
+      "source": {
+        "path": "asdg/10-document-review-and-release/AGENTS.md",
+        "sha256": "2b2611e5cc8531a11a4f55bfcd5f286e9b55992077b931266a57367bdde39c98",
+        "bytes": 2798,
+        "id": "1hkYBs5TD55RHt8EwZQPZzrEJPpx0IRFD",
+        "modified_time": "2026-10-19T19:21:55.254Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "10-document-review-and-release/AGENTS.md"
+    },
+    {
+      "delivered_path": "10-document-review-and-release/README.md",
+      "source": {
+        "path": "asdg/10-document-review-and-release/README.md",
+        "sha256": "7bbaa39c817285645c300420c38581c5ca945910d638d29f8b1fac6f9cdc797f",
+        "bytes": 1621,
+        "id": "1iD5brTBg8zgzqWB0adCqERQuPLKV5FSZ",
+        "modified_time": "2026-10-19T19:21:55.272Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "10-document-review-and-release/README.md"
+    },
+    {
+      "delivered_path": "10-document-review-and-release/docs/README.md",
+      "source": {
+        "path": "asdg/10-document-review-and-release/docs/README.md",
+        "sha256": "be5123ffe166293a456a6672514bb4d1807950676aa5850fe2020f08d474e153",
+        "bytes": 884,
+        "id": "1pCPVOrAT3F3NxoU3l95Jss8eT42FivYQ",
+        "modified_time": "2026-10-19T19:21:55.290Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "10-document-review-and-release/docs/README.md"
+    },
+    {
+      "delivered_path": "10-document-review-and-release/skills/review-readiness/SKILL.md",
+      "source": {
+        "path": "asdg/10-document-review-and-release/skills/review-readiness/SKILL.md",
+        "sha256": "eae6314bf2362b172cb8a192d8eec448cadf68801ea6cef0bebafc0a17ced0ff",
+        "bytes": 1365,
+        "id": "1gvjefOUT7_fyfBLOmHIZgi7EX_Doe_D_",
+        "modified_time": "2026-10-19T19:21:55.326Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "10-document-review-and-release/skills/review-readiness/SKILL.md"
+    },
+    {
+      "delivered_path": "10-document-review-and-release/src/README.md",
+      "source": {
+        "path": "asdg/10-document-review-and-release/src/README.md",
+        "sha256": "e7aa312f673d097e9bc1039faed585d656d25f37d14e7cfa093321ba87cd0568",
+        "bytes": 409,
+        "id": "1v6NAiHUmrLmXH1L9OeRhO_84MIU4qqhh",
+        "modified_time": "2026-10-19T19:20:10.560Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "10-document-review-and-release/src/README.md"
+    },
+    {
+      "delivered_path": "10-document-review-and-release/tests/acceptance.md",
+      "source": {
+        "path": "asdg/10-document-review-and-release/tests/acceptance.md",
+        "sha256": "c17ad7b4562c45f2d41a848b1ec6e55f8c77f389824a69aa007ea92cecda365a",
+        "bytes": 1339,
+        "id": "1QHd3uj-X-3W6EKc13GCxCGXy0qyRXz81",
+        "modified_time": "2026-10-19T19:13:40.476Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "10-document-review-and-release/tests/acceptance.md"
+    },
+    {
+      "delivered_path": "10-document-review-and-release/types/contract.md",
+      "source": {
+        "path": "asdg/10-document-review-and-release/types/contract.md",
+        "sha256": "f2a0ff47c589403493229bf13f620b749fb1cb1ec78965bbc19fb18a1bc688d7",
+        "bytes": 1389,
+        "id": "1nk_g9PmNioTogHvZc3fYM7gts_kt9oHH",
+        "modified_time": "2026-10-19T19:21:55.343Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "10-document-review-and-release/types/contract.md"
+    },
+    {
+      "delivered_path": "11-operational-reality-devops-and-user-acceptance/AGENTS.md",
+      "source": {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/AGENTS.md",
+        "sha256": "4f242934ffe7cfe86e0a1b79b303b49dd1a50022488204ea5a9dca18de997de2",
+        "bytes": 2783,
+        "id": "1791TL71OvBHh5nxncbd7OnHBta-pA0Mu",
+        "modified_time": "2026-10-19T19:21:55.360Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "11-operational-reality-devops-and-user-acceptance/AGENTS.md"
+    },
+    {
+      "delivered_path": "11-operational-reality-devops-and-user-acceptance/README.md",
+      "source": {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/README.md",
+        "sha256": "e26763502b76df5129a351ab3231bdc0f2d7189eb7c4e0f0c9d1891bfc533e8c",
+        "bytes": 1697,
+        "id": "1KjZj5a_osFJiqudfiwDDnYdo6Pe-3Rdz",
+        "modified_time": "2026-10-19T19:21:55.378Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "11-operational-reality-devops-and-user-acceptance/README.md"
+    },
+    {
+      "delivered_path": "11-operational-reality-devops-and-user-acceptance/docs/README.md",
+      "source": {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/docs/README.md",
+        "sha256": "176fb41076a804778422c74524a5f3469666f7a2861a21c298d80323119142a5",
+        "bytes": 1087,
+        "id": "1C-rLT6wG3hNDFm9T7mewPqGUTh2xchOh",
+        "modified_time": "2026-10-19T19:21:55.394Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "11-operational-reality-devops-and-user-acceptance/docs/README.md"
+    },
+    {
+      "delivered_path": "11-operational-reality-devops-and-user-acceptance/skills/assess-operations/SKILL.md",
+      "source": {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/skills/assess-operations/SKILL.md",
+        "sha256": "e4627f3a1bbeab18e2118041ff302b7b47a5780975109b71dbc24f55cc0a3c05",
+        "bytes": 1848,
+        "id": "1iS6RA3W9qBYoyiJJNFfn2M-mUhZRFG9H",
+        "modified_time": "2026-10-19T19:21:55.429Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "11-operational-reality-devops-and-user-acceptance/skills/assess-operations/SKILL.md"
+    },
+    {
+      "delivered_path": "11-operational-reality-devops-and-user-acceptance/src/README.md",
+      "source": {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/src/README.md",
+        "sha256": "f9045575f2d0a9fb2f60932b072f16e22d42323e2ade113bfebcc27ce898a67b",
+        "bytes": 429,
+        "id": "1Ysk_Nl50228bwur8NKxGzimye1guH8aO",
+        "modified_time": "2026-10-19T19:20:10.597Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "11-operational-reality-devops-and-user-acceptance/src/README.md"
+    },
+    {
+      "delivered_path": "11-operational-reality-devops-and-user-acceptance/tests/acceptance.md",
+      "source": {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/tests/acceptance.md",
+        "sha256": "ce8380b6c7f53afd38126981d3d80394500fc369d999f89c09670b20ac30da24",
+        "bytes": 1377,
+        "id": "1qGAEyGVN6K6Jv9kWksluiwICaHpPf-G3",
+        "modified_time": "2026-10-19T19:13:40.589Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "11-operational-reality-devops-and-user-acceptance/tests/acceptance.md"
+    },
+    {
+      "delivered_path": "11-operational-reality-devops-and-user-acceptance/types/contract.md",
+      "source": {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/types/contract.md",
+        "sha256": "2f0bb3ad4a57a2015b11f2724bba801ed3641d6efa65c86d8c1fa24486fedd81",
+        "bytes": 1411,
+        "id": "1uirebAISlu9ugHzf9ZRUyTW7_8HEtc8a",
+        "modified_time": "2026-10-19T19:21:55.446Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "11-operational-reality-devops-and-user-acceptance/types/contract.md"
+    },
+    {
+      "delivered_path": "12-observability-insights-and-learning/AGENTS.md",
+      "source": {
+        "path": "asdg/12-observability-insights-and-learning/AGENTS.md",
+        "sha256": "9ee486c6db06f725303bd0ceb007a9e37b884f8aa6a4fe53997b448d769c00da",
+        "bytes": 2725,
+        "id": "1opbqB0oqiwz757T9Y5UPkW9h7uZl_SvY",
+        "modified_time": "2026-10-19T19:21:55.464Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "12-observability-insights-and-learning/AGENTS.md"
+    },
+    {
+      "delivered_path": "12-observability-insights-and-learning/README.md",
+      "source": {
+        "path": "asdg/12-observability-insights-and-learning/README.md",
+        "sha256": "4e6ddb8dafb9fe037a50637d481ca8119adbee5c2f40a4d506874c5abb841436",
+        "bytes": 1684,
+        "id": "1rtml-DDHhLbjtq8t-poct6JCFcb7QEo7",
+        "modified_time": "2026-10-19T19:21:55.482Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "12-observability-insights-and-learning/README.md"
+    },
+    {
+      "delivered_path": "12-observability-insights-and-learning/docs/README.md",
+      "source": {
+        "path": "asdg/12-observability-insights-and-learning/docs/README.md",
+        "sha256": "d39c2c1c7ef4a428c3aaf637591bb4f041c1ea4400e060ad780f3d5428579464",
+        "bytes": 1063,
+        "id": "1K7e5HWZztI0uVJIxMuqWlkPtyd7qeTbw",
+        "modified_time": "2026-10-19T19:21:55.500Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "12-observability-insights-and-learning/docs/README.md"
+    },
+    {
+      "delivered_path": "12-observability-insights-and-learning/skills/derive-insights/SKILL.md",
+      "source": {
+        "path": "asdg/12-observability-insights-and-learning/skills/derive-insights/SKILL.md",
+        "sha256": "dcbb994478dbc54ab9657df041ec668c029c6fb02c26954d3ab482a35c97e73b",
+        "bytes": 1816,
+        "id": "1bPE3OjpGafOEtxiFzauR0tcz-6vm5qbq",
+        "modified_time": "2026-10-19T19:21:55.536Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "12-observability-insights-and-learning/skills/derive-insights/SKILL.md"
+    },
+    {
+      "delivered_path": "12-observability-insights-and-learning/src/README.md",
+      "source": {
+        "path": "asdg/12-observability-insights-and-learning/src/README.md",
+        "sha256": "be37b2a05084e22f348159c08dc494e1c74ce2dba3af23fcf4dddd43317319ff",
+        "bytes": 416,
+        "id": "1yaI2GL3OD-nmGBSvbdOb0wFZWX8zrkaS",
+        "modified_time": "2026-10-19T19:20:10.638Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "12-observability-insights-and-learning/src/README.md"
+    },
+    {
+      "delivered_path": "12-observability-insights-and-learning/tests/acceptance.md",
+      "source": {
+        "path": "asdg/12-observability-insights-and-learning/tests/acceptance.md",
+        "sha256": "ee6ea27cb2b287ce265d70e05ca353eb55137e9166f5c5cc92762ae8e734da73",
+        "bytes": 1355,
+        "id": "1iPxu2OWH2Ku6sL9BOdU6EW8KoXSpeTZK",
+        "modified_time": "2026-10-19T19:13:40.913Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "12-observability-insights-and-learning/tests/acceptance.md"
+    },
+    {
+      "delivered_path": "12-observability-insights-and-learning/types/contract.md",
+      "source": {
+        "path": "asdg/12-observability-insights-and-learning/types/contract.md",
+        "sha256": "d2e918cc3f6279998d012308120c6af5ac81de0b5ab02e4ebcaafd7fcae8decb",
+        "bytes": 1358,
+        "id": "1L9DWQCUlkPEMOoSJKSSynnvJeJ-skx7Y",
+        "modified_time": "2026-10-19T19:21:55.554Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "12-observability-insights-and-learning/types/contract.md"
+    },
+    {
+      "delivered_path": "AGENTS.md",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "AGENTS.md"
+    },
+    {
+      "delivered_path": "CODEX-PROMPT.md",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "CODEX-PROMPT.md"
+    },
+    {
+      "delivered_path": "LICENSE",
+      "source": {
+        "path": "LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "bytes": 11357,
+        "id": "1ruLbnwCJ7MRJQ0D5Uvuhc5nQNMXdv3DW",
+        "modified_time": "2026-10-08T19:08:11.865Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "LICENSE"
+    },
+    {
+      "delivered_path": "README.md",
+      "source": {
+        "path": "asdg/README.md",
+        "sha256": "6328c02341cc6d5b54d018fdc0e713a73fc5d612421223be7d3481dcf6c95c2d",
+        "bytes": 2790,
+        "id": "1YFOsyxUi0Gj7_NTpj3qmGRqpQX5fFvAd",
+        "modified_time": "2026-10-19T19:21:55.572Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "README.md"
+    },
+    {
+      "delivered_path": "VERIFICATION.md",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "docs/verification.md"
+    },
+    {
+      "delivered_path": "agents/README.md",
+      "source": {
+        "path": "asdg/agents/README.md",
+        "sha256": "79f2c8b7bbf6eabd0818337153a7011fc2896ba4c675eb6d4b4fbbbb5e592024",
+        "bytes": 461,
+        "id": "1K9AesOsa9R-M1SpKo1EuM1-fbN9Xa3RW",
+        "modified_time": "2026-10-19T19:20:10.679Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": null
+    },
+    {
+      "delivered_path": "check.py",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "scripts/check.py"
+    },
+    {
+      "delivered_path": "cli.py",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "scripts/cli.py"
+    },
+    {
+      "delivered_path": "distribution.json",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "metadata/distribution.json"
+    },
+    {
+      "delivered_path": "docs/installation.md",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "docs/installation.md"
+    },
+    {
+      "delivered_path": "docs/lifecycle-baseline.md",
+      "source": {
+        "path": "docs/status/lifecycle-baseline.md",
+        "sha256": "af8c361ea4b4fe60e49c3e666ba3b0c35b8124c9647dd1f3bf407d303cda8e01",
+        "bytes": 2388,
+        "id": "1t_G4akPp_a7NMgJpFbksW_dWmsWxynE1",
+        "modified_time": "2026-10-19T19:13:44.345Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "docs/lifecycle-baseline.md"
+    },
+    {
+      "delivered_path": "docs/native-integration.md",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "docs/native-integration.md"
+    },
+    {
+      "delivered_path": "docs/provenance.md",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "docs/provenance.md"
+    },
+    {
+      "delivered_path": "docs/review-loop.md",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "docs/review-loop.md"
+    },
+    {
+      "delivered_path": "docs/usage.md",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "docs/usage.md"
+    },
+    {
+      "delivered_path": "hook.py",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "scripts/hook.py"
+    },
+    {
+      "delivered_path": "init.py",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "scripts/init.py"
+    },
+    {
+      "delivered_path": "skills/README.md",
+      "source": {
+        "path": "asdg/skills/README.md",
+        "sha256": "eaae5436ee2b42b454083b0386048d072690f1cdbade24021e9913dca4fbc22e",
+        "bytes": 1448,
+        "id": "10tWhaHOqkD3_xjEz-HJeYKmhKWc5YbCJ",
+        "modified_time": "2026-10-19T19:13:41.344Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "skills/README.md"
+    },
+    {
+      "delivered_path": "skills/asdg-documentation/SKILL.md",
+      "source": {
+        "path": "asdg/skills/asdg-documentation/SKILL.md",
+        "sha256": "20096b972014f09586169f52928cdf737c260c8beb1a39ce92d1cacc18dc494f",
+        "bytes": 2221,
+        "id": "14kPnQ3d3kgJpWdLpRGUVNjLARNtMivQy",
+        "modified_time": "2026-10-19T19:13:41.672Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "skills/asdg-documentation/SKILL.md"
+    },
+    {
+      "delivered_path": "skills/asdg-documentation/example.md",
+      "source": {
+        "path": "asdg/skills/asdg-documentation/example.md",
+        "sha256": "758e75ee54b258c482cd1a8a3be60d891986f46305c154978040dbe3b66c9515",
+        "bytes": 791,
+        "id": "1bjxEdazCk7Xy2ABwVObQmso2aPXbT7aZ",
+        "modified_time": "2026-10-19T18:55:02.092Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "skills/asdg-documentation/example.md"
+    },
+    {
+      "delivered_path": "skills/asdg-focus/SKILL.md",
+      "source": {
+        "path": "asdg/skills/asdg-focus/SKILL.md",
+        "sha256": "b9c2f59dc4bd4916fe012ec90375343724e8f998705a5d68c4e4139eef7552f2",
+        "bytes": 3698,
+        "id": "1rhKleWLfBD5SidS7GuGpM-6IRrEHXRji",
+        "modified_time": "2026-10-19T19:21:55.818Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "skills/asdg-focus/SKILL.md"
+    },
+    {
+      "delivered_path": "skills/asdg-focus/TRY-IT.md",
+      "source": {
+        "path": "asdg/skills/asdg-focus/TRY-IT.md",
+        "sha256": "5b40378322b1acd12105f4ecd89c3dad6f679303ab9b10fa764ad2f5e16f78f7",
+        "bytes": 3326,
+        "id": "1ymRJJHSQJa6jZevwsozlFWAOn_kWGxG-",
+        "modified_time": "2026-10-19T19:21:55.835Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "skills/asdg-focus/TRY-IT.md"
+    },
+    {
+      "delivered_path": "skills/asdg-focus/focus-choices.md",
+      "source": {
+        "path": "asdg/skills/asdg-focus/focus-choices.md",
+        "sha256": "698ee64f706e18f5d8b161f8bb26245ae96a8e3041e2cefb29e957716609ce04",
+        "bytes": 2219,
+        "id": "1b9jaf_BADJR5bDGMuAuDEhjG0acJkJXP",
+        "modified_time": "2026-10-19T19:17:50.441Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "skills/asdg-focus/focus-choices.md"
+    },
+    {
+      "delivered_path": "skills/asdg-focus/rename-chat.md",
+      "source": {
+        "path": "asdg/skills/asdg-focus/rename-chat.md",
+        "sha256": "a630af6177856eb89dd4fec30f5d3de9e6e8dc74d605dfbbb8acf7a39112fda3",
+        "bytes": 2928,
+        "id": "1pZ7yylZtHKgjihaJpgZ5Y0jTgewYBWta",
+        "modified_time": "2026-10-19T19:21:55.852Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "skills/asdg-focus/rename-chat.md"
+    },
+    {
+      "delivered_path": "skills/asdg-focus/session-policy.md",
+      "source": {
+        "path": "asdg/skills/asdg-focus/session-policy.md",
+        "sha256": "5d5a8996a0968bdff73f34a33fe03485eb74f29773e314adba6a152a6ef7a22d",
+        "bytes": 3549,
+        "id": "1moeGVd5kzeZs9PCj_og3JX1P-xlMFLoH",
+        "modified_time": "2026-10-19T19:21:55.869Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "skills/asdg-focus/session-policy.md"
+    },
+    {
+      "delivered_path": "skills/asdg-init/SKILL.md",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "skills/asdg-init/SKILL.md"
+    },
+    {
+      "delivered_path": "skills/asdg-init/agents/openai.yaml",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "skills/asdg-init/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "skills/asdg-status/SKILL.md",
+      "source": {
+        "path": "asdg/skills/asdg-status/SKILL.md",
+        "sha256": "7df0104b5e867b37c53eeb3ca60172bdbdec010f759d9454313ea1e9051fe2f1",
+        "bytes": 2977,
+        "id": "1D9yyLkKMFeb7UO0eGrk_dMGZmgsndjM1",
+        "modified_time": "2026-10-19T19:21:55.937Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "skills/asdg-status/SKILL.md"
+    },
+    {
+      "delivered_path": "skills/asdg-status/status-format.md",
+      "source": {
+        "path": "asdg/skills/asdg-status/status-format.md",
+        "sha256": "d44c180ef2907c1e924b05e8aa5c192d76bad499debe427b0be9b46bd4fc0044",
+        "bytes": 1825,
+        "id": "18ItaB0SQ2ginzUW4Blq7ZZDrE0HTw8gj",
+        "modified_time": "2026-10-19T19:20:10.818Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "skills/asdg-status/status-format.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-documentation/SKILL.md",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "templates/.agents/skills/asdg-documentation/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-documentation/agents/openai.yaml",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "templates/.agents/skills/asdg-documentation/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-focus/SKILL.md",
+        "sha256": "58ae914bb1473ed1f0234a87a4fc457bb655ebb1a45475e190944b8cd7223bd8",
+        "bytes": 749,
+        "id": "1Mfi8cSgBGNFwcx2cnCNiOqYz1dTlN7Ct",
+        "modified_time": "2026-10-19T19:12:42.044Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-focus/agents/openai.yaml",
+        "sha256": "e6665a9c88bb2f4f0e86de9758f820cb1088458a2b98ef5e93aa0b094d8fd43b",
+        "bytes": 249,
+        "id": "11YSSv5bRJFwzsfOGG2aGyeEEwntDDnA_",
+        "modified_time": "2026-10-19T02:43:22.424Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-01-context/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-focus-01-context/SKILL.md",
+        "sha256": "cfa689c401b98d7aef28a8ea958dd77309b0a0173c0640f1ef57568e1adeafcf",
+        "bytes": 1277,
+        "id": "1P8PeIb7noIFijyHPBGWzQQ2GXTUVTUXA",
+        "modified_time": "2026-10-19T19:12:43.614Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-01-context/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-01-context/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-focus-01-context/agents/openai.yaml",
+        "sha256": "eda5b1478b40b9fc1a5e3cf41301df648bd15b565f579efd7f7f5e539f9a9cd4",
+        "bytes": 262,
+        "id": "1gGoAXId1nkGErXfxL2ieDZRae4YI1cdY",
+        "modified_time": "2026-10-19T02:45:01.208Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-01-context/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-02-purpose/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-focus-02-purpose/SKILL.md",
+        "sha256": "f3e8150d8175ea18183d242af8a07276dbee1f353f0fcb7923863d2f69743d62",
+        "bytes": 1353,
+        "id": "19urt9FjMc5KOiSmXyDtWUMoIw25o2mS-",
+        "modified_time": "2026-10-19T19:12:45.906Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-02-purpose/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-02-purpose/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-focus-02-purpose/agents/openai.yaml",
+        "sha256": "34bece24da0e5460b5ae06f20268550a7e9c977dab81ce64027bd478326400a1",
+        "bytes": 245,
+        "id": "1TZ1I8nAycJoh0_15dstkEMLy2Pz1eXFD",
+        "modified_time": "2026-10-19T19:12:47.325Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-02-purpose/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-03-use-cases/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-focus-03-use-cases/SKILL.md",
+        "sha256": "4d453093e7bce3650ab5b84a23fdeefafecfae5881fc572d7fac44fb3bfdcd47",
+        "bytes": 1279,
+        "id": "1ccS6TMZmKdx5-tp50ruw24XBtd7V_oh6",
+        "modified_time": "2026-10-19T19:12:48.714Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-03-use-cases/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-03-use-cases/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-focus-03-use-cases/agents/openai.yaml",
+        "sha256": "62d78714754d7f0a9d20533bd508639b3e8b3b0c3dc739c4da13ee2faf436bbf",
+        "bytes": 263,
+        "id": "1CH75Z3PgS2NWo8Rz7qpN6KM69yG-7Uks",
+        "modified_time": "2026-10-19T02:45:48.611Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-03-use-cases/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-04-test-strategy/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-focus-04-test-strategy/SKILL.md",
+        "sha256": "cfc256c7f03ea84f5d9a59f407f2fdcecc1e685430b9dc66a97c26479d158c6e",
+        "bytes": 1291,
+        "id": "1I1DNz2vf2yBxwNI7R_TfVzQWkwSFGQt8",
+        "modified_time": "2026-10-19T19:12:49.996Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-04-test-strategy/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-04-test-strategy/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-focus-04-test-strategy/agents/openai.yaml",
+        "sha256": "6cceb64b25a9cc2d682674b6becec9c490b7c847a8c16294e52330e1f76d47ea",
+        "bytes": 269,
+        "id": "1N8W2EGx65lChtdRnIaWt4H-AA2hkFKsH",
+        "modified_time": "2026-10-19T02:46:39.968Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-04-test-strategy/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-05-architecture/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-focus-05-architecture/SKILL.md",
+        "sha256": "348b3f5ca466536d9afaa746db7a6c2f335e7439670c3b5a486797d1038e87eb",
+        "bytes": 1283,
+        "id": "1d4MfsaEnNReStUy1lY31puEutaxTjy0b",
+        "modified_time": "2026-10-19T19:12:51.262Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-05-architecture/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-05-architecture/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-focus-05-architecture/agents/openai.yaml",
+        "sha256": "ea0116e4e5a06acc9d2e25c0a04a3c78142bf35aca468928417a75c6135ef235",
+        "bytes": 265,
+        "id": "1gI2PFk2DWj2oaehj6RgYZcw9pHYVD8VT",
+        "modified_time": "2026-10-19T02:47:25.599Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-05-architecture/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-06-poc/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-focus-06-poc/SKILL.md",
+        "sha256": "9cf691b66707db8c9dd66370678356b761058f0aaf2992c6b6c74635a900408c",
+        "bytes": 1265,
+        "id": "1PEn5uzpYWOPx5t0gx9u-zN8jLfYXBGk6",
+        "modified_time": "2026-10-19T19:12:53.154Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-06-poc/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-06-poc/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-focus-06-poc/agents/openai.yaml",
+        "sha256": "202c02d51ebefed7f325fa937c58727832fcaa63cf457cc2a833326bdb1a1ff7",
+        "bytes": 256,
+        "id": "1k_blNTV3f-OdazBquW6VzdyWRp9n1QYS",
+        "modified_time": "2026-10-19T02:48:27.316Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-06-poc/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-07-planning/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-focus-07-planning/SKILL.md",
+        "sha256": "d79a0d7a3afa5c63696009f10f90aa4569bf3f7c79de4c60f5067137a779c0e0",
+        "bytes": 1245,
+        "id": "1FI2DPR6jJ98srUTSpj1rZ3afoFv28phe",
+        "modified_time": "2026-10-19T19:12:55.267Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-07-planning/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-07-planning/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-focus-07-planning/agents/openai.yaml",
+        "sha256": "ad2daa3de3b64053383e6526ab35f003abf827e4045b153a48e33f94d1956b72",
+        "bytes": 246,
+        "id": "1pwKWpzhvIQhiKjfiIMrc6Ibs06ODoJHh",
+        "modified_time": "2026-10-19T02:49:28.027Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-07-planning/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-08-low-level-design/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-focus-08-low-level-design/SKILL.md",
+        "sha256": "33ca875654782dfeb38e3db91d24d95ed24e6a3505bd3a909255f855cf7ea22c",
+        "bytes": 1277,
+        "id": "1PC5hWDKWYZFVdLSGmY1n8lAygPndrOai",
+        "modified_time": "2026-10-19T19:12:56.704Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-08-low-level-design/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-08-low-level-design/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-focus-08-low-level-design/agents/openai.yaml",
+        "sha256": "0c6f42eae9d701d43a9ea436bfad261f9e6fbbbbb55638cb7e697edc38487068",
+        "bytes": 262,
+        "id": "1DioMbaeX_faDmXzr1yu8OUrWeHhQT97Z",
+        "modified_time": "2026-10-19T02:50:32.397Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-08-low-level-design/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-09-build-test/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-focus-09-build-test/SKILL.md",
+        "sha256": "499361317cae22fb25fdafd26772e853d1dbb7139690fdbd7597d8aa59d75ae1",
+        "bytes": 1269,
+        "id": "1r_mYtC4T2ykUxS3kF__inDknuFz1uW3Z",
+        "modified_time": "2026-10-19T19:12:58.165Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-09-build-test/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-09-build-test/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-focus-09-build-test/agents/openai.yaml",
+        "sha256": "4eabf9ae6308c26d35a8683e15356690cabcddbe97800e37f4bfbcc301da15fc",
+        "bytes": 258,
+        "id": "1NFtPo89wo1VhyZEhwjyIvcdgVkvo7D3O",
+        "modified_time": "2026-10-19T02:51:10.479Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-09-build-test/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-10-review-release/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-focus-10-review-release/SKILL.md",
+        "sha256": "0880cbecb4eed93f2ce04a0e251a943de7da29c2566f20f943df72b88d9251bf",
+        "bytes": 1293,
+        "id": "1K6NUsdkKsewTmF4oMvOt8au3DEa5OqCy",
+        "modified_time": "2026-10-19T19:12:59.586Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-10-review-release/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-10-review-release/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-focus-10-review-release/agents/openai.yaml",
+        "sha256": "3dd87f6f9fe1212f6c133e3b8f47532da665a8c9b667894a84203550ee3bf11b",
+        "bytes": 270,
+        "id": "1f60ZfbWQ6DAyJd5VQch68ZtWfON7qbBJ",
+        "modified_time": "2026-10-19T02:52:02.928Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-10-review-release/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-11-operations/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-focus-11-operations/SKILL.md",
+        "sha256": "2de3413a1ca7a8f3ddb17cba10212f73c6a6f0036e62562e10f5d539f04dd2fa",
+        "bytes": 1305,
+        "id": "1XwOZuCn06u0uH5tKjxVSFWKdePdz4i8F",
+        "modified_time": "2026-10-19T19:13:01.068Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-11-operations/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-11-operations/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-focus-11-operations/agents/openai.yaml",
+        "sha256": "03a64b0e04921808f15171d91a18d0660a1e31b714f2f18f301edb939b23f01c",
+        "bytes": 276,
+        "id": "1_xb7ebykyzondz8b0ARIRiq8EODqZDfe",
+        "modified_time": "2026-10-19T02:53:16.407Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-11-operations/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-12-insights/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-focus-12-insights/SKILL.md",
+        "sha256": "a2d6802c71ba4e1ec132b3030b159fc73858df025a885949645fc8f4c1687d26",
+        "bytes": 1297,
+        "id": "1x9fEXvVAnWbIP2j8bFYLDLdBX-jNE1-m",
+        "modified_time": "2026-10-19T19:13:02.576Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-12-insights/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-focus-12-insights/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-focus-12-insights/agents/openai.yaml",
+        "sha256": "480598624f7b236f700403201b3e0aea34568e8008bacef0f3b42ee0494cfacd",
+        "bytes": 272,
+        "id": "1uraStTigpRolAVcKSIgjse-HggUvkIK1",
+        "modified_time": "2026-10-19T02:54:29.650Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-focus-12-insights/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-init/SKILL.md",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "templates/.agents/skills/asdg-init/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-init/agents/openai.yaml",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "templates/.agents/skills/asdg-init/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-status/SKILL.md",
+      "source": {
+        "path": ".agents/skills/asdg-status/SKILL.md",
+        "sha256": "564cef6fb0e119be9e10b6d4e7f84512d2c48c808acd660265f3046b20d73d00",
+        "bytes": 725,
+        "id": "1lUYDV42IFLfLVhjB9SpCilu0f2S0_UIi",
+        "modified_time": "2026-10-19T19:13:07.033Z"
+      },
+      "disposition": "copied",
+      "current_distribution_path": "templates/.agents/skills/asdg-status/SKILL.md"
+    },
+    {
+      "delivered_path": "templates/.agents/skills/asdg-status/agents/openai.yaml",
+      "source": {
+        "path": ".agents/skills/asdg-status/agents/openai.yaml",
+        "sha256": "a5fd28b0d4fdb204ed6e80b42d351dc90a100b0ed283095c03235c0ebc3bb454",
+        "bytes": 220,
+        "id": "1VROt5UG5RGwFeDLDAdy8Qc545eD1hMt-",
+        "modified_time": "2026-10-18T20:53:13.854Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.agents/skills/asdg-status/agents/openai.yaml"
+    },
+    {
+      "delivered_path": "templates/.codex/agents/asdg_01.toml",
+      "source": {
+        "path": ".codex/agents/asdg_01.toml",
+        "sha256": "31924c33006a701c10b285d2c6a8bf60c581b93e054dc82d8b313fdf635b3630",
+        "bytes": 1020,
+        "id": "1BGrqrHdKnxLqASYFWJhhxoN3LVf4B3ce",
+        "modified_time": "2026-10-19T19:13:57.459Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.codex/agents/asdg_01.toml"
+    },
+    {
+      "delivered_path": "templates/.codex/agents/asdg_02.toml",
+      "source": {
+        "path": ".codex/agents/asdg_02.toml",
+        "sha256": "5d82404d7711471a3fd4f09d841f5ce6976738f4d67218b5c4f3a85c26578034",
+        "bytes": 996,
+        "id": "1R9D_8H4vElmc5ow_y4X2VkCJWrnuVz35",
+        "modified_time": "2026-10-19T19:13:57.498Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.codex/agents/asdg_02.toml"
+    },
+    {
+      "delivered_path": "templates/.codex/agents/asdg_03.toml",
+      "source": {
+        "path": ".codex/agents/asdg_03.toml",
+        "sha256": "3e477493d7f03b0f205d6f853422105467f94e752abd52a5c907c084e1b642d0",
+        "bytes": 1014,
+        "id": "1ZFctN5knwyeTX6XbtC4SflSi0AdSboE4",
+        "modified_time": "2026-10-19T19:13:57.458Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.codex/agents/asdg_03.toml"
+    },
+    {
+      "delivered_path": "templates/.codex/agents/asdg_04.toml",
+      "source": {
+        "path": ".codex/agents/asdg_04.toml",
+        "sha256": "2c2bae8b9116b45b69572ff51db63d783424f4e37f3aa75c55a03877ef402e4d",
+        "bytes": 1054,
+        "id": "15CSHOlKY2VvImMw1oqhk-Lr1gCrQKP4V",
+        "modified_time": "2026-10-19T19:13:57.498Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.codex/agents/asdg_04.toml"
+    },
+    {
+      "delivered_path": "templates/.codex/agents/asdg_05.toml",
+      "source": {
+        "path": ".codex/agents/asdg_05.toml",
+        "sha256": "0fc1a5a7fab0c40e622811fde822bfb4293559682d18f6374f31cf6b96f94cee",
+        "bytes": 1031,
+        "id": "1KNAmeYa5eVNO0oRN8B1KOOTPUDVpDnh2",
+        "modified_time": "2026-10-19T19:13:57.462Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.codex/agents/asdg_05.toml"
+    },
+    {
+      "delivered_path": "templates/.codex/agents/asdg_06.toml",
+      "source": {
+        "path": ".codex/agents/asdg_06.toml",
+        "sha256": "f419d200cc853c692c43f94505a450f345d18b01eed53ab566d9f513f700faf8",
+        "bytes": 1006,
+        "id": "1VoM_CA9lRpqcJt2vmCi_Sm3Bm4kZvF9F",
+        "modified_time": "2026-10-19T19:13:57.456Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.codex/agents/asdg_06.toml"
+    },
+    {
+      "delivered_path": "templates/.codex/agents/asdg_07.toml",
+      "source": {
+        "path": ".codex/agents/asdg_07.toml",
+        "sha256": "daf626aec2bf834e11de674ed049ce8266d57b53ecb4376e93c0c9b58a34f281",
+        "bytes": 985,
+        "id": "115rRVij0Ix9juoKYkZg-YpqjNaJnnCr9",
+        "modified_time": "2026-10-19T19:13:57.932Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.codex/agents/asdg_07.toml"
+    },
+    {
+      "delivered_path": "templates/.codex/agents/asdg_08.toml",
+      "source": {
+        "path": ".codex/agents/asdg_08.toml",
+        "sha256": "f889a532be3f73cb79e428ec580734d8aba866b18d8f6107c3d5d1de77f110ae",
+        "bytes": 1009,
+        "id": "1V7eedbzf-7llNnb6R8K3IfiTNHyQDl_q",
+        "modified_time": "2026-10-19T19:13:57.845Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.codex/agents/asdg_08.toml"
+    },
+    {
+      "delivered_path": "templates/.codex/agents/asdg_09.toml",
+      "source": {
+        "path": ".codex/agents/asdg_09.toml",
+        "sha256": "c3190ae2266449c54c8e15505401238f65a8db78f1f0d952a7f4e28d96aa6ab9",
+        "bytes": 1011,
+        "id": "16Q_ZOhokzzuttdEbw9znsKBhvwUN0bq7",
+        "modified_time": "2026-10-19T19:13:57.915Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.codex/agents/asdg_09.toml"
+    },
+    {
+      "delivered_path": "templates/.codex/agents/asdg_10.toml",
+      "source": {
+        "path": ".codex/agents/asdg_10.toml",
+        "sha256": "32dd0889cf8e3af49d34b4741f0c35f673f1030efc191e1753b4917fcf48f3df",
+        "bytes": 985,
+        "id": "1AYn9_Na5V8uuFfWqkCGS34IYpec4omhJ",
+        "modified_time": "2026-10-19T19:13:57.496Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.codex/agents/asdg_10.toml"
+    },
+    {
+      "delivered_path": "templates/.codex/agents/asdg_11.toml",
+      "source": {
+        "path": ".codex/agents/asdg_11.toml",
+        "sha256": "3be4fe9b66d157efdcb27096c099752924dd102e51d4634702835bb24fe5c5c8",
+        "bytes": 1058,
+        "id": "1unbkKYkGUaVayE4OVIwMBn-K_g_HFtym",
+        "modified_time": "2026-10-19T19:13:57.986Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.codex/agents/asdg_11.toml"
+    },
+    {
+      "delivered_path": "templates/.codex/agents/asdg_12.toml",
+      "source": {
+        "path": ".codex/agents/asdg_12.toml",
+        "sha256": "d2f2af21f05857119409236c9836890baf5ddcf14ed22b6278d0ea6354a07255",
+        "bytes": 1019,
+        "id": "13h9EIGjHx91coEgai-CPqwH5d54mZztO",
+        "modified_time": "2026-10-19T19:13:57.498Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.codex/agents/asdg_12.toml"
+    },
+    {
+      "delivered_path": "templates/.codex/agents/asdg_coordinator.toml",
+      "source": {
+        "path": ".codex/agents/asdg_coordinator.toml",
+        "sha256": "c5bc8d2b893c31d1dcab0f20bc5782136393d766dd384198f04530ba88ab4e34",
+        "bytes": 1026,
+        "id": "1Cte4fEq3UnXtIg0jGy4MwUboJbXAMuuk",
+        "modified_time": "2026-10-19T19:13:57.462Z"
+      },
+      "disposition": "adapted",
+      "current_distribution_path": "templates/.codex/agents/asdg_coordinator.toml"
+    },
+    {
+      "delivered_path": "tests/test_portable.py",
+      "source": null,
+      "disposition": "created",
+      "current_distribution_path": "tests/test_portable.py"
+    }
+  ],
+  "human_approval": null,
+  "original_distribution_version": "0.2.0-pilot.1",
+  "layout_refactor_at": "2026-10-20T16:17:54Z"
+}

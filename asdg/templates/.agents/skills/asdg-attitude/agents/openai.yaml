@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASDG attitude"
+  short_description: "Choose how to examine the current subject"
+  default_prompt: "Use $asdg-attitude to select a thinking attitude for this conversation."

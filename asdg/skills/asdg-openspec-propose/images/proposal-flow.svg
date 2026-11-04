@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300" role="img" aria-labelledby="title desc">
+  <title id="title">One proposal, connected to its ASDG evidence</title>
+  <desc id="desc">Purpose, use cases, evaluation, architecture and scope feed a thin ASDG wrapper. The installed OpenSpec workflow creates one authoritative change whose artifacts link back to the sources. The flow ends at review, before implementation.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#526477"/></marker></defs>
+  <rect width="720" height="300" rx="12" fill="#f5f7fb"/>
+  <g font-family="Arial, sans-serif" fill="#172d45">
+    <text x="24" y="31" font-size="20" font-weight="bold">One change, with evidence behind it</text>
+    <rect x="24" y="54" width="210" height="156" rx="10" fill="#e3edfa" stroke="#8aa9d0"/>
+    <text x="40" y="80" font-size="17" font-weight="bold">ASDG sources</text>
+    <text x="40" y="108" font-size="15">Purpose · Use cases</text>
+    <text x="40" y="132" font-size="15">Evaluation · Architecture</text>
+    <text x="40" y="156" font-size="15">Planning scope</text>
+    <text x="40" y="188" font-size="13">Accepted / draft / unresolved</text>
+    <path d="M235 126H265" fill="none" stroke="#526477" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="274" y="81" width="164" height="94" rx="10" fill="#e4f3ee" stroke="#77af99"/>
+    <text x="289" y="107" font-size="16" font-weight="bold">ASDG wrapper</text>
+    <text x="289" y="132" font-size="14">Evidence + links</text>
+    <text x="289" y="155" font-size="14">No copied workflow</text>
+    <path d="M439 126H469" fill="none" stroke="#526477" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="478" y="54" width="218" height="156" rx="10" fill="#fff0d8" stroke="#cca966"/>
+    <text x="494" y="80" font-size="17" font-weight="bold">Installed OpenSpec</text>
+    <text x="494" y="108" font-size="15">Native propose workflow</text>
+    <text x="494" y="136" font-size="14">Proposal · Design</text>
+    <text x="494" y="158" font-size="14">Delta specs · Tasks</text>
+    <text x="494" y="188" font-size="13">One authoritative change</text>
+    <path d="M584 211V235H130V212" fill="none" stroke="#526477" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+    <text x="257" y="229" font-size="13">Artifacts link back to source evidence</text>
+    <text x="24" y="275" font-size="15" font-weight="bold">Stop for review. No implementation, approval or sprint transition.</text>
+  </g>
+</svg>

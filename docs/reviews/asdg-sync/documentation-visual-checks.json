@@ -1,0 +1,209 @@
+{
+  "scope": "12 authored or updated substantive documents; navigation indexes excluded",
+  "checks": [
+    {
+      "document": "asdg/docs/synchronization.md",
+      "sha256": "4613a3368fb2b85df2b883ca5212c31b06256db8b6ae7166e82779ecc6cbc34a",
+      "visuals": [
+        {
+          "caption": "Pilot and canonical snapshots are compared with an adopted baseline; review precedes explicit application and a local adoption record.",
+          "resource": "images/synchronization.svg"
+        }
+      ],
+      "render": "PASS: rendered with marked and local headless Chrome; all images loaded",
+      "inspection": "PASS: Markdown and embedded visuals visually inspected for readable labels, relationships and layout",
+      "viewport": {
+        "width": 1100,
+        "document_content_width": 940
+      },
+      "temporary_preview": "/tmp/asdg-sync-doc-preview/usage.png"
+    },
+    {
+      "document": "asdg/scripts/lib/cli_sync.md",
+      "sha256": "6b265476a966b5860b056c1e55544c737baa771740d21ae394bd780ecac54a9c",
+      "visuals": [
+        {
+          "caption": "Both synchronization directions compare source, baseline and target before review and explicit apply.",
+          "resource": "../../docs/images/synchronization.svg"
+        }
+      ],
+      "render": "PASS: rendered with marked and local headless Chrome; all images loaded",
+      "inspection": "PASS: Markdown and embedded visuals visually inspected for readable labels, relationships and layout",
+      "viewport": {
+        "width": 1100,
+        "document_content_width": 940
+      },
+      "temporary_preview": "/tmp/asdg-sync-doc-preview/sync.png"
+    },
+    {
+      "document": "asdg/scripts/lib/cli_sync_manifest.md",
+      "sha256": "d28406fcbb21f2261ecfd2041d7543700172c46b055d11a7d2a1f53c6b49d232",
+      "visuals": [
+        {
+          "caption": "Repository snapshots and a common baseline feed the shared comparison and reviewed apply.",
+          "resource": "../../docs/images/synchronization.svg"
+        }
+      ],
+      "render": "PASS: rendered with marked and local headless Chrome; all images loaded",
+      "inspection": "PASS: Markdown and embedded visuals visually inspected for readable labels, relationships and layout",
+      "viewport": {
+        "width": 1100,
+        "document_content_width": 940
+      },
+      "temporary_preview": "/tmp/asdg-sync-doc-preview/snapshots.png"
+    },
+    {
+      "document": "asdg/tests/test_sync.md",
+      "sha256": "4daef6b2b10e1ba4bb39c359f9b4b00580a5a1a558e398a37ab47208dba24a14",
+      "visuals": [
+        {
+          "caption": "Tests exercise comparison, preview and explicit application while preserving client-owned areas.",
+          "resource": "../docs/images/synchronization.svg"
+        }
+      ],
+      "render": "PASS: rendered with marked and local headless Chrome; all images loaded",
+      "inspection": "PASS: Markdown and embedded visuals visually inspected for readable labels, relationships and layout",
+      "viewport": {
+        "width": 1100,
+        "document_content_width": 940
+      },
+      "temporary_preview": "/tmp/asdg-sync-doc-preview/tests.png"
+    },
+    {
+      "document": "asdg/scripts/lib/cli.md",
+      "sha256": "37d0b0458f557de85fb7ec84eb07e3af706893993aa96964eccdde662832fe1a",
+      "visuals": [
+        {
+          "caption": "Command-line arguments \u2192 Parser and dispatcher \u2192 Owned operation + exit status",
+          "resource": "images/cli-flow.svg"
+        }
+      ],
+      "render": "PASS: rendered with marked and local headless Chrome; all images loaded",
+      "inspection": "PASS: Markdown and embedded visuals visually inspected for readable labels, relationships and layout",
+      "viewport": {
+        "width": 1100,
+        "document_content_width": 940
+      },
+      "temporary_preview": "/tmp/asdg-sync-doc-preview/cli.png"
+    },
+    {
+      "document": "asdg/scripts/lib/cli_files.md",
+      "sha256": "5fa9e3f1da05435479a843e91d02223c45a7034bcb0b18b12514cbbdf712beb2",
+      "visuals": [
+        {
+          "caption": "Initializer change requests \u2192 Change plans + preflight \u2192 Filesystem / rollback",
+          "resource": "images/cli_files-flow.svg"
+        }
+      ],
+      "render": "PASS: rendered with marked and local headless Chrome; all images loaded",
+      "inspection": "PASS: Markdown and embedded visuals visually inspected for readable labels, relationships and layout",
+      "viewport": {
+        "width": 1100,
+        "document_content_width": 940
+      },
+      "temporary_preview": "/tmp/asdg-sync-doc-preview/files.png"
+    },
+    {
+      "document": "asdg/scripts/lib/cli_project.md",
+      "sha256": "fd1de63e541e2bf92ca878509729ec0ee3a65e8111423db5b84bd24efe148008",
+      "visuals": [
+        {
+          "caption": "Embedded package + existing project \u2192 Preflight and change planning \u2192 Local integration or inspection report",
+          "resource": "images/cli_project-flow.svg"
+        }
+      ],
+      "render": "PASS: rendered with marked and local headless Chrome; all images loaded",
+      "inspection": "PASS: Markdown and embedded visuals visually inspected for readable labels, relationships and layout",
+      "viewport": {
+        "width": 1100,
+        "document_content_width": 940
+      },
+      "temporary_preview": "/tmp/asdg-sync-doc-preview/project.png"
+    },
+    {
+      "document": "asdg/scripts/lib/distribution_files.md",
+      "sha256": "9cb48f3dd5a2f57a4ffa29eb5c5b982e901c69fa4dd85587233ad572ca01efbc",
+      "visuals": [
+        {
+          "kind": "CRC relationship table",
+          "idea": "File list, selection function, package checker and distribution builder responsibility exchanges"
+        }
+      ],
+      "render": "PASS: rendered with marked and local headless Chrome; all images loaded",
+      "inspection": "PASS: Markdown and embedded visuals visually inspected for readable labels, relationships and layout",
+      "viewport": {
+        "width": 1100,
+        "document_content_width": 940
+      },
+      "temporary_preview": "/tmp/asdg-sync-doc-preview/selection.png"
+    },
+    {
+      "document": "asdg/docs/distribution-build.md",
+      "sha256": "113d7ceff89f143646b04d658ee54a6c23d9737e9904cef88e68f0f797bb2cff",
+      "visuals": [
+        {
+          "caption": "The provider selects portable files, validates hashes and builds a ZIP; the client extracts it and initializes local integrations and state.",
+          "resource": "images/distribution-flow.svg"
+        }
+      ],
+      "render": "PASS: rendered with marked and local headless Chrome; all images loaded",
+      "inspection": "PASS: Markdown and embedded visuals visually inspected for readable labels, relationships and layout",
+      "viewport": {
+        "width": 1100,
+        "document_content_width": 940
+      },
+      "temporary_preview": "/tmp/asdg-sync-doc-preview/distribution.png"
+    },
+    {
+      "document": "asdg/tests/test_distribution.md",
+      "sha256": "5fa4091b6cd0d76d9d797fec9f7c91e9ea150f4c4b38ae1e80fd783bd046c011",
+      "visuals": [
+        {
+          "caption": "The tests follow the provider-to-ZIP-to-client installation path.",
+          "resource": "../docs/images/distribution-flow.svg"
+        }
+      ],
+      "render": "PASS: rendered with marked and local headless Chrome; all images loaded",
+      "inspection": "PASS: Markdown and embedded visuals visually inspected for readable labels, relationships and layout",
+      "viewport": {
+        "width": 1100,
+        "document_content_width": 940
+      },
+      "temporary_preview": "/tmp/asdg-sync-doc-preview/distribution_tests.png"
+    },
+    {
+      "document": "asdg/README.md",
+      "sha256": "a0d0f1bfd1221c0a92c91ca51f4d84417f216ab83077f0e6a7dda2a370bdd587",
+      "visuals": [
+        {
+          "caption": "A verified ZIP carries one asdg folder into the developer's Git repository, where initialization creates local integrations and state.",
+          "resource": "docs/images/distribution-flow.svg"
+        }
+      ],
+      "render": "PASS: rendered with marked and local headless Chrome; all images loaded",
+      "inspection": "PASS: Markdown and embedded visuals visually inspected for readable labels, relationships and layout",
+      "viewport": {
+        "width": 1100,
+        "document_content_width": 940
+      },
+      "temporary_preview": "/tmp/asdg-sync-doc-preview/readme.png"
+    },
+    {
+      "document": "docs/asdg/07-planning/02.2-review-promote-upgrade.md",
+      "sha256": "4dc010c1b768a2e28461b168f768e4585e1b4ea221bd7a6793c7b929fe1a60c6",
+      "visuals": [
+        {
+          "caption": "Both directions share a three-way comparison and explicit apply boundary; project state and integrations stay separate.",
+          "resource": "../../../asdg/docs/images/synchronization.svg"
+        }
+      ],
+      "render": "PASS: rendered with marked and local headless Chrome; all images loaded",
+      "inspection": "PASS: Markdown and embedded visuals visually inspected for readable labels, relationships and layout",
+      "viewport": {
+        "width": 1100,
+        "document_content_width": 940
+      },
+      "temporary_preview": "/tmp/asdg-sync-doc-preview/review.png"
+    }
+  ]
+}

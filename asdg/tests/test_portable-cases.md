@@ -1,0 +1,48 @@
+# Portable integration tests: case guide
+
+[Module guide](test_portable.md) · [Source](test_portable.py)
+
+Each method below belongs to `PortableTests`, takes `self`, returns `None` and uses unittest assertions.
+Names describe the intended regression checks; this index is not an execution result.
+Session-role, governance-bootstrap and Admin cases are in the [role and session case guide](test_portable-cases-roles.md); client selection cases are in the [client case guide](test_portable-cases-clients.md).
+
+| Test method | Responsibility |
+| --- | --- |
+| `test_dry_run_then_init_repeat_is_byte_identical` | dry run then init repeat is byte identical. |
+| `test_default_initial_state_new_and_no_later_redeclaration` | default initial state new and no later redeclaration. |
+| `test_init_guidance_resolves_to_installed_status_without_changing_state_on_repeat` | init guidance resolves to installed status without changing state on repeat. |
+| `test_init_guidance_is_only_emitted_after_successful_console_initialization` | init guidance is only emitted after successful console initialization. |
+| `test_factual_entry_points_never_import_advice_or_mutate_initialized_project` | factual entry points never import advice or mutate initialized project. |
+| `test_shared_focus_preserves_unregistered_purpose_work` | The shared adapter installs exactly and repeat setup preserves Purpose evidence. |
+| `test_single_focus_installs_without_changing_roles_or_authority` | One Focus picker entry retains thirteen role adapters and unchanged lifecycle/authority. |
+| `test_attitude_adapter_relocates_and_preserves_state` | Installed Attitude adapters and canonical guides survive relocation and repeat setup without changing project state. |
+| `test_openspec_wrapper_preserves_upstream_and_relocates` | The wrapper installs and relocates without modifying upstream skills, configuration, state, hooks or application files. |
+| `test_gui_visual_rule_is_shared_by_all_role_entry_points` | The single GUI visual rule and its diagram survive relocation, and every all-role entry point links to it. |
+| `test_decision_skill_relocates_and_preserves_unregistered_decisions` | Decision discovery survives relocation; repeat setup preserves decision evidence and state. |
+| `test_optional_decision_specialization_preserves_generic_roles_and_local_methods` | Optional specialist methods survive repeat setup; absent methods require no placeholders or state changes. |
+| `test_missing_shared_focus_template_fails_before_any_writes` | Missing shared skill or UI metadata fails preflight without writes. |
+| `test_retired_focus_template_is_rejected_before_any_writes` | A retired per-role picker template cannot silently restore menu clutter. |
+| `test_advice_report_creates_planning_parents_without_changing_state` | advice report creates planning parents without changing state. |
+| `test_preserves_client_instructions_documents_and_ignore` | Existing instructions follow the bootstrap without their old approval marker, which the receipt keeps; ignore rules and documents are preserved. |
+| `test_existing_codex_config_conflict_has_no_side_effects` | existing codex config conflict has no side effects. |
+| `test_foreign_binding_and_legacy_data_are_not_overwritten` | foreign binding and legacy data are not overwritten. |
+| `test_edited_adapter_is_preserved_and_verification_fails` | edited adapter is preserved and verification fails. |
+| `test_malformed_or_missing_state_is_never_recreated` | malformed or missing state is never recreated. |
+| `test_symlink_destination_is_rejected` | symlink destination is rejected. |
+| `test_relocation_and_subdirectory_invocation` | relocation and subdirectory invocation. |
+| `test_rejects_non_git_and_external_root` | rejects non git and external root. |
+| `test_inactive_sprint_blocks_patch_and_arbitrary_shell` | inactive sprint blocks patch and arbitrary shell. |
+| `test_documentation_patch_needs_no_sprint_or_lifecycle_state` | Documentation patches remain allowed with inactive, missing or malformed cycle state; code remains blocked. |
+| `test_mixed_documentation_and_code_checks_every_code_target` | A documentation target cannot hide an out-of-scope code target. |
+| `test_documentation_exemption_rejects_escape_policy_and_symlink_targets` | Documentation paths cannot escape into policy, state or external files. |
+| `test_documentation_moves_validate_both_targets` | Moves validate both source and destination; documents cannot move code or state. |
+| `test_active_sprint_checks_every_path_and_is_preserved` | active sprint checks every path and is preserved. |
+| `test_protected_governance_traversal_and_symlink_scope_blocked` | protected governance traversal and symlink scope blocked. |
+| `test_guard_failure_fallback_and_unknown_tool` | guard failure fallback and unknown tool. |
+| `test_guard_allows_only_local_factual_status` | guard allows only local factual status. |
+| `test_logs_ignored_state_retained_and_no_raw_tool_data` | logs ignored state retained and no raw tool data. |
+| `test_recorded_evidence_and_release_survive_repeat_init` | recorded evidence and release survive repeat init. |
+| `test_advice_context_and_environment_without_model_call` | advice context and environment without model call. |
+| `test_transaction_rolls_back_only_its_own_changes` | transaction rolls back only its own changes. |
+
+Path relocation assertions compare resolved paths, including macOS `/var` and `/private/var` aliases.

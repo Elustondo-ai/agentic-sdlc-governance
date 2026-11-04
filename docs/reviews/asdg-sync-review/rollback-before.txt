@@ -1,0 +1,29 @@
+test_interrupted_new_file_write_preserves_replacement_inode (test_sync.SyncTests.test_interrupted_new_file_write_preserves_replacement_inode) ... ok
+test_interrupted_new_file_write_removes_partial_file_and_restores_prior_changes (test_sync.SyncTests.test_interrupted_new_file_write_removes_partial_file_and_restores_prior_changes) ... FAIL
+test_new_file_creation_failure_restores_earlier_writes (test_sync.SyncTests.test_new_file_creation_failure_restores_earlier_writes) ... ok
+test_new_file_stream_setup_failure_closes_descriptor_and_removes_file (test_sync.SyncTests.test_new_file_stream_setup_failure_closes_descriptor_and_removes_file) ... FAIL
+test_new_files_both_directions (test_sync.SyncTests.test_new_files_both_directions) ... ok
+
+======================================================================
+FAIL: test_interrupted_new_file_write_removes_partial_file_and_restores_prior_changes (test_sync.SyncTests.test_interrupted_new_file_write_removes_partial_file_and_restores_prior_changes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdg/tests/test_sync.py", line 283, in test_interrupted_new_file_write_removes_partial_file_and_restores_prior_changes
+    self.assertFalse(target.exists())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_new_file_stream_setup_failure_closes_descriptor_and_removes_file (test_sync.SyncTests.test_new_file_stream_setup_failure_closes_descriptor_and_removes_file)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdg/tests/test_sync.py", line 305, in test_new_file_stream_setup_failure_closes_descriptor_and_removes_file
+    self.assertEqual(tree(self.canonical), before)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'app[7277 chars]dg_12.toml"\n    }\n  ]\n}\n', 'asdg/docs/new/partial.md': b''} != {'app[7277 chars]dg_12.toml"\n    }\n  ]\n}\n'}
+Diff is 19352 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.410s
+
+FAILED (failures=2)

@@ -1,0 +1,63 @@
+{
+  "scope": "Actual CLI installation from the proposed commit and its reproducible ZIP; all targets disposable. Test-only SHA is not a published canonical commit.",
+  "test_only_commit": "b34b02db0d55e557de7da6602152dbf8986199ef",
+  "archive_sha256": "727fad469778f5218855f683b5b4dc9c132217eb0123b631e1a035686d0ac2d3",
+  "cases": [
+    {
+      "route": "zip",
+      "client": "codex",
+      "preview_nonmutating": true,
+      "approved_plan_applied": true,
+      "verification": "PASS",
+      "repeat_planned_files": 0,
+      "application_context_guidance_preserved": true,
+      "git_head_preserved": true,
+      "installed_package_matches_commit": true,
+      "survey_offered": true,
+      "survey_executed": false,
+      "native_app_tested": false
+    },
+    {
+      "route": "zip",
+      "client": "claude",
+      "preview_nonmutating": true,
+      "approved_plan_applied": true,
+      "verification": "PASS",
+      "repeat_planned_files": 0,
+      "application_context_guidance_preserved": true,
+      "git_head_preserved": true,
+      "installed_package_matches_commit": true,
+      "survey_offered": true,
+      "survey_executed": false,
+      "native_app_tested": false
+    },
+    {
+      "route": "clone",
+      "client": "codex",
+      "preview_nonmutating": true,
+      "approved_plan_applied": true,
+      "verification": "PASS",
+      "repeat_planned_files": 0,
+      "application_context_guidance_preserved": true,
+      "git_head_preserved": true,
+      "installed_package_matches_commit": true,
+      "survey_offered": true,
+      "survey_executed": false,
+      "native_app_tested": false
+    },
+    {
+      "route": "clone",
+      "client": "claude",
+      "preview_nonmutating": true,
+      "approved_plan_applied": true,
+      "verification": "PASS",
+      "repeat_planned_files": 0,
+      "application_context_guidance_preserved": true,
+      "git_head_preserved": true,
+      "installed_package_matches_commit": true,
+      "survey_offered": true,
+      "survey_executed": false,
+      "native_app_tested": false
+    }
+  ]
+}

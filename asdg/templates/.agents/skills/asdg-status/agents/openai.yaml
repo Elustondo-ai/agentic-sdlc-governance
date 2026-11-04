@@ -1,0 +1,6 @@
+interface:
+  display_name: "ASDG status"
+  short_description: "Inspect project progress and session status"
+  default_prompt: "Use $asdg-status for this project."
+policy:
+  allow_implicit_invocation: false

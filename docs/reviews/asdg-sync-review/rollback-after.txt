@@ -1,0 +1,31 @@
+test_app_and_project_state_are_preserved (test_sync.SyncTests.test_app_and_project_state_are_preserved) ... ok
+test_apply_requires_reviewed_and_current_digest (test_sync.SyncTests.test_apply_requires_reviewed_and_current_digest) ... ok
+test_cli_both_directions_and_explicit_mode (test_sync.SyncTests.test_cli_both_directions_and_explicit_mode) ... ok
+test_conflicting_modifications_block_all_writes (test_sync.SyncTests.test_conflicting_modifications_block_all_writes) ... ok
+test_delete_modify_conflict_and_untracked_deletion (test_sync.SyncTests.test_delete_modify_conflict_and_untracked_deletion) ... ok
+test_deleted_tracked_file (test_sync.SyncTests.test_deleted_tracked_file) ... ok
+test_dry_run_changes_neither_tree_nor_git_index (test_sync.SyncTests.test_dry_run_changes_neither_tree_nor_git_index) ... ok
+test_identical_and_repeated_execution (test_sync.SyncTests.test_identical_and_repeated_execution) ... ok
+test_identity_version_and_binding_fail_closed (test_sync.SyncTests.test_identity_version_and_binding_fail_closed) ... ok
+test_interrupted_new_file_write_preserves_replacement_inode (test_sync.SyncTests.test_interrupted_new_file_write_preserves_replacement_inode) ... ok
+test_interrupted_new_file_write_removes_partial_file_and_restores_prior_changes (test_sync.SyncTests.test_interrupted_new_file_write_removes_partial_file_and_restores_prior_changes) ... ok
+test_legacy_tracked_pilot_and_shared_delivery (test_sync.SyncTests.test_legacy_tracked_pilot_and_shared_delivery) ... ok
+test_local_only_changes_are_preserved_and_later_conflict (test_sync.SyncTests.test_local_only_changes_are_preserved_and_later_conflict) ... ok
+test_missing_invalid_and_nested_paths (test_sync.SyncTests.test_missing_invalid_and_nested_paths) ... ok
+test_missing_origin_corrupt_receipt_and_malformed_catalogue (test_sync.SyncTests.test_missing_origin_corrupt_receipt_and_malformed_catalogue) ... ok
+test_multiple_shared_archives_do_not_guess_ancestry (test_sync.SyncTests.test_multiple_shared_archives_do_not_guess_ancestry) ... ok
+test_new_file_creation_failure_restores_earlier_writes (test_sync.SyncTests.test_new_file_creation_failure_restores_earlier_writes) ... ok
+test_new_file_stream_setup_failure_closes_descriptor_and_removes_file (test_sync.SyncTests.test_new_file_stream_setup_failure_closes_descriptor_and_removes_file) ... ok
+test_new_files_both_directions (test_sync.SyncTests.test_new_files_both_directions) ... ok
+test_no_shared_baseline_keeps_equal_files_and_blocks_differences (test_sync.SyncTests.test_no_shared_baseline_keeps_equal_files_and_blocks_differences) ... ok
+test_real_portable_runtime_recognizes_upgrade_without_changing_project_state (test_sync.SyncTests.test_real_portable_runtime_recognizes_upgrade_without_changing_project_state) ... ok
+test_rollback_restores_deleted_files_on_write_failure (test_sync.SyncTests.test_rollback_restores_deleted_files_on_write_failure) ... ok
+test_symlinks_and_escaping_manifest_are_rejected (test_sync.SyncTests.test_symlinks_and_escaping_manifest_are_rejected) ... ok
+test_unlisted_untracked_collision_is_not_overwritten (test_sync.SyncTests.test_unlisted_untracked_collision_is_not_overwritten) ... ok
+test_updated_file (test_sync.SyncTests.test_updated_file) ... ok
+test_upgrade_requires_current_canonical_manifest (test_sync.SyncTests.test_upgrade_requires_current_canonical_manifest) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 12.328s
+
+OK

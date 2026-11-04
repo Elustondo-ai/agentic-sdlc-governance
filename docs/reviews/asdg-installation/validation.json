@@ -1,0 +1,39 @@
+{
+  "python39_full": {
+    "tests": 128,
+    "passed": 128,
+    "log": "python39-full-final.log"
+  },
+  "python315_full_before_three_added_cases": {
+    "tests": 125,
+    "passed": 125,
+    "log": "python315-full.log"
+  },
+  "final_install_suite": {
+    "python39": 11,
+    "python315": 11,
+    "all_passed": true
+  },
+  "initial_regression_failures": {
+    "count": 7,
+    "resolved": true,
+    "causes": [
+      "Old fixtures did not seal package hashes or explicitly apply reviewed previews.",
+      "Preview now includes adapter diffs, invalidating an old text-output assertion.",
+      "Absolute installation provenance path broke relocation; only portable version/commit/hashes are now persisted.",
+      "Preflight restored before extracted-package normalization to retain diagnostics and reject retired adapters."
+    ]
+  },
+  "package_integrity": "PASS",
+  "python39_syntax": "PASS",
+  "native_claude": "NOT_RUN",
+  "native_codex": "NOT_RUN",
+  "prior_governance_events_preserved": 1818,
+  "documentation_receipts_added": 20,
+  "real_canonical_head_unchanged": true,
+  "pilot_clean_and_untouched": true,
+  "real_git_mutations": false,
+  "real_promotions_or_upgrades": false,
+  "release_approved": false,
+  "historical_delivery_manifests_unchanged": true
+}

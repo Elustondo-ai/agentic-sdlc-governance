@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="200" viewBox="0 0 960 200" role="img" aria-labelledby="title desc">
+  <title id="title">Disposable continuation scenarios</title>
+  <desc id="desc">New destination + scenario → Copy, initialize and seed → Disposable client fixture</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#49716e"/></marker></defs>
+  <rect width="960" height="200" rx="16" fill="#f5f8f4"/>
+  <rect x="24" y="44" width="288" height="112" rx="12" fill="#ffffff" stroke="#a8c4b9" stroke-width="2"/>
+  <text x="168" y="87" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#17332f"><tspan x="168" dy="0">New destination +</tspan><tspan x="168" dy="26">scenario</tspan></text>
+  <rect x="336" y="44" width="288" height="112" rx="12" fill="#e0eee7" stroke="#a8c4b9" stroke-width="2"/>
+  <text x="480" y="100" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#17332f"><tspan x="480" dy="0">Copy, initialize and seed</tspan></text>
+  <rect x="648" y="44" width="288" height="112" rx="12" fill="#ffffff" stroke="#a8c4b9" stroke-width="2"/>
+  <text x="792" y="100" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#17332f"><tspan x="792" dy="0">Disposable client fixture</tspan></text>
+  <path d="M313 100 H332" fill="none" stroke="#49716e" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M625 100 H644" fill="none" stroke="#49716e" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

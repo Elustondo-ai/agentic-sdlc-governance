@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="400" viewBox="0 0 920 400" role="img" aria-labelledby="title desc">
+  <title id="title">One file synchronizer, two directions</title>
+  <desc id="desc">Promote moves pilot methodology to canonical; upgrade moves canonical methodology to pilot. Both compare source, baseline and target, report conflicts and require a reviewed plan digest before writing distribution files and an adoption record.</desc>
+  <defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#42566c" stroke-width="1.5"/></marker></defs>
+  <rect width="920" height="400" rx="16" fill="#f3f6fa"/>
+  <g font-family="system-ui, sans-serif" fill="#203544">
+    <text x="28" y="36" font-size="22" font-weight="700">One synchronizer · two explicit directions</text>
+    <rect x="28" y="66" width="250" height="88" rx="10" fill="#e2effa" stroke="#7fadc9"/>
+    <rect x="642" y="66" width="250" height="88" rx="10" fill="#e4f1e8" stroke="#7fae8e"/>
+    <text x="153" y="100" text-anchor="middle" font-size="20" font-weight="600">Pilot asdg/</text>
+    <text x="153" y="128" text-anchor="middle" font-size="16">Local methodology and edits</text>
+    <text x="767" y="100" text-anchor="middle" font-size="20" font-weight="600">Canonical asdg/</text>
+    <text x="767" y="128" text-anchor="middle" font-size="16">Reviewed distribution source</text>
+    <g stroke="#42566c" stroke-width="2" marker-end="url(#arrow)"><path d="M295 88 H625"/><path d="M625 136 H295"/></g>
+    <text x="460" y="80" text-anchor="middle" font-size="16">promote</text>
+    <text x="460" y="128" text-anchor="middle" font-size="16">upgrade</text>
+    <rect x="28" y="198" width="250" height="100" rx="10" fill="white" stroke="#a7b8c8"/>
+    <rect x="335" y="198" width="250" height="100" rx="10" fill="white" stroke="#a7b8c8"/>
+    <rect x="642" y="198" width="250" height="100" rx="10" fill="white" stroke="#a7b8c8"/>
+    <text x="153" y="228" text-anchor="middle" font-size="18" font-weight="600">Compare three hashes</text>
+    <text x="153" y="254" text-anchor="middle" font-size="16">Source · baseline · target</text>
+    <text x="153" y="280" text-anchor="middle" font-size="16">Keep target-only edits</text>
+    <text x="460" y="228" text-anchor="middle" font-size="18" font-weight="600">Review dry run</text>
+    <text x="460" y="254" text-anchor="middle" font-size="16">Every path and reason</text>
+    <text x="460" y="280" text-anchor="middle" font-size="16">Conflicts block all writes</text>
+    <text x="767" y="228" text-anchor="middle" font-size="18" font-weight="600">Explicit apply + digest</text>
+    <text x="767" y="254" text-anchor="middle" font-size="16">Distribution files only</text>
+    <text x="767" y="280" text-anchor="middle" font-size="16">Save adoption baseline</text>
+    <g stroke="#42566c" stroke-width="2" marker-end="url(#arrow)"><path d="M280 248 H325"/><path d="M588 248 H632"/></g>
+    <text x="460" y="343" text-anchor="middle" font-size="17">Application · docs/asdg/ · .asdg/ · installed integrations stay untouched</text>
+    <text x="460" y="372" text-anchor="middle" font-size="16">Local working trees only · no commits, pushes, releases or inferred approval</text>
+  </g>
+</svg>

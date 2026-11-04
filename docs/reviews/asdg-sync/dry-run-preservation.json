@@ -1,0 +1,44 @@
+{
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.15/bin/python3",
+    "-B",
+    "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance/asdg/scripts/cli.py",
+    "promote",
+    "--source",
+    "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach",
+    "--target",
+    "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance",
+    "--dry-run",
+    "--json"
+  ],
+  "exit_code": 1,
+  "before": {
+    "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach": {
+      "file_count": 671,
+      "tree_sha256": "0470b1b33dfcaac02fd30ad106179ae946872f3fabfc8cac7edac8b9a0857fdd",
+      "index_sha256": "fbf6583cc52ba2b08cc7b488dcfba5f4ae9adcda3116e129c04149de76793ce1"
+    },
+    "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance": {
+      "file_count": 960,
+      "tree_sha256": "810f3f23f5b34be8ed32dff439e9d4d63266cf57907fe348543afde552aa312b",
+      "index_sha256": "eb7faeade751a1bbfff2fca23adcd41836fe74a0f58d205448492c10c5ade0d2"
+    }
+  },
+  "after": {
+    "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach": {
+      "file_count": 671,
+      "tree_sha256": "0470b1b33dfcaac02fd30ad106179ae946872f3fabfc8cac7edac8b9a0857fdd",
+      "index_sha256": "fbf6583cc52ba2b08cc7b488dcfba5f4ae9adcda3116e129c04149de76793ce1"
+    },
+    "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance": {
+      "file_count": 960,
+      "tree_sha256": "810f3f23f5b34be8ed32dff439e9d4d63266cf57907fe348543afde552aa312b",
+      "index_sha256": "eb7faeade751a1bbfff2fca23adcd41836fe74a0f58d205448492c10c5ade0d2"
+    }
+  },
+  "unchanged": true,
+  "source_branch": "sprint-00",
+  "target_branch": "main",
+  "real_apply_executed": false,
+  "real_upgrade_executed": false
+}

@@ -1,17 +1,28 @@
-# ASDG reusable skills
+# Shared ASDG skills
 
-The full skills live here; platform discovery files are thin routing adapters.
+Canonical workflows live here; native discovery adapters remain thin references.
 
-| Skill | Canonical definition | Codex / Copilot | Claude Code |
-| --- | --- | --- | --- |
-| Component creation | [asdg-component](asdg-component/SKILL.md) | [.agents adapter](../../.agents/skills/asdg-component/SKILL.md) | [.claude adapter](../../.claude/skills/asdg-component/SKILL.md) |
-| Presentations | [asdg-presentation](asdg-presentation/SKILL.md) | [.agents adapter](../../.agents/skills/asdg-presentation/SKILL.md) | [.claude adapter](../../.claude/skills/asdg-presentation/SKILL.md) |
+| Skill | Purpose |
+| --- | --- |
+| [Initialize](asdg-init/SKILL.md) | Bootstrap the explicitly identified client |
+| [Create team](asdg-create-team/SKILL.md) | Set up governance and twelve specialist chats, reusing existing focused chats |
+| [Focus](asdg-focus/SKILL.md) | Select a role; use `subject` to change its topic independently |
+| [Attitude](asdg-attitude/SKILL.md) | Choose a thinking approach, temporary scope, NoAttitude or read-only status |
+| [Status](asdg-status/SKILL.md) | Show status, a suggested next step, then observations and technical debt |
+| [Role](asdg-role/SKILL.md) | Explain the selected role's responsibilities, outputs and boundaries |
+| [Admin](asdg-admin/SKILL.md) | Explicitly switch this chat to ASDG Admin for rule maintenance, or clear back to 00 Governance |
+| [Approve](asdg-approve/SKILL.md) | Resolve the current reviewed documentation baseline and record explicit human acceptance |
+| [Sprint start](asdg-sprint-start/SKILL.md) | Require clean Git status, create a sprint branch, then activate the chosen scope |
+| [Sprint review](asdg-sprint-review/SKILL.md) | Assess evidence against the sprint criteria without changing state |
+| [Sprint close](asdg-sprint-close/SKILL.md) | Preserve the review and end the explicitly selected sprint, retaining unfinished work |
+| [Suggestion](asdg-suggestion/SKILL.md) | Recommend one useful next step from project evidence and priorities |
+| [Development view](asdg-view-dev/SKILL.md) | Open a useful project file and terminal alongside the chat |
+| [Documentation](asdg-documentation/SKILL.md) | Preserve readable, evidence-based project documents |
+| [Decision](asdg-decision/SKILL.md) | Shared decision method with optional specialist-local enrichment |
+| [OpenSpec proposal](asdg-openspec-propose/SKILL.md) | Connect ASDG evidence to the installed native proposal workflow; planning only |
 
-For actual procedure and implementation, always follow the canonical `SKILL.md` and its supporting files.
-Do not duplicate source tooling in discovery folders. A change to instructions or implementation is made here and picked up through adapters.
-
-The presentation workflow can call the separate `asdg/components/video-builder` component for video export. That component is currently at proof-of-concept maturity, with voice selection, fidelity testing and production validation outstanding.
-
-GitHub Copilot CLI discovers both adapter trees but deduplicates by skill `name`: `.agents/skills/` takes precedence over `.claude/skills/`. Keep the metadata identical, as verified by the adapter test.
-
-Native discovery in Codex, GitHub Copilot, and Claude Code must each be smoke-tested in their own runtime; file presence is not proof of invocation.
+Each numbered stage owns its bounded specialist procedure under its local `skills/` folder.
+Its optional `skills/decision/SKILL.md` enriches Decision through the [shared interface](asdg-decision/specialization.md); absence uses generic behavior.
+One Focus picker entry interprets natural-language requests for all thirteen roles; ambiguous intent prompts a choice, and 00 Governance is the default role.
+Presentation/video and ASDG component-development tooling are outside this client core.
+Native discovery and actual behavior must be checked in the selected Codex runtime.

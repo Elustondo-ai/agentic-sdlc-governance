@@ -1,0 +1,3 @@
+PASS: portable package, thirteen roles, skill syntax, references and Python 3.9 syntax.
+PASS: delivered file hashes match metadata/MANIFEST.json.
+Native invocation, hook trust, runtime enforcement and human approval are separate checks.

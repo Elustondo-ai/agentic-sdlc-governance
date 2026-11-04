@@ -24,7 +24,7 @@ The summary reports claimed artifact references, not automatic file-access track
 
 ## Invariants and failures
 
-Output is restricted by catalogue to the agent's local logs/sessions/ subtree.
+Output is restricted by catalogue to the client root logs/asdg/ subtree.
 Each parent-session/child-instance pair has one append-only events.jsonl.
 session.md is a derived latest view within 50 nonblank source lines; events.jsonl retains earlier entries.
 Symlink paths, unsafe IDs, inconsistent catalogue entries and oversized logs are rejected.

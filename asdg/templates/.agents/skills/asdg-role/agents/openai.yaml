@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASDG role"
+  short_description: "Explain this chat’s ASDG role and boundaries"
+  default_prompt: "Use $asdg-role to explain your current role in this project."

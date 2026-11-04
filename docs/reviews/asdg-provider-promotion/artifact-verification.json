@@ -1,0 +1,35 @@
+{
+  "artifact": "build/distributions/asdg-0.3.0-pilot.1.zip",
+  "sha256": "1a883417dc8841f49020ecce8dcd9be38979403ac795023ba615a8fae9835f7e",
+  "size_bytes": 698049,
+  "clients": {
+    "codex": {
+      "extract_integrity": "PASS",
+      "init": "PASS",
+      "verify": "PASS",
+      "inactive_sprint": true,
+      "relocate_repeat": "PASS",
+      "project_bytes_preserved": true
+    },
+    "claude": {
+      "extract_integrity": "PASS",
+      "init": "PASS",
+      "verify": "PASS",
+      "inactive_sprint": true,
+      "relocate_repeat": "PASS",
+      "project_bytes_preserved": true
+    },
+    "both": {
+      "extract_integrity": "PASS",
+      "init": "PASS",
+      "verify": "PASS",
+      "inactive_sprint": true,
+      "relocate_repeat": "PASS",
+      "project_bytes_preserved": true
+    }
+  },
+  "reproducible": true,
+  "archive_members": 382,
+  "native_invocation": "NOT_RUN",
+  "human_approval": null
+}

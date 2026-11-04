@@ -6,10 +6,10 @@ No project-specific requirements or sprint state are stored here by default.
 
 ## Shared references
 
-- [Lifecycle baseline](../../../docs/status/lifecycle-baseline.md)
-- [Sprint-governance review](../../../docs/presentations/asdg-sprint-governance-review/README.md)
-- [Codex agents and adapters](../../../docs/presentations/codex-agent-skills-and-adapters/README.md)
+- [Lifecycle baseline](../../docs/lifecycle-baseline.md)
+- [Sprint controls](sprint-gate.md)
+- [Native integration](../../docs/native-integration.md)
 
-Future explanations use the source-first presentation convention: visual plus spoken notes.
+Presentation production is optional and is not included in this distribution.
 This migration introduces the package structure, not new lifecycle gates or production authority.
 Review the source and contract before adopting any generated proposal.

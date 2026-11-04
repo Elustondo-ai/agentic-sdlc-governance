@@ -1,0 +1,16 @@
+This is an unapproved local installation test candidate, not a released methodology version.
+Initialize ASDG in /private/tmp/asdg-human-install-er48ojw9/clone-human-project using my existing local canonical clone at /private/tmp/asdg-human-install-er48ojw9/canonical-test-clone and exactly 4421f3b410534e5f8c9c9fa43b4a0c00387557d8.
+Use that clone's asdg/skills/asdg-init/SKILL.md and the target's existing instructions.
+Use Python 3.9+ and the clone's asdg/scripts/init.py; do not create a second installer.
+Select --client claude in Claude Code or --client codex in Codex; ask if uncertain.
+Inspect target Git root/status and record application-file hashes.
+Run python3 "/private/tmp/asdg-human-install-er48ojw9/canonical-test-clone/asdg/scripts/init.py" --source "/private/tmp/asdg-human-install-er48ojw9/canonical-test-clone" --commit 4421f3b410534e5f8c9c9fa43b4a0c00387557d8 --target "/private/tmp/asdg-human-install-er48ojw9/clone-human-project" --client CLIENT --dry-run.
+Require verified canonical origin, exact HEAD, committed selected bytes and matching package integrity. Stop on mismatch; do not change the commit or refresh a manifest.
+Show the complete file plan and generated diffs, including hooks. Copy only the selected portable distribution; never copy source .git, provider extras or project state.
+STOP and wait for my explicit approval of this exact plan.
+After I approve, repeat the identical options with --apply --plan TOKEN_FROM_PREVIEW.
+From /private/tmp/asdg-human-install-er48ojw9/clone-human-project, run python3 asdg/scripts/cli.py verify --json; repeat the original preview for no further changes.
+Report changed paths, preserved application/evidence and deterministic results separately from actual native tests and trust.
+Report installation complete only on success, offer the optional Context survey, then STOP.
+Never execute that survey or ask its questions without my separate affirmative response.
+Do not overwrite conflicts, bypass hooks, grant trust, resolve promotion conflicts, commit, push, merge, tag, publish or start a sprint.

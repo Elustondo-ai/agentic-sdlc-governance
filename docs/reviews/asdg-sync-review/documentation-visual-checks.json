@@ -1,0 +1,112 @@
+[
+  {
+    "path": "asdg/docs/synchronization.md",
+    "sha256": "5e903e592afc3acbd9a00c36a5562084757f2c958c93624cdad80d15a820870c",
+    "embedded_visuals": [
+      {
+        "caption": "Pilot and canonical snapshots are compared with an adopted baseline; review precedes explicit application and a local adoption record.",
+        "resource": "images/synchronization.svg"
+      }
+    ],
+    "inspection": "PASS: current Markdown and embedded diagram rendered in local Chrome and visually inspected at 940px content width"
+  },
+  {
+    "path": "asdg/scripts/lib/cli_files.md",
+    "sha256": "06224a3034c874a9792acca3403a1c66b268ef361f953ef5675db1dc3f227356",
+    "embedded_visuals": [
+      {
+        "caption": "Initializer change requests \u2192 Change plans + preflight \u2192 Filesystem / rollback",
+        "resource": "images/cli_files-flow.svg"
+      }
+    ],
+    "inspection": "PASS: current Markdown and embedded diagram rendered in local Chrome and visually inspected at 940px content width"
+  },
+  {
+    "path": "asdg/scripts/lib/cli_sync.md",
+    "sha256": "ae6b466c5277398fb582c4c4696c07820947eda4925e9e14f8d8c52809d95f2f",
+    "embedded_visuals": [
+      {
+        "caption": "Both synchronization directions compare source, baseline and target before review and explicit apply.",
+        "resource": "../../docs/images/synchronization.svg"
+      }
+    ],
+    "inspection": "PASS: current Markdown and embedded diagram rendered in local Chrome and visually inspected at 940px content width"
+  },
+  {
+    "path": "asdg/scripts/lib/cli_sync_manifest.md",
+    "sha256": "4498c9922a3e00690a274560e340097d92f6828923c2c95507daaef19343d282",
+    "embedded_visuals": [
+      {
+        "caption": "Repository snapshots and a common baseline feed the shared comparison and reviewed apply.",
+        "resource": "../../docs/images/synchronization.svg"
+      }
+    ],
+    "inspection": "PASS: current Markdown and embedded diagram rendered in local Chrome and visually inspected at 940px content width"
+  },
+  {
+    "path": "asdg/tests/test_sync.md",
+    "sha256": "16427770265c2633627c71647b847bb06310c8e0b11aad8e346646822c2c5956",
+    "embedded_visuals": [
+      {
+        "caption": "Tests exercise comparison, preview and explicit application while preserving client-owned areas.",
+        "resource": "../docs/images/synchronization.svg"
+      }
+    ],
+    "inspection": "PASS: current Markdown and embedded diagram rendered in local Chrome and visually inspected at 940px content width"
+  },
+  {
+    "path": "docs/asdg/07-planning/02.3-review-synchronization.md",
+    "sha256": "38851b37a4ab8efe345649b4fe7367fce836ef52ed23e615fca62791b6a57015",
+    "embedded_visuals": [
+      {
+        "caption": "Both directions compare source, baseline and target; human review precedes any apply.",
+        "resource": "../../../asdg/docs/images/synchronization.svg"
+      }
+    ],
+    "inspection": "PASS: current Markdown and embedded diagram rendered in local Chrome and visually inspected at 940px content width"
+  },
+  {
+    "path": "docs/asdg/07-planning/02.3.1-conflicts-governance-docs.md",
+    "sha256": "b938122657b22d91cdb89cc576f9b07394473637882fd6b1959f7bed89d711b1",
+    "embedded_visuals": [
+      {
+        "caption": "Compare the three states, review every conflict, and apply only an explicitly authorized candidate.",
+        "resource": "../../../asdg/docs/images/synchronization.svg"
+      }
+    ],
+    "inspection": "PASS: current Markdown and embedded diagram rendered in local Chrome and visually inspected at 940px content width"
+  },
+  {
+    "path": "docs/asdg/07-planning/02.3.2-conflicts-runtime-tests.md",
+    "sha256": "7825d829841c4f7ec4e48a445bf8b773ee1a07c232700ed14ede114eb4774d9c",
+    "embedded_visuals": [
+      {
+        "caption": "Source changes, baseline and canonical edits are compared before an explicitly reviewed apply.",
+        "resource": "../../../asdg/docs/images/synchronization.svg"
+      }
+    ],
+    "inspection": "PASS: current Markdown and embedded diagram rendered in local Chrome and visually inspected at 940px content width"
+  },
+  {
+    "path": "docs/asdg/07-planning/02.3.3-integration-refresh.md",
+    "sha256": "7c9d6bc50099ee71f72911be045fcc1cb844133455f2528fd950a1832d9becfe",
+    "embedded_visuals": [
+      {
+        "caption": "One package supplies both clients through shared templates and client-specific rendering.",
+        "resource": "../../../asdg/docs/images/client-integrations.svg"
+      }
+    ],
+    "inspection": "PASS: current Markdown and embedded diagram rendered in local Chrome and visually inspected at 940px content width"
+  },
+  {
+    "path": "docs/asdg/07-planning/02.3.4-onboarding-gaps.md",
+    "sha256": "e8f274e0799a400e320b4e1b0beffdbe2fecafdd461c442d6fb341c9e6e8a064",
+    "embedded_visuals": [
+      {
+        "caption": "The shared package selection and initialization path already implements the ZIP-to-project core.",
+        "resource": "../../../asdg/docs/images/distribution-flow.svg"
+      }
+    ],
+    "inspection": "PASS: current Markdown and embedded diagram rendered in local Chrome and visually inspected at 940px content width"
+  }
+]

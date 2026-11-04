@@ -1,49 +1,48 @@
 ---
 name: asdg-focus
-description: Explicitly focus this conversation on an existing ASDG stage 01-12, or clear focus. Shared activation workflow for the twelve picker entries; no delegation or project execution.
+description: Preserve conversational ASDG role selection; use subject plus a topic to change subject focus within the current role. Clarify ambiguous requests before switching; all selections retain existing authority.
 ---
 
-# ASDG Focus — shared activation workflow v0.2
+# ASDG Focus — role selection and subject focus
 
-Read [session policy](session-policy.md). Only explicit user selection activates focus.
-Prefer a dedicated `asdg-focus-<NN>-<label>` skill: its fixed role ID needs no argument.
-The generic skill remains a shortcut; trailing text is an instruction argument, not a shell command.
+Read [session policy](session-policy.md) and [session fields](session-state.md). Only explicit requests change selection.
+This remains the single public Focus skill; existing role phrases, IDs and clear commands retain their meaning.
+Pass the complete user phrase and task context; never interpret them as shell commands.
 
-## Resolve the selection
+## Resolve the requested dimension
 
-Read [the existing catalogue](../../00-governance/types/agent-catalog.json) and [UI choices](focus-choices.md).
-A dedicated adapter supplies its fixed ASDG-NN selector; preserve its actual invocation in the receipt.
-Extra task text is context, not another selector. Conflicting explicit selections require clarification.
-Generic input accepts one trimmed, case-insensitive role ID, native name, 01-12, catalogue folder basename or listed alias.
-Missing generic input: direct the user to the twelve named Focus skills; keep focus unchanged and stop.
-For `clear`, skip role loading, clear only conversation focus, then rename and report Status.
-Unknown, ambiguous or path-like input leaves focus unchanged.
-Resolve to exactly one catalogue entry, stage 01-12. Do not synthesize paths from user input.
-00 remains the coordinator, not a thirteenth lifecycle focus. Never create or renumber roles.
+An explicit `subject <topic>`, `subject clear`, `subject status`, or clear within-role topic request uses [subject focus](subject-focus.md); then return without running role activation.
+For role requests, read [the catalogue](../../00-governance/types/agent-catalog.json) and [interpretation guidance](focus-choices.md).
+“Focus on high level architecture,” numeric IDs, canonical IDs, native names, folder basenames and established aliases still select roles.
+If subject-versus-role intent remains ambiguous, ask one question before changing either field or the title.
+For one clear role match, state the interpreted role and proceed without another confirmation.
+For overlapping responsibilities, ask among plausible specialists with a recommendation and reason; an unanswered option is not a selection.
+For missing or unrecognizable intent, ask which specialist the user wants, showing the twelve plus Governance separately.
+Quoted examples, hypothetical requests and explanations select nothing.
+For legacy `clear`, “clear focus,” or “return to general,” return the role to 00 Governance by loading its sources as for any selection; preserve goal/subject/attitude/project, then rename and report Status.
+Resolve a role to exactly one catalogue entry, or for an explicit Admin selector to the [Admin registration](../../admin/types/admin-role.json); do not synthesize paths, identities or numbering from user input.
+00 selects ASDG-COORDINATOR, which is also the default role; there is no role None. Clarification and invalid input preserve the prior receipt and title.
 
-## Read before changing focus
+## Read before role activation
 
-Resolve the provider root as `../../..` from THIS canonical skill directory, not shell CWD.
-Read provider root AGENTS.md; retain caller-project governance, target project and existing task context.
-Verify its session-policy reference; otherwise report BLOCKED: SESSION_POLICY_NOT_CONFIGURED.
-Use [the lifecycle baseline](../../../docs/status/lifecycle-baseline.md); stop on identity/order disagreement.
-Resolve the target project only from explicit context or verified binding; unknown is valid for an interview.
-Read the selected catalogue `entry`, its required sources and catalogue `skill`, in full.
-Include its contract, runtime rules and shared response envelope; resolve links from their containing files.
-Check the role ID/native name/stage match the catalogue. Missing or contradictory sources block activation.
-Inspecting these files does not activate them. A failed switch preserves the previous selection and title.
-Do not replace definitions with an older SDLC2 folder, remembered summary or another project's package.
+Resolve client root as `../../..` and distribution root as `../..` from THIS canonical skill directory.
+Read client AGENTS.md and `asdg/AGENTS.md`; verify the session-policy reference or report BLOCKED: SESSION_POLICY_NOT_CONFIGURED.
+Retain the target project and all other session fields; unknown project is valid for an interview.
+Read [the lifecycle baseline](../../docs/lifecycle-baseline.md); stop on identity/order disagreement.
+Read the selected catalogue entry, required sources and procedure in full, including contract, runtime rules and response envelope; for Admin, its registration lists them.
+Resolve links from their containing files; confirm role ID/native name/stage match the catalogue.
+Missing or contradictory sources block the proposed switch and preserve the previous role and title; if the Governance sources themselves fail, report `BLOCKED: GOVERNANCE_BOOTSTRAP`.
+Inspection alone does not activate a role; do not substitute an old provider checkout or remembered definition.
 
 ## Activate, rename and report
 
-After successful reads, replace THIS conversation's focus with the selected canonical role.
-Record actual source paths, available versions and the invoked skill; keep all canonical role/evaluation boundaries.
-The current catalogue is read-only evaluation: conversation proposals only, including Build/Test and Release roles.
-Loading a procedure does not start its interview, execute its task or write artifacts; wait for an assignment.
-After successful activation or explicit clear, follow [the current-chat rename step](rename-chat.md).
-Renaming is the narrow chat-metadata exception; failure never undoes successful activation/clear.
-For `clear`, retain project context and independent restrictions; do not silently activate the coordinator.
-Repeated selection of the same role refreshes required reads and retries rename; no child agent is created.
-Return [ASDG Status](../asdg-status/SKILL.md), including the actual rename outcome, then stop.
-No project-file changes, installs, delegation, commits, pushes, deployment, sprint transitions or mode switches.
-This YAML-first file records AI modification, not whole-file human approval.
+After successful reads, replace only this chat's role. Preserve subject even across role changes; flag an out-of-role subject without silently erasing it.
+Record the selecting phrase, interpreted role, actual sources, invoked skill and the retained goal/subject/attitude/project.
+All agents retain [documentation authority](../../00-governance/docs/documentation-authority.md); code, approvals and operations retain separate gates.
+Purpose begins its [read-only opening](../../02-purpose/skills/elicit-purpose/opening.md); activation alone writes no artifacts.
+Follow [current-chat renaming](rename-chat.md): short role name, selected subject, selected attitude; project binding stays in the receipt.
+A failed rename does not undo selection. Repeated role selection refreshes required reads and retries the title; it does not reset other fields.
+For Purpose, collect [Status](../asdg-status/SKILL.md) facts-only once and reuse the result in its opening, with the actual rename outcome.
+If selection includes an assignment, continue that authorized work without a redundant interview.
+For clear or another role without an assignment, return Status and stop; other specialist openings await pilot review.
+Keep the compact first-line state declaration accurate. No activation grants implementation, installation, delegation, commit, deployment or sprint authority.

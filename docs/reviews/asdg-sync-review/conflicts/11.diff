@@ -1,0 +1,139 @@
+# asdg/scripts/lib/cli.py
+# Baseline status: RECOVERED
+# SHA256 baseline: b32f51bf3a16edcf231c4d0bc52f205574e8cf1393f4f11cb4858b66cfa1f8e7
+# SHA256 source: 233ee333723651fa3d2ae91941b7139db11a33ea7f8c40ab73d81956c95f8774
+# SHA256 target: e27c60e59fdfac795f6e6a0246972a39de2f2d79f9b39aa3dedab112c76a29fe
+
+## baseline-to-source
+--- baseline/asdg/scripts/lib/cli.py
++++ source/asdg/scripts/lib/cli.py
+@@ -39,6 +39,8 @@
+             command.add_argument('--project-status', choices=('new', 'defining', 'defined'), default=None,
+                                  help='initial declaration only; defaults to new, preserves existing state')
+             command.add_argument('--dry-run', action='store_true', help='preflight all destinations without writing')
++            command.add_argument('--client', choices=('codex', 'claude', 'both'), default=None,
++                                 help='client integration to add; repeat setup without it keeps the recorded clients (Codex if none)')
+         if name == 'status':
+             mode = command.add_mutually_exclusive_group()
+             mode.add_argument('--facts-only', action='store_true', help='skip coordinator advice')
+@@ -141,7 +143,7 @@
+                 print('ALL GOOD!')
+             return 0
+         if args.operation == 'init':
+-            report = initialize(root, project_state=args.project_status, dry_run=args.dry_run)
++            report = initialize(root, project_state=args.project_status, dry_run=args.dry_run, client=args.client)
+             if args.dry_run:
+                 print(json.dumps(report, indent=2) if args.json else
+                       f"Preflight passed: {len(report['planned_files'])} files planned; no files changed.")
+@@ -156,6 +158,13 @@
+                 print('ASDG initialized and verified.' if args.operation == 'init'
+                       else 'ASDG structure verified.')
+                 print('ALL GOOD!')
++                if args.operation == 'init':
++                    for note in report.get('notes', []):
++                        print(f'NOTE: {note}')
++                    recorded = report.get('clients_recorded', [])
++                    command = ' or '.join(prefix + 'asdg-status' for client, prefix in (('codex', '$'), ('claude', '/'))
++                                          if client in recorded) or '$asdg-status'
++                    print(f'Next: use {command} to inspect project facts and receive a project-wide next step.')
+             else:
+                 print('ASDG initialization failed.' if args.operation == 'init'
+                       else 'ASDG verification failed.', file=sys.stderr)
+
+## baseline-to-target
+--- baseline/asdg/scripts/lib/cli.py
++++ target/asdg/scripts/lib/cli.py
+@@ -20,6 +20,15 @@
+     parser = argparse.ArgumentParser(prog=SHORT_COMMAND, description=__doc__)
+     parser.add_argument('--version', action='version', version=f'{COMMAND} {VERSION}')
+     sub = parser.add_subparsers(dest='operation', required=True)
++    for name in ('promote', 'upgrade'):
++        sync = sub.add_parser(name, help='Preview or explicitly apply local methodology synchronization')
++        sync.add_argument('--source', required=True, help='source Git repository root')
++        sync.add_argument('--target', required=True, help='target Git repository root')
++        mode = sync.add_mutually_exclusive_group(required=True)
++        mode.add_argument('--dry-run', action='store_true', help='inspect without writing')
++        mode.add_argument('--apply', action='store_true', help='apply the reviewed, conflict-free plan')
++        sync.add_argument('--plan', help='exact plan digest returned by a reviewed dry run; required with --apply')
++        sync.add_argument('--json', action='store_true', help='machine-readable preview or result')
+     sprint = sub.add_parser('sprint', help='Manage authoritative project sprint state')
+     sprint_actions = sprint.add_subparsers(dest='action', required=True)
+     sprint_status = sprint_actions.add_parser('status')
+@@ -39,6 +48,8 @@
+             command.add_argument('--project-status', choices=('new', 'defining', 'defined'), default=None,
+                                  help='initial declaration only; defaults to new, preserves existing state')
+             command.add_argument('--dry-run', action='store_true', help='preflight all destinations without writing')
++            command.add_argument('--client', choices=('codex', 'claude', 'both'), default=None,
++                                 help='client integration to add; repeat setup without it keeps the recorded clients (Codex if none)')
+         if name == 'status':
+             mode = command.add_mutually_exclusive_group()
+             mode.add_argument('--facts-only', action='store_true', help='skip coordinator advice')
+@@ -60,6 +71,12 @@
+         if args.json and not args.advise:
+             parser.error('--json --verbose requires --advise; plain --json never invokes the coordinator')
+     try:
++        if args.operation in ('promote', 'upgrade'):
++            from cli_sync import synchronize, render
++            result = synchronize(args.operation, args.source, args.target,
++                                 apply=args.apply, expected_plan=args.plan)
++            print(json.dumps(result, indent=2) if args.json else render(result))
++            return 1 if result['counts']['conflicting'] else 0
+         if args.operation == 'agent':
+             agents, _ = catalogue()
+             if args.action == 'list':
+@@ -141,7 +158,7 @@
+                 print('ALL GOOD!')
+             return 0
+         if args.operation == 'init':
+-            report = initialize(root, project_state=args.project_status, dry_run=args.dry_run)
++            report = initialize(root, project_state=args.project_status, dry_run=args.dry_run, client=args.client)
+             if args.dry_run:
+                 print(json.dumps(report, indent=2) if args.json else
+                       f"Preflight passed: {len(report['planned_files'])} files planned; no files changed.")
+@@ -156,6 +173,13 @@
+                 print('ASDG initialized and verified.' if args.operation == 'init'
+                       else 'ASDG structure verified.')
+                 print('ALL GOOD!')
++                if args.operation == 'init':
++                    for note in report.get('notes', []):
++                        print(f'NOTE: {note}')
++                    recorded = report.get('clients_recorded', [])
++                    command = ' or '.join(prefix + 'asdg-status' for client, prefix in (('codex', '$'), ('claude', '/'))
++                                          if client in recorded) or '$asdg-status'
++                    print(f'Next: use {command} to inspect project facts and receive a project-wide next step.')
+             else:
+                 print('ASDG initialization failed.' if args.operation == 'init'
+                       else 'ASDG verification failed.', file=sys.stderr)
+
+## source-to-target
+--- source/asdg/scripts/lib/cli.py
++++ target/asdg/scripts/lib/cli.py
+@@ -20,6 +20,15 @@
+     parser = argparse.ArgumentParser(prog=SHORT_COMMAND, description=__doc__)
+     parser.add_argument('--version', action='version', version=f'{COMMAND} {VERSION}')
+     sub = parser.add_subparsers(dest='operation', required=True)
++    for name in ('promote', 'upgrade'):
++        sync = sub.add_parser(name, help='Preview or explicitly apply local methodology synchronization')
++        sync.add_argument('--source', required=True, help='source Git repository root')
++        sync.add_argument('--target', required=True, help='target Git repository root')
++        mode = sync.add_mutually_exclusive_group(required=True)
++        mode.add_argument('--dry-run', action='store_true', help='inspect without writing')
++        mode.add_argument('--apply', action='store_true', help='apply the reviewed, conflict-free plan')
++        sync.add_argument('--plan', help='exact plan digest returned by a reviewed dry run; required with --apply')
++        sync.add_argument('--json', action='store_true', help='machine-readable preview or result')
+     sprint = sub.add_parser('sprint', help='Manage authoritative project sprint state')
+     sprint_actions = sprint.add_subparsers(dest='action', required=True)
+     sprint_status = sprint_actions.add_parser('status')
+@@ -62,6 +71,12 @@
+         if args.json and not args.advise:
+             parser.error('--json --verbose requires --advise; plain --json never invokes the coordinator')
+     try:
++        if args.operation in ('promote', 'upgrade'):
++            from cli_sync import synchronize, render
++            result = synchronize(args.operation, args.source, args.target,
++                                 apply=args.apply, expected_plan=args.plan)
++            print(json.dumps(result, indent=2) if args.json else render(result))
++            return 1 if result['counts']['conflicting'] else 0
+         if args.operation == 'agent':
+             agents, _ = catalogue()
+             if args.action == 'list':

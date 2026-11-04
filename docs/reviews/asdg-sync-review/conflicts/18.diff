@@ -1,0 +1,155 @@
+# asdg/tests/test_portable.md
+# Baseline status: ABSENT
+# SHA256 baseline: None
+# SHA256 source: 3a121f805c64d3b8ba5e258396a1c4507f564969004e6466b489db4cd34db41f
+# SHA256 target: 2cbd18688ee93a031e75791b1c5d3b2b4c36c234548064870abb21a0542808e3
+
+## baseline-to-source
+--- baseline/asdg/tests/test_portable.md
++++ source/asdg/tests/test_portable.md
+@@ -0,0 +1,56 @@
++# Portable integration tests
++
++[Source: test_portable.py](test_portable.py)
++
++Exercises initialization, relocation, preservation, permission boundaries, logging and advice/report handling in disposable Git repositories.
++
++## Responsibilities and collaborators
++
++Owns deterministic regression fixtures and assertions for the behavior described below.
++
++![Disposable inputs → PortableTests → Assertions and test result](images/test_portable-flow.svg)
++
++- [cli](../scripts/lib/cli.md): Commands invoked through subprocesses.
++- [cli_files](../scripts/lib/cli_files.md): Transaction and rollback behavior.
++- [cli_advice](../scripts/lib/cli_advice.md): Prompt/environment checks without a model call.
++- [cli_advice_report](../scripts/lib/cli_advice_report.md): Controlled report writes.
++
++## Interface and data
++
++PortableTests extends unittest.TestCase. Test methods use per-test state; simulated decisions never modify real project acceptance.
++
++| Callable or interface | Contract |
++| --- | --- |
++| `snapshot(root: Path) -> dict[str,str]` | Hashes files outside .git to compare before/after content. |
++| `setUp() -> None` | Copies the package to a disposable client, initializes Git and seeds app files; registers cleanup. |
++| `run_cli(*args, entry='cli.py', expect=0, cwd=None) -> CompletedProcess` | Runs the local entry with a timeout and asserts the expected exit code. |
++| `init(*args, **kw) -> CompletedProcess` | Convenience wrapper around run_cli with init.py. |
++| `active() -> None` | Starts the fixture's S1 sprint scoped to app.js. |
++| `hook(payload, event='PreToolUse', cwd=None) -> dict` | Runs the fixture's configured hook with JSON input and parses its response. |
++| `payload(paths) -> dict; denied(payload) -> None` | Constructs patch inputs and asserts hook denial. |
++| `bootstrap_module() -> module` | Imports the copied `cli_project` so tests compare against the exact `BRIDGE` and `LEGACY_BRIDGES`. |
++
++The [test case guide](test_portable-cases.md), its [role and session cases](test_portable-cases-roles.md) and its [client cases](test_portable-cases-clients.md) list every `test_*` method and the behavior it checks.
++Decision discovery is exercised in a relocated client without SpeakerCoach files; repeat setup preserves unregistered decision evidence and lifecycle/sprint bytes.
++Optional local decision skills survive repeat setup from a specialist subdirectory; generic roles require no placeholder and state remains unchanged.
++Focus installation keeps one picker entry and thirteen role adapters; preflight rejects missing shared metadata or retired per-role picker templates before writes.
++Attitude discovery and its receipt guides survive relocation; repeat initialization preserves project, lifecycle, sprint and application bytes. Native chat semantics require separate observation.
++OpenSpec wrapper installation survives relocation and repeat setup while preserving a separately installed upstream skill, OpenSpec configuration, ASDG state, hooks and application bytes; it creates no proposal.
++Status reports whether a new session can start under the default 00 Governance role; a missing coordinator source or a managed block without the `asdg/AGENTS.md` link blocks it and blocks implementation.
++Root `AGENTS.md` starts with the generic bootstrap; project text after it survives setup byte-for-byte, the three earlier blocks move to the top, and edited, moved or duplicated blocks conflict without writes.
++Every guarded write, documentation included, needs a READY governance bootstrap; docs still need no sprint, and read-only commands stay available. Admin preflight rejects an invalid package with a specific message.
++Client selection installs only the chosen Codex or Claude integration, adds clients without touching the other, repeats without changes and records legacy installations explicitly.
++The `$asdg-admin` skill adapter installs and relocates with implicit invocation off. ASDG Admin is registered outside the 13-role catalogue; the guard denies an in-sprint patch to an ASDG rule regardless of claimed role.
++A text check confirms the session and role instructions define no role-None path or old maintainer allowance; it does not show that an agent obeys them.
++In a relocated client, the GUI visual rule, its diagram and resolving links from the all-role instructions, standard, review criteria, runtime contract and documentation skill remain present.
++`test_dry_run_then_init_repeat_is_byte_identical` also checks portable stage introductions, embedded diagrams, empty Context recognition, absence of perspective directories and preservation on repeat setup.
++
++## Effects and failure behavior
++
++Tests invoke Python, Git and configured shell hooks and write disposable fixture files. Snapshot comparisons protect unrelated content. Test success is not native UI/hook-trust evidence.
++
++Documentation guard cases exercise docs-only and mixed patches, absent/malformed state, source extensions, policy paths, traversal, symlinks and moves in disposable projects.
++
++## Example
++
++From the project root: `TMPDIR=/private/tmp python3 -B -m unittest discover -s asdg/tests -p 'test_portable.py'`.
+
+## baseline-to-target
+--- baseline/asdg/tests/test_portable.md
++++ target/asdg/tests/test_portable.md
+@@ -0,0 +1,56 @@
++# Portable integration tests
++
++[Source: test_portable.py](test_portable.py)
++
++Exercises initialization, relocation, preservation, permission boundaries, logging and advice/report handling in disposable Git repositories.
++
++## Responsibilities and collaborators
++
++Owns deterministic regression fixtures and assertions for the behavior described below.
++
++![Disposable inputs → PortableTests → Assertions and test result](images/test_portable-flow.svg)
++
++- [cli](../scripts/lib/cli.md): Commands invoked through subprocesses.
++- [cli_files](../scripts/lib/cli_files.md): Transaction and rollback behavior.
++- [cli_advice](../scripts/lib/cli_advice.md): Prompt/environment checks without a model call.
++- [cli_advice_report](../scripts/lib/cli_advice_report.md): Controlled report writes.
++
++## Interface and data
++
++PortableTests extends unittest.TestCase. Test methods use per-test state; simulated decisions never modify real project acceptance.
++
++| Callable or interface | Contract |
++| --- | --- |
++| `snapshot(root: Path) -> dict[str,str]` | Hashes files outside .git to compare before/after content. |
++| `setUp() -> None` | Copies only files selected for the portable ZIP to a disposable client, initializes Git and seeds app files; registers cleanup. |
++| `run_cli(*args, entry='cli.py', expect=0, cwd=None) -> CompletedProcess` | Runs the local entry with a timeout and asserts the expected exit code. |
++| `init(*args, **kw) -> CompletedProcess` | Convenience wrapper around run_cli with init.py. |
++| `active() -> None` | Starts the fixture's S1 sprint scoped to app.js. |
++| `hook(payload, event='PreToolUse', cwd=None) -> dict` | Runs the fixture's configured hook with JSON input and parses its response. |
++| `payload(paths) -> dict; denied(payload) -> None` | Constructs patch inputs and asserts hook denial. |
++| `bootstrap_module() -> module` | Imports the copied `cli_project` so tests compare against the exact `BRIDGE` and `LEGACY_BRIDGES`. |
++
++The [test case guide](test_portable-cases.md), its [role and session cases](test_portable-cases-roles.md) and its [client cases](test_portable-cases-clients.md) list every `test_*` method and the behavior it checks.
++Decision discovery is exercised in a relocated client without SpeakerCoach files; repeat setup preserves unregistered decision evidence and lifecycle/sprint bytes.
++Optional local decision skills survive repeat setup from a specialist subdirectory; generic roles require no placeholder and state remains unchanged.
++Focus installation keeps one picker entry and thirteen role adapters; preflight rejects missing shared metadata or retired per-role picker templates before writes.
++Attitude discovery and its receipt guides survive relocation; repeat initialization preserves project, lifecycle, sprint and application bytes. Native chat semantics require separate observation.
++OpenSpec wrapper installation survives relocation and repeat setup while preserving a separately installed upstream skill, OpenSpec configuration, ASDG state, hooks and application bytes; it creates no proposal.
++Status reports whether a new session can start under the default 00 Governance role; a missing coordinator source or a managed block without the `asdg/AGENTS.md` link blocks it and blocks implementation.
++Root `AGENTS.md` starts with the generic bootstrap; project text after it survives setup byte-for-byte, the three earlier blocks move to the top, and edited, moved or duplicated blocks conflict without writes.
++Every guarded write, documentation included, needs a READY governance bootstrap; docs still need no sprint, and read-only commands stay available. Admin preflight rejects an invalid package with a specific message.
++Client selection installs only the chosen Codex or Claude integration, adds clients without touching the other, repeats without changes and records legacy installations explicitly.
++The `$asdg-admin` skill adapter installs and relocates with implicit invocation off. ASDG Admin is registered outside the 13-role catalogue; the guard denies an in-sprint patch to an ASDG rule regardless of claimed role.
++A text check covers selected package instructions, excluding historical proposals and unshipped provider archives; it rejects old maintainer allowances but does not prove agent compliance.
++In a relocated client, the GUI visual rule, its diagram and resolving links from the all-role instructions, standard, review criteria, runtime contract and documentation skill remain present.
++`test_dry_run_then_init_repeat_is_byte_identical` also checks portable stage introductions, embedded diagrams, empty Context recognition, absence of perspective directories and preservation on repeat setup.
++
++## Effects and failure behavior
++
++Tests invoke Python, Git and configured shell hooks and write disposable fixture files. Snapshot comparisons protect unrelated content. Test success is not native UI/hook-trust evidence.
++
++Documentation guard cases exercise docs-only and mixed patches, absent/malformed state, source extensions, policy paths, traversal, symlinks and moves in disposable projects.
++
++## Example
++
++From the project root: `python3 -B -m unittest discover -s asdg/tests -p 'test_portable.py'`.
+
+## source-to-target
+--- source/asdg/tests/test_portable.md
++++ target/asdg/tests/test_portable.md
+@@ -22,7 +22,7 @@
+ | Callable or interface | Contract |
+ | --- | --- |
+ | `snapshot(root: Path) -> dict[str,str]` | Hashes files outside .git to compare before/after content. |
+-| `setUp() -> None` | Copies the package to a disposable client, initializes Git and seeds app files; registers cleanup. |
++| `setUp() -> None` | Copies only files selected for the portable ZIP to a disposable client, initializes Git and seeds app files; registers cleanup. |
+ | `run_cli(*args, entry='cli.py', expect=0, cwd=None) -> CompletedProcess` | Runs the local entry with a timeout and asserts the expected exit code. |
+ | `init(*args, **kw) -> CompletedProcess` | Convenience wrapper around run_cli with init.py. |
+ | `active() -> None` | Starts the fixture's S1 sprint scoped to app.js. |
+@@ -41,7 +41,7 @@
+ Every guarded write, documentation included, needs a READY governance bootstrap; docs still need no sprint, and read-only commands stay available. Admin preflight rejects an invalid package with a specific message.
+ Client selection installs only the chosen Codex or Claude integration, adds clients without touching the other, repeats without changes and records legacy installations explicitly.
+ The `$asdg-admin` skill adapter installs and relocates with implicit invocation off. ASDG Admin is registered outside the 13-role catalogue; the guard denies an in-sprint patch to an ASDG rule regardless of claimed role.
+-A text check confirms the session and role instructions define no role-None path or old maintainer allowance; it does not show that an agent obeys them.
++A text check covers selected package instructions, excluding historical proposals and unshipped provider archives; it rejects old maintainer allowances but does not prove agent compliance.
+ In a relocated client, the GUI visual rule, its diagram and resolving links from the all-role instructions, standard, review criteria, runtime contract and documentation skill remain present.
+ `test_dry_run_then_init_repeat_is_byte_identical` also checks portable stage introductions, embedded diagrams, empty Context recognition, absence of perspective directories and preservation on repeat setup.
+ 
+@@ -53,4 +53,4 @@
+ 
+ ## Example
+ 
+-From the project root: `TMPDIR=/private/tmp python3 -B -m unittest discover -s asdg/tests -p 'test_portable.py'`.
++From the project root: `python3 -B -m unittest discover -s asdg/tests -p 'test_portable.py'`.

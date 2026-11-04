@@ -1,6 +1,6 @@
 {
   "version": "0.2",
-  "mode": "read-only-evaluation",
+  "mode": "evaluation-with-documentation",
   "agents": [
     {
       "stage": 0,
@@ -51,9 +51,9 @@
       "role_id": "ASDG-04",
       "native_name": "asdg_04",
       "title": "Benchmark and Test Strategy Agent",
-      "folder": "asdg/04-benchmarks-test-strategy-and-success-criteria",
-      "entry": "asdg/04-benchmarks-test-strategy-and-success-criteria/AGENTS.md",
-      "skill": "asdg/04-benchmarks-test-strategy-and-success-criteria/skills/evaluate-alternatives/SKILL.md",
+      "folder": "asdg/04-benchmarks-and-eval-strategy",
+      "entry": "asdg/04-benchmarks-and-eval-strategy/AGENTS.md",
+      "skill": "asdg/04-benchmarks-and-eval-strategy/skills/evaluate-alternatives/SKILL.md",
       "skill_name": "asdg-evaluate-alternatives",
       "adapter": ".codex/agents/asdg_04.toml"
     },
@@ -62,9 +62,9 @@
       "role_id": "ASDG-05",
       "native_name": "asdg_05",
       "title": "High-Level Architecture Agent",
-      "folder": "asdg/05-high-level-solution-design-and-architecture",
-      "entry": "asdg/05-high-level-solution-design-and-architecture/AGENTS.md",
-      "skill": "asdg/05-high-level-solution-design-and-architecture/skills/propose-architecture/SKILL.md",
+      "folder": "asdg/05-high-level-design-and-architecture",
+      "entry": "asdg/05-high-level-design-and-architecture/AGENTS.md",
+      "skill": "asdg/05-high-level-design-and-architecture/skills/propose-architecture/SKILL.md",
       "skill_name": "asdg-propose-architecture",
       "adapter": ".codex/agents/asdg_05.toml"
     },

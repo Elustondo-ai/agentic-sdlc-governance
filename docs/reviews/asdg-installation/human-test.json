@@ -1,0 +1,40 @@
+{
+  "area": "<TEMP_INSTALL_TRIAL>",
+  "source": "<TEMP_INSTALL_TRIAL>/canonical-test-clone",
+  "commit": "4421f3b410534e5f8c9c9fa43b4a0c00387557d8",
+  "test_only": true,
+  "real_canonical_head": "7c5d0ca3869ca2bf6472ac7a408b809dc4823cf9",
+  "archive": "build/distributions/asdg-0.3.0-pilot.1.zip",
+  "archive_sha256": "dd8515607215f7fff70bea1b616f398387b65d16e0ecdd6307c1f1c4914ac17d",
+  "projects": {
+    "zip": {
+      "path": "<TEMP_INSTALL_TRIAL>/zip-human-project",
+      "planned_files": 69,
+      "applied": false
+    },
+    "clone": {
+      "path": "<TEMP_INSTALL_TRIAL>/clone-human-project",
+      "planned_files": 437,
+      "applied": false
+    }
+  },
+  "smoke": [
+    {
+      "route": "zip",
+      "client": "codex",
+      "verified": true,
+      "idempotent": true,
+      "context_executed": false,
+      "native_app_tested": false
+    },
+    {
+      "route": "clone",
+      "client": "claude",
+      "verified": true,
+      "idempotent": true,
+      "context_executed": false,
+      "native_app_tested": false
+    }
+  ],
+  "redaction_note": "Archive path is repository-relative; <TEMP_INSTALL_TRIAL> replaces the disposable test root. Original hashes and test results are preserved; no new live app test is claimed."
+}

@@ -1,0 +1,222 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "bb05059131363fb349dbf18eaa5b3df1cb710c7f92531a98b4898dfa4e539444",
+    "figures": [
+      {
+        "idea": "The canonical provider builds a verified ZIP; each client extracts one folder and initializes its integrations.",
+        "source": "asdg/docs/images/distribution-flow.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/01-README.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/CODEX-PROMPT.md",
+    "sha256": "9a657d04518580ec3ea13e5b9c61b81b57fb75ce84eac7e88f6f6a5205a5af60",
+    "figures": [],
+    "preview": "/tmp/asdg-install-preview/02-CODEX-PROMPT.png",
+    "inspection": "Prompt/instruction/reference page; linked installation diagram is authoritative; rendered text inspected."
+  },
+  {
+    "path": "asdg/README.md",
+    "sha256": "c958dd70a38ecb5477ee64327565983065e13810055a3aad3100640da74befe7",
+    "figures": [
+      {
+        "idea": "A verified ZIP carries one asdg folder into the developer's Git repository, where initialization creates local integrations and state.",
+        "source": "docs/images/distribution-flow.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/03-README.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/docs/client-integrations.md",
+    "sha256": "c20241e3e90b84f464b3dab1f09225543ed2999b1ed52aa9a505520805f885c9",
+    "figures": [
+      {
+        "idea": "Each skill's shared adapter template is copied for Codex and rendered for Claude; both load the same canonical skill, and both clients read the same AGENTS.md bootstrap.",
+        "source": "images/client-integrations.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/04-client-integrations.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/docs/distribution-build.md",
+    "sha256": "f330a510b3ff703fb2e5794276e8af95b670af5ea8ef21ecd66ea3a02f7849a1",
+    "figures": [
+      {
+        "idea": "The provider selects portable files, validates hashes and builds a ZIP; the client extracts it and initializes local integrations and state.",
+        "source": "images/distribution-flow.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/05-distribution-build.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/docs/install-clone-prompt.md",
+    "sha256": "c26fc03c4ab0a32076d74d8aabe4d2b9fea549f02e10b4f816d6694bbacb579e",
+    "figures": [],
+    "preview": "/tmp/asdg-install-preview/06-install-clone-prompt.png",
+    "inspection": "Prompt/instruction/reference page; linked installation diagram is authoritative; rendered text inspected."
+  },
+  {
+    "path": "asdg/docs/install-zip-prompt.md",
+    "sha256": "dd20f275b60af342860dd0242b4843280cc2b04b91e11dead0964b828caaafbc",
+    "figures": [],
+    "preview": "/tmp/asdg-install-preview/07-install-zip-prompt.png",
+    "inspection": "Prompt/instruction/reference page; linked installation diagram is authoritative; rendered text inspected."
+  },
+  {
+    "path": "asdg/docs/installation.md",
+    "sha256": "fa357979bc22fe882646c687842f9691c91b7b82bc0ab291d6084a8b9c6d7971",
+    "figures": [
+      {
+        "idea": "Both acquisitions use one integrity, approval and verification engine; Context requires separate consent.",
+        "source": "images/installation-engine.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/08-installation.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/scripts/lib/cli.md",
+    "sha256": "94c7dbaabc85a20ab82f5d8790d895220e55cd53b119727325bfe0a64f65b743",
+    "figures": [
+      {
+        "idea": "Command-line arguments \u2192 Parser and dispatcher \u2192 Owned operation + exit status",
+        "source": "images/cli-flow.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/09-cli.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/scripts/lib/cli_files.md",
+    "sha256": "15ff930dbb0167ec28e903716f414e65613d46045b3fc28c6ee2d29f0503accb",
+    "figures": [
+      {
+        "idea": "Initializer change requests \u2192 Change plans + preflight \u2192 Filesystem / rollback",
+        "source": "images/cli_files-flow.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/10-cli_files.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/scripts/lib/cli_install.md",
+    "sha256": "47d8d5ebc40b07c01449de21d460b08c25098eb011765e6d5b2fbed8b04db44a",
+    "figures": [
+      {
+        "idea": "Both acquisitions use one integrity, approval and verification engine; Context requires separate consent.",
+        "source": "../../docs/images/installation-engine.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/11-cli_install.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/scripts/lib/cli_install_source.md",
+    "sha256": "4e77532c3320e66f3d271731979158dbf7126343298c4361aa90c07662cb903e",
+    "figures": [
+      {
+        "idea": "Both acquisitions use one integrity, approval and verification engine; Context requires separate consent.",
+        "source": "../../docs/images/installation-engine.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/12-cli_install_source.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/scripts/lib/cli_project.md",
+    "sha256": "c5755e918f903b71206f6e07e0008ee81a65a7a11684072fad86ca16cd3cea87",
+    "figures": [
+      {
+        "idea": "Embedded package + existing project \u2192 Preflight and change planning \u2192 Local integration or inspection report",
+        "source": "images/cli_project-flow.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/13-cli_project.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/skills/asdg-init/SKILL.md",
+    "sha256": "ac8c15c3e9e3f060ca38c0170fa8ccfadd824d3c05c15073807c9415eee76ca8",
+    "figures": [],
+    "preview": "/tmp/asdg-install-preview/14-SKILL.png",
+    "inspection": "Prompt/instruction/reference page; linked installation diagram is authoritative; rendered text inspected."
+  },
+  {
+    "path": "asdg/tests/continuation_fixture.md",
+    "sha256": "be6295e28ebd578ac49ed5a897c19c950646bef2971ae1f31aae989d2c383bdf",
+    "figures": [
+      {
+        "idea": "New destination + scenario \u2192 Copy, initialize and seed \u2192 Disposable client fixture",
+        "source": "images/continuation_fixture-flow.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/15-continuation_fixture.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/tests/test_distribution.md",
+    "sha256": "737877d7cc557ffd2d5ce657459726374d223846cd22f09cd60b3fb44f542cbd",
+    "figures": [
+      {
+        "idea": "The tests follow the provider-to-ZIP-to-client installation path.",
+        "source": "../docs/images/distribution-flow.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/16-test_distribution.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/tests/test_install.md",
+    "sha256": "1ff51cc9b90be982215df0f7789b3303891bf39176c6569ca6f479e1a1b9c80c",
+    "figures": [
+      {
+        "idea": "Both acquisitions use one integrity, approval and verification engine; Context requires separate consent.",
+        "source": "../docs/images/installation-engine.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/17-test_install.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/tests/test_portable.md",
+    "sha256": "00f47048a03b4fd52d2010419d6813796f8ef6051e072a28f9c906f457f87614",
+    "figures": [
+      {
+        "idea": "Disposable inputs \u2192 PortableTests \u2192 Assertions and test result",
+        "source": "images/test_portable-flow.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/18-test_portable.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "asdg/tests/test_sync.md",
+    "sha256": "6f0653897457d982fea3fb68bbf3ba608d0be0fb144786a694772f008e78c4a6",
+    "figures": [
+      {
+        "idea": "Tests exercise comparison, preview and explicit application while preserving client-owned areas.",
+        "source": "../docs/images/synchronization.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/19-test_sync.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  },
+  {
+    "path": "docs/asdg/07-planning/02.4-review-installation-paths.md",
+    "sha256": "2d799a04a5b583469f257246ca73b7cd972efbde413a8b3d121753c7ff0884d3",
+    "figures": [
+      {
+        "idea": "Both acquisitions share package verification, exact-plan approval, rollback and completion; Context needs a second affirmative response.",
+        "source": "../../../asdg/docs/images/installation-engine.svg"
+      }
+    ],
+    "preview": "/tmp/asdg-install-preview/20-02.4-review-installation-paths.png",
+    "inspection": "Readable at 1100px browser width; diagram labels and table/code wrapping checked."
+  }
+]

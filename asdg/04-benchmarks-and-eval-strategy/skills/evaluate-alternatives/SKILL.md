@@ -1,26 +1,31 @@
 ---
 name: asdg-evaluate-alternatives
-description: "Benchmark and Test Strategy Agent: evaluate alternatives, in read-only evaluation."
+description: "Benchmark and Test Strategy Agent: evaluate alternatives, with project-documentation authoring."
 ---
 
 # Evaluate Alternatives
 
 Owner: `ASDG-04`; [entry point](../../AGENTS.md); [contract](../../types/contract.md).
-Instruction-only evaluation procedure. It does not activate a role or grant write permission.
+Evaluation and documentation procedure. It does not activate a role or grant application execution authority.
 Read the owner's contract and shared runtime rules before applying this procedure.
 A non-owning caller may inspect the method, but must not use it to bypass role boundaries.
 
 ## Procedure
 
-1. Identify existing products, integrations, custom options and human-supplied alternatives.
-2. Define comparable input material, quality thresholds, cost and execution measures.
-3. Separate system alternatives from component-level comparisons and untested predictions.
-4. Return an evaluation protocol and evidence-based comparison; building is not the assumed winner.
+1. Read the supplied strategy and project evidence first; preserve the human's selected direction and distinguish supporting proposals. Identify existing products, integrations, custom options and human-supplied alternatives.
+2. Explain the overall evaluation approach before detailed protocols. Define criteria using observable success, failure examples and required evidence; separate test validity, feature quality and user benefit.
+3. Keep proposed numerical thresholds and case-specific procedures separate from enduring criteria; identify accepted targets, unknowns and human decisions explicitly.
+4. Separate system alternatives from component-level comparisons and untested predictions.
+5. Return an evaluation protocol and evidence-based comparison; building is not the assumed winner.
 
 ## Output and checks
 
 Use the owner's output contract and identify facts, assumptions and unavailable evidence.
+Use project-appropriate diagrams for the evaluation flow, comparison boundary and scoring logic; do not copy another project's test methods or metrics.
 Do not claim tests, review, routing or implementation happened unless observed.
-In this evaluation, return the result in the conversation; no writes or external actions.
+Save substantive documentation under the client's `docs/` and return its links; no application execution or external actions follow from authoring.
 Out-of-scope work returns to the coordinator; missing prerequisites are reported as blocked.
 This YAML-first file records AI modification, not whole-file human approval.
+
+Before declaring a substantive Markdown deliverable complete, identify its embedded explanatory visual, the idea it conveys and the rendering check performed; missing or uninspected visuals must be reported as a documentation gap.
+An ordinary criteria table, status table or decorative image does not replace a diagram of behavior, relationships or evidence; navigation-only pages and immutable source archives retain the shared exceptions.

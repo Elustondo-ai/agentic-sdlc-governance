@@ -1,0 +1,40 @@
+# Roles, Concerns, Focus and Skills
+Proposal for ASDG methodology • 27 October 2026 • not an implemented workflow or accepted decision.
+
+ASDG should let a person ask “look at Cost” without losing the specialist responsible for the work.
+Keep the role stable, share concern knowledge across roles, and use Focus to direct attention temporarily.
+Skills remain reusable methods that apply the current role, concern and task context.
+
+![Role remains stable while Focus selects a Concern and a Skill produces evidence.](images/model.svg)
+
+## Recommended direction
+
+**Role is responsibility. Concern is what matters. Focus is current attention. Skill is how we do the work.**
+A chat hosts a conversation; an agent performs work. Neither is a new lifecycle stage.
+An architect examining Data remains an architect. A second architect may investigate Data while the first integrates the overall design.
+Use one public Focus skill, a small shared concern library and optional local enrichments. Avoid a role-by-concern menu or a new agent for every concern.
+Begin with same-chat focus. Introduce parallel investigation only when useful and explicitly authorized.
+
+## Read in this order
+
+| Document | What it resolves |
+| --- | --- |
+| [Comparison](01-comparison.md) | Why compose these concepts rather than multiply roles? |
+| [Twelve concerns](02-concerns.md) | Business-readable vocabulary and boundaries. |
+| [Conversation behavior](03-focus-behavior.md) | Natural language, temporary focus and deliberate role changes. |
+| [Skills and specialization](04-skill-composition.md) | Shared methods, optional enrichment and conflict handling. |
+| [Session contract](05-session-contract.md) | Retention, failure recovery, titles and authority. |
+| [Collaboration](06-collaboration.md) | One architect or several, with clear integration ownership. |
+| [Across the lifecycle](07-role-perspectives.md) | How all twelve roles examine the same concern. |
+| [Cost example](08-cost-example.md) | A practical worked example without invented measurements. |
+| [Adoption and tests](09-adoption-and-tests.md) | Bounded increments and observable acceptance. |
+| [Keep role-only Focus](10-option-role-only.md) | Lowest-change alternative. |
+| [Create concern-specific roles](11-option-specialist-grid.md) | Strong isolation with substantial duplication. |
+| [Compose role and concern](12-option-composition.md) | Recommended architecture and its costs. |
+
+## Decision for tomorrow
+
+The user endorsed the vocabulary and asked for a complete strategy; the mechanisms below remain recommendations.
+Review the separation of role and concern, the switching safeguard, and the initial Data/Security/Cost pilot.
+No runtime skill, role catalogue, team chat, application behavior or lifecycle approval is changed by this proposal.
+The originating client's review is `docs/asdg/07-planning/02.6-review-concern-strategy.md` in Speaker Coach at the source commit recorded in distribution metadata; it is historical evidence, not a portable dependency.

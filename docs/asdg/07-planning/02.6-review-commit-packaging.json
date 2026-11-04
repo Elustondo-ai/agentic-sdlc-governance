@@ -1,0 +1,85 @@
+{
+  "recorded_at": "2026-11-04T18:58:38.257934+00:00",
+  "requester": "Pablo",
+  "role": "ASDG Admin",
+  "acting_agent": "Codex",
+  "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+  "starting_head": "7c5d0ca3869ca2bf6472ac7a408b809dc4823cf9",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "41445970717bff705b562e85884a149113272313443aabd01db2813c28411fa8",
+      "sha256": "2fd68d293dfb649d229a98abc669ec434e26591baaa5313039210fb7b6dc0280"
+    },
+    {
+      "path": "asdg/docs/distribution-build.md",
+      "before_sha256": "f330a510b3ff703fb2e5794276e8af95b670af5ea8ef21ecd66ea3a02f7849a1",
+      "sha256": "8238dd4c9ab946b7fea418c238bb855eecb9bbcb1f0393fa508b7cf79b5c97aa"
+    },
+    {
+      "path": "scripts/prepare_commit.py",
+      "before_sha256": null,
+      "sha256": "320e7abd2cba7f513f7e4f147774267335b23d192fc2fd9214ef04cbed9aa4dd"
+    },
+    {
+      "path": "scripts/prepare_commit.md",
+      "before_sha256": null,
+      "sha256": "e6d77783aa8b9226d9691138ba32fe8cccd7c60669e928d2c769dc2fd0870308"
+    },
+    {
+      "path": "scripts/tests/test_prepare_commit.py",
+      "before_sha256": null,
+      "sha256": "d458c249ffb64a2a48862f67588835d497a8c21fe56cc0333a338dfaa013532e"
+    },
+    {
+      "path": "scripts/tests/test_prepare_commit.md",
+      "before_sha256": null,
+      "sha256": "65055a76ef55aca2e4167515b42187c579997a7a0abb3b056a19d239cec9f1c8"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.6-review-commit-packaging.md",
+      "before_sha256": null,
+      "sha256": "2a09b31aaac35993394d6d813e6bf1f9e31d3888a6b088c412985cdb8f73a7da"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "9e7e7ffcf5b0972a62be950022f6f842c263956d4f677336d060b8f4b1d3cfb3",
+      "sha256": "664ab40c12f769199fefb298fd72c0c80c8fb323e6555c634bf0c7919c3ffd03"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "89e98d9fc074aee8e097b38629d2dcc5447704ea47856d97acd7be5ebaa2f01f",
+      "sha256": "575628441d7f7c4f66c06f346a2545f290bd22d70c41f440978c2a3528eeb308"
+    }
+  ],
+  "self_inventory": "docs/asdg/07-planning/02.6-review-commit-packaging.json (new; self hash omitted)",
+  "preserved_events": 1844,
+  "appended_events": 7,
+  "verification": {
+    "provider_tests": "3 passed",
+    "portable_regression_tests": "128 passed",
+    "python": "3.15.0",
+    "actual_wrapper_from_unrelated_cwd": "PASS",
+    "package_integrity": "PASS",
+    "python39_syntax": "PASS",
+    "first_test_run": "Failed: unresolved macOS temporary directory alias in test fixture; fixture resolved and suite rerun successfully.",
+    "git_hooks_installed": false,
+    "committed": false,
+    "pushed": false,
+    "published": false
+  },
+  "artifacts": [
+    {
+      "path": "build/distributions/asdg-0.3.0-pilot.1.zip",
+      "sha256": "85d95bcdf0ac514f412914c82c95492f673579edc39851af839a479f2759dca8",
+      "ignored": true
+    },
+    {
+      "path": "build/distributions/asdg-0.3.0-pilot.1.zip.sha256",
+      "sha256": "1ec97eb3b44fed98c9193074f86a745cef079b1d42da00ad8dac8bae81bae8a1",
+      "ignored": true
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "baseline": "Shared 0.2.0-pilot.2 delivery manifest",
+  "source_repository": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach",
+  "target_repository": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance",
+  "source_head": "f0388497ac781e12631dc573b3a300100c056162",
+  "target_head": "7c5d0ca3869ca2bf6472ac7a408b809dc4823cf9",
+  "target_kind": "uncommitted working snapshot after bounded fixes and review receipts",
+  "files": [
+    {
+      "id": 1,
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "baseline_sha256": "cc9394ed52b09c1c614a0fc459da121f68a71d3672f5df698e428642c6071de7",
+      "source_sha256": "6c57ab0e602c376e9fbc74c1de83b42cf24bc184e25abd4ba6d1b2eacfeab09d",
+      "target_at_review_start_sha256": "a0a119cab944e3ebbec2e5a3048456cecfc80d7eb08c5f73f2c7dc86c40ae708",
+      "baseline_status": "RECOVERED",
+      "baseline_provenance": {
+        "repository": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach",
+        "git_blob": "426b3b537786ba5030a71c63905480418fb0807a"
+      },
+      "target_sha256": "27e0e80d43ef35d5546b5b06bce80cdc61735323eb156f18fe97950e51a59336",
+      "diff": "01.diff",
+      "decision": "PROPOSED; not applied",
+      "baseline_snapshot": "01.baseline.txt",
+      "history": {
+        "baseline_events": 673,
+        "source_events": 1379,
+        "target_events_at_review_start": 1804,
+        "target_events_now": 1818,
+        "source_exact_prefix_of_target": true,
+        "baseline_exact_prefix_of_source": true,
+        "missing_source_event_occurrences": 0,
+        "preserved_prior_target_events": 1804
+      }
+    },
+    {
+      "id": 2,
+      "path": "asdg/AGENTS.md",
+      "baseline_sha256": "81976234383a2a00516d05dbb393f3a07f0f99e600d08fc299dc1b528b75c78a",
+      "source_sha256": "02b0bb7700c1f77dc76faef28d28de48c82ad2a6624daa2a7bc44b27f65c04d8",
+      "target_at_review_start_sha256": "258ed27bf25900bb72f12ef67ed29ce7fe63eb2d7d54be612719fb327b20ed9c",
+      "baseline_status": "RECOVERED",
+      "baseline_provenance": {
+        "repository": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach",
+        "git_blob": "e4ca2bb484e0ece2e64e98644f4b77224a23fa1c"
+      },
+      "target_sha256": "258ed27bf25900bb72f12ef67ed29ce7fe63eb2d7d54be612719fb327b20ed9c",
+      "diff": "02.diff",
+      "decision": "PROPOSED; not applied",
+      "baseline_snapshot": "02.baseline.txt"
+    },
+    {
+      "id": 3,
+      "path": "asdg/README.md",
+      "baseline_sha256": "8b0fe6ef3980d44afcf5a005bdb4c1051f0e05b6a804062c1baf030ec68c3001",
+      "source_sha256": "167e7b8abd3354ee224fc4a2f4b45690af25033ad8a7ee2235ff59f425c81949",
+      "target_at_review_start_sha256": "a0d0f1bfd1221c0a92c91ca51f4d84417f216ab83077f0e6a7dda2a370bdd587",
+      "baseline_status": "RECOVERED",
+      "baseline_provenance": {
+        "repository": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach",
+        "git_blob": "b1aed63977517c1611f88b67af95a7f395dee914"
+      },
+      "target_sha256": "a0d0f1bfd1221c0a92c91ca51f4d84417f216ab83077f0e6a7dda2a370bdd587",
+      "diff": "03.diff",
+      "decision": "PROPOSED; not applied",
+      "baseline_snapshot": "03.baseline.txt"
+    },
+    {
+      "id": 4,
+      "path": "asdg/docs/installation.md",
+      "baseline_sha256": "fe1a12593dc4f13f8b181f18aedfeea7ecea85414e0048a6595d32741e97db67",
+      "source_sha256": "48b08b46a2d50d05d7e55b28d02ba67ca2fab3bc50d6d76452a918f89f0ccf9d",
+      "target_at_review_start_sha256": "d31abd33c905e3aa0e3680b3bdee3a0fee573180cd1deb87b76b47ce83dd496c",
+      "baseline_status": "RECOVERED",
+      "baseline_provenance": {
+        "repository": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach",
+        "git_blob": "6a904f3d7736e8f719330f05252d0d7137c9adb7"
+      },
+      "target_sha256": "d31abd33c905e3aa0e3680b3bdee3a0fee573180cd1deb87b76b47ce83dd496c",
+      "diff": "04.diff",
+      "decision": "PROPOSED; not applied",
+      "baseline_snapshot": "04.baseline.txt"
+    },
+    {
+      "id": 5,
+      "path": "asdg/docs/proposals/roles-concerns-and-focus/README.md",
+      "baseline_sha256": null,
+      "source_sha256": "71d98dd01ed172c2a6cc7f6439514ba31ca5899de444f3ed9c480e9a79f2410a",
+      "target_at_review_start_sha256": "06a489d7c5d942741061392f7e569ca4c5d63e252f08831d7db08c5c658150d0",
+      "baseline_status": "ABSENT",
+      "baseline_provenance": {},
+      "target_sha256": "06a489d7c5d942741061392f7e569ca4c5d63e252f08831d7db08c5c658150d0",
+      "diff": "05.diff",
+      "decision": "PROPOSED; not applied"
+    },
+    {
+      "id": 6,
+      "path": "asdg/docs/review-loop.md",
+      "baseline_sha256": "31fb62fd9613e12f869affd89bb1d8d88bc12b122aef00316416914f44a871b5",
+      "source_sha256": "ee933399f03785b213b425209d3cdeff07fb872a59d5a2f2f8312debd652e6b3",
+      "target_at_review_start_sha256": "084850aa9cd80bf37761d70ed26fb9c57880a59f905a4dc02641b5860b7501c1",
+      "baseline_status": "RECOVERED",
+      "baseline_provenance": {
+        "repository": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach",
+        "git_blob": "1a00ed372d5c74ba75c1f512066c7216b2c464c1"
+      },
+      "target_sha256": "084850aa9cd80bf37761d70ed26fb9c57880a59f905a4dc02641b5860b7501c1",
+      "diff": "06.diff",
+      "decision": "PROPOSED; not applied",
+      "baseline_snapshot": "06.baseline.txt"
+    },
+    {
+      "id": 7,
+      "path": "asdg/scripts/README.md",
+      "baseline_sha256": "6f8de8bb3871a830979c5d3454fb411721ecc7516d6fe423b447117622f062ac",
+      "source_sha256": "c3ba313e23d371af9f583dc1c895cfda2d6e23f5b41428d5f714bc1d492f2652",
+      "target_at_review_start_sha256": "7ad3a5a1b51c245c9edce944913beab0fe0d5b3de3a0cb81e44102ddba6ac3d8",
+      "baseline_status": "RECOVERED",
+      "baseline_provenance": {
+        "repository": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach",
+        "git_blob": "1731492542988fa6c614a2a2bb7dc8090ef8095a"
+      },
+      "target_sha256": "7ad3a5a1b51c245c9edce944913beab0fe0d5b3de3a0cb81e44102ddba6ac3d8",
+      "diff": "07.diff",
+      "decision": "PROPOSED; not applied",
+      "baseline_snapshot": "07.baseline.txt"
+    },
+    {
+      "id": 8,
+      "path": "asdg/scripts/check.md",
+      "baseline_sha256": null,
+      "source_sha256": "69521fb162f26998126cab85e88dbaeda5d015a6d676dd7ed4372723751b4746",
+      "target_at_review_start_sha256": "d02625e733e37c9ac43e959cf445d69af6a89c67de1e7717788eba3c7adf85bc",
+      "baseline_status": "ABSENT",
+      "baseline_provenance": {},
+      "target_sha256": "d02625e733e37c9ac43e959cf445d69af6a89c67de1e7717788eba3c7adf85bc",
+      "diff": "08.diff",
+      "decision": "PROPOSED; not applied"
+    },
+    {
+      "id": 9,
+      "path": "asdg/scripts/lib/README.md",
+      "baseline_sha256": "0b3fc52f9fa327553c63c14a2c00a4e96347adbb5f01aa672b03e274adcff35c",
+      "source_sha256": "db9f1f6d28da56faf9127b6c69a3ab69cf7380060446e0f15ee907fa95688ed2",
+      "target_at_review_start_sha256": "d04ff4757b94beaf1f1042b6e1c0e529c2896ca785e4a88fff37f7cb9a67cca5",
+      "baseline_status": "RECOVERED",
+      "baseline_provenance": {
+        "repository": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach",
+        "git_blob": "5d717884aea08a15070761de6f418cfea67d2a2e"
+      },
+      "target_sha256": "d04ff4757b94beaf1f1042b6e1c0e529c2896ca785e4a88fff37f7cb9a67cca5",
+      "diff": "09.diff",
+      "decision": "PROPOSED; not applied",
+      "baseline_snapshot": "09.baseline.txt"
+    },
+    {
+      "id": 10,
+      "path": "asdg/scripts/lib/cli.md",
+      "baseline_sha256": null,
+      "source_sha256": "3442bc005b789da81b7ec893162e1674434a84421b811d6db235e4cfaa73efe3",
+      "target_at_review_start_sha256": "37d0b0458f557de85fb7ec84eb07e3af706893993aa96964eccdde662832fe1a",
+      "baseline_status": "ABSENT",
+      "baseline_provenance": {},
+      "target_sha256": "37d0b0458f557de85fb7ec84eb07e3af706893993aa96964eccdde662832fe1a",
+      "diff": "10.diff",
+      "decision": "PROPOSED; not applied"
+    },
+    {
+      "id": 11,
+      "path": "asdg/scripts/lib/cli.py",
+      "baseline_sha256": "b32f51bf3a16edcf231c4d0bc52f205574e8cf1393f4f11cb4858b66cfa1f8e7",
+      "source_sha256": "233ee333723651fa3d2ae91941b7139db11a33ea7f8c40ab73d81956c95f8774",
+      "target_at_review_start_sha256": "e27c60e59fdfac795f6e6a0246972a39de2f2d79f9b39aa3dedab112c76a29fe",
+      "baseline_status": "RECOVERED",
+      "baseline_provenance": {
+        "repository": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach",
+        "git_blob": "b46f374df70b4604970a218bdd31e850ddbf2bf0"
+      },
+      "target_sha256": "e27c60e59fdfac795f6e6a0246972a39de2f2d79f9b39aa3dedab112c76a29fe",
+      "diff": "11.diff",
+      "decision": "PROPOSED; not applied",
+      "baseline_snapshot": "11.baseline.txt"
+    },
+    {
+      "id": 12,
+      "path": "asdg/scripts/lib/cli_files.md",
+      "baseline_sha256": null,
+      "source_sha256": "ea20ad3337a80a81d6ca826baf16cae7f0847ca5e6f431d6c3e51562681ab4eb",
+      "target_at_review_start_sha256": "5fa9e3f1da05435479a843e91d02223c45a7034bcb0b18b12514cbbdf712beb2",
+      "baseline_status": "ABSENT",
+      "baseline_provenance": {},
+      "target_sha256": "06224a3034c874a9792acca3403a1c66b268ef361f953ef5675db1dc3f227356",
+      "diff": "12.diff",
+      "decision": "PROPOSED; not applied"
+    },
+    {
+      "id": 13,
+      "path": "asdg/scripts/lib/cli_model.md",
+      "baseline_sha256": null,
+      "source_sha256": "d6ec9c05d33f9e131a6525cab65e98d12a01887b276515186c5ac1f1e3dc2831",
+      "target_at_review_start_sha256": "9f7a950f2f2fc2b50b1b719959da6d816acce27bab61ec43b4958adde876a7ae",
+      "baseline_status": "ABSENT",
+      "baseline_provenance": {},
+      "target_sha256": "9f7a950f2f2fc2b50b1b719959da6d816acce27bab61ec43b4958adde876a7ae",
+      "diff": "13.diff",
+      "decision": "PROPOSED; not applied"
+    },
+    {
+      "id": 14,
+      "path": "asdg/scripts/lib/cli_project.md",
+      "baseline_sha256": null,
+      "source_sha256": "f0829ffbb23ff9c02a43365169e0d7a1c9f35c9d41e1a6a6e397fd4e04044c60",
+      "target_at_review_start_sha256": "fd1de63e541e2bf92ca878509729ec0ee3a65e8111423db5b84bd24efe148008",
+      "baseline_status": "ABSENT",
+      "baseline_provenance": {},
+      "target_sha256": "fd1de63e541e2bf92ca878509729ec0ee3a65e8111423db5b84bd24efe148008",
+      "diff": "14.diff",
+      "decision": "PROPOSED; not applied"
+    },
+    {
+      "id": 15,
+      "path": "asdg/scripts/lib/cli_project.py",
+      "baseline_sha256": "95c7165df9d51896ab7b66fb28c29ca6d2d1b85992606a6b27afee5e0e9c10d8",
+      "source_sha256": "43473b750b8f313ee2d1f08af7fbf6c6a95de737f004f9a092a9e3c25b81836a",
+      "target_at_review_start_sha256": "75ec1ad5d1625db9116d7b789e7ca0fe530af6918952680408296cc5cea20e50",
+      "baseline_status": "RECOVERED",
+      "baseline_provenance": {
+        "repository": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach",
+        "git_blob": "7b3ca3eb8116fe431e988de48faaa70f5f67e700"
+      },
+      "target_sha256": "75ec1ad5d1625db9116d7b789e7ca0fe530af6918952680408296cc5cea20e50",
+      "diff": "15.diff",
+      "decision": "PROPOSED; not applied",
+      "baseline_snapshot": "15.baseline.txt"
+    },
+    {
+      "id": 16,
+      "path": "asdg/tests/README.md",
+      "baseline_sha256": null,
+      "source_sha256": "44b23c5b7f5377ad8f6a6faf3bd41f6637a717fc36ad4a3545428379ad4c20e7",
+      "target_at_review_start_sha256": "21253c771c9ac0edfc4018d7e0a1f9ad4a1319fa9577b81d9f3ab3f93eeffef9",
+      "baseline_status": "ABSENT",
+      "baseline_provenance": {},
+      "target_sha256": "21253c771c9ac0edfc4018d7e0a1f9ad4a1319fa9577b81d9f3ab3f93eeffef9",
+      "diff": "16.diff",
+      "decision": "PROPOSED; not applied"
+    },
+    {
+      "id": 17,
+      "path": "asdg/tests/test_portable-cases.md",
+      "baseline_sha256": null,
+      "source_sha256": "81133d430ab2b55804f7c994d54ccade89efea04fe6e4e539adee909e1e3a319",
+      "target_at_review_start_sha256": "cb278d42092428572b4ab834855de75afdabb4a73cff0708294876f34f079cfa",
+      "baseline_status": "ABSENT",
+      "baseline_provenance": {},
+      "target_sha256": "cb278d42092428572b4ab834855de75afdabb4a73cff0708294876f34f079cfa",
+      "diff": "17.diff",
+      "decision": "PROPOSED; not applied"
+    },
+    {
+      "id": 18,
+      "path": "asdg/tests/test_portable.md",
+      "baseline_sha256": null,
+      "source_sha256": "3a121f805c64d3b8ba5e258396a1c4507f564969004e6466b489db4cd34db41f",
+      "target_at_review_start_sha256": "2cbd18688ee93a031e75791b1c5d3b2b4c36c234548064870abb21a0542808e3",
+      "baseline_status": "ABSENT",
+      "baseline_provenance": {},
+      "target_sha256": "2cbd18688ee93a031e75791b1c5d3b2b4c36c234548064870abb21a0542808e3",
+      "diff": "18.diff",
+      "decision": "PROPOSED; not applied"
+    },
+    {
+      "id": 19,
+      "path": "asdg/tests/test_portable.py",
+      "baseline_sha256": "82f894c4a1af54a7144a9f112ce801eb3e9ad5674c09229e188a8a75faddcbe0",
+      "source_sha256": "6166b4d5013bb2abf159a2b5f5472960cec09687b8c82d12fba5ba9b3b9810c4",
+      "target_at_review_start_sha256": "0cd0f74c0265edf5b031df7d8c571ba45fd4c66668a7478db49076fae786a8a6",
+      "baseline_status": "RECOVERED",
+      "baseline_provenance": {
+        "repository": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach",
+        "git_blob": "13501b48a3f2bafa175cb6613217d34e047d0ac6"
+      },
+      "target_sha256": "0cd0f74c0265edf5b031df7d8c571ba45fd4c66668a7478db49076fae786a8a6",
+      "diff": "19.diff",
+      "decision": "PROPOSED; not applied",
+      "baseline_snapshot": "19.baseline.txt",
+      "pilot_tests_preserved": {
+        "source_count": 59,
+        "target_count": 59,
+        "missing": []
+      }
+    }
+  ]
+}

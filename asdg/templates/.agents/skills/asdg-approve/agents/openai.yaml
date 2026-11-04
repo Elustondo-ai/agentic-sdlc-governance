@@ -1,0 +1,6 @@
+interface:
+  display_name: "ASDG approve"
+  short_description: "Approve the current reviewed documentation baseline"
+  default_prompt: "Use $asdg-approve to accept the reviewed documentation baseline currently awaiting my approval."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,120 @@
+# asdg/scripts/lib/cli_files.md
+# Baseline status: ABSENT
+# SHA256 baseline: None
+# SHA256 source: ea20ad3337a80a81d6ca826baf16cae7f0847ca5e6f431d6c3e51562681ab4eb
+# SHA256 target: 06224a3034c874a9792acca3403a1c66b268ef361f953ef5675db1dc3f227356
+
+## baseline-to-source
+--- baseline/asdg/scripts/lib/cli_files.md
++++ source/asdg/scripts/lib/cli_files.md
+@@ -0,0 +1,33 @@
++# Conservative file transactions
++
++[Source: cli_files.py](cli_files.py)
++
++Lets initialization prepare a group of file changes, detect conflicts before writing, and undo its own writes after ordinary failures.
++
++## Responsibilities and collaborators
++
++Owns managed-path checks, bounded reads, immutable change plans and local file replacement.
++
++![Initializer change requests → Change plans + preflight → Filesystem / rollback](images/cli_files-flow.svg)
++
++Works directly with the standard library and filesystem; callers retain ownership of scope and authorization.
++
++## Interface and data
++
++`Conflict(ValueError)` reports unsafe or conflicting resources. Frozen `Change` carries root:Path, relative:Path, before:bytes|None, after:bytes and mode:int; its path property validates the destination.
++
++| Callable or interface | Contract |
++| --- | --- |
++| `safe_path(root: Path, relative: str \| Path) -> Path` | Returns a Path after rejecting absolute/traversing relative names, symlinks and invalid intermediate directories. |
++| `read_bytes(path: Path) -> bytes \| None` | Returns file bytes or None when absent; rejects non-files and files above 4 MiB. |
++| `plan(root: Path, relative: str \| Path, data: bytes, *, replace: bool=False, mode: int=420) -> Change \| None` | Returns Change or None for identical bytes. Existing content requires replace=True; existing permissions are retained. |
++| `atomic_replace(path: Path, data: bytes, mode: int) -> None` | Writes and fsyncs a temporary file, applies mode and atomically replaces the destination. |
++| `apply(changes: list[Change]) -> list[str]` | Preflights before-bytes, creates directories, applies changes and returns written absolute paths; rolls back only its own unchanged results on failure. |
++
++## Effects and failure behavior
++
++Raises Conflict or filesystem errors. Atomic replacement is per file; the group is not crash-safe or protected against hostile concurrent writers. Callers must have write authorization.
++
++## Example
++
++Use `plan(root, 'notes.md', b'# Notes\n')`; pass its non-None result to `apply([change])`.
+
+## baseline-to-target
+--- baseline/asdg/scripts/lib/cli_files.md
++++ target/asdg/scripts/lib/cli_files.md
+@@ -0,0 +1,34 @@
++# Conservative file transactions
++
++[Source: cli_files.py](cli_files.py)
++
++Lets initialization and synchronization prepare file changes, detect conflicts before writing, and undo their own writes after ordinary failures.
++
++## Responsibilities and collaborators
++
++Owns managed-path checks, bounded reads, immutable change plans and local file replacement.
++
++![Initializer change requests → Change plans + preflight → Filesystem / rollback](images/cli_files-flow.svg)
++
++Works directly with the standard library and filesystem; callers retain ownership of scope and authorization.
++
++## Interface and data
++
++`Conflict(ValueError)` reports unsafe or conflicting resources. Frozen `Change` carries root:Path, relative:Path, before:bytes|None, after:bytes|None and mode:int; its path property validates the destination. An absent after value requests deletion.
++
++| Callable or interface | Contract |
++| --- | --- |
++| `safe_path(root: Path, relative: str \| Path) -> Path` | Returns a Path after rejecting absolute/traversing relative names, symlinks and invalid intermediate directories. |
++| `read_bytes(path: Path) -> bytes \| None` | Returns file bytes or None when absent; rejects non-files and files above 4 MiB. |
++| `plan(root: Path, relative: str \| Path, data: bytes \| None, *, replace: bool=False, mode: int=420) -> Change \| None` | Returns Change or None for identical bytes. None plans deletion; existing content requires replace=True; existing permissions are retained. |
++| `atomic_replace(path: Path, data: bytes, mode: int) -> None` | Writes and fsyncs a temporary file, applies mode and atomically replaces the destination. |
++| `apply(changes: list[Change]) -> list[str]` | Preflights before-bytes, creates directories and returns written paths; rollback removes its exclusively created inode even after a partial write, preserves replacement inodes, and restores its own unchanged replacements/deletions. |
++
++## Effects and failure behavior
++
++Raises Conflict or filesystem errors. Deletions are preflighted and restored on ordinary rollback if still absent. Atomic replacement is per file; the group is not crash-safe or protected against hostile concurrent writers. Callers must have write authorization.
++New files are identified by device/inode immediately after exclusive creation. Stream setup failures close the descriptor; interrupted writes remove the owned partial file and roll back earlier changes. A different inode at the same path is preserved; same-inode concurrent edits remain outside the transaction guarantee.
++
++## Example
++
++Use `plan(root, 'notes.md', b'# Notes\n')`; pass its non-None result to `apply([change])`.
+
+## source-to-target
+--- source/asdg/scripts/lib/cli_files.md
++++ target/asdg/scripts/lib/cli_files.md
+@@ -2,7 +2,7 @@
+ 
+ [Source: cli_files.py](cli_files.py)
+ 
+-Lets initialization prepare a group of file changes, detect conflicts before writing, and undo its own writes after ordinary failures.
++Lets initialization and synchronization prepare file changes, detect conflicts before writing, and undo their own writes after ordinary failures.
+ 
+ ## Responsibilities and collaborators
+ 
+@@ -14,19 +14,20 @@
+ 
+ ## Interface and data
+ 
+-`Conflict(ValueError)` reports unsafe or conflicting resources. Frozen `Change` carries root:Path, relative:Path, before:bytes|None, after:bytes and mode:int; its path property validates the destination.
++`Conflict(ValueError)` reports unsafe or conflicting resources. Frozen `Change` carries root:Path, relative:Path, before:bytes|None, after:bytes|None and mode:int; its path property validates the destination. An absent after value requests deletion.
+ 
+ | Callable or interface | Contract |
+ | --- | --- |
+ | `safe_path(root: Path, relative: str \| Path) -> Path` | Returns a Path after rejecting absolute/traversing relative names, symlinks and invalid intermediate directories. |
+ | `read_bytes(path: Path) -> bytes \| None` | Returns file bytes or None when absent; rejects non-files and files above 4 MiB. |
+-| `plan(root: Path, relative: str \| Path, data: bytes, *, replace: bool=False, mode: int=420) -> Change \| None` | Returns Change or None for identical bytes. Existing content requires replace=True; existing permissions are retained. |
++| `plan(root: Path, relative: str \| Path, data: bytes \| None, *, replace: bool=False, mode: int=420) -> Change \| None` | Returns Change or None for identical bytes. None plans deletion; existing content requires replace=True; existing permissions are retained. |
+ | `atomic_replace(path: Path, data: bytes, mode: int) -> None` | Writes and fsyncs a temporary file, applies mode and atomically replaces the destination. |
+-| `apply(changes: list[Change]) -> list[str]` | Preflights before-bytes, creates directories, applies changes and returns written absolute paths; rolls back only its own unchanged results on failure. |
++| `apply(changes: list[Change]) -> list[str]` | Preflights before-bytes, creates directories and returns written paths; rollback removes its exclusively created inode even after a partial write, preserves replacement inodes, and restores its own unchanged replacements/deletions. |
+ 
+ ## Effects and failure behavior
+ 
+-Raises Conflict or filesystem errors. Atomic replacement is per file; the group is not crash-safe or protected against hostile concurrent writers. Callers must have write authorization.
++Raises Conflict or filesystem errors. Deletions are preflighted and restored on ordinary rollback if still absent. Atomic replacement is per file; the group is not crash-safe or protected against hostile concurrent writers. Callers must have write authorization.
++New files are identified by device/inode immediately after exclusive creation. Stream setup failures close the descriptor; interrupted writes remove the owned partial file and roll back earlier changes. A different inode at the same path is preserved; same-inode concurrent edits remain outside the transaction guarantee.
+ 
+ ## Example
+ 

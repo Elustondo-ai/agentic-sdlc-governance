@@ -1,38 +1,44 @@
-# ASDG canonical implementation packages
+# ASDG — portable methodology
 
-Reusable methodology definitions live here; consuming projects own their state and results.
-The [catalogue](00-governance/types/agent-catalog.json) fixes stable identities and lifecycle order.
-00 is governance; 01–12 are the twelve stages from the [baseline](../docs/status/lifecycle-baseline.md).
+ASDG carries twelve lifecycle stages, specialist responsibilities, evidence rules and sprint controls inside your project.
+The canonical repository is [agentic-sdlc-governance](https://github.com/Elustondo-ai/agentic-sdlc-governance).
+This consolidated pilot is a review candidate; packaging does not establish human approval or native enforcement.
 
-| Stage | Role | Canonical definition |
-| --- | --- | --- |
-| 00 | ASDG-COORDINATOR | [ASDG Coordinator](00-governance/AGENTS.md) |
-| 01 | ASDG-01 | [Context and Domain Agent](01-context-and-domain-analysis/AGENTS.md) |
-| 02 | ASDG-02 | [Purpose Agent](02-purpose/AGENTS.md) |
-| 03 | ASDG-03 | [System Model and Use Cases Agent](03-system-model-and-use-cases/AGENTS.md) |
-| 04 | ASDG-04 | [Benchmark and Test Strategy Agent](04-benchmarks-test-strategy-and-success-criteria/AGENTS.md) |
-| 05 | ASDG-05 | [High-Level Architecture Agent](05-high-level-solution-design-and-architecture/AGENTS.md) |
-| 06 | ASDG-06 | [Viable POC Agent](06-viable-proof-of-concept/AGENTS.md) |
-| 07 | ASDG-07 | [Planning Agent](07-planning/AGENTS.md) |
-| 08 | ASDG-08 | [Low-Level Design Agent](08-low-level-design/AGENTS.md) |
-| 09 | ASDG-09 | [Build and Test Agent](09-build-and-test-cycle/AGENTS.md) |
-| 10 | ASDG-10 | [Document, Review and Release Agent](10-document-review-and-release/AGENTS.md) |
-| 11 | ASDG-11 | [Operational Reality, DevOps and User Acceptance Agent](11-operational-reality-devops-and-user-acceptance/AGENTS.md) |
-| 12 | ASDG-12 | [Observability, Insights and Learning Agent](12-observability-insights-and-learning/AGENTS.md) |
+![A verified ZIP carries one asdg folder into the developer's Git repository, where initialization creates local integrations and state.](docs/images/distribution-flow.svg)
 
-## Shared capabilities and runtime
+## Start
 
-- [Documentation](skills/asdg-documentation/SKILL.md): compact specialist-owned visual/notes units.
-- [Presentation](skills/asdg-presentation/SKILL.md): optional derived presentation exports.
-- [Component](skills/asdg-component/SKILL.md): software-component scaffolding, not agent roles.
-- [Runtime](00-governance/docs/runtime-contract.md): role activation, scope, evidence and gates.
-- [Baseline](00-governance/docs/baseline-capture.md): separate Codex processes loading role packages.
-Read-only native adapters remain under `.codex/agents/`; baseline processes do not activate them.
-Structural validity is not native execution, semantic correctness, approval or implementation authority.
+Extract the ZIP so your existing Git root contains `asdg/scripts/init.py` beside the application files.
+Python 3.9+ and Git are required. From that root, run:
 
-## Intended / Actual / Planned
+```sh
+python3 asdg/scripts/init.py --client codex --dry-run
+# After reviewing and explicitly approving that plan:
+python3 asdg/scripts/init.py --client codex --apply --plan TOKEN_FROM_PREVIEW
+python3 asdg/scripts/cli.py verify
+```
 
-All thirteen responsibilities use the [shared stage contract](00-governance/docs/stage-perspectives.md).
-Use the [stage mapping](00-governance/docs/stage-perspectives-map.md) and [snapshot template](00-governance/docs/stage-snapshot-template.md).
-Canonical identities and Purpose paths follow the catalogue; legacy identities exist only in migration records.
-These are project-state perspectives, not extra stages, role activations or grants of authority.
+Choose `codex`, `claude` or explicitly `both`; preview is the default and application requires the exact plan token.
+An existing canonical clone at an explicitly selected commit uses the same engine; see [installation](docs/installation.md).
+First setup records a new project without starting a sprint; use `--project-status defining` for an existing project.
+Repeat initialization preserves state and authored files. Conflicts stop setup; different versions require a reviewed upgrade.
+ZIP installs need no sibling checkout or global command. Review and trust Codex hooks separately in the native client.
+
+## Included
+
+Governance 00, stages 01–12, an explicit methodology Admin role, shared skills, client adapter templates,
+the initializer, deterministic status/evidence engine, sprint checks and activity recorder.
+Optional SDK advice and OpenSpec integration require their own dependencies and explicit workflows.
+Presentation/video production, component authoring and legacy provider automation stay in the canonical repository outside this core ZIP.
+Client evidence belongs in `docs/asdg/`; durable workflow state belongs in `.asdg/`; disposable logs belong in `logs/`.
+
+## Read next
+
+- [Installation and ownership](docs/installation.md) and [client integrations](docs/client-integrations.md).
+- [Workflow usage](docs/usage.md), [Codex setup prompt](CODEX-PROMPT.md) and [lifecycle baseline](docs/lifecycle-baseline.md).
+- [Build and verification](docs/distribution-build.md), [source provenance](docs/provenance.md) and [review loop](docs/review-loop.md).
+- [Promote and upgrade](docs/synchronization.md): preview local methodology differences and explicitly apply a reviewed, conflict-free plan.
+- [Historical pilot checks](docs/verification.md) and [native integration limits](docs/native-integration.md).
+
+Skill notation is `$name` in Codex and `/name` in Claude Code. Session roles and attitudes grant no extra authority.
+Installation creates no sprint, release, human approval, specialist session or hook trust.

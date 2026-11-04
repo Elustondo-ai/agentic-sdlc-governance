@@ -12,8 +12,7 @@ This folder owns the specialization, not the consuming project's results.
 | [tests](tests/acceptance.md) | Role interview and negative-boundary acceptance cases |
 | [local skill](skills/prepare-plan/SKILL.md) | Bounded procedure, explicitly loaded by this agent |
 
-Shared [presentation](../skills/asdg-presentation/SKILL.md) and
-[component](../skills/asdg-component/SKILL.md) capabilities remain single-source.
+Shared [documentation](../skills/asdg-documentation/SKILL.md) remains single-source.
 Using a capability does not grant its caller a new responsibility or write authority.
 
 ## Review
@@ -21,10 +20,11 @@ Using a capability does not grant its caller a new responsibility or write autho
 Ask Codex to spawn `asdg_07`, read this package and introduce itself.
 Ask an in-scope question, then request an excluded deliverable.
 Expect a truthful proposal or an `OUT_OF_SCOPE` return, never fabricated execution.
-Current mode is read-only evaluation; native behavior after this migration is not yet tested.
+Project documentation under `docs/` is writable without a sprint; application execution and native enforcement require separate evidence.
 See [package catalogue](../README.md) and [runtime rules](../00-governance/docs/runtime-contract.md).
 
 ## Perspectives
 
-The stage keeps [Intended](intended/), [Current](current/) and [Planned](planned/) material in separate folders.
+Client assessments follow the [stage layout](../00-governance/docs/stage-layout.md) under `docs/asdg/`.
+Use flat stage files: `01` Intended, `02` Current, `03` Planned; split topics with dotted numbers such as `01.1` and identify release/sprint horizons in plan filenames.
 Empty folders make no evidence or completion claim; use the [shared contract](../00-governance/docs/stage-perspectives.md).

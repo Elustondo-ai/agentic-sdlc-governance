@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASDG view dev"
+  short_description: "Open project documentation and a terminal"
+  default_prompt: "Use $asdg-view-dev to open my development panes for this project."

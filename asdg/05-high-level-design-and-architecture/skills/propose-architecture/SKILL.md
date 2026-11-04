@@ -1,26 +1,28 @@
 ---
 name: asdg-propose-architecture
-description: "High-Level Architecture Agent: propose architecture, in read-only evaluation."
+description: "High-Level Architecture Agent: analyze architecture and document material decisions as short visual packages."
 ---
 
 # Propose Architecture
 
 Owner: `ASDG-05`; [entry point](../../AGENTS.md); [contract](../../types/contract.md).
-Instruction-only evaluation procedure. It does not activate a role or grant write permission.
-Read the owner's contract and shared runtime rules before applying this procedure.
-A non-owning caller may inspect the method, but must not use it to bypass role boundaries.
+Read [decision foundations](../../docs/architectural-decisions.md) and the shared runtime rules.
+This method does not activate a role, authorize implementation, or widen the caller's contract.
 
 ## Procedure
 
-1. Read the intended outcomes, use cases, evidence and constraints.
-2. Describe candidate components, dependency direction, interfaces and failure boundaries.
-3. Compare alternatives and preserve the reasons, uncertainties and expected trade-offs.
-4. Return diagrams or diagram source in the response, ADR candidates and review questions; no code changes.
+1. Reuse the discussion, desired outcomes, actual implementation, evidence, constraints and explicit human choices.
+2. Explain the purpose of candidate boundaries, dependency directions, interfaces, ownership and failure behavior before implementation mechanisms.
+3. Apply [ASDG Decision](../../../skills/asdg-decision/SKILL.md) to material choices; compare responsibilities fairly and include the current approach when relevant.
+4. For assigned documentation, save each material decision using its named folder, short introductions, meaningful option notes and explanatory visuals.
+5. Capture scope, consequences, uncertainties, sources and concrete revisit triggers; preserve recommendations separately from selected directions.
+6. For analysis-only requests, provide the useful comparison without creating files or a new approval flow.
 
 ## Output and checks
 
-Use the owner's output contract and identify facts, assumptions and unavailable evidence.
-Do not claim tests, review, routing or implementation happened unless observed.
-In this evaluation, return the result in the conversation; no writes or external actions.
-Out-of-scope work returns to the coordinator; missing prerequisites are reported as blocked.
-This YAML-first file records AI modification, not whole-file human approval.
+Use the owner's output contract and its bounded documentation allowance; no application-code changes.
+Cover deployment, data, ownership, reliability and interaction patterns as well as products.
+Adapt the [worked example](../../../skills/asdg-decision/example.md); never inherit its provider, option count or client-specific requirements.
+Validate links and source size; inspect every new/changed visual embedded at document width and representative complete pages.
+Record exact hashes and visual-review evidence under the shared documentation standard; report missing checks specifically.
+Do not claim tests, handoffs, implementation or formal acceptance without evidence.

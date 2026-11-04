@@ -1,0 +1,60 @@
+# asdg/scripts/README.md
+# Baseline status: RECOVERED
+# SHA256 baseline: 6f8de8bb3871a830979c5d3454fb411721ecc7516d6fe423b447117622f062ac
+# SHA256 source: c3ba313e23d371af9f583dc1c895cfda2d6e23f5b41428d5f714bc1d492f2652
+# SHA256 target: 7ad3a5a1b51c245c9edce944913beab0fe0d5b3de3a0cb81e44102ddba6ac3d8
+
+## baseline-to-source
+--- baseline/asdg/scripts/README.md
++++ source/asdg/scripts/README.md
+@@ -4,10 +4,11 @@
+ 
+ | Script | Purpose |
+ | --- | --- |
+-| `init.py` | Preflight and initialize this embedded distribution |
+-| `cli.py` | Project status, structural verification and sprint operations |
+-| `hook.py` | Configured runtime guard and activity-log callbacks |
+-| `check.py` | Validate distribution references and optional delivery integrity |
++| [init.py](init.md) | Preflight and initialize this embedded distribution |
++| [cli.py](cli.md) | Project status, structural verification and sprint operations |
++| [hook.py](hook.md) | Configured runtime guard and activity-log callbacks |
++| [check.py](check.md) | Validate distribution references and optional delivery integrity |
+ 
+-Supporting modules live in `lib/`; automated tests live in `asdg/tests/`.
++Each link opens the script's purpose and interface guide.
++Browse the [runtime modules](lib/README.md) or the [test guides](../tests/README.md).
+ The old root-level Python launchers are intentionally removed.
+
+## baseline-to-target
+--- baseline/asdg/scripts/README.md
++++ target/asdg/scripts/README.md
+@@ -4,10 +4,12 @@
+ 
+ | Script | Purpose |
+ | --- | --- |
+-| `init.py` | Preflight and initialize this embedded distribution |
+-| `cli.py` | Project status, structural verification and sprint operations |
+-| `hook.py` | Configured runtime guard and activity-log callbacks |
+-| `check.py` | Validate distribution references and optional delivery integrity |
++| [init.py](init.md) | Preflight and initialize this embedded distribution |
++| [cli.py](cli.md) | Project status, structural verification and sprint operations |
++| [hook.py](hook.md) | Configured runtime guard and activity-log callbacks |
++| [check.py](check.md) | Validate distribution references and optional delivery integrity |
++| [build_distribution.py](build_distribution.md) | Build a verified ZIP from the explicit portable file list |
+ 
+-Supporting modules live in `lib/`; automated tests live in `asdg/tests/`.
++Each link opens the script's purpose and interface guide.
++Browse the [runtime modules](lib/README.md) or the [test guides](../tests/README.md).
+ The old root-level Python launchers are intentionally removed.
+
+## source-to-target
+--- source/asdg/scripts/README.md
++++ target/asdg/scripts/README.md
+@@ -8,6 +8,7 @@
+ | [cli.py](cli.md) | Project status, structural verification and sprint operations |
+ | [hook.py](hook.md) | Configured runtime guard and activity-log callbacks |
+ | [check.py](check.md) | Validate distribution references and optional delivery integrity |
++| [build_distribution.py](build_distribution.md) | Build a verified ZIP from the explicit portable file list |
+ 
+ Each link opens the script's purpose and interface guide.
+ Browse the [runtime modules](lib/README.md) or the [test guides](../tests/README.md).

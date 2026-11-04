@@ -1,0 +1,452 @@
+--- before/asdg/docs/synchronization.md
++++ after/asdg/docs/synchronization.md
+@@ -37,6 +37,7 @@
+ 
+ Upgrade apply requires the canonical working tree to match its delivery manifest; [build and review](distribution-build.md) it first.
+ Promotion can preview a pilot whose delivery manifest is stale: the report identifies actual working bytes and warns about the mismatch.
++Console/JSON identify WORKING_TREE_SNAPSHOT versus MANIFEST_MATCHED_DISTRIBUTION and MATCH/STALE delivery status; JSON lists the exact manifest differences. Adoption records preserve this distinction. Matching content does not establish tests or approval: both statuses remain NOT_ESTABLISHED.
+ A manifest or adoption receipt proves content identity, not human approval, validation quality, a release or permission to change governance.
+ An explicit reviewed apply adopts only those bytes. No command stages, commits, pushes, merges, tags, publishes or contacts GitHub.
+ Version upgrades are recognized through the adoption record without rewriting `.asdg/`; incompatible lifecycle state or client adapters can still fail `verify`.
+--- before/asdg/scripts/lib/cli_files.md
++++ after/asdg/scripts/lib/cli_files.md
+@@ -22,11 +22,12 @@
+ | `read_bytes(path: Path) -> bytes \| None` | Returns file bytes or None when absent; rejects non-files and files above 4 MiB. |
+ | `plan(root: Path, relative: str \| Path, data: bytes \| None, *, replace: bool=False, mode: int=420) -> Change \| None` | Returns Change or None for identical bytes. None plans deletion; existing content requires replace=True; existing permissions are retained. |
+ | `atomic_replace(path: Path, data: bytes, mode: int) -> None` | Writes and fsyncs a temporary file, applies mode and atomically replaces the destination. |
+-| `apply(changes: list[Change]) -> list[str]` | Preflights before-bytes, creates directories, applies changes and returns written absolute paths; rolls back only its own unchanged results on failure. |
++| `apply(changes: list[Change]) -> list[str]` | Preflights before-bytes, creates directories and returns written paths; rollback removes its exclusively created inode even after a partial write, preserves replacement inodes, and restores its own unchanged replacements/deletions. |
+ 
+ ## Effects and failure behavior
+ 
+ Raises Conflict or filesystem errors. Deletions are preflighted and restored on ordinary rollback if still absent. Atomic replacement is per file; the group is not crash-safe or protected against hostile concurrent writers. Callers must have write authorization.
++New files are identified by device/inode immediately after exclusive creation. Stream setup failures close the descriptor; interrupted writes remove the owned partial file and roll back earlier changes. A different inode at the same path is preserved; same-inode concurrent edits remain outside the transaction guarantee.
+ 
+ ## Example
+ 
+--- before/asdg/scripts/lib/cli_files.py
++++ after/asdg/scripts/lib/cli_files.py
+@@ -87,6 +87,7 @@
+             raise Conflict(f'File changed since inspection: {change.path}')
+     made_dirs: list[Path] = []
+     applied: list[Change] = []
++    created: dict[Path, tuple[int, int]] = {}
+     try:
+         for change in changes:
+             path = change.path
+@@ -105,8 +106,15 @@
+                 applied.append(change)
+             elif change.before is None:
+                 fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, change.mode)
++                identity = os.fstat(fd)
++                created[path] = (identity.st_dev, identity.st_ino)
+                 applied.append(change)
+-                with os.fdopen(fd, 'wb') as stream:
++                try:
++                    stream = os.fdopen(fd, 'wb')
++                except BaseException:
++                    os.close(fd)  # Ownership was not transferred to a stream.
++                    raise
++                with stream:
+                     stream.write(change.after)
+                     stream.flush()
+                     os.fsync(stream.fileno())
+@@ -116,11 +124,17 @@
+     except BaseException:
+         for change in reversed(applied):
+             path = change.path
+-            if read_bytes(path) == change.after:
+-                if change.before is None:
++            if change.before is None:
++                # Interrupted writes need not match the complete intended content.
++                # Remove only the inode exclusively created by this transaction.
++                try:
++                    identity = path.lstat()
++                except FileNotFoundError:
++                    continue
++                if created.get(path) == (identity.st_dev, identity.st_ino):
+                     path.unlink()
+-                else:
+-                    atomic_replace(path, change.before, change.mode)
++            elif read_bytes(path) == change.after:
++                atomic_replace(path, change.before, change.mode)
+         for directory in reversed(made_dirs):
+             try:
+                 directory.rmdir()
+--- before/asdg/scripts/lib/cli_sync.md
++++ after/asdg/scripts/lib/cli_sync.md
+@@ -22,6 +22,7 @@
+ | `render(report)` | Produces all file statuses, reasons, totals, warnings and the review digest as text. |
+ 
+ Reports include source/target identity, HEAD, version, snapshot hash, baseline provenance and one row per relevant path.
++Snapshot kind and manifest MATCH/STALE status appear in JSON, console preview and adoption records, with exact added/modified/deleted paths versus the manifest. Validation and human approval remain NOT_ESTABLISHED even for matching hashes.
+ Rows contain baseline/source/target hashes, target Git-tracked status and added/modified/deleted/unchanged/conflicting classification.
+ `plan_id` hashes the report before adding execution results. A second comparison immediately before writing detects changed inputs.
+ Apply records the incoming snapshot in local `metadata/sync-state.json`, separately from any retained target edits.
+--- before/asdg/scripts/lib/cli_sync.py
++++ after/asdg/scripts/lib/cli_sync.py
+@@ -97,6 +97,10 @@
+               'target_binding_sha256': digest(target['binding_raw']),
+               'source_repository': source['info']['repository'], 'source_commit': source['info']['head'],
+               'version': source['info']['version'], 'snapshot_sha256': source['info']['snapshot_sha256'],
++              'source_snapshot_kind': source['info']['snapshot_kind'],
++              'source_delivery_manifest': source['info']['delivery_manifest'],
++              'validation_status': source['info']['validation_status'],
++              'human_approval_status': source['info']['human_approval_status'],
+               'files': source['hashes']}
+     state = target['state']
+     state['upstreams'][source['info']['repository']] = record
+@@ -113,8 +117,13 @@
+ 
+ 
+ def render(report: dict) -> str:
++    source = report['source']
++    manifest = source['delivery_manifest']
+     lines = [f"ASDG {report['operation']}: {'applied' if report['applied'] else 'dry run; no writes'}",
+-             f"Source: {report['source']['root']} ({report['source']['version']})",
++             f"Source: {source['root']} (declared version {source['version']})",
++             f"Source bytes: {source['snapshot_kind']}; delivery manifest: {manifest['status']}",
++             'Manifest differences: ' + ', '.join(f'{k}: {len(v)}' for k, v in manifest['differences'].items()),
++             f"Validation: {source['validation_status']}; human approval: {source['human_approval_status']}",
+              f"Target: {report['target']['root']} ({report['target']['version']})",
+              'Baseline: ' + report['baseline'],
+              ', '.join(f'{name}: {count}' for name, count in report['counts'].items())]
+--- before/asdg/scripts/lib/cli_sync_manifest.md
++++ after/asdg/scripts/lib/cli_sync_manifest.md
+@@ -29,6 +29,7 @@
+ An explicit package list may describe uncommitted candidate files. A legacy pilot without a list selects only Git-tracked ASDG paths.
+ Missing explicit members, symlinks, unsafe paths, malformed state and unverifiable identity/version raise `Conflict` or a caught JSON/filesystem error.
+ Manifest equality verifies content, not release approval; promotion additionally exposes the actual working snapshot when the old manifest is stale.
++Public summaries identify WORKING_TREE_SNAPSHOT or MANIFEST_MATCHED_DISTRIBUTION, manifest SHA/version/status and path differences. Neither identity establishes validation or approval; both statuses remain NOT_ESTABLISHED.
+ Adoption records contain source commit/version/hashes and target identity/binding hash, never project evidence or application code.
+ `metadata/sync-state.json` must remain local to that project and is excluded from both distribution selection and archives.
+ This module reads no remote, executes no source-repository code and changes no Git or project state.
+--- before/asdg/scripts/lib/cli_sync_manifest.py
++++ after/asdg/scripts/lib/cli_sync_manifest.py
+@@ -151,6 +151,13 @@
+         if raw is not None:
+             data[name] = raw
+     hashes = {p: digest(raw) for p, raw in data.items()}
++    current = {p: h for p, h in hashes.items() if p != MANIFEST}
++    matches = current == historical
++    differences = {
++        'added': sorted(set(current) - set(historical)),
++        'modified': sorted(p for p in current.keys() & historical.keys() if current[p] != historical[p]),
++        'deleted': sorted(set(historical) - set(current)),
++    }
+     catalog = read_json(safe_path(core, '00-governance/types/agent-catalog.json'))
+     roles = catalog.get('agents', [])
+     if (not isinstance(roles, list) or len(roles) != 13
+@@ -167,7 +174,11 @@
+             'binding_raw': binding_raw,
+             'info': {'root': str(root), 'repository': identity, 'head': head, 'version': version,
+                      'snapshot_sha256': digest(encoded(hashes)), 'binding_sha256': digest(binding_raw),
+-                     'manifest_matches_worktree': {p: h for p, h in hashes.items() if p != MANIFEST} == historical,
++                     'manifest_matches_worktree': matches,
++                     'snapshot_kind': 'MANIFEST_MATCHED_DISTRIBUTION' if matches else 'WORKING_TREE_SNAPSHOT',
++                     'delivery_manifest': {'sha256': digest(manifest_raw), 'version': manifest['version'],
++                                           'status': 'MATCH' if matches else 'STALE', 'differences': differences},
++                     'validation_status': 'NOT_ESTABLISHED', 'human_approval_status': 'NOT_ESTABLISHED',
+                      'selection': 'package-files' if index_raw is not None else 'legacy-git-tracked'}}
+ 
+ 
+--- before/asdg/tests/test_sync.md
++++ after/asdg/tests/test_sync.md
+@@ -11,11 +11,12 @@
+ | `git`, `tree` | Inspect local Git and exact non-Git bytes for preservation checks. |
+ | `preview`, `apply`, `row` | Call the shared synchronizer, pass the reviewed digest and locate a reported path. |
+ | Portable CLI and selected package | Test parser modes and a real initialized Codex/Claude client's version upgrade and structural verification. |
+-| Existing file transaction | Inject a replacement failure after deletion to check rollback. |
++| Existing file transaction | Inject failed creation/stream setup, an interrupted partial write and a replacement failure after deletion; verify cleanup, descriptor closure, prior-write rollback and preservation of unrelated replacement inodes. |
+ 
+ Checks cover identical copies, new/updated/deleted files, local-only edits, conflicting edits, untracked collisions and deletion protection.
+ Missing/invalid/nested roots, missing origins, identity/version/binding errors, malformed catalogues and corrupt adoption records fail safely.
+ Dry runs preserve tree bytes and Git index; stale/missing plan digests and stale canonical manifests block apply.
++Manifest freshness tests distinguish working snapshots from manifest-matched content in JSON, console and adoption records without inferring validation or approval.
+ Repeated apply is idempotent. Source and target are exercised in both directions; application files, client evidence, workflow state and integrations remain intact.
+ Older tracked-only pilots use exact shared delivery manifests; absent or ambiguous historical ancestry blocks different existing content. Current endpoint manifests take precedence over older archives.
+ A full-package upgrade changes version metadata and runtime version, then runs the target's own `verify` while preserving all non-distribution bytes.
+--- before/asdg/tests/test_sync.py
++++ after/asdg/tests/test_sync.py
+@@ -1,6 +1,7 @@
+ """Local promote/upgrade integration tests in disposable Git repositories."""
+ import hashlib
+ import json
++import os
+ from pathlib import Path
+ import shutil
+ import subprocess
+@@ -231,6 +232,27 @@
+         with self.assertRaisesRegex(Conflict, 'versioned manifest'):
+             self.apply('upgrade')
+ 
++    def test_manifest_freshness_is_explicit_without_claiming_validation_or_approval(self):
++        from cli_sync import render
++        original = self.preview()['source']
++        self.assertEqual(original['snapshot_kind'], 'MANIFEST_MATCHED_DISTRIBUTION')
++        self.assertEqual(original['delivery_manifest']['status'], 'MATCH')
++        self.assertEqual(original['validation_status'], 'NOT_ESTABLISHED')
++        self.assertEqual(original['human_approval_status'], 'NOT_ESTABLISHED')
++        (self.pilot / 'asdg/docs/a.md').write_text('Unpackaged pilot edit\n')
++        report = self.preview()
++        source = report['source']
++        self.assertEqual(source['snapshot_kind'], 'WORKING_TREE_SNAPSHOT')
++        self.assertEqual(source['delivery_manifest']['status'], 'STALE')
++        self.assertEqual(source['delivery_manifest']['differences'], {'added': [], 'modified': ['docs/a.md'], 'deleted': []})
++        self.assertEqual(source['delivery_manifest']['sha256'], original['delivery_manifest']['sha256'])
++        self.assertIn('WORKING_TREE_SNAPSHOT; delivery manifest: STALE', render(report))
++        self.apply()
++        receipt = json.loads((self.canonical / 'asdg' / STATE).read_text())['upstreams']['example.test/team/pilot']
++        self.assertEqual(receipt['source_snapshot_kind'], 'WORKING_TREE_SNAPSHOT')
++        self.assertEqual(receipt['source_delivery_manifest'], source['delivery_manifest'])
++        self.assertEqual(receipt['human_approval_status'], 'NOT_ESTABLISHED')
++
+     def test_rollback_restores_deleted_files_on_write_failure(self):
+         self.edit(self.pilot, 'docs/a.md', None)
+         self.edit(self.pilot, 'docs/b.md', 'New B\n')
+@@ -245,6 +267,77 @@
+                 raise OSError('injected failure')
+             return original(path, data, mode)
+         with patch('cli_files.atomic_replace', side_effect=failing), self.assertRaises(OSError):
++            self.apply()
++        self.assertEqual(tree(self.canonical), before)
++
++    def interrupted_new_file(self, *, replace_path=False):
++        self.edit(self.pilot, 'docs/a.md', 'Earlier successful change\n')
++        self.edit(self.pilot, 'docs/new/partial.md', 'Complete incoming content\n')
++        target = self.canonical / 'asdg/docs/new/partial.md'
++        before = tree(self.canonical)
++        original = os.fdopen
++        class InterruptedStream:
++            def __init__(self, stream):
++                self.stream = stream
++            def __enter__(self):
++                return self
++            def __exit__(self, *args):
++                self.stream.close()
++            def write(self, data):
++                self.stream.write(data[:4])
++                self.stream.flush()
++                if replace_path:
++                    # A different inode at the same path is not this transaction's file.
++                    target.unlink()
++                    target.write_bytes(b'Unrelated replacement\n')
++                raise KeyboardInterrupt('injected interrupted write')
++        def interrupted(fd, *args, **kwargs):
++            owned = target.exists() and os.path.samestat(os.fstat(fd), target.stat())
++            stream = original(fd, *args, **kwargs)
++            return InterruptedStream(stream) if owned else stream
++        with patch('cli_files.os.fdopen', side_effect=interrupted), self.assertRaises(KeyboardInterrupt):
++            self.apply()
++        return target, before
++
++    def test_interrupted_new_file_write_removes_partial_file_and_restores_prior_changes(self):
++        target, before = self.interrupted_new_file()
++        self.assertFalse(target.exists())
++        self.assertFalse(target.parent.exists())
++        self.assertEqual(tree(self.canonical), before)
++
++    def test_interrupted_new_file_write_preserves_replacement_inode(self):
++        target, before = self.interrupted_new_file(replace_path=True)
++        self.assertEqual(target.read_bytes(), b'Unrelated replacement\n')
++        before[str(target.relative_to(self.canonical))] = b'Unrelated replacement\n'
++        self.assertEqual(tree(self.canonical), before)
++
++    def test_new_file_stream_setup_failure_closes_descriptor_and_removes_file(self):
++        self.edit(self.pilot, 'docs/new/partial.md', 'Complete incoming content\n')
++        target = self.canonical / 'asdg/docs/new/partial.md'
++        before, descriptors = tree(self.canonical), []
++        original = os.fdopen
++        def failing(fd, *args, **kwargs):
++            if target.exists() and os.path.samestat(os.fstat(fd), target.stat()):
++                descriptors.append(fd)
++                raise OSError('injected stream setup failure')
++            return original(fd, *args, **kwargs)
++        with patch('cli_files.os.fdopen', side_effect=failing), self.assertRaisesRegex(OSError, 'stream setup'):
++            self.apply()
++        self.assertEqual(tree(self.canonical), before)
++        self.assertEqual(len(descriptors), 1)
++        with self.assertRaises(OSError):
++            os.fstat(descriptors[0])
++
++    def test_new_file_creation_failure_restores_earlier_writes(self):
++        self.edit(self.pilot, 'docs/a.md', 'Earlier successful change\n')
++        self.edit(self.pilot, 'docs/new/partial.md', 'Complete incoming content\n')
++        before = tree(self.canonical)
++        original = os.open
++        def failing(path, flags, *args, **kwargs):
++            if str(path).endswith('/docs/new/partial.md'):
++                raise OSError('injected creation failure')
++            return original(path, flags, *args, **kwargs)
++        with patch('cli_files.os.open', side_effect=failing), self.assertRaisesRegex(OSError, 'creation failure'):
+             self.apply()
+         self.assertEqual(tree(self.canonical), before)
+ 
+--- before/docs/asdg/07-planning/02.3-review-synchronization.md
++++ after/docs/asdg/07-planning/02.3-review-synchronization.md
+@@ -0,0 +1,42 @@
++# Finish the synchronization review
++
++The existing Promote/Upgrade mechanism now cleans up interrupted new-file writes and reports the distinction between working bytes and delivery manifests explicitly.
++This review proposes resolutions and onboarding work; it applies none of the nineteen promotion conflicts.
++Pablo authorized bounded defect fixes and review. Codex acted as ASDG Admin with distribution/synchronization focus and Attitude Off in the existing chat.
++
++![Both directions compare source, baseline and target; human review precedes any apply.](../../../asdg/docs/images/synchronization.svg)
++
++## Actual bounded changes
++
++Rollback now records the device/inode of each exclusively created file, removes its partial contents on failure and preserves a replacement inode.
++Failed stream setup closes the raw descriptor; earlier changes and newly created empty directories roll back. Same-inode concurrent edits and crash recovery remain outside the transaction guarantee.
++New tests first reproduced partial-file and empty-file leaks, then passed after the fix; creation failure and replacement-inode preservation are also covered.
++Previews and adoption records now identify `WORKING_TREE_SNAPSHOT` or `MANIFEST_MATCHED_DISTRIBUTION`, manifest MATCH/STALE, manifest SHA/version and exact added/modified/deleted paths.
++Matching hashes establish content identity only: validation and human approval both remain `NOT_ESTABLISHED`. Upgrade apply still rejects a stale canonical manifest.
++The portable suite passed **117 tests on Python 3.15.0**; all **27 synchronization tests passed on Python 3.9.6**.
++The [technical receipt](02.3-review-synchronization.json) lists exact changed paths, hashes, test evidence, checks and preservation limits.
++
++## Reconciliation evidence and proposal
++
++Source: sibling `speakercoach`, `sprint-00`, HEAD `f0388497ac781e12631dc573b3a300100c056162`, clean; canonical: `main`, HEAD `7c5d0ca3869ca2bf6472ac7a408b809dc4823cf9`, existing uncommitted candidate preserved.
++The source declares `0.2.0-pilot.2`; canonical declares `0.3.0-pilot.1`. Neither label proves which individual change is authoritative.
++All ten present baseline files were recovered from local Git blobs and verified against the shared delivery manifest hashes; nine conflict files were absent in that manifest.
++Review every row in [governance and documentation](02.3.1-conflicts-governance-docs.md) and [runtime and test conflicts](02.3.2-conflicts-runtime-tests.md), with exact three-way diffs linked per file.
++The real dry run remains **0 added, 0 modified, 0 deleted, 395 unchanged, 19 conflicting**; all conflicts still block apply.
++The source delivery manifest is stale: 186 added, 125 modified and 24 deleted paths versus that manifest. These are delivery differences, not proposed promotion actions. This task also changes canonical working bytes while preserving the prior manifest and ZIP; no new distribution was packaged.
++
++## Human review process
++
++1. Review the frozen baseline, source and target hashes and the baseline→source, baseline→target and source→target diffs in the [evidence inventory](../../reviews/asdg-sync-review/conflicts/inventory.json).
++2. Mark each proposed resolution accepted or revised, bound to those hashes. This records a decision, not permission for a bulk overwrite or a human-approved methodology release.
++3. After separate edit authorization, prepare the selected resolutions in an isolated disposable candidate; retain source improvements, canonical fixes and all history. Inspect its resulting diff and run the relevant tests.
++4. Rerun dry-run on that exact candidate. Manual conflict resolution must make source/target agree on accepted results or explicitly decline those source changes; the current CLI has no resolution-file or force flag. Never edit baseline hashes to suppress conflicts.
++5. Rejected/divergent source changes remain visible conflicts; a selective adoption command/receipt is a remaining small gap if future promotion must proceed without reconciling both copies. Do not fabricate successful adoption now.
++6. Authorize any real copy/apply separately against the fresh plan and candidate bytes. Preserve the old manifests and approval bindings; package a newly reviewed version only afterward.
++
++A future selective-resolution option need only bind each keep-target/reviewed-merge choice to baseline, source, target and result hashes, then reuse the existing transaction and adoption receipt. It must not accept an unreviewed force flag; it is proposed, not implemented here.
++
++The governance ledger already contains the complete pilot history: 673 baseline events → 1,379 pilot events → 1,804 canonical events at review start, with exact prefix preservation.
++Retain canonical history and append only new maintenance receipts; this task does not merge, delete, deduplicate or reapprove historical events.
++See [integration refresh](02.3.3-integration-refresh.md) and [ZIP/Clone × Script/Prompt gaps](02.3.4-onboarding-gaps.md) for proposed next work.
++No real promotion, reverse upgrade, lifecycle bypass, hook/trust change, commit, push, merge or publication occurred.
+--- before/docs/asdg/07-planning/02.3.1-conflicts-governance-docs.md
++++ after/docs/asdg/07-planning/02.3.1-conflicts-governance-docs.md
+@@ -0,0 +1,23 @@
++# Reconcile governance and documentation
++
++These are proposed decisions, not applied edits. B is the shared delivery manifest's exact file content; S is Speaker Coach; T is canonical.
++The hashes and three-way diffs are in the [inventory](../../reviews/asdg-sync-review/conflicts/inventory.json). `Absent` means no file existed in B, not that its source is unknown.
++See the [review procedure](02.3-review-synchronization.md) before authorizing any reconciliation.
++
++![Compare the three states, review every conflict, and apply only an explicitly authorized candidate.](../../../asdg/docs/images/synchronization.svg)
++
++| File / exact diff | Baseline B | Source S changes | Target T changes | Proposed resolution |
++| --- | --- | --- | --- | --- |
++| 01 [document-reviews.json](../../reviews/asdg-sync-review/conflicts/01.diff) | 673 review events. | Preserves B; grows to 1,379 events. | Contains all 1,379 as an exact prefix, plus 425 events at review start. | Retain T and this task's appended receipts. Preserve order, duplicates, full provenance and exact approval bindings. Nothing from S is missing. |
++| 02 [asdg/AGENTS.md](../../reviews/asdg-sync-review/conflicts/02.diff) | Earlier client-only instructions. | Adds explicit Admin, current session/bootstrap rules, documentation authority and existing application gates. | Retains those changes; separates canonical package checks from initialized-client status and describes upstream/downstream ownership. | Retain T. This preserves S's rules without treating the provider as an application; no gate or lifecycle identity changes. |
++| 03 [asdg/README.md](../../reviews/asdg-sync-review/conflicts/03.diff) | Pilot introduction and initialization. | Adds client selection, team/sprint guidance, Speaker Coach wording and sibling-generated presentation links. | Generic ZIP/init/verify workflow, portable links, current candidate limits and synchronization guide. | Use T as base; restore compact portable team/sprint links and the reminder to version methodology/state. Preserve presentation references as optional provider learning material, without requiring sibling builds or asserting publication. |
++| 04 [docs/installation.md](../../reviews/asdg-sync-review/conflicts/04.diff) | Primarily Codex setup. | Adds Claude/both, managed bootstrap, client selection, preservation and native checks. | Keeps S; clarifies provider versus client and selected-package integrity. | Retain T; preserve both clients and trust boundaries. Existing text saying repeat setup “restores” differing entries should be clarified to say it refuses differing managed files, per actual code. |
++| 05 [proposal README](../../reviews/asdg-sync-review/conflicts/05.diff) | Absent. | Introduces concern-strategy navigation and a relative link into the pilot's project evidence. | Same proposal, with the client evidence identified as historical provenance rather than a portable dependency. | Retain T; preserve proposal status and exact pilot commit/path attribution. Do not copy client evidence into the distribution. |
++| 06 [docs/review-loop.md](../../reviews/asdg-sync-review/conflicts/06.diff) | Pilot baseline and older read-only/recording guidance. | Current documentation authority, explicit Admin and flat numbered review records. | Keeps S; removes specific app.js/index.html assumptions and restores canonical distribution ownership. | Retain T; preserve source governance improvements and historic manifests, without making an old sibling checkout a runtime dependency. |
++| 07 [scripts/README.md](../../reviews/asdg-sync-review/conflicts/07.diff) | Plain entry-point list. | Adds companion links and test/runtime navigation. | Adds the portable ZIP builder entry. | Retain T, which preserves all S navigation plus the implemented builder. |
++| 08 [scripts/check.md](../../reviews/asdg-sync-review/conflicts/08.diff) | Absent. | Documents a broad package walk and known external-link failures. | Describes explicit package selection, link closure and current-candidate integrity. | Retain T because it matches the current checker; retain S's separation of static checks from native behavior. |
++| 09 [scripts/lib/README.md](../../reviews/asdg-sync-review/conflicts/09.diff) | Short runtime overview. | Adds complete module/companion navigation. | Keeps that catalogue and adds distribution selection plus two synchronization modules. | Retain T; no source capability is dropped. |
++
++Most target differences preserve pilot improvements while making them portable. This conclusion follows inspected hunks, not version ordering.
++For file 01, semantic event comparison used complete JSON event objects and multiplicities; no timestamp-based collapsing or retargeting of approvals is proposed.
++This review's local provenance appends are separate from the nineteen reconciliation proposals. Only the authorized defect's companion update touches another conflicted file.
+--- before/docs/asdg/07-planning/02.3.2-conflicts-runtime-tests.md
++++ after/docs/asdg/07-planning/02.3.2-conflicts-runtime-tests.md
+@@ -0,0 +1,23 @@
++# Reconcile runtime interfaces and tests
++
++Each row preserves validated pilot functionality and compares it with the current canonical implementation. All resolutions remain proposals.
++B/S/T have the same meaning as in [governance conflicts](02.3.1-conflicts-governance-docs.md); diffs include all three comparisons and exact hashes.
++
++![Source changes, baseline and canonical edits are compared before an explicitly reviewed apply.](../../../asdg/docs/images/synchronization.svg)
++
++| File / exact diff | Baseline B | Source S changes | Target T changes | Proposed resolution |
++| --- | --- | --- | --- | --- |
++| 10 [lib/cli.md](../../reviews/asdg-sync-review/conflicts/10.diff) | Absent. | Documents pilot dispatch and side effects. | Adds promote/upgrade options, early two-root dispatch and conflict exit status. | Retain T so documentation matches the shared CLI; preserve S's other command semantics. |
++| 11 [lib/cli.py](../../reviews/asdg-sync-review/conflicts/11.diff) | Earlier dispatcher. | Adds client choice, forwards it to init and reports initial guidance. | Keeps S; adds the two sync parsers and early dispatch before caller-root resolution. | Retain T. Do not remove pilot client selection or reintroduce a separate synchronization implementation. |
++| 12 [lib/cli_files.md](../../reviews/asdg-sync-review/conflicts/12.diff) | Absent. | Documents conservative create/replace transactions. | Adds synchronization/deletion support; this task adds partial-write cleanup and replacement-inode limits. | Retain current T, including the tested defect correction; preserve existing conflict/path checks and honest crash/concurrency limits. |
++| 13 [lib/cli_model.md](../../reviews/asdg-sync-review/conflicts/13.diff) | Absent. | Documents catalogue, constants and project identity. | Adds candidate VERSION correspondence and reviewed-upgrade requirement. | Retain T; clarify that a matching adoption receipt recognizes the new version while the original binding remains unchanged. |
++| 14 [lib/cli_project.md](../../reviews/asdg-sync-review/conflicts/14.diff) | Absent. | Documents client choice, bridges, preflight and structure verification. | Adds the exact adopted-binding exception to the version/catalogue mismatch contract. | Retain T and link to the separate integration-refresh proposal; do not describe adapter replacement as implemented. |
++| 15 [lib/cli_project.py](../../reviews/asdg-sync-review/conflicts/15.diff) | Older initialization, bootstrap and single-client assumptions. | Adds current bootstrap, flat scaffolds, explicit clients, Claude rendering and Admin/focus checks. | Preserves S; version/catalogue mismatches can pass only with a matching adopted upgrade receipt. | Retain T, backed by the full-package version-upgrade test. Preserve all other state, identity and layout checks; no forced init or approval shortcut. |
++| 16 [tests/README.md](../../reviews/asdg-sync-review/conflicts/16.diff) | Absent. | Adds pilot test-guide navigation. | Adds distribution and synchronization suites. | Retain T; preserve every source suite. |
++| 17 [tests/test_portable-cases.md](../../reviews/asdg-sync-review/conflicts/17.diff) | Absent. | Documents existing test cases. | Adds resolved-path handling for macOS aliases. | Retain T; the fixture should work under the normal temporary directory. |
++| 18 [tests/test_portable.md](../../reviews/asdg-sync-review/conflicts/18.diff) | Absent. | Describes full-folder fixtures, broad instruction scans and a TMPDIR workaround. | Documents explicit package fixtures, exclusion of historical/unshipped material and resolved paths. | Retain T; retain pilot behavior coverage while accurately describing the shippable boundary. |
++| 19 [tests/test_portable.py](../../reviews/asdg-sync-review/conflicts/19.diff) | Smaller original suite. | Adds substantial bootstrap, client, Admin, documentation and relocation coverage. | Keeps those tests; selects actual package files, resolves macOS aliases and updates assertions to provider/client wording. | Retain T. Confirm all pilot test names remain and the portable selection cannot hide missing shipped dependencies; do not broaden lifecycle authority to satisfy tests. |
++
++Retaining T does not itself resolve the synchronizer's conflict: these proposals must become an explicitly reviewed candidate and adoption decision.
++Files added independently after the baseline remain conservative conflicts even where their prose clearly describes the newer implementation.
++No test, runtime or governance resolution in this table was copied from one real repository into the other.
+--- before/docs/asdg/07-planning/02.3.3-integration-refresh.md
++++ after/docs/asdg/07-planning/02.3.3-integration-refresh.md
+@@ -0,0 +1,35 @@
++# Refresh client integrations after an approved upgrade
++
++Methodology adoption and installed client integration are separate operations. The current upgrader writes only distribution files and its local adoption record.
++This is a proposed extension of the existing initializer and transaction code, not an implemented refresh command or authorization to modify a real client.
++
++![One package supplies both clients through shared templates and client-specific rendering.](../../../asdg/docs/images/client-integrations.svg)
++
++## Actual behavior and gap
++
++`cli_project.client_files` produces Codex templates/config/hooks and `cli_clients.claude_files` renders Claude skills from shared templates.
++`initialize` plans these files without replacement permission, so a changed installed adapter conflicts; repeat init is not an upgrade migrator.
++`verify` compares installed bytes with current generated bytes; it can report DAMAGED after a valid methodology-only upgrade.
++`.asdg/integrations.json` currently records selected clients, not generated-file baseline hashes. Its schema is strict; adding hashes requires an explicit backwards-compatible schema change.
++Leaving `.codex/hooks.json` unchanged does not guarantee unchanged hook behavior: it executes code under `asdg/scripts/`, which a methodology upgrade can change.
++
++## Proposed reviewed refresh
++
++1. Before adopting an upgrade, record selected clients, their last installed generated hashes and the old package/renderer identity; retain local bytes and customizations. Do not infer a baseline from the new templates.
++2. Generate new expected bytes with the existing `client_files`, `claude_adapter`, bootstrap and hook generators. Compare old-generated / new-generated / installed content using the shared hash classification and file transaction.
++3. Preview adapters/managed instruction blocks separately from hook/config changes and changed hook-runtime dependencies. Show exact before/after bytes and a digest binding the source, target and selected groups.
++4. After explicit refresh authorization, update only approved managed paths. Preserve project-owned text and custom configuration; unknown ancestry, dual edits and untracked deletions remain conflicts. No client is added or removed implicitly.
++5. Hooks and trust-related configuration require an explicitly approved group; default adapter refresh leaves them pending. Changes to the invoked hook code and dependencies also require visible review even when hook JSON is unchanged.
++6. Atomically record generated hashes and package/renderer identity only after successful writes, using the existing integration receipt with a reviewed schema migration. Preserve `.asdg/` lifecycle, sprint and evidence records.
++7. Run structural verify and show pending groups honestly; never report COMPLETE while required integration updates remain pending. Reload each selected native client and observe discovery/invocation; the human reviews trust through that client's own controls.
++
++A previous hash can come from a verified earlier distribution rendered with the recorded generator. For legacy receipts without that evidence, stop at a manual three-way review; never silently bless current custom bytes as generated.
++No refresh grants trust, edits native trust stores, bypasses a denied hook, enables a client unasked or starts a sprint. A denied operation is handed to the human terminal under the existing policy.
++Claude currently receives skills and an optional instruction bridge, with no ASDG hooks or named agents; preserving this difference is part of compatibility.
++
++## Required acceptance tests
++
++Use disposable clients for unchanged and changed templates, both-client isolation, local customizations, missing/legacy baselines, managed-block preservation, rollback and repeat idempotency.
++Verify that omitted hook authorization leaves hook/config bytes unchanged and reports pending work; test changed hook code with unchanged JSON so behavior changes cannot be hidden.
++Native discovery and invocation, and trust behavior after changed hook code/configuration, require separate observed evidence in each supported client/version.
++Manifest integrity, automated tests and an adopted-version receipt do not grant methodology approval or native hook trust.
+--- before/docs/asdg/07-planning/02.3.4-onboarding-gaps.md
++++ after/docs/asdg/07-planning/02.3.4-onboarding-gaps.md
+@@ -0,0 +1,30 @@
++# ZIP or Clone, Script or Prompt: one installation engine
++
++ASDG should arrive through either a ZIP or a pinned clone, then initialize through a script or a conversational prompt using identical deterministic code.
++The existing Python initializer is the implementation to extend; a prompt should select explicit inputs and invoke it, never synthesize an alternative set of configuration files.
++
++![The shared package selection and initialization path already implements the ZIP-to-project core.](../../../asdg/docs/images/distribution-flow.svg)
++
++| Entry route | Actual support | Remaining work |
++| --- | --- | --- |
++| ZIP + Script | Builder selects one portable folder; extracted clients initialize through init.py/CLI. Disposable extraction, relocation and repeat tests pass. | Add an integrated artifact/manifest preflight and a reviewed installation plan; retain current collision refusal. |
++| ZIP + Prompt | CODEX-PROMPT.md and the client-aware Init skill call the same local initializer after extraction. | Generalize the copyable prompt for either client and explicit source/client choices; test that it delegates all managed writes and honors denial. Native invocation remains unverified. |
++| Clone + Script | The provider can build a ZIP; its full cloned asdg/ also contains excluded provider tools. `initialize` requires embedded source and target roots to match. | Stage only package-files.json members from a pinned local clone into a client; validate identity/version/hashes and exclude source .git, provider-only files, application evidence and state. Do not copy the whole clone. |
++| Clone + Prompt | No portable clone-install handoff exists; the current prompt requires asdg/ already present. | Use the same clone-to-package staging and installation plan as Script; the prompt supplies source, target, ref and client, then invokes Python. |
++
++“Clone” here means acquiring a canonical distribution from a clone into a separate adopting project. Developing ASDG inside its provider clone is a different activity and must not initialize that provider as an application.
++Network cloning/fetching, dependency installation and Git initialization are not necessary inside the first engine increment: accept an existing clone pinned to a verified commit. Any future acquisition wrapper needs its own explicit authorization.
++Current promote/upgrade requires Git roots, origins and HEADs, so an extracted ZIP is not a supported synchronization source yet. Normalized source identity must use an archive digest/manifest or a verified clone commit honestly; never fabricate Git provenance. First initialization must still accept an existing fresh Git root without requiring a remote or first commit.
++
++## Small implementation increments still needed
++
++1. Add source normalization around `distribution_files.package_files`: verified ZIP extraction or a pinned clone produces the same selected bytes and provenance. Reject escaping members, symlinks, duplicate paths and unexpected source/target identities.
++2. Extract a planning step from `cli_project.initialize` so it can read the normalized source while planning into an explicitly identified existing Git root. Preserve current bootstrap, client renderers, state validation and `cli_files.apply`; remove no guard or migration check.
++3. Preflight distribution placement and integration together before writes. Bind the plan to source bytes, target before-hashes, client choice and normalized initialization inputs, including the creation timestamp; refuse changed inputs at apply. Avoid copying asdg/ first and discovering an adapter conflict afterward.
++4. Read adopted version/catalogue identity from the selected verified package rather than assuming an unrelated launcher's global VERSION. Record acquisition provenance plus generated-file baselines for the [separate integration refresh](02.3.3-integration-refresh.md).
++5. Keep Script and Prompt as thin callers of this engine. The prompt may ask optional orientation questions; orientation is separate client documentation, never accepted Purpose or a hidden initialization algorithm.
++6. Test all four routes against the same normalized package and inputs: equal methodology hashes and generated configuration, equivalent state with fixed volatile inputs, repeat idempotency, collisions, partial-write rollback and preservation of application files. Observe native Prompt invocation separately.
++
++This requires small acquisition/planning adapters and baseline metadata, not another agent, database, daemon, package manager or lifecycle state engine.
++Do not claim a validated distribution from a matching manifest alone: bind test evidence and a separate exact-state human release decision to its snapshot when preparing distribution acceptance.
++The current 117-test result covers the existing engine and synchronization fixes; it does not demonstrate Clone ingestion, a refresh command or the four-route equivalence tests proposed here.

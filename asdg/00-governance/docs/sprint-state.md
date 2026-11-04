@@ -22,6 +22,8 @@ Active example:
 ```
 Starting requires a valid inactive state, non-empty ID/objective, scope and criteria.
 Stopping clears all fields to the initial inactive state. Repeat init preserves active state.
+The [Sprint close skill](../../skills/asdg-sprint-close/SKILL.md) first preserves a review and full snapshot under `.asdg/sprint-closeouts/`; direct CLI stop does not archive them.
+Closeout receipts retain evidence, not current authority; only `.asdg/sprint.json` controls the active scope. Closing can record completed, unfinished or cancelled work.
 A missing state file is blocked; init can create the missing inactive state.
 Malformed existing state is a conflict and is never silently overwritten.
 

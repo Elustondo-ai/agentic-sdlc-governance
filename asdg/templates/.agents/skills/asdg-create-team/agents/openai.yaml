@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASDG create team"
+  short_description: "Set up governance and twelve specialist chats"
+  default_prompt: "Use $asdg-create-team to create my project team, reusing existing specialist chats."

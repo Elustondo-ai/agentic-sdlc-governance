@@ -6,9 +6,9 @@ No project-specific requirements or sprint state are stored here by default.
 
 ## Shared references
 
-- [Lifecycle baseline](../../../docs/status/lifecycle-baseline.md)
-- [Sprint-governance review](../../../docs/presentations/asdg-sprint-governance-review/README.md)
-- [Codex agents and adapters](../../../docs/presentations/codex-agent-skills-and-adapters/README.md)
+- [Lifecycle baseline](../../docs/lifecycle-baseline.md)
+- [Sprint controls](../../00-governance/docs/sprint-gate.md)
+- [Native integration](../../docs/native-integration.md)
 
 Use [shared documentation](../../skills/asdg-documentation/SKILL.md) for source-first visual/notes units.
 Specialist example: Analyze supplied latency observations and incident feedback; a request to implement a fix or reprioritize approved scope is OUT_OF_SCOPE.

@@ -1,0 +1,5 @@
+interface:
+  display_name: "ASDG decision"
+  short_description: "Analyze and document decisions in context"
+  default_prompt: "Use $asdg-decision to analyze or document the decision in our current project and specialist context."
+

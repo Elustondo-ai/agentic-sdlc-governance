@@ -1,0 +1,201 @@
+{
+  "recorded_at": "2026-11-04T18:52:56.343711+00:00",
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+  "starting_head": "7c5d0ca3869ca2bf6472ac7a408b809dc4823cf9",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "files": [
+    {
+      "path": "README.md",
+      "before_sha256": "bb05059131363fb349dbf18eaa5b3df1cb710c7f92531a98b4898dfa4e539444",
+      "sha256": "c6277bfe3c40b063ed80aeba26e14c527699ea24e45b1675455ac8492baefaa9"
+    },
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "77e73e6d9fd87dc9aa1d3a1e5e29f7a45eff7139a55a43533773b3468f040cf7",
+      "sha256": "41445970717bff705b562e85884a149113272313443aabd01db2813c28411fa8"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/build.log",
+      "before_sha256": "3adb9cf877afc19b4fd92e55945bf4da5f1c351d4e7e1aca758da45039d1aec4",
+      "sha256": "2085c184e5a2b50784998c492856431b0ff8e27cfcf15653eabc32a1c55772a5"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/changed-paths.json",
+      "before_sha256": "6a791aec6fdd9ed05a0f6fc22acf53b6bb90ae766cbf3e1b57bfe370d140aac1",
+      "sha256": "1f65be70ef8cdeff5d9fc73a88afab366e6cc3859deabea514f9e93eada4e913"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/human-test.json",
+      "before_sha256": "ce8f16163d8b7f8862de353d1ae53ca8beee6668424d7cb297f42c2ce1a12ffb",
+      "sha256": "a347287df73654cc3cc6fc528a7696c6870e01cfd691ec21b742135e0f385b19"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.5-review-readme-onboarding.md",
+      "before_sha256": null,
+      "sha256": "d2f85b0c0cc877a391dc16dba400e7cf42e69e585d175967c692332802b676f6"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "1a1c6072b6cb34e8cdc1b1f4c14efe4fcb8a82150f83c1267d5b1a0a2fa1c7a7",
+      "sha256": "9e7e7ffcf5b0972a62be950022f6f842c263956d4f677336d060b8f4b1d3cfb3"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "99174f395a09c7ad016978b5f57dd4ef56852ee5699707be027d6df62f46df95",
+      "sha256": "89e98d9fc074aee8e097b38629d2dcc5447704ea47856d97acd7be5ebaa2f01f"
+    }
+  ],
+  "self_inventory": "This JSON receipt is also new; self hash omitted.",
+  "preserved_review_events": 1838,
+  "appended_review_events": 6,
+  "local_links": [
+    {
+      "source": "README.md",
+      "link": "docs/presentations/asdg-introduction/README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "docs/presentations/README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "asdg/docs/install-zip-prompt.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "asdg/docs/installation.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "asdg/docs/client-integrations.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "asdg/docs/install-clone-prompt.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "asdg/docs/synchronization.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "asdg/docs/images/distribution-flow.svg",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "asdg/docs/lifecycle-baseline.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "asdg/00-governance/types/agent-catalog.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "asdg/00-governance/docs/runtime-contract.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "asdg/scripts/cli.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "asdg/docs/distribution-build.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "asdg/docs/provenance.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "link": "docs/asdg/07-planning/02.1-review-provider-promotion.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "link": "asdg/AGENTS.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "link": "asdg/skills/asdg-focus/session-policy.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "link": "asdg/admin/AGENTS.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "link": "asdg/docs/install-zip-prompt.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "link": "asdg/docs/install-clone-prompt.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "link": "asdg/docs/synchronization.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "link": "asdg/00-governance/docs/stage-perspectives.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "link": "asdg/docs/lifecycle-baseline.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "link": "asdg/00-governance/docs/documentation-standard.md",
+      "exists": true
+    }
+  ],
+  "public_http": {
+    "release_zip": 404,
+    "introduction_source": 200,
+    "presentation_collection": 200,
+    "zip_prompt": 404,
+    "clone_prompt": 404
+  },
+  "download_verification": "Public asset unavailable; 404 text response is not a ZIP. Local candidate checked separately.",
+  "local_candidate": {
+    "path": "build/distributions/asdg-0.3.0-pilot.1.zip",
+    "sha256": "d094a87e7deb2d5c8d722ff34271142f4213fd94393b323e99deb553a1cf0434",
+    "single_root": "asdg/",
+    "files": 399,
+    "crc_manifest_sidecar": "PASS",
+    "published": false
+  },
+  "verification": {
+    "package_integrity": "PASS",
+    "regression_tests": 128,
+    "python": "3.15.0",
+    "native_apps_tested": false,
+    "live_consent_stops_tested": false,
+    "private_path_email_scan": "PASS for three named evidence files and this new report/receipt"
+  },
+  "history_note": "Installation evidence before/after hashes are preserved as original task observations; this receipt records current cleaned states."
+}

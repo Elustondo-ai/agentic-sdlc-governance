@@ -1,0 +1,424 @@
+ASDG promote: dry run; no writes
+Source: /Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach (0.2.0-pilot.2)
+Target: /Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance (0.3.0-pilot.1)
+Baseline: shared delivery manifest MANIFEST.json
+added: 0, modified: 0, deleted: 0, unchanged: 395, conflicting: 19
+UNCHANGED    asdg/00-governance/AGENTS.md — same content
+UNCHANGED    asdg/00-governance/README.md — same content
+UNCHANGED    asdg/00-governance/docs/README.md — same content
+UNCHANGED    asdg/00-governance/docs/code-companions.md — same content
+UNCHANGED    asdg/00-governance/docs/continuation.md — same content
+UNCHANGED    asdg/00-governance/docs/documentation-authority.md — same content
+UNCHANGED    asdg/00-governance/docs/documentation-review.md — same content
+UNCHANGED    asdg/00-governance/docs/documentation-standard.md — same content
+UNCHANGED    asdg/00-governance/docs/gui-visuals.md — same content
+UNCHANGED    asdg/00-governance/docs/images/documentation-authority.svg — same content
+UNCHANGED    asdg/00-governance/docs/images/gui-visuals.svg — same content
+UNCHANGED    asdg/00-governance/docs/lifecycle-evidence.md — same content
+UNCHANGED    asdg/00-governance/docs/runtime-contract.md — same content
+UNCHANGED    asdg/00-governance/docs/session-logging.md — same content
+UNCHANGED    asdg/00-governance/docs/sprint-gate.md — same content
+UNCHANGED    asdg/00-governance/docs/sprint-state.md — same content
+UNCHANGED    asdg/00-governance/docs/stage-layout.md — same content
+UNCHANGED    asdg/00-governance/docs/stage-perspectives-map.md — same content
+UNCHANGED    asdg/00-governance/docs/stage-perspectives.md — same content
+UNCHANGED    asdg/00-governance/docs/stage-snapshot-template.md — same content
+UNCHANGED    asdg/00-governance/docs/state-engine.md — same content
+UNCHANGED    asdg/00-governance/docs/status-advice.md — same content
+UNCHANGED    asdg/00-governance/skills/review-routing/SKILL.md — same content
+UNCHANGED    asdg/00-governance/types/agent-catalog.json — same content
+UNCHANGED    asdg/00-governance/types/cli-project-contract.md — same content
+UNCHANGED    asdg/00-governance/types/contract.md — same content
+CONFLICTING  asdg/00-governance/types/document-reviews.json — both changed since baseline
+UNCHANGED    asdg/00-governance/types/interaction-contract.md — same content
+UNCHANGED    asdg/00-governance/types/lifecycle-rules.json — same content
+UNCHANGED    asdg/00-governance/types/log-contract.md — same content
+UNCHANGED    asdg/00-governance/types/migrations/legacy-catalog-v0.2.json — same content
+UNCHANGED    asdg/00-governance/types/migrations/namespace-map.json — same content
+UNCHANGED    asdg/00-governance/types/migrations/speaker-coach-exporters.patch — same content
+UNCHANGED    asdg/01-context-and-domain-analysis/AGENTS.md — same content
+UNCHANGED    asdg/01-context-and-domain-analysis/README.md — same content
+UNCHANGED    asdg/01-context-and-domain-analysis/docs/README.md — same content
+UNCHANGED    asdg/01-context-and-domain-analysis/skills/analyze-context/SKILL.md — same content
+UNCHANGED    asdg/01-context-and-domain-analysis/src/README.md — same content
+UNCHANGED    asdg/01-context-and-domain-analysis/tests/acceptance.md — same content
+UNCHANGED    asdg/01-context-and-domain-analysis/types/contract.md — same content
+UNCHANGED    asdg/02-purpose/AGENTS.md — same content
+UNCHANGED    asdg/02-purpose/README.md — same content
+UNCHANGED    asdg/02-purpose/docs/README.md — same content
+UNCHANGED    asdg/02-purpose/skills/elicit-purpose/SKILL.md — same content
+UNCHANGED    asdg/02-purpose/skills/elicit-purpose/opening.md — same content
+UNCHANGED    asdg/02-purpose/src/README.md — same content
+UNCHANGED    asdg/02-purpose/tests/acceptance.md — same content
+UNCHANGED    asdg/02-purpose/types/completion.md — same content
+UNCHANGED    asdg/02-purpose/types/contract.md — same content
+UNCHANGED    asdg/03-system-model-and-use-cases/AGENTS.md — same content
+UNCHANGED    asdg/03-system-model-and-use-cases/README.md — same content
+UNCHANGED    asdg/03-system-model-and-use-cases/docs/README.md — same content
+UNCHANGED    asdg/03-system-model-and-use-cases/skills/model-use-cases/SKILL.md — same content
+UNCHANGED    asdg/03-system-model-and-use-cases/src/README.md — same content
+UNCHANGED    asdg/03-system-model-and-use-cases/tests/acceptance.md — same content
+UNCHANGED    asdg/03-system-model-and-use-cases/types/contract.md — same content
+UNCHANGED    asdg/04-benchmarks-and-eval-strategy/AGENTS.md — same content
+UNCHANGED    asdg/04-benchmarks-and-eval-strategy/README.md — same content
+UNCHANGED    asdg/04-benchmarks-and-eval-strategy/docs/README.md — same content
+UNCHANGED    asdg/04-benchmarks-and-eval-strategy/skills/evaluate-alternatives/SKILL.md — same content
+UNCHANGED    asdg/04-benchmarks-and-eval-strategy/src/README.md — same content
+UNCHANGED    asdg/04-benchmarks-and-eval-strategy/tests/acceptance.md — same content
+UNCHANGED    asdg/04-benchmarks-and-eval-strategy/types/contract.md — same content
+UNCHANGED    asdg/05-high-level-design-and-architecture/AGENTS.md — same content
+UNCHANGED    asdg/05-high-level-design-and-architecture/README.md — same content
+UNCHANGED    asdg/05-high-level-design-and-architecture/docs/README.md — same content
+UNCHANGED    asdg/05-high-level-design-and-architecture/docs/architectural-decisions.md — same content
+UNCHANGED    asdg/05-high-level-design-and-architecture/skills/decision/SKILL.md — same content
+UNCHANGED    asdg/05-high-level-design-and-architecture/skills/propose-architecture/SKILL.md — same content
+UNCHANGED    asdg/05-high-level-design-and-architecture/src/README.md — same content
+UNCHANGED    asdg/05-high-level-design-and-architecture/tests/acceptance.md — same content
+UNCHANGED    asdg/05-high-level-design-and-architecture/types/contract.md — same content
+UNCHANGED    asdg/06-viable-proof-of-concept/AGENTS.md — same content
+UNCHANGED    asdg/06-viable-proof-of-concept/README.md — same content
+UNCHANGED    asdg/06-viable-proof-of-concept/docs/README.md — same content
+UNCHANGED    asdg/06-viable-proof-of-concept/skills/plan-experiment/SKILL.md — same content
+UNCHANGED    asdg/06-viable-proof-of-concept/src/README.md — same content
+UNCHANGED    asdg/06-viable-proof-of-concept/tests/acceptance.md — same content
+UNCHANGED    asdg/06-viable-proof-of-concept/types/contract.md — same content
+UNCHANGED    asdg/07-planning/AGENTS.md — same content
+UNCHANGED    asdg/07-planning/README.md — same content
+UNCHANGED    asdg/07-planning/docs/README.md — same content
+UNCHANGED    asdg/07-planning/skills/prepare-plan/SKILL.md — same content
+UNCHANGED    asdg/07-planning/src/README.md — same content
+UNCHANGED    asdg/07-planning/tests/acceptance.md — same content
+UNCHANGED    asdg/07-planning/types/contract.md — same content
+UNCHANGED    asdg/08-low-level-design/AGENTS.md — same content
+UNCHANGED    asdg/08-low-level-design/README.md — same content
+UNCHANGED    asdg/08-low-level-design/docs/README.md — same content
+UNCHANGED    asdg/08-low-level-design/skills/specify-design/SKILL.md — same content
+UNCHANGED    asdg/08-low-level-design/src/README.md — same content
+UNCHANGED    asdg/08-low-level-design/tests/acceptance.md — same content
+UNCHANGED    asdg/08-low-level-design/types/contract.md — same content
+UNCHANGED    asdg/09-build-and-test-cycle/AGENTS.md — same content
+UNCHANGED    asdg/09-build-and-test-cycle/README.md — same content
+UNCHANGED    asdg/09-build-and-test-cycle/docs/README.md — same content
+UNCHANGED    asdg/09-build-and-test-cycle/skills/review-build-task/SKILL.md — same content
+UNCHANGED    asdg/09-build-and-test-cycle/src/README.md — same content
+UNCHANGED    asdg/09-build-and-test-cycle/tests/acceptance.md — same content
+UNCHANGED    asdg/09-build-and-test-cycle/types/contract.md — same content
+UNCHANGED    asdg/10-document-review-and-release/AGENTS.md — same content
+UNCHANGED    asdg/10-document-review-and-release/README.md — same content
+UNCHANGED    asdg/10-document-review-and-release/docs/README.md — same content
+UNCHANGED    asdg/10-document-review-and-release/skills/review-readiness/SKILL.md — same content
+UNCHANGED    asdg/10-document-review-and-release/src/README.md — same content
+UNCHANGED    asdg/10-document-review-and-release/tests/acceptance.md — same content
+UNCHANGED    asdg/10-document-review-and-release/types/contract.md — same content
+UNCHANGED    asdg/11-operational-reality-devops-and-user-acceptance/AGENTS.md — same content
+UNCHANGED    asdg/11-operational-reality-devops-and-user-acceptance/README.md — same content
+UNCHANGED    asdg/11-operational-reality-devops-and-user-acceptance/docs/README.md — same content
+UNCHANGED    asdg/11-operational-reality-devops-and-user-acceptance/skills/assess-operations/SKILL.md — same content
+UNCHANGED    asdg/11-operational-reality-devops-and-user-acceptance/src/README.md — same content
+UNCHANGED    asdg/11-operational-reality-devops-and-user-acceptance/tests/acceptance.md — same content
+UNCHANGED    asdg/11-operational-reality-devops-and-user-acceptance/types/contract.md — same content
+UNCHANGED    asdg/12-observability-insights-and-learning/AGENTS.md — same content
+UNCHANGED    asdg/12-observability-insights-and-learning/README.md — same content
+UNCHANGED    asdg/12-observability-insights-and-learning/docs/README.md — same content
+UNCHANGED    asdg/12-observability-insights-and-learning/skills/derive-insights/SKILL.md — same content
+UNCHANGED    asdg/12-observability-insights-and-learning/src/README.md — same content
+UNCHANGED    asdg/12-observability-insights-and-learning/tests/acceptance.md — same content
+UNCHANGED    asdg/12-observability-insights-and-learning/types/contract.md — same content
+CONFLICTING  asdg/AGENTS.md — both changed since baseline
+UNCHANGED    asdg/CODEX-PROMPT.md — same content
+UNCHANGED    asdg/LICENSE — same content
+CONFLICTING  asdg/README.md — both changed since baseline
+UNCHANGED    asdg/admin/AGENTS.md — same content
+UNCHANGED    asdg/admin/skills/maintain-rules/SKILL.md — same content
+UNCHANGED    asdg/admin/types/admin-role.json — same content
+UNCHANGED    asdg/admin/types/contract.md — same content
+UNCHANGED    asdg/docs/client-integrations.md — same content
+UNCHANGED    asdg/docs/distribution-build.md — local change retained
+UNCHANGED    asdg/docs/images/client-integrations.svg — same content
+UNCHANGED    asdg/docs/images/distribution-flow.svg — local change retained
+UNCHANGED    asdg/docs/images/synchronization.svg — local change retained
+CONFLICTING  asdg/docs/installation.md — both changed since baseline
+UNCHANGED    asdg/docs/lifecycle-baseline.md — same content
+UNCHANGED    asdg/docs/native-integration.md — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/01-comparison.md — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/02-concerns.md — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/03-focus-behavior.md — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/04-skill-composition.md — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/05-session-contract.md — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/06-collaboration.md — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/07-role-perspectives.md — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/08-cost-example.md — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/09-adoption-and-tests.md — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/10-option-role-only.md — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/11-option-specialist-grid.md — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/12-option-composition.md — same content
+CONFLICTING  asdg/docs/proposals/roles-concerns-and-focus/README.md — no common baseline for different content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/images/adoption.svg — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/images/collaboration.svg — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/images/composition.svg — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/images/cost.svg — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/images/grid.svg — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/images/model.svg — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/images/options.svg — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/images/perspectives.svg — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/images/routing.svg — same content
+UNCHANGED    asdg/docs/proposals/roles-concerns-and-focus/images/session.svg — same content
+UNCHANGED    asdg/docs/provenance.md — local change retained
+CONFLICTING  asdg/docs/review-loop.md — both changed since baseline
+UNCHANGED    asdg/docs/root-layout.md — same content
+UNCHANGED    asdg/docs/synchronization.md — local change retained
+UNCHANGED    asdg/docs/usage.md — same content
+UNCHANGED    asdg/docs/verification.md — same content
+UNCHANGED    asdg/metadata/MANIFEST.json — local change retained
+UNCHANGED    asdg/metadata/README.md — local change retained
+UNCHANGED    asdg/metadata/deliveries/0.2.0-pilot.1.json — same content
+UNCHANGED    asdg/metadata/deliveries/0.2.0-pilot.2.json — local change retained
+UNCHANGED    asdg/metadata/distribution.json — local change retained
+UNCHANGED    asdg/metadata/package-files.json — local change retained
+UNCHANGED    asdg/metadata/refactors/root-layout-2026-10-20.json — same content
+UNCHANGED    asdg/metadata/source-manifest.json — same content
+UNCHANGED    asdg/scaffolds/stages/00-governance.md — same content
+UNCHANGED    asdg/scaffolds/stages/01-context-and-domain-analysis.md — same content
+UNCHANGED    asdg/scaffolds/stages/02-purpose.md — same content
+UNCHANGED    asdg/scaffolds/stages/03-system-model-and-use-cases.md — same content
+UNCHANGED    asdg/scaffolds/stages/04-benchmarks-and-eval-strategy.md — same content
+UNCHANGED    asdg/scaffolds/stages/05-high-level-design-and-architecture.md — same content
+UNCHANGED    asdg/scaffolds/stages/06-viable-proof-of-concept.md — same content
+UNCHANGED    asdg/scaffolds/stages/07-planning.md — same content
+UNCHANGED    asdg/scaffolds/stages/08-low-level-design.md — same content
+UNCHANGED    asdg/scaffolds/stages/09-build-and-test-cycle.md — same content
+UNCHANGED    asdg/scaffolds/stages/10-document-review-and-release.md — same content
+UNCHANGED    asdg/scaffolds/stages/11-operational-reality-devops-and-user-acceptance.md — same content
+UNCHANGED    asdg/scaffolds/stages/12-observability-insights-and-learning.md — same content
+CONFLICTING  asdg/scripts/README.md — both changed since baseline
+UNCHANGED    asdg/scripts/build_distribution.md — local change retained
+UNCHANGED    asdg/scripts/build_distribution.py — local change retained
+CONFLICTING  asdg/scripts/check.md — no common baseline for different content
+UNCHANGED    asdg/scripts/check.py — local change retained
+UNCHANGED    asdg/scripts/cli.md — same content
+UNCHANGED    asdg/scripts/cli.py — same content
+UNCHANGED    asdg/scripts/hook.md — same content
+UNCHANGED    asdg/scripts/hook.py — same content
+UNCHANGED    asdg/scripts/images/check-flow.svg — same content
+UNCHANGED    asdg/scripts/images/cli-flow.svg — same content
+UNCHANGED    asdg/scripts/images/hook-flow.svg — same content
+UNCHANGED    asdg/scripts/images/init-flow.svg — same content
+UNCHANGED    asdg/scripts/init.md — same content
+UNCHANGED    asdg/scripts/init.py — same content
+CONFLICTING  asdg/scripts/lib/README.md — both changed since baseline
+UNCHANGED    asdg/scripts/lib/agent_config.md — same content
+UNCHANGED    asdg/scripts/lib/agent_config.py — same content
+UNCHANGED    asdg/scripts/lib/agent_log_event.md — same content
+UNCHANGED    asdg/scripts/lib/agent_log_event.py — same content
+UNCHANGED    asdg/scripts/lib/agent_log_hook.md — same content
+UNCHANGED    asdg/scripts/lib/agent_log_hook.py — same content
+UNCHANGED    asdg/scripts/lib/agent_log_store.md — same content
+UNCHANGED    asdg/scripts/lib/agent_log_store.py — same content
+CONFLICTING  asdg/scripts/lib/cli.md — no common baseline for different content
+CONFLICTING  asdg/scripts/lib/cli.py — both changed since baseline
+UNCHANGED    asdg/scripts/lib/cli_advice.md — same content
+UNCHANGED    asdg/scripts/lib/cli_advice.py — same content
+UNCHANGED    asdg/scripts/lib/cli_advice_report.md — same content
+UNCHANGED    asdg/scripts/lib/cli_advice_report.py — same content
+UNCHANGED    asdg/scripts/lib/cli_clients.md — same content
+UNCHANGED    asdg/scripts/lib/cli_clients.py — same content
+UNCHANGED    asdg/scripts/lib/cli_dashboard.md — same content
+UNCHANGED    asdg/scripts/lib/cli_dashboard.py — same content
+CONFLICTING  asdg/scripts/lib/cli_files.md — no common baseline for different content
+UNCHANGED    asdg/scripts/lib/cli_files.py — local change retained
+UNCHANGED    asdg/scripts/lib/cli_hook.md — same content
+UNCHANGED    asdg/scripts/lib/cli_hook.py — same content
+CONFLICTING  asdg/scripts/lib/cli_model.md — no common baseline for different content
+UNCHANGED    asdg/scripts/lib/cli_model.py — local change retained
+UNCHANGED    asdg/scripts/lib/cli_policy.md — same content
+UNCHANGED    asdg/scripts/lib/cli_policy.py — same content
+CONFLICTING  asdg/scripts/lib/cli_project.md — no common baseline for different content
+CONFLICTING  asdg/scripts/lib/cli_project.py — both changed since baseline
+UNCHANGED    asdg/scripts/lib/cli_runtime_env.md — same content
+UNCHANGED    asdg/scripts/lib/cli_runtime_env.py — same content
+UNCHANGED    asdg/scripts/lib/cli_session.md — same content
+UNCHANGED    asdg/scripts/lib/cli_session.py — same content
+UNCHANGED    asdg/scripts/lib/cli_sprint.md — same content
+UNCHANGED    asdg/scripts/lib/cli_sprint.py — same content
+UNCHANGED    asdg/scripts/lib/cli_status.md — same content
+UNCHANGED    asdg/scripts/lib/cli_status.py — same content
+UNCHANGED    asdg/scripts/lib/cli_sync.md — local change retained
+UNCHANGED    asdg/scripts/lib/cli_sync.py — local change retained
+UNCHANGED    asdg/scripts/lib/cli_sync_manifest.md — local change retained
+UNCHANGED    asdg/scripts/lib/cli_sync_manifest.py — local change retained
+UNCHANGED    asdg/scripts/lib/distribution_files.md — local change retained
+UNCHANGED    asdg/scripts/lib/distribution_files.py — local change retained
+UNCHANGED    asdg/scripts/lib/documentation.md — same content
+UNCHANGED    asdg/scripts/lib/documentation.py — same content
+UNCHANGED    asdg/scripts/lib/images/agent_config-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/agent_log_event-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/agent_log_hook-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/agent_log_store-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli_advice-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli_advice_report-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli_clients-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli_dashboard-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli_files-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli_hook-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli_model-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli_policy-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli_project-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli_runtime_env-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli_session-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli_sprint-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/cli_status-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/documentation-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/purpose_review-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/images/stage_review-flow.svg — same content
+UNCHANGED    asdg/scripts/lib/purpose_review.md — same content
+UNCHANGED    asdg/scripts/lib/purpose_review.py — same content
+UNCHANGED    asdg/scripts/lib/stage_review.md — same content
+UNCHANGED    asdg/scripts/lib/stage_review.py — same content
+UNCHANGED    asdg/skills/README.md — same content
+UNCHANGED    asdg/skills/asdg-admin/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-admin/TRY-IT.md — same content
+UNCHANGED    asdg/skills/asdg-approve/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-approve/TRY-IT.md — same content
+UNCHANGED    asdg/skills/asdg-approve/recording.md — same content
+UNCHANGED    asdg/skills/asdg-attitude/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-attitude/TRY-IT.md — same content
+UNCHANGED    asdg/skills/asdg-attitude/attitudes.md — same content
+UNCHANGED    asdg/skills/asdg-create-team/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-decision/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-decision/example.md — same content
+UNCHANGED    asdg/skills/asdg-decision/images/decision-record.svg — same content
+UNCHANGED    asdg/skills/asdg-decision/images/decision-specialization.svg — same content
+UNCHANGED    asdg/skills/asdg-decision/record-format.md — same content
+UNCHANGED    asdg/skills/asdg-decision/specialization.md — same content
+UNCHANGED    asdg/skills/asdg-documentation/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-documentation/example.md — same content
+UNCHANGED    asdg/skills/asdg-focus/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-focus/TRY-IT.md — same content
+UNCHANGED    asdg/skills/asdg-focus/continuation-tests.md — same content
+UNCHANGED    asdg/skills/asdg-focus/focus-choices.md — same content
+UNCHANGED    asdg/skills/asdg-focus/images/focus-selection.svg — same content
+UNCHANGED    asdg/skills/asdg-focus/images/session-fields-simple.svg — same content
+UNCHANGED    asdg/skills/asdg-focus/images/session-fields.svg — same content
+UNCHANGED    asdg/skills/asdg-focus/images/session-title-parts.svg — same content
+UNCHANGED    asdg/skills/asdg-focus/rename-chat.md — same content
+UNCHANGED    asdg/skills/asdg-focus/session-policy.md — same content
+UNCHANGED    asdg/skills/asdg-focus/session-state.md — same content
+UNCHANGED    asdg/skills/asdg-focus/subject-focus.md — same content
+UNCHANGED    asdg/skills/asdg-init/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-init/agents/openai.yaml — same content
+UNCHANGED    asdg/skills/asdg-openspec-propose/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-openspec-propose/TRY-IT.md — same content
+UNCHANGED    asdg/skills/asdg-openspec-propose/evidence.md — same content
+UNCHANGED    asdg/skills/asdg-openspec-propose/images/proposal-flow.svg — same content
+UNCHANGED    asdg/skills/asdg-role/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-sprint-close/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-sprint-close/recording.md — same content
+UNCHANGED    asdg/skills/asdg-sprint-review/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-sprint-start/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-sprint-start/git-preflight.md — same content
+UNCHANGED    asdg/skills/asdg-status/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-status/status-format.md — same content
+UNCHANGED    asdg/skills/asdg-suggestion/SKILL.md — same content
+UNCHANGED    asdg/skills/asdg-view-dev/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-admin/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-admin/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-approve/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-approve/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-attitude/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-attitude/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-create-team/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-create-team/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-decision/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-decision/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-documentation/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-documentation/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-01-context/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-01-context/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-02-purpose/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-02-purpose/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-03-use-cases/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-03-use-cases/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-04-test-strategy/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-04-test-strategy/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-05-architecture/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-05-architecture/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-06-poc/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-06-poc/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-07-planning/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-07-planning/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-08-low-level-design/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-08-low-level-design/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-09-build-test/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-09-build-test/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-10-review-release/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-10-review-release/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-11-operations/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-11-operations/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-12-insights/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus-12-insights/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-focus/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-init/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-init/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-openspec-propose/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-openspec-propose/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-role/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-role/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-sprint-close/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-sprint-close/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-sprint-review/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-sprint-review/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-sprint-start/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-sprint-start/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-status/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-status/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-suggestion/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-suggestion/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-view-dev/SKILL.md — same content
+UNCHANGED    asdg/templates/.agents/skills/asdg-view-dev/agents/openai.yaml — same content
+UNCHANGED    asdg/templates/.codex/agents/asdg_01.toml — same content
+UNCHANGED    asdg/templates/.codex/agents/asdg_02.toml — same content
+UNCHANGED    asdg/templates/.codex/agents/asdg_03.toml — same content
+UNCHANGED    asdg/templates/.codex/agents/asdg_04.toml — same content
+UNCHANGED    asdg/templates/.codex/agents/asdg_05.toml — same content
+UNCHANGED    asdg/templates/.codex/agents/asdg_06.toml — same content
+UNCHANGED    asdg/templates/.codex/agents/asdg_07.toml — same content
+UNCHANGED    asdg/templates/.codex/agents/asdg_08.toml — same content
+UNCHANGED    asdg/templates/.codex/agents/asdg_09.toml — same content
+UNCHANGED    asdg/templates/.codex/agents/asdg_10.toml — same content
+UNCHANGED    asdg/templates/.codex/agents/asdg_11.toml — same content
+UNCHANGED    asdg/templates/.codex/agents/asdg_12.toml — same content
+UNCHANGED    asdg/templates/.codex/agents/asdg_coordinator.toml — same content
+CONFLICTING  asdg/tests/README.md — no common baseline for different content
+UNCHANGED    asdg/tests/acceptance.md — same content
+UNCHANGED    asdg/tests/continuation_fixture.md — same content
+UNCHANGED    asdg/tests/continuation_fixture.py — same content
+UNCHANGED    asdg/tests/images/continuation_fixture-flow.svg — same content
+UNCHANGED    asdg/tests/images/test_agent_config-flow.svg — same content
+UNCHANGED    asdg/tests/images/test_portable-flow.svg — same content
+UNCHANGED    asdg/tests/images/test_purpose_review-flow.svg — same content
+UNCHANGED    asdg/tests/images/test_stage_review-flow.svg — same content
+UNCHANGED    asdg/tests/test_agent_config-cases.md — same content
+UNCHANGED    asdg/tests/test_agent_config.md — same content
+UNCHANGED    asdg/tests/test_agent_config.py — same content
+UNCHANGED    asdg/tests/test_distribution.md — local change retained
+UNCHANGED    asdg/tests/test_distribution.py — local change retained
+UNCHANGED    asdg/tests/test_portable-cases-clients.md — same content
+UNCHANGED    asdg/tests/test_portable-cases-roles.md — same content
+CONFLICTING  asdg/tests/test_portable-cases.md — no common baseline for different content
+CONFLICTING  asdg/tests/test_portable.md — no common baseline for different content
+CONFLICTING  asdg/tests/test_portable.py — both changed since baseline
+UNCHANGED    asdg/tests/test_purpose_review-cases.md — same content
+UNCHANGED    asdg/tests/test_purpose_review.md — same content
+UNCHANGED    asdg/tests/test_purpose_review.py — same content
+UNCHANGED    asdg/tests/test_stage_review-cases.md — same content
+UNCHANGED    asdg/tests/test_stage_review.md — same content
+UNCHANGED    asdg/tests/test_stage_review.py — same content
+UNCHANGED    asdg/tests/test_sync.md — local change retained
+UNCHANGED    asdg/tests/test_sync.py — local change retained
+NOTE: Only asdg/ distribution files are synchronized; installed adapters, hooks and project state are unchanged.
+NOTE: Apply records adoption, not a release or methodology approval.
+NOTE: Source worktree differs from its delivery manifest; snapshot hashes identify the actual proposed bytes.
+Plan: adfe6f32a0c01f27860983baf2c41b310a96c464a5c63a444665898f875b11fa
+After review: repeat with --apply --plan <digest>; conflicts block all writes.

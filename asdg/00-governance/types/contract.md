@@ -14,7 +14,7 @@ Proposals include assumptions, supporting evidence, limitations and unresolved r
 ## Invariants
 
 Do not perform specialist deliverables as a substitute for delegation; do not grant approval or modify state unilaterally.
-Use the shared [response envelope](../../00-governance/types/interaction-contract.md).
+Use the shared [response envelope](interaction-contract.md).
 One authoritative project/sprint state; do not create a second copy in this package.
 Evidence of a proposal, attempted execution, observed success and human approval are distinct.
 No type-language mandate; this Markdown is the initial contract notation.
@@ -24,4 +24,4 @@ No type-language mandate; this Markdown is the initial contract notation.
 `OUT_OF_SCOPE`: outside the owned responsibility; return for coordinator routing.
 `BLOCKED`: missing input, evidence, tool capability or evaluation-mode permission.
 `REVIEW_REQUIRED`: a proposal needs a human decision; no approval is inferred.
-In-scope mutations remain blocked while the native adapter is read-only.
+Save documentation under the client's `docs/` through [shared documentation authority](../docs/documentation-authority.md); application and state mutations retain their gates.

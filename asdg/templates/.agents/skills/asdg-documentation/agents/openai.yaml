@@ -1,0 +1,6 @@
+interface:
+  display_name: "ASDG documentation"
+  short_description: "Use the local ASDG project workflow"
+  default_prompt: "Use $asdg-documentation for this project."
+policy:
+  allow_implicit_invocation: false

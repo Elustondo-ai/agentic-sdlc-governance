@@ -1,53 +1,47 @@
 # Agentic SDLC repository instructions
 
-This repository develops ASDG: a human-governed, agent-operable software development method.
-`docs/` explains the product and records its development; `asdg/` contains reusable implementation.
-Read the root README and the task-relevant source material before changing files.
-Current explicit instructions from Pablo override older repository notes or recorded proposals.
+This repository is the canonical ASDG methodology provider. `asdg/` contains reusable implementation; `docs/` explains the method and records its development.
+Read root README, [methodology entry](asdg/AGENTS.md), [session policy](asdg/skills/asdg-focus/session-policy.md) and task-relevant sources before work.
+Current explicit instructions from Pablo override older notes and proposals.
 
-## Presentation work
+## Maintenance and distribution
 
-Use `asdg/skills/asdg-presentation/SKILL.md` for presentation creation, maintenance, and builds.
-The `.agents` entry points to that canonical capability; do not duplicate its standard.
-Presentation source folders under `docs/presentations/` are authoritative; generated exports are not.
-Each presentation owns a local ignored `build/`. Never stage generated decks or previews.
-Preserve meaning, source references and review events through the shared documentation standard.
+Agent changes to methodology run under explicitly selected [ASDG Admin](asdg/admin/AGENTS.md) within the human's bounded request.
+This provider is not an initialized application: use `python3 asdg/scripts/check.py --integrity` and applicable tests instead of client status/init.
+The first-time workflow is [ZIP + Prompt](asdg/docs/install-zip-prompt.md): download the versioned portable ZIP, extract its single `asdg/` folder into an existing Git root, stop if that folder exists, then paste the prompt in Claude Code or Codex.
+The assistant uses the single `asdg/scripts/init.py` engine: preview → explicit approval → apply and verify → offer optional Context survey and wait for a separate yes. No methodology clone or manual Python command is required of the user.
+For contributors, [Clone + Prompt](asdg/docs/install-clone-prompt.md) pins a full reviewed commit with a matching manifest; `asdg promote` brings pilot improvements into the local canonical checkout for review and a contributor PR, while `asdg upgrade` adopts an accepted packaged version in another project.
+Each client (for example LifeBuckets and iShop) owns its versioned `asdg/` copy; follow the [synchronization contract](asdg/docs/synchronization.md) for previews, approved apply and conflicts.
+Before every human commit/push, run `python3 scripts/prepare_commit.py` to refresh the candidate manifest and regenerate the portable ZIP/checksum. Review and include the refreshed manifest in the commit; re-run after further package edits.
+The wrapper reuses `asdg/scripts/build_distribution.py`; the reviewed file list is `asdg/metadata/package-files.json`. No automatic Git hook or publication is installed.
+Generated ZIPs, checksums and previews belong under ignored `build/`; never stage them.
+`bin/asdg` delegates to the portable runtime. Old provider installer/baseline code is retained as history, not a second active policy engine.
+Canonical skill definitions remain under `asdg/skills/`; native adapters are thin discovery entry points.
+Templates under `asdg/templates/` generate client adapters. Do not copy a client's state, installed configuration, logs or application evidence into the distribution.
+Keep this repository's disabled `.agents` discovery entries disabled unless Pablo explicitly requests activation.
+Before claiming platform operation, verify native discovery and an actual invocation on that platform; structural tests are insufficient.
+ASDG-owned automation uses Python >= 3.9; applications may use any language.
 
-## Reusable skills and platform discovery
+## Presentation and component work
 
-- Canonical skill definitions and implementations live only under `asdg/skills/`.
-- `.agents/skills/` exposes skills to Codex and GitHub Copilot; `.claude/skills/` retains the existing Claude adapters. Adapters are discovery entry points, **not** separate policies or implementation copies.
-- For creating or validating component structure, use `asdg/skills/asdg-component/SKILL.md`.
-- For documentation/presentations, use `asdg/skills/asdg-presentation/SKILL.md`.
-- For video production, the presentation skill may use `asdg/components/video-builder/`; its current eSpeak implementation is a proof of concept, not an approved high-quality narration engine.
-- Before declaring a skill operational on a platform, verify its native discovery and an actual invocation on that platform. A folder or successful unit test alone is insufficient.
-- Skills define capabilities; a new named agent requires a distinct responsibility boundary and separate review.
+Use `asdg/skills/asdg-presentation/SKILL.md` for presentation creation, maintenance and builds; do not duplicate its standard.
+Presentation source folders under `docs/presentations/` are authoritative; each owns an ignored `build/` for generated exports.
+Use `asdg/skills/asdg-component/SKILL.md` for component creation/structure validation.
+Presentation, component and video tools remain provider capabilities outside the portable core's acceptance claim.
+The video builder's eSpeak implementation is a proof of concept, not approved high-quality narration.
 
 ## Scope and evidence
 
-Keep changes bounded and reviewable; preserve unrelated local work.
-Distinguish implemented, tested, proposed, and human-approved states.
-For all 13 roles, use [Intended / Actual / Planned](asdg/00-governance/docs/stage-perspectives.md) in stage assessments.
-Canonical identities and Purpose paths follow the catalogue; legacy identities exist only in migration records.
-Do not reconstruct or renumber the lifecycle from memory; read `docs/status/lifecycle-baseline.md`.
-Do not infer authorization for publication, pushes, deployment, deletion, or permission changes from a plan or a review marker.
-Pablo's explicit request to perform a consequential operation applies only to that operation and its stated scope.
+Keep changes bounded; preserve unrelated work and historical source material.
+Distinguish implemented, tested, proposed and human-approved states; all 13 project roles use [Intended / Actual / Planned](asdg/00-governance/docs/stage-perspectives.md).
+Preserve catalogue identities and [lifecycle numbering](asdg/docs/lifecycle-baseline.md); legacy identities exist only in migration records.
+Follow the [documentation standard](asdg/00-governance/docs/documentation-standard.md), with exact-hash review events and YAML-first skills.
 Never add or advance PME-APPROVED without explicit approval of the exact file state.
-Follow [the documentation standard](asdg/00-governance/docs/documentation-standard.md) for readable prose and hash-bound review history.
-Native SKILL YAML stays first; exact-state human approval remains fail-closed.
-Report actual verification and any failed operation; never describe unexecuted work as complete.
+A plan, review marker or prior operation grants no publication, commit, push, deployment, deletion or permission-change authority.
+Report actual verification and failed operations; generated files and passing tests are not approval.
 
-## Local CLI bootstrap
+## Conversation state
 
-ASDG-owned automation uses Python >= 3.9; governed applications may use any language.
-Use root `./bin/asdg install`; if its executable bit is absent, use `python3 bin/asdg install`.
-See `asdg/00-governance/docs/install-cli.md` for startup-file changes and limitations.
-`asdg init` initializes the caller's Git root, using the existing catalogue without copying roles.
-The CLI generates project hook configuration; it never grants hook trust, starts sprints, or grants approval.
-`status`, `next`, guard permissions and the local dashboard share the [state engine](asdg/00-governance/docs/state-engine.md).
-
-## ASDG conversation focus and status
-
-Use [the session policy](asdg/skills/asdg-focus/session-policy.md) on every turn; a new conversation has no specialist focus unless explicitly activated here.
-Select one of twelve named `asdg-focus-NN-*` skills; generic `asdg-focus <alias>` remains supported. Follow the shared `asdg/skills/asdg-focus/SKILL.md`; use `asdg-status` for inspection.
-Status never activates or clears a role. Keep focus in this conversation only; never infer it from folders, titles, other threads or project/sprint state.
+Follow the shared session policy on every turn. Governance is the default accountable role; specialist and Admin selection require their explicit activation rules.
+Keep role, subject focus and attitude in this conversation; never infer them from folders, titles, another chat or project state.
+Status inspects state without selecting or clearing a role. No shared ACTIVE_ROLE file is used.

@@ -1,0 +1,6 @@
+interface:
+  display_name: "ASDG admin"
+  short_description: "Explicitly switch this chat to ASDG Admin"
+  default_prompt: "Use $asdg-admin to switch this chat to ASDG Admin."
+policy:
+  allow_implicit_invocation: false

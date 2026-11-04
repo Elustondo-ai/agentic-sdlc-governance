@@ -1,0 +1,16 @@
+This is an unapproved local installation test candidate, not a released methodology version.
+Use this disposable test project: /private/tmp/asdg-human-install-er48ojw9/zip-human-project
+Initialize ASDG in this existing Git project using the already extracted asdg/ package.
+Use asdg/skills/asdg-init/SKILL.md and the project's existing instructions.
+Use Python 3.9+ and the single deterministic asdg/scripts/init.py engine.
+Select --client claude in Claude Code or --client codex in Codex; ask if uncertain.
+Inspect the Git root/status and record existing application-file hashes.
+Run python3 asdg/scripts/init.py --client CLIENT --dry-run.
+Show the source version/integrity, complete file plan and generated diffs, including hooks.
+STOP and wait for my explicit approval of this exact plan. Do not refresh a stale manifest.
+After I approve, repeat the same options with --apply --plan TOKEN_FROM_PREVIEW.
+Verify with python3 asdg/scripts/cli.py verify --json and repeat the dry run for no further changes.
+Report changed paths and preservation checks. Distinguish deterministic verification from actual native discovery/invocation and hook trust.
+Report installation complete only on success, then offer the optional Context survey and STOP.
+Never execute that survey or ask its questions without my separate affirmative response.
+Do not overwrite conflicts, bypass hooks, grant trust, resolve promotion conflicts, commit, push, merge, tag, publish or start a sprint.

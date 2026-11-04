@@ -6,9 +6,9 @@ No project-specific requirements or sprint state are stored here by default.
 
 ## Shared references
 
-- [Lifecycle baseline](../../../docs/status/lifecycle-baseline.md)
-- [Sprint-governance review](../../../docs/presentations/asdg-sprint-governance-review/README.md)
-- [Codex agents and adapters](../../../docs/presentations/codex-agent-skills-and-adapters/README.md)
+- [Lifecycle baseline](../../docs/lifecycle-baseline.md)
+- [Sprint controls](../../00-governance/docs/sprint-gate.md)
+- [Native integration](../../docs/native-integration.md)
 
 Use [shared documentation](../../skills/asdg-documentation/SKILL.md) for source-first visual/notes units.
 Specialist example: Review supplied staging test logs and an acceptance checklist; a request to deploy the release is blocked by evaluation mode and separate authority.

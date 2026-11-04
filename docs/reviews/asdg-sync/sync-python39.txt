@@ -1,0 +1,27 @@
+test_app_and_project_state_are_preserved (test_sync.SyncTests) ... ok
+test_apply_requires_reviewed_and_current_digest (test_sync.SyncTests) ... ok
+test_cli_both_directions_and_explicit_mode (test_sync.SyncTests) ... ok
+test_conflicting_modifications_block_all_writes (test_sync.SyncTests) ... ok
+test_delete_modify_conflict_and_untracked_deletion (test_sync.SyncTests) ... ok
+test_deleted_tracked_file (test_sync.SyncTests) ... ok
+test_dry_run_changes_neither_tree_nor_git_index (test_sync.SyncTests) ... ok
+test_identical_and_repeated_execution (test_sync.SyncTests) ... ok
+test_identity_version_and_binding_fail_closed (test_sync.SyncTests) ... ok
+test_legacy_tracked_pilot_and_shared_delivery (test_sync.SyncTests) ... ok
+test_local_only_changes_are_preserved_and_later_conflict (test_sync.SyncTests) ... ok
+test_missing_invalid_and_nested_paths (test_sync.SyncTests) ... ok
+test_missing_origin_corrupt_receipt_and_malformed_catalogue (test_sync.SyncTests) ... ok
+test_multiple_shared_archives_do_not_guess_ancestry (test_sync.SyncTests) ... ok
+test_new_files_both_directions (test_sync.SyncTests) ... ok
+test_no_shared_baseline_keeps_equal_files_and_blocks_differences (test_sync.SyncTests) ... ok
+test_real_portable_runtime_recognizes_upgrade_without_changing_project_state (test_sync.SyncTests) ... ok
+test_rollback_restores_deleted_files_on_write_failure (test_sync.SyncTests) ... ok
+test_symlinks_and_escaping_manifest_are_rejected (test_sync.SyncTests) ... ok
+test_unlisted_untracked_collision_is_not_overwritten (test_sync.SyncTests) ... ok
+test_updated_file (test_sync.SyncTests) ... ok
+test_upgrade_requires_current_canonical_manifest (test_sync.SyncTests) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 8.452s
+
+OK

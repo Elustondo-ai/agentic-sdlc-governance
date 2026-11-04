@@ -22,8 +22,8 @@ The coordinator remains ephemeral, read-only, with approvals denied.
 
 Python resolves the catalogue's `asdg-prepare-plan` capability and the project's
 `.asdg/project.json` binding. The declared planning folder must already exist.
-Reports go only in its `current/advice/` subfolder; the model supplies no destination.
-Speaker Coach's resolved destination is `docs/asdg/07-planning/current/advice/`.
+Reports go at the Stage 07 root as `02.1-status-<time>-<id>.md`; the model supplies no destination.
+The resolved destination is `docs/asdg/07-planning/`, with a matching JSON receipt beside each report.
 Timestamped names include a unique suffix; existing reports are never overwritten.
 Symlink destinations, traversal and foreign artifact roots are rejected.
 Python validates readable prose within 50 nonblank source lines.

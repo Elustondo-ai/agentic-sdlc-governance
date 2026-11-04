@@ -15,7 +15,8 @@ Initial contract notation: Markdown; runtime enforcement is not claimed.
 | handoff_state | Not needed, pending return, or observed delivery with evidence |
 
 OUT_OF_SCOPE requires requested_action, boundary_reason, relevant_context and approval_needed.
-A specialist does not fill in a chosen peer; the coordinator owns that decision.
+A formal routing choice belongs to the coordinator; an advisory peer pointer is distinct from a chosen or activated peer.
+Purpose and advisory utilities follow [continuation](../docs/continuation.md); preserve actual focus and delivery evidence.
 Human-readable paragraphs or a structured object may express this same contract.
 No process is invoked merely because the response contains a status word.
 Scope/authority disagreements return to the human rather than widening a role silently.

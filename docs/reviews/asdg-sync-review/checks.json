@@ -1,0 +1,33 @@
+[
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.15/bin/python3",
+      "-B",
+      "asdg/scripts/check.py"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: portable package, thirteen roles, skill syntax, references and Python 3.9 syntax.\nNative invocation, hook trust, runtime enforcement and human approval are separate checks.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.15/bin/python3",
+      "-B",
+      "asdg/scripts/check.py",
+      "--integrity"
+    ],
+    "exit_code": 1,
+    "stdout": "FAIL: Package manifest differs: 00-governance/types/document-reviews.json\nFAIL: Package manifest differs: docs/synchronization.md\nFAIL: Package manifest differs: scripts/lib/cli_files.md\nFAIL: Package manifest differs: scripts/lib/cli_files.py\nFAIL: Package manifest differs: scripts/lib/cli_sync.md\nFAIL: Package manifest differs: scripts/lib/cli_sync.py\nFAIL: Package manifest differs: scripts/lib/cli_sync_manifest.md\nFAIL: Package manifest differs: scripts/lib/cli_sync_manifest.py\nFAIL: Package manifest differs: tests/test_sync.md\nFAIL: Package manifest differs: tests/test_sync.py\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

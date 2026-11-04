@@ -1,7 +1,7 @@
 # ASDG state engine: observe, guard, guide
 
-Reusable implementation lives only in the methodology repository, under `asdg/00-governance/`.
-`src/cli_status.py:project_status` evaluates authoritative project/sprint/evidence files.
+Reusable implementation is embedded in the client under `asdg/00-governance/`.
+`asdg/scripts/lib/cli_status.py:project_status` evaluates authoritative project/sprint/evidence files.
 `cli_policy.py:implementation_permission` calculates permission for the CLI guard, hook and views.
 The deterministic engine owns facts/gates; `status` adds advisory coordinator output via the Codex SDK.
 
@@ -12,7 +12,7 @@ The deterministic engine owns facts/gates; `status` adds advisory coordinator ou
 - `.asdg/lifecycle.json`: stage evidence references; see [evidence format](lifecycle-evidence.md).
 - `docs/asdg/<stage>/`: referenced project evidence, not copied methodology implementation.
 - `.codex/hooks.json` and config: observable guard configuration; runtime trust remains UNKNOWN.
-- Canonical methodology labels/order: `docs/status/lifecycle-baseline.md` and agent catalogue.
+- Canonical methodology labels/order: `asdg/docs/lifecycle-baseline.md` and agent catalogue.
 - `types/lifecycle-rules.json`: explicit actions/evidence requirements sourced to stage contracts.
 
 Status includes project name/root, provider/version, structure, inferred stage, lifecycle readiness,
@@ -24,7 +24,7 @@ Evidence presence, execution, human approval and lifecycle completion remain dis
 ## Explicit recommendation rules
 
 1. Invalid structure/state/methodology rules: repair the reported error first.
-2. Otherwise select the earliest stage without registered, existing, non-empty evidence.
+2. Otherwise select the earliest unmet stage; empty Context is accepted when Purpose has current human acceptance.
 3. Stage 06 alone permits an explicit unnecessary-POC reason, as the canonical baseline allows.
 4. Stages 01–06: recommend the corresponding contract's work, in canonical order.
 5. From planning onward with no active sprint: define/review the plan and start scoped work.
@@ -50,5 +50,5 @@ It refreshes every 30 seconds, rejects non-loopback Host headers, escapes text a
 Runtime hook trust cannot be proven from files; local policy is not an adversarial OS boundary.
 Evidence indexing checks presence, not semantic quality or human approval; registration is manual.
 This is a first ordered-cycle heuristic, not a complete product roadmap/sprint state machine.
-Later-stage 11/12 requirements derive from the baseline; detailed contracts are absent.
-See [sprint gate](sprint-gate.md) for activation and tool coverage; [verification](state-engine-verification.md).
+Later-stage 11/12 evidence requirements derive from the baseline; their role contracts are included.
+See [sprint gate](sprint-gate.md) for activation and tool coverage; [verification](../../docs/verification.md).

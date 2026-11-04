@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASDG openspec propose"
+  short_description: "Propose a change from ASDG project evidence"
+  default_prompt: "Use $asdg-openspec-propose to prepare a planning-only OpenSpec proposal from the relevant ASDG evidence."

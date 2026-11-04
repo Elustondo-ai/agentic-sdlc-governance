@@ -1,45 +1,54 @@
-# Twelve Focus skills and chat rename — acceptance checks
+# Conversational Focus — behavioral acceptance
 
-Scope: the existing agentic-sdlc-governance provider checkout and its current discovery adapters.
-No consumer binding, native subagent TOML, lifecycle definition or execution permission is changed.
-Wait for Drive sync. Select a named skill from the actual Codex picker; restart only if needed.
-A skill/configuration file being present is not proof the app discovered or executed it.
+One picker entry serves governance and twelve specialist roles. These scenarios are test requirements, not passing results.
+Use disposable conversations and clients. File presence alone proves no native picker refresh, activation or title update.
 
-## First test — separate messages
+## Interpretation cases
 
-Supply `Target project: Speaker Coach` explicitly; the provider folder is not the consumer.
-1. New conversation: `$asdg-status` → None, no role activation and no rename.
-2. Select **ASDG Focus 02 — Purpose**, or send `$asdg-focus-02-purpose` with no argument.
-3. Expect canonical ASDG-02 reads, retained project context and a native current-chat rename attempt.
-4. Expected default for known Speaker Coach: `02 Purpose — Speaker Coach`.
-5. `$asdg-status` → Purpose remains selected; actual rename receipt shown separately from focus.
-6. `What is your role?` → grounded Purpose explanation; no reactivation required.
-7. Request Intended / Actual / Planned for Speaker Coach Purpose; unknown evidence stays unknown.
-8. Discuss one in-scope hypothetical task, then Status again → same focus and current substantive task.
+| Request/context | Expected behavior |
+| --- | --- |
+| “Focus on high level architecture” | Announce 05, load its canonical sources, then activate; no extra confirmation. |
+| “Help me specify exact request fields and error contracts” | Resolve 08 from responsibilities, not the word architecture. |
+| “Focus on testing,” with no task detail | Ask among plausible 04/09 choices, with a provisional recommendation and reason; preserve focus/title. |
+| “We need benchmark coverage; focus on testing” | Resolve 04 from context when unambiguous. |
+| “Focus on design,” with unresolved scope | Ask among the relevant design/model roles, not an arbitrary default. |
+| “High levl architecure” | Interpret the ordinary spelling errors when the intent is clear. |
+| No phrase or “focus on something useful” | Ask which specialist and list all twelve; Governance separately. |
+| Explicit conflicting role IDs | Clarify; no role switch or rename before the answer. |
+| User answers a pending clarification | Resolve that choice; retain the original task and load the chosen sources. |
+| Unanswered or preselected recommended option | Remain pending; no activation or title mutation. |
+| “Focus on our rules” or “fix the policy” with no Admin selector | Treat as a topic or proposal under the current role; never select Admin. |
+| Explicit “return to general” | Return to 00 Governance after loading its sources, attempt its title; retain subject, attitude and goal. |
+| `subject Security`, then `subject Performance` while Architecture is selected | Change subject only, retain role/attitude/goal and update the title with the real native outcome. |
+| Select Specs / Coding / ReviewQA, or the corresponding legacy role names | Resolve 08 / 09 / 10 respectively; short labels do not change responsibilities. |
+| `subject status` / `subject clear` | Report without mutation / explicitly clear subject only. |
+| Quoted example or “explain Focus” | Explain only; no activation. |
+| Numeric ID, canonical ID or native name | Preserve valid shorthand without requiring it. |
 
-## Other entries and boundaries
+## Activation and integration
 
-Test each of the twelve [picker entries](focus-choices.md) in a separate disposable conversation.
-Verify its fixed role ID, required source reads, canonical exclusions and title prefix; no parameter menu.
-Each currently remains read-only evaluation, including Build/Test, POC, Operations and Release.
-Choose Architecture after Purpose → successful switch loads ASDG-05 and updates the title; project remains.
-Unknown/conflicting selector or missing source → old focus/title remain; no false activation receipt.
-Generic `purpose`, `02-purpose`, `intent`, `02-purpose`, `02`, `ASDG-02`, `asdg_02` remain compatible.
-Generic command without a selector → points to named skills; no silent default or focus change.
-`asdg-focus clear` → None plus General title attempt; no permission change or coordinator activation.
-Status twice → no rename, activation or state change. New conversation does not inherit another's focus.
-Manual title edit alone → no role change. Explicit title override in activation → honor that title.
-Rename denied/unavailable → report it and keep successful focus. Uncertain outcome → no blind retry.
-Repeated selection refreshes the same role and can retry a known failed/unavailable rename.
-No rename path may touch project files, internal stores, other chats, deletion or archiving.
+1. New chat: after its required reads, Status reports role 00 Governance, subject NoFocus and attitude NoAttitude; it does not rename.
+2. Invoke Focus with “help me clarify the project's purpose”: load ASDG-02, attempt its title and begin the canonical read-only opening.
+3. Status and a later role question retain Purpose; discuss a task without repeating activation.
+4. Invoke Focus for Architecture: load 05 and attempt its title while retaining project context.
+5. Ambiguous selection or missing role source preserves the previous focus and title; report the actual limitation.
+6. Governance selects the coordinator; legacy clear also returns to it. Neither changes goal, subject, attitude or project state.
+7. Rename failure preserves a successfully selected role; report the actual tool result and avoid blind retries.
+8. Hide a Governance source: a new chat records role Unknown, reports `BLOCKED: GOVERNANCE_BOOTSTRAP` and performs no dependent work.
+9. Resume with a valid specialist receipt keeps it; a legacy None receipt resumes as Governance; an unclear one blocks until reaffirmed.
+10. New chat and legacy None migration each sync the title to `00 Governance` after the reads, or report UNCHANGED when it already matches.
+11. “Switch to ASDG Admin” loads Admin and titles the chat `ASDG Admin`; selecting it alone changes no rule.
+12. Under Governance or a specialist, a task blocked by an ASDG rule yields a proposal or question; the agent neither edits the rule nor selects Admin itself.
+13. Test repeat selection, resume and compaction in the actual client before claiming their behavior verified.
+
+Fresh installation exposes only `asdg-focus`; repeat setup neither recreates retired named picker entries nor changes lifecycle/sprint state.
+Thirteen canonical role definitions and native role adapters remain; team setup uses the shared Focus path with explicit catalogue IDs.
+An edited shared adapter remains a conflict, not permission for initialization to overwrite it.
+A missing shared template or metadata, or a retired per-role Focus template, fails preflight before writes.
+An older client may still contain retired adapters; inspect customizations and remove them only as an explicitly authorized migration.
 
 ## Evidence
 
-Record surface/version, picker labels, actual read/rename tool trace, before/after replies and UI title.
-Record project-file diff separately; title metadata is not an application-source change.
-Multi-turn retention, twelve runtime invocations, reload/resume/compaction need live tests; not assumed passed.
-Pablo's earlier screenshot verifies direct user-requested rename on his app, not these updated skills.
-Static syntax and references are a separate check. No file state is self-approved by this update.
-
-[Official skills](https://developers.openai.com/codex/skills/)
-[Native rename protocol](https://developers.openai.com/codex/app-server/)
+Record original phrase/context, decision rationale, actual reads/rename outcome, previous/resulting role and subject, retained attitude/goal, and file effects.
+Separate semantic interpretation tests from native activation, picker refresh, title behavior and hook enforcement.
+Run the [Purpose continuation exercise](continuation-tests.md) separately; this change does not extend other specialists' opening procedures.

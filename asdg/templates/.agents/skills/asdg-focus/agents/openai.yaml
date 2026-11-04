@@ -1,0 +1,6 @@
+interface:
+  display_name: "ASDG focus"
+  short_description: "Choose a role or set its subject focus"
+  default_prompt: "Use $asdg-focus to select the specialist that fits my description."
+policy:
+  allow_implicit_invocation: false

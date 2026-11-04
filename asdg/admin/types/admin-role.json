@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "role_id": "ASDG-ADMIN",
+  "short_label": "Admin",
+  "title": "ASDG Admin",
+  "lifecycle_stage": null,
+  "folder": "asdg/admin",
+  "entry": "asdg/admin/AGENTS.md",
+  "contract": "asdg/admin/types/contract.md",
+  "skill": "asdg/admin/skills/maintain-rules/SKILL.md",
+  "activation": "explicit-human-selection-only",
+  "default": false,
+  "selectors": ["$asdg-admin", "admin", "asdg admin", "asdg-admin", "ASDG-ADMIN"],
+  "native_adapter": null
+}

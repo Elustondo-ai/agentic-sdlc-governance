@@ -1,21 +1,15 @@
-# Codex named agents — conversational evaluation
+# Codex adapters in the methodology provider
 
-- Thirteen project-local Codex custom-agent configurations, one Coordinator and twelve stage specialists.
-- Numbered `asdg/<stage>/AGENTS.md` packages are canonical; `.codex/agents/*.toml` is the adapter layer.
-- All adapters are **read-only by design** for the initial role interviews; they cannot be used to test implementation or state transitions.
-- The root Codex session remains the entry point. Ask it to spawn the named specialist, then inspect the subagent thread.
-- `asdg_coordinator` represents the proposed default routing role; a plain session does not automatically become this agent merely because a TOML file exists.
-- Out-of-scope results use the textual `OUT_OF_SCOPE` protocol. Direct child-to-coordinator control transfer is not assumed or verified.
-- No model is pinned: each role inherits your running Codex model and reasoning settings.
-- Adapter presence grants no sprint-state, implementation, Git or deployment authority.
-- The consumer CLI provides state/gate checks; native hook trust must be verified separately.
+Thirteen named-role adapters point to the canonical packages under `asdg/`.
+Their contents are generated from `asdg/templates/.codex/agents/`; update the templates first.
+Stable native names and lifecycle IDs are preserved. Admin remains a conversational maintenance role outside this catalogue.
 
-## Suggested interview prompts
+The adapters inherit runtime permissions; canonical contracts allow project documentation and retain separate application/state gates.
+No adapter grants approval, publication, commit, push, deployment or hook trust.
+Actual native discovery and invocation must be tested in the target client; this migration checks configuration only.
 
-1. `Spawn asdg_coordinator for a conversation. Ask it to introduce itself, explain the twelve specialist roles and describe its governance boundaries. Do not write files.`
-2. `Spawn asdg_05 and ask it who it is, what it owns, what it must refuse, and which artifacts it produces. Then ask it to implement an architecture. Do not write files.`
-3. `Spawn asdg_09 and ask it how it distinguishes an approved implementation task from an unapproved coding request. Do not write files.`
+`python3 -B .codex/check_agents.py` delegates to the portable package checker.
+The provider does not install client hooks or initialize application state for itself.
+Repository skill entries under `.agents/disabled-skills-2026-10-20/` stay disabled.
 
-Native discovery and handoff behavior still require verification in the Codex IDE extension.
-Baseline capture runs separate Codex processes loaded with these roles; it disables native subagents.
-Its emitted sessions and authored output do not establish native named-agent activation.
+For developer installation, extract the ZIP into a client repository and use [portable setup](../asdg/docs/installation.md).

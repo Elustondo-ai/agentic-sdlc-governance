@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASDG Sprint close"
+  short_description: "Review, preserve results and close a sprint"
+  default_prompt: "Use $asdg-sprint-close to review and close the current sprint, preserving unfinished work."

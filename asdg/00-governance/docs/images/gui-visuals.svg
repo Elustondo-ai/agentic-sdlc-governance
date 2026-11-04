@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360" role="img" aria-labelledby="t d" font-family="Helvetica, Arial, sans-serif">
+  <title id="t">Representative visuals for graphical interfaces</title>
+  <desc id="d">A GUI document opens with who uses the interface, then a captioned visual. An implemented interface uses a screenshot; a proposed interface uses a labelled mockup; if a screenshot cannot be obtained, the substitute is labelled and the limitation disclosed. Technical detail and source links follow. Test results are separate evidence for the behaviors actually checked.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker>
+  </defs>
+  <rect width="720" height="360" fill="#ffffff"/>
+
+  <!-- Document column -->
+  <rect x="20" y="20" width="300" height="320" rx="10" fill="#f4f6f8" stroke="#9aa5b1"/>
+  <text x="170" y="44" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2933">GUI document, top to bottom</text>
+
+  <rect x="40" y="60" width="260" height="54" rx="6" fill="#ffffff" stroke="#52606d"/>
+  <text x="170" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2933">1. Plain-language introduction</text>
+  <text x="170" y="101" text-anchor="middle" font-size="12" fill="#3e4c59">who uses it, what it helps them do</text>
+
+  <rect x="40" y="128" width="260" height="70" rx="6" fill="#e6f6ff" stroke="#2680c2" stroke-width="2"/>
+  <text x="170" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2933">2. Representative visual</text>
+  <text x="170" y="169" text-anchor="middle" font-size="12" fill="#3e4c59">caption: state shown, limitations,</text>
+  <text x="170" y="186" text-anchor="middle" font-size="12" fill="#3e4c59">synthetic or simulated input</text>
+
+  <rect x="40" y="212" width="260" height="54" rx="6" fill="#ffffff" stroke="#52606d"/>
+  <text x="170" y="234" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2933">3. Technical detail</text>
+  <text x="170" y="253" text-anchor="middle" font-size="12" fill="#3e4c59">interfaces, effects, source links kept</text>
+
+  <rect x="40" y="280" width="260" height="44" rx="6" fill="#fffbea" stroke="#b44d12" stroke-dasharray="5 4"/>
+  <text x="170" y="300" text-anchor="middle" font-size="12" font-weight="bold" fill="#1f2933">Test evidence, cited separately</text>
+  <text x="170" y="316" text-anchor="middle" font-size="11" fill="#3e4c59">supports only the behaviors checked</text>
+
+  <!-- Choice column -->
+  <text x="530" y="44" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2933">Which visual?</text>
+
+  <rect x="380" y="64" width="300" height="62" rx="8" fill="#e3f9e5" stroke="#3f9142"/>
+  <text x="530" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2933">Implemented interface</text>
+  <text x="530" y="108" text-anchor="middle" font-size="12" fill="#3e4c59">screenshot of the real interface</text>
+
+  <rect x="380" y="140" width="300" height="62" rx="8" fill="#f0f4ff" stroke="#4c63b6"/>
+  <text x="530" y="164" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2933">Proposed interface</text>
+  <text x="530" y="184" text-anchor="middle" font-size="12" fill="#3e4c59">mockup, clearly labelled as a mockup</text>
+
+  <rect x="380" y="216" width="300" height="62" rx="8" fill="#ffe3e3" stroke="#c53030"/>
+  <text x="530" y="240" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2933">Screenshot unavailable</text>
+  <text x="530" y="260" text-anchor="middle" font-size="12" fill="#3e4c59">disclose why; label any substitute</text>
+
+  <text x="530" y="308" text-anchor="middle" font-size="12" fill="#3e4c59">No live server or billable call is needed</text>
+  <text x="530" y="326" text-anchor="middle" font-size="12" fill="#3e4c59">just to illustrate; pick a representative state</text>
+
+  <path d="M380,95 L306,150" stroke="#444" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M380,171 L306,165" stroke="#444" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M380,247 L306,182" stroke="#444" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+</svg>

@@ -1,0 +1,6 @@
+interface:
+  display_name: "ASDG init"
+  short_description: "Use the local ASDG project workflow"
+  default_prompt: "Use $asdg-init for this project."
+policy:
+  allow_implicit_invocation: false

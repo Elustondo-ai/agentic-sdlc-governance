@@ -1,35 +1,36 @@
-# ASDG status format
+# ASDG status report
 
-Fill this template from observed evidence and this conversation; angle brackets are placeholders.
-The sample values below are not facts about the current session.
+Answer "Where are we now?" using fresh facts and clearly labeled retained context.
+Use this order: status lines, Project-wide next step, Observations and technical debt.
+Use a neutral project voice; the selected specialist remains conversation context, not the scope of this report.
 
-```text
-ASDG SESSION STATUS
+## 1. Status lines
 
-Active focus:    <None / selected role and stage / Unknown>
-Role ID:         <actual canonical role ID, or None / Unknown>
-Activation:      <successful explicit selection / cleared / none / unknown>
-Title update:    <last observed rename outcome and title, or Not attempted / Unknown>
-Target project:  <verified or supplied project, otherwise Unknown>
+Start with the compact role/subject/attitude declaration from the session receipt, then a factual summary and Area / Current status table or equivalent lines.
+Include project state, structure, stage progress/acceptance, sprint/release and implementation permission; show goal, role, subject and attitude/scope separately when known.
+Distinguish agent readiness from human acceptance, including review staleness where recorded.
+Reflect explicit user deferrals separately from the CLI's missing-evidence heuristic.
+Include the latest substantive task/result when useful; keep role responsibilities in `$asdg-role`.
+Put an urgent blocker or qualification affecting the recommendation here; do not bury it below the advice.
+Use actual observation time/freshness when material; do not fill the table with every empty stage.
 
-Role definition: <canonical path actually read, with purpose of read>
-Procedure:       <procedure actually read; loaded is not executed>
+## 2. Project-wide next step
 
-Responsibility:  <canonical responsibility, or general ASDG assistance>
-Boundaries:      <actual role/evaluation boundaries and their evidence>
-Current task:    <latest substantive task, or Awaiting assignment>
+Apply `$asdg-suggestion` once to the collected evidence with project-wide scope, regardless of conversation focus.
+Give one action, why it matters and its expected result; keep it advisory.
+Include a short ready-to-use assignment when a focused chat would help.
+Omit this section for facts-only requests and Purpose opening's factual assessment; continue to observations if relevant.
 
-Runtime settings: <observed configuration, otherwise Not inspected>
-Evidence:         <actual read evidence and any important gap>
-```
+## 3. Observations and technical debt
 
-Keep this compact. Show a failure line only when a recent focus attempt failed.
-No role: do not mark a Purpose definition as loaded merely because it exists.
-Selected role: identify this as conversation focus, not a newly spawned subagent.
-Mention inspection-only reads separately from activation evidence.
-Do not expose account identifiers, tokens or private reasoning in status.
-For status questions, this report is the human-readable result; do not add a second redundant envelope.
-Respect required canonical failure fields for BLOCKED or OUT_OF_SCOPE responses.
+Place supporting detail here: selected outcome, open questions, Git changes, pending decisions and evidence limitations.
+Distinguish product uncertainties, observations and actual technical debt; do not label all unfinished work as debt.
+Explain mismatches between registered evidence and observed work, including conversation-only deferrals.
+Report configured hooks separately from native trust/enforcement; distinguish previous checks from checks run now.
+Keep the last observed title/activation receipt here only when relevant; do not infer UI readback or other chats' activity.
+Identify sources actually inspected and important freshness limits without repeating the status table.
+Mention actionable maintenance issues proportionally; do not invent backlog items or commitments.
+If nothing material remains, say so briefly rather than padding this section.
 
-Title update is the last retained action receipt; state separately whether the current UI title was verified.
-Status never renames a conversation or reconstructs a missing receipt from the selected role.
+Preserve this section order unless the user explicitly requests another format.
+Do not automatically invoke Role, execute the suggestion, mutate state or add a second interaction envelope.

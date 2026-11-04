@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASDG Sprint review"
+  short_description: "Review sprint outcomes against evidence"
+  default_prompt: "Use $asdg-sprint-review to assess the current sprint against its acceptance criteria."

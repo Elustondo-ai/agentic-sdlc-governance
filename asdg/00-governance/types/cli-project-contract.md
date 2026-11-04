@@ -1,49 +1,43 @@
-# CLI project contract — schema 1
+# Embedded project contract — schema 1, pilot 0.2.0
 
-## Ownership and commands
+The client contains the full `asdg/` distribution. Python 3.9+ and Git are required.
+Run `python3 asdg/scripts/init.py` from that client Git root; no machine-wide installation is necessary.
+The resolved Git root must be the parent of this distribution; an external provider is rejected.
+The catalogue remains version 0.2, exactly governance 00 and stages 01–12.
 
-Provider: `elustondo.ai/asdg`; qualified command: `asdg`; local shortcut: `asdg`.
-`./bin/asdg install`: user-local environment setup, with no options; does not initialize an application.
-`init`: explicit request to add the bounded project binding and missing artifact structure.
-`verify`: read-only structural verification; `status`: read-only binding and path inspection.
-`agent list` / `agent describe`: read-only catalogue inspection, with no model execution.
-`sprint status/start/stop` manages authoritative `.asdg/sprint.json`; init defaults to inactive.
-`sprint check-implementation --path <target>` fails closed unless active and all targets are in scope.
-`status`, `next`, agent guidance and read-only `dashboard` share one [derived status](../docs/state-engine.md).
-All commands return nonzero on a conflict, missing prerequisite or unsupported input.
-`verify`/`status` return 1 for incomplete project structure; this is not a software-build failure.
+## Operations
 
-## Provider inputs
+`init --dry-run` validates all planned destinations without writing.
+`init --client codex|claude|both` adds client integrations without removing others; without it, repeat setup covers the recorded clients, Codex if none.
+`init` creates missing binding, lifecycle/sprint state, stage README scaffolds and discovery adapters.
+`--project-status` explicitly declares first-install new/defining/defined; omitted defaults to new.
+Repeat initialization preserves existing status, release, sprint, evidence and review history.
+`python3 asdg/scripts/cli.py verify` inspects structure; `status --facts-only` and `status --json` do not call a model.
+Plain status retains optional SDK advice; `--verbose` saves a bounded planning report and receipt.
+`agent list/describe` inspects definitions. `next` and `dashboard` reuse the same status engine.
+`sprint status/start/stop/check-implementation` preserves the authoritative sprint transition contract.
+The human makes explicit transition decisions; initialization never starts a sprint.
 
-`asdg/00-governance/types/agent-catalog.json`, version 0.2, exactly stages 00 through 12.
-Use its exact numbered folder names and preserve order; no locally invented lifecycle labels.
-The resolved Git worktree root, never the provider root, supplies the target project.
+## Outputs and preservation
 
-## Project outputs
+`.asdg/project.json` records provider, schema, catalogue hash, embedded installation mode and version.
+It uses repository-relative paths; no external home, checkout or Python environment is stored.
+`.asdg/lifecycle.json` separates project, release and stage evidence; fresh release is null, evidence empty.
+`.asdg/sprint.json` starts inactive; valid existing state is never reset.
+`.asdg/document-reviews.json` retains exact-state modification/legacy-approval records, outside disposable logs.
+Codex adapters (`.agents/skills/`, `.codex/agents/`) and Claude adapters (`.claude/skills/`) are thin and generated only for selected clients, which `.asdg/integrations.json` records.
+Root `AGENTS.md` begins with one identified ASDG bootstrap block; client text after it is preserved byte-for-byte.
+For Codex, `.codex/hooks.json` configures guard and public-log callbacks and `.codex/config.toml` enables hooks.
+Root `.gitignore` adds precise log/cache exclusions, never all of `.asdg/`.
+`docs/asdg/` contains client evidence; package files are never registered as client evidence by init.
 
-`.asdg/project.json` stores schema_version, provider, cli_version, project_id, artifacts_root,
-catalog_sha256, methodology_revision_at_init, installation_mode, initialized_at and stages.
-No absolute developer checkout path is committed in that binding.
-`docs/asdg/` holds project-specific artifacts only, including 00 governance plus twelve stages.
-Root `AGENTS.md` contains one identified Elustondo ASDG bootstrap section.
-`.codex/hooks.json` configures the pre-tool implementation guard; trust requires Codex review.
-`.asdg/lifecycle.json` references stage evidence; presence is distinct from completion or approval.
-Generated documents use titles, explanations and at most 50 nonblank source lines.
-Preserve spacing and retain review events against exact hashes before marker removal.
-No stage completion or PME approval is inferred from initializing a directory.
+## Conflicts and limits
 
-## Failure and preservation
-
-Existing different providers, schemas or catalogue hashes are conflicts, not automatic migrations.
-Existing project content is preserved; only the recognized bootstrap section is added or verified.
-Existing approval timestamps are retained as an earlier baseline; AI-MODIFIED is updated on changes.
-No silent rewriting of YAML front matter, user shell commands, symlink targets or lifecycle content.
-Initialization is idempotent; deterministic structural verification follows successful initialization.
-Ordinary write failures trigger best-effort rollback of this operation's own changes only.
-
-## Runtime boundary
-
-This contract installs a CLI and project hook configuration, not running agents or hook trust.
-The CLI and hook share the [implementation gate](../docs/sprint-gate.md); trust is not inferred.
-Returned entry paths must be explicitly read; their presence is not proof of native role invocation.
-Public commands and structured outputs share the same implementation.
+Validate all managed destinations before writing; refuse symlinks, foreign providers and unsupported schemas.
+Existing conflicting hooks/config/adapters or edited bridge blocks require explicit reconciliation.
+Missing/malformed existing state, changed catalogue or distribution version require reviewed repair/migration.
+The old linked-provider and `.asdlc` installation are outside this fresh-install pilot.
+Ordinary write failures roll back only this operation's own changes; no cross-machine transaction is promised.
+A repeated successful init makes no managed byte changes. No Git commit/push or native trust is performed.
+Source documents remain within 50 nonblank lines; review history never approves newly edited bytes.
+Configuration, native discovery, live invocation, semantic compliance and human approval remain distinct.

@@ -37,13 +37,14 @@ Unknown owner, horizon or authority stays unknown; ask for the decision when nee
 
 ## Use and maintenance
 
-Use these headings in substantive stage assessments/proposals; do not expand every greeting or plain session-status report.
+Distinguish these perspectives in substantive assessments; stage-specific concept names may express them without repeated headings.
 Derive the gap by comparing Intended and Actual; label a cached comparison with its source versions.
 An actual observation may challenge the target; propose a target revision rather than silently changing goals.
 Do not promote Planned to Actual because an agent said done; require suitable evidence for each claim.
 Keep human review, operational authorization and evidence separate from these three perspectives.
 Maintain one authoritative record per artifact/work item; a snapshot links to records instead of copying entire documents.
-Use each stage’s `intended/`, `current/` and `planned/` folders; Actual evidence belongs in `current/`.
+Use the [shared stage layout](stage-layout.md): Intended in `01` root files, Actual in `02` root files.
+Use `03` root files for Planned, with release/sprint horizons in filenames; consolidate verified outcomes into `02` Current at cycle closeout.
 Keep empty perspectives empty; preserve topic navigation and reference the integrated Stage 07 plan.
 Do not overwrite accepted baselines or rewrite historical reports; record changes and evidence provenance.
-Apply existing role boundaries and read-only evaluation; this contract grants no write or release authority.
+All roles may save documentation under [shared documentation authority](documentation-authority.md); this model grants no code or state-transition authority.

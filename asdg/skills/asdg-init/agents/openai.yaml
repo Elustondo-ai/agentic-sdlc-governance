@@ -1,0 +1,6 @@
+interface:
+  display_name: "ASDG Initialize"
+  short_description: "Initialize the embedded project methodology"
+  default_prompt: "Use $asdg-init to initialize this project and verify the embedded ASDG installation."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,201 @@
+{
+  "recorded_at": "2026-11-04T05:06:02+00:00",
+  "changed_files": [
+    {
+      "path": "asdg/README.md",
+      "before_sha256": "36f9651d6c2acd7a08557bafa8c880593745e3f07742c3d634d3fe2e9a908f73",
+      "sha256": "a0d0f1bfd1221c0a92c91ca51f4d84417f216ab83077f0e6a7dda2a370bdd587"
+    },
+    {
+      "path": "asdg/docs/distribution-build.md",
+      "before_sha256": "d3c251eb6f22eac9e8b82d1d9bfa02f2735f59258303c66be696f2b52468d2de",
+      "sha256": "113d7ceff89f143646b04d658ee54a6c23d9737e9904cef88e68f0f797bb2cff"
+    },
+    {
+      "path": "asdg/docs/images/synchronization.svg",
+      "before_sha256": null,
+      "sha256": "31fd45ca588b807221e4a13a1f033f2af75d94f5f7cd69197470d3838e4bbe12"
+    },
+    {
+      "path": "asdg/docs/synchronization.md",
+      "before_sha256": null,
+      "sha256": "4613a3368fb2b85df2b883ca5212c31b06256db8b6ae7166e82779ecc6cbc34a"
+    },
+    {
+      "path": "asdg/metadata/package-files.json",
+      "before_sha256": "9f0503dfa92fb0c8d777f8e4b3d5674e884c22d7e6ef75667264550125dcba9e",
+      "sha256": "6cd889ac407fcd2e077d6ac1ab94d189353e4b6824bdd417a6b737136a3ca577"
+    },
+    {
+      "path": "asdg/scripts/lib/README.md",
+      "before_sha256": "348dca6b73e541a9aff12019e1565df1bf0e40989c9a25d38a9ee11c8bad9345",
+      "sha256": "d04ff4757b94beaf1f1042b6e1c0e529c2896ca785e4a88fff37f7cb9a67cca5"
+    },
+    {
+      "path": "asdg/scripts/lib/cli.md",
+      "before_sha256": "3442bc005b789da81b7ec893162e1674434a84421b811d6db235e4cfaa73efe3",
+      "sha256": "37d0b0458f557de85fb7ec84eb07e3af706893993aa96964eccdde662832fe1a"
+    },
+    {
+      "path": "asdg/scripts/lib/cli.py",
+      "before_sha256": "233ee333723651fa3d2ae91941b7139db11a33ea7f8c40ab73d81956c95f8774",
+      "sha256": "e27c60e59fdfac795f6e6a0246972a39de2f2d79f9b39aa3dedab112c76a29fe"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_files.md",
+      "before_sha256": "ea20ad3337a80a81d6ca826baf16cae7f0847ca5e6f431d6c3e51562681ab4eb",
+      "sha256": "5fa9e3f1da05435479a843e91d02223c45a7034bcb0b18b12514cbbdf712beb2"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_files.py",
+      "before_sha256": "2d243a86f96f628261a0f6565946e7d94619e76a016e4348d2272589d41386fd",
+      "sha256": "d34645b6cdbd93fe4149e5b60a82fb8927a8d6e256c17dd148ade964f01e9d5e"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_project.md",
+      "before_sha256": "f0829ffbb23ff9c02a43365169e0d7a1c9f35c9d41e1a6a6e397fd4e04044c60",
+      "sha256": "fd1de63e541e2bf92ca878509729ec0ee3a65e8111423db5b84bd24efe148008"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_project.py",
+      "before_sha256": "43473b750b8f313ee2d1f08af7fbf6c6a95de737f004f9a092a9e3c25b81836a",
+      "sha256": "75ec1ad5d1625db9116d7b789e7ca0fe530af6918952680408296cc5cea20e50"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_sync.md",
+      "before_sha256": null,
+      "sha256": "6b265476a966b5860b056c1e55544c737baa771740d21ae394bd780ecac54a9c"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_sync.py",
+      "before_sha256": null,
+      "sha256": "e0885022a124f67e32419f793d7544bb57049ae5cd309dae522ec05403c585d0"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_sync_manifest.md",
+      "before_sha256": null,
+      "sha256": "d28406fcbb21f2261ecfd2041d7543700172c46b055d11a7d2a1f53c6b49d232"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_sync_manifest.py",
+      "before_sha256": null,
+      "sha256": "f25b31c65a6721738a98a36e9a8833914ddf73ccf34d20127f3bcbecb656a607"
+    },
+    {
+      "path": "asdg/scripts/lib/distribution_files.md",
+      "before_sha256": "f363ffa1a79e89fa027584e5cb12a1b9742d1437b4d7bf43a2711bb4f81e0461",
+      "sha256": "9cb48f3dd5a2f57a4ffa29eb5c5b982e901c69fa4dd85587233ad572ca01efbc"
+    },
+    {
+      "path": "asdg/scripts/lib/distribution_files.py",
+      "before_sha256": "32ab077fb3e754236f55300c5395d6553b486f4f6b3a385f8bf725bc85f60ef6",
+      "sha256": "87210721a1fb587759c20ea286a76de7de3ad84eeb5ce9f32d48f1760621dd1b"
+    },
+    {
+      "path": "asdg/tests/README.md",
+      "before_sha256": "9da14d15420cf0550e67ce60348b500e316d80648ff89434670c037f214b0c6b",
+      "sha256": "21253c771c9ac0edfc4018d7e0a1f9ad4a1319fa9577b81d9f3ab3f93eeffef9"
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "before_sha256": "d21b57f12da68ba6dd2bf24648691ffd90e2ef189978694796484515e2806f45",
+      "sha256": "5fa4091b6cd0d76d9d797fec9f7c91e9ea150f4c4b38ae1e80fd783bd046c011"
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "before_sha256": "fd12150da5c9ecfb6d52874f57f3ad97012c0b70daa609b9f39ea53d8d453ebc",
+      "sha256": "11d7f0256c556c8acb5a1777454069077dfc6415e68872365a82acaaab274f4a"
+    },
+    {
+      "path": "asdg/tests/test_sync.md",
+      "before_sha256": null,
+      "sha256": "4daef6b2b10e1ba4bb39c359f9b4b00580a5a1a558e398a37ab47208dba24a14"
+    },
+    {
+      "path": "asdg/tests/test_sync.py",
+      "before_sha256": null,
+      "sha256": "bcb5697350e774fe0df280b72047b79ca470206f7f0a2049aa4049aaa2ba7a53"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.2-review-promote-upgrade.md",
+      "before_sha256": null,
+      "sha256": "4dc010c1b768a2e28461b168f768e4585e1b4ea221bd7a6793c7b929fe1a60c6"
+    }
+  ],
+  "preserved_events": 1780,
+  "appended_events": 24,
+  "role": "ASDG Admin",
+  "focus": "Methodology distribution and synchronization",
+  "attitude": "Off",
+  "human_approval": null,
+  "implementation": "complete; real synchronization unapplied",
+  "source": {
+    "root": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/speakercoach",
+    "repository": "github.com/elustondo-ai/speakercoach",
+    "head": "f0388497ac781e12631dc573b3a300100c056162",
+    "version": "0.2.0-pilot.2",
+    "snapshot_sha256": "2a568006fa5bf7fc268a5672830269a4e4ebaa626fa439c8391f47d4ab4f5d33",
+    "binding_sha256": "8a1d1b28847703c43589d56efbb59ceb44c3690c11101029d6eb209640e59f6c",
+    "manifest_matches_worktree": false,
+    "selection": "legacy-git-tracked"
+  },
+  "target": {
+    "root": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance",
+    "repository": "github.com/elustondo-ai/agentic-sdlc-governance",
+    "head": "7c5d0ca3869ca2bf6472ac7a408b809dc4823cf9",
+    "version": "0.3.0-pilot.1",
+    "snapshot_sha256": "69b1666034e3b8e554242ace0ee93262ab8128a6bb8be27d64247f4e72923278",
+    "binding_sha256": null,
+    "manifest_matches_worktree": true,
+    "selection": "package-files"
+  },
+  "branches": {
+    "source": "sprint-00",
+    "target": "main"
+  },
+  "preview_counts": {
+    "added": 0,
+    "modified": 0,
+    "deleted": 0,
+    "unchanged": 395,
+    "conflicting": 19
+  },
+  "preview_plan_id": "adfe6f32a0c01f27860983baf2c41b310a96c464a5c63a444665898f875b11fa",
+  "preview_path": "docs/reviews/asdg-sync/promotion-preview.json",
+  "tests": [
+    {
+      "python": "3.15.0",
+      "count": 112,
+      "result": "PASS",
+      "path": "docs/reviews/asdg-sync/tests-python315.txt"
+    },
+    {
+      "python": "3.9.6",
+      "count": 22,
+      "result": "PASS",
+      "path": "docs/reviews/asdg-sync/sync-python39.txt"
+    }
+  ],
+  "corrected_failure": "Initial full-suite upgrade test selected an older shared archive before the current target delivery. Current endpoint precedence and ambiguity regression now pass.",
+  "checks": [
+    "portable structure, identities, links, source limits and Python 3.9 syntax: PASS",
+    "current distribution integrity: PASS",
+    "git diff --check: PASS",
+    "real preview tree and index non-mutation: PASS"
+  ],
+  "package_files": 390,
+  "candidate_zip": "build/distributions/asdg-0.3.0-pilot.1.zip",
+  "candidate_zip_sha256": "957c87b6881e36278de844dcec1d90f46281d60004a4b3a0a969a2d975d670d1",
+  "limitations": [
+    "19 real promotion conflicts require reconciliation and separate exact-plan apply approval",
+    "pilot delivery manifest differs from actual tracked bytes",
+    "no native discovery/invocation/hook trust established",
+    "no installed adapter or workflow-state migration",
+    "no real upgrade, apply or Git mutations"
+  ],
+  "generated_source_hashes": {
+    "asdg/metadata/MANIFEST.json": "2327984f41959b2bf8df4a24e0de066fecdd83ea93288fe8eef45595cea11b94",
+    "asdg/00-governance/types/document-reviews.json": "a0a119cab944e3ebbec2e5a3048456cecfc80d7eb08c5f73f2c7dc86c40ae708"
+  },
+  "visual_checks": "docs/reviews/asdg-sync/documentation-visual-checks.json"
+}

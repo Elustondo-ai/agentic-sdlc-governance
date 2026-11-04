@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="260" viewBox="0 0 960 260" role="img" aria-labelledby="title desc">
+<title id="title">Shared documents and separate execution gates</title>
+<desc id="desc">Every agent can save project documents for human and specialist review. Approval and code implementation remain separate decisions.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#49716e"/></marker></defs>
+<rect width="960" height="260" rx="16" fill="#f5f8f4"/>
+<g font-family="Arial, Helvetica, sans-serif" text-anchor="middle" fill="#17332f">
+<rect x="24" y="38" width="268" height="164" rx="12" fill="#fff" stroke="#a8c4b9" stroke-width="2"/>
+<text x="158" y="82" font-size="23" font-weight="700">Every agent</text>
+<text x="158" y="118" font-size="19">Plans, use cases, designs,</text>
+<text x="158" y="145" font-size="19">evidence and handoffs</text>
+<rect x="346" y="38" width="268" height="164" rx="12" fill="#e0eee7" stroke="#a8c4b9" stroke-width="2"/>
+<text x="480" y="82" font-size="23" font-weight="700">Shared docs/</text>
+<text x="480" y="118" font-size="19">Save, link and review</text>
+<text x="480" y="145" font-size="19">No sprint needed to save</text>
+<rect x="668" y="38" width="268" height="164" rx="12" fill="#fff" stroke="#a8c4b9" stroke-width="2"/>
+<text x="802" y="82" font-size="23" font-weight="700">Separate decisions</text>
+<text x="802" y="118" font-size="19">Human acceptance</text>
+<text x="802" y="145" font-size="19">Scoped implementation</text>
+<text x="480" y="235" font-size="17">A saved document communicates work; it does not authorize execution.</text>
+</g>
+<path d="M296 120 H337" fill="none" stroke="#49716e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M618 120 H659" fill="none" stroke="#49716e" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

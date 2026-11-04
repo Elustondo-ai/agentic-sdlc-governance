@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASDG suggestion"
+  short_description: "Suggest a useful next step for this project"
+  default_prompt: "Use $asdg-suggestion to recommend the most useful next step for this project."

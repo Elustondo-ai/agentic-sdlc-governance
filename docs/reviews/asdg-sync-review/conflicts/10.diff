@@ -1,0 +1,113 @@
+# asdg/scripts/lib/cli.md
+# Baseline status: ABSENT
+# SHA256 baseline: None
+# SHA256 source: 3442bc005b789da81b7ec893162e1674434a84421b811d6db235e4cfaa73efe3
+# SHA256 target: 37d0b0458f557de85fb7ec84eb07e3af706893993aa96964eccdde662832fe1a
+
+## baseline-to-source
+--- baseline/asdg/scripts/lib/cli.md
++++ source/asdg/scripts/lib/cli.md
+@@ -0,0 +1,35 @@
++# ASDG command dispatcher
++
++[Source: cli.py](cli.py)
++
++Parses local ASDG commands, dispatches to the owning component and translates results into console or JSON output.
++
++## Responsibilities and collaborators
++
++Owns CLI argument validation, command routing and exit status; optional advice is imported only when requested by the selected mode.
++
++![Command-line arguments → Parser and dispatcher → Owned operation + exit status](images/cli-flow.svg)
++
++- [cli_model](cli_model.md): Resolves the local Git root and catalogue.
++- [cli_project](cli_project.md): Initializes/verifies integration.
++- [cli_status](cli_status.md): Evaluates facts.
++- [cli_sprint](cli_sprint.md): Checks or changes sprint state.
++- [cli_advice](cli_advice.md): Runs optional coordinator advice.
++- [cli_advice_report](cli_advice_report.md): Saves verbose advice.
++- [cli_dashboard](cli_dashboard.md): Serves the local dashboard.
++
++## Interface and data
++
++`argv` is list[str] or None (process arguments). main returns an integer exit status; argparse may raise SystemExit for help, version or invalid syntax.
++
++| Callable or interface | Contract |
++| --- | --- |
++| `main(argv: list[str] \| None=None) -> int` | Dispatches init (with `--client codex\|claude\|both`), status, verify, next, dashboard, agent and sprint commands. Prints results; returns 0 for success and 1 for operational failure. |
++
++## Effects and failure behavior
++
++Plain status may call the optional model runtime; status --json and --facts-only do not. init and sprint start/stop write state; status --verbose can save reports. Known operational errors are caught and printed; permission to invoke a command remains separate.
++
++## Example
++
++`python3 asdg/scripts/cli.py status --facts-only` reads facts; `--help` lists the command interface.
+
+## baseline-to-target
+--- baseline/asdg/scripts/lib/cli.md
++++ target/asdg/scripts/lib/cli.md
+@@ -0,0 +1,37 @@
++# ASDG command dispatcher
++
++[Source: cli.py](cli.py)
++
++Parses local ASDG commands, dispatches to the owning component and translates results into console or JSON output.
++
++## Responsibilities and collaborators
++
++Owns CLI argument validation, command routing and exit status; optional advice is imported only when requested by the selected mode.
++
++![Command-line arguments → Parser and dispatcher → Owned operation + exit status](images/cli-flow.svg)
++
++- [cli_model](cli_model.md): Resolves the local Git root and catalogue.
++- [cli_project](cli_project.md): Initializes/verifies integration.
++- [cli_status](cli_status.md): Evaluates facts.
++- [cli_sprint](cli_sprint.md): Checks or changes sprint state.
++- [cli_advice](cli_advice.md): Runs optional coordinator advice.
++- [cli_advice_report](cli_advice_report.md): Saves verbose advice.
++- [cli_dashboard](cli_dashboard.md): Serves the local dashboard.
++- [cli_sync](cli_sync.md): Previews or explicitly applies promote/upgrade file synchronization between two Git roots.
++
++## Interface and data
++
++`argv` is list[str] or None (process arguments). main returns an integer exit status; argparse may raise SystemExit for help, version or invalid syntax.
++
++| Callable or interface | Contract |
++| --- | --- |
++| `main(argv: list[str] \| None=None) -> int` | Dispatches init (with `--client codex\|claude\|both`), status, verify, next, dashboard, agent, sprint, promote and upgrade. Returns 0 for success and 1 for operational failure or conflicting synchronization preview. |
++
++## Effects and failure behavior
++
++Plain status may call the optional model runtime; status --json and --facts-only do not. init and sprint start/stop write state; status --verbose can save reports. Known operational errors are caught and printed; permission to invoke a command remains separate.
++Promote/upgrade require explicit source/target and either --dry-run or --apply; apply also requires --plan. These dispatch without resolving the caller's project or invoking agents.
++
++## Example
++
++`python3 asdg/scripts/cli.py status --facts-only` reads facts; `--help` lists the command interface.
+
+## source-to-target
+--- source/asdg/scripts/lib/cli.md
++++ target/asdg/scripts/lib/cli.md
+@@ -17,6 +17,7 @@
+ - [cli_advice](cli_advice.md): Runs optional coordinator advice.
+ - [cli_advice_report](cli_advice_report.md): Saves verbose advice.
+ - [cli_dashboard](cli_dashboard.md): Serves the local dashboard.
++- [cli_sync](cli_sync.md): Previews or explicitly applies promote/upgrade file synchronization between two Git roots.
+ 
+ ## Interface and data
+ 
+@@ -24,11 +25,12 @@
+ 
+ | Callable or interface | Contract |
+ | --- | --- |
+-| `main(argv: list[str] \| None=None) -> int` | Dispatches init (with `--client codex\|claude\|both`), status, verify, next, dashboard, agent and sprint commands. Prints results; returns 0 for success and 1 for operational failure. |
++| `main(argv: list[str] \| None=None) -> int` | Dispatches init (with `--client codex\|claude\|both`), status, verify, next, dashboard, agent, sprint, promote and upgrade. Returns 0 for success and 1 for operational failure or conflicting synchronization preview. |
+ 
+ ## Effects and failure behavior
+ 
+ Plain status may call the optional model runtime; status --json and --facts-only do not. init and sprint start/stop write state; status --verbose can save reports. Known operational errors are caught and printed; permission to invoke a command remains separate.
++Promote/upgrade require explicit source/target and either --dry-run or --apply; apply also requires --plan. These dispatch without resolving the caller's project or invoking agents.
+ 
+ ## Example
+ 

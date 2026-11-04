@@ -1,0 +1,306 @@
+{
+  "scope": "Changes since this installation task began; earlier uncommitted work preserved. Self-inventory hashes omitted. Ignored candidate ZIP/sidecar and temporary test fixtures are listed separately in human-test.json.",
+  "files": [
+    {
+      "path": "README.md",
+      "change": "modified",
+      "before_sha256": "8edba9b75218fa59397e0552196fe5b6f4069e1709b7907bba3480b597a31474",
+      "after_sha256": "bb05059131363fb349dbf18eaa5b3df1cb710c7f92531a98b4898dfa4e539444"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "change": "modified",
+      "before_sha256": "27e0e80d43ef35d5546b5b06bce80cdc61735323eb156f18fe97950e51a59336",
+      "after_sha256": "1a1c6072b6cb34e8cdc1b1f4c14efe4fcb8a82150f83c1267d5b1a0a2fa1c7a7"
+    },
+    {
+      "path": "asdg/CODEX-PROMPT.md",
+      "change": "modified",
+      "before_sha256": "f79bd7530c3b8a79c14b439dddd697933fc0cb1b8f420f48567eb6abbaf1c712",
+      "after_sha256": "9a657d04518580ec3ea13e5b9c61b81b57fb75ce84eac7e88f6f6a5205a5af60"
+    },
+    {
+      "path": "asdg/README.md",
+      "change": "modified",
+      "before_sha256": "a0d0f1bfd1221c0a92c91ca51f4d84417f216ab83077f0e6a7dda2a370bdd587",
+      "after_sha256": "c958dd70a38ecb5477ee64327565983065e13810055a3aad3100640da74befe7"
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "change": "modified",
+      "before_sha256": "f92790ce7dc900cdbe2f405fd6c5dfe734aff0d0e7a8459878782103128cc049",
+      "after_sha256": "c20241e3e90b84f464b3dab1f09225543ed2999b1ed52aa9a505520805f885c9"
+    },
+    {
+      "path": "asdg/docs/distribution-build.md",
+      "change": "modified",
+      "before_sha256": "113d7ceff89f143646b04d658ee54a6c23d9737e9904cef88e68f0f797bb2cff",
+      "after_sha256": "f330a510b3ff703fb2e5794276e8af95b670af5ea8ef21ecd66ea3a02f7849a1"
+    },
+    {
+      "path": "asdg/docs/images/installation-engine.svg",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "3140579438c1457f1740df6f4c69463dd425ee1f46f010cdce02ed8c34386d0c"
+    },
+    {
+      "path": "asdg/docs/install-clone-prompt.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "c26fc03c4ab0a32076d74d8aabe4d2b9fea549f02e10b4f816d6694bbacb579e"
+    },
+    {
+      "path": "asdg/docs/install-zip-prompt.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "dd20f275b60af342860dd0242b4843280cc2b04b91e11dead0964b828caaafbc"
+    },
+    {
+      "path": "asdg/docs/installation.md",
+      "change": "modified",
+      "before_sha256": "d31abd33c905e3aa0e3680b3bdee3a0fee573180cd1deb87b76b47ce83dd496c",
+      "after_sha256": "fa357979bc22fe882646c687842f9691c91b7b82bc0ab291d6084a8b9c6d7971"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "change": "modified",
+      "before_sha256": "2327984f41959b2bf8df4a24e0de066fecdd83ea93288fe8eef45595cea11b94",
+      "after_sha256": "99174f395a09c7ad016978b5f57dd4ef56852ee5699707be027d6df62f46df95"
+    },
+    {
+      "path": "asdg/metadata/package-files.json",
+      "change": "modified",
+      "before_sha256": "6cd889ac407fcd2e077d6ac1ab94d189353e4b6824bdd417a6b737136a3ca577",
+      "after_sha256": "9057ff2efa67383f94f7ed379fdbd2add42e7c23bb61f4ea96122545172d2843"
+    },
+    {
+      "path": "asdg/scripts/lib/cli.md",
+      "change": "modified",
+      "before_sha256": "37d0b0458f557de85fb7ec84eb07e3af706893993aa96964eccdde662832fe1a",
+      "after_sha256": "94c7dbaabc85a20ab82f5d8790d895220e55cd53b119727325bfe0a64f65b743"
+    },
+    {
+      "path": "asdg/scripts/lib/cli.py",
+      "change": "modified",
+      "before_sha256": "e27c60e59fdfac795f6e6a0246972a39de2f2d79f9b39aa3dedab112c76a29fe",
+      "after_sha256": "3a0039667d93bf64f5a299c0bfe7fc4caca530a2aade52b445948f67c1fa22df"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_files.md",
+      "change": "modified",
+      "before_sha256": "06224a3034c874a9792acca3403a1c66b268ef361f953ef5675db1dc3f227356",
+      "after_sha256": "15ff930dbb0167ec28e903716f414e65613d46045b3fc28c6ee2d29f0503accb"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_files.py",
+      "change": "modified",
+      "before_sha256": "483429b5913dc307f4027ac5f17b2b7eb38d1e175ec95b3521c1f0702312b122",
+      "after_sha256": "a875eddcc0e4bcbb7ae9147cb51a3b221dd379fcfdd36c9c90c44b3b3425f8d3"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "47d8d5ebc40b07c01449de21d460b08c25098eb011765e6d5b2fbed8b04db44a"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "499b806a5718e09608ed0e68fd1ae0aa8ffe9b4db798b3e92e864b6f09d90a9d"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install_source.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "4e77532c3320e66f3d271731979158dbf7126343298c4361aa90c07662cb903e"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install_source.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "11d7288e21c4b7db79504143477123d973d08fc576e7e3db3f72dd1ddf30e975"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_project.md",
+      "change": "modified",
+      "before_sha256": "fd1de63e541e2bf92ca878509729ec0ee3a65e8111423db5b84bd24efe148008",
+      "after_sha256": "c5755e918f903b71206f6e07e0008ee81a65a7a11684072fad86ca16cd3cea87"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_project.py",
+      "change": "modified",
+      "before_sha256": "75ec1ad5d1625db9116d7b789e7ca0fe530af6918952680408296cc5cea20e50",
+      "after_sha256": "8b27fa1e6dd46e53472744194d325c059db915dc7fd1db8b6d6cbd88a0944ae3"
+    },
+    {
+      "path": "asdg/skills/asdg-init/SKILL.md",
+      "change": "modified",
+      "before_sha256": "3ebc445c711c50bc19b3dabb6bdd3acd26518b8603be3d8b8ef764e7680f7d08",
+      "after_sha256": "ac8c15c3e9e3f060ca38c0170fa8ccfadd824d3c05c15073807c9415eee76ca8"
+    },
+    {
+      "path": "asdg/tests/continuation_fixture.md",
+      "change": "modified",
+      "before_sha256": "c1586478c3ddd6ab184de34047b82decfb2cf9dc0e2b0e476ebfef3f82847a4b",
+      "after_sha256": "be6295e28ebd578ac49ed5a897c19c950646bef2971ae1f31aae989d2c383bdf"
+    },
+    {
+      "path": "asdg/tests/continuation_fixture.py",
+      "change": "modified",
+      "before_sha256": "ed8d69ebc85ac493a70ddda9e7c07469b68239da35f8f830eebb8ef502ddefec",
+      "after_sha256": "13be7a285ca79e3b0bbc6bb0b262026de6444517763397f608ed29e5d91f1356"
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "change": "modified",
+      "before_sha256": "5fa4091b6cd0d76d9d797fec9f7c91e9ea150f4c4b38ae1e80fd783bd046c011",
+      "after_sha256": "737877d7cc557ffd2d5ce657459726374d223846cd22f09cd60b3fb44f542cbd"
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "change": "modified",
+      "before_sha256": "11d7f0256c556c8acb5a1777454069077dfc6415e68872365a82acaaab274f4a",
+      "after_sha256": "067020fa506cb023bd170907230e5144179e76d0cd99e98104008b4cbdfe4bbb"
+    },
+    {
+      "path": "asdg/tests/test_install.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "1ff51cc9b90be982215df0f7789b3303891bf39176c6569ca6f479e1a1b9c80c"
+    },
+    {
+      "path": "asdg/tests/test_install.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "12499c0b894d5bd74e2f7a653fa17c9c72eb941dd8d6f3f4282d3d64276b7eb9"
+    },
+    {
+      "path": "asdg/tests/test_portable.md",
+      "change": "modified",
+      "before_sha256": "2cbd18688ee93a031e75791b1c5d3b2b4c36c234548064870abb21a0542808e3",
+      "after_sha256": "00f47048a03b4fd52d2010419d6813796f8ef6051e072a28f9c906f457f87614"
+    },
+    {
+      "path": "asdg/tests/test_portable.py",
+      "change": "modified",
+      "before_sha256": "0cd0f74c0265edf5b031df7d8c571ba45fd4c66668a7478db49076fae786a8a6",
+      "after_sha256": "99fdc0320eab1624927ba91eb753a7e64b8c442680243e45d1bf656c49577d67"
+    },
+    {
+      "path": "asdg/tests/test_sync.md",
+      "change": "modified",
+      "before_sha256": "16427770265c2633627c71647b847bb06310c8e0b11aad8e346646822c2c5956",
+      "after_sha256": "6f0653897457d982fea3fb68bbf3ba608d0be0fb144786a694772f008e78c4a6"
+    },
+    {
+      "path": "asdg/tests/test_sync.py",
+      "change": "modified",
+      "before_sha256": "824da3e0029c458e93736d273ae8cdae5529be8b82b2e1c7cd619ec940b18caa",
+      "after_sha256": "6debb469ca7f50d3dcc4f547867ad6f47fa716f0086dfa0b3ed51c90fff3eb5a"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.4-review-installation-paths.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "2d799a04a5b583469f257246ca73b7cd972efbde413a8b3d121753c7ff0884d3"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/build.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "3adb9cf877afc19b4fd92e55945bf4da5f1c351d4e7e1aca758da45039d1aec4"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/changed-paths.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": null
+    },
+    {
+      "path": "docs/reviews/asdg-installation/changed-paths.txt",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": null
+    },
+    {
+      "path": "docs/reviews/asdg-installation/human-clone-prompt.txt",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "80dd7bbb62fa3d4c7f7a7d206b9c0adc2f4c67dff884006af529493cacae8909"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/human-test.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "ce8f16163d8b7f8862de353d1ae53ca8beee6668424d7cb297f42c2ce1a12ffb"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/human-zip-prompt.txt",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "173890ece2377eac4eb779088e797469714deaee48f8b86f612caab9714d81f3"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/integrity.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "df2160977d1e48a235c73d76a5e97f44df631d5482cd05bafceb3aab3cfecae5"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/manifest-before.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "2327984f41959b2bf8df4a24e0de066fecdd83ea93288fe8eef45595cea11b94"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/python315-full.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "8fe4f6c9723fa311556c108d538813b1c40de2c2a2e26826ab5d76e2a93409be"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/python315-install.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "7f0b293a12dafec6364ac874824a28ed4dba487368e6dd59ea61a91b37063374"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/python39-full-final.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "135e95aeb7964115b55503ccf7fdc49d1104e87d2cf15cb01cb6d6f5626504e5"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/python39-full-initial.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "85b6f974067898ac2e178353acc5f6ec2eb15bc0154b53b59609a1feef9c9ed1"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/python39-install.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "1a337183817daf6265d3618be48031bcd332914c9b4c3cbbb07f1b7fd4b4eb56"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/render.log",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "9ec2fcb0179ba88f26833b66bddd0398c2e79e8387082c8badeb9b4d158f2ae7"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/validation.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "b52b533c0dca913c9cd55e38973f7a7f847c66bc1c1cf45e4526f141c96160b4"
+    },
+    {
+      "path": "docs/reviews/asdg-installation/visual-check.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "a1895c8499717a1997bdecfdc21c6cd2fb81f04754afb30c69fa20a1513eddd7"
+    }
+  ],
+  "redaction_note": "Personal checkout paths replaced by repository-relative paths; original task hashes retained as historical observations, not current-file hashes. Temporary test paths use <TEMP_INSTALL_TRIAL>."
+}

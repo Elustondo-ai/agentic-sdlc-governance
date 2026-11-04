@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="310" viewBox="0 0 1040 310" role="img" aria-labelledby="title desc">
+<title id="title">ASDG portable installation</title>
+<desc id="desc">The canonical provider selects reviewed files, validates their manifest and builds a ZIP. A developer extracts the asdg folder inside a client Git repository, then initializes selected integrations and local state.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#427492"/></marker></defs>
+<rect width="1040" height="310" rx="16" fill="#f4f7fa"/>
+<g font-family="Arial, sans-serif" fill="#172b3a">
+<text x="30" y="38" font-size="23" font-weight="bold">One folder carries the methodology</text>
+<text x="30" y="68" font-size="16">Provider ownership → versioned distribution → local client setup</text>
+<g fill="#fff" stroke="#427492" stroke-width="2">
+<rect x="30" y="105" width="215" height="115" rx="10"/><rect x="285" y="105" width="200" height="115" rx="10"/>
+<rect x="525" y="105" width="215" height="115" rx="10"/><rect x="780" y="105" width="230" height="115" rx="10"/>
+</g>
+<g stroke="#427492" stroke-width="2" marker-end="url(#arrow)"><path d="M247 161 H278"/><path d="M487 161 H518"/><path d="M742 161 H773"/></g>
+<g font-size="18" font-weight="bold"><text x="47" y="137">Canonical source</text><text x="302" y="137">Verified ZIP</text><text x="542" y="137">Extract asdg/</text><text x="797" y="137">Run init</text></g>
+<g font-size="15"><text x="47" y="168">Explicit portable file list</text><text x="47" y="192">Rules, code and templates</text><text x="302" y="168">Hashes + source commits</text><text x="302" y="192">One top-level folder</text><text x="542" y="168">Inside existing Git root</text><text x="542" y="192">No sibling dependency</text><text x="797" y="168">Codex, Claude or both</text><text x="797" y="192">Preserve project state</text></g>
+<text x="30" y="265" font-size="16">Repeat setup is idempotent. Conflicts stop writes. Hook trust and human acceptance stay separate.</text>
+</g></svg>

@@ -1,0 +1,13 @@
+/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg-prepare-f4zlecmf/provider with spaces and 'quote/build/distributions/asdg-0.3.0-pilot.1.zip
+Candidate built locally; native trust, acceptance and publication remain separate.
+/private/var/folders/sr/0mj2x8d536919gtgfcz2qcp00000gn/T/asdg-prepare-f4zlecmf/provider with spaces and 'quote/build/distributions/asdg-0.3.0-pilot.1.zip
+Candidate built locally; native trust, acceptance and publication remain separate.
+test_cli_from_other_directory_reports_failure_for_missing_builder (test_prepare_commit.PrepareCommitTests.test_cli_from_other_directory_reports_failure_for_missing_builder) ... ok
+test_failed_package_check_propagates_without_creating_artifact (test_prepare_commit.PrepareCommitTests.test_failed_package_check_propagates_without_creating_artifact) ... BUILD FAILED: Invalid catalogue/rules: Missing package file: scripts/init.py
+ok
+test_refreshes_changed_package_and_rebuilds_identically_on_repeat (test_prepare_commit.PrepareCommitTests.test_refreshes_changed_package_and_rebuilds_identically_on_repeat) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.384s
+
+OK
