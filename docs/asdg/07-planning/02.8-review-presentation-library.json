@@ -1,0 +1,80 @@
+{
+  "recorded_at": "2026-11-04T21:09:16.761622+00:00",
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+  "starting_head": "395433020728964a63657950658583e7674833b4",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "files": [
+    {
+      "path": "README.md",
+      "before_sha256": "c6277bfe3c40b063ed80aeba26e14c527699ea24e45b1675455ac8492baefaa9",
+      "sha256": "6dae55acc1cd82b23ee93e3a24a6b541cf0709ea0af37499a11387dd1b67ed1f"
+    },
+    {
+      "path": "docs/presentations/README.md",
+      "before_sha256": "d844ca015b535995d764c02799ceee4d7e8e69c5fdef5de870468ff9cc30ea95",
+      "sha256": "4aed5261dd665b62d21be75e0228001e11fd394ee6522f6c45968398ff6f36cc"
+    },
+    {
+      "path": "docs/presentations/sources.md",
+      "before_sha256": null,
+      "sha256": "2783c20da49c96aa5892c4b24b3d94f1ac6c04f024ff99a9918eebe6bf4a0f74"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.8-review-presentation-library.md",
+      "before_sha256": null,
+      "sha256": "fdc6670b8b8b50dd975064d8f38b4815057f8979ca8c61d4e5abafdd9ae01fc5"
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/media.json",
+      "before_sha256": null,
+      "sha256": "144f71b6b979c726281f2c12e5112d92bb5ee95fb73392b84ee0b295a6faaf7d"
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/verification.json",
+      "before_sha256": null,
+      "sha256": "f6d6f9f0f228177994044dc0e49e759f0124cdc5807cf48f7087f25db7817c1d"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "04639970599ff1b0d0281e6ed1eca23cd600c4a393a388aead4ba04fe256e0ac",
+      "sha256": "758e9e9df21182c8714440fb7703af12c0bf84c682fbe8daae5110e0b848920a"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "7ebe85e43f6fab4a4a6b2cbeb9e199d6a1f703e5f3da3ac175340541aeab12e2",
+      "sha256": "977d8419615eb2a32c26f750df64dd54751bcfb477f8deca9d668824b507bebd"
+    }
+  ],
+  "self_inventory": "docs/asdg/07-planning/02.8-review-presentation-library.json (new; self hash omitted)",
+  "preserved_review_events": 1852,
+  "appended_review_events": 4,
+  "published_media": {
+    "release_url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/tag/v0.3.0-pilot.1",
+    "mp4": 2,
+    "pptx": 7,
+    "public_links": "9 HTTP 200 and digest matches",
+    "existing_portable_zip_unchanged": true
+  },
+  "local_candidate_zip": {
+    "path": "build/distributions/asdg-0.3.0-pilot.1.zip",
+    "sha256": "ee110b9756646e9c8fff992fe058ed1c31392adb50172a9c226dd129064fd5f2",
+    "publication": "Not uploaded; current published portable ZIP remains bound to the earlier tagged commit."
+  },
+  "verification": {
+    "presentation_tests": 31,
+    "package_integrity": "PASS",
+    "relative_links": "PASS",
+    "source_line_limit": "PASS",
+    "visual_preview": "Local HTML reader preview and all seven deck overview images inspected.",
+    "native_installation_apps": "Not tested by this task"
+  },
+  "human_actions_remaining": [
+    "review local documentation changes",
+    "commit",
+    "push"
+  ],
+  "original_video_permissions_changed": false
+}

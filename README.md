@@ -6,8 +6,7 @@ ASDG is a software development method that lets developers work with coding agen
 It gives an existing project shared instructions, specialist roles and versioned project memory across the development lifecycle.
 Each project keeps its own versioned `asdg/` folder, so its method can evolve alongside its code.
 
-[Read the ASDG introduction — slides and narration](docs/presentations/asdg-introduction/README.md) · [Browse the presentations](docs/presentations/README.md).
-A short playable introduction video is pending publication. These links open presentation sources; generated PowerPoint and preview links inside them require a local build and are absent from GitHub.
+[Watch or download the ASDG presentations](docs/presentations/README.md). Start with the three-minute introduction, or choose a PowerPoint to read at your own pace.
 
 ## Get started — ZIP + Prompt
 
@@ -19,7 +18,7 @@ You do not need to clone this methodology repository or type Python commands you
 3. Open your project in Claude Code or Codex and paste the [ZIP installation prompt](asdg/docs/install-zip-prompt.md).
 4. Review the preview and approve installation. After verification, the assistant offers the optional Context survey and waits for a separate yes.
 
-**Publication pending:** the ZIP link returned HTTP 404 on 4 November 2026. Before sharing this README, publish the reviewed portable ZIP and its SHA-256 sidecar as assets of release `v0.3.0-pilot.1`; GitHub's automatic source archives are different packages.
+The portable ZIP and its SHA-256 checksum are available in the [pilot pre-release](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/tag/v0.3.0-pilot.1). Choose the portable asset; GitHub's automatic source archives are different packages.
 This is a pilot candidate awaiting human review; installation checks do not establish native discovery, invocation or hook trust.
 See [installation details](asdg/docs/installation.md) and [client integration limits](asdg/docs/client-integrations.md).
 
@@ -34,7 +33,7 @@ cd agentic-sdlc-governance
 git rev-parse HEAD
 ```
 
-The last command prints the full commit SHA. Use a reviewed commit containing the installer and a matching package manifest; the current local installation work still needs to be committed and pushed by the maintainer.
+The last command prints the full commit SHA. Use a reviewed commit containing the installer and a matching package manifest.
 The [Clone installation prompt](asdg/docs/install-clone-prompt.md) takes that full SHA, the canonical clone path and the target project path, using the same preview and approval engine as ZIP installation.
 
 `asdg promote` brings the LifeBuckets pilot improvement into the local canonical checkout for review. After reviewing and committing it, a contributor can open a pull request.

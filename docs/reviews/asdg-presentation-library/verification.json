@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "public_downloads": [
+    {
+      "asset": "agentic-ai.pptx",
+      "url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/agentic-ai.pptx",
+      "http_status": 200,
+      "github_sha256_matches_local": true
+    },
+    {
+      "asset": "asdg-introduction.pptx",
+      "url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-introduction.pptx",
+      "http_status": 200,
+      "github_sha256_matches_local": true
+    },
+    {
+      "asset": "asdg-sprint-governance-review.pptx",
+      "url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-sprint-governance-review.pptx",
+      "http_status": 200,
+      "github_sha256_matches_local": true
+    },
+    {
+      "asset": "codex-agent-skills-and-adapters.pptx",
+      "url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/codex-agent-skills-and-adapters.pptx",
+      "http_status": 200,
+      "github_sha256_matches_local": true
+    },
+    {
+      "asset": "coding-agents-architecture-article.pptx",
+      "url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/coding-agents-architecture-article.pptx",
+      "http_status": 200,
+      "github_sha256_matches_local": true
+    },
+    {
+      "asset": "formalization-gradient.pptx",
+      "url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/formalization-gradient.pptx",
+      "http_status": 200,
+      "github_sha256_matches_local": true
+    },
+    {
+      "asset": "spec-driven-development-deep-dive.pptx",
+      "url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/spec-driven-development-deep-dive.pptx",
+      "http_status": 200,
+      "github_sha256_matches_local": true
+    },
+    {
+      "asset": "asdg-introduction-narrated.mp4",
+      "url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-introduction-narrated.mp4",
+      "http_status": 200,
+      "github_sha256_matches_local": true
+    },
+    {
+      "asset": "codex-agent-skills-and-adapters-narrated.mp4",
+      "url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/codex-agent-skills-and-adapters-narrated.mp4",
+      "http_status": 200,
+      "github_sha256_matches_local": true
+    }
+  ],
+  "presentation_tests": {
+    "passed": 31,
+    "python": "3.11",
+    "temporary_root": "/private/tmp",
+    "initial_failure": "One test compared macOS /var alias with /private/var resolved path; rerun with resolved temporary root passed without changing code."
+  },
+  "deck_build": "Seven intro-profile decks built, source hashes and full note round-trips verified.",
+  "visual_review": "All seven deck previews and representative frames from both MP4 exports inspected.",
+  "google_vids_original_permissions": "Private; unchanged.",
+  "original_recordings": "Earlier ASDLC naming retained; library warns readers to use current README for installation.",
+  "export_transfer_observations": "Introduction browser export completed despite a tool timeout. Codex Drive export completed; connector materialization hit certificate-store/transfer-timeout failures, then the normal Drive download completed. Final local media sizes and audio/video streams were verified.",
+  "artifact_policy": "All generated PPTX/MP4 files remain in ignored presentation build directories.",
+  "commit_push": "Not performed."
+}

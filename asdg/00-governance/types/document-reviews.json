@@ -28753,6 +28753,68 @@
         "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
         "scope": "Prepare an explicit commit inventory and disposable package/installation verification"
       }
+    },
+    {
+      "path": "README.md",
+      "sha256": "6dae55acc1cd82b23ee93e3a24a6b541cf0709ea0af37499a11387dd1b67ed1f",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-04T21:09:16.761622+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Clean public presentation library; explicitly authorized MP4/PPTX release assets"
+      },
+      "previous_state": {
+        "sha256": "c6277bfe3c40b063ed80aeba26e14c527699ea24e45b1675455ac8492baefaa9",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/presentations/README.md",
+      "sha256": "4aed5261dd665b62d21be75e0228001e11fd394ee6522f6c45968398ff6f36cc",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-04T21:09:16.761622+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Clean public presentation library; explicitly authorized MP4/PPTX release assets"
+      },
+      "previous_state": {
+        "sha256": "d844ca015b535995d764c02799ceee4d7e8e69c5fdef5de870468ff9cc30ea95",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/presentations/sources.md",
+      "sha256": "2783c20da49c96aa5892c4b24b3d94f1ac6c04f024ff99a9918eebe6bf4a0f74",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-04T21:09:16.761622+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Clean public presentation library; explicitly authorized MP4/PPTX release assets"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.8-review-presentation-library.md",
+      "sha256": "fdc6670b8b8b50dd975064d8f38b4815057f8979ca8c61d4e5abafdd9ae01fc5",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-04T21:09:16.761622+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Clean public presentation library; explicitly authorized MP4/PPTX release assets"
+      }
     }
   ],
   "distribution_version": "0.3.0-pilot.1"

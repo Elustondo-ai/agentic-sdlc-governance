@@ -1,38 +1,18 @@
-# ASDG presentation collection
+# ASDG presentations
 
-These source folders are the presentation source of truth in `Elustondo-ai/agentic-sdlc-governance`.
-Canonical location, content approval, and publication to GitHub are separate states.
+Start with the three-minute ASDG introduction. Choose a narrated video to watch, or download the PowerPoint to read at your own pace.
 
-| Read in this order | Slides | State | PowerPoint |
-| --- | ---: | --- | --- |
-| [ASDG introduction](asdg-introduction/README.md) | 13: 12 + R01 | Selected introduction; inherited content preserved. | [Open PPTX](asdg-introduction/build/asdg-introduction.pptx) · [Detailed v2](asdg-introduction/build/asdg-introduction-detailed.pptx) |
-| [Formalization Gradient](formalization-gradient/README.md) | 13: 11 + A1–A2 | Review draft; includes the Codex continuation. | [Open PPTX](formalization-gradient/build/formalization-gradient.pptx) |
-| [Codex agents, skills and adapters](codex-agent-skills-and-adapters/README.md) | 13 | Technical draft: Codex implementation, Claude and Copilot mappings. | [Open PPTX](codex-agent-skills-and-adapters/build/codex-agent-skills-and-adapters.pptx) · [Detailed](codex-agent-skills-and-adapters/build/codex-agent-skills-and-adapters-detailed.pptx) |
-| [Agentic AI](agentic-ai/README.md) | 7 | Review draft; development-time and runtime agents. | [Open PPTX](agentic-ai/build/agentic-ai.pptx) |
-| [Spec-Driven Development deep dive](spec-driven-development-deep-dive/README.md) | 1: R02 | Separate research-reference slide. | [Open PPTX](spec-driven-development-deep-dive/build/spec-driven-development-deep-dive.pptx) |
+| Presentation | Narrated video | PowerPoint |
+| --- | --- | --- |
+| ASDG introduction | [MP4 · 3:00](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-introduction-narrated.mp4) | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-introduction.pptx) |
+| Codex agents, skills and adapters | [MP4 · 2:45](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/codex-agent-skills-and-adapters-narrated.mp4) | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/codex-agent-skills-and-adapters.pptx) |
+| Formalization Gradient | Not published yet | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/formalization-gradient.pptx) |
+| Agentic AI | Not published yet | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/agentic-ai.pptx) |
+| How coding AI agents work | Not published yet | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/coding-agents-architecture-article.pptx) |
+| Sprint governance | Not published yet | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-sprint-governance-review.pptx) |
+| Spec-driven development deep dive | Not published yet | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/spec-driven-development-deep-dive.pptx) |
 
-**PPTX files appear after a build.** The links above open each presentation’s local `build/` output when available. Generated files are not stored in Git, so these links require a built working copy.
+MP4 links download the video; open it in your browser or video player. The short videos are narrated adaptations; PowerPoints include the slides and speaker notes.
+The existing recordings use the earlier “ASDLC” name. Follow the current ASDG README for installation.
 
-## How to navigate
-
-Each presentation README links directly to every original visual and its Markdown narration.
-Each numbered slide folder contains one visual and one to three ordered narration files.
-The introduction now offers a second, detailed version: original intro → visual walkthrough → examples and explanation.
-Existing descriptive SVG filenames and `speaker-text.md`/`speaker-notes.md` names remain unchanged.
-The folder number is slide order, not an SDLC stage.
-Each presentation owns a local `build/` containing its PowerPoint, preview, and build manifest.
-Build output is deliberately excluded from Git; it is recreated from the source files and shared tooling.
-
-## Shared capability
-
-The [presentation skill](../../asdg/skills/asdg-presentation/README.md) is defined in the methodology implementation.
-Follow its [standard](../../asdg/skills/asdg-presentation/docs/presentation-standard.md) and [build instructions](../../asdg/skills/asdg-presentation/docs/building.md).
-No existing PPTX or PDF is required to rebuild the decks.
-
-## Retained boundaries
-
-Migration preserved the source visuals, narration, references, and existing review markers.
-Four introduction SVGs are raster-backed exceptions; their appearance has not been replaced.
-Formalization/Codex and runtime-agent examples remain proposals where their source says so.
-The source slide vocabulary is not automatically a verified native Codex implementation.
-Review the [wrap-up](../status/2026-10-08-wrap-up.md) before adopting further methodology components.
+[Presentation sources and build instructions](sources.md) · [Back to ASDG](../../README.md)
