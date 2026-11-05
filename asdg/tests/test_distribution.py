@@ -1,6 +1,7 @@
 """Test the actual ZIP boundary and install extracted clients without a provider."""
 import hashlib
 import json
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -56,12 +57,88 @@ class DistributionTests(unittest.TestCase):
             self.assertEqual(archive.namelist(), ['asdg/' + p.relative_to(self.core).as_posix()
                                                for p in package_files(self.core)])
             self.assertNotIn('asdg/provider-only.env', archive.namelist())
-            skill = 'skills/asdg-init/SKILL.md'
-            self.assertEqual(archive.read('asdg/' + skill), (CORE / skill).read_bytes())
+            for skill in ('skills/asdg-init/SKILL.md', 'skills/asdg-status/SKILL.md', 'skills/asdg-suggestion/SKILL.md',
+                          'skills/asdg-create-team/SKILL.md', 'skills/asdg-create-team/create-chats.md',
+                          'skills/asdg-help/SKILL.md', 'skills/asdg-help/command-reference.md',
+                          'skills/asdg-update/SKILL.md'):
+                self.assertEqual(archive.read('asdg/' + skill), (CORE / skill).read_bytes())
             for prompt in ('install-zip-prompt.md', 'install-clone-prompt.md'):
                 self.assertEqual(archive.read('asdg/docs/' + prompt), (CORE / 'docs' / prompt).read_bytes())
         self.assertTrue(first.with_suffix('.zip.sha256').read_text().startswith(
             hashlib.sha256(first.read_bytes()).hexdigest()))
+
+    def test_help_covers_every_portable_discovery_command(self):
+        help_file = self.core / 'skills/asdg-help/SKILL.md'
+        text = help_file.read_text()
+        documented = set()
+        for name, link in re.findall(r'\[/(asdg-[a-z-]+)\]\(([^)]+)\)', text):
+            target = (help_file.parent / link).resolve()
+            self.assertEqual(target, (self.core / 'skills' / name / 'SKILL.md').resolve())
+            self.assertTrue(target.is_file(), name)
+            documented.add(name)
+        installed = {p.parent.name for p in
+                     (self.core / 'templates/.agents/skills').glob('*/SKILL.md')}
+        self.assertEqual(documented, installed)
+
+    def test_post_upgrade_init_adds_new_skill_adapters_without_changing_project(self):
+        # Rehearse integration after an independently approved distribution upgrade.
+        names = ('asdg-help', 'asdg-update')
+        index = self.core / 'metadata/package-files.json'
+        original_index = index.read_bytes()
+        saved = {}
+        for name in names:
+            folder = self.core / 'templates/.agents/skills' / name
+            for file in folder.rglob('*'):
+                if file.is_file():
+                    saved[file.relative_to(self.core).as_posix()] = file.read_bytes()
+            shutil.rmtree(folder)
+        self.rewrite_list(lambda files: files.__setitem__(slice(None),
+                          [f for f in files if f not in saved]))
+        refresh_manifest(self.core)
+        old = build(self.core, self.root / 'old')
+        client = self.root / 'client'
+        client.mkdir()
+        subprocess.run(['git', 'init', '-q', str(client)], check=True)
+        with zipfile.ZipFile(old) as archive:
+            archive.extractall(client)
+        self.cli(client, 'init', '--client', 'both')
+        (client / 'app.txt').write_text('preserve application')
+        (client / 'docs/asdg/notes.md').write_text('preserve project evidence')
+        def project_bytes():
+            return {p.relative_to(client).as_posix(): p.read_bytes()
+                    for p in client.rglob('*') if p.is_file()
+                    and p.relative_to(client).parts[0] not in ('.git', 'asdg')}
+        before = project_bytes()
+        index.write_bytes(original_index)
+        for name, data in saved.items():
+            target = self.core / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(data)
+        refresh_manifest(self.core)
+        for file in package_files(self.core):
+            target = client / 'asdg' / file.relative_to(self.core)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(file, target)
+        preview = json.loads(self.cli(client, 'init', '--dry-run', '--json'))
+        expected = {f'{folder}/{name}/{tail}' for folder, tails in
+                    (('.agents/skills', ('SKILL.md', 'agents/openai.yaml')),
+                     ('.claude/skills', ('SKILL.md',)))
+                    for name in names for tail in tails}
+        expected.add('.asdg/document-reviews.json')
+        self.assertEqual(set(preview['planned_files']), expected)
+        self.assertEqual(project_bytes(), before)
+        self.cli(client, 'init', '--apply', '--plan', preview['plan'])
+        after = project_bytes()
+        self.assertEqual({p: data for p, data in after.items() if p not in expected},
+                         {p: data for p, data in before.items() if p not in expected})
+        self.assertEqual(set(after) - set(before), expected - set(before))
+        old_events = json.loads(before['.asdg/document-reviews.json'])['events']
+        new_events = json.loads(after['.asdg/document-reviews.json'])['events']
+        self.assertEqual(new_events[:len(old_events)], old_events)
+        self.assertTrue(all(e['human_approval'] is None for e in new_events[len(old_events):]))
+        self.assertTrue(json.loads(self.cli(client, 'verify', '--json'))['structure_ok'])
+        repeated = json.loads(self.cli(client, 'init', '--dry-run', '--json'))
+        self.assertEqual(repeated['planned_files'], [])
 
     def test_stale_bytes_fail_before_artifact_is_written(self):
         (self.core / 'README.md').write_text('Changed candidate\n')

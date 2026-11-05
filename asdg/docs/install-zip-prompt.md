@@ -16,8 +16,8 @@ STOP and wait for APPROVE for this exact plan; CANCEL stops, and ambiguous repli
 After I approve, repeat the same options with --apply --plan TOKEN_FROM_PREVIEW.
 Verify with python3 asdg/scripts/cli.py verify --json and repeat the dry run for no further changes.
 Report changed paths and preservation checks. Distinguish deterministic verification from actual native discovery/invocation and hook trust.
-Report installation complete only on success, then offer the optional Context survey and STOP.
-Never execute that survey or ask its questions without my separate affirmative response.
+Report installation complete only on success, follow the canonical Init skill’s Status handoff guidance and STOP.
+Do not create team chats or start Context analysis without a separate request for that step.
 Do not overwrite conflicts, bypass hooks, grant trust, resolve promotion conflicts, commit, push, merge, tag, publish or start a sprint.
 ```
 
@@ -25,4 +25,4 @@ Do not overwrite conflicts, bypass hooks, grant trust, resolve promotion conflic
 | --- | --- |
 | Before approval | Complete preview; no project writes |
 | After approval | Verified selected client integration; existing application/evidence retained |
-| Completion | Survey offered, not run; native tests and hook trust explicitly distinguished |
+| Completion | Status skill recommended, not run; native tests and hook trust explicitly distinguished |

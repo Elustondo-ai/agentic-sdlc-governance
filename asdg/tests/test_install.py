@@ -15,7 +15,7 @@ CORE = Path(__file__).resolve().parents[1]
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(CORE / 'scripts/lib'))
 from cli_files import Conflict
-from cli_install import install
+from cli_install import install, render
 from distribution_files import package_files
 
 
@@ -126,9 +126,18 @@ class InstallTests(unittest.TestCase):
                     self.assertEqual(before, tree(self.target))
                     installed = self.invoke(route, client, apply_changes=True, expected_plan=preview['plan'])
                     self.assertTrue(installed['installation_complete'])
+                    completion = render(installed).split('ASDG installation complete;', 1)[1]
+                    self.assertIn('Next, use /asdg-status in your project chat.', completion)
+                    self.assertIn('This installation did not run Status, create team chats or start Context analysis', completion)
+                    self.assertNotIn('Context survey', completion)
+                    self.assertNotIn('/asdg-create-team', completion)
+                    self.assertNotIn('Create my ASDG team', completion)
+                    self.assertNotIn('CREATE TEAM or NOT NOW', completion)
+                    self.assertNotIn('Next, use /asdg-status in your project chat.', render(preview))
                     skill = Path('asdg/skills/asdg-init/SKILL.md')
                     self.assertEqual((self.target / skill).read_bytes(), (CORE.parent / skill).read_bytes())
                     self.assertTrue(installed['verification']['structure_ok'])
+                    self.assertFalse(installed['context_survey']['offered'])
                     self.assertFalse(installed['context_survey']['executed'])
                     self.assertTrue(installed['context_survey']['requires_separate_affirmative'])
                     self.assertEqual(installed['native_runtime_enforcement'], 'NOT_VERIFIED')

@@ -8,7 +8,7 @@ description: Set up ASDG governance and twelve specialist chats in the current C
 Give the user thirteen project chats: governance 00 and specialists 01–12, each with its own conversation focus.
 These are user-owned chats sharing one repository; creating them does not assign project work or start a sprint.
 Read client instructions and [session policy](../asdg-focus/session-policy.md); preserve this chat's focus.
-A request to create the team, including invoking this skill for setup, authorizes the missing chats and their initial Focus prompts.
+A request to create the team, including invoking this skill for setup, authorizes the missing chats, their initial Focus prompts and project-local ordering below, subject to the shared-preference approval gate.
 Automatic skill discovery, a status request or editing the skill is not a request to create chats.
 
 ## Resolve the project and roles
@@ -35,19 +35,24 @@ Keep the role-to-chat mapping in this conversation; do not create shared active-
 
 ## Create the missing chats
 
-Use native `create_thread` for each confirmed missing role, in small batches, with the verified project ID and local environment.
-Omit model and reasoning overrides; honor any explicit user preferences. Do not create worktrees, subagents or cloud tasks.
-Let each new chat compose its title through [the current title contract](../asdg-focus/rename-chat.md): short role, optional focus, optional attitude; keep the project binding in its receipt.
-Each initial prompt must explicitly request `$asdg-focus` with its verified absolute path and that chat's catalogue role ID; no per-role picker skill is needed.
-State the project root and request only activation, its required read-only opening/status, a brief role confirmation, then waiting for the user.
-New chats start with subject NoFocus and attitude NoAttitude unless the user explicitly assigns them; never copy the caller's attitude or overwrite a reused chat's fields.
-State that team setup assigns no documentation or application work; preserve role boundaries, existing files, approvals and sprint state.
-A new chat has no inherited conversation history: pass relevant explicit user constraints with provenance, not a fabricated approval.
-Do not ask the new chats to create peers, message this chat, run a project task or continue autonomously.
-Retain each returned thread ID and host. After dispatch, use bounded `wait_threads` calls for up to eight targets, at most 60 seconds per wait.
-Creation success is not focus activation: confirm the returned progress/receipt or report activation pending or failed.
-For an uncertain creation outcome, inspect native inventory before retrying; never blindly create a duplicate.
-Stop further creation after a shared permission or service failure; retain successes and report remaining roles.
+Follow [missing-chat creation](create-chats.md); retain confirmed role-to-chat IDs before ordering.
+
+## Keep lifecycle order stable
+
+After setup, arrange only the verified target project's ASDG team chats in this fixed sequence:
+
+00 Governance → 01 Context → 02 Purpose → 03 UseCases → 04 EvalStrategy →
+05 Architecture → 06 POC → 07 Planning → 08 Specs → 09 Coding →
+10 ReviewQA → 11 Operations → 12 Observability.
+
+Discover supported sidebar tools and current sorting preferences (`list_threads` in Codex); never assume returned recency order is sidebar display order.
+If manual sorting changes a shared preference, explain that it affects Recents and chats across projects and Codex/Work; obtain explicit approval before changing it. Existing manual sorting needs no preference change.
+Prefer supported app tools with their current schemas. Project-list or section reordering is not project-chat reordering; never invent a project-chat API or edit internal app databases or configuration stores.
+Apply a supported fixed order only to confirmed role-to-chat IDs; unresolved roles or ambiguous matches stay unresolved. Preserve unrelated sidebar items and their positions; decline operations whose scope cannot preserve them.
+Reuse existing chats; preserve contents, identities, role selections, subjects, attitudes, native notification dots and unread states. Do not open/mark chats read, send activity to simulate order, rename, pin or move them to force sorting.
+If supported tools cannot set fixed project-chat order, explain the limitation and provide manual instructions: inspect the sidebar sort control, select manual order only after approval of any shared scope, then drag verified team chats into the sequence above without moving unrelated items. If the UI lacks fixed ordering too, report it unavailable.
+Record intended order, target IDs, preference approval if needed, attempted operations and acknowledgements. Separate tool readback from visually verified results; say when visual verification was unavailable. An acknowledgement alone never proves visible order or stability after activity.
+Creation and ordering must not start project work or a sprint; editing this policy authorizes neither team creation nor reordering.
 
 ## Show the team
 

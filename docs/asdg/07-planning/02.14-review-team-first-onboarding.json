@@ -1,0 +1,131 @@
+{
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+  "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+  "starting_head": "63c4f065138f09988bdd830819260136a4455d65",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "scope": "Team-first, explicit post-install guidance; preserve exact-plan engine and client boundaries.",
+  "files": [
+    {
+      "path": "README.md",
+      "before_sha256": "65290401f155bec363643f00a6c6c03cf88e2214cdae03a0e9ec5919ee611f46",
+      "sha256": "0ef17ddcef3a6f5278f4ac4d4162a8474d9524eed3693db1a0880e1afecd4857"
+    },
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "82f12f3cb4b32bd4227d5e61a98c1843e56e57d6ec9e4077d3a0db666211e0ba",
+      "sha256": "d424dd7530e457b15103279fc07af8bb3bc17176f4c00bdb6fc9f9c330bf53c2"
+    },
+    {
+      "path": "asdg/skills/asdg-init/SKILL.md",
+      "before_sha256": "539bd041cb474bbf569ad7525cdfe24e1110101dad4196acf87de1becd3cb302",
+      "sha256": "4d467855d663c6fc129352398ba527dd12c93a49dee59f57d35c1d20cea46dd8"
+    },
+    {
+      "path": "asdg/docs/install-zip-prompt.md",
+      "before_sha256": "9648d7fdc63663f839a14dfebf9ab2df6ef26fb7c6f80a8e7340fe26a261eb21",
+      "sha256": "f842e70f7f7d4f04d3856b87c16929db2e7c4214cebc878d05d422e111f38b8c"
+    },
+    {
+      "path": "asdg/docs/install-clone-prompt.md",
+      "before_sha256": "76970dc2e5cc02ecf85792da27691d310c203dc8d76507d580a1267be03c9464",
+      "sha256": "b4dc1b63744f3522ee27d425c981ebf363943c772e79995db179fc7f58ea5c4b"
+    },
+    {
+      "path": "asdg/docs/installation.md",
+      "before_sha256": "1627facf655afe98328ede55ac4ab58422c4f82b28ef661058e0a516b9627c34",
+      "sha256": "bd114dfdec95cdd0fd54f4903836e9062907ef7bb9a06f9638a6e6feb0e4c632"
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "before_sha256": "a8fdeba21b7c63281ccb0fcfbf659ef35add6b891370b2f3ea35c2f129f8b426",
+      "sha256": "d12ea5084f6662bc73786dea6d399c89abf63729777fe056057469df8252d146"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.py",
+      "before_sha256": "499b806a5718e09608ed0e68fd1ae0aa8ffe9b4db798b3e92e864b6f09d90a9d",
+      "sha256": "2e1a025ce32e0b9ddb98b0adeff740123160f26926d8766da91e1eb9cd202eb5"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.md",
+      "before_sha256": "47d8d5ebc40b07c01449de21d460b08c25098eb011765e6d5b2fbed8b04db44a",
+      "sha256": "3616ae9a96e65594b06f082bc00a61d7598a76516a33aff1b28adfa2dc901204"
+    },
+    {
+      "path": "asdg/tests/test_install.py",
+      "before_sha256": "b2b7f94b6b9587420085f06818c63f97e94f00df18ad45f1e90ea4f04fc3c3b5",
+      "sha256": "e6038bfbc720258ac5e35c7ca3ef80658e1d3aa271ab12ee5070ea867c2a9c36"
+    },
+    {
+      "path": "asdg/tests/test_install.md",
+      "before_sha256": "55d6a5eb474f4375fd21137035646b66a149bc82e9a04ecd765e8e3171525d0c",
+      "sha256": "8827a6cd9cad78d45c30018063a4f69471ce376ff5b631a93d90dfa3d84d3b91"
+    },
+    {
+      "path": "asdg/tests/test_portable.py",
+      "before_sha256": "99fdc0320eab1624927ba91eb753a7e64b8c442680243e45d1bf656c49577d67",
+      "sha256": "4893459d8e6c0ac6b5598e2dc4687281775625a18215a6c2353a4ec6a308e6a4"
+    },
+    {
+      "path": "asdg/tests/test_portable.md",
+      "before_sha256": "00f47048a03b4fd52d2010419d6813796f8ef6051e072a28f9c906f457f87614",
+      "sha256": "3f949ce1b3817734ccd2022c86b0923c63574b5de41d319fcc517269672b011d"
+    },
+    {
+      "path": "asdg/docs/images/installation-engine.svg",
+      "before_sha256": "3140579438c1457f1740df6f4c69463dd425ee1f46f010cdce02ed8c34386d0c",
+      "sha256": "e5866ced724077e903926562f1c31c86475d16c36587d8343b0a5f0fd9e4bcb8"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "dd4e10f875f3d8174853c1600387b0a45ec27762bcce7c7821e1c0747921d112",
+      "sha256": "d4591cfea0d2105bf02f7e9bb01c4c9b531d998ea4f83b207a37e12192aaedf1"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "d988ed18b99ed5a03613fa9b7b01e1eafdd0fa7def300e46aab192370a183405",
+      "sha256": "3c1aa6951a933e00a6233e5aa5f3ee17cdf5c29ddb18782636825968cc9afc60"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.14-review-team-first-onboarding.md",
+      "before_sha256": null,
+      "sha256": "1cfdafe64e292164b5b5c90dbda2b78b4cabcacea70a25831138a10ccf6eaaa3"
+    }
+  ],
+  "self_inventory": "docs/asdg/07-planning/02.14-review-team-first-onboarding.json (self hash omitted)",
+  "review_events": {
+    "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+    "preserved": 1880,
+    "prefix_sha256": "b8b712c1f5eafcf73a9cade58fdc0b17f25b892600ad6530e246fb08a5b6780f",
+    "appended": 12
+  },
+  "checks": {
+    "full_suite": "128 tests PASS in 113.207 seconds",
+    "final_completion_wording_regressions": "13 tests PASS in 17.127 seconds after clarifying that no chats/analysis were started by this installation",
+    "both_routes_both_clients": "PASS: team-first completion, client-specific command guidance and no premature preview offer",
+    "idempotency_preservation_tokens_rollback": "Existing regression suite PASS",
+    "package_integrity": "PASS",
+    "final_zip_members_match_working_tree": "PASS",
+    "zip_checksum": "c2683c3364eaa7364dbec7f9e3d84a5b9d4f0e9b6893528ba6f30670ad89e280",
+    "generated_assets_ignored": "PASS",
+    "whitespace": "PASS",
+    "markdown_limits_and_relative_links": "PASS",
+    "new_evidence_privacy": "PASS",
+    "index_empty": "PASS"
+  },
+  "visual_review": {
+    "source": "asdg/docs/images/installation-engine.svg",
+    "render": "920-pixel PNG inspected; labels fit and flow is readable.",
+    "scope": "Asset rendering only; no new rendered Markdown page inspection."
+  },
+  "compatibility": "Legacy context_survey JSON keys retained; offered and executed remain false because the engine no longer offers a survey.",
+  "limits": [
+    "No native client team creation or Context analysis was run.",
+    "Automatic Create team requires native Codex project-chat tools; Claude Code uses manual role chats.",
+    "Updated local candidate has the existing pilot.2 version; it is not the published pilot.2 artifact and must not replace that immutable release without new authorization/versioning."
+  ],
+  "git_and_publication": "No stage, commit, push, tag or public release update in this pass.",
+  "client_projects": "Not accessed or modified."
+}

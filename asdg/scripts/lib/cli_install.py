@@ -93,7 +93,6 @@ def install(*, source=None, target=None, commit=None, client=None, project_state
 
             report['changed_files'] = apply(changes, verify=verify)
             report['installation_complete'] = True
-            report['context_survey']['offered'] = True
             report['structure_ok'] = True
         return report
 
@@ -116,5 +115,7 @@ def render(report):
     else:
         lines += ['ASDG installation complete; package and integration structure verified.',
                   'Native Claude/Codex invocation and hook trust remain NOT_VERIFIED.',
-                  'Would you like the optional Context survey? It has not run; a separate affirmative response is required.']
+                  'Next, use /asdg-status in your project chat.',
+                  'Status reports where your project stands and recommends the next ASDG skill.',
+                  'This installation did not run Status, create team chats or start Context analysis; installation approval authorizes none of those actions.']
     return '\n'.join(lines)

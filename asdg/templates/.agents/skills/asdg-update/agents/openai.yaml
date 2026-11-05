@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASDG update"
+  short_description: "Preview ASDG updates and adapter refreshes"
+  default_prompt: "Use $asdg-update to prepare an update of this project from my selected canonical distribution."

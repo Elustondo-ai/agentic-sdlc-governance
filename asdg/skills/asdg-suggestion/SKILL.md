@@ -33,6 +33,7 @@ Prefer the smallest useful conversation, decision, observation, experiment or sc
 Respect active commitments: recommend progress or evidence for the agreed scope, or explain why a human should reconsider it.
 Prioritize a demonstrated operational/user problem when urgent; do not send a working project back through every empty stage.
 For a seed, clarify only the context/purpose needed for the next useful trial; do not invent a platform, roadmap or required POC.
+When called by Status, honor its [post-install onboarding assessment](../asdg-status/SKILL.md#after-installation--recommend-team-setup-from-status) before the NEW/Purpose heuristic; reuse its team evidence, uncertainty, deferrals and capability limits. Do not call Status again or execute team setup.
 For NEW with no substantive Purpose and no urgent dependency, suggest the verified Purpose Focus selector; do not require a complete Context package first.
 Treat absent sprint authorization as a boundary on implementation, not a reason to create a sprint for discussion or inspection.
 Unknown hook trust matters when relying on enforcement; do not make it a universal blocker to useful read-only work.

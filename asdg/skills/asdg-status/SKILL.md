@@ -26,6 +26,14 @@ A known selection with unavailable guidance remains selected but blocked; Status
 State the latest substantive task and observed result, not this status request or an invented cross-chat activity.
 Retain the last actual title-update receipt; do not infer UI visibility or focus from the title alone.
 
+## After installation — recommend team setup from Status
+
+Recognize a freshly verified installation from this conversation’s installation receipt, not NEW state or empty stage evidence alone. The installer points the user to `/asdg-status`; this skill owns the next recommendation.
+For a healthy fresh install with team setup still needed and no deferral or urgent competing blocker, recommend: “Use `/asdg-create-team` in your project chat. It sets up Governance and 12 specialist chats, including Context.” Explain the result, not a generic survey; do not create chats or start analysis.
+Reuse verified team receipts from this chat. If native project-chat tools are available, use only read-only discovery scoped to this verified project and the [Create team reuse criteria](../asdg-create-team/SKILL.md#reuse-before-creating); titles alone never prove a team exists. Do not run the creation workflow to inspect it or write team state.
+If inventory is unavailable or incomplete, qualify team status as unknown and the suggestion as “If you have not set up your team yet…”; never assert absence. Automatic setup requires native Codex project-chat tools; for Claude Code or missing tools, explain the limit and offer manual role chats via Focus instead of promising unavailable automation.
+If setup is verified, was deferred, or current priorities supersede it, use the ordinary project-wide Suggestion path. Facts-only requests still omit advice. Pass this onboarding assessment to Suggestion once; it must not recommend a second competing next step.
+
 ## Explain status without mixing roles
 
 Use this order: compact status lines/table, Project-wide next step, then Observations and technical debt.

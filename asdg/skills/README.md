@@ -4,6 +4,8 @@ Canonical workflows live here; native discovery adapters remain thin references.
 
 | Skill | Purpose |
 | --- | --- |
+| [Update](asdg-update/SKILL.md) | Preview a selected distribution update and separate adapter refresh; explicit approval per plan |
+| [Help](asdg-help/SKILL.md) | Explain all ASDG commands, examples and invocation syntax without executing them |
 | [Initialize](asdg-init/SKILL.md) | Bootstrap the explicitly identified client |
 | [Create team](asdg-create-team/SKILL.md) | Set up governance and twelve specialist chats, reusing existing focused chats |
 | [Focus](asdg-focus/SKILL.md) | Select a role; use `subject` to change its topic independently |

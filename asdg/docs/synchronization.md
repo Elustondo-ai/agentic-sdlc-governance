@@ -5,6 +5,8 @@ Both commands use the same conservative file comparison; neither decides that on
 
 ![Pilot and canonical snapshots are compared with an adopted baseline; review precedes explicit application and a local adoption record.](images/synchronization.svg)
 
+The conversational [Update skill](../skills/asdg-update/SKILL.md) guides approved upgrades and a separate integration preview for new command adapters; it preserves the engine prerequisites below.
+
 ## Preview, review, apply
 
 Use Python 3.9+ and Git. Run the current project-local entry point; no global command or model is required.

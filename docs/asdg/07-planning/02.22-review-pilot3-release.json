@@ -1,0 +1,590 @@
+{
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+  "authorization": "ok, so now let make a full new commit, push and release of all latest changes in skills and presentations and readme and documentation",
+  "status": "PREPUBLICATION_VALIDATED",
+  "human_document_approval": null,
+  "starting_head": "63c4f065138f09988bdd830819260136a4455d65",
+  "starting_status": [
+    " M AGENTS.md",
+    " M README.md",
+    " M asdg/00-governance/types/document-reviews.json",
+    " M asdg/docs/client-integrations.md",
+    " M asdg/docs/images/installation-engine.svg",
+    " M asdg/docs/install-clone-prompt.md",
+    " M asdg/docs/install-zip-prompt.md",
+    " M asdg/docs/installation.md",
+    " M asdg/docs/synchronization.md",
+    " M asdg/metadata/MANIFEST.json",
+    " M asdg/metadata/package-files.json",
+    " M asdg/scripts/lib/cli_install.md",
+    " M asdg/scripts/lib/cli_install.py",
+    " M asdg/skills/README.md",
+    " M asdg/skills/asdg-create-team/SKILL.md",
+    " M asdg/skills/asdg-init/SKILL.md",
+    " M asdg/skills/asdg-status/SKILL.md",
+    " M asdg/skills/asdg-status/status-format.md",
+    " M asdg/skills/asdg-suggestion/SKILL.md",
+    " M asdg/tests/test_distribution.md",
+    " M asdg/tests/test_distribution.py",
+    " M asdg/tests/test_install.md",
+    " M asdg/tests/test_install.py",
+    " M asdg/tests/test_portable.md",
+    " M asdg/tests/test_portable.py",
+    " M docs/presentations/asdg-introduction/README.md",
+    " M docs/reviews/asdg-presentation-library/media.json",
+    " M docs/reviews/asdg-presentation-library/video-queue.json",
+    "?? asdg/skills/asdg-create-team/create-chats.md",
+    "?? asdg/skills/asdg-help/",
+    "?? asdg/skills/asdg-update/",
+    "?? asdg/templates/.agents/skills/asdg-help/",
+    "?? asdg/templates/.agents/skills/asdg-update/",
+    "?? docs/asdg/07-planning/02.14-review-team-first-onboarding.json",
+    "?? docs/asdg/07-planning/02.14-review-team-first-onboarding.md",
+    "?? docs/asdg/07-planning/02.15-review-skill-first-next-step.json",
+    "?? docs/asdg/07-planning/02.15-review-skill-first-next-step.md",
+    "?? docs/asdg/07-planning/02.16-review-status-owned-onboarding.json",
+    "?? docs/asdg/07-planning/02.16-review-status-owned-onboarding.md",
+    "?? docs/asdg/07-planning/02.17-review-team-ordering.json",
+    "?? docs/asdg/07-planning/02.17-review-team-ordering.md",
+    "?? docs/asdg/07-planning/02.18-review-command-help.json",
+    "?? docs/asdg/07-planning/02.18-review-command-help.md",
+    "?? docs/asdg/07-planning/02.19-review-project-update.json",
+    "?? docs/asdg/07-planning/02.19-review-project-update.md",
+    "?? docs/asdg/07-planning/02.19-sample-update-preparation.json",
+    "?? docs/asdg/07-planning/02.19-sample-update-preparation.md",
+    "?? docs/asdg/07-planning/02.20-sample-baseline-upgrade-preview.json",
+    "?? docs/asdg/07-planning/02.21-review-presentation-publication.json",
+    "?? docs/asdg/07-planning/02.21-review-presentation-publication.md",
+    "?? docs/presentations/asdg-introduction/short-video-slide-08.md"
+  ],
+  "release_tag": "v0.3.0-pilot.3",
+  "version": "0.3.0-pilot.3",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "b53c203d29059900bca98a6e1423c4bfe698b465e3691e4761eaa57232330b4c",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "README.md",
+      "sha256": "fa2472111aa28400cce8660d813f2b4de38b3a0e74b891d56db24e283e455e20",
+      "before_this_release_sha256": "22aff6ca631633a04b5c6bbb11887e1a1ce64a59e7124b01acec338825268e71"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "sha256": "185a93997cd3b0cb1aea625784f971a6d3286dfba031db5c157b29a3d1294a4c",
+      "before_this_release_sha256": "5076db6dc1da07a0a7efab19714251f8678ea3956e97bb8617586578494f4b95"
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "sha256": "205784906571fecf46e8288e0844264178d61cc1962827be2957eb6fd4f87e2d",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/docs/distribution-build.md",
+      "sha256": "7bcaa5b37a4cb7ae430b77230b0b759068db960976e17903d834500e1d0c3c5f",
+      "before_this_release_sha256": "511b4a14687c7a6c1fa9d2b5ba27aa315effa5898290d3b1ebc18c105fd4a3b5"
+    },
+    {
+      "path": "asdg/docs/images/installation-engine.svg",
+      "sha256": "77898afc32a14f901dcc9be75106f9a42a27552356c67779f897e8e2ae3a7c91",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/docs/install-clone-prompt.md",
+      "sha256": "a7589761b12a7fbf8ed61939a31d77f5814dabb7dc799170ff280404a9830d10",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/docs/install-zip-prompt.md",
+      "sha256": "6c4b50a98f5b62209558923d9c478d381b7f923ca112fbb488c16ff4428ee882",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/docs/installation.md",
+      "sha256": "39d12bbff6ebbe74c412b2fe3a84ade67a81a5b36dbd9985d4d114657bc7e5d7",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/docs/synchronization.md",
+      "sha256": "c2089a62ca5c2eee8a002a60ad9e86028175375b0d12a26340a6d779873ffd24",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "sha256": "c92ab89ae3a9c884fbfb7be32a8cc8b2a67ea1d4c98bc5bfbe2cb9cb49914e32",
+      "before_this_release_sha256": "df428f7a839b8bd46c75d49ff6c91fd420a94d13fb33946eba1768ae2d22d47b"
+    },
+    {
+      "path": "asdg/metadata/deliveries/0.3.0-pilot.2.json",
+      "sha256": "d988ed18b99ed5a03613fa9b7b01e1eafdd0fa7def300e46aab192370a183405",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/metadata/distribution.json",
+      "sha256": "42477ff6bf685a8378197fb54ea87f08c640438dd224f0203f3c80addbd5cf2d",
+      "before_this_release_sha256": "f7f46e1df6cd145afede9d911e7d45685e99a173b4308ed274d710a3d0c8a39c"
+    },
+    {
+      "path": "asdg/metadata/package-files.json",
+      "sha256": "2c9d43322dc2a7bfddcf92f198a96159bd31a8b436d6c6d8f02556bfb2bf7bcc",
+      "before_this_release_sha256": "8040bbc5026daf88a7d97f8a5fc9b5d70b513245e9d468c7aec48a223e9d6289"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.md",
+      "sha256": "e8533f92bee7c7c56dc83146f31823bdb4063e4caedc6f33d91c255f488c1551",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.py",
+      "sha256": "1bb668a0dbe4672aae347da456c091d32397ffd8f316f938d06073564d4b64c4",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/scripts/lib/cli_model.md",
+      "sha256": "9743c7444a0184a683f5ce971657a5756f040ac9ea1d9bcc136a94c66c68e62b",
+      "before_this_release_sha256": "8df5e3c79e1c14e488273443abaded71ab88e880c9d10a804d2e30e2ea46f3e5"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_model.py",
+      "sha256": "f976584fe2b6718b2d49478d0e0619c9fe80f9e9a880c4803aa3637c4c53d51f",
+      "before_this_release_sha256": "23a45ae84ef13bfe8360c6cc0a460d82b60ec85691e2e9ec20042e015e95289a"
+    },
+    {
+      "path": "asdg/skills/README.md",
+      "sha256": "4f0686014734b944370c85263c6f1859b4e787c1161acc5ddaa28bb1f1898551",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/skills/asdg-create-team/SKILL.md",
+      "sha256": "1ad1b8d46e88ca647d79bc2b221c9cc1882ec1d9cc9793c4ee1c23e897bbcd5d",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/skills/asdg-create-team/create-chats.md",
+      "sha256": "e765bad93252a576b5a4385d44fe32045c3e8c5ae994d7a142ab8d250441422f",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/skills/asdg-help/SKILL.md",
+      "sha256": "eb55ad8fbc4aecbd55bf8835e83507d2df1ce55bc4c31d17199f297d4803797e",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/skills/asdg-help/command-reference.md",
+      "sha256": "8a4984d7d3812078c58972a291f2829c5d7d92b9da8242bbc2df6e868be3ae37",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/skills/asdg-init/SKILL.md",
+      "sha256": "6ca7cef78c4a1b086bd753fe54962297625203c122ed0d22433c57abda3be056",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/skills/asdg-status/SKILL.md",
+      "sha256": "89687b96df20884b3ed774a6e2fe790c1328d1bd45a39ee0753b93323416d2bb",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/skills/asdg-status/status-format.md",
+      "sha256": "919364ce1d320a64684a3be69847666188138bd453a5c79b0733ba7c356efb9e",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/skills/asdg-suggestion/SKILL.md",
+      "sha256": "175e26873427bd6410bc4ffcc1c4bb5d2135472ace9bf786e511e420012de326",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/skills/asdg-update/SKILL.md",
+      "sha256": "890062cb946626c9ce2a84871001c94d07c1f1cc61bacc5dddd251714d45b06b",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-help/SKILL.md",
+      "sha256": "989071edd7f93f1a827fcc05ea441b55480048eef16a7f546cb391effd16eeb4",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-help/agents/openai.yaml",
+      "sha256": "13c11c4e4906d06f3540ee75053b334cd00d4c9cbd017e22b62100b1d01de7bd",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-update/SKILL.md",
+      "sha256": "9fc31ad5543fe814276d324d183eb4cbd2f6101d8e4ddafeaaae5e6651586cc3",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-update/agents/openai.yaml",
+      "sha256": "6f7c2319a3d167cfb13348be61166eefa383ce6f285fb5dba1fb53b5dc533073",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "sha256": "b19f54844001347682b55022586bca011fe1da2690fa16071dfb8e7de7502836",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "sha256": "600b8b515d53ec92f69ca28edc14f5b05f75b42060a27ae118944fe6fa5c99f9",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/tests/test_install.md",
+      "sha256": "1c62551ff0ea52d4a31cbe2281d2623a6d9c0bda3914f9157016ebb401395335",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/tests/test_install.py",
+      "sha256": "4dd3404ab49f5315a213f7c00ab6487f3074bda11a49bc41d2ee02cb70eb2857",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/tests/test_portable.md",
+      "sha256": "7f83c0f2ce5ae038135eedebe935c30d3c9b7feef452e5953ecdc28c37f82b42",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "asdg/tests/test_portable.py",
+      "sha256": "63d46c7dbbaa94f6b6d6836c05be7181fe145e07b35293f5c13175f369769225",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.14-review-team-first-onboarding.json",
+      "sha256": "42e4cf15c432149dcd707cd6ed31584a4fa4946775441f6d1ee258de227acfb0",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.14-review-team-first-onboarding.md",
+      "sha256": "1cfdafe64e292164b5b5c90dbda2b78b4cabcacea70a25831138a10ccf6eaaa3",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.15-review-skill-first-next-step.json",
+      "sha256": "d032921808dbf1d23ce1a1ac15b5bffd25559f4e0a22f448536a16eb8cca4bda",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.15-review-skill-first-next-step.md",
+      "sha256": "4e7b6220b1b65842613982481843701a20da7a892bf8650c08ca790683f9e879",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.16-review-status-owned-onboarding.json",
+      "sha256": "5907488eeb297c9dc8fd4e660047990708cb2daa97ee036ec9f6515ee862a044",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.16-review-status-owned-onboarding.md",
+      "sha256": "d13e8367a70a3f6b08c4758289e7360fa45e28cb52a5a92c25a353ab0dcdbaf0",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.17-review-team-ordering.json",
+      "sha256": "4dbbd02e9412c6a287e31b647377a28ed83731253a43278acd79f98f68b01832",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.17-review-team-ordering.md",
+      "sha256": "13468ec1150c2a8fba4a6d3463444c1e734eb139dd88a9056e79ac016fd0e2c5",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.18-review-command-help.json",
+      "sha256": "4f892ca936e4863747054590014f407013697eeadc588e0f1c4882cc21a41e3d",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.18-review-command-help.md",
+      "sha256": "a3af9aa96847b9cc6b28b0878450360ee40b1223075e1850af1d177a2e4a9200",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.19-review-project-update.json",
+      "sha256": "4dfd207fce8d7b91426a0d72eb376a8ccfd1abe4035807f3af7006293780d5d5",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.19-review-project-update.md",
+      "sha256": "79e24243d61465be071d34de358bd54bb26e8483b090bc594991d11b384e5abb",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.19-sample-update-preparation.json",
+      "sha256": "91dbcec49214fb7ec793bc13dea4944ff2713483b8700b0009df8955332fbfef",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.19-sample-update-preparation.md",
+      "sha256": "cc6ff51eb6b4473fc2351d5bb0bf9c43abd5ecd686fc83fd4b9817c188bba48e",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.20-sample-baseline-upgrade-preview.json",
+      "sha256": "107cc0d9aba800129e3372a9822185b22bfc5a28f72364dbe6c534005187caf8",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.21-review-presentation-publication.json",
+      "sha256": "7183db09a2d338c400214c8b05b2b0bf28db0a024940971004d7bf119ad51e91",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/asdg/07-planning/02.21-review-presentation-publication.md",
+      "sha256": "e474ee7d38e3bf99d30a32cb7c670f5ef421f5ea3470162fb0f3d23596445129",
+      "before_this_release_sha256": "f67ef2c8a6374a7e2302ae500128a1ab641c706a3a6286c9bfefcc9caae335c3"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.22-review-pilot3-release.md",
+      "sha256": "b54634b012f86a350a8e0c8b462bbe4dfc0f70a29d8e295c0106727e970b6700",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/presentations/README.md",
+      "sha256": "9053969d20dd0df561792074917d4377d58067168b0195ebebcbfc387e11f614",
+      "before_this_release_sha256": "d930242fb679693ea12998ba74a74b2292d5a9ae6d067793d81284f21b6d83cc"
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/README.md",
+      "sha256": "a8fa1d7454f9677377653516b1511a1ce3f2ae23e263a21c03b68f648a990e20",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/short-video-slide-08.md",
+      "sha256": "fe9588cf7da72620cd0b3b68d4b3f59887bb2816797639dbd9e500dcb6f44ad7",
+      "before_this_release_sha256": "6a85b70a47cb55e57c85a30fbf92dbad6519e21952c1e6961ae7484cdbd5d436"
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/evidence/studio-unsaved-cut.jpg",
+      "sha256": "2720be6bcc2896eb0abd479961ad4b9e4a9b1bce90886febf4960b003444ac8d",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/evidence/vids-script-corrected.jpg",
+      "sha256": "029653a8dc69f5adde957f0983fe6448cf50851b075c7b13aab03e72536460bb",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/evidence/youtube-upload-limit.jpg",
+      "sha256": "c569c856ddd88d81d2a437fdc73237d018ebaa8e56f4bc5428240db4719bdd7f",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/media.json",
+      "sha256": "b4171e286c144e7e1404fba02d01922e7737e3e8972d172f81f76d45be8d1e2b",
+      "before_this_release_sha256": null
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/video-queue.json",
+      "sha256": "c055888b2aa7e7def6257d8691fb963a0ca802469de894cb8c59fc23245a912a",
+      "before_this_release_sha256": null
+    }
+  ],
+  "checks": {
+    "portable": "Ran 130 tests in 121.392s; PASS",
+    "presentation": "Ran 31 tests in 1.017s; PASS",
+    "prepare_commit_wrapper": "Ran 3 tests in 1.511s; PASS"
+  },
+  "package_integrity": "PASS",
+  "presentation_builds": "7 intro decks + 4 detailed decks rebuilt; notes/count round-trip verified by builder",
+  "visual_review": "All seven generated preview sheets inspected; detailed editions share unchanged visuals. Narration-correction evidence screenshots inspected and copied to versioned evidence so source links work after publication.",
+  "recent_decks": "14 payloads match the prior verified hashes exactly.",
+  "release_payloads": [
+    {
+      "name": "asdg-0.3.0-pilot.3.zip",
+      "source": "build/distributions/asdg-0.3.0-pilot.3.zip",
+      "bytes": 785134,
+      "sha256": "20ef62857502211576895816d2cdeb8c1828995a7fe6b6da919ccee15305c27f"
+    },
+    {
+      "name": "asdg-0.3.0-pilot.3.zip.sha256",
+      "source": "build/distributions/asdg-0.3.0-pilot.3.zip.sha256",
+      "bytes": 89,
+      "sha256": "b09d410f14f67d4f6c1dc6b95c99f5f9586a3241c72866919e85e5449fca3518"
+    },
+    {
+      "name": "agentic-ai.pptx",
+      "source": "docs/presentations/agentic-ai/build/agentic-ai.pptx",
+      "bytes": 979567,
+      "sha256": "60f274bbc7ec6a368974867c786536f2c425617ddaf06499e696fd28ccbccd22"
+    },
+    {
+      "name": "asdg-introduction.pptx",
+      "source": "docs/presentations/asdg-introduction/build/asdg-introduction.pptx",
+      "bytes": 12147527,
+      "sha256": "9c9ce546ef7e2fb807a5d446f58bea99d7aef0d557b2136d725d414ec08f4f26"
+    },
+    {
+      "name": "asdg-introduction-detailed.pptx",
+      "source": "docs/presentations/asdg-introduction/build/asdg-introduction-detailed.pptx",
+      "bytes": 12161337,
+      "sha256": "5093f90eb9a2d44f9c288f308ca02ebad5a3f1b24e76f89f69a73b832b9f0d96"
+    },
+    {
+      "name": "asdg-sprint-governance-review.pptx",
+      "source": "docs/presentations/asdg-sprint-governance-review/build/asdg-sprint-governance-review.pptx",
+      "bytes": 1166934,
+      "sha256": "a1e8724dec1e62a3d20431e3b0e2adee0d561e82d7c8465446783609728e7e2c"
+    },
+    {
+      "name": "asdg-sprint-governance-review-detailed.pptx",
+      "source": "docs/presentations/asdg-sprint-governance-review/build/asdg-sprint-governance-review-detailed.pptx",
+      "bytes": 1169986,
+      "sha256": "03e814881a93e2c79aedddb1e425cc70f35c86a5771dfaf525de67f34903611c"
+    },
+    {
+      "name": "codex-agent-skills-and-adapters.pptx",
+      "source": "docs/presentations/codex-agent-skills-and-adapters/build/codex-agent-skills-and-adapters.pptx",
+      "bytes": 1874291,
+      "sha256": "9530970080bf2ac16e17eb5a9ad81b2b22cbc74cac682db0a208eb4353c92d78"
+    },
+    {
+      "name": "codex-agent-skills-and-adapters-detailed.pptx",
+      "source": "docs/presentations/codex-agent-skills-and-adapters/build/codex-agent-skills-and-adapters-detailed.pptx",
+      "bytes": 1881043,
+      "sha256": "d39c6abebfa36d095f61a8e48ac8947ad36804fce9725a10bf5f1318fcb8dd7a"
+    },
+    {
+      "name": "coding-agents-architecture-article.pptx",
+      "source": "docs/presentations/coding-agents-architecture-article/build/coding-agents-architecture-article.pptx",
+      "bytes": 854057,
+      "sha256": "da29d050382da459050cb190a7c8b4bbec0732231041ca6f651ea479b2328c15"
+    },
+    {
+      "name": "coding-agents-architecture-article-detailed.pptx",
+      "source": "docs/presentations/coding-agents-architecture-article/build/coding-agents-architecture-article-detailed.pptx",
+      "bytes": 856351,
+      "sha256": "c5a40f18a28d505b88a1131173aee91cebbd27a3b33b1215e418f67ff6ba6931"
+    },
+    {
+      "name": "formalization-gradient.pptx",
+      "source": "docs/presentations/formalization-gradient/build/formalization-gradient.pptx",
+      "bytes": 2199375,
+      "sha256": "ef032558b54bb35c28337eb85e13d89dfbf9c7f7aaecf9a3bc412be7374e456c"
+    },
+    {
+      "name": "spec-driven-development-deep-dive.pptx",
+      "source": "docs/presentations/spec-driven-development-deep-dive/build/spec-driven-development-deep-dive.pptx",
+      "bytes": 265310,
+      "sha256": "2801c4c2b63c32d2cbd0e1eaba101d9f3637692f6165c818554b798ba94de7e7"
+    },
+    {
+      "name": "asdg-recent-01.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-01.pptx",
+      "bytes": 1369693,
+      "sha256": "6c34244cf088ee8abee290ff5f83624ba374d92a49d245891b9848ec8ee24408"
+    },
+    {
+      "name": "asdg-recent-02.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-02.pptx",
+      "bytes": 1065994,
+      "sha256": "2a3a4ebbc03f9f2bc9cf45ab5496c9a97a6a499e8f280fe310af366fa1ab1433"
+    },
+    {
+      "name": "asdg-recent-03.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-03.pptx",
+      "bytes": 119882,
+      "sha256": "42b9fb74845d70798261dce4a863c95ba6c388deecc811c4606f21ab793e8b84"
+    },
+    {
+      "name": "asdg-recent-04.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-04.pptx",
+      "bytes": 63423,
+      "sha256": "aa5211803305e7dc446a354a54bff59d62929359bf6675707ac7383c200607c8"
+    },
+    {
+      "name": "asdg-recent-05.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-05.pptx",
+      "bytes": 57995,
+      "sha256": "86e7bf5b89c6571318fd9ae181388c463e6f533d7018dafba4eb494d9e7ab97a"
+    },
+    {
+      "name": "asdg-recent-06.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-06.pptx",
+      "bytes": 35193,
+      "sha256": "eb618e67f3cce9f80a1395d193efdc25d081e123da52b814a8ade131949899f2"
+    },
+    {
+      "name": "asdg-recent-07.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-07.pptx",
+      "bytes": 35765,
+      "sha256": "70d3ff647650969c1e2f202c9af05c49d4381c099385ecc3a23414329dc93741"
+    },
+    {
+      "name": "asdg-recent-08.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-08.pptx",
+      "bytes": 57505,
+      "sha256": "19d96f45cf0d6354cfa8f840dbaf88cc84d87ae03bde09601b3886d2bcb3f4d7"
+    },
+    {
+      "name": "asdg-recent-09.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-09.pptx",
+      "bytes": 62646,
+      "sha256": "b3aaf31f959cbee62be8b2eea2c020966b1167d0a4591ff33c94397634116000"
+    },
+    {
+      "name": "asdg-recent-10.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-10.pptx",
+      "bytes": 211951,
+      "sha256": "2cd3bb7894c3166254a1d78a6348ac640bd5aa17cf3ae2c6fa7e544ff0456781"
+    },
+    {
+      "name": "asdg-recent-11.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-11.pptx",
+      "bytes": 27793,
+      "sha256": "bf92536929d13066478fc8af03281b59cc5889de9f67c1c90cb7c56b98e25deb"
+    },
+    {
+      "name": "asdg-recent-12.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-12.pptx",
+      "bytes": 49131,
+      "sha256": "943d0e873207c754b47ea2bf340b38f22164965ec2bebb3e56ab684d6547efe1"
+    },
+    {
+      "name": "asdg-recent-13.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-13.pptx",
+      "bytes": 187170,
+      "sha256": "f41232103698cf1fe1290b103deba86694e7ab96da3b27d2915d55cad4df3de1"
+    },
+    {
+      "name": "asdg-recent-14.pptx",
+      "source": "build/presentation-library/recent-downloads/asdg-recent-14.pptx",
+      "bytes": 59325,
+      "sha256": "6a022cda6fed46e617b938e2f5a16f714e7d6081b24d15d42d8a77224d7b424f"
+    },
+    {
+      "name": "asdg-introduction-narrated.mp4",
+      "source": "docs/presentations/asdg-introduction/build/release-correction/asdg-introduction-narrated.mp4",
+      "bytes": 14205816,
+      "sha256": "0564ef958e9ebce10808c567160b5806c0668b630fadc3481445bd525b819c11"
+    },
+    {
+      "name": "codex-agent-skills-and-adapters-narrated.mp4",
+      "source": "docs/presentations/codex-agent-skills-and-adapters/build/codex-agent-skills-and-adapters-narrated.mp4",
+      "bytes": 8751991,
+      "sha256": "07f78a1a4b9524963a98c0fd34c22193c59eddb3490f59d6f3f73e29cc449471"
+    }
+  ],
+  "release_extra_assets": [
+    "release-manifest.json",
+    "SHA256SUMS"
+  ],
+  "expected_assets": 31,
+  "retained_history": "Exact published pilot.2 manifest hash d988ed18b99ed5a03613fa9b7b01e1eafdd0fa7def300e46aab192370a183405 archived without edits; existing releases/asset bytes preserved.",
+  "failures_and_resolution": [
+    "Initial full suite after version bump used the prior manifest and failed 53 tests with 10 errors; rebuilt candidate first, then all 130 passed. No checks weakened.",
+    "Earlier stopped preliminary suite ran before final release sources; superseded by final full run."
+  ],
+  "limits": [
+    "Native skill discovery/invocation/hook trust not verified.",
+    "Corrected introduction supplied audio cannot be listened to in this session; hash/captions/video-stream/frame timing verified.",
+    "Public YouTube cut remains unsaved; 11 remaining uploads blocked by current YouTube quota.",
+    "Pilot.1 original MP4 replacement remains the separate human task; new corrected copy is attached to pilot.3."
+  ],
+  "publication_state": "This is the source commit\u2019s preparation receipt. Actual commit/tag and remote asset digests are recorded by the generated release manifest and live GitHub release after publication.",
+  "self_inventory": "Self hash omitted; no Git commit hash is embedded in its own source.",
+  "staged_whitespace_check": "One pre-existing extra blank line at EOF in asdg/skills/asdg-create-team/create-chats.md is reported by staged git diff --check; bytes preserved. No code/semantic issue; all executable checks pass."
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASDG help"
+  short_description: "Explain ASDG commands and invocation examples"
+  default_prompt: "Use $asdg-help to explain the available ASDG commands and when to use them."

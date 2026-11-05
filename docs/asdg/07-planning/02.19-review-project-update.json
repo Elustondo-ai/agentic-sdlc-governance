@@ -1,0 +1,164 @@
+{
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+  "scope": "Add /asdg-update and prepare the sample update; no real apply.",
+  "starting_head": "63c4f065138f09988bdd830819260136a4455d65",
+  "starting_git_status": [
+    " M AGENTS.md",
+    " M README.md",
+    " M asdg/00-governance/types/document-reviews.json",
+    " M asdg/docs/client-integrations.md",
+    " M asdg/docs/images/installation-engine.svg",
+    " M asdg/docs/install-clone-prompt.md",
+    " M asdg/docs/install-zip-prompt.md",
+    " M asdg/docs/installation.md",
+    " M asdg/metadata/MANIFEST.json",
+    " M asdg/metadata/package-files.json",
+    " M asdg/scripts/lib/cli_install.md",
+    " M asdg/scripts/lib/cli_install.py",
+    " M asdg/skills/README.md",
+    " M asdg/skills/asdg-create-team/SKILL.md",
+    " M asdg/skills/asdg-init/SKILL.md",
+    " M asdg/skills/asdg-status/SKILL.md",
+    " M asdg/skills/asdg-status/status-format.md",
+    " M asdg/skills/asdg-suggestion/SKILL.md",
+    " M asdg/tests/test_distribution.md",
+    " M asdg/tests/test_distribution.py",
+    " M asdg/tests/test_install.md",
+    " M asdg/tests/test_install.py",
+    " M asdg/tests/test_portable.md",
+    " M asdg/tests/test_portable.py",
+    "?? asdg/skills/asdg-create-team/create-chats.md",
+    "?? asdg/skills/asdg-help/",
+    "?? asdg/templates/.agents/skills/asdg-help/",
+    "?? docs/asdg/07-planning/02.14-review-team-first-onboarding.json",
+    "?? docs/asdg/07-planning/02.14-review-team-first-onboarding.md",
+    "?? docs/asdg/07-planning/02.15-review-skill-first-next-step.json",
+    "?? docs/asdg/07-planning/02.15-review-skill-first-next-step.md",
+    "?? docs/asdg/07-planning/02.16-review-status-owned-onboarding.json",
+    "?? docs/asdg/07-planning/02.16-review-status-owned-onboarding.md",
+    "?? docs/asdg/07-planning/02.17-review-team-ordering.json",
+    "?? docs/asdg/07-planning/02.17-review-team-ordering.md",
+    "?? docs/asdg/07-planning/02.18-review-command-help.json",
+    "?? docs/asdg/07-planning/02.18-review-command-help.md"
+  ],
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "files": [
+    {
+      "path": "asdg/skills/README.md",
+      "before_sha256": "17ee7d7a9be49bf90f52dfda8664455e3b29003f9ba6608ac35cac65ddf13314",
+      "sha256": "4f0686014734b944370c85263c6f1859b4e787c1161acc5ddaa28bb1f1898551"
+    },
+    {
+      "path": "asdg/skills/asdg-help/SKILL.md",
+      "before_sha256": "12afeb4f830b59b2e3c388a33554f20c082266a847f5bf82f472593d16b9c03a",
+      "sha256": "eb55ad8fbc4aecbd55bf8835e83507d2df1ce55bc4c31d17199f297d4803797e"
+    },
+    {
+      "path": "asdg/skills/asdg-help/command-reference.md",
+      "before_sha256": "97c0ef9f685f8c977e9461f81da1d34be66c8dea213c332b3b959ac7bec43bc6",
+      "sha256": "8a4984d7d3812078c58972a291f2829c5d7d92b9da8242bbc2df6e868be3ae37"
+    },
+    {
+      "path": "asdg/docs/synchronization.md",
+      "before_sha256": "5e903e592afc3acbd9a00c36a5562084757f2c958c93624cdad80d15a820870c",
+      "sha256": "c2089a62ca5c2eee8a002a60ad9e86028175375b0d12a26340a6d779873ffd24"
+    },
+    {
+      "path": "asdg/metadata/package-files.json",
+      "before_sha256": "786ddaa0483b5c2e605192a7a4a1107ecf0ee3bebe69eb0fb4fbb6199da973fd",
+      "sha256": "8040bbc5026daf88a7d97f8a5fc9b5d70b513245e9d468c7aec48a223e9d6289"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "66ee1572a302d0fd482e2c5b2d4f2bd5f537b75318f51e9eef8fb3764baa3c82",
+      "sha256": "6acd9106b8b9d658e340c4b8d8dd11c70233f25ddd8dbc35a2b73d05702666d1"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "27362af651a05e6c936a1757a3dc09cc388a151b747bfa74f0dafc52ca98c7f7",
+      "sha256": "d2ae2c2b7985abccf3cee0579bdbeb81f6feb29d86eddb8d1acac9142e330296"
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "before_sha256": "d123e3831c94c39828f5c2bfb8d4b4178af4a6547595c5c17202d5742e8ffd4d",
+      "sha256": "600b8b515d53ec92f69ca28edc14f5b05f75b42060a27ae118944fe6fa5c99f9"
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "before_sha256": "733ba013c84e0866ba11aeba2c8515ca1a6bf763e3d0080a8903c7c896621393",
+      "sha256": "b19f54844001347682b55022586bca011fe1da2690fa16071dfb8e7de7502836"
+    },
+    {
+      "path": "asdg/skills/asdg-update/SKILL.md",
+      "before_sha256": null,
+      "sha256": "890062cb946626c9ce2a84871001c94d07c1f1cc61bacc5dddd251714d45b06b"
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-update/SKILL.md",
+      "before_sha256": null,
+      "sha256": "9fc31ad5543fe814276d324d183eb4cbd2f6101d8e4ddafeaaae5e6651586cc3"
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-update/agents/openai.yaml",
+      "before_sha256": null,
+      "sha256": "6f7c2319a3d167cfb13348be61166eefa383ce6f285fb5dba1fb53b5dc533073"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.19-review-project-update.md",
+      "before_sha256": null,
+      "sha256": "79e24243d61465be071d34de358bd54bb26e8483b090bc594991d11b384e5abb"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.19-sample-update-preparation.md",
+      "before_sha256": null,
+      "sha256": "cc6ff51eb6b4473fc2351d5bb0bf9c43abd5ecd686fc83fd4b9817c188bba48e"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.19-sample-update-preparation.json",
+      "before_sha256": null,
+      "sha256": "91dbcec49214fb7ec793bc13dea4944ff2713483b8700b0009df8955332fbfef"
+    }
+  ],
+  "checks": {
+    "distribution": "Ran 9 tests in 8.140s; PASS",
+    "synchronization": "Ran 27 tests in 13.769s; PASS",
+    "integrity_manifest": "PASS",
+    "zip_exact_update_skill_adapter_metadata_and_help": "PASS",
+    "zip_checksum": "PASS",
+    "markdown_links_syntax_limits_python_compatibility": "PASS: repository checks",
+    "diff_whitespace": "PASS",
+    "native_invocation": "NOT_VERIFIED",
+    "standalone_skill_validator": "Unavailable: PyYAML absent; repository validator used."
+  },
+  "initial_test_failures": "New fixture expected only adapter additions and byte-identical review ledger; init correctly appended generated document-review events. Corrected assertions preserve old events and require unapproved additions. The initial second comparison still included the old ledger and was corrected before the passing final suite. No production engine change.",
+  "sample": {
+    "status": "PREPARED_ONLY_BLOCKED",
+    "comparison_counts": {
+      "added": 8,
+      "different": 23
+    },
+    "blocker": "Target has no Git HEAD; existing upgrade engine refuses preview.",
+    "rehearsed_integration_changes": [
+      ".asdg/document-reviews.json",
+      ".agents/skills/asdg-help/SKILL.md",
+      ".agents/skills/asdg-help/agents/openai.yaml",
+      ".agents/skills/asdg-update/SKILL.md",
+      ".agents/skills/asdg-update/agents/openai.yaml"
+    ],
+    "preservation": {
+      "actual_sample_files_unchanged": true,
+      "git_index_and_status_unchanged": true,
+      "sample_file_count": 468,
+      "sample_tree_sha256": "ebfdf1ed56568908a4d411f7b1f252a079736b4e0b92a64af0b321ca8fd0a6c7"
+    },
+    "approval_plan": null
+  },
+  "self_review": "Implementing agent, same sources; manual source walkthroughs and disposable engine execution, no independent reviewer or native skill exercise.",
+  "source_changes": "Canonical skill/template, Help/index references, synchronization link, distribution tests/companion, package index/manifest and appended review events. Existing prior local changes retained.",
+  "review_diff": "build/asdg-update-review.diff (ignored generated artifact)",
+  "self_inventory": "This JSON omits its own hash.",
+  "publication": "No staging, commit, push, publish, install to sample or source engine change."
+}

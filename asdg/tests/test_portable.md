@@ -54,3 +54,5 @@ Documentation guard cases exercise docs-only and mixed patches, absent/malformed
 ## Example
 
 From the project root: `python3 -B -m unittest discover -s asdg/tests -p 'test_portable.py'`.
+
+Completion guidance tests require a `/asdg-status` handoff without installer-owned team advice; preview emits no next-step offer, and repeat setup preserves state. They do not demonstrate native chat creation or a Context interview.

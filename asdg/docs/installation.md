@@ -2,7 +2,7 @@
 
 The recommended [repository-URL Quick Start](https://github.com/Elustondo-ai/agentic-sdlc-governance#quick-start--give-your-agent-the-repository-url) lets the agent acquire the ZIP safely. Manual ZIP + Prompt and Clone + Prompt remain alternatives using one Python 3.9+ engine on macOS/Linux. The prompts select inputs, show the plan and wait for approval; they never implement a second installer.
 
-![Both acquisitions use one integrity, approval and verification engine; Context requires separate consent.](images/installation-engine.svg)
+![Both acquisitions use one integrity, approval and verification engine; Status owns the separately invoked next-step assessment.](images/installation-engine.svg)
 
 ## Acquire and preview
 
@@ -27,7 +27,7 @@ The [canonical Init skill](../skills/asdg-init/SKILL.md#mandatory-approval-prese
 After that approval, repeat the same command/options, replacing `--dry-run` with `--apply --plan TOKEN_FROM_PREVIEW`. The token binds the source, target, client and planned bytes; a changed plan requires fresh review.
 The engine uses existing collision protection and rollback, then checks the installed package and selected integrations before completing. A failed verification rolls back its own writes. It is not crash-safe against power loss or hostile concurrent writers.
 Run `python3 asdg/scripts/cli.py verify --json` in the target, and repeat the preview to confirm no further writes. No Git mutation occurs.
-On success, report installation complete and offer the optional Context survey. Do not execute it, activate a role or write orientation until a separate affirmative response.
+On success, report installation complete and follow the [Init skill’s Status handoff](../skills/asdg-init/SKILL.md#next-step--status-owns-the-recommendation): ask the user to invoke `/asdg-status`. Status assesses readiness and recommends `/asdg-create-team` when appropriate; unknown team inventory is qualified. Team setup and Context analysis remain separate requests.
 
 | Location | Ownership and protection |
 | --- | --- |
@@ -45,4 +45,4 @@ Ordinary status/verify remains available for local methodology modifications; ne
 
 Use the copy-ready [ZIP prompt](install-zip-prompt.md) or [Clone prompt](install-clone-prompt.md) in Claude Code or Codex. Check native skills and a harmless invocation in a disposable project after setup.
 Review [client integrations](client-integrations.md) and [native limits](native-integration.md); generated adapters/hooks do not prove runtime enforcement. Only the human/native flow grants hook trust.
-No Context survey, commit, push, release, publication or sprint starts automatically.
+No team creation, Context analysis, commit, push, release, publication or sprint starts automatically.

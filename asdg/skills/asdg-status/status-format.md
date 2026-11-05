@@ -17,7 +17,7 @@ Use actual observation time/freshness when material; do not fill the table with 
 ## 2. Project-wide next step
 
 Apply `$asdg-suggestion` once to the collected evidence with project-wide scope, regardless of conversation focus.
-Give one action, why it matters and its expected result; keep it advisory.
+Give one action, why it matters and its expected result; keep it advisory. For a fresh install, use the [Status-owned onboarding assessment](SKILL.md#after-installation--recommend-team-setup-from-status), qualifying unknown team inventory and respecting deferrals.
 Include a short ready-to-use assignment when a focused chat would help.
 Omit this section for facts-only requests and Purpose opening's factual assessment; continue to observations if relevant.
 

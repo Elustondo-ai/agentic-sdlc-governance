@@ -37,7 +37,7 @@ Counts describe the pending engine writes, including distribution files for Clon
 Separately explain: approval covers only this plan. Hook trust requires separate human action; commits, pushes, publication, sprint starts and Context are not authorized.
 STOP. Only a standalone APPROVE (case-insensitive, surrounding whitespace ignored) approves the displayed plan; CANCEL stops. Ambiguous replies, initial install requests, silence or conditional approval do not authorize apply; clarify and wait.
 
-## Apply, verify and offer Context
+## Apply and verify
 
 After APPROVE, repeat identical options with `--apply --plan <token from the displayed preview>` instead of `--dry-run`; never use a different token silently.
 A collision, stale plan, source mismatch or runtime denial stops dependent writes; any fresh plan needs a new presentation and APPROVE.
@@ -45,5 +45,10 @@ Never bypass hooks, grant trust, edit lifecycle state manually or resolve unrela
 The engine verifies structure inside its rollback boundary; then run the installed `python3 asdg/scripts/cli.py verify --json` in the target.
 Repeat the same preview for no further writes; repeat apply requires another approval. Report completion only after verification, with changed paths and preservation evidence.
 Distinguish structural checks from observed native discovery, invocation and human hook trust; unit tests prove no native operation.
-Ask “Would you like to run the optional Context survey?” then STOP; never ask survey questions, create orientation notes, activate a specialist or invoke another skill without a separate affirmative response.
-A later yes authorizes only Context under its existing scope; infer no acceptance. Never commit, push, merge, tag, publish, declare a release or start a sprint automatically.
+
+## Next step — Status owns the recommendation
+
+After successful verification, say: “Next, use `/asdg-status` in your project chat. It reports where your project stands and recommends the next ASDG skill.” Then STOP and wait for the user to invoke it.
+Do not independently recommend Create team or Context analysis here, ask a team-creation question, or run Status automatically. Installation approval authorizes none of those actions.
+The [Status skill](../asdg-status/SKILL.md#after-installation--recommend-team-setup-from-status) owns the post-install assessment and any `/asdg-create-team` suggestion; do not infer missing chats from installation or a NEW project state.
+Never activate a role, create chats or orientation notes, start Context analysis, commit, push, merge, tag, publish or start a sprint as an installation side effect.

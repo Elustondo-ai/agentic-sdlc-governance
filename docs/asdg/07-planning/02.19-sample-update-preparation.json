@@ -1,0 +1,289 @@
+{
+  "status": "PREPARED_ONLY_BLOCKED",
+  "target": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg-sample",
+  "source": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance",
+  "source_manifest_sha256": "6acd9106b8b9d658e340c4b8d8dd11c70233f25ddd8dbc35a2b73d05702666d1",
+  "source_version": "0.3.0-pilot.2",
+  "source_kind": "Local uncommitted manifest-matched candidate, not a new published release",
+  "executable_upgrade_plan": null,
+  "blocker": "Target has no Git HEAD; existing upgrade engine refuses preview.",
+  "comparison_warning": "Hash comparison is not a synchronization plan; ancestry/conflicts cannot be classified without engine prerequisites.",
+  "files": [
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "comparison": "different",
+      "before_sha256": "dd4e10f875f3d8174853c1600387b0a45ec27762bcce7c7821e1c0747921d112",
+      "incoming_sha256": "d2ae2c2b7985abccf3cee0579bdbeb81f6feb29d86eddb8d1acac9142e330296"
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "comparison": "different",
+      "before_sha256": "a8fdeba21b7c63281ccb0fcfbf659ef35add6b891370b2f3ea35c2f129f8b426",
+      "incoming_sha256": "205784906571fecf46e8288e0844264178d61cc1962827be2957eb6fd4f87e2d"
+    },
+    {
+      "path": "asdg/docs/images/installation-engine.svg",
+      "comparison": "different",
+      "before_sha256": "3140579438c1457f1740df6f4c69463dd425ee1f46f010cdce02ed8c34386d0c",
+      "incoming_sha256": "77898afc32a14f901dcc9be75106f9a42a27552356c67779f897e8e2ae3a7c91"
+    },
+    {
+      "path": "asdg/docs/install-clone-prompt.md",
+      "comparison": "different",
+      "before_sha256": "76970dc2e5cc02ecf85792da27691d310c203dc8d76507d580a1267be03c9464",
+      "incoming_sha256": "a7589761b12a7fbf8ed61939a31d77f5814dabb7dc799170ff280404a9830d10"
+    },
+    {
+      "path": "asdg/docs/install-zip-prompt.md",
+      "comparison": "different",
+      "before_sha256": "9648d7fdc63663f839a14dfebf9ab2df6ef26fb7c6f80a8e7340fe26a261eb21",
+      "incoming_sha256": "6c4b50a98f5b62209558923d9c478d381b7f923ca112fbb488c16ff4428ee882"
+    },
+    {
+      "path": "asdg/docs/installation.md",
+      "comparison": "different",
+      "before_sha256": "1627facf655afe98328ede55ac4ab58422c4f82b28ef661058e0a516b9627c34",
+      "incoming_sha256": "39d12bbff6ebbe74c412b2fe3a84ade67a81a5b36dbd9985d4d114657bc7e5d7"
+    },
+    {
+      "path": "asdg/docs/synchronization.md",
+      "comparison": "different",
+      "before_sha256": "5e903e592afc3acbd9a00c36a5562084757f2c958c93624cdad80d15a820870c",
+      "incoming_sha256": "c2089a62ca5c2eee8a002a60ad9e86028175375b0d12a26340a6d779873ffd24"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "comparison": "different",
+      "before_sha256": "d988ed18b99ed5a03613fa9b7b01e1eafdd0fa7def300e46aab192370a183405",
+      "incoming_sha256": "6acd9106b8b9d658e340c4b8d8dd11c70233f25ddd8dbc35a2b73d05702666d1"
+    },
+    {
+      "path": "asdg/metadata/package-files.json",
+      "comparison": "different",
+      "before_sha256": "9057ff2efa67383f94f7ed379fdbd2add42e7c23bb61f4ea96122545172d2843",
+      "incoming_sha256": "8040bbc5026daf88a7d97f8a5fc9b5d70b513245e9d468c7aec48a223e9d6289"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.md",
+      "comparison": "different",
+      "before_sha256": "47d8d5ebc40b07c01449de21d460b08c25098eb011765e6d5b2fbed8b04db44a",
+      "incoming_sha256": "e8533f92bee7c7c56dc83146f31823bdb4063e4caedc6f33d91c255f488c1551"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.py",
+      "comparison": "different",
+      "before_sha256": "499b806a5718e09608ed0e68fd1ae0aa8ffe9b4db798b3e92e864b6f09d90a9d",
+      "incoming_sha256": "1bb668a0dbe4672aae347da456c091d32397ffd8f316f938d06073564d4b64c4"
+    },
+    {
+      "path": "asdg/skills/README.md",
+      "comparison": "different",
+      "before_sha256": "49447deb42a60864d2ec9bcae2bd8a2841028abdb4ba196a5b7733306a3c34c4",
+      "incoming_sha256": "4f0686014734b944370c85263c6f1859b4e787c1161acc5ddaa28bb1f1898551"
+    },
+    {
+      "path": "asdg/skills/asdg-create-team/SKILL.md",
+      "comparison": "different",
+      "before_sha256": "cdc9e061d6a3efc8a40dbc3c9a44a3e3178f5e2d61adea4bd6d7b5ab2c5b211b",
+      "incoming_sha256": "1ad1b8d46e88ca647d79bc2b221c9cc1882ec1d9cc9793c4ee1c23e897bbcd5d"
+    },
+    {
+      "path": "asdg/skills/asdg-create-team/create-chats.md",
+      "comparison": "added",
+      "before_sha256": null,
+      "incoming_sha256": "e765bad93252a576b5a4385d44fe32045c3e8c5ae994d7a142ab8d250441422f"
+    },
+    {
+      "path": "asdg/skills/asdg-help/SKILL.md",
+      "comparison": "added",
+      "before_sha256": null,
+      "incoming_sha256": "eb55ad8fbc4aecbd55bf8835e83507d2df1ce55bc4c31d17199f297d4803797e"
+    },
+    {
+      "path": "asdg/skills/asdg-help/command-reference.md",
+      "comparison": "added",
+      "before_sha256": null,
+      "incoming_sha256": "8a4984d7d3812078c58972a291f2829c5d7d92b9da8242bbc2df6e868be3ae37"
+    },
+    {
+      "path": "asdg/skills/asdg-init/SKILL.md",
+      "comparison": "different",
+      "before_sha256": "539bd041cb474bbf569ad7525cdfe24e1110101dad4196acf87de1becd3cb302",
+      "incoming_sha256": "6ca7cef78c4a1b086bd753fe54962297625203c122ed0d22433c57abda3be056"
+    },
+    {
+      "path": "asdg/skills/asdg-status/SKILL.md",
+      "comparison": "different",
+      "before_sha256": "a0480b62d8c4ac5fd92c601c5d0674f76e6373e5d09bc65ee613be7576911ccb",
+      "incoming_sha256": "89687b96df20884b3ed774a6e2fe790c1328d1bd45a39ee0753b93323416d2bb"
+    },
+    {
+      "path": "asdg/skills/asdg-status/status-format.md",
+      "comparison": "different",
+      "before_sha256": "ded2582912a597fd1d189ebf1eca4704dec5348a0a162598dc87ec19fdb769f4",
+      "incoming_sha256": "919364ce1d320a64684a3be69847666188138bd453a5c79b0733ba7c356efb9e"
+    },
+    {
+      "path": "asdg/skills/asdg-suggestion/SKILL.md",
+      "comparison": "different",
+      "before_sha256": "57e29493ac0d92fb85e97f863587356831d087b2412ddf044e39c152ec5374fe",
+      "incoming_sha256": "175e26873427bd6410bc4ffcc1c4bb5d2135472ace9bf786e511e420012de326"
+    },
+    {
+      "path": "asdg/skills/asdg-update/SKILL.md",
+      "comparison": "added",
+      "before_sha256": null,
+      "incoming_sha256": "890062cb946626c9ce2a84871001c94d07c1f1cc61bacc5dddd251714d45b06b"
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-help/SKILL.md",
+      "comparison": "added",
+      "before_sha256": null,
+      "incoming_sha256": "989071edd7f93f1a827fcc05ea441b55480048eef16a7f546cb391effd16eeb4"
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-help/agents/openai.yaml",
+      "comparison": "added",
+      "before_sha256": null,
+      "incoming_sha256": "13c11c4e4906d06f3540ee75053b334cd00d4c9cbd017e22b62100b1d01de7bd"
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-update/SKILL.md",
+      "comparison": "added",
+      "before_sha256": null,
+      "incoming_sha256": "9fc31ad5543fe814276d324d183eb4cbd2f6101d8e4ddafeaaae5e6651586cc3"
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-update/agents/openai.yaml",
+      "comparison": "added",
+      "before_sha256": null,
+      "incoming_sha256": "6f7c2319a3d167cfb13348be61166eefa383ce6f285fb5dba1fb53b5dc533073"
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "comparison": "different",
+      "before_sha256": "66547f8f84b6ff729aab324823a293a01314f37f3be57220c44c57f278d11014",
+      "incoming_sha256": "b19f54844001347682b55022586bca011fe1da2690fa16071dfb8e7de7502836"
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "comparison": "different",
+      "before_sha256": "e1be540aa4997fab5a4171abfacce4a5b3113ecb1c2b6374e4c658c086eae8c1",
+      "incoming_sha256": "600b8b515d53ec92f69ca28edc14f5b05f75b42060a27ae118944fe6fa5c99f9"
+    },
+    {
+      "path": "asdg/tests/test_install.md",
+      "comparison": "different",
+      "before_sha256": "55d6a5eb474f4375fd21137035646b66a149bc82e9a04ecd765e8e3171525d0c",
+      "incoming_sha256": "1c62551ff0ea52d4a31cbe2281d2623a6d9c0bda3914f9157016ebb401395335"
+    },
+    {
+      "path": "asdg/tests/test_install.py",
+      "comparison": "different",
+      "before_sha256": "b2b7f94b6b9587420085f06818c63f97e94f00df18ad45f1e90ea4f04fc3c3b5",
+      "incoming_sha256": "4dd3404ab49f5315a213f7c00ab6487f3074bda11a49bc41d2ee02cb70eb2857"
+    },
+    {
+      "path": "asdg/tests/test_portable.md",
+      "comparison": "different",
+      "before_sha256": "00f47048a03b4fd52d2010419d6813796f8ef6051e072a28f9c906f457f87614",
+      "incoming_sha256": "7f83c0f2ce5ae038135eedebe935c30d3c9b7feef452e5953ecdc28c37f82b42"
+    },
+    {
+      "path": "asdg/tests/test_portable.py",
+      "comparison": "different",
+      "before_sha256": "99fdc0320eab1624927ba91eb753a7e64b8c442680243e45d1bf656c49577d67",
+      "incoming_sha256": "63d46c7dbbaa94f6b6d6836c05be7181fe145e07b35293f5c13175f369769225"
+    }
+  ],
+  "missing_codex_adapters": [
+    ".agents/skills/asdg-help/SKILL.md",
+    ".agents/skills/asdg-help/agents/openai.yaml",
+    ".agents/skills/asdg-update/SKILL.md",
+    ".agents/skills/asdg-update/agents/openai.yaml"
+  ],
+  "real_preview": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "{\"error\": \"Cannot establish Git identity: rev-parse HEAD\", \"operation\": \"upgrade\"}"
+  },
+  "disposable_rehearsal": {
+    "scope": "Projected package overlay plus actual init preview/apply and structural verify; upgrade itself not exercised",
+    "planned_files": [
+      ".asdg/document-reviews.json",
+      ".agents/skills/asdg-help/SKILL.md",
+      ".agents/skills/asdg-help/agents/openai.yaml",
+      ".agents/skills/asdg-update/SKILL.md",
+      ".agents/skills/asdg-update/agents/openai.yaml"
+    ],
+    "files": [
+      {
+        "path": ".asdg/document-reviews.json",
+        "action": "modified",
+        "before_sha256": "655dc21978c5b7d396440f8c62fce0b43424e91e605b31815e913e0e892df091",
+        "sha256": "e3f1373d1a980f2f3633cf22bbd67f9320441325a0954e37eff9a2532038dbd6",
+        "kind": "integration-or-scaffold",
+        "mode": "0o644",
+        "diff": "--- before/.asdg/document-reviews.json\n+++ after/.asdg/document-reviews.json\n@@ -310,6 +310,26 @@\n       \"provenance\": {\n         \"generator\": \"asdg embedded init\"\n       }\n+    },\n+    {\n+      \"path\": \".agents/skills/asdg-help/SKILL.md\",\n+      \"sha256\": \"989071edd7f93f1a827fcc05ea441b55480048eef16a7f546cb391effd16eeb4\",\n+      \"event\": \"AI-MODIFIED\",\n+      \"recorded_at\": \"2026-11-05T03:05:24Z\",\n+      \"human_approval\": null,\n+      \"provenance\": {\n+        \"generator\": \"asdg embedded init\"\n+      }\n+    },\n+    {\n+      \"path\": \".agents/skills/asdg-update/SKILL.md\",\n+      \"sha256\": \"9fc31ad5543fe814276d324d183eb4cbd2f6101d8e4ddafeaaae5e6651586cc3\",\n+      \"event\": \"AI-MODIFIED\",\n+      \"recorded_at\": \"2026-11-05T03:05:24Z\",\n+      \"human_approval\": null,\n+      \"provenance\": {\n+        \"generator\": \"asdg embedded init\"\n+      }\n     }\n   ]\n }\n"
+      },
+      {
+        "path": ".agents/skills/asdg-help/SKILL.md",
+        "action": "added",
+        "before_sha256": null,
+        "sha256": "989071edd7f93f1a827fcc05ea441b55480048eef16a7f546cb391effd16eeb4",
+        "kind": "integration-or-scaffold",
+        "mode": "0o644",
+        "diff": "--- before/.agents/skills/asdg-help/SKILL.md\n+++ after/.agents/skills/asdg-help/SKILL.md\n@@ -0,0 +1,10 @@\n+---\n+name: asdg-help\n+description: Explain the ASDG command list, invocation syntax and examples, or help with a named skill. Explanation only.\n+---\n+\n+# ASDG help \u2014 discovery adapter\n+\n+Read and follow [the canonical workflow](../../../asdg/skills/asdg-help/SKILL.md).\n+Resolve the link from this file's directory; preserve the current project and session selections.\n+Explain commands without executing them or starting project work.\n"
+      },
+      {
+        "path": ".agents/skills/asdg-help/agents/openai.yaml",
+        "action": "added",
+        "before_sha256": null,
+        "sha256": "13c11c4e4906d06f3540ee75053b334cd00d4c9cbd017e22b62100b1d01de7bd",
+        "kind": "integration-or-scaffold",
+        "mode": "0o644",
+        "diff": "--- before/.agents/skills/asdg-help/agents/openai.yaml\n+++ after/.agents/skills/asdg-help/agents/openai.yaml\n@@ -0,0 +1,4 @@\n+interface:\n+  display_name: \"ASDG help\"\n+  short_description: \"Explain ASDG commands and invocation examples\"\n+  default_prompt: \"Use $asdg-help to explain the available ASDG commands and when to use them.\"\n"
+      },
+      {
+        "path": ".agents/skills/asdg-update/SKILL.md",
+        "action": "added",
+        "before_sha256": null,
+        "sha256": "9fc31ad5543fe814276d324d183eb4cbd2f6101d8e4ddafeaaae5e6651586cc3",
+        "kind": "integration-or-scaffold",
+        "mode": "0o644",
+        "diff": "--- before/.agents/skills/asdg-update/SKILL.md\n+++ after/.agents/skills/asdg-update/SKILL.md\n@@ -0,0 +1,10 @@\n+---\n+name: asdg-update\n+description: Prepare a reviewed ASDG distribution update and separate client-adapter refresh. Apply each exact plan only after explicit approval; preserves project work.\n+---\n+\n+# ASDG update \u2014 discovery adapter\n+\n+Read and follow [the canonical workflow](../../../asdg/skills/asdg-update/SKILL.md).\n+Resolve the link from this file's directory; preserve the selected project and session fields.\n+Require selected ASDG Admin and a human-bounded update request; never select a role or apply from discovery alone.\n"
+      },
+      {
+        "path": ".agents/skills/asdg-update/agents/openai.yaml",
+        "action": "added",
+        "before_sha256": null,
+        "sha256": "6f7c2319a3d167cfb13348be61166eefa383ce6f285fb5dba1fb53b5dc533073",
+        "kind": "integration-or-scaffold",
+        "mode": "0o644",
+        "diff": "--- before/.agents/skills/asdg-update/agents/openai.yaml\n+++ after/.agents/skills/asdg-update/agents/openai.yaml\n@@ -0,0 +1,4 @@\n+interface:\n+  display_name: \"ASDG update\"\n+  short_description: \"Preview ASDG updates and adapter refreshes\"\n+  default_prompt: \"Use $asdg-update to prepare an update of this project from my selected canonical distribution.\"\n"
+      }
+    ],
+    "changed_files": [
+      ".agents/skills/asdg-help/SKILL.md",
+      ".agents/skills/asdg-help/agents/openai.yaml",
+      ".agents/skills/asdg-update/SKILL.md",
+      ".agents/skills/asdg-update/agents/openai.yaml",
+      ".asdg/document-reviews.json"
+    ],
+    "structure_ok": true,
+    "dry_run_preserved_bytes": true,
+    "other_project_bytes_preserved": true,
+    "approval_note": "Fixture-only approval; not human approval or an executable token for the actual sample",
+    "native_invocation": "NOT_VERIFIED"
+  },
+  "preservation": {
+    "actual_sample_files_unchanged": true,
+    "git_index_and_status_unchanged": true,
+    "sample_file_count": 468,
+    "sample_tree_sha256": "ebfdf1ed56568908a4d411f7b1f252a079736b4e0b92a64af0b321ca8fd0a6c7"
+  },
+  "counts": {
+    "added": 8,
+    "different": 23
+  }
+}

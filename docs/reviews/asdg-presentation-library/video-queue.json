@@ -211,7 +211,12 @@
       "youtube_url": null,
       "pptx_url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-07.pptx",
       "pptx_sha256": "70d3ff647650969c1e2f202c9af05c49d4381c099385ecc3a23414329dc93741",
-      "slides": 1
+      "slides": 1,
+      "last_upload_attempt": {
+        "at": "2026-11-05T03:24:08.591481+00:00",
+        "outcome": "YOUTUBE_UPLOAD_LIMIT",
+        "published": false
+      }
     },
     {
       "id": "recent-08",
@@ -462,7 +467,20 @@
       "youtube_url": "https://www.youtube.com/watch?v=RUyP6nvC8cE",
       "saved_public_verified": true,
       "hd_complete": true,
-      "pptx_url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-introduction.pptx"
+      "pptx_url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-introduction.pptx",
+      "narration_correction": {
+        "corrected_file": "docs/presentations/asdg-introduction/build/release-correction/asdg-introduction-narrated.mp4",
+        "corrected_sha256": "0564ef958e9ebce10808c567160b5806c0668b630fadc3481445bd525b819c11",
+        "drive_file_id": "1L86kCjSQwVmNCtnvCsj51BtVZCzwYCaP",
+        "hash_verified": true,
+        "captions_verified": true,
+        "auditory_verification": "UNAVAILABLE: this session cannot consume audio input",
+        "short_script_corrected": true,
+        "vids_generated_audio": "OUTDATED_NOT_REGENERATED",
+        "youtube_cut": "UNSAVED_PREVIEW_REQUIRES_LISTENING",
+        "github_replacement": "PENDING_HUMAN",
+        "existing_watch_url_preserved": true
+      }
     },
     {
       "id": "repository-asdg-sprint-governance-review",
@@ -594,6 +612,10 @@
   "publication_blocker": {
     "code": "YOUTUBE_UPLOAD_LIMIT",
     "observed_message": "You\u2019ve reached your upload limit.",
-    "remaining_action": "Export the eleven ready Google Vids to YouTube after upload capacity returns; verify HD and public visibility, then replace pending cells."
+    "remaining_action": "Export the eleven ready Google Vids to YouTube after upload capacity returns; verify HD and public visibility, then replace pending cells.",
+    "last_rechecked_at": "2026-11-05T03:24:08.591481+00:00",
+    "rechecked_item": "recent-07",
+    "latest_observed_message": "You\u2019ve reached your upload limit.",
+    "evidence": "docs/presentations/asdg-introduction/build/release-correction/youtube-upload-limit.jpg"
   }
 }

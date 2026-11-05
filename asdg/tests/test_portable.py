@@ -128,14 +128,18 @@ class PortableTests(unittest.TestCase):
 
     def test_init_guidance_resolves_to_installed_status_without_changing_state_on_repeat(self):
         result = self.init()
-        self.assertIn('optional Context survey', result.stdout)
+        self.assertIn('Next, use /asdg-status in your project chat.', result.stdout)
+        self.assertNotIn('/asdg-create-team', result.stdout.split('ASDG installation complete;', 1)[1])
+        self.assertNotIn('Create my ASDG team', result.stdout)
+        self.assertIn('This installation did not run Status, create team chats or start Context analysis', result.stdout)
+        self.assertNotIn('Context survey', result.stdout)
         self.assertNotIn('$asdg-focus-', result.stdout)
         adapter = self.root / '.agents/skills/asdg-status/SKILL.md'
         self.assertTrue(adapter.is_file())
         self.assertEqual(adapter.read_bytes(),
                          (self.root / 'asdg/templates/.agents/skills/asdg-status/SKILL.md').read_bytes())
         before = snapshot(self.root)
-        self.assertIn('optional Context survey', self.init().stdout)
+        self.assertIn('Next, use /asdg-status in your project chat.', self.init().stdout)
         self.assertEqual(snapshot(self.root), before)
         status = json.loads(self.run_cli('status', '--json').stdout)
         self.assertEqual(status['project_status'], 'new')
@@ -144,11 +148,13 @@ class PortableTests(unittest.TestCase):
 
     def test_init_guidance_is_only_emitted_after_successful_console_initialization(self):
         before = snapshot(self.root)
-        self.assertNotIn('Would you like the optional Context survey?', self.init('--dry-run').stdout)
+        self.assertNotIn('Next, use /asdg-status in your project chat.', self.init('--dry-run').stdout)
         self.assertEqual(snapshot(self.root), before)
         report = json.loads(self.init('--json').stdout)
         self.assertIsNone(report['human_approval'])
         self.assertFalse(report['sprint_started'])
+        self.assertFalse(report['context_survey']['offered'])
+        self.assertFalse(report['context_survey']['executed'])
         self.assertNotIn('$asdg-status', self.run_cli('verify').stdout)
         adapter = self.root / '.agents/skills/asdg-focus/SKILL.md'
         adapter.write_text(adapter.read_text() + '\nClient customization.\n')

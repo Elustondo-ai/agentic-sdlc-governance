@@ -1,0 +1,3767 @@
+{
+  "requester": "Pablo",
+  "authorization": "ok please follow that plan: review and create initial sample baseline, bootstrap canonical Update, preview/approve methodology then integrations",
+  "role": "ASDG Admin",
+  "sample": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg-sample",
+  "baseline_commit": "d67767b0cdff2fa439991d358b2133f7cc83f06d",
+  "baseline_commit_files": 467,
+  "sample_worktree_clean": true,
+  "baseline_preservation": "Existing installation bytes committed unchanged; no network or push.",
+  "initial_checks": {
+    "sample_integrity": "PASS",
+    "canonical_integrity": "PASS",
+    "whitespace": "Existing baseline warnings: trailing whitespace in historical patch and blank lines at EOF in existing package/adapters; preserved unchanged.",
+    "sensitive_file_pattern_inventory": "No matches for checked private-key/provider-token patterns."
+  },
+  "preview": {
+    "operation": "upgrade",
+    "source": {
+      "root": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/agentic-sdlc-governance",
+      "repository": "github.com/elustondo-ai/agentic-sdlc-governance",
+      "head": "63c4f065138f09988bdd830819260136a4455d65",
+      "version": "0.3.0-pilot.2",
+      "snapshot_sha256": "eb69f4f17ad7f5a0e6ad332a4dd1ba10590f3783805238f60a4555d87051a598",
+      "binding_sha256": null,
+      "manifest_matches_worktree": true,
+      "snapshot_kind": "MANIFEST_MATCHED_DISTRIBUTION",
+      "delivery_manifest": {
+        "sha256": "6acd9106b8b9d658e340c4b8d8dd11c70233f25ddd8dbc35a2b73d05702666d1",
+        "version": "0.3.0-pilot.2",
+        "status": "MATCH",
+        "differences": {
+          "added": [],
+          "modified": [],
+          "deleted": []
+        }
+      },
+      "validation_status": "NOT_ESTABLISHED",
+      "human_approval_status": "NOT_ESTABLISHED",
+      "selection": "package-files"
+    },
+    "target": {
+      "root": "/Users/pablo.elustondo/Library/CloudStorage/GoogleDrive-pablo.elustondo@gmail.com/My Drive/1-GIT-PROJECTS/elustondoai/asdg-sample",
+      "repository": "github.com/elustondo-ai/asdg-sample",
+      "head": "d67767b0cdff2fa439991d358b2133f7cc83f06d",
+      "version": "0.3.0-pilot.2",
+      "snapshot_sha256": "3626b7a013ace329f8374da53cca276ec837b33bcdeb7b4c015e6dba3462f7d7",
+      "binding_sha256": "346933f30dafbf101ac73f69e2001c5d3cd5cef2e4f8a9a9e22028fb46a374f3",
+      "manifest_matches_worktree": true,
+      "snapshot_kind": "MANIFEST_MATCHED_DISTRIBUTION",
+      "delivery_manifest": {
+        "sha256": "d988ed18b99ed5a03613fa9b7b01e1eafdd0fa7def300e46aab192370a183405",
+        "version": "0.3.0-pilot.2",
+        "status": "MATCH",
+        "differences": {
+          "added": [],
+          "modified": [],
+          "deleted": []
+        }
+      },
+      "validation_status": "NOT_ESTABLISHED",
+      "human_approval_status": "NOT_ESTABLISHED",
+      "selection": "package-files"
+    },
+    "baseline": "none: multiple shared historical deliveries; reconcile or restore an adoption record",
+    "counts": {
+      "added": 8,
+      "modified": 0,
+      "deleted": 0,
+      "unchanged": 376,
+      "conflicting": 23
+    },
+    "files": [
+      {
+        "path": "asdg/00-governance/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "590f41fed13f397bddf5adf7ee16b5f65213448a19649ca2d34ec8bec0d7dc0f",
+        "target_sha256": "590f41fed13f397bddf5adf7ee16b5f65213448a19649ca2d34ec8bec0d7dc0f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "6a30036558a39cf070d7fe1831583d7beee08a9ce3538774e5c67b6b6399fa84",
+        "target_sha256": "6a30036558a39cf070d7fe1831583d7beee08a9ce3538774e5c67b6b6399fa84",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "95e6ac51dcb773424815e749618a56eca6e6cd042746c19ab28bcb9aa12c1be6",
+        "target_sha256": "95e6ac51dcb773424815e749618a56eca6e6cd042746c19ab28bcb9aa12c1be6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/code-companions.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "7bbdcf58b916281b5c5454dea927bb7f7438823a7647002e156db121e568c1ea",
+        "target_sha256": "7bbdcf58b916281b5c5454dea927bb7f7438823a7647002e156db121e568c1ea",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/continuation.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "e67b4d2b9ee96b89b9d5adf754da6e6ea07b1e389a8ff3199f84620cb12dde41",
+        "target_sha256": "e67b4d2b9ee96b89b9d5adf754da6e6ea07b1e389a8ff3199f84620cb12dde41",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/documentation-authority.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "6b1d86ccdc8d17e7ea3a36814313c8c45650815d0c8c5a97b0f1e21fd47c8962",
+        "target_sha256": "6b1d86ccdc8d17e7ea3a36814313c8c45650815d0c8c5a97b0f1e21fd47c8962",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/documentation-review.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "2f8bd0af880a61767554ab08f923283cec8a5ececea2941dd6fee6ee6e530b5a",
+        "target_sha256": "2f8bd0af880a61767554ab08f923283cec8a5ececea2941dd6fee6ee6e530b5a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/documentation-standard.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "eb811e008c1010c51db431f97f04c5c815bed1e3a962738a1a76ec3f95626081",
+        "target_sha256": "eb811e008c1010c51db431f97f04c5c815bed1e3a962738a1a76ec3f95626081",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/gui-visuals.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "2924d455b1961233edba02f41677c54bca32b24622eee7b912970aa5d40044c7",
+        "target_sha256": "2924d455b1961233edba02f41677c54bca32b24622eee7b912970aa5d40044c7",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/images/documentation-authority.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "19c6c8e31912d9ee24f1854d61a20f8bcd4a5b7552a18f79936834f01882d8bb",
+        "target_sha256": "19c6c8e31912d9ee24f1854d61a20f8bcd4a5b7552a18f79936834f01882d8bb",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/images/gui-visuals.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3e38fa614215bf9707de89715ddd3293f6ac45e3b996de5db179f0681b1bdbe6",
+        "target_sha256": "3e38fa614215bf9707de89715ddd3293f6ac45e3b996de5db179f0681b1bdbe6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/lifecycle-evidence.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "784cb65b0ecceb620bfa6dd869419631078b93a1c02a6f8efc26cf57cb6a9a56",
+        "target_sha256": "784cb65b0ecceb620bfa6dd869419631078b93a1c02a6f8efc26cf57cb6a9a56",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/runtime-contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1fac2020d8e4af884afb3b2f139b5ce37ef79e724d0c447efcf6ce20c53d2278",
+        "target_sha256": "1fac2020d8e4af884afb3b2f139b5ce37ef79e724d0c447efcf6ce20c53d2278",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/session-logging.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "70a357225f5adb068a38e54bfc3d0e562f466676e1d80de9ab95e8cc72ffa193",
+        "target_sha256": "70a357225f5adb068a38e54bfc3d0e562f466676e1d80de9ab95e8cc72ffa193",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/sprint-gate.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "a002cca6ed0923def8a691703a3d4e39761d6c9a6e63aed83e48caea2c4c789d",
+        "target_sha256": "a002cca6ed0923def8a691703a3d4e39761d6c9a6e63aed83e48caea2c4c789d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/sprint-state.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "68ff95576032d1edbc5bc55f6f7ef6527c519912951a2943831299877c608705",
+        "target_sha256": "68ff95576032d1edbc5bc55f6f7ef6527c519912951a2943831299877c608705",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/stage-layout.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f9df9dc00c75e21cc52ccda92fb1c5e7742ca395a29599f361021605e4dab0ba",
+        "target_sha256": "f9df9dc00c75e21cc52ccda92fb1c5e7742ca395a29599f361021605e4dab0ba",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/stage-perspectives-map.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b5f88f1ab74a915f4782ea4b941f3fe416e6844d45bc441c44bc065d67c62132",
+        "target_sha256": "b5f88f1ab74a915f4782ea4b941f3fe416e6844d45bc441c44bc065d67c62132",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/stage-perspectives.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f2038c07afa175f46ee38313fe002173e2237d4c712da0dc6c771ce59508b905",
+        "target_sha256": "f2038c07afa175f46ee38313fe002173e2237d4c712da0dc6c771ce59508b905",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/stage-snapshot-template.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "937a92d9fb2ec5bded2a74f1cd2dd2edcc75af5cbd0326f43fb17d55c093911c",
+        "target_sha256": "937a92d9fb2ec5bded2a74f1cd2dd2edcc75af5cbd0326f43fb17d55c093911c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/state-engine.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "fe220946f05f12bc77e6232da99ce553623877c2e579ef161e995e608fbbf6c7",
+        "target_sha256": "fe220946f05f12bc77e6232da99ce553623877c2e579ef161e995e608fbbf6c7",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/docs/status-advice.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "04ef7762ac074e6096c58214b1c1d76e851baebd69bd255d1f9ff90d7e25194b",
+        "target_sha256": "04ef7762ac074e6096c58214b1c1d76e851baebd69bd255d1f9ff90d7e25194b",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/skills/review-routing/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "96e3e79711029c2ffc7bdfcd7b95f74a5ce546d4de4f8287da895a5df2c8ddf8",
+        "target_sha256": "96e3e79711029c2ffc7bdfcd7b95f74a5ce546d4de4f8287da895a5df2c8ddf8",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/types/agent-catalog.json",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "e71894e91b0c923cab73ff33f8d90adf4688280a2b7ef9f415035f0437e6a4aa",
+        "target_sha256": "e71894e91b0c923cab73ff33f8d90adf4688280a2b7ef9f415035f0437e6a4aa",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/types/cli-project-contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "51cc255ca24d38339b541b661b8ada66b8a16fe4c35a9dddc422d26f34fa10aa",
+        "target_sha256": "51cc255ca24d38339b541b661b8ada66b8a16fe4c35a9dddc422d26f34fa10aa",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "fdbe5930911c79e40d1dbb221ca6f5a3c509e5fa90a85dd4b52f8e3804b3bc7b",
+        "target_sha256": "fdbe5930911c79e40d1dbb221ca6f5a3c509e5fa90a85dd4b52f8e3804b3bc7b",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/types/document-reviews.json",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "d2ae2c2b7985abccf3cee0579bdbeb81f6feb29d86eddb8d1acac9142e330296",
+        "target_sha256": "dd4e10f875f3d8174853c1600387b0a45ec27762bcce7c7821e1c0747921d112",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/types/interaction-contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "772ea5f4c9fc2c9219fcc9abc09326f41ddeaa0ff5be0f0ee5f98f3872341b15",
+        "target_sha256": "772ea5f4c9fc2c9219fcc9abc09326f41ddeaa0ff5be0f0ee5f98f3872341b15",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/types/lifecycle-rules.json",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1c088f35372cae2a1a94d41cc9b26571eec70b1861301416d3b5d5e6e511f13d",
+        "target_sha256": "1c088f35372cae2a1a94d41cc9b26571eec70b1861301416d3b5d5e6e511f13d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/types/log-contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9d7757efc7bac3a256021c42ad3cf9b3a88f4f653c8c010be367057777bb2c6e",
+        "target_sha256": "9d7757efc7bac3a256021c42ad3cf9b3a88f4f653c8c010be367057777bb2c6e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/types/migrations/legacy-catalog-v0.2.json",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f6aeb3811207ca069828956aa56f08f4f41f4d0a78dc9d8dd81fffb57ef71358",
+        "target_sha256": "f6aeb3811207ca069828956aa56f08f4f41f4d0a78dc9d8dd81fffb57ef71358",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/types/migrations/namespace-map.json",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "958b5b813260596e841da4d6e12df17ac3cec5c986ee5356a79ad5fe48896fc6",
+        "target_sha256": "958b5b813260596e841da4d6e12df17ac3cec5c986ee5356a79ad5fe48896fc6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/00-governance/types/migrations/speaker-coach-exporters.patch",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f1de50981bf0172c767efdb647318a8bcc9242d049ea5d26e881e6d519e74cc7",
+        "target_sha256": "f1de50981bf0172c767efdb647318a8bcc9242d049ea5d26e881e6d519e74cc7",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/01-context-and-domain-analysis/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f4248d3b6a3ea877466377f16c9babebf89de73bdd35096d8eaa357f17e5eea1",
+        "target_sha256": "f4248d3b6a3ea877466377f16c9babebf89de73bdd35096d8eaa357f17e5eea1",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/01-context-and-domain-analysis/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f5744b6358a5d18c313a089ff28508da26fcb34da3047a31a5fc396f9f1f7037",
+        "target_sha256": "f5744b6358a5d18c313a089ff28508da26fcb34da3047a31a5fc396f9f1f7037",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/01-context-and-domain-analysis/docs/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9e0e516498ce8312bdb7d1f58f0f8f30c948cc98008883451712b08bc348134c",
+        "target_sha256": "9e0e516498ce8312bdb7d1f58f0f8f30c948cc98008883451712b08bc348134c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/01-context-and-domain-analysis/skills/analyze-context/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "87ec32a32a7015bd6baedfbc4ece3e7bba004f7d77137136fb3130b6008205fd",
+        "target_sha256": "87ec32a32a7015bd6baedfbc4ece3e7bba004f7d77137136fb3130b6008205fd",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/01-context-and-domain-analysis/src/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "a5f46c56006411a918c18d7d3e447b335aa67a928b29fb1e10075cb47fbe57a7",
+        "target_sha256": "a5f46c56006411a918c18d7d3e447b335aa67a928b29fb1e10075cb47fbe57a7",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/01-context-and-domain-analysis/tests/acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "cfa98316e7cb982c6cc0657c242f0be64130d4ad42f16aad8707dd6f6857c7de",
+        "target_sha256": "cfa98316e7cb982c6cc0657c242f0be64130d4ad42f16aad8707dd6f6857c7de",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/01-context-and-domain-analysis/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "2d0919e22373906c847c424fdf731ba19e0678c8887dbc64df330800423de207",
+        "target_sha256": "2d0919e22373906c847c424fdf731ba19e0678c8887dbc64df330800423de207",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/02-purpose/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "71945f5849c2960dafa4b7aae3af1e3f36f092539d5c787a2a2d6a057a1b7b92",
+        "target_sha256": "71945f5849c2960dafa4b7aae3af1e3f36f092539d5c787a2a2d6a057a1b7b92",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/02-purpose/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "d830c27389d5bdb7bd4e32c57643a60380b1403e93e23d9a78e48368b1334d78",
+        "target_sha256": "d830c27389d5bdb7bd4e32c57643a60380b1403e93e23d9a78e48368b1334d78",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/02-purpose/docs/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "91f65482780cd889d19eba90d451c2c7ee4c9e87647bdd9d8a3c68fe36b0ad4d",
+        "target_sha256": "91f65482780cd889d19eba90d451c2c7ee4c9e87647bdd9d8a3c68fe36b0ad4d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/02-purpose/skills/elicit-purpose/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "15ea73ccb3a85ba12c39dbaad69ed71c7734f0308a3baf0422ad4e81b1ee3039",
+        "target_sha256": "15ea73ccb3a85ba12c39dbaad69ed71c7734f0308a3baf0422ad4e81b1ee3039",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/02-purpose/skills/elicit-purpose/opening.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "bd26bfb8c545d1bb8b1ac31e62580577b532da722894da877ba96ec602035479",
+        "target_sha256": "bd26bfb8c545d1bb8b1ac31e62580577b532da722894da877ba96ec602035479",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/02-purpose/src/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "dbe943cbd96450a4c3a9ea0c5275b5aa833c29aee92e88e99c486a98473a59da",
+        "target_sha256": "dbe943cbd96450a4c3a9ea0c5275b5aa833c29aee92e88e99c486a98473a59da",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/02-purpose/tests/acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c8951cfd1c4df9d60d969142b107c3bef8cdeb927e9cbd0ccd8323da02aa0b89",
+        "target_sha256": "c8951cfd1c4df9d60d969142b107c3bef8cdeb927e9cbd0ccd8323da02aa0b89",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/02-purpose/types/completion.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "78e0de270f1790ff97f492c07568f506cc6271df39982e48b91d43a9c7ab4b9c",
+        "target_sha256": "78e0de270f1790ff97f492c07568f506cc6271df39982e48b91d43a9c7ab4b9c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/02-purpose/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "891845a79c6b40a11ed8809f12805a0043d2562ec8753e5a33df98c293f649ba",
+        "target_sha256": "891845a79c6b40a11ed8809f12805a0043d2562ec8753e5a33df98c293f649ba",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/03-system-model-and-use-cases/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "4a848d961e27a03a0da75707ccd11fa05375c3d7453e91e337b46d3135204c02",
+        "target_sha256": "4a848d961e27a03a0da75707ccd11fa05375c3d7453e91e337b46d3135204c02",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/03-system-model-and-use-cases/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "32564f612426f9b46cd55b1554f0c1a21f3b7db1093d11765467e3a60916ade2",
+        "target_sha256": "32564f612426f9b46cd55b1554f0c1a21f3b7db1093d11765467e3a60916ade2",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/03-system-model-and-use-cases/docs/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "e6556f9746f13a115e9a36fb607683467c885c04986e3b1bdd39f3dddb56c40e",
+        "target_sha256": "e6556f9746f13a115e9a36fb607683467c885c04986e3b1bdd39f3dddb56c40e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/03-system-model-and-use-cases/skills/model-use-cases/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "2ffde197cd46b20170e4b7b6a5b2d636c58da35e1954f8f6af01db1b9bb8f60c",
+        "target_sha256": "2ffde197cd46b20170e4b7b6a5b2d636c58da35e1954f8f6af01db1b9bb8f60c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/03-system-model-and-use-cases/src/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b8a2321f01c053f93155ee6a6a23ab8c80647b8f28cf4cf570a39b30bc022bf1",
+        "target_sha256": "b8a2321f01c053f93155ee6a6a23ab8c80647b8f28cf4cf570a39b30bc022bf1",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/03-system-model-and-use-cases/tests/acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "dd45e505d3a58583ee988700f77aa8a1d0f7fccd74da02179e15c142072765ba",
+        "target_sha256": "dd45e505d3a58583ee988700f77aa8a1d0f7fccd74da02179e15c142072765ba",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/03-system-model-and-use-cases/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3041cbaec6f89186a960435bd08aea4650b8baa607e5eb9423d94dc97b3f4393",
+        "target_sha256": "3041cbaec6f89186a960435bd08aea4650b8baa607e5eb9423d94dc97b3f4393",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/04-benchmarks-and-eval-strategy/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9a91031611c5a4b0de5bfbffa86e9aef823276c30a82121a5675e40bf8b568b5",
+        "target_sha256": "9a91031611c5a4b0de5bfbffa86e9aef823276c30a82121a5675e40bf8b568b5",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/04-benchmarks-and-eval-strategy/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "10303dd1f0471fa481a4e222207af22555cb28a8f7e819fd4fc428a1d6300462",
+        "target_sha256": "10303dd1f0471fa481a4e222207af22555cb28a8f7e819fd4fc428a1d6300462",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/04-benchmarks-and-eval-strategy/docs/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "660bf64b633a2b0784ebc2c5a551e589e3cbc5753b09d3df7a31bc2ddaf4b863",
+        "target_sha256": "660bf64b633a2b0784ebc2c5a551e589e3cbc5753b09d3df7a31bc2ddaf4b863",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/04-benchmarks-and-eval-strategy/skills/evaluate-alternatives/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "82b903d8d2dd8be61487af553ce988e4f677ccc3d12c5328fd64d6c8015411b3",
+        "target_sha256": "82b903d8d2dd8be61487af553ce988e4f677ccc3d12c5328fd64d6c8015411b3",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/04-benchmarks-and-eval-strategy/src/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "e62f3b6e94c4ed7fcd9c4f89e371ca03e9de910429ac39a154988b536f00ef4d",
+        "target_sha256": "e62f3b6e94c4ed7fcd9c4f89e371ca03e9de910429ac39a154988b536f00ef4d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/04-benchmarks-and-eval-strategy/tests/acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "d42c045fdae65207b5d5f0a5d4ae7ebe09bb38f4f74c4b6f657d2a783548a646",
+        "target_sha256": "d42c045fdae65207b5d5f0a5d4ae7ebe09bb38f4f74c4b6f657d2a783548a646",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/04-benchmarks-and-eval-strategy/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "cd3158b9498b540b162b9390d50e52ccb552a53604c20de8448b8685dd4b2a64",
+        "target_sha256": "cd3158b9498b540b162b9390d50e52ccb552a53604c20de8448b8685dd4b2a64",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/05-high-level-design-and-architecture/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9a8e1c134d53dac4866395a8a613d00aa51a4ab2bb7e40493119539c855b6026",
+        "target_sha256": "9a8e1c134d53dac4866395a8a613d00aa51a4ab2bb7e40493119539c855b6026",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/05-high-level-design-and-architecture/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "867ccfbf0abf3919079908f5c93e0a39025a7f4b26ae95a2d9ade78ae56af7f9",
+        "target_sha256": "867ccfbf0abf3919079908f5c93e0a39025a7f4b26ae95a2d9ade78ae56af7f9",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/05-high-level-design-and-architecture/docs/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "6517bb5399f02b95fb70064b0530cb08097e5f1249190aa0e7088f5b28db3259",
+        "target_sha256": "6517bb5399f02b95fb70064b0530cb08097e5f1249190aa0e7088f5b28db3259",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/05-high-level-design-and-architecture/docs/architectural-decisions.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "da460cf8a0a6afa3e5edc4802110e7f6068266749ad5f4abaed6b79effe865f3",
+        "target_sha256": "da460cf8a0a6afa3e5edc4802110e7f6068266749ad5f4abaed6b79effe865f3",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/05-high-level-design-and-architecture/skills/decision/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "e3149ee7e73adc1817565977d05e9e83aefcd084ec137476df8b71c83d5205fc",
+        "target_sha256": "e3149ee7e73adc1817565977d05e9e83aefcd084ec137476df8b71c83d5205fc",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/05-high-level-design-and-architecture/skills/propose-architecture/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "99888607223120ba8815cfda49a26ac716fbac9b52ead0b3b183c6fc71cda387",
+        "target_sha256": "99888607223120ba8815cfda49a26ac716fbac9b52ead0b3b183c6fc71cda387",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/05-high-level-design-and-architecture/src/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "bdeca9e14d32ac0f1d091aafeff819ea9dcfaa0f19fc9f16d1c6c59d227ba935",
+        "target_sha256": "bdeca9e14d32ac0f1d091aafeff819ea9dcfaa0f19fc9f16d1c6c59d227ba935",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/05-high-level-design-and-architecture/tests/acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1314cb56a82fcd6cc0fcbfd73bad893cfb5e3755ac669d1c5f389bcc29201449",
+        "target_sha256": "1314cb56a82fcd6cc0fcbfd73bad893cfb5e3755ac669d1c5f389bcc29201449",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/05-high-level-design-and-architecture/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "196bb273b6b6ef669822a6de2d5109bd2becab5c180119d692df65b08b0d1bd1",
+        "target_sha256": "196bb273b6b6ef669822a6de2d5109bd2becab5c180119d692df65b08b0d1bd1",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/06-viable-proof-of-concept/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "119bb1f608978df4923da42fe7d23556a8a9c8b2ffeaa3cb6eb43c8b1e82be8b",
+        "target_sha256": "119bb1f608978df4923da42fe7d23556a8a9c8b2ffeaa3cb6eb43c8b1e82be8b",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/06-viable-proof-of-concept/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "cdc60b1ed864197517290d9ce1e3f5a2f6fe79eb414cbd3cd24c3a2bf677d99f",
+        "target_sha256": "cdc60b1ed864197517290d9ce1e3f5a2f6fe79eb414cbd3cd24c3a2bf677d99f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/06-viable-proof-of-concept/docs/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "951ca5de56170a13d298d5a3606644f9362127034c1fa44c44dc6729e83ef5e7",
+        "target_sha256": "951ca5de56170a13d298d5a3606644f9362127034c1fa44c44dc6729e83ef5e7",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/06-viable-proof-of-concept/skills/plan-experiment/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b20681cfd93ece7179adc5ea72bbc02848565439fa76f0374399c2d2a41793f9",
+        "target_sha256": "b20681cfd93ece7179adc5ea72bbc02848565439fa76f0374399c2d2a41793f9",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/06-viable-proof-of-concept/src/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "a3f8f326847e68e5989f377f856760976368a2730de719b15d28395f5fb9b49d",
+        "target_sha256": "a3f8f326847e68e5989f377f856760976368a2730de719b15d28395f5fb9b49d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/06-viable-proof-of-concept/tests/acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "bcd1c40637f6dc17c335c8367e37f38f04a1442012710cf9b296c9195d03c631",
+        "target_sha256": "bcd1c40637f6dc17c335c8367e37f38f04a1442012710cf9b296c9195d03c631",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/06-viable-proof-of-concept/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b1af20456a02744257991e90ed15f6fb95427d3f536428db7603d0e7c0d4df62",
+        "target_sha256": "b1af20456a02744257991e90ed15f6fb95427d3f536428db7603d0e7c0d4df62",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/07-planning/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "5a5df0fdacbd6191e5a2ca3c04ae80e0c0a4e07229f315d64d3d8a7340fba5e8",
+        "target_sha256": "5a5df0fdacbd6191e5a2ca3c04ae80e0c0a4e07229f315d64d3d8a7340fba5e8",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/07-planning/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "15c89c84b7c3c57d7575fec0778de3edbf90dfa3993b5fc3bcd71784462f6d0a",
+        "target_sha256": "15c89c84b7c3c57d7575fec0778de3edbf90dfa3993b5fc3bcd71784462f6d0a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/07-planning/docs/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1901fddbae7c2f492094af9185653811d425177bb936b346234d30c8b7a8996d",
+        "target_sha256": "1901fddbae7c2f492094af9185653811d425177bb936b346234d30c8b7a8996d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/07-planning/skills/prepare-plan/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "96b0191064d20cacdb5e6d4979c93a5ad976869b73abe526a4cf1d359fc34fdc",
+        "target_sha256": "96b0191064d20cacdb5e6d4979c93a5ad976869b73abe526a4cf1d359fc34fdc",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/07-planning/src/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c0789eca4cded9eec46904bd0d2733a06afa6d71a44c7e741696cb9825c85a8c",
+        "target_sha256": "c0789eca4cded9eec46904bd0d2733a06afa6d71a44c7e741696cb9825c85a8c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/07-planning/tests/acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "59697049f082817a9f62d4ada6ff5ef735d522b3bcfa0731a4680f1b26b791ae",
+        "target_sha256": "59697049f082817a9f62d4ada6ff5ef735d522b3bcfa0731a4680f1b26b791ae",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/07-planning/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ea08edc5ef758ed7973d00e057a147283ede9f00f67f3a61b0da695a0f75818c",
+        "target_sha256": "ea08edc5ef758ed7973d00e057a147283ede9f00f67f3a61b0da695a0f75818c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/08-low-level-design/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1c35ac4edeced17108fd25c68af35182a863b8b5235d3f5ed3712c54f59c74eb",
+        "target_sha256": "1c35ac4edeced17108fd25c68af35182a863b8b5235d3f5ed3712c54f59c74eb",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/08-low-level-design/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ce23c80b2ffc1568939381a1cef946e71db4101b08ee40617686aa244187305d",
+        "target_sha256": "ce23c80b2ffc1568939381a1cef946e71db4101b08ee40617686aa244187305d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/08-low-level-design/docs/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "af5fdc9ae06979367921afa6f4a1b2d33bdc5ac4f0b4607612bdec02ab127ecf",
+        "target_sha256": "af5fdc9ae06979367921afa6f4a1b2d33bdc5ac4f0b4607612bdec02ab127ecf",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/08-low-level-design/skills/specify-design/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "39a3275236393f87a256cbc13a3e8c119e08935e51c8a900265fb06e56cb574d",
+        "target_sha256": "39a3275236393f87a256cbc13a3e8c119e08935e51c8a900265fb06e56cb574d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/08-low-level-design/src/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ce451143cc870d66af6528c9abb5ac905bba73701da8fff4f1bda51ad2f1c014",
+        "target_sha256": "ce451143cc870d66af6528c9abb5ac905bba73701da8fff4f1bda51ad2f1c014",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/08-low-level-design/tests/acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "af18c123cf65f1a87114ab02310919300c9085e9560b486722565db05c468127",
+        "target_sha256": "af18c123cf65f1a87114ab02310919300c9085e9560b486722565db05c468127",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/08-low-level-design/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "28b445b68e86810d5dcb7924660d9212785a9f3b47b4241cbeca905b03077f0f",
+        "target_sha256": "28b445b68e86810d5dcb7924660d9212785a9f3b47b4241cbeca905b03077f0f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/09-build-and-test-cycle/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ffb7734655efc818690bc4dbfdcae54a8a36f26baef5222a75121fa4ebfa06d6",
+        "target_sha256": "ffb7734655efc818690bc4dbfdcae54a8a36f26baef5222a75121fa4ebfa06d6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/09-build-and-test-cycle/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "33112aa7c44cf7635c05869fe69b8a3ccbf170835eb46b802f25c4c09d08bbd1",
+        "target_sha256": "33112aa7c44cf7635c05869fe69b8a3ccbf170835eb46b802f25c4c09d08bbd1",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/09-build-and-test-cycle/docs/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b55ef54674be65a71c90c304a6e73ba41227ce35da02688b1bd0ea310451cf9e",
+        "target_sha256": "b55ef54674be65a71c90c304a6e73ba41227ce35da02688b1bd0ea310451cf9e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/09-build-and-test-cycle/skills/review-build-task/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "29846066bf51ded096db7d0ab234bb4db61d36a928818025c4a200ebbfb84128",
+        "target_sha256": "29846066bf51ded096db7d0ab234bb4db61d36a928818025c4a200ebbfb84128",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/09-build-and-test-cycle/src/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "98d093a6f69b79151eff50f27e81d87b2428f53001992722e4d2e52f8c9ba133",
+        "target_sha256": "98d093a6f69b79151eff50f27e81d87b2428f53001992722e4d2e52f8c9ba133",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/09-build-and-test-cycle/tests/acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c4c34a7676bfdfd1b77196dffeb5eee682d81210b25fe01aa8925e23b6ccf6be",
+        "target_sha256": "c4c34a7676bfdfd1b77196dffeb5eee682d81210b25fe01aa8925e23b6ccf6be",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/09-build-and-test-cycle/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b73e2490d4bfb0b78e1d3b8d922aa2b368ab64d28ab12fbff14d3f3f70906764",
+        "target_sha256": "b73e2490d4bfb0b78e1d3b8d922aa2b368ab64d28ab12fbff14d3f3f70906764",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/10-document-review-and-release/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "7fd1130e46a9bdb14ba82d6776e8a6d67f59e852669156c7871f79db0eb53ddf",
+        "target_sha256": "7fd1130e46a9bdb14ba82d6776e8a6d67f59e852669156c7871f79db0eb53ddf",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/10-document-review-and-release/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "6cffde12e537802366c6937eb5e9f0ee86e57a4a3d5c96515ef29f1a7c0b39cc",
+        "target_sha256": "6cffde12e537802366c6937eb5e9f0ee86e57a4a3d5c96515ef29f1a7c0b39cc",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/10-document-review-and-release/docs/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "fcd6d13bbabffe787735b06a501cc4da1e467c49193343d2547f1429bd27226f",
+        "target_sha256": "fcd6d13bbabffe787735b06a501cc4da1e467c49193343d2547f1429bd27226f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/10-document-review-and-release/skills/review-readiness/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c3f341f1b05f597423105a965166309cb7456dbc449e9fea51a9e1959bc46de0",
+        "target_sha256": "c3f341f1b05f597423105a965166309cb7456dbc449e9fea51a9e1959bc46de0",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/10-document-review-and-release/src/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "8a36fb9c462f1d2dee327aba761ed2c08bc4f9183e89ddb9c9f7d72cef1e8dc1",
+        "target_sha256": "8a36fb9c462f1d2dee327aba761ed2c08bc4f9183e89ddb9c9f7d72cef1e8dc1",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/10-document-review-and-release/tests/acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f644034cd8467994a1ae63a6477e4a33195b113d533dd2047f074e2aa2a56efe",
+        "target_sha256": "f644034cd8467994a1ae63a6477e4a33195b113d533dd2047f074e2aa2a56efe",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/10-document-review-and-release/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "6a7f7cdb7b88d3a8ecfd0e2257d9652d97f6e05738a3beff0422f6d95a62af94",
+        "target_sha256": "6a7f7cdb7b88d3a8ecfd0e2257d9652d97f6e05738a3beff0422f6d95a62af94",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "2fcb2d81fb953d453fdc5b6a61df2523002b4162b3e7e1abc565e6ecf738f170",
+        "target_sha256": "2fcb2d81fb953d453fdc5b6a61df2523002b4162b3e7e1abc565e6ecf738f170",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b3c42c95861bef980fdab45e6e274e3f089eb06730f59171ab5dec044d3b4c4e",
+        "target_sha256": "b3c42c95861bef980fdab45e6e274e3f089eb06730f59171ab5dec044d3b4c4e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/docs/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "7733caa32796b2303e62889d6bcbd8e82ed0013bc9289a0c97dfd1f498c5ee97",
+        "target_sha256": "7733caa32796b2303e62889d6bcbd8e82ed0013bc9289a0c97dfd1f498c5ee97",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/skills/assess-operations/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "8c9db4db061904120c304d9b801523b43e042cb3daaa56c1abc36392cdfa7d21",
+        "target_sha256": "8c9db4db061904120c304d9b801523b43e042cb3daaa56c1abc36392cdfa7d21",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/src/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "5142f0cdff76ee3719b74ac8b64d9db8b058fbba142475f02e3d8388db2c3667",
+        "target_sha256": "5142f0cdff76ee3719b74ac8b64d9db8b058fbba142475f02e3d8388db2c3667",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/tests/acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "5e90224b0d0bcc11b18034ad809d6055626641dbedcb570efdd1d4b071df48ea",
+        "target_sha256": "5e90224b0d0bcc11b18034ad809d6055626641dbedcb570efdd1d4b071df48ea",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/11-operational-reality-devops-and-user-acceptance/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "10c244fb1f48dd0e14e8db994794599b1ca7c13a49bb8317daa92899440eee29",
+        "target_sha256": "10c244fb1f48dd0e14e8db994794599b1ca7c13a49bb8317daa92899440eee29",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/12-observability-insights-and-learning/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "5bbcad1e7838699cd05737ae98d637aee4fc5ad98c3a0d176b19d3dcd8d808a5",
+        "target_sha256": "5bbcad1e7838699cd05737ae98d637aee4fc5ad98c3a0d176b19d3dcd8d808a5",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/12-observability-insights-and-learning/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ff9c4851f4fb503a55515e551c0c8608191e40a6fd825720122f48f9bdcdeb93",
+        "target_sha256": "ff9c4851f4fb503a55515e551c0c8608191e40a6fd825720122f48f9bdcdeb93",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/12-observability-insights-and-learning/docs/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "eff75652668dbf19d89c2663b10d9131866c3d282a10e388f730c69ae630b260",
+        "target_sha256": "eff75652668dbf19d89c2663b10d9131866c3d282a10e388f730c69ae630b260",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/12-observability-insights-and-learning/skills/derive-insights/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3104dd53bb55b500e86d8066d5d0e9e5af9a1f105f3bb9ec976b39c093f43104",
+        "target_sha256": "3104dd53bb55b500e86d8066d5d0e9e5af9a1f105f3bb9ec976b39c093f43104",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/12-observability-insights-and-learning/src/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "0092563f7f157041af74361b12b2eb1f38d5d885372a15a243e7359bb8c58265",
+        "target_sha256": "0092563f7f157041af74361b12b2eb1f38d5d885372a15a243e7359bb8c58265",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/12-observability-insights-and-learning/tests/acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "d5a21216a6d540ebb8ebe42d6cdeee8e6b86f9c606bb07f5b39952fa9812a8bc",
+        "target_sha256": "d5a21216a6d540ebb8ebe42d6cdeee8e6b86f9c606bb07f5b39952fa9812a8bc",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/12-observability-insights-and-learning/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "a256ce197517ec0cd25b2c842251a9844034e9a805a22b5b75ff1c61f3a842a3",
+        "target_sha256": "a256ce197517ec0cd25b2c842251a9844034e9a805a22b5b75ff1c61f3a842a3",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "258ed27bf25900bb72f12ef67ed29ce7fe63eb2d7d54be612719fb327b20ed9c",
+        "target_sha256": "258ed27bf25900bb72f12ef67ed29ce7fe63eb2d7d54be612719fb327b20ed9c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/CODEX-PROMPT.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9a657d04518580ec3ea13e5b9c61b81b57fb75ce84eac7e88f6f6a5205a5af60",
+        "target_sha256": "9a657d04518580ec3ea13e5b9c61b81b57fb75ce84eac7e88f6f6a5205a5af60",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/LICENSE",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "target_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c958dd70a38ecb5477ee64327565983065e13810055a3aad3100640da74befe7",
+        "target_sha256": "c958dd70a38ecb5477ee64327565983065e13810055a3aad3100640da74befe7",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/admin/AGENTS.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "39f6d79e1296f467e028a8a347ccbe2f03be04eb488a4ea5f0cffb5ad101bcf1",
+        "target_sha256": "39f6d79e1296f467e028a8a347ccbe2f03be04eb488a4ea5f0cffb5ad101bcf1",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/admin/skills/maintain-rules/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f350795689f0f2c121a90e7c3ab3e7d70d6f160a49e31c8dda0a3abf35f32952",
+        "target_sha256": "f350795689f0f2c121a90e7c3ab3e7d70d6f160a49e31c8dda0a3abf35f32952",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/admin/types/admin-role.json",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c99abc74a42e5b63450e9d42fb7e0884c6cbd452862c7328e0b1dc350174a2cd",
+        "target_sha256": "c99abc74a42e5b63450e9d42fb7e0884c6cbd452862c7328e0b1dc350174a2cd",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/admin/types/contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c8e22e5f6782f0bd4df545433e8f060d9f6f67d22f38629e95d75c36d559f590",
+        "target_sha256": "c8e22e5f6782f0bd4df545433e8f060d9f6f67d22f38629e95d75c36d559f590",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/client-integrations.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "205784906571fecf46e8288e0844264178d61cc1962827be2957eb6fd4f87e2d",
+        "target_sha256": "a8fdeba21b7c63281ccb0fcfbf659ef35add6b891370b2f3ea35c2f129f8b426",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/distribution-build.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "511b4a14687c7a6c1fa9d2b5ba27aa315effa5898290d3b1ebc18c105fd4a3b5",
+        "target_sha256": "511b4a14687c7a6c1fa9d2b5ba27aa315effa5898290d3b1ebc18c105fd4a3b5",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/images/client-integrations.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "d68c8ac4cf7c7d4b961f6a26ea923d0835276de91dea3916c463433a523bfaa9",
+        "target_sha256": "d68c8ac4cf7c7d4b961f6a26ea923d0835276de91dea3916c463433a523bfaa9",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/images/distribution-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "68c3359729a6f260cf74eacd2d83902c0fcb699ad71e1d19fbdf0826a60df7c5",
+        "target_sha256": "68c3359729a6f260cf74eacd2d83902c0fcb699ad71e1d19fbdf0826a60df7c5",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/images/installation-engine.svg",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "77898afc32a14f901dcc9be75106f9a42a27552356c67779f897e8e2ae3a7c91",
+        "target_sha256": "3140579438c1457f1740df6f4c69463dd425ee1f46f010cdce02ed8c34386d0c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/images/synchronization.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "31fd45ca588b807221e4a13a1f033f2af75d94f5f7cd69197470d3838e4bbe12",
+        "target_sha256": "31fd45ca588b807221e4a13a1f033f2af75d94f5f7cd69197470d3838e4bbe12",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/install-clone-prompt.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "a7589761b12a7fbf8ed61939a31d77f5814dabb7dc799170ff280404a9830d10",
+        "target_sha256": "76970dc2e5cc02ecf85792da27691d310c203dc8d76507d580a1267be03c9464",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/install-zip-prompt.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "6c4b50a98f5b62209558923d9c478d381b7f923ca112fbb488c16ff4428ee882",
+        "target_sha256": "9648d7fdc63663f839a14dfebf9ab2df6ef26fb7c6f80a8e7340fe26a261eb21",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/installation.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "39d12bbff6ebbe74c412b2fe3a84ade67a81a5b36dbd9985d4d114657bc7e5d7",
+        "target_sha256": "1627facf655afe98328ede55ac4ab58422c4f82b28ef661058e0a516b9627c34",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/lifecycle-baseline.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c17dd80f5f74486749b8f24df4d1b9f8e0cc48d6184ae3e36a453d52b300de3a",
+        "target_sha256": "c17dd80f5f74486749b8f24df4d1b9f8e0cc48d6184ae3e36a453d52b300de3a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/native-integration.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "825c4b724fbda1e1537718bdbd8e25ded48eb8c376ff94886cb551c383b238bb",
+        "target_sha256": "825c4b724fbda1e1537718bdbd8e25ded48eb8c376ff94886cb551c383b238bb",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/01-comparison.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "07a07a2b1ac2fedaf301792c663089e08ee43c1374055693347eff311c39c37b",
+        "target_sha256": "07a07a2b1ac2fedaf301792c663089e08ee43c1374055693347eff311c39c37b",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/02-concerns.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "59f8754f13711a7145bde42135705699923067432007630ed4a952a41f2ed06c",
+        "target_sha256": "59f8754f13711a7145bde42135705699923067432007630ed4a952a41f2ed06c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/03-focus-behavior.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "d5ba2b1ec48e4ccab2c907a4ef8a518a3bb83ca884f8e36a8ef12295a91dcfd0",
+        "target_sha256": "d5ba2b1ec48e4ccab2c907a4ef8a518a3bb83ca884f8e36a8ef12295a91dcfd0",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/04-skill-composition.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "59562e48c1fac82025cb73618d6d549036c27a0da96a11d107cf2bd9db6bf03d",
+        "target_sha256": "59562e48c1fac82025cb73618d6d549036c27a0da96a11d107cf2bd9db6bf03d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/05-session-contract.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ca78de9ce86ff4314732df2ad4877a691bab3b855080bb3ee02d24a2005786c0",
+        "target_sha256": "ca78de9ce86ff4314732df2ad4877a691bab3b855080bb3ee02d24a2005786c0",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/06-collaboration.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "0a9e3b50ac09647804ad2ca3a0e32912114f4d6c60cbc147d930da4e067c8cac",
+        "target_sha256": "0a9e3b50ac09647804ad2ca3a0e32912114f4d6c60cbc147d930da4e067c8cac",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/07-role-perspectives.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "406957351a411f06f0a0848ca863d1ac28b86fb827819a3e39a2110a698dae7a",
+        "target_sha256": "406957351a411f06f0a0848ca863d1ac28b86fb827819a3e39a2110a698dae7a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/08-cost-example.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3c9d7c86b98ce2e85306532fd5f4c61fadd52ffa210d153562f771e901ab39c1",
+        "target_sha256": "3c9d7c86b98ce2e85306532fd5f4c61fadd52ffa210d153562f771e901ab39c1",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/09-adoption-and-tests.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9d456baa3bc41f8e457f221b585ff3e54b4b7cfc192ef6049a7c97a580e059c2",
+        "target_sha256": "9d456baa3bc41f8e457f221b585ff3e54b4b7cfc192ef6049a7c97a580e059c2",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/10-option-role-only.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c8554993e455e9fddb950684fe612512075f33bedb27c9f16a11542ba01935cb",
+        "target_sha256": "c8554993e455e9fddb950684fe612512075f33bedb27c9f16a11542ba01935cb",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/11-option-specialist-grid.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3c7fabf80e1633811d37f45b675c15bba97dd70a496bbe307a0a5e3ab35ae3fb",
+        "target_sha256": "3c7fabf80e1633811d37f45b675c15bba97dd70a496bbe307a0a5e3ab35ae3fb",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/12-option-composition.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "514a8b5175974c581bb5f7b5595105ffb5d0299b9baac65510f60af08bbfcf49",
+        "target_sha256": "514a8b5175974c581bb5f7b5595105ffb5d0299b9baac65510f60af08bbfcf49",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "06a489d7c5d942741061392f7e569ca4c5d63e252f08831d7db08c5c658150d0",
+        "target_sha256": "06a489d7c5d942741061392f7e569ca4c5d63e252f08831d7db08c5c658150d0",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/images/adoption.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "565fd3d2a391f0030af3c489825f27400ae0a42364409a72ec88042338bd605e",
+        "target_sha256": "565fd3d2a391f0030af3c489825f27400ae0a42364409a72ec88042338bd605e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/images/collaboration.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "04ff3e362599d7102e5dd5679b1ac36ad1c6aca1ead447dde7b9d6a37fbea017",
+        "target_sha256": "04ff3e362599d7102e5dd5679b1ac36ad1c6aca1ead447dde7b9d6a37fbea017",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/images/composition.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b55426b1e2ee0cf331f0f3d99bd00fb930eed93865b46c8ac9e5ded3f9386f5c",
+        "target_sha256": "b55426b1e2ee0cf331f0f3d99bd00fb930eed93865b46c8ac9e5ded3f9386f5c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/images/cost.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "13482ce8dfbaa4eb52349b9fbac9fb8028f5f0301e26d4c9eec1aa11f6322c8e",
+        "target_sha256": "13482ce8dfbaa4eb52349b9fbac9fb8028f5f0301e26d4c9eec1aa11f6322c8e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/images/grid.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ab255b59727f2b5458ff85fc2c50070e9b930f687702c01fb822efe5e94b5d2d",
+        "target_sha256": "ab255b59727f2b5458ff85fc2c50070e9b930f687702c01fb822efe5e94b5d2d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/images/model.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1db06ef78c8d19f40fc90ddf5088d15a70829a6cc60c31497f9f1223e7b3b571",
+        "target_sha256": "1db06ef78c8d19f40fc90ddf5088d15a70829a6cc60c31497f9f1223e7b3b571",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/images/options.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "94f1694ed4ef7eb8fc8358cab2f3ae527ba0097f0d6f1c5a05b4c3d9f00c3453",
+        "target_sha256": "94f1694ed4ef7eb8fc8358cab2f3ae527ba0097f0d6f1c5a05b4c3d9f00c3453",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/images/perspectives.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "79d3dc2affa235889d51fc3aadd62391d7a127030717d976700b5f8af645d8a1",
+        "target_sha256": "79d3dc2affa235889d51fc3aadd62391d7a127030717d976700b5f8af645d8a1",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/images/routing.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "fa10f2164968a9242ab97d8c4eae070a106bebaed343af8251f9ceffa03a3cb0",
+        "target_sha256": "fa10f2164968a9242ab97d8c4eae070a106bebaed343af8251f9ceffa03a3cb0",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/proposals/roles-concerns-and-focus/images/session.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "68226d727924d27f7010e64f372a51de63da3f61214c479537a62f68a327a91e",
+        "target_sha256": "68226d727924d27f7010e64f372a51de63da3f61214c479537a62f68a327a91e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/provenance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3018219816273ac0aabdef64605c431e1c2aa9d1d1827967e848b4e342a4c1ae",
+        "target_sha256": "3018219816273ac0aabdef64605c431e1c2aa9d1d1827967e848b4e342a4c1ae",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/review-loop.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "084850aa9cd80bf37761d70ed26fb9c57880a59f905a4dc02641b5860b7501c1",
+        "target_sha256": "084850aa9cd80bf37761d70ed26fb9c57880a59f905a4dc02641b5860b7501c1",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/root-layout.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "193fa708c526837876e846d9e26fee32b15690782875c78c7e434c9803352784",
+        "target_sha256": "193fa708c526837876e846d9e26fee32b15690782875c78c7e434c9803352784",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/synchronization.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "c2089a62ca5c2eee8a002a60ad9e86028175375b0d12a26340a6d779873ffd24",
+        "target_sha256": "5e903e592afc3acbd9a00c36a5562084757f2c958c93624cdad80d15a820870c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/usage.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "426be83f5fdbca6655bdb01da2c141bef3f89e03ec9ea5be6c5b126a88b71c8c",
+        "target_sha256": "426be83f5fdbca6655bdb01da2c141bef3f89e03ec9ea5be6c5b126a88b71c8c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/docs/verification.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b709839cc52bdad46b8b9ea740056672c0fd4def009368fcbcf41f40e13d9467",
+        "target_sha256": "b709839cc52bdad46b8b9ea740056672c0fd4def009368fcbcf41f40e13d9467",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/metadata/MANIFEST.json",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "6acd9106b8b9d658e340c4b8d8dd11c70233f25ddd8dbc35a2b73d05702666d1",
+        "target_sha256": "d988ed18b99ed5a03613fa9b7b01e1eafdd0fa7def300e46aab192370a183405",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/metadata/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "28bf15f6392e58016125cbeec6e6a4eef383e3a2e26697cf691e9e7d54f9d477",
+        "target_sha256": "28bf15f6392e58016125cbeec6e6a4eef383e3a2e26697cf691e9e7d54f9d477",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/metadata/deliveries/0.2.0-pilot.1.json",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1ae0b01a29f60253f055b3780df88825cee9b4f6f1d60d866efac2e651ae96a8",
+        "target_sha256": "1ae0b01a29f60253f055b3780df88825cee9b4f6f1d60d866efac2e651ae96a8",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/metadata/deliveries/0.2.0-pilot.2.json",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "bd56b26516224e2c550c739715cb12ae5e1fb8266aa9fe6a37164dc59dec8692",
+        "target_sha256": "bd56b26516224e2c550c739715cb12ae5e1fb8266aa9fe6a37164dc59dec8692",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/metadata/distribution.json",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f7f46e1df6cd145afede9d911e7d45685e99a173b4308ed274d710a3d0c8a39c",
+        "target_sha256": "f7f46e1df6cd145afede9d911e7d45685e99a173b4308ed274d710a3d0c8a39c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/metadata/package-files.json",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "8040bbc5026daf88a7d97f8a5fc9b5d70b513245e9d468c7aec48a223e9d6289",
+        "target_sha256": "9057ff2efa67383f94f7ed379fdbd2add42e7c23bb61f4ea96122545172d2843",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/metadata/refactors/root-layout-2026-10-20.json",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f92038fb7e59af7b2fa650dcb99ea3beabfaa633461e743f26ee7330c428b0ad",
+        "target_sha256": "f92038fb7e59af7b2fa650dcb99ea3beabfaa633461e743f26ee7330c428b0ad",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/metadata/source-manifest.json",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "99c3236fbf93fed547f956e839542bece20876a5b0684530bfa2c35de19465d3",
+        "target_sha256": "99c3236fbf93fed547f956e839542bece20876a5b0684530bfa2c35de19465d3",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scaffolds/stages/00-governance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "2deea05c3efeb67144788d2f1913e3b2fb2b9bbd9b4f29704e7e68a1f9a5ad47",
+        "target_sha256": "2deea05c3efeb67144788d2f1913e3b2fb2b9bbd9b4f29704e7e68a1f9a5ad47",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scaffolds/stages/01-context-and-domain-analysis.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f147c93534996005103c7f5fdbe9c5aaa9c4b75666edd65b796ea9f9765e44a1",
+        "target_sha256": "f147c93534996005103c7f5fdbe9c5aaa9c4b75666edd65b796ea9f9765e44a1",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scaffolds/stages/02-purpose.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "68e087bed100518f2c88d971623b203b49eb0238891262581e0199c93fd62c9b",
+        "target_sha256": "68e087bed100518f2c88d971623b203b49eb0238891262581e0199c93fd62c9b",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scaffolds/stages/03-system-model-and-use-cases.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f5dbe31d3dadd6919f887fa00e2a7a03e25d4a9e774114bff2229908350b06bc",
+        "target_sha256": "f5dbe31d3dadd6919f887fa00e2a7a03e25d4a9e774114bff2229908350b06bc",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scaffolds/stages/04-benchmarks-and-eval-strategy.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "0b96095c17480f897de54ed856085d3f97e4b38190ea0517690aab9e2a0077c6",
+        "target_sha256": "0b96095c17480f897de54ed856085d3f97e4b38190ea0517690aab9e2a0077c6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scaffolds/stages/05-high-level-design-and-architecture.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "20ec927545c2bdcf5033f9951ad6dfa0e66d9fa6bd1501891b39900fa1dedb92",
+        "target_sha256": "20ec927545c2bdcf5033f9951ad6dfa0e66d9fa6bd1501891b39900fa1dedb92",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scaffolds/stages/06-viable-proof-of-concept.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "0f53f3de93da214477658f228dc744945ba59b08774ad5278028a364a1301a47",
+        "target_sha256": "0f53f3de93da214477658f228dc744945ba59b08774ad5278028a364a1301a47",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scaffolds/stages/07-planning.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ae52d29cf88fbf742896f3d48b3ab62e66aa7fd15a5b535c1d3d3f057d6b347d",
+        "target_sha256": "ae52d29cf88fbf742896f3d48b3ab62e66aa7fd15a5b535c1d3d3f057d6b347d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scaffolds/stages/08-low-level-design.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "38898c111840a97c58ac34411dcdf81521311229a31b3e7dbf46598c18c2c031",
+        "target_sha256": "38898c111840a97c58ac34411dcdf81521311229a31b3e7dbf46598c18c2c031",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scaffolds/stages/09-build-and-test-cycle.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1a765558feb4720f52a59df836c536d1824a00298a921c5e6ee483cecd3f7c43",
+        "target_sha256": "1a765558feb4720f52a59df836c536d1824a00298a921c5e6ee483cecd3f7c43",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scaffolds/stages/10-document-review-and-release.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "49c774c317b0273304d04a6add20088a7646eb9e807cf16c9e8d57d37d22a2f0",
+        "target_sha256": "49c774c317b0273304d04a6add20088a7646eb9e807cf16c9e8d57d37d22a2f0",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scaffolds/stages/11-operational-reality-devops-and-user-acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ff5b69f302e13f60df324a8d09bee5506bd9796db98cc38a1e032d2cd996e053",
+        "target_sha256": "ff5b69f302e13f60df324a8d09bee5506bd9796db98cc38a1e032d2cd996e053",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scaffolds/stages/12-observability-insights-and-learning.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "edd0d027488d6f8c6974d67dd9389769500be53f2a79e98c5b33f0515db5b79c",
+        "target_sha256": "edd0d027488d6f8c6974d67dd9389769500be53f2a79e98c5b33f0515db5b79c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "7ad3a5a1b51c245c9edce944913beab0fe0d5b3de3a0cb81e44102ddba6ac3d8",
+        "target_sha256": "7ad3a5a1b51c245c9edce944913beab0fe0d5b3de3a0cb81e44102ddba6ac3d8",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/build_distribution.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "8964e393aae447c2fe7fc2be1e39ddaecff94ed906cb9a381d5b088b1f38944d",
+        "target_sha256": "8964e393aae447c2fe7fc2be1e39ddaecff94ed906cb9a381d5b088b1f38944d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/build_distribution.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c43b738a98dfade3a85d9b22eadb54a4fec61dc281a9e5251914250cb1102673",
+        "target_sha256": "c43b738a98dfade3a85d9b22eadb54a4fec61dc281a9e5251914250cb1102673",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/check.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "d02625e733e37c9ac43e959cf445d69af6a89c67de1e7717788eba3c7adf85bc",
+        "target_sha256": "d02625e733e37c9ac43e959cf445d69af6a89c67de1e7717788eba3c7adf85bc",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/check.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9a499ea7428ab09d0cb818a112d49f648f3e1dd99fae1f0c501edf04103787ed",
+        "target_sha256": "9a499ea7428ab09d0cb818a112d49f648f3e1dd99fae1f0c501edf04103787ed",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/cli.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "e0e3c854ba5d61381117aa09867e8d661fc4ec626332909e38193954e72632c7",
+        "target_sha256": "e0e3c854ba5d61381117aa09867e8d661fc4ec626332909e38193954e72632c7",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/cli.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "d7d9f96ad758e00292a749994df6d90e33a750639a2f402012010cb8b1c8bba3",
+        "target_sha256": "d7d9f96ad758e00292a749994df6d90e33a750639a2f402012010cb8b1c8bba3",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/hook.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "eb051bbeaea71ccbc28f31a4d9ff340d3f17be4d3222f4a437aaf4efb8753114",
+        "target_sha256": "eb051bbeaea71ccbc28f31a4d9ff340d3f17be4d3222f4a437aaf4efb8753114",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/hook.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9e685fe673cbf1f439e348fdff828222e82c3c9588acccbb80e069e0ee56d445",
+        "target_sha256": "9e685fe673cbf1f439e348fdff828222e82c3c9588acccbb80e069e0ee56d445",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/images/check-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "06e35bf28ce1bc065a36fd1e86d7702017a4c95f235709ba048e664170f63d2f",
+        "target_sha256": "06e35bf28ce1bc065a36fd1e86d7702017a4c95f235709ba048e664170f63d2f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/images/cli-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1c6701eb7cc6a40ffa482c6f36a03f05511643192c5c3a4519b3b397716d1b40",
+        "target_sha256": "1c6701eb7cc6a40ffa482c6f36a03f05511643192c5c3a4519b3b397716d1b40",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/images/hook-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "a7cf6f0ef3994bc3bc9bb36202cd1df85e9785194b58419fe618593fb98a8a44",
+        "target_sha256": "a7cf6f0ef3994bc3bc9bb36202cd1df85e9785194b58419fe618593fb98a8a44",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/images/init-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "8cc787bdb5fc5d44577c39ac7ace53e622aa48ef97c48e7e2d057833f2b71831",
+        "target_sha256": "8cc787bdb5fc5d44577c39ac7ace53e622aa48ef97c48e7e2d057833f2b71831",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/init.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "0856aa195ea85dd5d77953393f157ee787003e6fe7f1e6a21bb5fc03f1709d2d",
+        "target_sha256": "0856aa195ea85dd5d77953393f157ee787003e6fe7f1e6a21bb5fc03f1709d2d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/init.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "17c873b5d2c90eff23fd85094eac3f0b7ddd977d647f4c22ea0fb76906494bba",
+        "target_sha256": "17c873b5d2c90eff23fd85094eac3f0b7ddd977d647f4c22ea0fb76906494bba",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "d04ff4757b94beaf1f1042b6e1c0e529c2896ca785e4a88fff37f7cb9a67cca5",
+        "target_sha256": "d04ff4757b94beaf1f1042b6e1c0e529c2896ca785e4a88fff37f7cb9a67cca5",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/agent_config.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b5cefc63dee3bfacf3d670b5fd839bfaa1e0746240ee68e8539517ad36cd0bfa",
+        "target_sha256": "b5cefc63dee3bfacf3d670b5fd839bfaa1e0746240ee68e8539517ad36cd0bfa",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/agent_config.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "53935212374799ffc1e2ae912c1031682a6e7b400330093e8c0d2b5261c2029e",
+        "target_sha256": "53935212374799ffc1e2ae912c1031682a6e7b400330093e8c0d2b5261c2029e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/agent_log_event.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "7be1d29f72377e2d6650899f9551df21fd0e7a17dc4c8b26147a12597cfbbd87",
+        "target_sha256": "7be1d29f72377e2d6650899f9551df21fd0e7a17dc4c8b26147a12597cfbbd87",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/agent_log_event.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b59fdf8c3b3ee26938d640f2c5cfcb1f4695ff7b8beaa94a9c5ef17fb7ce67ba",
+        "target_sha256": "b59fdf8c3b3ee26938d640f2c5cfcb1f4695ff7b8beaa94a9c5ef17fb7ce67ba",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/agent_log_hook.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ce67a415560b1d3b103aa5578e47b85828ad5cb3c336afcb5c27d9cfb7611b90",
+        "target_sha256": "ce67a415560b1d3b103aa5578e47b85828ad5cb3c336afcb5c27d9cfb7611b90",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/agent_log_hook.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "09a65a4d49afedb28afbef4c0fa5e8225597bce24580042b099f9747f8ad2920",
+        "target_sha256": "09a65a4d49afedb28afbef4c0fa5e8225597bce24580042b099f9747f8ad2920",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/agent_log_store.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ae6819ba6391ee623d264c313e0988ec4b847e3126b8975866c4d5320e4864ee",
+        "target_sha256": "ae6819ba6391ee623d264c313e0988ec4b847e3126b8975866c4d5320e4864ee",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/agent_log_store.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b6afd348777acb8efa5cad7c7467694a1cdf889dd552d71a0e3050183dcfd38a",
+        "target_sha256": "b6afd348777acb8efa5cad7c7467694a1cdf889dd552d71a0e3050183dcfd38a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "94c7dbaabc85a20ab82f5d8790d895220e55cd53b119727325bfe0a64f65b743",
+        "target_sha256": "94c7dbaabc85a20ab82f5d8790d895220e55cd53b119727325bfe0a64f65b743",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3a0039667d93bf64f5a299c0bfe7fc4caca530a2aade52b445948f67c1fa22df",
+        "target_sha256": "3a0039667d93bf64f5a299c0bfe7fc4caca530a2aade52b445948f67c1fa22df",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_advice.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "91344e91f2b3c3d214bf958f14fe5e7fa00b6fdb70e9128abfec9f3a49caaced",
+        "target_sha256": "91344e91f2b3c3d214bf958f14fe5e7fa00b6fdb70e9128abfec9f3a49caaced",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_advice.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "590574d4d6388aa6af4b8418465f83fda31cf2404e2dc8b480009853a851edaf",
+        "target_sha256": "590574d4d6388aa6af4b8418465f83fda31cf2404e2dc8b480009853a851edaf",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_advice_report.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "cff2b11d774115e9c738a983bef9ccb3cc7fa200a063c94e408631edf761dda6",
+        "target_sha256": "cff2b11d774115e9c738a983bef9ccb3cc7fa200a063c94e408631edf761dda6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_advice_report.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "40d540b2e9242f142e9ca72d03dc87c3e952bfd3daedaf2b56bdae428ec93a91",
+        "target_sha256": "40d540b2e9242f142e9ca72d03dc87c3e952bfd3daedaf2b56bdae428ec93a91",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_clients.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "08640b02ec67208e654c059827b5d8d6b3e1da9f24feb95d3012dfa41f838456",
+        "target_sha256": "08640b02ec67208e654c059827b5d8d6b3e1da9f24feb95d3012dfa41f838456",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_clients.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "18b4d7e289a91d06b010494e66cad09e8037834c8ea1ab9fd278a2ab64b1e6b3",
+        "target_sha256": "18b4d7e289a91d06b010494e66cad09e8037834c8ea1ab9fd278a2ab64b1e6b3",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_dashboard.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c31c0396d126f1331b1183ff41d33051adcd0813fe85785f772e2f7a93f4ed2d",
+        "target_sha256": "c31c0396d126f1331b1183ff41d33051adcd0813fe85785f772e2f7a93f4ed2d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_dashboard.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "02cdde1942dd4b1d99adf0dbe9b848f7517ca997bc8605e57be8167a48ab9e3d",
+        "target_sha256": "02cdde1942dd4b1d99adf0dbe9b848f7517ca997bc8605e57be8167a48ab9e3d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_files.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "15ff930dbb0167ec28e903716f414e65613d46045b3fc28c6ee2d29f0503accb",
+        "target_sha256": "15ff930dbb0167ec28e903716f414e65613d46045b3fc28c6ee2d29f0503accb",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_files.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "a875eddcc0e4bcbb7ae9147cb51a3b221dd379fcfdd36c9c90c44b3b3425f8d3",
+        "target_sha256": "a875eddcc0e4bcbb7ae9147cb51a3b221dd379fcfdd36c9c90c44b3b3425f8d3",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_hook.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b8668ebc3a1451461a58591505b6fbea40502ee5eb3d7eaba46a6f4044a15689",
+        "target_sha256": "b8668ebc3a1451461a58591505b6fbea40502ee5eb3d7eaba46a6f4044a15689",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_hook.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f5f4cdc025576966acc5cfcb84985727a5fa0d43981883fc8a3447c95a306666",
+        "target_sha256": "f5f4cdc025576966acc5cfcb84985727a5fa0d43981883fc8a3447c95a306666",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_install.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "e8533f92bee7c7c56dc83146f31823bdb4063e4caedc6f33d91c255f488c1551",
+        "target_sha256": "47d8d5ebc40b07c01449de21d460b08c25098eb011765e6d5b2fbed8b04db44a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_install.py",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "1bb668a0dbe4672aae347da456c091d32397ffd8f316f938d06073564d4b64c4",
+        "target_sha256": "499b806a5718e09608ed0e68fd1ae0aa8ffe9b4db798b3e92e864b6f09d90a9d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_install_source.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "4e77532c3320e66f3d271731979158dbf7126343298c4361aa90c07662cb903e",
+        "target_sha256": "4e77532c3320e66f3d271731979158dbf7126343298c4361aa90c07662cb903e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_install_source.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "11d7288e21c4b7db79504143477123d973d08fc576e7e3db3f72dd1ddf30e975",
+        "target_sha256": "11d7288e21c4b7db79504143477123d973d08fc576e7e3db3f72dd1ddf30e975",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_model.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "8df5e3c79e1c14e488273443abaded71ab88e880c9d10a804d2e30e2ea46f3e5",
+        "target_sha256": "8df5e3c79e1c14e488273443abaded71ab88e880c9d10a804d2e30e2ea46f3e5",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_model.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "23a45ae84ef13bfe8360c6cc0a460d82b60ec85691e2e9ec20042e015e95289a",
+        "target_sha256": "23a45ae84ef13bfe8360c6cc0a460d82b60ec85691e2e9ec20042e015e95289a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_policy.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ea3afd5bb34e9c56d46fe6c2c7568c6a754e22d8a1d463f65073ec8a8f75dcd6",
+        "target_sha256": "ea3afd5bb34e9c56d46fe6c2c7568c6a754e22d8a1d463f65073ec8a8f75dcd6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_policy.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "4a30a96e4af62bbc68aa0f7ff7e8617fbd0646d8f68cdd0d7c49133967d2ea75",
+        "target_sha256": "4a30a96e4af62bbc68aa0f7ff7e8617fbd0646d8f68cdd0d7c49133967d2ea75",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_project.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c5755e918f903b71206f6e07e0008ee81a65a7a11684072fad86ca16cd3cea87",
+        "target_sha256": "c5755e918f903b71206f6e07e0008ee81a65a7a11684072fad86ca16cd3cea87",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_project.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "8b27fa1e6dd46e53472744194d325c059db915dc7fd1db8b6d6cbd88a0944ae3",
+        "target_sha256": "8b27fa1e6dd46e53472744194d325c059db915dc7fd1db8b6d6cbd88a0944ae3",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_runtime_env.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "5308394619a7fd7d6783dc896654e4672fac4dc171ca7dfdd932daba6043bbfa",
+        "target_sha256": "5308394619a7fd7d6783dc896654e4672fac4dc171ca7dfdd932daba6043bbfa",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_runtime_env.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "7ee57ddd04d89dd721da857fa5c4d0f8b1989a6b82ca6b5fed4de4106c983d06",
+        "target_sha256": "7ee57ddd04d89dd721da857fa5c4d0f8b1989a6b82ca6b5fed4de4106c983d06",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_session.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "0e5321ce3724ae7e69612cd1b5a1492644ea21e976aeea52977c78c411061522",
+        "target_sha256": "0e5321ce3724ae7e69612cd1b5a1492644ea21e976aeea52977c78c411061522",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_session.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "d9520e2daf4dfdf6561a57ff90ed2b7c1cc188aff512853c2ec577dbbe2e304c",
+        "target_sha256": "d9520e2daf4dfdf6561a57ff90ed2b7c1cc188aff512853c2ec577dbbe2e304c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_sprint.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "0ab58e3555cfa44a10fed804781c97441eda344f8880b3379ff3e330b3c6ff68",
+        "target_sha256": "0ab58e3555cfa44a10fed804781c97441eda344f8880b3379ff3e330b3c6ff68",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_sprint.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "67977fecf20e26f79c02828466db00ae37dd6ed2581eba4417314f9528f737c9",
+        "target_sha256": "67977fecf20e26f79c02828466db00ae37dd6ed2581eba4417314f9528f737c9",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_status.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "264f6491237cc71d245c69ebd067ed0d2d540ea8b42ba8fc17e7d50bff17fab5",
+        "target_sha256": "264f6491237cc71d245c69ebd067ed0d2d540ea8b42ba8fc17e7d50bff17fab5",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_status.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "7ffe1e2d27c2d83e939d6f3c05aab2b27184ef17b99aa120611960b076c3d858",
+        "target_sha256": "7ffe1e2d27c2d83e939d6f3c05aab2b27184ef17b99aa120611960b076c3d858",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_sync.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ae6b466c5277398fb582c4c4696c07820947eda4925e9e14f8d8c52809d95f2f",
+        "target_sha256": "ae6b466c5277398fb582c4c4696c07820947eda4925e9e14f8d8c52809d95f2f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_sync.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "718e55c32ca41548d024f9b6732f0ca526f78f6ec746b12654ae20d5d60f4c5e",
+        "target_sha256": "718e55c32ca41548d024f9b6732f0ca526f78f6ec746b12654ae20d5d60f4c5e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_sync_manifest.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "4498c9922a3e00690a274560e340097d92f6828923c2c95507daaef19343d282",
+        "target_sha256": "4498c9922a3e00690a274560e340097d92f6828923c2c95507daaef19343d282",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/cli_sync_manifest.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "8fc78b78a67420dbe99bed74b2091e4b3b7deea631f78c542a100d18cfe7eb11",
+        "target_sha256": "8fc78b78a67420dbe99bed74b2091e4b3b7deea631f78c542a100d18cfe7eb11",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/distribution_files.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9cb48f3dd5a2f57a4ffa29eb5c5b982e901c69fa4dd85587233ad572ca01efbc",
+        "target_sha256": "9cb48f3dd5a2f57a4ffa29eb5c5b982e901c69fa4dd85587233ad572ca01efbc",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/distribution_files.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "87210721a1fb587759c20ea286a76de7de3ad84eeb5ce9f32d48f1760621dd1b",
+        "target_sha256": "87210721a1fb587759c20ea286a76de7de3ad84eeb5ce9f32d48f1760621dd1b",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/documentation.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "91e64fd9351dcbdc068e32d2c99916c979a6a738228744c918b3d45eabf76c2a",
+        "target_sha256": "91e64fd9351dcbdc068e32d2c99916c979a6a738228744c918b3d45eabf76c2a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/documentation.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9252ac0b83b3defe41aec8b313ef00c92ba83e573000972b23692430629f8018",
+        "target_sha256": "9252ac0b83b3defe41aec8b313ef00c92ba83e573000972b23692430629f8018",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/agent_config-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ea2f760a7c010fe4e008ade93b12ca39f87620f3676f375549a9b9af1508bf32",
+        "target_sha256": "ea2f760a7c010fe4e008ade93b12ca39f87620f3676f375549a9b9af1508bf32",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/agent_log_event-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "2e2fd63ab42802b021af8086a481cc2c0e015096e14fd60d915681f0f7e60d82",
+        "target_sha256": "2e2fd63ab42802b021af8086a481cc2c0e015096e14fd60d915681f0f7e60d82",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/agent_log_hook-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "d282d3586824aedaa0bdaafd1fab16961e55f6ec10c0123970d5c5459af3f2df",
+        "target_sha256": "d282d3586824aedaa0bdaafd1fab16961e55f6ec10c0123970d5c5459af3f2df",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/agent_log_store-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "6f7b0562c77d118b51e45a639d6c2b88a99dbb0dcdf9f6b320bb99051be641b7",
+        "target_sha256": "6f7b0562c77d118b51e45a639d6c2b88a99dbb0dcdf9f6b320bb99051be641b7",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "92c2d2b642e3bf2b9edcb4167681bd9d7d7aa3092a1225b7a081ca51453fdd3a",
+        "target_sha256": "92c2d2b642e3bf2b9edcb4167681bd9d7d7aa3092a1225b7a081ca51453fdd3a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli_advice-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "27c4753411a988e6e6026a2bd27c6d7d6773932a5414d2d72a16169236f6cb9a",
+        "target_sha256": "27c4753411a988e6e6026a2bd27c6d7d6773932a5414d2d72a16169236f6cb9a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli_advice_report-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "98ee77d5586d5f7c0921416fffa80602959ec7c5728a538342d076b90430a700",
+        "target_sha256": "98ee77d5586d5f7c0921416fffa80602959ec7c5728a538342d076b90430a700",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli_clients-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "438a2496836468c18900cee33f5a1ccc7fd27f8f0311a835bdd5d22528e896b0",
+        "target_sha256": "438a2496836468c18900cee33f5a1ccc7fd27f8f0311a835bdd5d22528e896b0",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli_dashboard-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "af04fa654181644fec95b59919aefa779ccbecc4ad5d968693ebb13555a1e977",
+        "target_sha256": "af04fa654181644fec95b59919aefa779ccbecc4ad5d968693ebb13555a1e977",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli_files-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "930087cce55684ef7cc09e7f8493598a497cbea0dbecd822e08afebb099fa3ff",
+        "target_sha256": "930087cce55684ef7cc09e7f8493598a497cbea0dbecd822e08afebb099fa3ff",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli_hook-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "bcdddf19bdcb7a6098ad79c1b8a54b0a32a79ef5d177d9679b65d2f9928a7d65",
+        "target_sha256": "bcdddf19bdcb7a6098ad79c1b8a54b0a32a79ef5d177d9679b65d2f9928a7d65",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli_model-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "bc4faa5364c23d09be46daa532b2485e5d36fdc5605277034e91c2e78adf33ac",
+        "target_sha256": "bc4faa5364c23d09be46daa532b2485e5d36fdc5605277034e91c2e78adf33ac",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli_policy-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9444613c5b113dacfbab5659577f29fe43fb4c2c47118bca4aa0cf807ab74089",
+        "target_sha256": "9444613c5b113dacfbab5659577f29fe43fb4c2c47118bca4aa0cf807ab74089",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli_project-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "4a2d5b61b0e94191951cc0cf9e5037daf9cbeb6aae19383af9e869b830ccafb6",
+        "target_sha256": "4a2d5b61b0e94191951cc0cf9e5037daf9cbeb6aae19383af9e869b830ccafb6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli_runtime_env-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "7307e294f25c7e3e1c393a34a4543e3698e749b8fc5850f2f454c5316df731ef",
+        "target_sha256": "7307e294f25c7e3e1c393a34a4543e3698e749b8fc5850f2f454c5316df731ef",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli_session-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "65bb5afd2aa771fa8b743ec60486ed1cd8e784d79582364e4f9c8c19f7924acf",
+        "target_sha256": "65bb5afd2aa771fa8b743ec60486ed1cd8e784d79582364e4f9c8c19f7924acf",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli_sprint-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9e3cc1725dfa00475b1e5788e116d7aa3bea7776b64518fb18d013624ff493a2",
+        "target_sha256": "9e3cc1725dfa00475b1e5788e116d7aa3bea7776b64518fb18d013624ff493a2",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/cli_status-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "46a74e0b00da167c2e9e1416b0c83c22caac479b3d5a1ae40d373619a6655d61",
+        "target_sha256": "46a74e0b00da167c2e9e1416b0c83c22caac479b3d5a1ae40d373619a6655d61",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/documentation-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "bd04115a676947f4b17dae427077858b50f07dd524d882b5cc9786c094f8dae8",
+        "target_sha256": "bd04115a676947f4b17dae427077858b50f07dd524d882b5cc9786c094f8dae8",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/purpose_review-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c80e06badd5aa0c4aeda69be41a3b99f6ddc800762ad0bb82bf81489951e57ec",
+        "target_sha256": "c80e06badd5aa0c4aeda69be41a3b99f6ddc800762ad0bb82bf81489951e57ec",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/images/stage_review-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "15608cb8bdd867d5b383ce7b1d581cd342ee1061c46b30634787afb873fa3e9e",
+        "target_sha256": "15608cb8bdd867d5b383ce7b1d581cd342ee1061c46b30634787afb873fa3e9e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/purpose_review.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "34a947bdacca901ef77ba86d59612f93cfe2474a91be2b2c00e4974fa4894e6e",
+        "target_sha256": "34a947bdacca901ef77ba86d59612f93cfe2474a91be2b2c00e4974fa4894e6e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/purpose_review.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "6af8077d44d8997ac5f7e36f594246990d1c0b754a0685c76484c58c4e7d1393",
+        "target_sha256": "6af8077d44d8997ac5f7e36f594246990d1c0b754a0685c76484c58c4e7d1393",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/stage_review.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "b65b836c1d6cbdc1d9aa759edb24dcb603b5e14cc3612780dc03c6a741f2bfb6",
+        "target_sha256": "b65b836c1d6cbdc1d9aa759edb24dcb603b5e14cc3612780dc03c6a741f2bfb6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/scripts/lib/stage_review.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "635e17528f7e353fad569956c9a404bd8c73c687d8f413c41c1795ec1238a485",
+        "target_sha256": "635e17528f7e353fad569956c9a404bd8c73c687d8f413c41c1795ec1238a485",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/README.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "4f0686014734b944370c85263c6f1859b4e787c1161acc5ddaa28bb1f1898551",
+        "target_sha256": "49447deb42a60864d2ec9bcae2bd8a2841028abdb4ba196a5b7733306a3c34c4",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-admin/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "c160363a04649050c68c745acc74b67f3b1a482b5320b4ceda4323d2c65da2dd",
+        "target_sha256": "c160363a04649050c68c745acc74b67f3b1a482b5320b4ceda4323d2c65da2dd",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-admin/TRY-IT.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1d9658b876a8eb1263f4f3ef0d2b39eff3e74c5045e84acd663d9bcfc20bce01",
+        "target_sha256": "1d9658b876a8eb1263f4f3ef0d2b39eff3e74c5045e84acd663d9bcfc20bce01",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-approve/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "480aa1b8c4f5dbccfcc78ef75c0d2494d797c1a6ed8f6a650fa80a371f3323aa",
+        "target_sha256": "480aa1b8c4f5dbccfcc78ef75c0d2494d797c1a6ed8f6a650fa80a371f3323aa",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-approve/TRY-IT.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "8cb57fb79d179ee6b1618aa83beb26b709ac822db56f2796fec5d6fae01829a8",
+        "target_sha256": "8cb57fb79d179ee6b1618aa83beb26b709ac822db56f2796fec5d6fae01829a8",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-approve/recording.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "8abcd359d877b7e84c68f254b294c280e5e99cfdfb4084aa9b0955c8b0105e0a",
+        "target_sha256": "8abcd359d877b7e84c68f254b294c280e5e99cfdfb4084aa9b0955c8b0105e0a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-attitude/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "33f262928e67a4b66ef1dec8e4fedc5c0b52ecf808b5fcb80311017febcdca1f",
+        "target_sha256": "33f262928e67a4b66ef1dec8e4fedc5c0b52ecf808b5fcb80311017febcdca1f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-attitude/TRY-IT.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3144db8b7fd38eb2ad231d12a559230039ba6364dce9c6162221810d443eb2a7",
+        "target_sha256": "3144db8b7fd38eb2ad231d12a559230039ba6364dce9c6162221810d443eb2a7",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-attitude/attitudes.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ecaa2d2cd5007c4a5c7a564fc50f7c3bb79680550856341d827a74f881d35731",
+        "target_sha256": "ecaa2d2cd5007c4a5c7a564fc50f7c3bb79680550856341d827a74f881d35731",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-create-team/SKILL.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "1ad1b8d46e88ca647d79bc2b221c9cc1882ec1d9cc9793c4ee1c23e897bbcd5d",
+        "target_sha256": "cdc9e061d6a3efc8a40dbc3c9a44a3e3178f5e2d61adea4bd6d7b5ab2c5b211b",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-create-team/create-chats.md",
+        "status": "added",
+        "reason": "source change",
+        "baseline_sha256": null,
+        "source_sha256": "e765bad93252a576b5a4385d44fe32045c3e8c5ae994d7a142ab8d250441422f",
+        "target_sha256": null,
+        "target_tracked": false
+      },
+      {
+        "path": "asdg/skills/asdg-decision/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9b99ec26cbc8c403bf46d684c0ea139fe5843271f9dd22dc4a5001ee53b5389f",
+        "target_sha256": "9b99ec26cbc8c403bf46d684c0ea139fe5843271f9dd22dc4a5001ee53b5389f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-decision/example.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "8ea729a341b3e99e472b7a4f49e24c07393daaef7270915afdcc2767efbab38c",
+        "target_sha256": "8ea729a341b3e99e472b7a4f49e24c07393daaef7270915afdcc2767efbab38c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-decision/images/decision-record.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1a8b182fdedf3aced353ea23ae4561844459305486e98c4835384238c04aadff",
+        "target_sha256": "1a8b182fdedf3aced353ea23ae4561844459305486e98c4835384238c04aadff",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-decision/images/decision-specialization.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "345a8d0822affc01403dbaafdd629ad7958020761d6dce941ffc4f15fc121df2",
+        "target_sha256": "345a8d0822affc01403dbaafdd629ad7958020761d6dce941ffc4f15fc121df2",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-decision/record-format.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "fa666ddd939b31ba286b6f97a5c53a02408146ef137167a34966901092b7dd8f",
+        "target_sha256": "fa666ddd939b31ba286b6f97a5c53a02408146ef137167a34966901092b7dd8f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-decision/specialization.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1eb919e4c6dffd46277d1187eb2d0625bcd1fe3f16a1514dafaa6992958b50b6",
+        "target_sha256": "1eb919e4c6dffd46277d1187eb2d0625bcd1fe3f16a1514dafaa6992958b50b6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-documentation/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "54c76cbe75fd1e0e4101ed5a5e7f35e53809c204c60e8e515b1ec0044c9a9bd6",
+        "target_sha256": "54c76cbe75fd1e0e4101ed5a5e7f35e53809c204c60e8e515b1ec0044c9a9bd6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-documentation/example.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "758e75ee54b258c482cd1a8a3be60d891986f46305c154978040dbe3b66c9515",
+        "target_sha256": "758e75ee54b258c482cd1a8a3be60d891986f46305c154978040dbe3b66c9515",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-focus/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9f19a247eefc9032ca0cec3b1d217a60f666ba29c741d4d7ed9425c55040861d",
+        "target_sha256": "9f19a247eefc9032ca0cec3b1d217a60f666ba29c741d4d7ed9425c55040861d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-focus/TRY-IT.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "0f72e7fe27affaafb29d0b3bda2f744158bd9e7040eedf9c4ac8fbd40c0d3c29",
+        "target_sha256": "0f72e7fe27affaafb29d0b3bda2f744158bd9e7040eedf9c4ac8fbd40c0d3c29",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-focus/continuation-tests.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "67865fac218c70836173991149608b87867858878b93482cc2aeb2fce1dbbc3f",
+        "target_sha256": "67865fac218c70836173991149608b87867858878b93482cc2aeb2fce1dbbc3f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-focus/focus-choices.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f07c9832f6240191058b2697911a291796a9535ae82e5ffd22ebd72f48a790b0",
+        "target_sha256": "f07c9832f6240191058b2697911a291796a9535ae82e5ffd22ebd72f48a790b0",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-focus/images/focus-selection.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3bd7799e1728a67b127c20fd0fb050daf83d8bed7f767ab7d8278d490430f439",
+        "target_sha256": "3bd7799e1728a67b127c20fd0fb050daf83d8bed7f767ab7d8278d490430f439",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-focus/images/session-fields-simple.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3f0d06f6c3ac83eb736dc0592988f922b640859930bd2c60b9ec8bebdaa78deb",
+        "target_sha256": "3f0d06f6c3ac83eb736dc0592988f922b640859930bd2c60b9ec8bebdaa78deb",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-focus/images/session-fields.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "85362c70dfd9da66f2ae671e61f93063f71ffab1ce1ecf5ac20a30cb904a012c",
+        "target_sha256": "85362c70dfd9da66f2ae671e61f93063f71ffab1ce1ecf5ac20a30cb904a012c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-focus/images/session-title-parts.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "9d00f5e362c267afda06141a7966c089d0e6cc728704b4c878a823b73c282110",
+        "target_sha256": "9d00f5e362c267afda06141a7966c089d0e6cc728704b4c878a823b73c282110",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-focus/rename-chat.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "e37c9284a61db66d7e18482e4e565015826551bf4a4cc1939aa4463cfd3e5e79",
+        "target_sha256": "e37c9284a61db66d7e18482e4e565015826551bf4a4cc1939aa4463cfd3e5e79",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-focus/session-policy.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "6bb3ef11a0c660b6cf90d34892392f2768a79a9153bf627ee145c8e25c1a23d8",
+        "target_sha256": "6bb3ef11a0c660b6cf90d34892392f2768a79a9153bf627ee145c8e25c1a23d8",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-focus/session-state.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1c120c646e13ac3e01d951b0795e1a7beb615d8a99013e7469c7e1248d22cfdd",
+        "target_sha256": "1c120c646e13ac3e01d951b0795e1a7beb615d8a99013e7469c7e1248d22cfdd",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-focus/subject-focus.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "5fc299b215f629cfcdefe672912516934f2f85df71af362793058ccf36d890bc",
+        "target_sha256": "5fc299b215f629cfcdefe672912516934f2f85df71af362793058ccf36d890bc",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-help/SKILL.md",
+        "status": "added",
+        "reason": "source change",
+        "baseline_sha256": null,
+        "source_sha256": "eb55ad8fbc4aecbd55bf8835e83507d2df1ce55bc4c31d17199f297d4803797e",
+        "target_sha256": null,
+        "target_tracked": false
+      },
+      {
+        "path": "asdg/skills/asdg-help/command-reference.md",
+        "status": "added",
+        "reason": "source change",
+        "baseline_sha256": null,
+        "source_sha256": "8a4984d7d3812078c58972a291f2829c5d7d92b9da8242bbc2df6e868be3ae37",
+        "target_sha256": null,
+        "target_tracked": false
+      },
+      {
+        "path": "asdg/skills/asdg-init/SKILL.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "6ca7cef78c4a1b086bd753fe54962297625203c122ed0d22433c57abda3be056",
+        "target_sha256": "539bd041cb474bbf569ad7525cdfe24e1110101dad4196acf87de1becd3cb302",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-init/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "2ec5c036182b3796fe873e42ac39023b1bccca52f4495811aa13d42437d71f2d",
+        "target_sha256": "2ec5c036182b3796fe873e42ac39023b1bccca52f4495811aa13d42437d71f2d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-openspec-propose/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "ea127959d10715b2e4d7f6d02bf4eff2f44519cbc8be4f5edd3281458b90b90e",
+        "target_sha256": "ea127959d10715b2e4d7f6d02bf4eff2f44519cbc8be4f5edd3281458b90b90e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-openspec-propose/TRY-IT.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "47d6757885fb6d1609cd9133302a028783493b5a9b87230acb9718f34e8bbfab",
+        "target_sha256": "47d6757885fb6d1609cd9133302a028783493b5a9b87230acb9718f34e8bbfab",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-openspec-propose/evidence.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "75f815b8aa79a38a81e9124c474d1e3cdce3a120f4c204e4b13f5d473e4c3372",
+        "target_sha256": "75f815b8aa79a38a81e9124c474d1e3cdce3a120f4c204e4b13f5d473e4c3372",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-openspec-propose/images/proposal-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "cb942ef5ac209f2db17be17af76e3d7745fa680fcf89b6cc9c108cfdf16e0f9c",
+        "target_sha256": "cb942ef5ac209f2db17be17af76e3d7745fa680fcf89b6cc9c108cfdf16e0f9c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-role/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "cf331061cde660ce7278f231c2c7ea082aada71adf18e4e413a6e27c10f3c744",
+        "target_sha256": "cf331061cde660ce7278f231c2c7ea082aada71adf18e4e413a6e27c10f3c744",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-sprint-close/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1064c18b5cb7429d84d0294ed8f4ce52f8eaeaa487a0d070322d8adb663e7f75",
+        "target_sha256": "1064c18b5cb7429d84d0294ed8f4ce52f8eaeaa487a0d070322d8adb663e7f75",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-sprint-close/recording.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "4f876754001162497962ce34b05ee51a6d9b70b75f5d537b2966ac9367a97721",
+        "target_sha256": "4f876754001162497962ce34b05ee51a6d9b70b75f5d537b2966ac9367a97721",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-sprint-review/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "81c1b4f9099ea240222e3eacb3fd9a7d9e15c7de83506badc9f8e7fecdf89af7",
+        "target_sha256": "81c1b4f9099ea240222e3eacb3fd9a7d9e15c7de83506badc9f8e7fecdf89af7",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-sprint-start/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "7d2ec1ba112b6d2c6057ba7384bc868af0ef2576cc889a0f2fd9eedd80f87d41",
+        "target_sha256": "7d2ec1ba112b6d2c6057ba7384bc868af0ef2576cc889a0f2fd9eedd80f87d41",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-sprint-start/git-preflight.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "aa69d2df73e487275934f4f3eb2c02fab1b96c0d306c34886b5c79a1ca32c64f",
+        "target_sha256": "aa69d2df73e487275934f4f3eb2c02fab1b96c0d306c34886b5c79a1ca32c64f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-status/SKILL.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "89687b96df20884b3ed774a6e2fe790c1328d1bd45a39ee0753b93323416d2bb",
+        "target_sha256": "a0480b62d8c4ac5fd92c601c5d0674f76e6373e5d09bc65ee613be7576911ccb",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-status/status-format.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "919364ce1d320a64684a3be69847666188138bd453a5c79b0733ba7c356efb9e",
+        "target_sha256": "ded2582912a597fd1d189ebf1eca4704dec5348a0a162598dc87ec19fdb769f4",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-suggestion/SKILL.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "175e26873427bd6410bc4ffcc1c4bb5d2135472ace9bf786e511e420012de326",
+        "target_sha256": "57e29493ac0d92fb85e97f863587356831d087b2412ddf044e39c152ec5374fe",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/skills/asdg-update/SKILL.md",
+        "status": "added",
+        "reason": "source change",
+        "baseline_sha256": null,
+        "source_sha256": "890062cb946626c9ce2a84871001c94d07c1f1cc61bacc5dddd251714d45b06b",
+        "target_sha256": null,
+        "target_tracked": false
+      },
+      {
+        "path": "asdg/skills/asdg-view-dev/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "a8b1fda4f1ab995e57d9db36560bdb90ed52c0d068d91fac46bb3929cae8732a",
+        "target_sha256": "a8b1fda4f1ab995e57d9db36560bdb90ed52c0d068d91fac46bb3929cae8732a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-admin/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "a5b0ec3ec5dd8df300f05ffc66728193c9bd0852621a55dd67b9bb6ded41bf35",
+        "target_sha256": "a5b0ec3ec5dd8df300f05ffc66728193c9bd0852621a55dd67b9bb6ded41bf35",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-admin/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "5e5b851fe3057a8e7352b9b1b6b7f7b78bf0237adf24e63b31599e6a08f412cd",
+        "target_sha256": "5e5b851fe3057a8e7352b9b1b6b7f7b78bf0237adf24e63b31599e6a08f412cd",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-approve/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "e536eff9d3c4a4444d607f0b3781b690b7108ff5ac39138edf64dd1241ef4223",
+        "target_sha256": "e536eff9d3c4a4444d607f0b3781b690b7108ff5ac39138edf64dd1241ef4223",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-approve/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3510bef54eee19e80ff0894eff2c54baf1ad15683bfb9d1da94bd40de96a076f",
+        "target_sha256": "3510bef54eee19e80ff0894eff2c54baf1ad15683bfb9d1da94bd40de96a076f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-attitude/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "2677aec69f0330d0db6fe0459ea41a07cfab8e0e3b16254cd10dcb1c3cbf1567",
+        "target_sha256": "2677aec69f0330d0db6fe0459ea41a07cfab8e0e3b16254cd10dcb1c3cbf1567",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-attitude/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "7ab52b110bb8ccba3411ba2a6ecc9c8a18c758caec40ce6d26b33dda072a7e90",
+        "target_sha256": "7ab52b110bb8ccba3411ba2a6ecc9c8a18c758caec40ce6d26b33dda072a7e90",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-create-team/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "457fa162e27a19ee5130600fda9e1dbbfd16f86643ecbed4c7c6085f2099e803",
+        "target_sha256": "457fa162e27a19ee5130600fda9e1dbbfd16f86643ecbed4c7c6085f2099e803",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-create-team/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "4115d8ce9dd6b6f291fd58b81ff2c8a74ad7c8416517a7e956d6f528dcde1521",
+        "target_sha256": "4115d8ce9dd6b6f291fd58b81ff2c8a74ad7c8416517a7e956d6f528dcde1521",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-decision/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "e0cb40d51d3b6a2081e528c02c8aa716bd062968fd73217611d0e0aa8e411975",
+        "target_sha256": "e0cb40d51d3b6a2081e528c02c8aa716bd062968fd73217611d0e0aa8e411975",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-decision/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "f6cf40ce75188279a858ff3ce9d3e6767378e4e5d0d3475130bfff2fac2df994",
+        "target_sha256": "f6cf40ce75188279a858ff3ce9d3e6767378e4e5d0d3475130bfff2fac2df994",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-documentation/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3f48e9311915e02b8dd9d0d760148fb29d3eef0775e6638ccb0e6b91a7f546d7",
+        "target_sha256": "3f48e9311915e02b8dd9d0d760148fb29d3eef0775e6638ccb0e6b91a7f546d7",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-documentation/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "e4a58bd2ea8670c8f05fe098a19d04f4f2776b023e435dfe75d2f9bb28e09656",
+        "target_sha256": "e4a58bd2ea8670c8f05fe098a19d04f4f2776b023e435dfe75d2f9bb28e09656",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-focus/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "dd0ebab9a3e4c60a59fb75e0425ee743918389ab025853537130e15afedbeec6",
+        "target_sha256": "dd0ebab9a3e4c60a59fb75e0425ee743918389ab025853537130e15afedbeec6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-focus/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "286d3c96ad1704f1b8897372ade9b21d2b4e1b17c7cf27a03fe7a0c7e0cabd0a",
+        "target_sha256": "286d3c96ad1704f1b8897372ade9b21d2b4e1b17c7cf27a03fe7a0c7e0cabd0a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-help/SKILL.md",
+        "status": "added",
+        "reason": "source change",
+        "baseline_sha256": null,
+        "source_sha256": "989071edd7f93f1a827fcc05ea441b55480048eef16a7f546cb391effd16eeb4",
+        "target_sha256": null,
+        "target_tracked": false
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-help/agents/openai.yaml",
+        "status": "added",
+        "reason": "source change",
+        "baseline_sha256": null,
+        "source_sha256": "13c11c4e4906d06f3540ee75053b334cd00d4c9cbd017e22b62100b1d01de7bd",
+        "target_sha256": null,
+        "target_tracked": false
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-init/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "666e9006bdbcf25444e61ef24902f372a68de039cc3af99b5bfb12466d46bb44",
+        "target_sha256": "666e9006bdbcf25444e61ef24902f372a68de039cc3af99b5bfb12466d46bb44",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-init/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "0328a03fe2f4683991d6e9938bd218ca5a09bfd71ef5b0196d729da542d75dad",
+        "target_sha256": "0328a03fe2f4683991d6e9938bd218ca5a09bfd71ef5b0196d729da542d75dad",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-openspec-propose/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "00073cda62cd8627f4fa15633b60cda404aa8bac691438d90e40079daf73de9b",
+        "target_sha256": "00073cda62cd8627f4fa15633b60cda404aa8bac691438d90e40079daf73de9b",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-openspec-propose/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "04c7d98364e3cea77e114560b7eae2c17a9ab72eedf4f287ec200a6495708c40",
+        "target_sha256": "04c7d98364e3cea77e114560b7eae2c17a9ab72eedf4f287ec200a6495708c40",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-role/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "e01a75c89793a4c5f0a78a215faba50da239ab70b0970005967b1520d9b9f796",
+        "target_sha256": "e01a75c89793a4c5f0a78a215faba50da239ab70b0970005967b1520d9b9f796",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-role/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "63594ac2413028ed05a47a599243e0183bbd69ffc45d64eca5550cd5e940dbe3",
+        "target_sha256": "63594ac2413028ed05a47a599243e0183bbd69ffc45d64eca5550cd5e940dbe3",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-sprint-close/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1d127a79f3daeab96aaea99ebfb11c1b0c608d9b647eab713ffd9ba872d53e14",
+        "target_sha256": "1d127a79f3daeab96aaea99ebfb11c1b0c608d9b647eab713ffd9ba872d53e14",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-sprint-close/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "74409b3bb51b2c292a24744cb1b87ddf4874d627eb157ce4575df0a0f28e117b",
+        "target_sha256": "74409b3bb51b2c292a24744cb1b87ddf4874d627eb157ce4575df0a0f28e117b",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-sprint-review/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "53979ce63fd664849496da1d8209e89b8343e9b272e6b38c0bb171f22984655d",
+        "target_sha256": "53979ce63fd664849496da1d8209e89b8343e9b272e6b38c0bb171f22984655d",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-sprint-review/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3a8aad13eeaa2531bdaf63eccc64bee88a84fc3311ad68ba8606b917b51e61e4",
+        "target_sha256": "3a8aad13eeaa2531bdaf63eccc64bee88a84fc3311ad68ba8606b917b51e61e4",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-sprint-start/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "16e3cad2e9d4002df04289feba402f44bd4a75dbf12515bb4d74ff2c0eae05af",
+        "target_sha256": "16e3cad2e9d4002df04289feba402f44bd4a75dbf12515bb4d74ff2c0eae05af",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-sprint-start/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "e7fe17e10f69a823ed24806e53926003ea0c1823f71876daf290e926ad8292a2",
+        "target_sha256": "e7fe17e10f69a823ed24806e53926003ea0c1823f71876daf290e926ad8292a2",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-status/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "eada036d20117b8dc22cb1f3e2850a28cff4670e9457d1e416864f62a06ba935",
+        "target_sha256": "eada036d20117b8dc22cb1f3e2850a28cff4670e9457d1e416864f62a06ba935",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-status/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "3021cce3ce13df098c99baff593b4da6f5cc79a3fafce5d86267912b62830283",
+        "target_sha256": "3021cce3ce13df098c99baff593b4da6f5cc79a3fafce5d86267912b62830283",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-suggestion/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "6b5d4aa2c201de8b05e34d98723dd6875ced8fa84e1706ef0de10227ab5e29e2",
+        "target_sha256": "6b5d4aa2c201de8b05e34d98723dd6875ced8fa84e1706ef0de10227ab5e29e2",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-suggestion/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "2ba728f819373b93b90b7fd0a7659cbddb4b5cd27eaa4999efb482130f8af86e",
+        "target_sha256": "2ba728f819373b93b90b7fd0a7659cbddb4b5cd27eaa4999efb482130f8af86e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-update/SKILL.md",
+        "status": "added",
+        "reason": "source change",
+        "baseline_sha256": null,
+        "source_sha256": "9fc31ad5543fe814276d324d183eb4cbd2f6101d8e4ddafeaaae5e6651586cc3",
+        "target_sha256": null,
+        "target_tracked": false
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-update/agents/openai.yaml",
+        "status": "added",
+        "reason": "source change",
+        "baseline_sha256": null,
+        "source_sha256": "6f7c2319a3d167cfb13348be61166eefa383ce6f285fb5dba1fb53b5dc533073",
+        "target_sha256": null,
+        "target_tracked": false
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-view-dev/SKILL.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "e553ff1ee4faf586a5c4e6f33152b6369e8167ada94a5c3a22e19da6d732cd30",
+        "target_sha256": "e553ff1ee4faf586a5c4e6f33152b6369e8167ada94a5c3a22e19da6d732cd30",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.agents/skills/asdg-view-dev/agents/openai.yaml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "fe54377c4093e7cacbae2d4a11b22b0ad13d1776bb94a114981339ace88a6630",
+        "target_sha256": "fe54377c4093e7cacbae2d4a11b22b0ad13d1776bb94a114981339ace88a6630",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.codex/agents/asdg_01.toml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "128bf85e6cc71fdbe06c1192adbe51045e93df66e978d306f17a80e40c61a642",
+        "target_sha256": "128bf85e6cc71fdbe06c1192adbe51045e93df66e978d306f17a80e40c61a642",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.codex/agents/asdg_02.toml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "a106aa6c990504bb1cac55317cade38a3df0e72878a50f943009987f133aac16",
+        "target_sha256": "a106aa6c990504bb1cac55317cade38a3df0e72878a50f943009987f133aac16",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.codex/agents/asdg_03.toml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "fa7b640f1cc87295a25bec5ed5f242c1155aaa87d20c7279b647f90f7047b6aa",
+        "target_sha256": "fa7b640f1cc87295a25bec5ed5f242c1155aaa87d20c7279b647f90f7047b6aa",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.codex/agents/asdg_04.toml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "40adfa25d7234c725f3f34a9232561a9bd123561330c23027a85b6f2f8cad24a",
+        "target_sha256": "40adfa25d7234c725f3f34a9232561a9bd123561330c23027a85b6f2f8cad24a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.codex/agents/asdg_05.toml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "74095d339f69e642b775044e2f570a199168d0fda835af967df35066e912190a",
+        "target_sha256": "74095d339f69e642b775044e2f570a199168d0fda835af967df35066e912190a",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.codex/agents/asdg_06.toml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "5005989d197f01237710aa3d86657fd927daea41f5b608598957df85876526d9",
+        "target_sha256": "5005989d197f01237710aa3d86657fd927daea41f5b608598957df85876526d9",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.codex/agents/asdg_07.toml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "a23a48a3bb91898cacce0a634359c0f44b7aff736c4e97bca8b9fdfde28a019f",
+        "target_sha256": "a23a48a3bb91898cacce0a634359c0f44b7aff736c4e97bca8b9fdfde28a019f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.codex/agents/asdg_08.toml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "4bdf0c6ecadf1830bc8aec2eb9a82691257658adc2a95da6c422fdf37c28d8f8",
+        "target_sha256": "4bdf0c6ecadf1830bc8aec2eb9a82691257658adc2a95da6c422fdf37c28d8f8",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.codex/agents/asdg_09.toml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "2a670258b50bf6e89cd11ec09a58973277cf3c321b7e922d4a680e1505c5ea47",
+        "target_sha256": "2a670258b50bf6e89cd11ec09a58973277cf3c321b7e922d4a680e1505c5ea47",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.codex/agents/asdg_10.toml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "767bb84d867295ba283201a70e7424b0086792f63f2c230cbceda91ecdfc35b8",
+        "target_sha256": "767bb84d867295ba283201a70e7424b0086792f63f2c230cbceda91ecdfc35b8",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.codex/agents/asdg_11.toml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "d706ba032dc44411942cf75d0fb41e20e2876818342d8982806f082be6f3a496",
+        "target_sha256": "d706ba032dc44411942cf75d0fb41e20e2876818342d8982806f082be6f3a496",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.codex/agents/asdg_12.toml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "a2be9e33f651bd8e6bd635818611b39809da50e18330a924de6f96e624541c1c",
+        "target_sha256": "a2be9e33f651bd8e6bd635818611b39809da50e18330a924de6f96e624541c1c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/templates/.codex/agents/asdg_coordinator.toml",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "18105b8323f0bb6284c297155504e98d9ee5d950bf63b1b9625275414e37309b",
+        "target_sha256": "18105b8323f0bb6284c297155504e98d9ee5d950bf63b1b9625275414e37309b",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/README.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "21253c771c9ac0edfc4018d7e0a1f9ad4a1319fa9577b81d9f3ab3f93eeffef9",
+        "target_sha256": "21253c771c9ac0edfc4018d7e0a1f9ad4a1319fa9577b81d9f3ab3f93eeffef9",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/acceptance.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1765a23b85e3b6380c67a22a157b1904b919d919f1d587db64bb1f7197374e45",
+        "target_sha256": "1765a23b85e3b6380c67a22a157b1904b919d919f1d587db64bb1f7197374e45",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/continuation_fixture.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "be6295e28ebd578ac49ed5a897c19c950646bef2971ae1f31aae989d2c383bdf",
+        "target_sha256": "be6295e28ebd578ac49ed5a897c19c950646bef2971ae1f31aae989d2c383bdf",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/continuation_fixture.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "13be7a285ca79e3b0bbc6bb0b262026de6444517763397f608ed29e5d91f1356",
+        "target_sha256": "13be7a285ca79e3b0bbc6bb0b262026de6444517763397f608ed29e5d91f1356",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/images/continuation_fixture-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "94efe8535733ec8275ff9c2b2622a67300af5e300929cff636dad9f63fd73871",
+        "target_sha256": "94efe8535733ec8275ff9c2b2622a67300af5e300929cff636dad9f63fd73871",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/images/test_agent_config-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "bd8b147b3609504005b930adc4261c1423074a2f959f781211dfec0523752f27",
+        "target_sha256": "bd8b147b3609504005b930adc4261c1423074a2f959f781211dfec0523752f27",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/images/test_portable-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "1e0331b284665d27f9dd5904c4c51185175b46098f01ef012de4025b34e86b7f",
+        "target_sha256": "1e0331b284665d27f9dd5904c4c51185175b46098f01ef012de4025b34e86b7f",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/images/test_purpose_review-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "31ab40f621c6f7d065881a42e78e98e91d04235603f107152e238c04836269c3",
+        "target_sha256": "31ab40f621c6f7d065881a42e78e98e91d04235603f107152e238c04836269c3",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/images/test_stage_review-flow.svg",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "8b7f82f31927c134bed9f9d49751c924a7a49ec81b26065f2f011f158ab4f4c0",
+        "target_sha256": "8b7f82f31927c134bed9f9d49751c924a7a49ec81b26065f2f011f158ab4f4c0",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_agent_config-cases.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "4dab5139e4c579892302aaebfe09164d0b5aea775bcefd6843cc4790601efd99",
+        "target_sha256": "4dab5139e4c579892302aaebfe09164d0b5aea775bcefd6843cc4790601efd99",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_agent_config.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "eeebdf318c458b4dcac6307c536710ca4290fa85f652c7e8cb7b36f4aff957f7",
+        "target_sha256": "eeebdf318c458b4dcac6307c536710ca4290fa85f652c7e8cb7b36f4aff957f7",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_agent_config.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "8ba791492b856e9f126cfdecc56c8ae25efa302942d3e04d39b7e8d3aec7feaa",
+        "target_sha256": "8ba791492b856e9f126cfdecc56c8ae25efa302942d3e04d39b7e8d3aec7feaa",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_distribution.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "b19f54844001347682b55022586bca011fe1da2690fa16071dfb8e7de7502836",
+        "target_sha256": "66547f8f84b6ff729aab324823a293a01314f37f3be57220c44c57f278d11014",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_distribution.py",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "600b8b515d53ec92f69ca28edc14f5b05f75b42060a27ae118944fe6fa5c99f9",
+        "target_sha256": "e1be540aa4997fab5a4171abfacce4a5b3113ecb1c2b6374e4c658c086eae8c1",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_install.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "1c62551ff0ea52d4a31cbe2281d2623a6d9c0bda3914f9157016ebb401395335",
+        "target_sha256": "55d6a5eb474f4375fd21137035646b66a149bc82e9a04ecd765e8e3171525d0c",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_install.py",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "4dd3404ab49f5315a213f7c00ab6487f3074bda11a49bc41d2ee02cb70eb2857",
+        "target_sha256": "b2b7f94b6b9587420085f06818c63f97e94f00df18ad45f1e90ea4f04fc3c3b5",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_portable-cases-clients.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "7722ebd8e1283f4b87a6342d7147d676901534300626790dda45cd9ca7445dea",
+        "target_sha256": "7722ebd8e1283f4b87a6342d7147d676901534300626790dda45cd9ca7445dea",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_portable-cases-roles.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "bf46f453ecb71a2647ed4598398296edb3e883db738bf2478efce9c6563a6715",
+        "target_sha256": "bf46f453ecb71a2647ed4598398296edb3e883db738bf2478efce9c6563a6715",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_portable-cases.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "cb278d42092428572b4ab834855de75afdabb4a73cff0708294876f34f079cfa",
+        "target_sha256": "cb278d42092428572b4ab834855de75afdabb4a73cff0708294876f34f079cfa",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_portable.md",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "7f83c0f2ce5ae038135eedebe935c30d3c9b7feef452e5953ecdc28c37f82b42",
+        "target_sha256": "00f47048a03b4fd52d2010419d6813796f8ef6051e072a28f9c906f457f87614",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_portable.py",
+        "status": "conflicting",
+        "reason": "no common baseline for different content",
+        "baseline_sha256": null,
+        "source_sha256": "63d46c7dbbaa94f6b6d6836c05be7181fe145e07b35293f5c13175f369769225",
+        "target_sha256": "99fdc0320eab1624927ba91eb753a7e64b8c442680243e45d1bf656c49577d67",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_purpose_review-cases.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "7700591981e35de266145c7469e1786395ec8f8407d9788efbc82704344ebfb5",
+        "target_sha256": "7700591981e35de266145c7469e1786395ec8f8407d9788efbc82704344ebfb5",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_purpose_review.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "4591d9cb5b2a59e75039101fb52fe70c5c9b894daeb1792ca1774f2402b0b886",
+        "target_sha256": "4591d9cb5b2a59e75039101fb52fe70c5c9b894daeb1792ca1774f2402b0b886",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_purpose_review.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "113fe3606a98fe134327af97ca31de7a48f3dbd779b29bbb731058c8d6f999d0",
+        "target_sha256": "113fe3606a98fe134327af97ca31de7a48f3dbd779b29bbb731058c8d6f999d0",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_stage_review-cases.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "4090a9c513ac4462d60b54a73ff40d6170105e317220a9349414cb18f443677e",
+        "target_sha256": "4090a9c513ac4462d60b54a73ff40d6170105e317220a9349414cb18f443677e",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_stage_review.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "a15a04f36f6a355a5a713eb3b8b775e61dd0b9c04d5ac19b8afdff3a0dcf46c6",
+        "target_sha256": "a15a04f36f6a355a5a713eb3b8b775e61dd0b9c04d5ac19b8afdff3a0dcf46c6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_stage_review.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "efe77efc07dcb9a4f5ddbb4134d03f6cccc04f4615fd3598f42864dd83eee661",
+        "target_sha256": "efe77efc07dcb9a4f5ddbb4134d03f6cccc04f4615fd3598f42864dd83eee661",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_sync.md",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "6f0653897457d982fea3fb68bbf3ba608d0be0fb144786a694772f008e78c4a6",
+        "target_sha256": "6f0653897457d982fea3fb68bbf3ba608d0be0fb144786a694772f008e78c4a6",
+        "target_tracked": true
+      },
+      {
+        "path": "asdg/tests/test_sync.py",
+        "status": "unchanged",
+        "reason": "same content",
+        "baseline_sha256": null,
+        "source_sha256": "6debb469ca7f50d3dcc4f547867ad6f47fa716f0086dfa0b3ed51c90fff3eb5a",
+        "target_sha256": "6debb469ca7f50d3dcc4f547867ad6f47fa716f0086dfa0b3ed51c90fff3eb5a",
+        "target_tracked": true
+      }
+    ],
+    "warnings": [
+      "Only asdg/ distribution files are synchronized; installed adapters, hooks and project state are unchanged.",
+      "Apply records adoption, not a release or methodology approval."
+    ],
+    "sync_state_sha256": null,
+    "plan_id": "94994d2dc28cd70daa2e20b6e04caaaf82a7ecea46543c97c9753f3eaf22bda9",
+    "dry_run": true,
+    "applied": false
+  },
+  "ancestry_evidence": {
+    "installed_manifest_matches_initialization_receipt": true,
+    "manifest_sha256": "d988ed18b99ed5a03613fa9b7b01e1eafdd0fa7def300e46aab192370a183405",
+    "all_398_recorded_package_members_match": true,
+    "archived_copy": "build/asdg-sample-initial-delivery.json",
+    "archive_is_incoming_approval": "No; preserves original installed manifest bytes only.",
+    "proposed_reconciliation": "Preserve the verified initial sample delivery as canonical historical provenance, then generate a fresh real upgrade preview. Do not fabricate a sync-state record or replace target files."
+  },
+  "diff": "build/asdg-sample-upgrade-review.diff",
+  "state": "BASELINE_CREATED_UPGRADE_BLOCKED_BY_ANCESTRY",
+  "pending": "Explicit decision about recovering the exact original delivery baseline, then approval of a fresh conflict-free upgrade plan, then separate integration preview approval.",
+  "not_performed": [
+    "upgrade apply",
+    "adapter refresh",
+    "push",
+    "canonical commit",
+    "project work",
+    "sprint transition",
+    "native invocation"
+  ],
+  "human_approval": null
+}

@@ -100,7 +100,18 @@
       "public_url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-introduction-narrated.mp4",
       "youtube_url": "https://www.youtube.com/watch?v=RUyP6nvC8cE",
       "youtube_visibility": "Public",
-      "youtube_verified_at": "2026-11-04T23:22:25.270247+00:00"
+      "youtube_verified_at": "2026-11-04T23:22:25.270247+00:00",
+      "pending_replacement": {
+        "path": "docs/presentations/asdg-introduction/build/release-correction/asdg-introduction-narrated.mp4",
+        "sha256": "0564ef958e9ebce10808c567160b5806c0668b630fadc3481445bd525b819c11",
+        "bytes": 14205816,
+        "live_asset_sha256_checked": "663504a062e27afeb81c38b86198fb5ad41412a4203dd1e855ad509db0e88e97",
+        "live_asset_id": 710936087,
+        "replacement_needed": true,
+        "replaced": false,
+        "recorded_at": "2026-11-05T03:24:08.591481+00:00",
+        "verification": "Hash, extracted captions, duration, full decode; auditory check unavailable."
+      }
     },
     {
       "path": "docs/presentations/codex-agent-skills-and-adapters/build/codex-agent-skills-and-adapters-narrated.mp4",

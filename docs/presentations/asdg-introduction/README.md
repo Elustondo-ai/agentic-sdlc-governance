@@ -12,6 +12,8 @@ The numbered narration files are read in this order: introduction → walkthroug
 The detailed version is an AI-authored review draft, not yet human-approved and not a regenerated Google Vids video.
 [Coverage and verification](narration-review.md) · Full narration is approximately 57–66 minutes at 150–130 words/minute.
 
+The earlier short video has a separate [slide 08 video script and correction state](short-video-slide-08.md); its generated audio is distinct from these speaker notes.
+
 ## Slides
 
 | # | Slide source | Introduction | Walkthrough | Details |

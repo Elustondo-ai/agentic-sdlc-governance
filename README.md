@@ -27,7 +27,7 @@ Read the README and follow its installation instructions.
 
 Confirm the target Git root and client; stop if `asdg/` already exists. Download the versioned portable ZIP linked below and its `.sha256` companion, verify the checksum, and inspect archive entries before extracting only its single `asdg/` folder into that root. Reject paths outside that folder and symbolic links; never overwrite existing files.
 
-Read and follow the extracted `asdg/docs/install-zip-prompt.md` and its canonical `asdg-init` skill for preview, the approval request, apply and verification. The agent handles these steps; the initial request does not approve the unseen plan. Hook trust remains a separate human action; Context requires a separate yes after success.
+Read and follow the extracted `asdg/docs/install-zip-prompt.md` and its canonical `asdg-init` skill for preview, the approval request, apply and verification. The agent handles these steps; the initial request does not approve the unseen plan. Hook trust remains a separate human action; team setup and project analysis need separate requests after success.
 
 If the README page cannot be read, use its [raw version](https://raw.githubusercontent.com/Elustondo-ai/agentic-sdlc-governance/main/README.md); if a required download fails, stop and report it. A README URL alone is reference material; the explicit install request above authorizes acquisition and extraction, while installation still requires approval of the preview.
 
@@ -37,13 +37,13 @@ The agent handles acquisition, preview, application and verification. Initializa
 
 **Alternative — manual ZIP + Prompt:**
 
-1. Download the [portable ZIP — 0.3.0-pilot.2](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.2/asdg-0.3.0-pilot.2.zip).
+1. Download the [portable ZIP — 0.3.0-pilot.3](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.3/asdg-0.3.0-pilot.3.zip).
 2. Extract its single `asdg/` folder into the root of your existing Git project. **Stop if `asdg/` already exists.**
 3. Open your project in Claude Code or Codex and paste `asdg/docs/install-zip-prompt.md` from the extracted package ([prompt reference](asdg/docs/install-zip-prompt.md)).
-4. Review the preview and respond as requested by the selected package’s approval prompt. After verification, the assistant offers the optional Context survey and waits for a separate yes.
+4. Review the preview and respond as requested by the selected package’s approval prompt. After verification, use `/asdg-status` in your project chat. Status reports what is ready and recommends the next skill, such as `/asdg-create-team` when team setup is still needed.
 
-The portable ZIP and its [SHA-256 checksum](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.2/asdg-0.3.0-pilot.2.zip.sha256) are available in the [pilot pre-release](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/tag/v0.3.0-pilot.2). Choose the portable asset; GitHub's automatic source archives are different packages.
-This pilot packages the explicit approval presentation; use the downloaded package’s own instructions.
+The portable ZIP and its [SHA-256 checksum](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.3/asdg-0.3.0-pilot.3.zip.sha256) are available in the [pilot pre-release](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/tag/v0.3.0-pilot.3). Choose the portable asset; GitHub's automatic source archives are different packages.
+This pilot includes Status-owned onboarding, Help, Update and lifecycle-ordered team setup; use the downloaded package’s own instructions.
 This is a pilot candidate awaiting human review; installation checks do not establish native discovery, invocation or hook trust.
 See [installation details](asdg/docs/installation.md) and [client integration limits](asdg/docs/client-integrations.md).
 
@@ -66,6 +66,8 @@ After acceptance and packaging of the canonical version, `asdg upgrade` brings t
 Use the [project-local commands and synchronization contract](asdg/docs/synchronization.md); no global `asdg` installation is required. Promotion and upgrade do not commit, push or open a pull request for you.
 
 ![A canonical provider builds a verified ZIP; each client owns its versioned methodology copy.](asdg/docs/images/distribution-flow.svg)
+
+Use [Help](asdg/skills/asdg-help/SKILL.md) to explore commands and [Update](asdg/skills/asdg-update/SKILL.md) to prepare an existing project’s methodology and adapter updates. In Codex invoke `$asdg-help` or `$asdg-update`; in Claude Code use `/asdg-help` or `/asdg-update`.
 
 ## Methodology and maintainer references
 

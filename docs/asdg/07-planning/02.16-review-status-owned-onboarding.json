@@ -1,0 +1,147 @@
+{
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "starting_head": "63c4f065138f09988bdd830819260136a4455d65",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "files": [
+    {
+      "path": "README.md",
+      "before_sha256": "40323a41b9d3cf4751bc6dc49d3ab5fbfdd5314b540cbc3e3a09b389bcd7a9f8",
+      "sha256": "22aff6ca631633a04b5c6bbb11887e1a1ce64a59e7124b01acec338825268e71"
+    },
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "d424dd7530e457b15103279fc07af8bb3bc17176f4c00bdb6fc9f9c330bf53c2",
+      "sha256": "b53c203d29059900bca98a6e1423c4bfe698b465e3691e4761eaa57232330b4c"
+    },
+    {
+      "path": "asdg/skills/asdg-init/SKILL.md",
+      "before_sha256": "aa47eee247376735492876ad6db7973b2902629c1ae4c6518b7ecd3d0ba9412c",
+      "sha256": "6ca7cef78c4a1b086bd753fe54962297625203c122ed0d22433c57abda3be056"
+    },
+    {
+      "path": "asdg/skills/asdg-status/SKILL.md",
+      "before_sha256": "a0480b62d8c4ac5fd92c601c5d0674f76e6373e5d09bc65ee613be7576911ccb",
+      "sha256": "89687b96df20884b3ed774a6e2fe790c1328d1bd45a39ee0753b93323416d2bb"
+    },
+    {
+      "path": "asdg/skills/asdg-status/status-format.md",
+      "before_sha256": "ded2582912a597fd1d189ebf1eca4704dec5348a0a162598dc87ec19fdb769f4",
+      "sha256": "919364ce1d320a64684a3be69847666188138bd453a5c79b0733ba7c356efb9e"
+    },
+    {
+      "path": "asdg/skills/asdg-suggestion/SKILL.md",
+      "before_sha256": "57e29493ac0d92fb85e97f863587356831d087b2412ddf044e39c152ec5374fe",
+      "sha256": "175e26873427bd6410bc4ffcc1c4bb5d2135472ace9bf786e511e420012de326"
+    },
+    {
+      "path": "asdg/docs/install-zip-prompt.md",
+      "before_sha256": "f842e70f7f7d4f04d3856b87c16929db2e7c4214cebc878d05d422e111f38b8c",
+      "sha256": "6c4b50a98f5b62209558923d9c478d381b7f923ca112fbb488c16ff4428ee882"
+    },
+    {
+      "path": "asdg/docs/install-clone-prompt.md",
+      "before_sha256": "b4dc1b63744f3522ee27d425c981ebf363943c772e79995db179fc7f58ea5c4b",
+      "sha256": "a7589761b12a7fbf8ed61939a31d77f5814dabb7dc799170ff280404a9830d10"
+    },
+    {
+      "path": "asdg/docs/installation.md",
+      "before_sha256": "bd114dfdec95cdd0fd54f4903836e9062907ef7bb9a06f9638a6e6feb0e4c632",
+      "sha256": "39d12bbff6ebbe74c412b2fe3a84ade67a81a5b36dbd9985d4d114657bc7e5d7"
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "before_sha256": "f35fd34f73901675a899d91565125935e97b5056cb74dbcbbe257db0d7e22964",
+      "sha256": "205784906571fecf46e8288e0844264178d61cc1962827be2957eb6fd4f87e2d"
+    },
+    {
+      "path": "asdg/docs/images/installation-engine.svg",
+      "before_sha256": "e5866ced724077e903926562f1c31c86475d16c36587d8343b0a5f0fd9e4bcb8",
+      "sha256": "77898afc32a14f901dcc9be75106f9a42a27552356c67779f897e8e2ae3a7c91"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.py",
+      "before_sha256": "f9c71a336f811f0f19b5e1a1376741d12db3ffa9e6e0a457e452d7c17edd77c8",
+      "sha256": "1bb668a0dbe4672aae347da456c091d32397ffd8f316f938d06073564d4b64c4"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.md",
+      "before_sha256": "87ad0fad66aee23ae400bbcdf2c6283fda7e0e6b9bc4839d76a2cab73dc78ba5",
+      "sha256": "e8533f92bee7c7c56dc83146f31823bdb4063e4caedc6f33d91c255f488c1551"
+    },
+    {
+      "path": "asdg/tests/test_install.py",
+      "before_sha256": "4fab30a665aeadf660cc480c2dfa2913018e5986a916bd1072f65b3bebdfae3f",
+      "sha256": "4dd3404ab49f5315a213f7c00ab6487f3074bda11a49bc41d2ee02cb70eb2857"
+    },
+    {
+      "path": "asdg/tests/test_install.md",
+      "before_sha256": "b01143e0d6debf5032f417d04f6ea36ba972f62ea65bbfe758c55a4eeadbadd9",
+      "sha256": "1c62551ff0ea52d4a31cbe2281d2623a6d9c0bda3914f9157016ebb401395335"
+    },
+    {
+      "path": "asdg/tests/test_portable.py",
+      "before_sha256": "688ceb95862bbf7900ee7ece4d174e9104dec15c25159791b1a8af7083b2474c",
+      "sha256": "63d46c7dbbaa94f6b6d6836c05be7181fe145e07b35293f5c13175f369769225"
+    },
+    {
+      "path": "asdg/tests/test_portable.md",
+      "before_sha256": "dca136a2a55b9a51fb05062e9ff6edeb28753e87085dcd58638078e21229af99",
+      "sha256": "7f83c0f2ce5ae038135eedebe935c30d3c9b7feef452e5953ecdc28c37f82b42"
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "before_sha256": "e1be540aa4997fab5a4171abfacce4a5b3113ecb1c2b6374e4c658c086eae8c1",
+      "sha256": "80002824dfc28da43dd5f945df8607ec6d202b4c50277dd502f9152b768720b6"
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "before_sha256": "66547f8f84b6ff729aab324823a293a01314f37f3be57220c44c57f278d11014",
+      "sha256": "b4d76fae217e76d98fbcc593c0e0b1647db4cdd04eaa661563bbcf67eae7f5fb"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "e445db4dcdb88608cc4b45bd7349ed80457ff7a3dfe7a0dfd362c51a6d6857e7",
+      "sha256": "e6758e4a7bd2d366789a348b894b1edcc57e41a27c61bd4a1bdc8ff8090eff09"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "79ce4578648199e9a280812552240e9537d9578daeeb2f61da88cebf6b830f66",
+      "sha256": "21315bfb325c8322394c3371103679c1e350a3d7647f7dc987e2a36f7b9671d1"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.16-review-status-owned-onboarding.md",
+      "before_sha256": null,
+      "sha256": "d13e8367a70a3f6b08c4758289e7360fa45e28cb52a5a92c25a353ab0dcdbaf0"
+    }
+  ],
+  "self_inventory": "docs/asdg/07-planning/02.16-review-status-owned-onboarding.json (self hash omitted)",
+  "review_events": {
+    "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+    "preserved": 1899,
+    "appended": 16
+  },
+  "checks": {
+    "focused_suite": "20 PASS in 22.866 seconds; installation, distribution and completion/idempotency checks",
+    "both_routes_both_clients": "PASS: completion points only to Status; no premature preview handoff",
+    "packaged_init_status_suggestion": "Exact current bytes PASS",
+    "integrity_zip_checksum": "PASS",
+    "markdown_limits_links_whitespace": "PASS",
+    "evidence_privacy": "PASS"
+  },
+  "conversational_review": [
+    "Fresh installation recognized from conversation receipt, not NEW state alone.",
+    "Verified team receipts and project-scoped read-only discovery; inaccessible inventory stays unknown.",
+    "Conditional suggestion, explicit deferrals, urgent blockers and facts-only respected.",
+    "Suggestion consumes Status assessment once before NEW/Purpose heuristic; no recursive skill invocation."
+  ],
+  "visual_check": "Updated installation-engine.svg rendered at 920 pixels; labels/arrows inspected. Markdown source/link review only.",
+  "limits": [
+    "Native Status/team assessment and slash skill invocation not exercised.",
+    "Deterministic CLI status registration heuristic unchanged; the conversational Status skill owns team advice.",
+    "Local version remains pilot.2; candidate differs from the published immutable pilot.2 and is not uploaded."
+  ],
+  "preserved": "Prior proposed onboarding revisions and their exact-state review records.",
+  "git_publication": "No stage, commit, push, tag or public release update."
+}

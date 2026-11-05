@@ -1,0 +1,168 @@
+{
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+  "recorded_at": "2026-11-05T03:25:07.981964+00:00",
+  "status": "PARTIAL_WITH_EXTERNAL_AND_AUDIO_LIMITS",
+  "human_approval": null,
+  "target_video": "RUyP6nvC8cE",
+  "new_recommended_video_unchanged": "ttQZylKeFdg",
+  "files": [
+    {
+      "path": "docs/reviews/asdg-presentation-library/video-queue.json",
+      "before_sha256": "3d16f114f20e9164c7c63a13177189a054580ec194eca64fe9722be2a2c561bf",
+      "sha256": "c055888b2aa7e7def6257d8691fb963a0ca802469de894cb8c59fc23245a912a"
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/media.json",
+      "before_sha256": "4b9b9e78620fb4f1ced1ac96f917ca0821e87aab72111844268924cbfddf3280",
+      "sha256": "b4171e286c144e7e1404fba02d01922e7737e3e8972d172f81f76d45be8d1e2b"
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/README.md",
+      "before_sha256": "1edb2ab7c41c27408fc6db789d8c9abdefc607dfc99feef3e0e97b7675420c9a",
+      "sha256": "a8fa1d7454f9677377653516b1511a1ce3f2ae23e263a21c03b68f648a990e20"
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/short-video-slide-08.md",
+      "before_sha256": null,
+      "sha256": "6a85b70a47cb55e57c85a30fbf92dbad6519e21952c1e6961ae7484cdbd5d436"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.21-review-presentation-publication.md",
+      "before_sha256": null,
+      "sha256": "f67ef2c8a6374a7e2302ae500128a1ab641c706a3a6286c9bfefcc9caae335c3"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "d2ae2c2b7985abccf3cee0579bdbeb81f6feb29d86eddb8d1acac9142e330296",
+      "sha256": "5076db6dc1da07a0a7efab19714251f8678ea3956e97bb8617586578494f4b95"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "6acd9106b8b9d658e340c4b8d8dd11c70233f25ddd8dbc35a2b73d05702666d1",
+      "sha256": "df428f7a839b8bd46c75d49ff6c91fd420a94d13fb33946eba1768ae2d22d47b"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/presentations/asdg-introduction/build/release-correction/public-auto-captions-before.txt",
+      "sha256": "f5b102681bd85ebbd793e3b969f34a26aab51206137e61b53a6561ed10706cd3"
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/build/release-correction/corrected-frame-108.9.png",
+      "sha256": "05862282d6cffc42f422df6b1ad28dc8e3e9a0ae2e6e464538514d219c3b44f8"
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/build/release-correction/youtube-upload-limit.jpg",
+      "sha256": "c569c856ddd88d81d2a437fdc73237d018ebaa8e56f4bc5428240db4719bdd7f"
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/build/release-correction/vids-script-corrected.jpg",
+      "sha256": "029653a8dc69f5adde957f0983fe6448cf50851b075c7b13aab03e72536460bb"
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/build/release-correction/asdg-introduction-narrated.mp4",
+      "sha256": "0564ef958e9ebce10808c567160b5806c0668b630fadc3481445bd525b819c11"
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/build/release-correction/asdg-introduction-narrated.mp4.sha256",
+      "sha256": "3a8e55ad281f991a39444898299c873fe225475e7b3549342d2b4ce558f4e4a6"
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/build/release-correction/studio-unsaved-cut.jpg",
+      "sha256": "2720be6bcc2896eb0abd479961ad4b9e4a9b1bce90886febf4960b003444ac8d"
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/build/release-correction/video-stream-verification.json",
+      "sha256": "a0d136fe20ea72777cf2ce70b6eeae976669a27690c200dc876a32efdf463ab3"
+    }
+  ],
+  "checks": {
+    "supplied_sha256": "MATCH: 0564ef958e9ebce10808c567160b5806c0668b630fadc3481445bd525b819c11",
+    "bytes": 14205816,
+    "corrected_duration_seconds": 180.535011,
+    "full_ffmpeg_decode": "PASS",
+    "embedded_captions": "Quote repetition absent; the ends at 108.701s, why behind our from 108.701 to 109.676s.",
+    "video_bitstream_and_packet_timestamps": {
+      "hashes": {
+        "original": "SHA256=670eeb62ce04bd46e0278de7fd43012a953a746b6c7ca1e2d753a54729ac7fb5",
+        "corrected": "SHA256=670eeb62ce04bd46e0278de7fd43012a953a746b6c7ca1e2d753a54729ac7fb5"
+      },
+      "unchanged": true,
+      "video_packet_timestamps_unchanged": true,
+      "video_packet_count": 5415
+    },
+    "presentation_check": "PASS: 13 slides; no writes, using existing .venv",
+    "presentation_tests": "31 PASS in 0.911 seconds with TMPDIR=/private/tmp",
+    "package_integrity_manifest": "PASS",
+    "diff_whitespace": "PASS",
+    "auditory_listening": "UNAVAILABLE: audio tool result explicitly says model does not support audio input; no listening/voice-quality claim."
+  },
+  "source_edit": {
+    "url": "https://docs.google.com/videos/d/1Idhan4RV_u4CYKQBWOdShvn1wEZim4CQNu0rO-9duKc/edit?scene=id.h1005039f3aea78bd_0_22",
+    "before": "ensuring the 'why' behind our decisions",
+    "after": "ensuring the why behind our decisions",
+    "saved_to_drive_observed": true,
+    "original_private_sharing_preserved": true,
+    "existing_audio": "Voiceover outdated; not regenerated",
+    "svg_and_long_notes": "Unchanged; clean Git diff for slide08 folder."
+  },
+  "studio": {
+    "url": "https://studio.youtube.com/video/RUyP6nvC8cE/editor",
+    "public_auto_captions_before": "At 1:48: quote quote quote why behind our",
+    "public_auditory_defect_confirmation": "Not listened; auto-captions support user report.",
+    "cut_unsaved": true,
+    "requested_seconds_approx": [
+      108.03,
+      109.16
+    ],
+    "editor_frame_fields": [
+      "1:48:01",
+      "1:49:05"
+    ],
+    "fps": 30,
+    "approx_actual_seconds": [
+      108.033333,
+      109.166667
+    ],
+    "preview_playback_exercised": true,
+    "paused_at": "1:46:00",
+    "saved": false,
+    "public_result_verified_after_edit": false,
+    "remaining": "Listen the-to-why join, adjust if needed, save and verify processed public video at unchanged URL. No public edit attempted without auditory validation."
+  },
+  "release": {
+    "tag": "v0.3.0-pilot.1",
+    "asset": "asdg-introduction-narrated.mp4",
+    "asset_id": 710936087,
+    "live_api_digest": "sha256:663504a062e27afeb81c38b86198fb5ad41412a4203dd1e855ad509db0e88e97",
+    "live_size": 12597245,
+    "replacement_needed": true,
+    "replaced": false,
+    "prepared_path": "docs/presentations/asdg-introduction/build/release-correction/asdg-introduction-narrated.mp4",
+    "human_command": "gh release upload v0.3.0-pilot.1 docs/presentations/asdg-introduction/build/release-correction/asdg-introduction-narrated.mp4 --repo Elustondo-ai/agentic-sdlc-governance --clobber"
+  },
+  "queue": {
+    "file": "docs/reviews/asdg-presentation-library/video-queue.json",
+    "attempted_item": "recent-07",
+    "fresh_result": "Couldn\u2019t export to YouTube: You\u2019ve reached your upload limit.",
+    "new_publications": 0,
+    "recorded_public_videos": 10,
+    "ready_remaining": 11,
+    "further_export_attempts": "Stopped after shared upload-limit error.",
+    "user_section2": "Truncated after docs/reviews/asdg; continuation requested asynchronously, not received."
+  },
+  "failed_operations_and_resolution": [
+    "Sandbox curl DNS failed; approved network read fetched public release metadata and connected Drive file.",
+    "Broad local filename search stopped without results; original short source found in existing media.json.",
+    "Audio payload cannot be consumed by this model; auditory verification remains manual.",
+    "Optional FFmpeg caption-burn image failed because this FFmpeg subtitle filter was unavailable; embedded subtitle extraction succeeded.",
+    "System Python lacked defusedxml; existing .venv used successfully.",
+    "Initial short-script companion placed inside slide folder failed source-count validation; moved to presentation root, source check then passed.",
+    "Existing presentation unit test compared /var and /private/var temporary aliases; rerun with canonical TMPDIR=/private/tmp passed, without test edits."
+  ],
+  "review": "Same implementing agent; source/link and screenshot inspections only, not independent or human approval.",
+  "publication": "Source script text saved remotely; no Studio save, release replacement, commit, push or permission change.",
+  "self_inventory": "This JSON omits its own hash."
+}

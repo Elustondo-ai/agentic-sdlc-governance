@@ -20028,7 +20028,7 @@
       "recorded_at": "2026-10-29T00:49:43.250418+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       },
       "previous_state": {
         "sha256": "765d988e01a7b8cc2eb775972719f6b670c7b6b0a090c96f9c50b859e1adcb89",
@@ -20043,7 +20043,7 @@
       "recorded_at": "2026-10-29T00:49:43.261832+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       },
       "previous_state": {
         "sha256": "77b3331728354b14cef6ca9013672f7f3410ec41ec53e50fd32e252a90b08f08",
@@ -20058,7 +20058,7 @@
       "recorded_at": "2026-10-29T00:49:43.270997+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       },
       "previous_state": {
         "sha256": "04c12cbdfd880ed4ecc364903263d0b0bae2339d63fdeca20d3b1c2d60e66524",
@@ -20073,7 +20073,7 @@
       "recorded_at": "2026-10-29T00:49:43.281238+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -20083,7 +20083,7 @@
       "recorded_at": "2026-10-29T00:49:43.290907+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -20093,7 +20093,7 @@
       "recorded_at": "2026-10-29T00:49:43.300049+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -20103,7 +20103,7 @@
       "recorded_at": "2026-10-29T00:49:43.309146+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -20113,7 +20113,7 @@
       "recorded_at": "2026-10-29T00:49:43.319702+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -29236,6 +29236,1337 @@
         "sha256": null,
         "visible_review_markers": [],
         "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "README.md",
+      "sha256": "0ef17ddcef3a6f5278f4ac4d4162a8474d9524eed3693db1a0880e1afecd4857",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explain post-install next steps: team setup first, separately requested Context analysis later; truthful client capabilities."
+      },
+      "previous_state": {
+        "sha256": "65290401f155bec363643f00a6c6c03cf88e2214cdae03a0e9ec5919ee611f46",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "d424dd7530e457b15103279fc07af8bb3bc17176f4c00bdb6fc9f9c330bf53c2",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explain post-install next steps: team setup first, separately requested Context analysis later; truthful client capabilities."
+      },
+      "previous_state": {
+        "sha256": "82f12f3cb4b32bd4227d5e61a98c1843e56e57d6ec9e4077d3a0db666211e0ba",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-init/SKILL.md",
+      "sha256": "4d467855d663c6fc129352398ba527dd12c93a49dee59f57d35c1d20cea46dd8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explain post-install next steps: team setup first, separately requested Context analysis later; truthful client capabilities."
+      },
+      "previous_state": {
+        "sha256": "539bd041cb474bbf569ad7525cdfe24e1110101dad4196acf87de1becd3cb302",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/install-zip-prompt.md",
+      "sha256": "f842e70f7f7d4f04d3856b87c16929db2e7c4214cebc878d05d422e111f38b8c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explain post-install next steps: team setup first, separately requested Context analysis later; truthful client capabilities."
+      },
+      "previous_state": {
+        "sha256": "9648d7fdc63663f839a14dfebf9ab2df6ef26fb7c6f80a8e7340fe26a261eb21",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/install-clone-prompt.md",
+      "sha256": "b4dc1b63744f3522ee27d425c981ebf363943c772e79995db179fc7f58ea5c4b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explain post-install next steps: team setup first, separately requested Context analysis later; truthful client capabilities."
+      },
+      "previous_state": {
+        "sha256": "76970dc2e5cc02ecf85792da27691d310c203dc8d76507d580a1267be03c9464",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/installation.md",
+      "sha256": "bd114dfdec95cdd0fd54f4903836e9062907ef7bb9a06f9638a6e6feb0e4c632",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explain post-install next steps: team setup first, separately requested Context analysis later; truthful client capabilities."
+      },
+      "previous_state": {
+        "sha256": "1627facf655afe98328ede55ac4ab58422c4f82b28ef661058e0a516b9627c34",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "sha256": "d12ea5084f6662bc73786dea6d399c89abf63729777fe056057469df8252d146",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explain post-install next steps: team setup first, separately requested Context analysis later; truthful client capabilities."
+      },
+      "previous_state": {
+        "sha256": "a8fdeba21b7c63281ccb0fcfbf659ef35add6b891370b2f3ea35c2f129f8b426",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.md",
+      "sha256": "3616ae9a96e65594b06f082bc00a61d7598a76516a33aff1b28adfa2dc901204",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explain post-install next steps: team setup first, separately requested Context analysis later; truthful client capabilities."
+      },
+      "previous_state": {
+        "sha256": "47d8d5ebc40b07c01449de21d460b08c25098eb011765e6d5b2fbed8b04db44a",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_install.md",
+      "sha256": "8827a6cd9cad78d45c30018063a4f69471ce376ff5b631a93d90dfa3d84d3b91",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explain post-install next steps: team setup first, separately requested Context analysis later; truthful client capabilities."
+      },
+      "previous_state": {
+        "sha256": "55d6a5eb474f4375fd21137035646b66a149bc82e9a04ecd765e8e3171525d0c",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_portable.md",
+      "sha256": "3f949ce1b3817734ccd2022c86b0923c63574b5de41d319fcc517269672b011d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explain post-install next steps: team setup first, separately requested Context analysis later; truthful client capabilities."
+      },
+      "previous_state": {
+        "sha256": "00f47048a03b4fd52d2010419d6813796f8ef6051e072a28f9c906f457f87614",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/images/installation-engine.svg",
+      "sha256": "e5866ced724077e903926562f1c31c86475d16c36587d8343b0a5f0fd9e4bcb8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explain post-install next steps: team setup first, separately requested Context analysis later; truthful client capabilities."
+      },
+      "previous_state": {
+        "sha256": "3140579438c1457f1740df6f4c69463dd425ee1f46f010cdce02ed8c34386d0c",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.14-review-team-first-onboarding.md",
+      "sha256": "1cfdafe64e292164b5b5c90dbda2b78b4cabcacea70a25831138a10ccf6eaaa3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:14:14.101353+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explain post-install next steps: team setup first, separately requested Context analysis later; truthful client capabilities."
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "README.md",
+      "sha256": "40323a41b9d3cf4751bc6dc49d3ab5fbfdd5314b540cbc3e3a09b389bcd7a9f8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:20:13.212197+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explicit /asdg-create-team skill instruction instead of a conversational team-creation confirmation."
+      },
+      "previous_state": {
+        "sha256": "0ef17ddcef3a6f5278f4ac4d4162a8474d9524eed3693db1a0880e1afecd4857",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-init/SKILL.md",
+      "sha256": "aa47eee247376735492876ad6db7973b2902629c1ae4c6518b7ecd3d0ba9412c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:20:13.212197+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explicit /asdg-create-team skill instruction instead of a conversational team-creation confirmation."
+      },
+      "previous_state": {
+        "sha256": "4d467855d663c6fc129352398ba527dd12c93a49dee59f57d35c1d20cea46dd8",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.md",
+      "sha256": "87ad0fad66aee23ae400bbcdf2c6283fda7e0e6b9bc4839d76a2cab73dc78ba5",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:20:13.212197+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explicit /asdg-create-team skill instruction instead of a conversational team-creation confirmation."
+      },
+      "previous_state": {
+        "sha256": "3616ae9a96e65594b06f082bc00a61d7598a76516a33aff1b28adfa2dc901204",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_install.md",
+      "sha256": "b01143e0d6debf5032f417d04f6ea36ba972f62ea65bbfe758c55a4eeadbadd9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:20:13.212197+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explicit /asdg-create-team skill instruction instead of a conversational team-creation confirmation."
+      },
+      "previous_state": {
+        "sha256": "8827a6cd9cad78d45c30018063a4f69471ce376ff5b631a93d90dfa3d84d3b91",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_portable.md",
+      "sha256": "dca136a2a55b9a51fb05062e9ff6edeb28753e87085dcd58638078e21229af99",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:20:13.212197+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explicit /asdg-create-team skill instruction instead of a conversational team-creation confirmation."
+      },
+      "previous_state": {
+        "sha256": "3f949ce1b3817734ccd2022c86b0923c63574b5de41d319fcc517269672b011d",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "sha256": "f35fd34f73901675a899d91565125935e97b5056cb74dbcbbe257db0d7e22964",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:20:13.212197+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explicit /asdg-create-team skill instruction instead of a conversational team-creation confirmation."
+      },
+      "previous_state": {
+        "sha256": "d12ea5084f6662bc73786dea6d399c89abf63729777fe056057469df8252d146",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.15-review-skill-first-next-step.md",
+      "sha256": "4e7b6220b1b65842613982481843701a20da7a892bf8650c08ca790683f9e879",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:20:13.212197+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Explicit /asdg-create-team skill instruction instead of a conversational team-creation confirmation."
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "README.md",
+      "sha256": "22aff6ca631633a04b5c6bbb11887e1a1ce64a59e7124b01acec338825268e71",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "40323a41b9d3cf4751bc6dc49d3ab5fbfdd5314b540cbc3e3a09b389bcd7a9f8",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "b53c203d29059900bca98a6e1423c4bfe698b465e3691e4761eaa57232330b4c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "d424dd7530e457b15103279fc07af8bb3bc17176f4c00bdb6fc9f9c330bf53c2",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-init/SKILL.md",
+      "sha256": "6ca7cef78c4a1b086bd753fe54962297625203c122ed0d22433c57abda3be056",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "aa47eee247376735492876ad6db7973b2902629c1ae4c6518b7ecd3d0ba9412c",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-status/SKILL.md",
+      "sha256": "89687b96df20884b3ed774a6e2fe790c1328d1bd45a39ee0753b93323416d2bb",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "a0480b62d8c4ac5fd92c601c5d0674f76e6373e5d09bc65ee613be7576911ccb",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-status/status-format.md",
+      "sha256": "919364ce1d320a64684a3be69847666188138bd453a5c79b0733ba7c356efb9e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "ded2582912a597fd1d189ebf1eca4704dec5348a0a162598dc87ec19fdb769f4",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-suggestion/SKILL.md",
+      "sha256": "175e26873427bd6410bc4ffcc1c4bb5d2135472ace9bf786e511e420012de326",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "57e29493ac0d92fb85e97f863587356831d087b2412ddf044e39c152ec5374fe",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/install-zip-prompt.md",
+      "sha256": "6c4b50a98f5b62209558923d9c478d381b7f923ca112fbb488c16ff4428ee882",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "f842e70f7f7d4f04d3856b87c16929db2e7c4214cebc878d05d422e111f38b8c",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/install-clone-prompt.md",
+      "sha256": "a7589761b12a7fbf8ed61939a31d77f5814dabb7dc799170ff280404a9830d10",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "b4dc1b63744f3522ee27d425c981ebf363943c772e79995db179fc7f58ea5c4b",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/installation.md",
+      "sha256": "39d12bbff6ebbe74c412b2fe3a84ade67a81a5b36dbd9985d4d114657bc7e5d7",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "bd114dfdec95cdd0fd54f4903836e9062907ef7bb9a06f9638a6e6feb0e4c632",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "sha256": "205784906571fecf46e8288e0844264178d61cc1962827be2957eb6fd4f87e2d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "f35fd34f73901675a899d91565125935e97b5056cb74dbcbbe257db0d7e22964",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/images/installation-engine.svg",
+      "sha256": "77898afc32a14f901dcc9be75106f9a42a27552356c67779f897e8e2ae3a7c91",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "e5866ced724077e903926562f1c31c86475d16c36587d8343b0a5f0fd9e4bcb8",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.md",
+      "sha256": "e8533f92bee7c7c56dc83146f31823bdb4063e4caedc6f33d91c255f488c1551",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "87ad0fad66aee23ae400bbcdf2c6283fda7e0e6b9bc4839d76a2cab73dc78ba5",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_install.md",
+      "sha256": "1c62551ff0ea52d4a31cbe2281d2623a6d9c0bda3914f9157016ebb401395335",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "b01143e0d6debf5032f417d04f6ea36ba972f62ea65bbfe758c55a4eeadbadd9",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_portable.md",
+      "sha256": "7f83c0f2ce5ae038135eedebe935c30d3c9b7feef452e5953ecdc28c37f82b42",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "dca136a2a55b9a51fb05062e9ff6edeb28753e87085dcd58638078e21229af99",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "sha256": "b4d76fae217e76d98fbcc593c0e0b1647db4cdd04eaa661563bbcf67eae7f5fb",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": "66547f8f84b6ff729aab324823a293a01314f37f3be57220c44c57f278d11014",
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.16-review-status-owned-onboarding.md",
+      "sha256": "d13e8367a70a3f6b08c4758289e7360fa45e28cb52a5a92c25a353ab0dcdbaf0",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:25:31.168941+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+        "scope": "Installation hands off to /asdg-status; Status owns evidence-based /asdg-create-team recommendation, not Init."
+      },
+      "previous_state": {
+        "sha256": null,
+        "visible_review_markers": [],
+        "approval_binding": "No prior approval transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-create-team/SKILL.md",
+      "sha256": "65795c5c48ce59ab6f694cc46793d8545c4612a432c5dd8b5d71486ac8aad956",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:37:47.102571+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Local lifecycle-order policy for team setup; no live team creation or reorder."
+      },
+      "previous_state": {
+        "sha256": "cdc9e061d6a3efc8a40dbc3c9a44a3e3178f5e2d61adea4bd6d7b5ab2c5b211b",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-create-team/create-chats.md",
+      "sha256": "e765bad93252a576b5a4385d44fe32045c3e8c5ae994d7a142ab8d250441422f",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:37:47.102571+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Local lifecycle-order policy for team setup; no live team creation or reorder."
+      }
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "sha256": "fef6111429182fbcbf763d236f3569506c33b1f717e39eead33ca245e8871132",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:37:47.102571+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Local lifecycle-order policy for team setup; no live team creation or reorder."
+      },
+      "previous_state": {
+        "sha256": "80002824dfc28da43dd5f945df8607ec6d202b4c50277dd502f9152b768720b6",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "sha256": "ed73ddd9137b23380aab35b9577321106bcdd534508e1dfa911fcb06c0c19d3e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:37:47.102571+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Local lifecycle-order policy for team setup; no live team creation or reorder."
+      },
+      "previous_state": {
+        "sha256": "b4d76fae217e76d98fbcc593c0e0b1647db4cdd04eaa661563bbcf67eae7f5fb",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/metadata/package-files.json",
+      "sha256": "ce95a9709ddf540f9c9eed65b40970a2ba4fc8a8f7e872bcf732cfa1e24d296d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:37:47.102571+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Local lifecycle-order policy for team setup; no live team creation or reorder."
+      },
+      "previous_state": {
+        "sha256": "9057ff2efa67383f94f7ed379fdbd2add42e7c23bb61f4ea96122545172d2843",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.17-review-team-ordering.md",
+      "sha256": "13468ec1150c2a8fba4a6d3463444c1e734eb139dd88a9056e79ac016fd0e2c5",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:37:47.102571+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Local lifecycle-order policy for team setup; no live team creation or reorder."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-create-team/SKILL.md",
+      "sha256": "1ad1b8d46e88ca647d79bc2b221c9cc1882ec1d9cc9793c4ee1c23e897bbcd5d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:38:06.985330+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Clarify setup ordering authority and retain shared-preference approval gate."
+      },
+      "previous_state": {
+        "sha256": "65795c5c48ce59ab6f694cc46793d8545c4612a432c5dd8b5d71486ac8aad956",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-help/SKILL.md",
+      "sha256": "12afeb4f830b59b2e3c388a33554f20c082266a847f5bf82f472593d16b9c03a",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:45:22.841436+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add read-only ASDG command help with portable discovery and packaging."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-help/command-reference.md",
+      "sha256": "97c0ef9f685f8c977e9461f81da1d34be66c8dea213c332b3b959ac7bec43bc6",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:45:22.841436+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add read-only ASDG command help with portable discovery and packaging."
+      }
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-help/SKILL.md",
+      "sha256": "989071edd7f93f1a827fcc05ea441b55480048eef16a7f546cb391effd16eeb4",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:45:22.841436+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add read-only ASDG command help with portable discovery and packaging."
+      }
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-help/agents/openai.yaml",
+      "sha256": "13c11c4e4906d06f3540ee75053b334cd00d4c9cbd017e22b62100b1d01de7bd",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:45:22.841436+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add read-only ASDG command help with portable discovery and packaging."
+      }
+    },
+    {
+      "path": "asdg/skills/README.md",
+      "sha256": "17ee7d7a9be49bf90f52dfda8664455e3b29003f9ba6608ac35cac65ddf13314",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:45:22.841436+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add read-only ASDG command help with portable discovery and packaging."
+      },
+      "previous_state": {
+        "sha256": "49447deb42a60864d2ec9bcae2bd8a2841028abdb4ba196a5b7733306a3c34c4",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/metadata/package-files.json",
+      "sha256": "786ddaa0483b5c2e605192a7a4a1107ecf0ee3bebe69eb0fb4fbb6199da973fd",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:45:22.841436+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add read-only ASDG command help with portable discovery and packaging."
+      },
+      "previous_state": {
+        "sha256": "ce95a9709ddf540f9c9eed65b40970a2ba4fc8a8f7e872bcf732cfa1e24d296d",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "sha256": "d123e3831c94c39828f5c2bfb8d4b4178af4a6547595c5c17202d5742e8ffd4d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:45:22.841436+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add read-only ASDG command help with portable discovery and packaging."
+      },
+      "previous_state": {
+        "sha256": "fef6111429182fbcbf763d236f3569506c33b1f717e39eead33ca245e8871132",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "sha256": "733ba013c84e0866ba11aeba2c8515ca1a6bf763e3d0080a8903c7c896621393",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:45:22.841436+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add read-only ASDG command help with portable discovery and packaging."
+      },
+      "previous_state": {
+        "sha256": "ed73ddd9137b23380aab35b9577321106bcdd534508e1dfa911fcb06c0c19d3e",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.18-review-command-help.md",
+      "sha256": "a3af9aa96847b9cc6b28b0878450360ee40b1223075e1850af1d177a2e4a9200",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T02:45:22.841436+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add read-only ASDG command help with portable discovery and packaging."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-update/SKILL.md",
+      "sha256": "890062cb946626c9ce2a84871001c94d07c1f1cc61bacc5dddd251714d45b06b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:04:56.840913+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add asdg-update and prepare sample update without applying."
+      }
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-update/SKILL.md",
+      "sha256": "9fc31ad5543fe814276d324d183eb4cbd2f6101d8e4ddafeaaae5e6651586cc3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:04:56.840913+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add asdg-update and prepare sample update without applying."
+      }
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-update/agents/openai.yaml",
+      "sha256": "6f7c2319a3d167cfb13348be61166eefa383ce6f285fb5dba1fb53b5dc533073",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:04:56.840913+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add asdg-update and prepare sample update without applying."
+      }
+    },
+    {
+      "path": "asdg/skills/README.md",
+      "sha256": "4f0686014734b944370c85263c6f1859b4e787c1161acc5ddaa28bb1f1898551",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:04:56.840913+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add asdg-update and prepare sample update without applying."
+      },
+      "previous_state": {
+        "sha256": "17ee7d7a9be49bf90f52dfda8664455e3b29003f9ba6608ac35cac65ddf13314",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-help/SKILL.md",
+      "sha256": "eb55ad8fbc4aecbd55bf8835e83507d2df1ce55bc4c31d17199f297d4803797e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:04:56.840913+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add asdg-update and prepare sample update without applying."
+      },
+      "previous_state": {
+        "sha256": "12afeb4f830b59b2e3c388a33554f20c082266a847f5bf82f472593d16b9c03a",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-help/command-reference.md",
+      "sha256": "8a4984d7d3812078c58972a291f2829c5d7d92b9da8242bbc2df6e868be3ae37",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:04:56.840913+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add asdg-update and prepare sample update without applying."
+      },
+      "previous_state": {
+        "sha256": "97c0ef9f685f8c977e9461f81da1d34be66c8dea213c332b3b959ac7bec43bc6",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/synchronization.md",
+      "sha256": "c2089a62ca5c2eee8a002a60ad9e86028175375b0d12a26340a6d779873ffd24",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:04:56.840913+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add asdg-update and prepare sample update without applying."
+      },
+      "previous_state": {
+        "sha256": "5e903e592afc3acbd9a00c36a5562084757f2c958c93624cdad80d15a820870c",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/metadata/package-files.json",
+      "sha256": "8040bbc5026daf88a7d97f8a5fc9b5d70b513245e9d468c7aec48a223e9d6289",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:04:56.840913+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add asdg-update and prepare sample update without applying."
+      },
+      "previous_state": {
+        "sha256": "786ddaa0483b5c2e605192a7a4a1107ecf0ee3bebe69eb0fb4fbb6199da973fd",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "sha256": "600b8b515d53ec92f69ca28edc14f5b05f75b42060a27ae118944fe6fa5c99f9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:04:56.840913+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add asdg-update and prepare sample update without applying."
+      },
+      "previous_state": {
+        "sha256": "d123e3831c94c39828f5c2bfb8d4b4178af4a6547595c5c17202d5742e8ffd4d",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "sha256": "b19f54844001347682b55022586bca011fe1da2690fa16071dfb8e7de7502836",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:04:56.840913+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add asdg-update and prepare sample update without applying."
+      },
+      "previous_state": {
+        "sha256": "733ba013c84e0866ba11aeba2c8515ca1a6bf763e3d0080a8903c7c896621393",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.19-review-project-update.md",
+      "sha256": "79e24243d61465be071d34de358bd54bb26e8483b090bc594991d11b384e5abb",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:04:56.840913+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add asdg-update and prepare sample update without applying."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.19-sample-update-preparation.md",
+      "sha256": "cc6ff51eb6b4473fc2351d5bb0bf9c43abd5ecd686fc83fd4b9817c188bba48e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:04:56.840913+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Add asdg-update and prepare sample update without applying."
+      }
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/video-queue.json",
+      "sha256": "c055888b2aa7e7def6257d8691fb963a0ca802469de894cb8c59fc23245a912a",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:24:08.591481+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Earlier introduction narration/source correction and upload queue retry; public cut and release replacement not performed."
+      },
+      "previous_state": {
+        "sha256": "3d16f114f20e9164c7c63a13177189a054580ec194eca64fe9722be2a2c561bf",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/media.json",
+      "sha256": "b4171e286c144e7e1404fba02d01922e7737e3e8972d172f81f76d45be8d1e2b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:24:08.591481+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Earlier introduction narration/source correction and upload queue retry; public cut and release replacement not performed."
+      },
+      "previous_state": {
+        "sha256": "4b9b9e78620fb4f1ced1ac96f917ca0821e87aab72111844268924cbfddf3280",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/README.md",
+      "sha256": "a8fa1d7454f9677377653516b1511a1ce3f2ae23e263a21c03b68f648a990e20",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:24:08.591481+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Earlier introduction narration/source correction and upload queue retry; public cut and release replacement not performed."
+      },
+      "previous_state": {
+        "sha256": "1edb2ab7c41c27408fc6db789d8c9abdefc607dfc99feef3e0e97b7675420c9a",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/short-video-slide-08.md",
+      "sha256": "6a85b70a47cb55e57c85a30fbf92dbad6519e21952c1e6961ae7484cdbd5d436",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:24:08.591481+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Earlier introduction narration/source correction and upload queue retry; public cut and release replacement not performed."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.21-review-presentation-publication.md",
+      "sha256": "f67ef2c8a6374a7e2302ae500128a1ab641c706a3a6286c9bfefcc9caae335c3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:24:08.591481+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+        "scope": "Earlier introduction narration/source correction and upload queue retry; public cut and release replacement not performed."
+      }
+    },
+    {
+      "path": "README.md",
+      "sha256": "fa2472111aa28400cce8660d813f2b4de38b3a0e74b891d56db24e283e455e20",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:29:43.518753+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "scope": "Explicitly authorized pilot.3 commit, push and prerelease; prior assets preserved."
+      },
+      "previous_state": {
+        "sha256": "22aff6ca631633a04b5c6bbb11887e1a1ce64a59e7124b01acec338825268e71",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/metadata/distribution.json",
+      "sha256": "42477ff6bf685a8378197fb54ea87f08c640438dd224f0203f3c80addbd5cf2d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:29:43.519126+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "scope": "Explicitly authorized pilot.3 commit, push and prerelease; prior assets preserved."
+      },
+      "previous_state": {
+        "sha256": "f7f46e1df6cd145afede9d911e7d45685e99a173b4308ed274d710a3d0c8a39c",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/metadata/package-files.json",
+      "sha256": "2c9d43322dc2a7bfddcf92f198a96159bd31a8b436d6c6d8f02556bfb2bf7bcc",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:29:43.519156+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "scope": "Explicitly authorized pilot.3 commit, push and prerelease; prior assets preserved."
+      },
+      "previous_state": {
+        "sha256": "8040bbc5026daf88a7d97f8a5fc9b5d70b513245e9d468c7aec48a223e9d6289",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/metadata/deliveries/0.3.0-pilot.2.json",
+      "sha256": "d988ed18b99ed5a03613fa9b7b01e1eafdd0fa7def300e46aab192370a183405",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:29:43.519247+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "scope": "Explicitly authorized pilot.3 commit, push and prerelease; prior assets preserved."
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli_model.py",
+      "sha256": "f976584fe2b6718b2d49478d0e0619c9fe80f9e9a880c4803aa3637c4c53d51f",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:29:43.519280+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "scope": "Explicitly authorized pilot.3 commit, push and prerelease; prior assets preserved."
+      },
+      "previous_state": {
+        "sha256": "23a45ae84ef13bfe8360c6cc0a460d82b60ec85691e2e9ec20042e015e95289a",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli_model.md",
+      "sha256": "9743c7444a0184a683f5ce971657a5756f040ac9ea1d9bcc136a94c66c68e62b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:29:43.519323+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "scope": "Explicitly authorized pilot.3 commit, push and prerelease; prior assets preserved."
+      },
+      "previous_state": {
+        "sha256": "8df5e3c79e1c14e488273443abaded71ab88e880c9d10a804d2e30e2ea46f3e5",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/distribution-build.md",
+      "sha256": "7bcaa5b37a4cb7ae430b77230b0b759068db960976e17903d834500e1d0c3c5f",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:29:43.519357+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "scope": "Explicitly authorized pilot.3 commit, push and prerelease; prior assets preserved."
+      },
+      "previous_state": {
+        "sha256": "511b4a14687c7a6c1fa9d2b5ba27aa315effa5898290d3b1ebc18c105fd4a3b5",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/presentations/README.md",
+      "sha256": "9053969d20dd0df561792074917d4377d58067168b0195ebebcbfc387e11f614",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:29:43.519402+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "scope": "Explicitly authorized pilot.3 commit, push and prerelease; prior assets preserved."
+      },
+      "previous_state": {
+        "sha256": "d930242fb679693ea12998ba74a74b2292d5a9ae6d067793d81284f21b6d83cc",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/presentations/asdg-introduction/short-video-slide-08.md",
+      "sha256": "fe9588cf7da72620cd0b3b68d4b3f59887bb2816797639dbd9e500dcb6f44ad7",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:29:43.519445+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "scope": "Explicitly authorized pilot.3 commit, push and prerelease; prior assets preserved."
+      },
+      "previous_state": {
+        "sha256": "6a85b70a47cb55e57c85a30fbf92dbad6519e21952c1e6961ae7484cdbd5d436",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.21-review-presentation-publication.md",
+      "sha256": "e474ee7d38e3bf99d30a32cb7c670f5ef421f5ea3470162fb0f3d23596445129",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:29:43.519477+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "scope": "Explicitly authorized pilot.3 commit, push and prerelease; prior assets preserved."
+      },
+      "previous_state": {
+        "sha256": "f67ef2c8a6374a7e2302ae500128a1ab641c706a3a6286c9bfefcc9caae335c3",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.22-review-pilot3-release.md",
+      "sha256": "b54634b012f86a350a8e0c8b462bbe4dfc0f70a29d8e295c0106727e970b6700",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T03:29:43.519512+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_agent": "Codex / ASDG Admin",
+        "scope": "Explicitly authorized pilot.3 commit, push and prerelease; prior assets preserved."
       }
     }
   ],

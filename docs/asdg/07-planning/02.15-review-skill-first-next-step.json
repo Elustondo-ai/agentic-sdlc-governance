@@ -1,0 +1,90 @@
+{
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "starting_head": "63c4f065138f09988bdd830819260136a4455d65",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "files": [
+    {
+      "path": "README.md",
+      "before_sha256": "0ef17ddcef3a6f5278f4ac4d4162a8474d9524eed3693db1a0880e1afecd4857",
+      "sha256": "40323a41b9d3cf4751bc6dc49d3ab5fbfdd5314b540cbc3e3a09b389bcd7a9f8"
+    },
+    {
+      "path": "asdg/skills/asdg-init/SKILL.md",
+      "before_sha256": "4d467855d663c6fc129352398ba527dd12c93a49dee59f57d35c1d20cea46dd8",
+      "sha256": "aa47eee247376735492876ad6db7973b2902629c1ae4c6518b7ecd3d0ba9412c"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.py",
+      "before_sha256": "2e1a025ce32e0b9ddb98b0adeff740123160f26926d8766da91e1eb9cd202eb5",
+      "sha256": "f9c71a336f811f0f19b5e1a1376741d12db3ffa9e6e0a457e452d7c17edd77c8"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_install.md",
+      "before_sha256": "3616ae9a96e65594b06f082bc00a61d7598a76516a33aff1b28adfa2dc901204",
+      "sha256": "87ad0fad66aee23ae400bbcdf2c6283fda7e0e6b9bc4839d76a2cab73dc78ba5"
+    },
+    {
+      "path": "asdg/tests/test_install.py",
+      "before_sha256": "e6038bfbc720258ac5e35c7ca3ef80658e1d3aa271ab12ee5070ea867c2a9c36",
+      "sha256": "4fab30a665aeadf660cc480c2dfa2913018e5986a916bd1072f65b3bebdfae3f"
+    },
+    {
+      "path": "asdg/tests/test_install.md",
+      "before_sha256": "8827a6cd9cad78d45c30018063a4f69471ce376ff5b631a93d90dfa3d84d3b91",
+      "sha256": "b01143e0d6debf5032f417d04f6ea36ba972f62ea65bbfe758c55a4eeadbadd9"
+    },
+    {
+      "path": "asdg/tests/test_portable.py",
+      "before_sha256": "4893459d8e6c0ac6b5598e2dc4687281775625a18215a6c2353a4ec6a308e6a4",
+      "sha256": "688ceb95862bbf7900ee7ece4d174e9104dec15c25159791b1a8af7083b2474c"
+    },
+    {
+      "path": "asdg/tests/test_portable.md",
+      "before_sha256": "3f949ce1b3817734ccd2022c86b0923c63574b5de41d319fcc517269672b011d",
+      "sha256": "dca136a2a55b9a51fb05062e9ff6edeb28753e87085dcd58638078e21229af99"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "d4591cfea0d2105bf02f7e9bb01c4c9b531d998ea4f83b207a37e12192aaedf1",
+      "sha256": "e445db4dcdb88608cc4b45bd7349ed80457ff7a3dfe7a0dfd362c51a6d6857e7"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "3c1aa6951a933e00a6233e5aa5f3ee17cdf5c29ddb18782636825968cc9afc60",
+      "sha256": "79ce4578648199e9a280812552240e9537d9578daeeb2f61da88cebf6b830f66"
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "before_sha256": "d12ea5084f6662bc73786dea6d399c89abf63729777fe056057469df8252d146",
+      "sha256": "f35fd34f73901675a899d91565125935e97b5056cb74dbcbbe257db0d7e22964"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.15-review-skill-first-next-step.md",
+      "before_sha256": null,
+      "sha256": "4e7b6220b1b65842613982481843701a20da7a892bf8650c08ca790683f9e879"
+    }
+  ],
+  "self_inventory": "docs/asdg/07-planning/02.15-review-skill-first-next-step.json (self hash omitted)",
+  "review_events": {
+    "recorded_at": "2026-11-05T02:20:13.212197+00:00",
+    "preserved": 1892,
+    "appended": 7
+  },
+  "checks": {
+    "focused_regressions": "13 PASS in 16.303 seconds; both routes and both clients",
+    "integrity": "PASS",
+    "zip_members_and_checksum": "PASS",
+    "markdown_limits_links_whitespace": "PASS",
+    "evidence_privacy": "PASS"
+  },
+  "initial_test_failure": "A new assertion incorrectly matched /asdg-create-team inside full-plan file paths, causing cascading disposable-fixture failures. Corrected assertion to require the actual skill instruction; all 13 checks then passed. No installer failure found.",
+  "scope": "Teach /asdg-create-team explicitly as requested; wait for its invocation instead of asking CREATE TEAM/NOT NOW.",
+  "limits": [
+    "Native slash discovery/invocation not exercised in this pass.",
+    "Codex native project-chat tools remain required for automatic team setup; Claude manual fallback retained."
+  ],
+  "preserved": "Prior team-first changes, installer tokens and governance boundaries.",
+  "git_publication": "No stage, commit, push or release update."
+}

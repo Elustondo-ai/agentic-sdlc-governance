@@ -15,7 +15,7 @@ Resolves the embedded project root through Git and validates the thirteen canoni
 ## Interface and data
 
 Catalogue rows are dictionaries with stage, native_name, role_id, folder, entry and title. Constants include REPO, VERSION, CATALOG, ARTIFACTS and BINDING. The legacy PERSPECTIVES mapping still names intended/planned; current folder creation is owned by cli_project.
-VERSION is `0.3.0-pilot.2` and matches the candidate in `metadata/distribution.json`; an older client binding is refused until a reviewed upgrade reconciles it.
+VERSION is `0.3.0-pilot.3` and matches the candidate in `metadata/distribution.json`; an older client binding is refused until a reviewed upgrade reconciles it.
 
 | Callable or interface | Contract |
 | --- | --- |

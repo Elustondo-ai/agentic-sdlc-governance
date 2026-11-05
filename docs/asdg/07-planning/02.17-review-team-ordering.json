@@ -1,0 +1,85 @@
+{
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+  "starting_head": "63c4f065138f09988bdd830819260136a4455d65",
+  "starting_state": "Dirty: prior onboarding edits, manifest, review ledger, installer, distribution/install/portable tests and 02.14\u201302.16 review records; preserved.",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "scope": "Local canonical team ordering policy; no team setup invocation, live reorder or shared-preference change.",
+  "files": [
+    {
+      "path": "asdg/skills/asdg-create-team/SKILL.md",
+      "before_sha256": "cdc9e061d6a3efc8a40dbc3c9a44a3e3178f5e2d61adea4bd6d7b5ab2c5b211b",
+      "sha256": "1ad1b8d46e88ca647d79bc2b221c9cc1882ec1d9cc9793c4ee1c23e897bbcd5d"
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "before_sha256": "80002824dfc28da43dd5f945df8607ec6d202b4c50277dd502f9152b768720b6",
+      "sha256": "fef6111429182fbcbf763d236f3569506c33b1f717e39eead33ca245e8871132"
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "before_sha256": "b4d76fae217e76d98fbcc593c0e0b1647db4cdd04eaa661563bbcf67eae7f5fb",
+      "sha256": "ed73ddd9137b23380aab35b9577321106bcdd534508e1dfa911fcb06c0c19d3e"
+    },
+    {
+      "path": "asdg/metadata/package-files.json",
+      "before_sha256": "9057ff2efa67383f94f7ed379fdbd2add42e7c23bb61f4ea96122545172d2843",
+      "sha256": "ce95a9709ddf540f9c9eed65b40970a2ba4fc8a8f7e872bcf732cfa1e24d296d"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "21315bfb325c8322394c3371103679c1e350a3d7647f7dc987e2a36f7b9671d1",
+      "sha256": "6c1ff3fbe449e6fe94ecf10baebbbfe6b2674edc2e54ba151dec32e3e3e88a06"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "e6758e4a7bd2d366789a348b894b1edcc57e41a27c61bd4a1bdc8ff8090eff09",
+      "sha256": "d7f03630e58ad75045e5be9d08c0339c6ed0695c3c52fba5c9ebc103b77585e7"
+    },
+    {
+      "path": "asdg/skills/asdg-create-team/create-chats.md",
+      "before_sha256": null,
+      "sha256": "e765bad93252a576b5a4385d44fe32045c3e8c5ae994d7a142ab8d250441422f"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.17-review-team-ordering.md",
+      "before_sha256": null,
+      "sha256": "13468ec1150c2a8fba4a6d3463444c1e734eb139dd88a9056e79ac016fd0e2c5"
+    }
+  ],
+  "checks": {
+    "focused_distribution": "7 tests PASS in 6.398 seconds after final skill edit",
+    "integrity": "PASS",
+    "generated_zip_exact_skill_and_procedure": "PASS",
+    "checksum": "PASS",
+    "markdown_lengths": "PASS",
+    "diff_whitespace": "PASS",
+    "regression_suite": "Ran 128 tests in 114.103s; PASS (full run started before final authority wording clarification; focused distribution suite rerun afterward)."
+  },
+  "native_evidence": {
+    "tools_discovered": [
+      "list_threads",
+      "update_sidebar_preferences",
+      "reorder_section",
+      "reorder_sidebar_projects",
+      "reorder_sidebar_sections"
+    ],
+    "preference_readback": {
+      "chats": "manual",
+      "pinned": "manual",
+      "projects": "manual"
+    },
+    "shared_scope": "Recents and project chat sorting shared across projects and Codex/Work",
+    "project_chat_reorder_tool": "Not exposed",
+    "reorder_attempts": [],
+    "visual_verification": "Unavailable/not performed",
+    "current_chat_title": "ASDG Admin acknowledged; visual readback not inspected"
+  },
+  "manual_scenarios": "Source walkthrough only: manual vs shared recency preference; unresolved IDs; preservation; unsupported order; acknowledgement vs visual verification.",
+  "review_independence": "Implementing agent self-review, shared source; no independent review.",
+  "self_inventory": "This JSON omits its own hash.",
+  "publication": "No staging, commit, push or publication.",
+  "runtime": "Python 3.15.0; source Python 3.9 compatibility checked structurally."
+}

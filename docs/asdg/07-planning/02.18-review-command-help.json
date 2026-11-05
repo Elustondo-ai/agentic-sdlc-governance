@@ -1,0 +1,89 @@
+{
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "session": "01a1a990-772c-7523-aa33-b0ef31b22364",
+  "starting_head": "63c4f065138f09988bdd830819260136a4455d65",
+  "starting_state": "Prior uncommitted onboarding and lifecycle team-ordering changes preserved.",
+  "scope": "Create canonical read-only command-help skill, discovery template, index, focused distribution coverage and local candidate.",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "files": [
+    {
+      "path": "asdg/skills/README.md",
+      "before_sha256": "49447deb42a60864d2ec9bcae2bd8a2841028abdb4ba196a5b7733306a3c34c4",
+      "sha256": "17ee7d7a9be49bf90f52dfda8664455e3b29003f9ba6608ac35cac65ddf13314"
+    },
+    {
+      "path": "asdg/metadata/package-files.json",
+      "before_sha256": "ce95a9709ddf540f9c9eed65b40970a2ba4fc8a8f7e872bcf732cfa1e24d296d",
+      "sha256": "786ddaa0483b5c2e605192a7a4a1107ecf0ee3bebe69eb0fb4fbb6199da973fd"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "6c1ff3fbe449e6fe94ecf10baebbbfe6b2674edc2e54ba151dec32e3e3e88a06",
+      "sha256": "66ee1572a302d0fd482e2c5b2d4f2bd5f537b75318f51e9eef8fb3764baa3c82"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "d7f03630e58ad75045e5be9d08c0339c6ed0695c3c52fba5c9ebc103b77585e7",
+      "sha256": "27362af651a05e6c936a1757a3dc09cc388a151b747bfa74f0dafc52ca98c7f7"
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "before_sha256": "fef6111429182fbcbf763d236f3569506c33b1f717e39eead33ca245e8871132",
+      "sha256": "d123e3831c94c39828f5c2bfb8d4b4178af4a6547595c5c17202d5742e8ffd4d"
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "before_sha256": "ed73ddd9137b23380aab35b9577321106bcdd534508e1dfa911fcb06c0c19d3e",
+      "sha256": "733ba013c84e0866ba11aeba2c8515ca1a6bf763e3d0080a8903c7c896621393"
+    },
+    {
+      "path": "asdg/skills/asdg-help/SKILL.md",
+      "before_sha256": null,
+      "sha256": "12afeb4f830b59b2e3c388a33554f20c082266a847f5bf82f472593d16b9c03a"
+    },
+    {
+      "path": "asdg/skills/asdg-help/command-reference.md",
+      "before_sha256": null,
+      "sha256": "97c0ef9f685f8c977e9461f81da1d34be66c8dea213c332b3b959ac7bec43bc6"
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-help/SKILL.md",
+      "before_sha256": null,
+      "sha256": "989071edd7f93f1a827fcc05ea441b55480048eef16a7f546cb391effd16eeb4"
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-help/agents/openai.yaml",
+      "before_sha256": null,
+      "sha256": "13c11c4e4906d06f3540ee75053b334cd00d4c9cbd017e22b62100b1d01de7bd"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.18-review-command-help.md",
+      "before_sha256": null,
+      "sha256": "a3af9aa96847b9cc6b28b0878450360ee40b1223075e1850af1d177a2e4a9200"
+    }
+  ],
+  "checks": {
+    "distribution": "Ran 8 tests in 6.606s; PASS",
+    "portable": "Ran 59 tests in 82.532s; PASS",
+    "integrity_manifest": "PASS",
+    "zip_exact_help_reference_adapter_metadata": "PASS",
+    "checksum": "PASS",
+    "markdown_lengths_links_skill_syntax_python_compatibility": "PASS: repository validator",
+    "diff_whitespace": "PASS",
+    "cli_help_readback": "PASS: top-level, sprint and agent --help inspected",
+    "skill_creator_quick_validate": "UNAVAILABLE: PyYAML missing; repository checks used without installing dependencies"
+  },
+  "documented_commands": "17 portable skills, common selectors, all CLI command families; optional provider presentation/component tools distinguished.",
+  "initial_failed_operations": [
+    "YAML metadata generator without --name failed because PyYAML was absent; succeeded with supported explicit --name.",
+    "Skill-creator quick validator could not import PyYAML.",
+    "Initial package check found missing metadata file after generator failure; passed after successful generation."
+  ],
+  "native_runtime": "Not tested: skill discovery, slash/dollar invocation and behavioral Help response. Provider disabled discovery entries unchanged.",
+  "review": "Same implementing agent/source; manual source walkthroughs only, no independent review.",
+  "rendering": "Markdown source/link inspection; navigation/reference tables and brief review note, no UI screenshot or runtime visual claim.",
+  "self_inventory": "This JSON omits its own hash.",
+  "publication": "No staging, commit, push, install or publication; generated files ignored under build/."
+}
