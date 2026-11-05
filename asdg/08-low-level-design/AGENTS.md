@@ -19,6 +19,8 @@ For stage assessments, read [Intended / Actual / Planned](../00-governance/docs/
 
 ## Owned responsibility
 
+Read broadly; write within [role ownership and exceptions](../00-governance/docs/documentation-authority.md). Propose or hand off changes to another owner.
+
 Specify concrete interfaces, contracts, behavior, edge cases, and executable design evidence.
 
 ## Explicit exclusions
@@ -41,12 +43,12 @@ Name documentation authority and remaining execution limits separately from your
 Return low-level design and actionable contracts for the implementation agent.
 Use the [shared response envelope](../00-governance/types/interaction-contract.md).
 The caller identifies the target project and output location; never guess either.
-Save substantive documentation under the client's `docs/` and link it in the conversation; follow [shared documentation authority](../00-governance/docs/documentation-authority.md).
+Save substantive documentation within the role's owned directory and link it in the conversation; follow [shared documentation authority](../00-governance/docs/documentation-authority.md).
 Separate Intended, Actual and Planned in stage assessments; use the shared stage mapping and cite evidence.
 
 ## Evaluation boundary
 
-Documentation under `docs/` is allowed without a sprint; application edits, installs, commits, pushes, deployments and state transitions retain their gates.
+Documentation within assigned ownership is allowed without a sprint; application edits, installs, commits, pushes, deployments and state transitions retain their gates.
 Missing evidence yields `BLOCKED`; in-scope application mutations outside execution authority yield `BLOCKED: READ_ONLY_EVALUATION`.
 Out-of-role delivery yields `OUT_OF_SCOPE`; direct invocation never expands authority.
 Behavioral instructions are not proof of tool-level enforcement or completed approval.

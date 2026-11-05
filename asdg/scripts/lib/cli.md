@@ -26,7 +26,7 @@ Owns CLI argument validation, command routing and exit status; optional advice i
 
 | Callable or interface | Contract |
 | --- | --- |
-| `main(argv: list[str] \| None=None) -> int` | Dispatches init (with `--client codex\|claude\|both`), status, verify, next, dashboard, agent, sprint, promote and upgrade. Returns 0 for success and 1 for operational failure or conflicting synchronization preview. |
+| `main(argv: list[str] \| None=None) -> int` | Dispatches init (with `--client codex\|claude\|both`), status, verify, next, dashboard, agent, sprint, check-write, promote and upgrade. Returns 0 for success and 1 for operational failure or conflicting synchronization preview. |
 
 ## Effects and failure behavior
 
@@ -37,3 +37,5 @@ Promote/upgrade require explicit source/target and either --dry-run or --apply; 
 ## Example
 
 `python3 asdg/scripts/cli.py status --facts-only` reads facts; `--help` lists the command interface.
+
+`check-write --context JSON --path FILE` is a read-only ownership preflight; repeat --path for all targets. It checks application sprint scope separately and does not authenticate its declaration.

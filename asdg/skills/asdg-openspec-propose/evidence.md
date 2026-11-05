@@ -40,5 +40,5 @@ Write a delta specific to the requested change; link existing decisions instead 
 In every resulting artifact, link its relevant ASDG sources or the proposal's source table and identify which claims/scenarios/tasks those links support. For nested specs, calculate relative links from that file's directory.
 Use schema-compatible sections or short inline references without damaging requirement/scenario/task syntax. Do not copy raw OpenSpec context or rules into the artifacts.
 For a separate planning store, use stable repository URLs pinned to the observed revision when available. For uncommitted/local-only sources, identify the checkout and exact hash, disclose portability limits and never invent a remote URL.
-A Stage 07 navigation entry may point to the change and its pending review questions; it must not duplicate the plan or imply sprint selection.
+A Planning-owned Stage 07 navigation entry may point to the change and its pending review questions; it must not duplicate the plan or imply sprint selection.
 Recheck linked bytes before finishing. Source drift requires an updated assessment, not an inherited approval.

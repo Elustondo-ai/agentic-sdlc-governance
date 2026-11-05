@@ -30,4 +30,4 @@ Markdown is the contract notation; UML use cases are the required overall model 
 `OUT_OF_SCOPE`: outside the owned responsibility; return for coordinator routing.
 `BLOCKED`: missing input, evidence, tool capability or evaluation-mode permission.
 `REVIEW_REQUIRED`: a proposal needs a human decision; no approval is inferred.
-Save documentation under the client's `docs/` through [shared documentation authority](../../00-governance/docs/documentation-authority.md); application and state mutations retain their gates.
+Save documentation within the role's owned directory through [shared documentation authority](../../00-governance/docs/documentation-authority.md); application and state mutations retain their gates.

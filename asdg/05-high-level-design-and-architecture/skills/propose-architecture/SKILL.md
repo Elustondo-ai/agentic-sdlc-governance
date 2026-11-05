@@ -26,3 +26,5 @@ Adapt the [worked example](../../../skills/asdg-decision/example.md); never inhe
 Validate links and source size; inspect every new/changed visual embedded at document width and representative complete pages.
 Record exact hashes and visual-review evidence under the shared documentation standard; report missing checks specifically.
 Do not claim tests, handoffs, implementation or formal acceptance without evidence.
+
+Apply [central ownership and pre-write checks](../../../00-governance/docs/write-controls.md) before saving; propose or hand off changes to another owner.

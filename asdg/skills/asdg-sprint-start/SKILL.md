@@ -5,6 +5,8 @@ description: Start an explicitly requested ASDG sprint from a clean Git worktree
 
 # Start an ASDG sprint
 
+Use [central ownership and pre-write checks](../../00-governance/docs/write-controls.md) for this workflow; its explicit exception never grants unrelated writes.
+
 Turn the user's sprint-start decision into the project's authoritative active scope.
 Read client instructions, [session policy](../asdg-focus/session-policy.md) and [the sprint gate](../../00-governance/docs/sprint-gate.md).
 Resolve the client root as `../../..` from this canonical skill directory; preserve this chat's Focus.

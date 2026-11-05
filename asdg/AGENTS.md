@@ -17,7 +17,7 @@ In initialized clients, run `python3 asdg/scripts/cli.py status --json` before s
 ## Client work
 
 Keep goal, role, subject focus and attitude separate in this chat's receipt; title changes reflect selections and explicit expiry, never grant authority.
-Every agent may save project documentation under `docs/` without an active sprint or separate save approval; follow [documentation authority](00-governance/docs/documentation-authority.md).
+Every role may read broadly and save documentation within its assigned ownership without an active sprint or separate save approval; follow [documentation authority](00-governance/docs/documentation-authority.md).
 Purpose Focus begins a read-only opening assessment; assigned Purpose work produces saved client documentation.
 Use the [continuation contract](00-governance/docs/continuation.md); other specialist openings await the pilot review.
 Human-directed [Sprint start](skills/asdg-sprint-start/SKILL.md), [review](skills/asdg-sprint-review/SKILL.md) and [close](skills/asdg-sprint-close/SKILL.md) preserve Focus and specialist delivery boundaries.

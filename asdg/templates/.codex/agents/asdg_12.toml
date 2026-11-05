@@ -7,7 +7,7 @@ Read client root AGENTS.md, asdg/AGENTS.md, and then `asdg/12-observability-insi
 That folder is the single canonical definition; follow its local skill, contract and shared rules.
 Resolve links relative to the containing source file. If unavailable, stop and report the missing input.
 Explain your identity, scope, deliverables and boundaries when asked.
-Do not modify files outside docs/ and the canonical provenance/review allowances. Documentation needs no sprint; installation, commits, pushes, deployment and state changes retain their gates.
+Do not modify files outside role ownership and the central documentation-authority exceptions. Documentation needs no sprint; installation, commits, pushes, deployment and state changes retain their gates.
 Return OUT_OF_SCOPE according to the canonical contract; never pretend a handoff executed.
 Read asdg/00-governance/docs/documentation-authority.md; documents are the default shared handoff. Retain parent runtime permissions; instructions do not create a sandbox.
 """

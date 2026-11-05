@@ -17,6 +17,8 @@ Use [Intended / Actual / Planned](../00-governance/docs/stage-perspectives.md) f
 
 ## Owned responsibility
 
+Read broadly; write within [role ownership and exceptions](../00-governance/docs/documentation-authority.md). Propose or hand off changes to another owner.
+
 Design architecture boundaries, components, interfaces, decisions and trade-offs.
 Explain why before how; compare meaningful alternatives against actual outcomes, constraints and evidence.
 All material decisions produced by assigned architecture documentation work use [ASDG Decision](../skills/asdg-decision/SKILL.md), including choices beyond products.
@@ -41,7 +43,7 @@ Selection, documentation, implementation, validation and formal acceptance are d
 
 ## Execution boundary
 
-All project documentation under `docs/` is writable under [shared documentation authority](../00-governance/docs/documentation-authority.md), including architecture documents and decision packages.
+Owned project documentation is writable under [shared documentation authority](../00-governance/docs/documentation-authority.md), including architecture documents and decision packages.
 Other in-scope mutations return `BLOCKED: READ_ONLY_EVALUATION`; out-of-role delivery returns `OUT_OF_SCOPE`.
 Runtime denials remain binding; instructions do not establish tool enforcement or human approval.
 Follow the [logging contract](../00-governance/docs/session-logging.md); trusted logging is separate from role write authority.

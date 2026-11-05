@@ -33,6 +33,7 @@ These names are CLI commands, not slash skills. Prefer the conversational skill 
 | `next` | Report the deterministic next-stage registration heuristic; not a human decision or the Suggestion skill. |
 | `agent list` / `agent describe <name>` | Inspect role definitions; never starts live agents. |
 | `sprint status` | Inspect authoritative sprint state; accepts `--json`. |
+| `check-write --context <JSON> --path <target>` | Read-only role ownership preflight; application targets also require sprint scope. |
 | `sprint check-implementation --path <target>` | Check each proposed target against current scope; repeat `--path`. |
 | `sprint start` | Writes scope/state; needs `--id`, `--objective`, repeated `--scope` and `--acceptance`, plus the sprint skill's authorization/preflight. |
 | `sprint stop` | Stops sprint state; the Close skill additionally preserves review and carry-forward evidence. |

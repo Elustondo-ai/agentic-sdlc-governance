@@ -1,31 +1,34 @@
-# Documentation authority for every agent
+# Read broadly. Write within your responsibility.
 
-Every agent, including governance and all twelve specialists, may create and update project documentation and supporting assets under the bound client's `docs/` at any time.
-No active sprint, implementation scope check or separate permission to save is required for documentation.
-This applies to proposals, use cases, plans, designs, evidence reports, decisions and their diagrams or other explanatory assets.
+Governance and all twelve specialists may consult documentation throughout the bound project.
+Ordinary documentation needs no active sprint or separate save approval, but each role writes only its owned directory and the narrow exceptions below.
+This is best-effort agent governance, not an adversarial security boundary; developers retain unrestricted control of their repositories.
 
-## Shared work and handoffs
+## Ownership and handoffs
 
-Documents are the default way agents communicate substantive outcomes and leave reviewable work for one another.
-Read the current authoritative document, improve it in place when appropriate, and return a link with a concise explanation.
-Use the established stage layout and the role's normal destination; `docs/asdg/<stage>/` is the default for lifecycle evidence.
-A stage folder expresses ownership, not a write-permission barrier. Coordinate overlapping edits and preserve others' work.
-A brief answer, a status-only request or an explicit instruction to stay in chat does not require a document.
-Focus activation alone creates no work. Continue the actual assignment rather than generating material to fill folders.
-Direct messages can complement shared documents when the user has authorized that coordination; a file link alone is not proof of delivery.
-Role responsibilities still apply: document findings, proposals or handoffs without claiming another specialist's work was completed.
+The [canonical catalogue](../types/agent-catalog.json) defines every role's exact folder.
+For each project role, replace the catalogue folder's leading `asdg/` with `docs/asdg/`: Governance owns `docs/asdg/00-governance/`; all twelve specialists own their corresponding stage.
+For example, Purpose owns `docs/asdg/02-purpose/`, Architecture owns `docs/asdg/05-high-level-design-and-architecture/`, and Planning owns `docs/asdg/07-planning/`.
+Ownership covers creation, modification, moves, deletion and supporting assets; validate both ends of a move.
+Read another stage as evidence; save a proposed correction in your own folder, link the authoritative source and return a handoff. Do not silently edit the other owner's artifact.
+Documents are the default way agents communicate substantive outcomes; a proposed patch remains a proposal until the responsible role applies it.
+Read access and an active sprint never expand write responsibility. Unknown role identity blocks writes until recovered under the session policy.
+A brief answer, status-only request, role activation or explicit chat-only assignment creates no documentation requirement.
 
-![Every agent saves shared documentation for review; acceptance and scoped implementation remain separate decisions.](images/documentation-authority.svg)
+![Every role reads shared evidence and writes its owned documents; acceptance and implementation stay separate.](images/documentation-authority.svg)
 
-## Preserve evidence and boundaries
+## Central exceptions
 
+[Write exceptions](write-exceptions.md) enumerate all shared workflows, with their authorization and limits.
+[The ownership checker](../../scripts/lib/cli_ownership.md) derives role destinations from the catalogue and implements supported path checks; do not duplicate permission tables in skills.
+Specifications retains its resolved OpenSpec store exception. Coding retains sprint-gated application, test and related technical documentation writes. Neither may rewrite another specialist's documents.
+Governance maintains its coordination artifacts and explicitly assigned shared records; Admin maintains methodology only under explicit selection and bounded human scope.
+
+## Before writing
+
+Follow [the pre-write procedure and client limits](write-controls.md), using the actual conversation role; a title is never role evidence.
 Apply the [documentation standard](documentation-standard.md), [review criteria](documentation-review.md) and [stage layout](stage-layout.md).
-Use scoped patches for text changes; keep visuals editable, check links and rendering, and distinguish intended behavior from observed evidence.
-Append exact-hash AI modification receipts to the existing `.asdg/document-reviews.json`, preserving prior entries and approval bindings.
-A receipt records authorship, not acceptance. If recording is denied, retain the saved document and report the receipt gap without bypassing the denial.
-Editing an accepted artifact does not transfer its acceptance to new bytes; preserve historical records and identify changed proposals.
-This permission does not authorize unrelated deletion, application-code changes, policy changes, installs, commits, pushes, publication, deployment or state transitions.
-Executable application code or runtime configuration is not documentation merely because it is placed in `docs/`.
-Documentation needs no sprint; application changes still require the active sprint's objective, scope, acceptance criteria and applicable role authority.
-Purpose review recording and explicit approval/sprint utilities retain their separate contracts; no lifecycle approval is inferred from saving a file.
-Methodology maintenance requires an explicit user task performed under [ASDG Admin](../../admin/AGENTS.md). Runtime denials remain binding and must be reported.
+Append exact-hash AI modification receipts to `.asdg/document-reviews.json`, preserving history and old approval bindings; a receipt never grants acceptance.
+If recording is denied, retain the saved document and report the receipt gap; do not bypass runtime denials.
+Ownership permits no unrelated deletion, install, commit, push, publication, deployment, approval or lifecycle transition.
+Executable code and runtime configuration remain application changes even under `docs/`; apply the sprint and implementation gates separately.

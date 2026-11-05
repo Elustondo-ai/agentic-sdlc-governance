@@ -24,4 +24,4 @@ No type-language mandate; this Markdown is the initial contract notation.
 `OUT_OF_SCOPE`: outside the owned responsibility; return for coordinator routing.
 `BLOCKED`: missing input, evidence, tool capability or evaluation-mode permission.
 `REVIEW_REQUIRED`: a proposal needs a human decision; no approval is inferred.
-Save documentation under the client's `docs/` through [shared documentation authority](../docs/documentation-authority.md); application and state mutations retain their gates.
+Save documentation within the role's owned directory through [shared documentation authority](../docs/documentation-authority.md); application and state mutations retain their gates.

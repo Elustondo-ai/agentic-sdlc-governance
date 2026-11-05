@@ -7,7 +7,7 @@ Package maintenance runs only under explicitly selected [ASDG Admin](../../admin
 
 ## Scope and authority
 
-Every agent may create/update project documentation and supporting assets under the client's `docs/` without a sprint or separate save approval.
+Read broadly; write documentation and supporting assets only within the acting role's ownership and explicit exceptions, without a sprint or separate save approval.
 Read [documentation authority](documentation-authority.md): save substantive outcomes as the default shared handoff and preserve role ownership, evidence and review history.
 All roles may append exact-hash AI modification receipts to `.asdg/document-reviews.json`; this is provenance, never acceptance or lifecycle authority.
 ASDG-02 retains its separately defined two-gate Purpose review recording under its [contract](../../02-purpose/types/contract.md).

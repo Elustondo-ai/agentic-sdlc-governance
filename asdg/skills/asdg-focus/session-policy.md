@@ -41,7 +41,7 @@ Unknown project does not block a role interview; project-specific work requires 
 ## Authority and utilities
 
 All attitudes preserve honesty, role boundaries and code, approval and state-transition gates.
-Every agent may save relevant documentation under the client's `docs/` through [shared documentation authority](../../00-governance/docs/documentation-authority.md); documents are the default handoff.
+Every role may read broadly and save documentation within its assigned ownership through [shared documentation authority](../../00-governance/docs/documentation-authority.md); documents are the default handoff.
 Purpose's two-gate review recording and explicit [Approve](../asdg-approve/SKILL.md) retain their separate documentation-acceptance contracts.
 Human-directed [Sprint start](../asdg-sprint-start/SKILL.md), [review](../asdg-sprint-review/SKILL.md) and [close](../asdg-sprint-close/SKILL.md) keep only their stated permissions.
 Mode changes, selected hats, agent readiness and successful structural checks never imply human approval or effective runtime enforcement.

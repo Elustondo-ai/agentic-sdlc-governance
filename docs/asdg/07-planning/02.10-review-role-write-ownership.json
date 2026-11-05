@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "requester": "Pablo",
+  "acting_role": "ASDG-ADMIN",
+  "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+  "starting_revision": "2714bf756cb933276a80ea7b4b62ff59b3109050",
+  "starting_working_tree": "clean",
+  "authorized_request": "Implement Role-Based Write Ownership: Read broadly. Write within your responsibility. Update ASDG governance, skills, and best-effort harness controls; do not commit, push, merge, release, deploy, or change hook trust.",
+  "changed_files": [
+    "asdg/00-governance/AGENTS.md",
+    "asdg/00-governance/README.md",
+    "asdg/00-governance/docs/documentation-authority.md",
+    "asdg/00-governance/docs/images/documentation-authority.svg",
+    "asdg/00-governance/docs/runtime-contract.md",
+    "asdg/00-governance/docs/sprint-gate.md",
+    "asdg/00-governance/docs/stage-layout.md",
+    "asdg/00-governance/docs/write-controls.md",
+    "asdg/00-governance/docs/write-exceptions.md",
+    "asdg/00-governance/skills/review-routing/SKILL.md",
+    "asdg/00-governance/types/contract.md",
+    "asdg/00-governance/types/document-reviews.json",
+    "asdg/01-context-and-domain-analysis/AGENTS.md",
+    "asdg/01-context-and-domain-analysis/README.md",
+    "asdg/01-context-and-domain-analysis/skills/analyze-context/SKILL.md",
+    "asdg/01-context-and-domain-analysis/types/contract.md",
+    "asdg/02-purpose/AGENTS.md",
+    "asdg/02-purpose/skills/elicit-purpose/SKILL.md",
+    "asdg/02-purpose/types/contract.md",
+    "asdg/03-system-model-and-use-cases/AGENTS.md",
+    "asdg/03-system-model-and-use-cases/README.md",
+    "asdg/03-system-model-and-use-cases/skills/model-use-cases/SKILL.md",
+    "asdg/03-system-model-and-use-cases/types/contract.md",
+    "asdg/04-benchmarks-and-eval-strategy/AGENTS.md",
+    "asdg/04-benchmarks-and-eval-strategy/README.md",
+    "asdg/04-benchmarks-and-eval-strategy/skills/evaluate-alternatives/SKILL.md",
+    "asdg/04-benchmarks-and-eval-strategy/types/contract.md",
+    "asdg/05-high-level-design-and-architecture/AGENTS.md",
+    "asdg/05-high-level-design-and-architecture/skills/propose-architecture/SKILL.md",
+    "asdg/06-viable-proof-of-concept/AGENTS.md",
+    "asdg/06-viable-proof-of-concept/README.md",
+    "asdg/06-viable-proof-of-concept/skills/plan-experiment/SKILL.md",
+    "asdg/06-viable-proof-of-concept/types/contract.md",
+    "asdg/07-planning/AGENTS.md",
+    "asdg/07-planning/README.md",
+    "asdg/07-planning/skills/prepare-plan/SKILL.md",
+    "asdg/07-planning/types/contract.md",
+    "asdg/08-low-level-design/AGENTS.md",
+    "asdg/08-low-level-design/README.md",
+    "asdg/08-low-level-design/skills/specify-design/SKILL.md",
+    "asdg/08-low-level-design/types/contract.md",
+    "asdg/09-build-and-test-cycle/AGENTS.md",
+    "asdg/09-build-and-test-cycle/README.md",
+    "asdg/09-build-and-test-cycle/skills/review-build-task/SKILL.md",
+    "asdg/09-build-and-test-cycle/types/contract.md",
+    "asdg/10-document-review-and-release/AGENTS.md",
+    "asdg/10-document-review-and-release/README.md",
+    "asdg/10-document-review-and-release/skills/review-readiness/SKILL.md",
+    "asdg/10-document-review-and-release/types/contract.md",
+    "asdg/11-operational-reality-devops-and-user-acceptance/AGENTS.md",
+    "asdg/11-operational-reality-devops-and-user-acceptance/README.md",
+    "asdg/11-operational-reality-devops-and-user-acceptance/skills/assess-operations/SKILL.md",
+    "asdg/11-operational-reality-devops-and-user-acceptance/types/contract.md",
+    "asdg/12-observability-insights-and-learning/AGENTS.md",
+    "asdg/12-observability-insights-and-learning/README.md",
+    "asdg/12-observability-insights-and-learning/skills/derive-insights/SKILL.md",
+    "asdg/12-observability-insights-and-learning/types/contract.md",
+    "asdg/AGENTS.md",
+    "asdg/docs/client-integrations.md",
+    "asdg/docs/review-loop.md",
+    "asdg/docs/usage.md",
+    "asdg/metadata/MANIFEST.json",
+    "asdg/metadata/package-files.json",
+    "asdg/scripts/lib/cli.md",
+    "asdg/scripts/lib/cli.py",
+    "asdg/scripts/lib/cli_hook.md",
+    "asdg/scripts/lib/cli_hook.py",
+    "asdg/scripts/lib/cli_ownership.md",
+    "asdg/scripts/lib/cli_ownership.py",
+    "asdg/skills/asdg-approve/SKILL.md",
+    "asdg/skills/asdg-decision/SKILL.md",
+    "asdg/skills/asdg-documentation/SKILL.md",
+    "asdg/skills/asdg-focus/session-policy.md",
+    "asdg/skills/asdg-help/command-reference.md",
+    "asdg/skills/asdg-openspec-propose/SKILL.md",
+    "asdg/skills/asdg-openspec-propose/evidence.md",
+    "asdg/skills/asdg-sprint-close/SKILL.md",
+    "asdg/skills/asdg-sprint-start/SKILL.md",
+    "asdg/templates/.codex/agents/asdg_01.toml",
+    "asdg/templates/.codex/agents/asdg_02.toml",
+    "asdg/templates/.codex/agents/asdg_03.toml",
+    "asdg/templates/.codex/agents/asdg_04.toml",
+    "asdg/templates/.codex/agents/asdg_05.toml",
+    "asdg/templates/.codex/agents/asdg_06.toml",
+    "asdg/templates/.codex/agents/asdg_07.toml",
+    "asdg/templates/.codex/agents/asdg_08.toml",
+    "asdg/templates/.codex/agents/asdg_09.toml",
+    "asdg/templates/.codex/agents/asdg_10.toml",
+    "asdg/templates/.codex/agents/asdg_11.toml",
+    "asdg/templates/.codex/agents/asdg_12.toml",
+    "asdg/templates/.codex/agents/asdg_coordinator.toml",
+    "asdg/tests/test_ownership.md",
+    "asdg/tests/test_ownership.py",
+    "asdg/tests/test_portable-cases.md",
+    "asdg/tests/test_portable.md",
+    "asdg/tests/test_portable.py",
+    "docs/asdg/07-planning/02.10-review-role-write-ownership.json",
+    "docs/asdg/07-planning/02.10-review-role-write-ownership.md"
+  ],
+  "document_review": {
+    "path": "docs/asdg/07-planning/02.10-review-role-write-ownership.md",
+    "sha256": "e92f8ed8497882d00f0188d49824f8f0dd72eb8c9f8b8e881b90a636808e8f21",
+    "event": "AI-MODIFIED",
+    "recorded_at": "2026-11-05T17:54:51Z",
+    "human_approval": null,
+    "provenance": {
+      "role_id": "ASDG-ADMIN"
+    }
+  },
+  "verification": [
+    {
+      "command": "python3 -B -m unittest discover -s asdg/tests",
+      "result": "PASS",
+      "tests": 138,
+      "seconds": 121.051,
+      "note": "Includes all eight ownership tests and the installed native OpenSpec CLI test; no native Codex/Claude invocation."
+    },
+    {
+      "command": "python3 -B -m unittest discover -s asdg/tests -p test_ownership.py",
+      "result": "PASS",
+      "tests": 8,
+      "seconds": 7.86
+    },
+    {
+      "command": "python3 -B -m unittest discover -s scripts/tests",
+      "result": "PASS",
+      "tests": 3,
+      "seconds": 1.341,
+      "note": "Negative packaging test intentionally prints BUILD FAILED for a missing package file."
+    },
+    {
+      "command": "python3 -B scripts/prepare_commit.py",
+      "result": "PASS",
+      "note": "Refreshes working-tree MANIFEST and ignored local portable ZIP/checksum; performs no Git mutation."
+    },
+    {
+      "command": "python3 -B asdg/scripts/check.py --integrity",
+      "result": "PASS",
+      "note": "Package structure, catalogue, links, skill front matter, Python 3.9 syntax and manifest hashes."
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -B asdg/scripts/cli.py check-write --context {role_id:ASDG-05} --path docs/asdg/02-purpose/README.md",
+      "result": "EXPECTED_DENIAL",
+      "exit_code": 1,
+      "note": "OUT_OF_SCOPE with proposal destination and handoff guidance."
+    }
+  ],
+  "earlier_failures": [
+    {
+      "operation": "Initial ownership tests",
+      "failure": "New checker omitted from portable package list",
+      "resolution": "Added checker, companion and test files; eight ownership tests now pass."
+    },
+    {
+      "operation": "Native OpenSpec fixture",
+      "failure": "macOS /var versus /private/var temporary-root alias mismatch",
+      "resolution": "Canonicalized the disposable fixture root; native strict validation passes."
+    },
+    {
+      "operation": "First full regression run",
+      "failure": "Logging fixture helper replaced existing logging session IDs; 137 tests, one error",
+      "resolution": "Bind synthetic role context only for PreToolUse; full rerun recorded below."
+    },
+    {
+      "operation": "Quick Look diagram preview",
+      "failure": "Sandbox initialization failed: invalid data type of path filter; expected pattern, got boolean",
+      "resolution": "Rendered the same SVG using bundled sharp and inspected its PNG."
+    },
+    {
+      "operation": "Pre-refresh integrity check",
+      "failure": "Candidate files differ from previous manifest",
+      "resolution": "Final candidate refresh and integrity result recorded below."
+    }
+  ],
+  "native_evidence": {
+    "openspec": "Installed CLI 1.15.0; disposable native artifact instructions and strict validation executed. No upstream agent skill invocation.",
+    "codex": "Generated guard commands executed with synthetic session-bound context. No native client launch, discovery or interception test.",
+    "claude": "Both-client install/verify and adapter preservation tests only; no native client launch or hook.",
+    "visual": "Ownership SVG rendered with sharp and inspected as /tmp/asdg-role-ownership.png."
+  },
+  "limitations": [
+    "No native session role bridge installed; trusted guard denies writes without reviewed launcher context.",
+    "Claude preflight invocation and compliance remain instructional.",
+    "External or reserved-root OpenSpec stores conservatively blocked by this checker pending reviewed runtime boundary.",
+    "Workflow authorization and append-only/approval semantics remain instructional or utility-owned.",
+    "Documentation suffix classification does not prove runtime semantics; sprint permissions remain separate."
+  ],
+  "publication": "No commit, push, merge, release, deployment or hook trust change.",
+  "final_verification": {
+    "inventory_matches_git_status": true,
+    "changed_file_count": 98,
+    "report_hash_matches": true,
+    "head_unchanged": true,
+    "protected_configuration_diff": []
+  }
+}

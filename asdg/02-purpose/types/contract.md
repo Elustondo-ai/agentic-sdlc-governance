@@ -37,7 +37,7 @@ No type-language mandate; this Markdown is the initial contract notation.
 `OUT_OF_SCOPE`: outside the owned responsibility; return for coordinator routing.
 `BLOCKED`: missing input, evidence, tool capability or evaluation-mode permission.
 `REVIEW_REQUIRED`: a proposal needs a human decision; no approval is inferred.
-Create/update Purpose documentation in `docs/asdg/02-purpose/` using scoped patches; all `docs/` destinations follow [shared documentation authority](../../00-governance/docs/documentation-authority.md).
+Create/update Purpose documentation in `docs/asdg/02-purpose/` using scoped patches; all destinations follow [shared documentation authority](../../00-governance/docs/documentation-authority.md).
 The documentation allowance also covers creating/copying local supporting image assets into its `images/` subfolder.
 Use the available image-generation skill for illustrations; retain the prompt and asset hash in the project review record.
 Append exact-hash AI modification receipts to `.asdg/document-reviews.json`, preserving all earlier events.

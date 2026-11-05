@@ -49,6 +49,6 @@ An installation made before client tracking reports Codex as `legacy-unrecorded`
 
 ## Enforcement differences
 
-Role, Admin and title rules are conversation instructions in both clients. Codex adds the pre-tool guard once its hooks are trusted; Claude gets no ASDG guard.
+Both clients follow [role ownership and preflight](../00-governance/docs/write-controls.md). Codex adds deterministic patch checks only with trusted hooks and session-bound role context; no context denies writes. Claude gets no ASDG guard. No native role bridge is installed.
 Titles sync through Codex thread-title tools or the Claude desktop session-title tool; the Claude CLI has neither, so titles are reported, not set.
 Create team (shown explicitly as `/asdg-create-team` in Status’s post-install next-step guidance) currently requires native Codex project-chat tools; Claude Code uses manual role chats with `/asdg-focus Context`, then other roles as desired. Development view also reports missing Codex capabilities. Native discovery must be observed in each client; one client's result says nothing about the other.

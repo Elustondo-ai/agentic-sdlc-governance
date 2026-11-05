@@ -13,7 +13,7 @@ Existing `asdg-prepare-plan`, `asdg-propose-architecture` and native `openspec-p
 
 ## Establish the boundary and inputs
 
-Read client instructions and [session policy](../asdg-focus/session-policy.md); preserve role, subject, attitude and goal.
+Read client instructions and [session policy](../asdg-focus/session-policy.md); preserve role, subject, attitude and goal. Only ASDG-08 may write native artifacts under the [OpenSpec exception](../../00-governance/docs/write-exceptions.md); other roles return a proposal/handoff.
 Resolve the ASDG client root from this canonical directory as `../../..`; distinguish it from any external OpenSpec planning home.
 Check the current runtime skill catalogue for `openspec-propose`, then read that installed skill in full at its advertised path. Report catalogue discovery separately from successful file loading; neither proves workflow execution.
 If the skill is absent or unreadable, report the missing dependency and stop; do not install it, invent a native invocation or substitute a copied workflow.
@@ -29,7 +29,7 @@ Follow its actual root/store checks, context handling, configured schema, artifa
 Use its CLI-provided instructions and paths for each artifact. Read dependencies again as instructed; preserve existing changes and ask about name collisions rather than overwriting them.
 Apply ASDG source links and decision status within the schema's appropriate sections, following [traceability](evidence.md). If the schema cannot accommodate required provenance, report the conflict before changing schema or adding a parallel artifact.
 Preserve human-readable explanations and useful visuals under the [documentation standard](../../00-governance/docs/documentation-standard.md), without rewriting upstream templates or splitting required artifacts into paths the schema does not support. Report a format conflict instead of silently weakening either contract.
-Never run apply, sync, archive or initialization as a side effect. Create only the requested planning artifacts and an optional short Stage 07 navigation link; no application, policy, approval or sprint-state writes follow.
+Never run apply, sync, archive or initialization as a side effect. Create only the requested planning artifacts; propose a Stage 07 navigation link to Planning; no application, policy, approval or sprint-state writes follow.
 An active ASDG sprint is context, not authorization for a different change. Pending specialist choices stay review questions; the wrapper does not approve or replace their owning documents.
 Respect runtime refusals: report the denied action and stop dependent writes; do not relocate artifacts to bypass a gate.
 

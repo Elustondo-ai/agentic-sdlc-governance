@@ -39,4 +39,5 @@ Dated reports, receipts and source captures may remain in their existing archive
 This archive exception does not authorize new perspective folders; new living summaries use numbered root files.
 ASDG's reusable definitions supply this blueprint without duplicating themselves across all three perspectives.
 Initialization preserves existing project documents; migration is a separate explicit task.
+Apply [role ownership](documentation-authority.md) to edits, moves, cleanup and navigation; hand off changes to another owner.
 The layout does not start a sprint, grant implementation permission or approve a release.

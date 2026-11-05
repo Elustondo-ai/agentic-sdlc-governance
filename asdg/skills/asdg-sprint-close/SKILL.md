@@ -5,6 +5,8 @@ description: Review and close an explicitly selected ASDG sprint, preserving its
 
 # Close an ASDG sprint
 
+Use [central ownership and pre-write checks](../../00-governance/docs/write-controls.md) for this workflow; its explicit exception never grants unrelated writes.
+
 End the user's selected sprint without losing its definition, evidence or unfinished work.
 Read client instructions, [session policy](../asdg-focus/session-policy.md), [the sprint gate](../../00-governance/docs/sprint-gate.md) and [recording rules](recording.md).
 Resolve the client root as `../../..` from this canonical skill directory; preserve the current Focus.

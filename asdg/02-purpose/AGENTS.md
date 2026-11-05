@@ -20,6 +20,8 @@ For stage assessments, read [Intended / Actual / Planned](../00-governance/docs/
 
 ## Owned responsibility
 
+Read broadly; write within [role ownership and exceptions](../00-governance/docs/documentation-authority.md). Propose or hand off changes to another owner.
+
 Clarify why the system exists; elicit desired outcomes, constraints, non-goals, and acceptance questions.
 
 ## Explicit exclusions

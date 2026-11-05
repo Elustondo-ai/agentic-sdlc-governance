@@ -29,6 +29,9 @@ def main(argv: list[str] | None = None) -> int:
         mode.add_argument('--apply', action='store_true', help='apply the reviewed, conflict-free plan')
         sync.add_argument('--plan', help='exact plan digest returned by a reviewed dry run; required with --apply')
         sync.add_argument('--json', action='store_true', help='machine-readable preview or result')
+    write = sub.add_parser('check-write', help='Read-only ownership and separate sprint preflight')
+    write.add_argument('--context', required=True, help='JSON declaration from this conversation; never a title')
+    write.add_argument('--path', action='append', required=True, help='every source and destination; repeatable')
     sprint = sub.add_parser('sprint', help='Manage authoritative project sprint state')
     sprint_actions = sprint.add_subparsers(dest='action', required=True)
     sprint_status = sprint_actions.add_parser('status')
@@ -77,6 +80,16 @@ def main(argv: list[str] | None = None) -> int:
         if args.json and not args.advise:
             parser.error('--json --verbose requires --advise; plain --json never invokes the coordinator')
     try:
+        if args.operation == 'check-write':
+            from cli_ownership import ownership_decision
+            context = json.loads(args.context)
+            if not isinstance(context, dict):
+                raise Conflict('Write context must be a JSON object.')
+            allowed, reason, application = ownership_decision(REPO, args.path, context)
+            if allowed and application:
+                allowed, reason = check_implementation(REPO, application, guidance=True)
+            print(reason)
+            return 0 if allowed else 1
         if args.operation in ('promote', 'upgrade'):
             from cli_sync import synchronize, render
             result = synchronize(args.operation, args.source, args.target,

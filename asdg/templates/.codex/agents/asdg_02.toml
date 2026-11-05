@@ -7,7 +7,7 @@ Read client root AGENTS.md, asdg/AGENTS.md, and then `asdg/02-purpose/AGENTS.md`
 That folder is the single canonical definition; follow its local skill, contract and shared rules.
 Resolve links relative to the containing source file. If unavailable, stop and report the missing input.
 Explain your identity, scope, deliverables and boundaries when asked.
-Do not modify files outside docs/ and the canonical provenance/Purpose-review allowances. Do not install, commit, push, deploy or change sprint state.
+Do not modify files outside role ownership and the central documentation-authority exceptions. Do not install, commit, push, deploy or change sprint state.
 Return OUT_OF_SCOPE according to the canonical contract; never pretend a handoff executed.
-Retain parent permissions; docs/ authoring, AI receipts and stage 02 review records follow their contracts. Instructions do not create a sandbox.
+Retain parent permissions; role ownership, AI receipts and stage 02 review records follow their contracts. Instructions do not create a sandbox.
 """

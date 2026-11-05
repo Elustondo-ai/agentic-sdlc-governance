@@ -68,10 +68,14 @@ class PortableTests(unittest.TestCase):
         self.run_cli('sprint', 'start', '--id', 'S1', '--objective', 'One bounded behavior',
                      '--scope', 'app.js', '--acceptance', 'Existing behavior is retained')
 
-    def hook(self, payload, event='PreToolUse', cwd=None):
+    def hook(self, payload, event='PreToolUse', cwd=None, role='ASDG-09', context=None):
         config = json.loads((self.root / '.codex/hooks.json').read_text())
         command = config['hooks'][event][0]['hooks'][0]['command']
-        result = subprocess.run(command, shell=True, input=json.dumps(payload), text=True,
+        if event == 'PreToolUse':
+            payload = dict(payload, session_id='fixture-session')
+        declared = context or {'role_id': role}
+        env = dict(os.environ, ASDG_WRITE_CONTEXT=json.dumps(dict(declared, session_id='fixture-session')))
+        result = subprocess.run(command, shell=True, input=json.dumps(payload), text=True, env=env,
                                 cwd=cwd or self.root, capture_output=True, timeout=10)
         self.assertEqual(result.returncode, 0, result.stderr)
         return json.loads(result.stdout) if result.stdout.strip() else {}
@@ -858,7 +862,7 @@ runpy.run_path(entry, run_name='__main__')
         self.init()
         doc = ['docs/asdg/07-planning/handoff.md']
         self.assertEqual(json.loads((self.root / '.asdg/sprint.json').read_text())['status'], 'inactive')
-        self.assertEqual(self.hook(self.payload(doc)), {})
+        self.assertEqual(self.hook(self.payload(doc), role="ASDG-07"), {})
         for relative in ('asdg/00-governance/types/contract.md', 'asdg/skills/asdg-focus/session-state.md'):
             path = self.root / relative
             original = path.read_bytes()
@@ -871,7 +875,7 @@ runpy.run_path(entry, run_name='__main__')
                 self.assertEqual(self.hook({'tool_name': 'Bash', 'cwd': str(self.root),
                                             'tool_input': {'command': command}}), {}, command)
             path.write_bytes(original)
-            self.assertEqual(self.hook(self.payload(doc)), {})
+            self.assertEqual(self.hook(self.payload(doc), role="ASDG-07"), {})
 
     def test_valid_admin_package_passes_without_changing_catalogue_or_binding(self):
         catalogue = (self.root / 'asdg/00-governance/types/agent-catalog.json').read_bytes()
@@ -917,24 +921,24 @@ runpy.run_path(entry, run_name='__main__')
         self.init()
         targets = ['docs/asdg/03-system-model-and-use-cases/01.4-question.md',
                    'docs/asdg/03-system-model-and-use-cases/images/question.svg',
-                   'docs/shared/handoff.json', 'docs/shared/question.puml']
+                   'docs/asdg/03-system-model-and-use-cases/handoff.json', 'docs/asdg/03-system-model-and-use-cases/question.puml']
         before = snapshot(self.root)
-        self.assertEqual(self.hook(self.payload(targets)), {})
+        self.assertEqual(self.hook(self.payload(targets), role="ASDG-03"), {})
         self.assertEqual(snapshot(self.root), before)
         for relative in ('.asdg/sprint.json', '.asdg/lifecycle.json'):
             path = self.root / relative
             original = path.read_bytes()
             path.write_text('{malformed')
-            self.assertEqual(self.hook(self.payload(targets)), {})
+            self.assertEqual(self.hook(self.payload(targets), role="ASDG-03"), {})
             self.denied(self.payload(['app.js']))
             path.unlink()
-            self.assertEqual(self.hook(self.payload(targets)), {})
+            self.assertEqual(self.hook(self.payload(targets), role="ASDG-03"), {})
             self.denied(self.payload(['app.js']))
             path.write_bytes(original)
 
     def test_mixed_documentation_and_code_checks_every_code_target(self):
         self.init()
-        doc = 'docs/asdg/07-planning/03-plan.md'
+        doc = 'docs/asdg/09-build-and-test-cycle/03-plan.md'
         self.denied(self.payload([doc, 'app.js']))
         self.active()
         self.assertEqual(self.hook(self.payload([doc, 'app.js'])), {})
@@ -966,7 +970,7 @@ runpy.run_path(entry, run_name='__main__')
                     'tool_input': {'command': '*** Begin Patch\n*** Update File: '
                                    + source + '\n*** Move to: ' + destination
                                    + '\n@@\n-old\n+new\n*** End Patch'}}
-        self.assertEqual(self.hook(move('docs/old.md', 'docs/asdg/07-planning/new.md')), {})
+        self.assertEqual(self.hook(move('docs/asdg/09-build-and-test-cycle/old.md', 'docs/asdg/09-build-and-test-cycle/new.md')), {})
         self.denied(move('app.js', 'docs/app.md'))
         self.denied(move('docs/note.md', 'app.js'))
         self.denied(move('docs/note.md', '.asdg/sprint.json'))

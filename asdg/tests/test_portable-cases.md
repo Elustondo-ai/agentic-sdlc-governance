@@ -32,7 +32,7 @@ Session-role, governance-bootstrap and Admin cases are in the [role and session 
 | `test_relocation_and_subdirectory_invocation` | relocation and subdirectory invocation. |
 | `test_rejects_non_git_and_external_root` | rejects non git and external root. |
 | `test_inactive_sprint_blocks_patch_and_arbitrary_shell` | inactive sprint blocks patch and arbitrary shell. |
-| `test_documentation_patch_needs_no_sprint_or_lifecycle_state` | Documentation patches remain allowed with inactive, missing or malformed cycle state; code remains blocked. |
+| `test_documentation_patch_needs_no_sprint_or_lifecycle_state` | Role-owned documentation remains allowed with inactive, missing or malformed cycle state; code remains blocked. |
 | `test_mixed_documentation_and_code_checks_every_code_target` | A documentation target cannot hide an out-of-scope code target. |
 | `test_documentation_exemption_rejects_escape_policy_and_symlink_targets` | Documentation paths cannot escape into policy, state or external files. |
 | `test_documentation_moves_validate_both_targets` | Moves validate both source and destination; documents cannot move code or state. |

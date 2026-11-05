@@ -30,7 +30,7 @@ Use `$asdg-attitude black` to append `Black`; `off` removes the attitude from th
 Proposed pilot default: a hat persists until changed or turned off; “this answer only” restores the previous hat at completion. See [session fields and titles](../skills/asdg-focus/session-state.md).
 `$asdg-status` reports conversation focus; it is distinct from CLI workflow status.
 These skills do not create a new window or persistent agent process. Resume the same Codex conversation.
-Every agent may save documentation and supporting assets under `docs/` without a sprint or separate save approval; use the [shared documentation contract](../00-governance/docs/documentation-authority.md).
+Every role may read broadly and save documentation within its ownership without a sprint or separate save approval; use the [shared documentation contract](../00-governance/docs/documentation-authority.md).
 Use `$asdg-decision` in any role: it loads the role's optional `skills/decision/SKILL.md` or uses generic defaults, following the [specialization contract](../skills/asdg-decision/specialization.md).
 The skill preserves Focus and explicit selections; recording a decision does not implement it or approve a lifecycle baseline.
 

@@ -5,6 +5,8 @@ description: Analyze, compare, document, or revisit a material ASDG decision usi
 
 # ASDG Decision
 
+Use [central ownership and pre-write checks](../../00-governance/docs/write-controls.md) for this workflow; its explicit exception never grants unrelated writes.
+
 Use this conversation's decision, purpose, constraints, evidence, and human choices; do not restart a completed discussion.
 Recognize `$asdg-decision` and “asdg decision” as this conversational skill, not a new CLI subcommand.
 Resolve the client from this canonical directory as `../../..`; read its instructions, [session policy](../asdg-focus/session-policy.md), and fresh local CLI status.

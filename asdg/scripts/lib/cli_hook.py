@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import shlex
 import sys
@@ -45,15 +46,21 @@ def documentation_target(root: Path, value: str) -> bool:
     return True
 
 
-def implementation_decision(root: Path, paths: list[str], override: str | None = None) -> tuple[bool, str]:
+def implementation_decision(root: Path, paths: list[str], override: str | None = None, context: dict | None = None) -> tuple[bool, str]:
     # Every write, documentation included, needs a loadable default role; read-only commands never reach here.
     session = governance_bootstrap(root)
     if session['status'] != 'READY':
         return False, ('BLOCKED: GOVERNANCE_BOOTSTRAP\n' + '\n'.join(session['missing']) +
                        '\n\nRestore the missing governance sources; read-only diagnosis remains available.')
-    implementation_paths = [path for path in paths if not documentation_target(root, path)]
-    if paths and not implementation_paths:
-        return True, 'Documentation under docs/ needs no active sprint.'
+    from cli_ownership import ownership_decision
+    if paths:
+        allowed, reason, implementation_paths = ownership_decision(root, paths, context or {})
+        if not allowed:
+            return False, reason
+        if not implementation_paths:
+            return True, reason + ' Documentation needs no active sprint.'
+    else:
+        implementation_paths = []
     status = project_status(root, requested_paths=implementation_paths)
     permission = status['implementation']
     if permission['allowed'] is True:
@@ -86,6 +93,8 @@ def shell_read_only(root: Path, cwd: Path, command: str) -> bool:
             path = Path(word) if Path(word).is_absolute() else cwd / word
             safe_path(root, path.relative_to(root))
         return True
+    if len(words) > 1 and words[:2] == ['asdg', 'check-write']:
+        return True  # This command only reports permissions; it never mutates files.
     if words and words[0] in ('asdg', 'asdg'):
         if words[1:] in (['status', '--facts-only'], ['status', '--json'], ['next'], ['next', '--json'], ['verify'], ['verify', '--json']):
             return True
@@ -110,7 +119,12 @@ def decision(root: Path, payload: dict) -> tuple[bool, str]:
         paths = re.findall(r'^\*\*\* (?:Add File|Update File|Delete File|Move to): (.+)$', command, re.MULTILINE)
         cwd = Path(payload.get('cwd', str(root))).resolve()
         targets = [str(Path(path) if Path(path).is_absolute() else cwd / path) for path in paths]
-        return implementation_decision(root, targets)
+        raw = os.environ.get('ASDG_WRITE_CONTEXT', '{}')
+        context = json.loads(raw)
+        # A launcher must bind this declaration to the actual hook session.
+        if not isinstance(context, dict) or not payload.get('session_id') or context.get('session_id') != payload['session_id']:
+            context = {}
+        return implementation_decision(root, targets, context=context)
     if tool in ('Bash', 'exec_command', 'shell_command'):
         command = data.get('command', data.get('cmd', ''))
         cwd = Path(data.get('workdir') or payload.get('cwd') or root).resolve()

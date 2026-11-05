@@ -20028,7 +20028,7 @@
       "recorded_at": "2026-10-29T00:49:43.250418+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
       },
       "previous_state": {
         "sha256": "765d988e01a7b8cc2eb775972719f6b670c7b6b0a090c96f9c50b859e1adcb89",
@@ -20043,7 +20043,7 @@
       "recorded_at": "2026-10-29T00:49:43.261832+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
       },
       "previous_state": {
         "sha256": "77b3331728354b14cef6ca9013672f7f3410ec41ec53e50fd32e252a90b08f08",
@@ -20058,7 +20058,7 @@
       "recorded_at": "2026-10-29T00:49:43.270997+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
       },
       "previous_state": {
         "sha256": "04c12cbdfd880ed4ecc364903263d0b0bae2339d63fdeca20d3b1c2d60e66524",
@@ -20073,7 +20073,7 @@
       "recorded_at": "2026-10-29T00:49:43.281238+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -20083,7 +20083,7 @@
       "recorded_at": "2026-10-29T00:49:43.290907+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -20093,7 +20093,7 @@
       "recorded_at": "2026-10-29T00:49:43.300049+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -20103,7 +20103,7 @@
       "recorded_at": "2026-10-29T00:49:43.309146+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -20113,7 +20113,7 @@
       "recorded_at": "2026-10-29T00:49:43.319702+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -30567,6 +30567,1349 @@
         "requester": "Pablo",
         "acting_agent": "Codex / ASDG Admin",
         "scope": "Explicitly authorized pilot.3 commit, push and prerelease; prior assets preserved."
+      }
+    },
+    {
+      "path": "asdg/00-governance/AGENTS.md",
+      "sha256": "29e1490f1534602cb6fb2101c787274fc3a343e9f4036d349e525d6a3e6a142d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "590f41fed13f397bddf5adf7ee16b5f65213448a19649ca2d34ec8bec0d7dc0f",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/00-governance/README.md",
+      "sha256": "b1502457cb9eafc1ff86e92a98547967b171ca69fcdd1763ea4da0c5bf4d906c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "6a30036558a39cf070d7fe1831583d7beee08a9ce3538774e5c67b6b6399fa84",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/00-governance/docs/documentation-authority.md",
+      "sha256": "c145a732238a8995650bc5eebab7355bc3c243a75942d1b80994d65838e9e652",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "6b1d86ccdc8d17e7ea3a36814313c8c45650815d0c8c5a97b0f1e21fd47c8962",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/00-governance/docs/images/documentation-authority.svg",
+      "sha256": "012e783b9468080e1fd2f3c463546c7f522d233dcba35a67bdc9c97db996cc5a",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "19c6c8e31912d9ee24f1854d61a20f8bcd4a5b7552a18f79936834f01882d8bb",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/00-governance/docs/runtime-contract.md",
+      "sha256": "b66c68e2413d893ef0ac47f114c879adca20550f8d6083c88a1d562f4dba2f4b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "1fac2020d8e4af884afb3b2f139b5ce37ef79e724d0c447efcf6ce20c53d2278",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/00-governance/docs/sprint-gate.md",
+      "sha256": "9106e3206e7032f7241f3452be5f6f9d3d24ba991380fa5d91a1fca88f90e88d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "a002cca6ed0923def8a691703a3d4e39761d6c9a6e63aed83e48caea2c4c789d",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/00-governance/docs/stage-layout.md",
+      "sha256": "99f90c1d3d9f2852d0d76b528590084cc5f377b9738719621b7c23c84008d0cd",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "f9df9dc00c75e21cc52ccda92fb1c5e7742ca395a29599f361021605e4dab0ba",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/00-governance/docs/write-controls.md",
+      "sha256": "c1e88b0ca532ae2f7f1901673716e190ae056d20e3dcfe88c9d1d10a929958d9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      }
+    },
+    {
+      "path": "asdg/00-governance/docs/write-exceptions.md",
+      "sha256": "be74d521b59cb4a7a75c37991984dceb0a5be0747c2d85c918c4417d8ae7b5fb",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      }
+    },
+    {
+      "path": "asdg/00-governance/skills/review-routing/SKILL.md",
+      "sha256": "f144c091bf9df0ab4c67d8b630786323c5387e844c0559fd530042e6258885a1",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "96e3e79711029c2ffc7bdfcd7b95f74a5ce546d4de4f8287da895a5df2c8ddf8",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/00-governance/types/contract.md",
+      "sha256": "07d5bb68a32ae6c60a21473f5d5703731e9acf9709cb72471424f72b78ee05b3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "fdbe5930911c79e40d1dbb221ca6f5a3c509e5fa90a85dd4b52f8e3804b3bc7b",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/01-context-and-domain-analysis/AGENTS.md",
+      "sha256": "8aa331d4b6ba69fe6e6c7cbd467ae0ffc186584d5826f993715e54fc1a41318b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "f4248d3b6a3ea877466377f16c9babebf89de73bdd35096d8eaa357f17e5eea1",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/01-context-and-domain-analysis/README.md",
+      "sha256": "e5b57dbad0556c5635b4c4ada1d69f9188df107b4fdb6463aed020b0cc113249",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "f5744b6358a5d18c313a089ff28508da26fcb34da3047a31a5fc396f9f1f7037",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/01-context-and-domain-analysis/skills/analyze-context/SKILL.md",
+      "sha256": "0950e4a4d190168a27ac0a6cfab302228ac43f12687352e39005afe36ed09846",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "87ec32a32a7015bd6baedfbc4ece3e7bba004f7d77137136fb3130b6008205fd",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/01-context-and-domain-analysis/types/contract.md",
+      "sha256": "e1e9bacb8a167ff9cbc2ff5ad4b2b61a97740bf3780a8f313ecd913a17b3eb92",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "2d0919e22373906c847c424fdf731ba19e0678c8887dbc64df330800423de207",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/02-purpose/AGENTS.md",
+      "sha256": "f2b38bff26a4f0b4c9088a74c2b7e7772e5075cdf8ef5b6c50504c4d31b4a1b0",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "71945f5849c2960dafa4b7aae3af1e3f36f092539d5c787a2a2d6a057a1b7b92",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/02-purpose/skills/elicit-purpose/SKILL.md",
+      "sha256": "de0f84bc037ea897b9bde80abee0f9d6c892ad3ad69432517ee9594326356585",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "15ea73ccb3a85ba12c39dbaad69ed71c7734f0308a3baf0422ad4e81b1ee3039",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/02-purpose/types/contract.md",
+      "sha256": "1f1829566f063f1bf58d6c900fa95a9af4732db7a2f34c3cc21aa9a22488b1e6",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "891845a79c6b40a11ed8809f12805a0043d2562ec8753e5a33df98c293f649ba",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/03-system-model-and-use-cases/AGENTS.md",
+      "sha256": "e62cc818b43d248e90bf1e6194b9ac9aa827227212505685d26f468caf80ac0c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "4a848d961e27a03a0da75707ccd11fa05375c3d7453e91e337b46d3135204c02",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/03-system-model-and-use-cases/README.md",
+      "sha256": "64c5302d8eebe0c032e2ee09799064bf11cd6f7b060c1b10836bcafadb0441c5",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "32564f612426f9b46cd55b1554f0c1a21f3b7db1093d11765467e3a60916ade2",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/03-system-model-and-use-cases/skills/model-use-cases/SKILL.md",
+      "sha256": "874cb6e71521446f0f9d75076c76e2c583b3f64c6c0c2d129f970deed219c5ad",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "2ffde197cd46b20170e4b7b6a5b2d636c58da35e1954f8f6af01db1b9bb8f60c",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/03-system-model-and-use-cases/types/contract.md",
+      "sha256": "1f54e68e602f3535d9b85986ccc55411db0f03888893d93d8da6b425da4ae3b8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "3041cbaec6f89186a960435bd08aea4650b8baa607e5eb9423d94dc97b3f4393",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/04-benchmarks-and-eval-strategy/AGENTS.md",
+      "sha256": "bd0c43dad7ed8138fca29439ea5206fb8443074d6a349dfcd764df569e804f91",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "9a91031611c5a4b0de5bfbffa86e9aef823276c30a82121a5675e40bf8b568b5",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/04-benchmarks-and-eval-strategy/README.md",
+      "sha256": "f1187a3a182344e4ec0a56814c273080be9c94aff9e860f1b3a85e29fee4719b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "10303dd1f0471fa481a4e222207af22555cb28a8f7e819fd4fc428a1d6300462",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/04-benchmarks-and-eval-strategy/skills/evaluate-alternatives/SKILL.md",
+      "sha256": "d5ed4bfc8e440ab2983d43d79e26c1a357e7189f11d72c24a3ffc0aae949f8df",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "82b903d8d2dd8be61487af553ce988e4f677ccc3d12c5328fd64d6c8015411b3",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/04-benchmarks-and-eval-strategy/types/contract.md",
+      "sha256": "e317a42c97cbb6b4e66c57a73467bc2b9012b8e857eb8e2ef346b705b3bbb146",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "cd3158b9498b540b162b9390d50e52ccb552a53604c20de8448b8685dd4b2a64",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/05-high-level-design-and-architecture/AGENTS.md",
+      "sha256": "1e688556c991c957273b07b015a769df1e631015d4a82d19174305789ca457b6",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "9a8e1c134d53dac4866395a8a613d00aa51a4ab2bb7e40493119539c855b6026",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/05-high-level-design-and-architecture/skills/propose-architecture/SKILL.md",
+      "sha256": "74858cc0b217b2f5d882fc83a51a69e381e290dbfaea0c71df07260f3f4f00a9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "99888607223120ba8815cfda49a26ac716fbac9b52ead0b3b183c6fc71cda387",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/06-viable-proof-of-concept/AGENTS.md",
+      "sha256": "debac0a5c1cba03ecebd0b709f2e2d16f8418eaa5bdbc8f6f67b3c245a6a11f7",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "119bb1f608978df4923da42fe7d23556a8a9c8b2ffeaa3cb6eb43c8b1e82be8b",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/06-viable-proof-of-concept/README.md",
+      "sha256": "0b322daad36ab53a71a51e269ae68c8fb54f8177f5b7280821230bc8f5ec4e6e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "cdc60b1ed864197517290d9ce1e3f5a2f6fe79eb414cbd3cd24c3a2bf677d99f",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/06-viable-proof-of-concept/skills/plan-experiment/SKILL.md",
+      "sha256": "d58b0ce410c9da52bdf453956b73934e43c6f9e9f1e918d4ff3d87b163a6d520",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "b20681cfd93ece7179adc5ea72bbc02848565439fa76f0374399c2d2a41793f9",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/06-viable-proof-of-concept/types/contract.md",
+      "sha256": "1672831317bb3d3e965965e7fcf705431e7c696da60bfcb2c6c52031c5b90649",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "b1af20456a02744257991e90ed15f6fb95427d3f536428db7603d0e7c0d4df62",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/07-planning/AGENTS.md",
+      "sha256": "9fbf50e35e67675aab2b38ba8c92903a91fd77d9082720c5b67a822a7b3b6381",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "5a5df0fdacbd6191e5a2ca3c04ae80e0c0a4e07229f315d64d3d8a7340fba5e8",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/07-planning/README.md",
+      "sha256": "8ea28d9bfae4c4284e57fb65d52ee403e4692b053b1507cf0f01f597dca7c873",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "15c89c84b7c3c57d7575fec0778de3edbf90dfa3993b5fc3bcd71784462f6d0a",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/07-planning/skills/prepare-plan/SKILL.md",
+      "sha256": "4de5fdf0bd1a940a27ac5dbef909de82d4afb96e416f9d798c6253889b4a97cb",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "96b0191064d20cacdb5e6d4979c93a5ad976869b73abe526a4cf1d359fc34fdc",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/07-planning/types/contract.md",
+      "sha256": "e027687c50b4ac6d790a2209337c57df244d37a06865e2497c82aab422b81797",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "ea08edc5ef758ed7973d00e057a147283ede9f00f67f3a61b0da695a0f75818c",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/08-low-level-design/AGENTS.md",
+      "sha256": "cf0863c871ae84665becadb0e80bcac0ed785d4bf5fbed46483a709406dbdda6",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "1c35ac4edeced17108fd25c68af35182a863b8b5235d3f5ed3712c54f59c74eb",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/08-low-level-design/README.md",
+      "sha256": "124ac26eb00cc63d80d62ccda09f086a69498fa31143dcd6be055306a009be74",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "ce23c80b2ffc1568939381a1cef946e71db4101b08ee40617686aa244187305d",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/08-low-level-design/skills/specify-design/SKILL.md",
+      "sha256": "3f6d5651f0f4ceca344c0eda72cb50525feb1e34045291f531a40abf1c5d927b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "39a3275236393f87a256cbc13a3e8c119e08935e51c8a900265fb06e56cb574d",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/08-low-level-design/types/contract.md",
+      "sha256": "50ec96dd998c91a57cfe86704aef312a15d9b40f1a04bb414a90fd42f998e3da",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "28b445b68e86810d5dcb7924660d9212785a9f3b47b4241cbeca905b03077f0f",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/09-build-and-test-cycle/AGENTS.md",
+      "sha256": "f6b0ed3cb2d0fd783c943b62d9cf9fc00297099b559d3c8068aa5e65d9f93709",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "ffb7734655efc818690bc4dbfdcae54a8a36f26baef5222a75121fa4ebfa06d6",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/09-build-and-test-cycle/README.md",
+      "sha256": "e50c93321e4847685af9b5ffc81039269b73cda204f35a0c857d09e16390944e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "33112aa7c44cf7635c05869fe69b8a3ccbf170835eb46b802f25c4c09d08bbd1",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/09-build-and-test-cycle/skills/review-build-task/SKILL.md",
+      "sha256": "0400bf84b90e59eadc90a1ee442a21af1a9a18394ea5136a8bb4161cfff50775",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "29846066bf51ded096db7d0ab234bb4db61d36a928818025c4a200ebbfb84128",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/09-build-and-test-cycle/types/contract.md",
+      "sha256": "425e18cffcec8c6d81f80e6a5f2377a469149868ba950e876a2e7c80629862b3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "b73e2490d4bfb0b78e1d3b8d922aa2b368ab64d28ab12fbff14d3f3f70906764",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/10-document-review-and-release/AGENTS.md",
+      "sha256": "b63f92147e8d7a175752a290e6b3ecfcd88796139364b0ea977f7c01c588ebf4",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "7fd1130e46a9bdb14ba82d6776e8a6d67f59e852669156c7871f79db0eb53ddf",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/10-document-review-and-release/README.md",
+      "sha256": "af56dde80c90cbd00e5165af4772be43c103a38bf33611b741f2d95f044454cc",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "6cffde12e537802366c6937eb5e9f0ee86e57a4a3d5c96515ef29f1a7c0b39cc",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/10-document-review-and-release/skills/review-readiness/SKILL.md",
+      "sha256": "418e383497c8caf4c15ae3f13859867e980779f3caaa3ed0b6bd38a09c028cd2",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "c3f341f1b05f597423105a965166309cb7456dbc449e9fea51a9e1959bc46de0",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/10-document-review-and-release/types/contract.md",
+      "sha256": "4a83338e067147e52b91abd0a12e4a7d76e293b395ff6eabffc59debdcd05085",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "6a7f7cdb7b88d3a8ecfd0e2257d9652d97f6e05738a3beff0422f6d95a62af94",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/11-operational-reality-devops-and-user-acceptance/AGENTS.md",
+      "sha256": "a4467043ea9fddcb8765715b19e2d69af46add4ec2ff40bfca7ffb8c71d4b5f6",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "2fcb2d81fb953d453fdc5b6a61df2523002b4162b3e7e1abc565e6ecf738f170",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/11-operational-reality-devops-and-user-acceptance/README.md",
+      "sha256": "a6b574504f6653fee36eeb0d5344d12e07d2eb01f8ecb729f65be22d3026ed27",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "b3c42c95861bef980fdab45e6e274e3f089eb06730f59171ab5dec044d3b4c4e",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/11-operational-reality-devops-and-user-acceptance/skills/assess-operations/SKILL.md",
+      "sha256": "b5c1a4189ab60c732bfad48cc2354ac2594a67878431637d063f794e654c4b9b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "8c9db4db061904120c304d9b801523b43e042cb3daaa56c1abc36392cdfa7d21",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/11-operational-reality-devops-and-user-acceptance/types/contract.md",
+      "sha256": "68b1d2b986450302d26867d721a7c6ca19da18afe7aee4ee896e8c8fc1835b82",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "10c244fb1f48dd0e14e8db994794599b1ca7c13a49bb8317daa92899440eee29",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/12-observability-insights-and-learning/AGENTS.md",
+      "sha256": "805d85552fb0a63e4871604877677992d613be6f664930d4adc0c697bccbb9c8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "5bbcad1e7838699cd05737ae98d637aee4fc5ad98c3a0d176b19d3dcd8d808a5",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/12-observability-insights-and-learning/README.md",
+      "sha256": "3bfcced476c95a825d84b567fb602cfb79faac6949c16c43c3baa1640a00069a",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "ff9c4851f4fb503a55515e551c0c8608191e40a6fd825720122f48f9bdcdeb93",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/12-observability-insights-and-learning/skills/derive-insights/SKILL.md",
+      "sha256": "d20768de8877e07117665f6d0465ce1d0742157ce8a566562ea91ca7d4d8a9ab",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "3104dd53bb55b500e86d8066d5d0e9e5af9a1f105f3bb9ec976b39c093f43104",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/12-observability-insights-and-learning/types/contract.md",
+      "sha256": "860f4d4ca62ac705aaca954b91ae35072bce17d30fc4d0ef7c9313649a787e15",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "a256ce197517ec0cd25b2c842251a9844034e9a805a22b5b75ff1c61f3a842a3",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/AGENTS.md",
+      "sha256": "cb87e2b1f1a577074fd4ca3ef4928fdc83328f37d83902c28a8595f325c5063d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "258ed27bf25900bb72f12ef67ed29ce7fe63eb2d7d54be612719fb327b20ed9c",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "sha256": "c8dfb2778d0af8944fc7380fcb62e652e7bd5586e471f648f0e2e8f662180120",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "205784906571fecf46e8288e0844264178d61cc1962827be2957eb6fd4f87e2d",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/review-loop.md",
+      "sha256": "d9d640ae6aee28964e9fb882a134c1ba2a800f18274f94c1ffb13539c92dd532",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "084850aa9cd80bf37761d70ed26fb9c57880a59f905a4dc02641b5860b7501c1",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/usage.md",
+      "sha256": "334e973fe1a191b9b2abe2e2488e06475953b5071856c4393fd835288d01191e",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "426be83f5fdbca6655bdb01da2c141bef3f89e03ec9ea5be6c5b126a88b71c8c",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli.md",
+      "sha256": "a564ea8599114674fafd0f73d13d099a546697731ac1f9865b9cedab7b669680",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "94c7dbaabc85a20ab82f5d8790d895220e55cd53b119727325bfe0a64f65b743",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli_hook.md",
+      "sha256": "6016d8a082fcd4f5d17bbc6c698ef8ded9f896c606b106c2bd7514a0f5b148ca",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "b8668ebc3a1451461a58591505b6fbea40502ee5eb3d7eaba46a6f4044a15689",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli_ownership.md",
+      "sha256": "99a60f5550bd26512b9a66c3d0ae5935d8fe8326d121213778665332c5f25fde",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-approve/SKILL.md",
+      "sha256": "2d2a61e91d57318d731e169ac9ad71d775d542105d352287067138ac6c1ffc14",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "480aa1b8c4f5dbccfcc78ef75c0d2494d797c1a6ed8f6a650fa80a371f3323aa",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-decision/SKILL.md",
+      "sha256": "60ea7b84341ef6a4447876bb3bf25740fe92bcf72ad36786133dd07847354129",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "9b99ec26cbc8c403bf46d684c0ea139fe5843271f9dd22dc4a5001ee53b5389f",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-documentation/SKILL.md",
+      "sha256": "ac404c9e1ceea7bca709b068396cb7c9ae9b11a42822d2f9aba9f2e44bc2d3bc",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "54c76cbe75fd1e0e4101ed5a5e7f35e53809c204c60e8e515b1ec0044c9a9bd6",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-focus/session-policy.md",
+      "sha256": "896692f69b7954ed6f77084d758119bb7039f4cbc0a4f9375c8f3b52450bbf1c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "6bb3ef11a0c660b6cf90d34892392f2768a79a9153bf627ee145c8e25c1a23d8",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-help/command-reference.md",
+      "sha256": "83fc8602bd995f11d6796786fb12f7cb194272e97b5e7ed454909508a2e76da3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "8a4984d7d3812078c58972a291f2829c5d7d92b9da8242bbc2df6e868be3ae37",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-openspec-propose/SKILL.md",
+      "sha256": "e2ecfab133873978d670b2791995b2d2540aaa056525504ff3ff0303214dc9b4",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "ea127959d10715b2e4d7f6d02bf4eff2f44519cbc8be4f5edd3281458b90b90e",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-openspec-propose/evidence.md",
+      "sha256": "b192a9a53dd411a07e57b9506e39522ab7690f8aa5a05cd5e47588a1bc83cdb2",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "75f815b8aa79a38a81e9124c474d1e3cdce3a120f4c204e4b13f5d473e4c3372",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-sprint-close/SKILL.md",
+      "sha256": "2a672d46c27692966eaa6390002f32e1cb423fbbbf7507619de79f4ee7ef2246",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "1064c18b5cb7429d84d0294ed8f4ce52f8eaeaa487a0d070322d8adb663e7f75",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-sprint-start/SKILL.md",
+      "sha256": "74154e9dc8f34b099924e69fcf3605f394fb444495ffa860f40310473cfc0781",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "7d2ec1ba112b6d2c6057ba7384bc868af0ef2576cc889a0f2fd9eedd80f87d41",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_ownership.md",
+      "sha256": "37b4815e32fb6d98f48faaf7ad696c2762cd3bf77785fb3ca1151d12b5f9a2fe",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      }
+    },
+    {
+      "path": "asdg/tests/test_portable-cases.md",
+      "sha256": "d285d742ff224e82596d06aaab7b8e372d970085b9e932928e8776329f5b60e3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "cb278d42092428572b4ab834855de75afdabb4a73cff0708294876f34f079cfa",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_portable.md",
+      "sha256": "e3cf6644ad9daf2f858e36a4ba7c061ee48d427595f39be380b28ed725c664d8",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
+      },
+      "previous_state": {
+        "sha256": "7f83c0f2ce5ae038135eedebe935c30d3c9b7feef452e5953ecdc28c37f82b42",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.10-review-role-write-ownership.md",
+      "sha256": "e92f8ed8497882d00f0188d49824f8f0dd72eb8c9f8b8e881b90a636808e8f21",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T17:54:51Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "session_id": "01a1acd1-6fc4-7e71-8b95-bd9df703fa1b",
+        "scope": "Role-based write ownership",
+        "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
       }
     }
   ],

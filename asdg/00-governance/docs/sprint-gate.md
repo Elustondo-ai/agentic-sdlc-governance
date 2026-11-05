@@ -27,7 +27,7 @@ This skill-level convention is not enforced by the bare CLI; direct terminal use
 ## Codex enforcement and activation
 
 The PreToolUse hook and CLI consume the SAME evaluator and permission function; see [engine](state-engine.md).
-It checks every patch create/update/delete/rename target BEFORE execution. Documentation formats under client `docs/` need no sprint; code, policy paths, traversal and symlinks receive no documentation exemption.
+It checks every patch create/update/delete/rename target BEFORE execution. [Role ownership](write-controls.md) is checked separately; owned documentation needs no sprint; code, policy paths, traversal and symlinks receive no documentation exemption.
 Mixed patches still check every application target against active scope. File classification does not prove content semantics; see [documentation authority](documentation-authority.md).
 It blocks arbitrary
 shell execution, REPL/MCP and unknown tools; only a small read-only shell allowlist is accepted.

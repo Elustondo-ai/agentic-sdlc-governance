@@ -5,6 +5,8 @@ description: Resolve the ASDG documentation baseline awaiting approval from the 
 
 # ASDG Approve
 
+Use [central ownership and pre-write checks](../../00-governance/docs/write-controls.md) for this workflow; its explicit exception never grants unrelated writes.
+
 Make “approve this, done for now” work without requiring the User to remember stage numbers or approval wording.
 Use this for documentation acceptance, not code execution, commits, publishing, deployment or sprint start/stop.
 Read client `AGENTS.md`, [session policy](../asdg-focus/session-policy.md) and [recording rules](recording.md).

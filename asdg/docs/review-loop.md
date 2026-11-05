@@ -22,7 +22,7 @@ A different conversation is not proof of independence: disclose shared source, a
 
 For the first iteration, finish installation and native discovery verification before application cleanup.
 Then review Context and Purpose against that client's actual application, one assignment at a time.
-Every specialist may save project documentation under `docs/`; code, approval and state-transition limits remain separate.
+Every specialist may save project documentation within its assigned ownership; code, approval and state-transition limits remain separate.
 Source checks and observed documentation writes do not prove fresh-session native enforcement.
 ASDG rule maintenance is a separate explicit task under [ASDG Admin](../admin/AGENTS.md); an application sprint cannot silently authorize it.
 

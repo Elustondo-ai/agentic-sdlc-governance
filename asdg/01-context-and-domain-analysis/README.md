@@ -20,7 +20,7 @@ Using a capability does not grant its caller a new responsibility or write autho
 Ask Codex to spawn `asdg_01`, read this package and introduce itself.
 Ask an in-scope question, then request an excluded deliverable.
 Expect a truthful proposal or an `OUT_OF_SCOPE` return, never fabricated execution.
-Project documentation under `docs/` is writable without a sprint; application execution and native enforcement require separate evidence.
+Owned documentation is writable without a sprint under [role ownership](../00-governance/docs/documentation-authority.md); application execution and native enforcement require separate evidence.
 See [package catalogue](../README.md) and [runtime rules](../00-governance/docs/runtime-contract.md).
 
 ## Perspectives

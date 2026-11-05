@@ -11,7 +11,7 @@ Follow the [shared documentation standard](../../00-governance/docs/documentatio
 
 ## Workflow
 
-1. Read the existing topic and supplied sources. Preserve their useful narrative, meaning, uncertainty and proposal status; keep source archives intact.
+1. Resolve the acting role and every target through [ownership and pre-write checks](../../00-governance/docs/write-controls.md); propose or hand off changes outside ownership. Read the existing topic and supplied sources. Preserve their useful narrative, meaning, uncertainty and proposal status; keep source archives intact.
 2. Open with a meaningful title and explanation. Use paragraphs, headings and well-spaced lists.
 3. Keep units within 50 nonblank source lines; blank and whitespace-only lines do not count.
 4. Use the shared Python counter; never remove useful spacing or compress paragraphs to evade the limit.
