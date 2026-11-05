@@ -26,7 +26,7 @@ Codex hook trust and native invocation require separate local observation.
 ## Maintainer build
 
 The selected package includes `skills/asdg-init/SKILL.md`, the single owner of the approval presentation contract; verify the built ZIP contains its exact reviewed bytes.
-Version `0.3.0-pilot.3` packages Status-owned onboarding, Help, Update and stable team ordering; preserve existing pilot.1 and pilot.2 assets. Publication requires explicit human authorization.
+Version `0.3.0-pilot.4` adds role-based write ownership to Status-owned onboarding, Help, Update and stable team ordering; preserve existing pilot.1, pilot.2 and pilot.3 assets. Publication requires explicit human authorization.
 Review `metadata/package-files.json`, the explicit portable file list, when adding a capability.
 Repository-only presentation tools, legacy provider code, application evidence and builds are excluded.
 Before every commit/push, after changes and documentation receipts are ready, run from the provider root:

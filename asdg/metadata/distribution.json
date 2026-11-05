@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "provider": "elustondo.ai/asdg",
-  "version": "0.3.0-pilot.3",
+  "version": "0.3.0-pilot.4",
   "installation_mode": "embedded-distribution",
   "source": "https://drive.google.com/drive/folders/1CzNrE_O6Vb39BK5d4EXtA3Uj2kSAYoqL",
   "source_snapshot_date": "2026-10-20",
@@ -13,7 +13,7 @@
   "human_approval": null,
   "native_runtime_enforcement": "NOT_VERIFIED",
   "layout": "organized-v1",
-  "previous_version": "0.3.0-pilot.2",
+  "previous_version": "0.3.0-pilot.3",
   "canonical_repository": "https://github.com/Elustondo-ai/agentic-sdlc-governance",
   "distribution_status": "candidate-for-review",
   "sources": [
@@ -28,6 +28,12 @@
       "branch": "main",
       "commit": "7c5d0ca3869ca2bf6472ac7a408b809dc4823cf9",
       "scope": "canonical provider before promotion"
+    },
+    {
+      "repository": "https://github.com/Elustondo-ai/agentic-sdlc-governance",
+      "branch": "main",
+      "commit": "c3b56fa76c6acbf4a20182bd7d0df024ae2e637d",
+      "scope": "Committed role-based write ownership baseline before pilot.4 release metadata"
     }
   ]
 }

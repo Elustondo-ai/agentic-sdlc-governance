@@ -37,13 +37,13 @@ The agent handles acquisition, preview, application and verification. Initializa
 
 **Alternative — manual ZIP + Prompt:**
 
-1. Download the [portable ZIP — 0.3.0-pilot.3](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.3/asdg-0.3.0-pilot.3.zip).
+1. Download the [portable ZIP — 0.3.0-pilot.4](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.4/asdg-0.3.0-pilot.4.zip).
 2. Extract its single `asdg/` folder into the root of your existing Git project. **Stop if `asdg/` already exists.**
 3. Open your project in Claude Code or Codex and paste `asdg/docs/install-zip-prompt.md` from the extracted package ([prompt reference](asdg/docs/install-zip-prompt.md)).
 4. Review the preview and respond as requested by the selected package’s approval prompt. After verification, use `/asdg-status` in your project chat. Status reports what is ready and recommends the next skill, such as `/asdg-create-team` when team setup is still needed.
 
-The portable ZIP and its [SHA-256 checksum](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.3/asdg-0.3.0-pilot.3.zip.sha256) are available in the [pilot pre-release](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/tag/v0.3.0-pilot.3). Choose the portable asset; GitHub's automatic source archives are different packages.
-This pilot includes Status-owned onboarding, Help, Update and lifecycle-ordered team setup; use the downloaded package’s own instructions.
+The portable ZIP and its [SHA-256 checksum](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.4/asdg-0.3.0-pilot.4.zip.sha256) are available in the [pilot pre-release](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/tag/v0.3.0-pilot.4). Choose the portable asset; GitHub's automatic source archives are different packages.
+This pilot adds role-based write ownership to Status-owned onboarding, Help, Update and lifecycle-ordered team setup; use the downloaded package’s own instructions.
 This is a pilot candidate awaiting human review; installation checks do not establish native discovery, invocation or hook trust.
 See [installation details](asdg/docs/installation.md) and [client integration limits](asdg/docs/client-integrations.md).
 
@@ -74,3 +74,5 @@ Use [Help](asdg/skills/asdg-help/SKILL.md) to explore commands and [Update](asdg
 Read the [lifecycle](asdg/docs/lifecycle-baseline.md), [role catalogue](asdg/00-governance/types/agent-catalog.json), [runtime contract](asdg/00-governance/docs/runtime-contract.md) and [CLI reference](asdg/scripts/cli.md).
 Maintainers use [build and verification](asdg/docs/distribution-build.md), [source provenance](asdg/docs/provenance.md) and the [provider promotion review](docs/asdg/07-planning/02.1-review-provider-promotion.md).
 `docs/` retains methodology development and presentation sources; optional presentation, component and video tools remain outside the portable core's acceptance claim.
+
+Provider maintainers can request **`asdg publish`** using the [provider-only publishing skill](asdg/skills/asdg-publish/SKILL.md). It prepares a verified versioned ZIP, publishes the authorized GitHub prerelease and reconciles installation links; it is not installed in client projects.

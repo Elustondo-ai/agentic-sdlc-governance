@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "requester": "Pablo",
+  "role": "ASDG-ADMIN",
+  "source_baseline": "c3b56fa76c6acbf4a20182bd7d0df024ae2e637d",
+  "authorization": [
+    "Publish the new ZIP and ensure installation instructions reference it.",
+    "Yes, commit and push these release changes.",
+    "Create an asdg publish skill ONLY for agentic-sdlc-governance."
+  ],
+  "version": "0.3.0-pilot.4",
+  "changed_files": [
+    "AGENTS.md",
+    "README.md",
+    "asdg/00-governance/types/document-reviews.json",
+    "asdg/docs/distribution-build.md",
+    "asdg/metadata/MANIFEST.json",
+    "asdg/metadata/deliveries/0.3.0-pilot.3.json",
+    "asdg/metadata/distribution.json",
+    "asdg/metadata/package-files.json",
+    "asdg/scripts/lib/cli_model.md",
+    "asdg/scripts/lib/cli_model.py",
+    "asdg/skills/asdg-publish/SKILL.md",
+    "docs/asdg/07-planning/02.11-review-pilot4-publication.json",
+    "docs/asdg/07-planning/02.11-review-pilot4-publication.md"
+  ],
+  "document_review": {
+    "path": "docs/asdg/07-planning/02.11-review-pilot4-publication.md",
+    "sha256": "8a169e1e718b4067a9326684724361296774ea53c4b05a8ea44d7bcad5a70e6b",
+    "event": "AI-MODIFIED",
+    "recorded_at": "2026-11-05T18:07:29.387329+00:00",
+    "human_approval": null,
+    "provenance": {}
+  },
+  "verification": [
+    {
+      "command": "python3 -B -m unittest discover -s asdg/tests",
+      "result": "PASS",
+      "tests": 138,
+      "seconds": 124.687
+    },
+    {
+      "command": "quick_validate.py asdg/skills/asdg-publish",
+      "runtime": "Python 3.15 with PyYAML 6.0.3 isolated under /tmp/asdg-publish-validation",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -B asdg/scripts/check.py --integrity",
+      "result": "PASS"
+    },
+    {
+      "check": "Provider-only publishing skill excluded from package list and existing discovery remains disabled",
+      "result": "PASS"
+    }
+  ],
+  "human_approval": null,
+  "status": "REVIEW_REQUIRED",
+  "native_discovery": "Provider disabled discovery entries retained; invoke by natural-language request routed in root AGENTS.md. No native discovery claim.",
+  "resolved_failures": [
+    "Default and bundled Python lacked yaml; installed PyYAML only under /tmp and reran the required validator successfully.",
+    "Initial sandbox pip attempt could not resolve pypi.org; approved network escalation succeeded."
+  ],
+  "artifact": {
+    "file": "build/distributions/asdg-0.3.0-pilot.4.zip",
+    "sha256": "192e277a9610922fc5838389988f3846e5b2bfd141def9c8f7551490179d8647",
+    "size": 828860,
+    "provider_skill_excluded": true,
+    "single_asdg_root": true
+  }
+}

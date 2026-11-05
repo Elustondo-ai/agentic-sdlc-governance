@@ -31911,6 +31911,114 @@
         "scope": "Role-based write ownership",
         "visual_review": "Existing ownership SVG rendered with sharp and inspected at 960 px; reused by new reference pages. Existing Markdown renderings not fully re-inspected."
       }
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "aa5a90b80b391e294801373547d7b7f0a687f09b3af70bdd10d4174202e10853",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T18:06:32Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "scope": "Explicit pilot.4 publication and provider-only publishing workflow",
+        "visual_review": "Existing distribution-flow visual reused in brief maintenance report; no substantive visual changed."
+      },
+      "previous_state": {
+        "sha256": "b53c203d29059900bca98a6e1423c4bfe698b465e3691e4761eaa57232330b4c",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "README.md",
+      "sha256": "121b01ff30d02a1fe399b427379334974201a55b173e898b9d695728801c73f0",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T18:06:32Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "scope": "Explicit pilot.4 publication and provider-only publishing workflow",
+        "visual_review": "Existing distribution-flow visual reused in brief maintenance report; no substantive visual changed."
+      },
+      "previous_state": {
+        "sha256": "fa2472111aa28400cce8660d813f2b4de38b3a0e74b891d56db24e283e455e20",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/distribution-build.md",
+      "sha256": "4290810761062e1d85dfa5a8fd564716dede73a0580903741121271b56510602",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T18:06:32Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "scope": "Explicit pilot.4 publication and provider-only publishing workflow",
+        "visual_review": "Existing distribution-flow visual reused in brief maintenance report; no substantive visual changed."
+      },
+      "previous_state": {
+        "sha256": "7bcaa5b37a4cb7ae430b77230b0b759068db960976e17903d834500e1d0c3c5f",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/scripts/lib/cli_model.md",
+      "sha256": "829e8e8f479678d98b2283a3ba066db59fb575601a43e72983d63eba682738f3",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T18:06:32Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "scope": "Explicit pilot.4 publication and provider-only publishing workflow",
+        "visual_review": "Existing distribution-flow visual reused in brief maintenance report; no substantive visual changed."
+      },
+      "previous_state": {
+        "sha256": "9743c7444a0184a683f5ce971657a5756f040ac9ea1d9bcc136a94c66c68e62b",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-publish/SKILL.md",
+      "sha256": "65470eb4191adc0787246554cb6b051f5bfb9d03813d8174eed73c3cd02fb2c7",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T18:06:32Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "scope": "Explicit pilot.4 publication and provider-only publishing workflow",
+        "visual_review": "Existing distribution-flow visual reused in brief maintenance report; no substantive visual changed."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.11-review-pilot4-publication.md",
+      "sha256": "2b7a28f67bafa10abaded87c1f2d853bda19369a823305e77f8a193de44a453d",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T18:06:32Z",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "scope": "Explicit pilot.4 publication and provider-only publishing workflow",
+        "visual_review": "Existing distribution-flow visual reused in brief maintenance report; no substantive visual changed."
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.11-review-pilot4-publication.md",
+      "sha256": "8a169e1e718b4067a9326684724361296774ea53c4b05a8ea44d7bcad5a70e6b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-05T18:07:29.383763+00:00",
+      "human_approval": null,
+      "provenance": {
+        "role_id": "ASDG-ADMIN",
+        "scope": "Correct skill validation runtime evidence"
+      },
+      "previous_state": {
+        "sha256": "2b7a28f67bafa10abaded87c1f2d853bda19369a823305e77f8a193de44a453d",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
     }
   ],
   "distribution_version": "0.3.0-pilot.2"
