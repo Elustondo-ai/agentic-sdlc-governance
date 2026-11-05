@@ -1,7 +1,7 @@
 # Build and verify the portable distribution
 
 The canonical repository produces one ZIP with one top-level `asdg/` folder.
-Developers extract it into an existing Git repository and initialize their chosen clients.
+The recommended [repository-URL Quick Start](https://github.com/Elustondo-ai/agentic-sdlc-governance#quick-start--give-your-agent-the-repository-url) delegates acquisition and initialization to an agent; manual extraction and a pinned clone remain alternatives.
 
 ![The provider selects portable files, validates hashes and builds a ZIP; the client extracts it and initializes local integrations and state.](images/distribution-flow.svg)
 
@@ -25,6 +25,8 @@ Codex hook trust and native invocation require separate local observation.
 
 ## Maintainer build
 
+The selected package includes `skills/asdg-init/SKILL.md`, the single owner of the approval presentation contract; verify the built ZIP contains its exact reviewed bytes.
+Version `0.3.0-pilot.2` packages this approval UX; preserve the existing `v0.3.0-pilot.1` assets. Publication requires explicit human authorization.
 Review `metadata/package-files.json`, the explicit portable file list, when adding a capability.
 Repository-only presentation tools, legacy provider code, application evidence and builds are excluded.
 Before every commit/push, after changes and documentation receipts are ready, run from the provider root:

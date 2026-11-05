@@ -1,0 +1,79 @@
+{
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+  "recorded_at": "2026-11-05T00:39:08.040695+00:00",
+  "starting_head": "2a07dd8d4df719e7dc85fa4d2543ad72119f1440",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "files": [
+    {
+      "path": "README.md",
+      "before_sha256": "5fb5e458ca1dbd8d4ea3edc45ec11b3b85ef40f08c4afce0fe89184acc522add",
+      "sha256": "3d2609fea7961316266a50e55210a5ac6585a636c624132e14b5aa5992550c91"
+    },
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "2fd68d293dfb649d229a98abc669ec434e26591baaa5313039210fb7b6dc0280",
+      "sha256": "6879b1120291c206a396cee7f905f9556d9e9f1aafd0ac87766e2128929a7345"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "8269a4160f78c990b049a7c1d34e2100a5a02cc3b0edfc3d1aff136280ac5bac",
+      "sha256": "c2e9b6e5225b9ced3401fca435ab16b18cf1d0f70c05dcc6c6f630e115ea25d6"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "6984072e81f2743e12ec7addcd4e3e630c0afd2592f850a5535648da79340e49",
+      "sha256": "f77307e5835e96c385a95bebc96f3184b2a0e157e32267631dc2d8c6e6c6a114"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.11-review-readme-handoff.md",
+      "before_sha256": null,
+      "sha256": "dee41a67458a5779ba97d4cc09954967a97e68a44bb5b24f7dce906a2b04f2c7"
+    }
+  ],
+  "review_events": {
+    "preserved": 1862,
+    "appended": 3,
+    "recorded_at": "2026-11-05T00:39:08.040695+00:00"
+  },
+  "checks": {
+    "installation_regressions": "11 tests PASS; both routes and clients in disposable Git projects",
+    "package_integrity": "PASS",
+    "relative_links": "PASS",
+    "whitespace": "PASS",
+    "markdown_limits": "PASS",
+    "evidence_privacy": "PASS",
+    "local_candidate_checksum": "PASS",
+    "generated_files_ignored": "PASS"
+  },
+  "public_downloads": {
+    "https://raw.githubusercontent.com/Elustondo-ai/agentic-sdlc-governance/main/README.md": {
+      "status": 200,
+      "bytes": 3940
+    },
+    "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-0.3.0-pilot.1.zip": {
+      "status": 200,
+      "bytes": 741272
+    },
+    "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-0.3.0-pilot.1.zip.sha256": {
+      "status": 200,
+      "bytes": 89
+    },
+    "archive": {
+      "sha256": "727fad469778f5218855f683b5b4dc9c132217eb0123b631e1a035686d0ac2d3",
+      "entries": 399,
+      "safe_single_folder": true,
+      "packaged_prompt_present": true
+    }
+  },
+  "limits": [
+    "New handoff text is local until human commit/push.",
+    "Fresh native agent README handoff not exercised.",
+    "Existing release assets unchanged; local candidate not published."
+  ],
+  "preserved_prior_work": "Presentation library, media inventory, review reports 02.9 and 02.10.",
+  "git_actions": "No stage, commit or push.",
+  "self_inventory": "docs/asdg/07-planning/02.11-review-readme-handoff.json (self hash omitted)"
+}

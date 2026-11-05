@@ -14,7 +14,7 @@ from cli_files import Conflict, safe_path
 PROVIDER = 'elustondo.ai/asdg'
 COMMAND = 'asdg'
 SHORT_COMMAND = 'asdg'
-VERSION = '0.3.0-pilot.1'
+VERSION = '0.3.0-pilot.2'
 REPO = Path(__file__).resolve().parents[3]
 CATALOG = Path('asdg/00-governance/types/agent-catalog.json')
 ARTIFACTS = Path('docs/asdg')

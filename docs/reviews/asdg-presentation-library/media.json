@@ -97,7 +97,10 @@
       "source": "https://docs.google.com/videos/d/1Idhan4RV_u4CYKQBWOdShvn1wEZim4CQNu0rO-9duKc/edit",
       "source_permissions": "Private before export; not changed.",
       "scope": "Existing short narrated adaptation, retaining legacy ASDLC terminology; not a full reading of the current speaker notes.",
-      "public_url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-introduction-narrated.mp4"
+      "public_url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-introduction-narrated.mp4",
+      "youtube_url": "https://www.youtube.com/watch?v=RUyP6nvC8cE",
+      "youtube_visibility": "Public",
+      "youtube_verified_at": "2026-11-04T23:22:25.270247+00:00"
     },
     {
       "path": "docs/presentations/codex-agent-skills-and-adapters/build/codex-agent-skills-and-adapters-narrated.mp4",
@@ -124,7 +127,10 @@
       "source": "https://docs.google.com/videos/d/10qYXpU0tnC09kbfktEIitYBUXOkzK8Kmzn0WraVklRI/edit",
       "source_permissions": "Private before export; not changed.",
       "scope": "Existing short narrated adaptation, retaining legacy ASDLC terminology; not a full reading of the current speaker notes.",
-      "public_url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/codex-agent-skills-and-adapters-narrated.mp4"
+      "public_url": "https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/codex-agent-skills-and-adapters-narrated.mp4",
+      "youtube_url": "https://www.youtube.com/watch?v=5nNxxmcoB2w",
+      "youtube_visibility": "Public",
+      "youtube_verified_at": "2026-11-04T23:22:25.270247+00:00"
     }
   ],
   "notes": "Generated media stays ignored. Public availability and matching GitHub digests are verified separately."

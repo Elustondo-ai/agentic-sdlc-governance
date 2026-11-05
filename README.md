@@ -6,19 +6,44 @@ ASDG is a software development method that lets developers work with coding agen
 It gives an existing project shared instructions, specialist roles and versioned project memory across the development lifecycle.
 Each project keeps its own versioned `asdg/` folder, so its method can evolve alongside its code.
 
-[Watch or download the ASDG presentations](docs/presentations/README.md). Start with the three-minute introduction, or choose a PowerPoint to read at your own pace.
+[Watch the ASDG introduction on YouTube](https://www.youtube.com/watch?v=ttQZylKeFdg) · [Browse presentations and downloads](docs/presentations/README.md).
 
-## Get started — ZIP + Prompt
+## Quick Start — give your agent the repository URL
 
 Use an existing Git project on macOS or Linux, with Git, Python 3.9+ and Claude Code or Codex available.
 You do not need to clone this methodology repository or type Python commands yourself; the assistant runs the installation engine.
 
-1. Download the [portable ZIP — 0.3.0-pilot.1](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-0.3.0-pilot.1.zip).
-2. Extract its single `asdg/` folder into the root of your existing Git project. **Stop if `asdg/` already exists.**
-3. Open your project in Claude Code or Codex and paste the [ZIP installation prompt](asdg/docs/install-zip-prompt.md).
-4. Review the preview and approve installation. After verification, the assistant offers the optional Context survey and waits for a separate yes.
+**Recommended: open your existing project in Claude Code or Codex and send this request:**
 
-The portable ZIP and its SHA-256 checksum are available in the [pilot pre-release](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/tag/v0.3.0-pilot.1). Choose the portable asset; GitHub's automatic source archives are different packages.
+```text
+Install ASDG in this project using:
+https://github.com/Elustondo-ai/agentic-sdlc-governance
+
+Read the README and follow its installation instructions.
+```
+
+<details>
+<summary>Instructions for the installing agent</summary>
+
+Confirm the target Git root and client; stop if `asdg/` already exists. Download the versioned portable ZIP linked below and its `.sha256` companion, verify the checksum, and inspect archive entries before extracting only its single `asdg/` folder into that root. Reject paths outside that folder and symbolic links; never overwrite existing files.
+
+Read and follow the extracted `asdg/docs/install-zip-prompt.md` and its canonical `asdg-init` skill for preview, the approval request, apply and verification. The agent handles these steps; the initial request does not approve the unseen plan. Hook trust remains a separate human action; Context requires a separate yes after success.
+
+If the README page cannot be read, use its [raw version](https://raw.githubusercontent.com/Elustondo-ai/agentic-sdlc-governance/main/README.md); if a required download fails, stop and report it. A README URL alone is reference material; the explicit install request above authorizes acquisition and extraction, while installation still requires approval of the preview.
+
+</details>
+
+The agent handles acquisition, preview, application and verification. Initialization waits for your approval of the exact preview; the request above is not that approval.
+
+**Alternative — manual ZIP + Prompt:**
+
+1. Download the [portable ZIP — 0.3.0-pilot.2](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.2/asdg-0.3.0-pilot.2.zip).
+2. Extract its single `asdg/` folder into the root of your existing Git project. **Stop if `asdg/` already exists.**
+3. Open your project in Claude Code or Codex and paste `asdg/docs/install-zip-prompt.md` from the extracted package ([prompt reference](asdg/docs/install-zip-prompt.md)).
+4. Review the preview and respond as requested by the selected package’s approval prompt. After verification, the assistant offers the optional Context survey and waits for a separate yes.
+
+The portable ZIP and its [SHA-256 checksum](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.2/asdg-0.3.0-pilot.2.zip.sha256) are available in the [pilot pre-release](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/tag/v0.3.0-pilot.2). Choose the portable asset; GitHub's automatic source archives are different packages.
+This pilot packages the explicit approval presentation; use the downloaded package’s own instructions.
 This is a pilot candidate awaiting human review; installation checks do not establish native discovery, invocation or hook trust.
 See [installation details](asdg/docs/installation.md) and [client integration limits](asdg/docs/client-integrations.md).
 

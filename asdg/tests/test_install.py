@@ -103,8 +103,31 @@ class InstallTests(unittest.TestCase):
                     self.assertEqual(before, tree(self.target))
                     self.assertFalse(preview['installation_complete'])
                     self.assertFalse(preview['context_survey']['offered'])
+                    # Approval summary inputs must describe actual pending writes, not fixture guesses.
+                    self.assertEqual(preview['project_root'], str(self.target))
+                    self.assertEqual(preview['clients_applied'], [client])
+                    metadata = json.loads((self.source / 'asdg/metadata/distribution.json').read_text())
+                    self.assertEqual(preview['source']['version'], metadata['version'])
+                    self.assertEqual(preview['source']['integrity'], 'MANIFEST_MATCHED')
+                    pending = [row for row in preview['files'] if row['action'] != 'unchanged']
+                    self.assertEqual({row['path'] for row in pending}, set(preview['planned_files']))
+                    for row in pending:
+                        existed = row['path'] in before
+                        self.assertEqual(row['action'], 'modified' if existed else 'added')
+                        if existed:
+                            self.assertEqual(row['before_sha256'], hashlib.sha256(before[row['path']]).hexdigest())
+                            self.assertTrue(row['diff'])
+                    # The full JSON can be retained outside the target without preview writes.
+                    with tempfile.NamedTemporaryFile(mode='w+', dir=self.root, suffix='.json') as saved:
+                        json.dump(preview, saved)
+                        saved.flush()
+                        saved.seek(0)
+                        self.assertEqual(json.load(saved), preview)
+                    self.assertEqual(before, tree(self.target))
                     installed = self.invoke(route, client, apply_changes=True, expected_plan=preview['plan'])
                     self.assertTrue(installed['installation_complete'])
+                    skill = Path('asdg/skills/asdg-init/SKILL.md')
+                    self.assertEqual((self.target / skill).read_bytes(), (CORE.parent / skill).read_bytes())
                     self.assertTrue(installed['verification']['structure_ok'])
                     self.assertFalse(installed['context_survey']['executed'])
                     self.assertTrue(installed['context_survey']['requires_separate_affirmative'])

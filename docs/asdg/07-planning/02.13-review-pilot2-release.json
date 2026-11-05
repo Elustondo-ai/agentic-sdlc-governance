@@ -1,0 +1,162 @@
+{
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "recorded_at": "2026-11-05T01:06:58.852629+00:00",
+  "status": "AUTHORIZED_FOR_COMMIT_PUSH_AND_NEW_PRE_RELEASE; PREPUBLICATION_CHECKS_PASS",
+  "human_approval": null,
+  "publication_authorization": "Explicit current request to commit/push/rebuild and selection of new v0.3.0-pilot.2 pre-release. No methodology approval inferred.",
+  "starting_head": "2a07dd8d4df719e7dc85fa4d2543ad72119f1440",
+  "branch": "main",
+  "remote": "https://github.com/Elustondo-ai/agentic-sdlc-governance.git",
+  "version": "0.3.0-pilot.2",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "82f12f3cb4b32bd4227d5e61a98c1843e56e57d6ec9e4077d3a0db666211e0ba"
+    },
+    {
+      "path": "README.md",
+      "sha256": "65290401f155bec363643f00a6c6c03cf88e2214cdae03a0e9ec5919ee611f46"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "sha256": "dd4e10f875f3d8174853c1600387b0a45ec27762bcce7c7821e1c0747921d112"
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "sha256": "a8fdeba21b7c63281ccb0fcfbf659ef35add6b891370b2f3ea35c2f129f8b426"
+    },
+    {
+      "path": "asdg/docs/distribution-build.md",
+      "sha256": "511b4a14687c7a6c1fa9d2b5ba27aa315effa5898290d3b1ebc18c105fd4a3b5"
+    },
+    {
+      "path": "asdg/docs/install-clone-prompt.md",
+      "sha256": "76970dc2e5cc02ecf85792da27691d310c203dc8d76507d580a1267be03c9464"
+    },
+    {
+      "path": "asdg/docs/install-zip-prompt.md",
+      "sha256": "9648d7fdc63663f839a14dfebf9ab2df6ef26fb7c6f80a8e7340fe26a261eb21"
+    },
+    {
+      "path": "asdg/docs/installation.md",
+      "sha256": "1627facf655afe98328ede55ac4ab58422c4f82b28ef661058e0a516b9627c34"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "sha256": "d988ed18b99ed5a03613fa9b7b01e1eafdd0fa7def300e46aab192370a183405"
+    },
+    {
+      "path": "asdg/metadata/distribution.json",
+      "sha256": "f7f46e1df6cd145afede9d911e7d45685e99a173b4308ed274d710a3d0c8a39c"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_model.md",
+      "sha256": "8df5e3c79e1c14e488273443abaded71ab88e880c9d10a804d2e30e2ea46f3e5"
+    },
+    {
+      "path": "asdg/scripts/lib/cli_model.py",
+      "sha256": "23a45ae84ef13bfe8360c6cc0a460d82b60ec85691e2e9ec20042e015e95289a"
+    },
+    {
+      "path": "asdg/skills/asdg-init/SKILL.md",
+      "sha256": "539bd041cb474bbf569ad7525cdfe24e1110101dad4196acf87de1becd3cb302"
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "sha256": "66547f8f84b6ff729aab324823a293a01314f37f3be57220c44c57f278d11014"
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "sha256": "e1be540aa4997fab5a4171abfacce4a5b3113ecb1c2b6374e4c658c086eae8c1"
+    },
+    {
+      "path": "asdg/tests/test_install.md",
+      "sha256": "55d6a5eb474f4375fd21137035646b66a149bc82e9a04ecd765e8e3171525d0c"
+    },
+    {
+      "path": "asdg/tests/test_install.py",
+      "sha256": "b2b7f94b6b9587420085f06818c63f97e94f00df18ad45f1e90ea4f04fc3c3b5"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.10-review-video-collection.json",
+      "sha256": "37162859ddf084a63f17d5fae059dd2bf5fbf9f393837dda67c253e992bce217"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.10-review-video-collection.md",
+      "sha256": "29d9fb024e9749a781604e59e29cb4c44cbf93ea30f6536d223b06bf114907c3"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.11-review-readme-handoff.json",
+      "sha256": "ef9740311e53394f934ce53e41fd76683804672b589192478597326fe93064b7"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.11-review-readme-handoff.md",
+      "sha256": "dee41a67458a5779ba97d4cc09954967a97e68a44bb5b24f7dce906a2b04f2c7"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.12-review-installation-approval-ux.json",
+      "sha256": "8c8522ac44c236174833418b1d93ecf77ea68a9aba02457ebbe17c732aa97ec9"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.12-review-installation-approval-ux.md",
+      "sha256": "50fbf629a09f0f3082ff656c0ca72fa062d4598e2427163367919193fe1c7e92"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.13-review-pilot2-release.md",
+      "sha256": "39d208a686aef799e664e11cff808c759a075d3deec6c7547f8bce46b2d3f41a"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.9-review-youtube-watch-links.json",
+      "sha256": "f181aec759fa890b4e45cd0550ccfa0793b1ad135de1de03660f0346ca7202e3"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.9-review-youtube-watch-links.md",
+      "sha256": "c758d043844a65b1b1371b78b13ca7b3b20502f6088d809dc9e9d50b5b1980e5"
+    },
+    {
+      "path": "docs/presentations/README.md",
+      "sha256": "d930242fb679693ea12998ba74a74b2292d5a9ae6d067793d81284f21b6d83cc"
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/media.json",
+      "sha256": "4b9b9e78620fb4f1ced1ac96f917ca0821e87aab72111844268924cbfddf3280"
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/recent-media.json",
+      "sha256": "a9a7c7da3d9a2c38546da801e2444aafa0576482980504bf57ca8f75686fc33d"
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/video-queue.json",
+      "sha256": "3d16f114f20e9164c7c63a13177189a054580ec194eca64fe9722be2a2c561bf"
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/video-verification.json",
+      "sha256": "05b781233846eb772b3a4088c817010fd770777d107615e3ba6701215b8de3a7"
+    }
+  ],
+  "self_inventory": "docs/asdg/07-planning/02.13-review-pilot2-release.json (self hash omitted)",
+  "checks": {
+    "full_suite": "Ran 128 tests in 120.190s; OK",
+    "integrity": "PASS",
+    "archive_working_tree_bytes": "PASS",
+    "checksum": "PASS",
+    "ignored_assets": "PASS",
+    "whitespace": "PASS",
+    "personal_paths_and_emails_in_new_evidence": "PASS",
+    "no_unrelated_or_previously_staged_files": "PASS"
+  },
+  "artifact": {
+    "zip": "build/distributions/asdg-0.3.0-pilot.2.zip",
+    "sha256": "5c8276b49a229cba76fb12dcaec580d177d72bf43d0567f65008cd4e68fac63e",
+    "size_bytes": 745971,
+    "checksum_file": "build/distributions/asdg-0.3.0-pilot.2.zip.sha256"
+  },
+  "review_events": {
+    "preserved": 1876,
+    "appended": 4,
+    "recorded_at": "2026-11-05T01:06:58.852629+00:00"
+  },
+  "preserved_release": "v0.3.0-pilot.1 tag and all assets; presentation downloads continue to use it.",
+  "postpublication_verification": "Exact committed ZIP members, remote main/tag, GitHub asset bytes and checksums are checked and reported in the delivery response."
+}

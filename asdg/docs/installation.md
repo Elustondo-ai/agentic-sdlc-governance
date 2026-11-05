@@ -1,6 +1,6 @@
 # Install ASDG in an existing Git project
 
-Both ZIP + Prompt and Clone + Prompt use one Python 3.9+ engine on macOS/Linux. The prompts select inputs, show the plan and wait for approval; they never implement a second installer.
+The recommended [repository-URL Quick Start](https://github.com/Elustondo-ai/agentic-sdlc-governance#quick-start--give-your-agent-the-repository-url) lets the agent acquire the ZIP safely. Manual ZIP + Prompt and Clone + Prompt remain alternatives using one Python 3.9+ engine on macOS/Linux. The prompts select inputs, show the plan and wait for approval; they never implement a second installer.
 
 ![Both acquisitions use one integrity, approval and verification engine; Context requires separate consent.](images/installation-engine.svg)
 
@@ -23,7 +23,8 @@ A matching manifest establishes package integrity, not release approval. A stale
 
 ## Approve, apply and verify
 
-After explicit approval, repeat the same command/options, replacing `--dry-run` with `--apply --plan TOKEN_FROM_PREVIEW`. The token binds the source, target, client and planned bytes; a changed plan requires fresh review.
+The [canonical Init skill](../skills/asdg-init/SKILL.md#mandatory-approval-presentation--both-clients) owns the mandatory text approval summary, actual preview field/count mapping, accessible complete-plan reference and APPROVE/CANCEL responses for both clients. The install request itself is not plan approval.
+After that approval, repeat the same command/options, replacing `--dry-run` with `--apply --plan TOKEN_FROM_PREVIEW`. The token binds the source, target, client and planned bytes; a changed plan requires fresh review.
 The engine uses existing collision protection and rollback, then checks the installed package and selected integrations before completing. A failed verification rolls back its own writes. It is not crash-safe against power loss or hostile concurrent writers.
 Run `python3 asdg/scripts/cli.py verify --json` in the target, and repeat the preview to confirm no further writes. No Git mutation occurs.
 On success, report installation complete and offer the optional Context survey. Do not execute it, activate a role or write orientation until a separate affirmative response.

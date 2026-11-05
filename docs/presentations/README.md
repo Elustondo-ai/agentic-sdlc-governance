@@ -1,18 +1,44 @@
 # ASDG presentations
 
-Start with the three-minute ASDG introduction. Choose a narrated video to watch, or download the PowerPoint to read at your own pace.
+Watch on YouTube, or download the PowerPoint to read at your own pace. For readable slide text, select **1080p HD** in YouTube’s quality settings.
 
-| Presentation | Narrated video | PowerPoint |
+## Recommended
+
+Start with the introduction, then choose how to try ASDG in an existing project.
+
+| Presentation | Watch | Downloads |
 | --- | --- | --- |
-| ASDG introduction | [MP4 · 3:00](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-introduction-narrated.mp4) | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-introduction.pptx) |
-| Codex agents, skills and adapters | [MP4 · 2:45](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/codex-agent-skills-and-adapters-narrated.mp4) | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/codex-agent-skills-and-adapters.pptx) |
-| Formalization Gradient | Not published yet | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/formalization-gradient.pptx) |
-| Agentic AI | Not published yet | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/agentic-ai.pptx) |
-| How coding AI agents work | Not published yet | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/coding-agents-architecture-article.pptx) |
-| Sprint governance | Not published yet | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-sprint-governance-review.pptx) |
-| Spec-driven development deep dive | Not published yet | [Download PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/spec-driven-development-deep-dive.pptx) |
+| ASDG introduction — Human-directed agentic engineering | [▶ Watch on YouTube](https://www.youtube.com/watch?v=ttQZylKeFdg) | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-01.pptx) |
+| Two Ways to Start — ZIP + Prompt or Clone + Prompt | [▶ Watch on YouTube](https://www.youtube.com/watch?v=dbiRxSCKfrg) | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-14.pptx) |
 
-MP4 links download the video; open it in your browser or video player. The short videos are narrated adaptations; PowerPoints include the slides and speaker notes.
-The existing recordings use the earlier “ASDLC” name. Follow the current ASDG README for installation.
+## Extra presentations
+
+Explore the full collection, including specialist topics, reference material and earlier design snapshots.
+
+| Presentation | Watch | Downloads |
+| --- | --- | --- |
+| ASDG introduction and the team dimension | [▶ Watch on YouTube](https://www.youtube.com/watch?v=f8H-8KvK-S4) | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-02.pptx) |
+| The team dimension | [▶ Watch on YouTube](https://www.youtube.com/watch?v=oMjSBoYLwBs) | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-03.pptx) |
+| Context engineering | [▶ Watch on YouTube](https://www.youtube.com/watch?v=J_97D63wB40) | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-04.pptx) |
+| Agent lifetimes — Subagents and continuing sessions | [▶ Watch on YouTube](https://www.youtube.com/watch?v=3Gx8qR6bQ0U) | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-05.pptx) |
+| Skills and MCP tools | [▶ Watch on YouTube](https://www.youtube.com/watch?v=dEMJ0AkF-Ds) | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-06.pptx) |
+| Cross-cutting concerns and focus — Draft | Video ready; YouTube upload pending | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-07.pptx) |
+| Reference library — Eight sources | Video ready; YouTube upload pending | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-08.pptx) |
+| Historical perspective — Three waves | Video ready; YouTube upload pending | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-09.pptx) |
+| Claude in 26 concepts — Nate Herk study guide | Video ready; YouTube upload pending | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-10.pptx) |
+| Claude platform — Skills and YAML | Video ready; YouTube upload pending | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-11.pptx) |
+| Agentic and deterministic execution patterns | Video ready; YouTube upload pending | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-12.pptx) |
+| Installation and evolution — Historical design snapshot | [▶ Watch on YouTube](https://www.youtube.com/watch?v=PfNNNJIEkuA) | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-recent-13.pptx) |
+| ASDG introduction — Earlier ASDLC overview | [▶ Watch on YouTube](https://www.youtube.com/watch?v=RUyP6nvC8cE) | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-introduction.pptx) · [MP4](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-introduction-narrated.mp4) |
+| Codex agents, skills and adapters — Earlier overview | [▶ Watch on YouTube](https://www.youtube.com/watch?v=5nNxxmcoB2w) | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/codex-agent-skills-and-adapters.pptx) · [MP4](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/codex-agent-skills-and-adapters-narrated.mp4) |
+| Formalization Gradient — Design snapshot | Video ready; YouTube upload pending | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/formalization-gradient.pptx) |
+| Agentic AI — Architecture concepts | Video ready; YouTube upload pending | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/agentic-ai.pptx) |
+| How coding AI agents work | Video ready; YouTube upload pending | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/coding-agents-architecture-article.pptx) |
+| Sprint governance — Design review | Video ready; YouTube upload pending | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/asdg-sprint-governance-review.pptx) |
+| Spec-driven development deep dive | Video ready; YouTube upload pending | [PPTX](https://github.com/Elustondo-ai/agentic-sdlc-governance/releases/download/v0.3.0-pilot.1/spec-driven-development-deep-dive.pptx) |
+
+Ten videos are public. Eleven narrated videos are ready, awaiting YouTube upload capacity; pending cells will become watch links after publication. All 21 PowerPoints are available now.
+
+Videos are concise narrated adaptations. Drafts and historical snapshots describe their source state; follow the current ASDG README for installation. The earlier recordings retain the “ASDLC” name.
 
 [Presentation sources and build instructions](sources.md) · [Back to ASDG](../../README.md)

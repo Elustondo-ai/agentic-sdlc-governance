@@ -1,0 +1,387 @@
+{
+  "recorded_at": "2026-11-05T00:25:34.998466+00:00",
+  "status": "GENERATION_AND_DOCUMENTATION_PASS; PUBLICATION_PARTIAL",
+  "unique_decks": 21,
+  "new_saved_vids": 19,
+  "new_voiceover_scenes": 158,
+  "public_youtube_videos": 10,
+  "ready_to_upload": 11,
+  "public_visibility_readback": [
+    {
+      "studio_url": "https://studio.youtube.com/video/dEMJ0AkF-Ds/edit",
+      "public": true
+    },
+    {
+      "studio_url": "https://studio.youtube.com/video/3Gx8qR6bQ0U/edit",
+      "public": true
+    },
+    {
+      "studio_url": "https://studio.youtube.com/video/J_97D63wB40/edit",
+      "public": true
+    },
+    {
+      "studio_url": "https://studio.youtube.com/video/oMjSBoYLwBs/edit",
+      "public": true
+    },
+    {
+      "studio_url": "https://studio.youtube.com/video/f8H-8KvK-S4/edit",
+      "public": true
+    },
+    {
+      "studio_url": "https://studio.youtube.com/video/PfNNNJIEkuA/edit",
+      "public": true
+    },
+    {
+      "studio_url": "https://studio.youtube.com/video/dbiRxSCKfrg/edit",
+      "public": true
+    },
+    {
+      "studio_url": "https://studio.youtube.com/video/ttQZylKeFdg/edit",
+      "public": true
+    },
+    {
+      "studio_url": "https://studio.youtube.com/video/5nNxxmcoB2w/edit",
+      "public": true
+    },
+    {
+      "studio_url": "https://studio.youtube.com/video/RUyP6nvC8cE/edit",
+      "public": true
+    }
+  ],
+  "voiceover_audit": [
+    {
+      "id": "recent-02",
+      "vids_url": "https://docs.google.com/videos/d/1eeBWDhQ2PhhViF1CUv4LD5BqH55DrjhvyjcrDZPlSHE/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "timer": "- timer \"0 seconds out of 3 minutes 50 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "recent-03",
+      "vids_url": "https://docs.google.com/videos/d/1iuAzibt_dQeG_ibPfhMLDhwlRXG7SCHVAG8wR0nL1CQ/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "timer": "- timer \"0 seconds out of 1 minute 13 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "recent-04",
+      "vids_url": "https://docs.google.com/videos/d/1L9VMaVCLfxNUkFydP9THlHkdbc0gXvYFJDQ-AmTJmFE/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "timer": "- timer \"0 seconds out of 1 minute 42 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "recent-05",
+      "vids_url": "https://docs.google.com/videos/d/1o7-w3HwICRlK5dYsDcS6VuHLJyPeLZmm6j7rpuuP2A0/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "timer": "- timer \"0 seconds out of 1 minute 51 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "recent-06",
+      "vids_url": "https://docs.google.com/videos/d/19JHzuL_AaQeKEMoe4mmGj2XcLjaqagLhEcnq8iewudw/edit",
+      "voice_scenes": [
+        1
+      ],
+      "timer": "- timer \"0 seconds out of 13 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "recent-07",
+      "vids_url": "https://docs.google.com/videos/d/1qMzCmR6p1hsrx5Zk03AUTE87sqgLNlW3J2ixvAq7Odg/edit",
+      "voice_scenes": [
+        1
+      ],
+      "timer": "- timer \"0 seconds out of 27 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "recent-08",
+      "vids_url": "https://docs.google.com/videos/d/1KmMRC57hr2xuxVNRFk59UcBmuosGWbPturvlmVky1BI/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "timer": "- timer \"0 seconds out of 1 minute 55 seconds.\":",
+      "quota_blocked": true,
+      "saved": true
+    },
+    {
+      "id": "recent-09",
+      "vids_url": "https://docs.google.com/videos/d/1RzEp6BDCSrb1mJY3VXP6xF-uSeUYAd0-shM5-Y0775k/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "timer": "- timer \"0 seconds out of 2 minutes 28 seconds.\":",
+      "quota_blocked": true,
+      "saved": true
+    },
+    {
+      "id": "recent-10",
+      "vids_url": "https://docs.google.com/videos/d/1Fr05FnknwxN7SzRi2VrUd8LEn3YdXPk0DRY9wCpAHVY/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "timer": "- timer \"3 minutes 7 seconds out of 4 minutes 58 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "recent-11",
+      "vids_url": "https://docs.google.com/videos/d/1u_L6Um921mOZ6WjnEmJvZ5BjKIkZKMWoDtzPez06Hcw/edit",
+      "voice_scenes": [
+        1,
+        2
+      ],
+      "timer": "- timer \"0 seconds out of 25 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "recent-12",
+      "vids_url": "https://docs.google.com/videos/d/1Pm92fjSTkS547cfLuYWdw7SRlkDY0LvHw9lPF6n6afc/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "timer": "- timer \"0 seconds out of 1 minute 35 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "repository-formalization-gradient",
+      "vids_url": "https://docs.google.com/videos/d/1wQSHvxMctEb2--1xjT7AqBHdFr1BfFsozRjztZeEn1o/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "timer": "- timer \"0 seconds out of 2 minutes 56 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "repository-agentic-ai",
+      "vids_url": "https://docs.google.com/videos/d/1kc7GUJkbPFobQM5d4XIrwXRVD48u-eSaB1UEPoAddQk/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "timer": "- timer \"0 seconds out of 1 minute 26 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "repository-coding-agents-architecture-article",
+      "vids_url": "https://docs.google.com/videos/d/1f2Chh9el6A6gQQJjn0HjMvZc_W738SYYwW2FyAodVeE/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "timer": "- timer \"0 seconds out of 1 minute 51 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "repository-asdg-sprint-governance-review",
+      "vids_url": "https://docs.google.com/videos/d/1Bs8cK9uy9uEIChBdloam7OoeLxAZgpOmVcUhoBTXfwQ/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "timer": "- timer \"0 seconds out of 2 minutes 15 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "repository-spec-driven-development-deep-dive",
+      "vids_url": "https://docs.google.com/videos/d/1_WvNW9IgBBLQoPfKY8_yygOnKxfh0fHxduHU4sh7DvY/edit",
+      "voice_scenes": [
+        1
+      ],
+      "timer": "- timer \"0 seconds out of 16 seconds.\":",
+      "quota_blocked": false,
+      "saved": true
+    },
+    {
+      "id": "recent-01",
+      "vids_url": "https://docs.google.com/videos/d/1z5Rnj-zRDvfM7dMMGERQNdW5ZiaHXKzFG5IWaZ8m81c/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "timer": "- timer \"0 seconds out of 2 minutes 33 seconds.\":",
+      "saved": true
+    },
+    {
+      "id": "recent-13",
+      "vids_url": "https://docs.google.com/videos/d/1e5LtA0jfMTuNWqoMRfnt8MsOnZ10VehIIkhBIPGmum4/edit",
+      "voice_scenes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "timer": "- timer \"0 seconds out of 1 minute 57 seconds.\":",
+      "saved": true
+    },
+    {
+      "id": "recent-14",
+      "vids_url": "https://docs.google.com/videos/d/1XbCZuoMf5A_7CROpliUUk3UcKdgQ0XXjB9z4PjyIbY4/edit",
+      "voice_scenes": [
+        1
+      ],
+      "timer": "- timer \"0 seconds out of 38 seconds.\":",
+      "saved": true
+    }
+  ],
+  "youtube_blocker": "You\u2019ve reached your upload limit.",
+  "pptx_downloads": "14 newer PPTX downloaded over public HTTPS and SHA-256/size matched local sources and GitHub digests; seven earlier PPTX verified in prior evidence.",
+  "playback": "Older two recordings previously played; newer recommended introduction observed playing in signed-in YouTube. HD processing completed for all ten public videos. Anonymous playback and full end-to-end audio audition were not performed.",
+  "repairs": "Installation draft regenerated to cover all eight scenes. Study guide missing scenes 12,15,18,21,24,27 were added individually; all 27 verified afterward.",
+  "source_preservation": "Original PPTX/Google Slides/Google Vids content and sharing unchanged; five private Google Slides copies created from repository exports.",
+  "review_limits": "Concise generated scripts reviewed. All narration scenes counted; not a word-for-word recording of the full speaker notes. Installation historical clone-first guidance qualified in narration and title.",
+  "automatic_review": "Bulk tab cleanup rejected; tabs left open. Wholesale study-guide voiceover replacement rejected; only missing clips inserted.",
+  "commit_push": "Not performed."
+}

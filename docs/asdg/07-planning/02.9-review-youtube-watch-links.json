@@ -1,0 +1,51 @@
+{
+  "recorded_at": "2026-11-04T23:22:25.270247+00:00",
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "starting_head": "2a07dd8d4df719e7dc85fa4d2543ad72119f1440",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "files": [
+    {
+      "path": "README.md",
+      "before_sha256": "6dae55acc1cd82b23ee93e3a24a6b541cf0709ea0af37499a11387dd1b67ed1f",
+      "sha256": "8dcda6e44632f8db030c594148969b23e682dbb92b35629bb079fb019ce3a35c"
+    },
+    {
+      "path": "docs/presentations/README.md",
+      "before_sha256": "4aed5261dd665b62d21be75e0228001e11fd394ee6522f6c45968398ff6f36cc",
+      "sha256": "0583d572c214db50c39678bfeb01379e202b9cf4c32aee569c4fd37732170361"
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/media.json",
+      "before_sha256": "144f71b6b979c726281f2c12e5112d92bb5ee95fb73392b84ee0b295a6faaf7d",
+      "sha256": "4b9b9e78620fb4f1ced1ac96f917ca0821e87aab72111844268924cbfddf3280"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.9-review-youtube-watch-links.md",
+      "before_sha256": null,
+      "sha256": "c758d043844a65b1b1371b78b13ca7b3b20502f6088d809dc9e9d50b5b1980e5"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "758e9e9df21182c8714440fb7703af12c0bf84c682fbe8daae5110e0b848920a",
+      "sha256": "667d83d705712a390ee8adc562ed4ca98c548f2e9e58c8071ae790b15be07e63"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "977d8419615eb2a32c26f750df64dd54751bcfb477f8deca9d668824b507bebd",
+      "sha256": "ceacf2d52d2ca4b83d4ec295559e2c670668f9e373cc20c5853f6a620f50487c"
+    }
+  ],
+  "preserved_review_events": 1856,
+  "appended_review_events": 3,
+  "verification": {
+    "package_integrity": "PASS",
+    "whitespace": "PASS",
+    "documentation_line_limits": "PASS",
+    "youtube_visibility": "Both Public in YouTube Studio",
+    "playback": "Both advanced in signed-in browser; anonymous playback not tested"
+  },
+  "commit_push": "Not performed",
+  "published_portable_zip": "Unchanged"
+}

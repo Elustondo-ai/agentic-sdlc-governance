@@ -8,6 +8,7 @@ They exercise the developer promise without relying on a sibling provider or glo
 | Check | Evidence produced |
 | --- | --- |
 | Repeated builds | Stable bytes and checksum; every member comes from the explicit file list. |
+| Approval instructions | ZIP contains the exact current canonical Init skill and both reusable prompts. |
 | Exclusions | Unlisted provider files never enter the archive. |
 | Stale or missing bytes | Build fails before creating an artifact. |
 | Unsafe selections | Traversal, symlink, duplicate members and project-local adoption records are rejected. |

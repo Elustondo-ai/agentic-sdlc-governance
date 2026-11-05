@@ -1,0 +1,65 @@
+{
+  "recorded_at": "2026-11-05T00:25:34.998466+00:00",
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "starting_head": "2a07dd8d4df719e7dc85fa4d2543ad72119f1440",
+  "status": "REVIEW_REQUIRED; PUBLICATION_PARTIAL",
+  "human_approval": null,
+  "files": [
+    {
+      "path": "README.md",
+      "before_sha256": "8dcda6e44632f8db030c594148969b23e682dbb92b35629bb079fb019ce3a35c",
+      "sha256": "5fb5e458ca1dbd8d4ea3edc45ec11b3b85ef40f08c4afce0fe89184acc522add"
+    },
+    {
+      "path": "docs/presentations/README.md",
+      "before_sha256": "0583d572c214db50c39678bfeb01379e202b9cf4c32aee569c4fd37732170361",
+      "sha256": "d930242fb679693ea12998ba74a74b2292d5a9ae6d067793d81284f21b6d83cc"
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/video-queue.json",
+      "before_sha256": null,
+      "sha256": "3d16f114f20e9164c7c63a13177189a054580ec194eca64fe9722be2a2c561bf"
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/recent-media.json",
+      "before_sha256": null,
+      "sha256": "a9a7c7da3d9a2c38546da801e2444aafa0576482980504bf57ca8f75686fc33d"
+    },
+    {
+      "path": "docs/reviews/asdg-presentation-library/video-verification.json",
+      "before_sha256": null,
+      "sha256": "05b781233846eb772b3a4088c817010fd770777d107615e3ba6701215b8de3a7"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.10-review-video-collection.md",
+      "before_sha256": null,
+      "sha256": "29d9fb024e9749a781604e59e29cb4c44cbf93ea30f6536d223b06bf114907c3"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "667d83d705712a390ee8adc562ed4ca98c548f2e9e58c8071ae790b15be07e63",
+      "sha256": "8269a4160f78c990b049a7c1d34e2100a5a02cc3b0edfc3d1aff136280ac5bac"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "ceacf2d52d2ca4b83d4ec295559e2c670668f9e373cc20c5853f6a620f50487c",
+      "sha256": "6984072e81f2743e12ec7addcd4e3e630c0afd2592f850a5535648da79340e49"
+    }
+  ],
+  "preserved_review_events": 1859,
+  "appended_review_events": 3,
+  "checks": {
+    "package_integrity": "PASS",
+    "whitespace": "PASS",
+    "documentation_line_limits": "PASS",
+    "relative_links": "PASS",
+    "evidence_privacy": "PASS",
+    "narration_coverage": "158 scenes across 19 new saved Vids",
+    "public_pptx": "14 additional byte-identical HTTPS downloads",
+    "youtube": "10 public; 11 upload-limit blocked"
+  },
+  "prior_uncommitted_work": "Preserved prior 02.9 review report, receipt and media.json edits.",
+  "commit_push": "Not performed.",
+  "self_inventory": "docs/asdg/07-planning/02.10-review-video-collection.json (new; self hash omitted)"
+}

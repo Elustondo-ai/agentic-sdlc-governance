@@ -1,0 +1,143 @@
+{
+  "requester": "Pablo",
+  "acting_agent": "Codex / ASDG Admin",
+  "session": "01a1a7e4-c5b0-7440-a67f-f427746db953",
+  "recorded_at": "2026-11-05T01:03:24.149425+00:00",
+  "starting_head": "2a07dd8d4df719e7dc85fa4d2543ad72119f1440",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "scope": "One-link installation and concise explicit approval UX; no installer redesign.",
+  "session_state": {
+    "role": "ASDG Admin",
+    "focus": "Simplify ASDG installation and human approval UX",
+    "design_attitude": "Black; ended before implementation",
+    "implementation_attitude": "NoAttitude",
+    "native_title_update": "Acknowledged for Black review and restored normal implementation; UI readback not inspected."
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "before_sha256": "3d2609fea7961316266a50e55210a5ac6585a636c624132e14b5aa5992550c91",
+      "sha256": "76c3af40ddd768baa2b00f36e29c9ee47e7e9f5585dbde7c0ff146121c036760"
+    },
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "6879b1120291c206a396cee7f905f9556d9e9f1aafd0ac87766e2128929a7345",
+      "sha256": "82f12f3cb4b32bd4227d5e61a98c1843e56e57d6ec9e4077d3a0db666211e0ba"
+    },
+    {
+      "path": "asdg/skills/asdg-init/SKILL.md",
+      "before_sha256": "ac8c15c3e9e3f060ca38c0170fa8ccfadd824d3c05c15073807c9415eee76ca8",
+      "sha256": "539bd041cb474bbf569ad7525cdfe24e1110101dad4196acf87de1becd3cb302"
+    },
+    {
+      "path": "asdg/docs/install-zip-prompt.md",
+      "before_sha256": "dd20f275b60af342860dd0242b4843280cc2b04b91e11dead0964b828caaafbc",
+      "sha256": "9648d7fdc63663f839a14dfebf9ab2df6ef26fb7c6f80a8e7340fe26a261eb21"
+    },
+    {
+      "path": "asdg/docs/install-clone-prompt.md",
+      "before_sha256": "c26fc03c4ab0a32076d74d8aabe4d2b9fea549f02e10b4f816d6694bbacb579e",
+      "sha256": "76970dc2e5cc02ecf85792da27691d310c203dc8d76507d580a1267be03c9464"
+    },
+    {
+      "path": "asdg/docs/installation.md",
+      "before_sha256": "fa357979bc22fe882646c687842f9691c91b7b82bc0ab291d6084a8b9c6d7971",
+      "sha256": "1627facf655afe98328ede55ac4ab58422c4f82b28ef661058e0a516b9627c34"
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "before_sha256": "c20241e3e90b84f464b3dab1f09225543ed2999b1ed52aa9a505520805f885c9",
+      "sha256": "a8fdeba21b7c63281ccb0fcfbf659ef35add6b891370b2f3ea35c2f129f8b426"
+    },
+    {
+      "path": "asdg/docs/distribution-build.md",
+      "before_sha256": "8238dd4c9ab946b7fea418c238bb855eecb9bbcb1f0393fa508b7cf79b5c97aa",
+      "sha256": "4f0cd6da6e0027d1a6a387c310b5cb010086e30238b1507fbca95ad9bcd3132c"
+    },
+    {
+      "path": "asdg/tests/test_install.py",
+      "before_sha256": "12499c0b894d5bd74e2f7a653fa17c9c72eb941dd8d6f3f4282d3d64276b7eb9",
+      "sha256": "b2b7f94b6b9587420085f06818c63f97e94f00df18ad45f1e90ea4f04fc3c3b5"
+    },
+    {
+      "path": "asdg/tests/test_install.md",
+      "before_sha256": "1ff51cc9b90be982215df0f7789b3303891bf39176c6569ca6f479e1a1b9c80c",
+      "sha256": "55d6a5eb474f4375fd21137035646b66a149bc82e9a04ecd765e8e3171525d0c"
+    },
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "c2e9b6e5225b9ced3401fca435ab16b18cf1d0f70c05dcc6c6f630e115ea25d6",
+      "sha256": "e921231159d1d7f7f501b1eaad0dd744e065a2e6b29ca4c15718c879f4f14693"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "f77307e5835e96c385a95bebc96f3184b2a0e157e32267631dc2d8c6e6c6a114",
+      "sha256": "54dde1612454f64869a5b6c946a1bdcae216895299d400bc658230eee9d68a52"
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "before_sha256": "067020fa506cb023bd170907230e5144179e76d0cd99e98104008b4cbdfe4bbb",
+      "sha256": "e1be540aa4997fab5a4171abfacce4a5b3113ecb1c2b6374e4c658c086eae8c1"
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "before_sha256": "737877d7cc557ffd2d5ce657459726374d223846cd22f09cd60b3fb44f542cbd",
+      "sha256": "66547f8f84b6ff729aab324823a293a01314f37f3be57220c44c57f278d11014"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.12-review-installation-approval-ux.md",
+      "before_sha256": null,
+      "sha256": "50fbf629a09f0f3082ff656c0ca72fa062d4598e2427163367919193fe1c7e92"
+    }
+  ],
+  "self_inventory": "docs/asdg/07-planning/02.12-review-installation-approval-ux.json (self hash omitted)",
+  "review_events": {
+    "recorded_at": "2026-11-05T01:03:24.149425+00:00",
+    "preserved": 1865,
+    "prefix_sha256": "81193ee879c678a8598b5349d60059d72941a0f080007a6dd04dcc652df680df",
+    "appended": 11,
+    "markdown_paths": [
+      "README.md",
+      "AGENTS.md",
+      "asdg/skills/asdg-init/SKILL.md",
+      "asdg/docs/install-zip-prompt.md",
+      "asdg/docs/install-clone-prompt.md",
+      "asdg/docs/installation.md",
+      "asdg/docs/client-integrations.md",
+      "asdg/docs/distribution-build.md",
+      "asdg/tests/test_install.md",
+      "asdg/tests/test_distribution.md",
+      "docs/asdg/07-planning/02.12-review-installation-approval-ux.md"
+    ]
+  },
+  "checks": {
+    "focused_installation": "11 PASS; ZIP/Clone x Codex/Claude",
+    "focused_distribution": "7 PASS",
+    "full_suite": "128 PASS in 117.019 seconds",
+    "final_package_integrity": "PASS",
+    "final_zip_canonical_skill_and_prompts": "Exact working-tree bytes PASS",
+    "final_zip_sha256": "409637e42c7b5ac1ba19c048b2f6293c359920752ddb84338cc5de198f18b0af",
+    "ignored_zip_and_checksum": "PASS",
+    "documentation_line_limits": "PASS",
+    "local_relative_links": "PASS",
+    "source_handoff_walkthrough": "PASS: repository request -> README -> versioned ZIP/checksum -> packaged prompt -> canonical skill -> preview/approval/apply/verify",
+    "whitespace": "PASS",
+    "installer_engine_unchanged": "PASS",
+    "index_empty": "PASS",
+    "evidence_privacy": "PASS"
+  },
+  "limitations": [
+    "Human approval display and ambiguous-response behavior are conversation instructions, not engine authentication. Fresh Codex/Claude handoffs remain live acceptance checks.",
+    "No rendered-document visual inspection performed; source readability review only. Existing visual assets unchanged.",
+    "Public README and pilot ZIP retain prior bytes. New approval contract requires human review/commit/push and next distribution publication.",
+    "Final candidate bytes verified after a final documentation wording adjustment; installer/test code unchanged after full suite."
+  ],
+  "boundaries": {
+    "asdg_sample": "Not accessed or modified.",
+    "public_distribution": "Not modified.",
+    "stage_commit_push_tag_publish": "None performed.",
+    "client_state_hook_trust": "Not modified.",
+    "prior_presentation_work": "Preserved."
+  }
+}

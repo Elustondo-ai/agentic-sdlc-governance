@@ -12,7 +12,8 @@ Inspect target Git root/status and record application-file hashes.
 Run python3 "CANONICAL_CLONE/asdg/scripts/init.py" --source "CANONICAL_CLONE" --commit FULL_COMMIT_SHA --target "TARGET_PROJECT" --client CLIENT --dry-run.
 Require verified canonical origin, exact HEAD, committed selected bytes and matching package integrity. Stop on mismatch; do not change the commit or refresh a manifest.
 Show the complete file plan and generated diffs, including hooks. Copy only the selected portable distribution; never copy source .git, provider extras or project state.
-STOP and wait for my explicit approval of this exact plan.
+Use the canonical asdg-init skill’s mandatory approval presentation, including a real complete-plan/diff reference and actual preview values.
+STOP and wait for APPROVE for this exact plan; CANCEL stops, and ambiguous replies require clarification.
 After I approve, repeat the identical options with --apply --plan TOKEN_FROM_PREVIEW.
 From TARGET_PROJECT, run python3 asdg/scripts/cli.py verify --json; repeat the original preview for no further changes.
 Report changed paths, preserved application/evidence and deterministic results separately from actual native tests and trust.

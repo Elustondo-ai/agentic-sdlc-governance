@@ -11,7 +11,8 @@ Select --client claude in Claude Code or --client codex in Codex; ask if uncerta
 Inspect the Git root/status and record existing application-file hashes.
 Run python3 asdg/scripts/init.py --client CLIENT --dry-run.
 Show the source version/integrity, complete file plan and generated diffs, including hooks.
-STOP and wait for my explicit approval of this exact plan. Do not refresh a stale manifest.
+Use the canonical asdg-init skill’s mandatory approval presentation, including a real complete-plan/diff reference and actual preview values.
+STOP and wait for APPROVE for this exact plan; CANCEL stops, and ambiguous replies require clarification. Do not refresh a stale manifest.
 After I approve, repeat the same options with --apply --plan TOKEN_FROM_PREVIEW.
 Verify with python3 asdg/scripts/cli.py verify --json and repeat the dry run for no further changes.
 Report changed paths and preservation checks. Distinguish deterministic verification from actual native discovery/invocation and hook trust.

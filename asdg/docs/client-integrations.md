@@ -18,6 +18,7 @@ Run the local initializer from the project root; a machine-wide `asdg` command m
 
 `python3 asdg/scripts/cli.py init` takes the same options, including `--dry-run`; an unknown client is rejected before any write.
 Apply only after explicit review with `--apply --plan TOKEN_FROM_PREVIEW`; [both acquisition paths](installation.md) use this engine.
+Both clients use the [Init approval presentation](../skills/asdg-init/SKILL.md#mandatory-approval-presentation--both-clients) in ordinary text; no graphical approval button is required. Plan approval never grants hook trust.
 Selection is additive: adding one client never removes or rewrites the other's files. `.asdg/integrations.json` records each selected client and how it was recorded.
 
 ## What each client gets

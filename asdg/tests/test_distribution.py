@@ -56,6 +56,10 @@ class DistributionTests(unittest.TestCase):
             self.assertEqual(archive.namelist(), ['asdg/' + p.relative_to(self.core).as_posix()
                                                for p in package_files(self.core)])
             self.assertNotIn('asdg/provider-only.env', archive.namelist())
+            skill = 'skills/asdg-init/SKILL.md'
+            self.assertEqual(archive.read('asdg/' + skill), (CORE / skill).read_bytes())
+            for prompt in ('install-zip-prompt.md', 'install-clone-prompt.md'):
+                self.assertEqual(archive.read('asdg/docs/' + prompt), (CORE / 'docs' / prompt).read_bytes())
         self.assertTrue(first.with_suffix('.zip.sha256').read_text().startswith(
             hashlib.sha256(first.read_bytes()).hexdigest()))
 
