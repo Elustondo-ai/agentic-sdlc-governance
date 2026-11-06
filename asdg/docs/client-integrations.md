@@ -33,7 +33,7 @@ Selection is additive: adding one client never removes or rewrites the other's f
 | Guard and activity hooks | `.codex/hooks.json`, active once trusted | None installed |
 
 Each template in `asdg/templates/.agents/skills/` is the single source for both adapters: setup copies it for Codex and renders the Claude adapter from the same name, description and body.
-A skill whose Codex policy forbids implicit invocation gets `disable-model-invocation: true` in Claude; today that is Admin, Focus, Init, Status and Documentation. Codex metadata never controls Claude.
+A skill whose Codex policy forbids implicit invocation gets `disable-model-invocation: true` in Claude; today that is Admin, Focus, Init, Status, Report Project Status and Documentation. Codex metadata never controls Claude.
 
 ## Claude and AGENTS.md
 

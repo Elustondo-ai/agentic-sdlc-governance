@@ -15,7 +15,7 @@ They exercise the developer promise without relying on a sibling provider or glo
 | Stale or missing bytes | Build fails before creating an artifact. |
 | Unsafe selections | Traversal, symlink, duplicate members and project-local adoption records are rejected. |
 | Link closure | A file present only in the provider cannot satisfy a portable link. |
-| Extracted installation | Codex-only, Claude-only and combined setups initialize and verify. |
+| Extracted installation | Codex-only, Claude-only and combined installs verify the report sources, client adapters, explicit-invocation controls and absence of the provider renderer. |
 | Relocation and repeat | Paths with spaces/apostrophes work; authored guidance, application bytes and state remain identical. |
 
 The fixture copies only selected source files, records fixture hashes and cleans up its own temporary directories.

@@ -1,0 +1,118 @@
+{
+  "requester": "Pablo",
+  "acting_agent": "ChatGPT, F5 project integration handoff",
+  "starting_head": "25dabd348a15b8bab98bd6f94a28d03e5228638e",
+  "starting_state": "Isolated clean checkout with the earlier six-file proposal applied before revision.",
+  "scope": "Deliver and verify the editable Markdown presentation, shared original images, and slide-local visuals and notes. Export only at the end into presentation/build/. Includes the earlier integration fixes.",
+  "status": "REVIEW_REQUIRED",
+  "human_approval": null,
+  "files": [
+    {
+      "path": "asdg/00-governance/types/document-reviews.json",
+      "before_sha256": "f8934d6d3de5d0f4b80f5112d563336c6bf3042f0e8df03cee46039c8c048a25",
+      "sha256": "0f1ebf508dd9fb58962c743ebaec63f8d5d06a1e610614531c89b721f2e39877"
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "before_sha256": "c8dfb2778d0af8944fc7380fcb62e652e7bd5586e471f648f0e2e8f662180120",
+      "sha256": "18f016cf295a1aef3752553ef1272ba46c07b0c0787a1f40fafc6c2489750397"
+    },
+    {
+      "path": "asdg/metadata/MANIFEST.json",
+      "before_sha256": "c4b61dfd2be2bd2ca4b6ad5c4e76836492374313b3f6c0031a3db5902b512b1a",
+      "sha256": "e6c3154764079e727a5131c613dd1a61d6fe4d3eea55d198341e05009a1c30bb"
+    },
+    {
+      "path": "asdg/metadata/package-files.json",
+      "before_sha256": "7f9bcfbd6cf4ed5f0caf213bedf3e191df83f01368b61efcaae12d9f2a1ec084",
+      "sha256": "e38bb870608cc7c60a78e4a8c3bf8a273c21ef01ed9fc1516bc344247169e8c2"
+    },
+    {
+      "path": "asdg/skills/README.md",
+      "before_sha256": "4f0686014734b944370c85263c6f1859b4e787c1161acc5ddaa28bb1f1898551",
+      "sha256": "f82541d614b4dbaa1370f5e3730ba31da482f14af9ce8d66ef3ac93b5de7858c"
+    },
+    {
+      "path": "asdg/skills/asdg-help/SKILL.md",
+      "before_sha256": "eb55ad8fbc4aecbd55bf8835e83507d2df1ce55bc4c31d17199f297d4803797e",
+      "sha256": "ef65fe211b570189d4cb4869fcee93da031000ad1907021e6e0b93670c3db2aa"
+    },
+    {
+      "path": "asdg/skills/asdg-help/command-reference.md",
+      "before_sha256": "83fc8602bd995f11d6796786fb12f7cb194272e97b5e7ed454909508a2e76da3",
+      "sha256": "ee2055185b3615773370ecc0dfb81ea2863788bb29733dbce5b5ffda472937df"
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/SKILL.md",
+      "before_sha256": null,
+      "sha256": "7b13e7bb2a457bbdef377ab7a30a882232f42b977a2dde377edd3a0fc82aefa2"
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/TRY-IT.md",
+      "before_sha256": null,
+      "sha256": "50d0b91328ed7d18f78084b1b985a949b1d2e7d0e519c309f0ea997861602c52"
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/packets.md",
+      "before_sha256": null,
+      "sha256": "62d1829fb6d7eaa145757704827e3b95a65da1b4ecd5e309db4cf9fdb87a8899"
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/report-flow.svg",
+      "before_sha256": null,
+      "sha256": "8aefc99efd658237b89ada67edb605268e65829db01b51cdad0e372727f51cd9"
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/report_packets.md",
+      "before_sha256": null,
+      "sha256": "cb7c69167406bcf116a6d0c77d269a06347b6c8ed8e0dd6c85921d5ee92aeacb"
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/report_packets.py",
+      "before_sha256": null,
+      "sha256": "8269469dfc4da917624a53824f65df332e55d3200f16a79b9502d697b1ac969a"
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-report-project-status/SKILL.md",
+      "before_sha256": null,
+      "sha256": "9bb4b56e5e92e008082bc2bff26544929a7cb9ed91d863f56206a7c4184c77e4"
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-report-project-status/agents/openai.yaml",
+      "before_sha256": null,
+      "sha256": "61d17be1f9e02161aca4412500ec051ec33fc0235da70d7accf14fb61a83a350"
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "before_sha256": "b19f54844001347682b55022586bca011fe1da2690fa16071dfb8e7de7502836",
+      "sha256": "6345646f08aedcbefa714d9b4a96b052099e139b8226b461418a187a44d7082f"
+    },
+    {
+      "path": "asdg/tests/test_distribution.py",
+      "before_sha256": "600b8b515d53ec92f69ca28edc14f5b05f75b42060a27ae118944fe6fa5c99f9",
+      "sha256": "d9200fca936c4de344301653fb0ca0362dcfb7d18d951d427eed37e53bd54c82"
+    },
+    {
+      "path": "asdg/tests/test_report_project_status.md",
+      "before_sha256": null,
+      "sha256": "78404cdbc872117d931497c34be8c72f9ebe145cbb91c87809dc0376ebd9834a"
+    },
+    {
+      "path": "asdg/tests/test_report_project_status.py",
+      "before_sha256": null,
+      "sha256": "484b8877896f33f1632c776ece9e28338511e0e295473873cf00a54c3bef8ed0"
+    },
+    {
+      "path": "docs/asdg/07-planning/02.23-review-project-status-report.md",
+      "before_sha256": null,
+      "sha256": "c35c6778d1e3f4dd74233278245c572a5fc4d0ce6eb268ee603ea667a51231eb"
+    }
+  ],
+  "verification": {
+    "portable_distribution": "9 distribution tests passed on this candidate.",
+    "packet_sources_export": "10 reporting tests passed, including renderer-free source inspection, relative links, and a clean rebuild after changing only slide 2 narration.",
+    "fixtures": "3-, 36- and 34-slide sources and rebuilt PPTX. Synthetic packets; no claim of native dispatch.",
+    "integrity": "Candidate distribution rebuilt and verified against its exact manifest.",
+    "native_client": "Live named-role dispatch and release remain to be tested in Codex."
+  }
+}

@@ -1,0 +1,371 @@
+{
+  "requester": "Pablo",
+  "acting_role": "ASDG-ADMIN",
+  "scope": "Apply the reviewed reporting patch uncommitted; test direct Purpose then named-specialist Governance in a disposable client.",
+  "status": "APPLIED_AND_VERIFIED_WITH_DOCUMENTED_LIMITATIONS",
+  "human_approval": null,
+  "provider_head": "25dabd348a15b8bab98bd6f94a28d03e5228638e",
+  "patch_sha256": "05b382f7d5606ca1abf95734324b51f024e5befe97f3ad1d785eae71200f550e",
+  "modified_files": [
+    "asdg/00-governance/types/document-reviews.json",
+    "asdg/docs/client-integrations.md",
+    "asdg/metadata/MANIFEST.json",
+    "asdg/metadata/package-files.json",
+    "asdg/skills/README.md",
+    "asdg/skills/asdg-help/SKILL.md",
+    "asdg/skills/asdg-help/command-reference.md",
+    "asdg/tests/test_distribution.md",
+    "asdg/tests/test_distribution.py",
+    "asdg/skills/asdg-report-project-status/SKILL.md",
+    "asdg/skills/asdg-report-project-status/TRY-IT.md",
+    "asdg/skills/asdg-report-project-status/packets.md",
+    "asdg/skills/asdg-report-project-status/report-flow.svg",
+    "asdg/skills/asdg-report-project-status/report_packets.md",
+    "asdg/skills/asdg-report-project-status/report_packets.py",
+    "asdg/templates/.agents/skills/asdg-report-project-status/SKILL.md",
+    "asdg/templates/.agents/skills/asdg-report-project-status/agents/openai.yaml",
+    "asdg/tests/test_report_project_status.md",
+    "asdg/tests/test_report_project_status.py",
+    "docs/asdg/07-planning/02.23-review-project-status-report.json",
+    "docs/asdg/07-planning/02.23-review-project-status-report.md",
+    "docs/asdg/07-planning/02.24-review-report-live-trial.md",
+    "docs/asdg/07-planning/02.24-review-report-live-trial.json"
+  ],
+  "automated_verification": {
+    "provider": {
+      "command": "python3 -B -m unittest discover -s asdg/tests -v",
+      "run": 148,
+      "passed": 146,
+      "skipped": 2,
+      "failed": 0,
+      "duration_seconds": 124.062,
+      "log": "provider-tests.log"
+    },
+    "report_render": {
+      "command": ".venv/bin/python -B -m unittest discover -s asdg/tests -p test_report_project_status.py -v",
+      "passed": 10,
+      "skipped": 0,
+      "failed": 0,
+      "duration_seconds": 7.239,
+      "log": "render-tests.log"
+    },
+    "presentation_initial": {
+      "passed": 30,
+      "failed": 1,
+      "reason": "Existing test compares unresolved /var temporary directory with resolved /private/var output path.",
+      "log": "presentation-tests.log"
+    },
+    "presentation_canonical_tmp": {
+      "passed": 31,
+      "failed": 0,
+      "tempfile_tempdir": "/private/tmp",
+      "code_changes": false,
+      "log": "presentation-canonical-tmp-tests.log"
+    },
+    "integrity": "PASS",
+    "native": {
+      "purpose": {
+        "native_name": "asdg_02",
+        "slides": 3,
+        "children": 0,
+        "completed": true
+      },
+      "governance": {
+        "native_name": "asdg_coordinator",
+        "expected_specialists": 12,
+        "returned": 12,
+        "completed": 12,
+        "slides": 36,
+        "dispatch_errors": 0,
+        "packet_retries": 0
+      },
+      "explicit_release": "UNOBSERVABLE_NO_CLOSE_API",
+      "preservation": {
+        "observed_at": "2026-11-06T16:34:48.045930+00:00",
+        "baseline_files": 516,
+        "changed_existing": [
+          ".asdg/document-reviews.json"
+        ],
+        "missing": [],
+        "new_files": 114,
+        "unexpected_new": [],
+        "ledger_prior_events": 46,
+        "ledger_new_events": 104,
+        "ledger_prefix_preserved": true,
+        "new_human_approvals": 0
+      }
+    },
+    "observed_at": "2026-11-06T04:53:41.578668+00:00",
+    "client_export_ignore": {
+      "status": "GAP",
+      "command": "git check-ignore docs/asdg/02-purpose/reports/purpose-live/presentation/build/presentation.pptx",
+      "exit_code": 1,
+      "client_managed_ignore_owner": "asdg/scripts/lib/cli_project.py:IGNORE",
+      "provider_trial_ignored": true,
+      "scope": "Reviewed patch and client controls retained unchanged",
+      "proposed_followup": "Managed /docs/asdg/**/presentation/build/ exclusion with install/upgrade tests"
+    }
+  },
+  "native_evidence_root": "build/report-project-status-trial",
+  "native_roles": {
+    "purpose": "/root/purpose_report_trial",
+    "governance": "/root/governance_report_trial"
+  },
+  "provider_staged": false,
+  "committed": false,
+  "pushed": false,
+  "published": false,
+  "hook_trust_changed": false,
+  "updated_at": "2026-11-06T16:36:39.553415+00:00",
+  "native_observation": {
+    "request": "Apply reviewed patch uncommitted; disposable Purpose trial followed by Governance with actual named specialists.",
+    "started_from": "25dabd348a15b8bab98bd6f94a28d03e5228638e",
+    "patch_sha256": "05b382f7d5606ca1abf95734324b51f024e5befe97f3ad1d785eae71200f550e",
+    "parent_role": "ASDG-ADMIN",
+    "purpose_dispatch": {
+      "native_role": "asdg_02",
+      "task_name": "/root/purpose_report_trial",
+      "dispatch_time": null,
+      "dispatch_observed_at": "2026-11-06T04:51:56.689187+00:00",
+      "status": "COMPLETED",
+      "completion_observed_at": "2026-11-06T04:59:18.303677+00:00",
+      "release_status": "NOT_OBSERVABLE_NO_CLOSE_API",
+      "released_at": null,
+      "completion_evidence": "Final return and collaboration.list_agents completed status",
+      "receipt": "client/docs/asdg/02-purpose/reports/purpose-live/receipt.json"
+    },
+    "host_capabilities": {
+      "named_role_dispatch": "collaboration.spawn_agent agent_type",
+      "completion_observation": [
+        "final response",
+        "collaboration.list_agents"
+      ],
+      "explicit_release": null,
+      "interruption": "Stops turn; explicitly retains agent, so not release"
+    },
+    "hook_trust_changed": false,
+    "provider_commit_push_publish": false,
+    "governance_dispatch": {
+      "native_role": "asdg_coordinator",
+      "task_name": "/root/governance_report_trial",
+      "dispatch_time": null,
+      "dispatch_observed_at": "2026-11-06T05:00:01.998488+00:00",
+      "status": "COMPLETED",
+      "completion_observed_at": "2026-11-06T16:35:46.126497+00:00",
+      "released_at": null,
+      "release_status": "NOT_OBSERVABLE_NO_CLOSE_API",
+      "completion_evidence": "Native final response received with completed source/PPTX/receipt links",
+      "receipt": "client/docs/asdg/00-governance/reports/governance-live/receipt.json"
+    },
+    "recoveries": [
+      {
+        "observed_at": "2026-11-06T12:27:55.128152+00:00",
+        "target": "/root/governance_report_trial",
+        "reason": "No coordinator progress after repeated waits/status request while ASDG-03 had completed; existing receipts captured 01/02 only.",
+        "action": "interrupt_agent then followup_task to resume same run",
+        "prior_status": "running",
+        "attempt": 1,
+        "preserved": [
+          "client files",
+          "captured packets 01/02",
+          "native ASDG-03 final return"
+        ],
+        "release": false
+      }
+    ],
+    "specialists": [
+      {
+        "role_id": "ASDG-01",
+        "native_name": "asdg_01",
+        "task_name": "/root/governance_report_trial/context_report",
+        "completion_observed": true,
+        "validation": "PASS",
+        "packet_hash_matches": true,
+        "released_at": null,
+        "release_status": "NOT_OBSERVABLE_NO_CLOSE_API"
+      },
+      {
+        "role_id": "ASDG-02",
+        "native_name": "asdg_02",
+        "task_name": "/root/governance_report_trial/purpose_report",
+        "completion_observed": true,
+        "validation": "PASS",
+        "packet_hash_matches": true,
+        "released_at": null,
+        "release_status": "NOT_OBSERVABLE_NO_CLOSE_API"
+      },
+      {
+        "role_id": "ASDG-03",
+        "native_name": "asdg_03",
+        "task_name": "/root/governance_report_trial/model_report",
+        "completion_observed": true,
+        "validation": "PASS",
+        "packet_hash_matches": true,
+        "released_at": null,
+        "release_status": "NOT_OBSERVABLE_NO_CLOSE_API"
+      },
+      {
+        "role_id": "ASDG-04",
+        "native_name": "asdg_04",
+        "task_name": "/root/governance_report_trial/benchmark_report",
+        "completion_observed": true,
+        "validation": "PASS",
+        "packet_hash_matches": true,
+        "released_at": null,
+        "release_status": "NOT_OBSERVABLE_NO_CLOSE_API"
+      },
+      {
+        "role_id": "ASDG-05",
+        "native_name": "asdg_05",
+        "task_name": "/root/governance_report_trial/architecture_report",
+        "completion_observed": true,
+        "validation": "PASS",
+        "packet_hash_matches": true,
+        "released_at": null,
+        "release_status": "NOT_OBSERVABLE_NO_CLOSE_API"
+      },
+      {
+        "role_id": "ASDG-06",
+        "native_name": "asdg_06",
+        "task_name": "/root/governance_report_trial/poc_report",
+        "completion_observed": true,
+        "validation": "PASS",
+        "packet_hash_matches": true,
+        "released_at": null,
+        "release_status": "NOT_OBSERVABLE_NO_CLOSE_API"
+      },
+      {
+        "role_id": "ASDG-07",
+        "native_name": "asdg_07",
+        "task_name": "/root/governance_report_trial/planning_report",
+        "completion_observed": true,
+        "validation": "PASS",
+        "packet_hash_matches": true,
+        "released_at": null,
+        "release_status": "NOT_OBSERVABLE_NO_CLOSE_API"
+      },
+      {
+        "role_id": "ASDG-08",
+        "native_name": "asdg_08",
+        "task_name": "/root/governance_report_trial/design_report",
+        "completion_observed": true,
+        "validation": "PASS",
+        "packet_hash_matches": true,
+        "released_at": null,
+        "release_status": "NOT_OBSERVABLE_NO_CLOSE_API"
+      },
+      {
+        "role_id": "ASDG-09",
+        "native_name": "asdg_09",
+        "task_name": "/root/governance_report_trial/build_report",
+        "completion_observed": true,
+        "validation": "PASS",
+        "packet_hash_matches": true,
+        "released_at": null,
+        "release_status": "NOT_OBSERVABLE_NO_CLOSE_API"
+      },
+      {
+        "role_id": "ASDG-10",
+        "native_name": "asdg_10",
+        "task_name": "/root/governance_report_trial/release_report",
+        "completion_observed": true,
+        "validation": "PASS",
+        "packet_hash_matches": true,
+        "released_at": null,
+        "release_status": "NOT_OBSERVABLE_NO_CLOSE_API"
+      },
+      {
+        "role_id": "ASDG-11",
+        "native_name": "asdg_11",
+        "task_name": "/root/governance_report_trial/operations_report",
+        "completion_observed": true,
+        "validation": "PASS",
+        "packet_hash_matches": true,
+        "released_at": null,
+        "release_status": "NOT_OBSERVABLE_NO_CLOSE_API"
+      },
+      {
+        "role_id": "ASDG-12",
+        "native_name": "asdg_12",
+        "task_name": "/root/governance_report_trial/observability_report",
+        "completion_observed": true,
+        "validation": "PASS",
+        "packet_hash_matches": true,
+        "released_at": null,
+        "release_status": "NOT_OBSERVABLE_NO_CLOSE_API"
+      }
+    ]
+  },
+  "preservation_audit": {
+    "observed_at": "2026-11-06T16:34:48.045930+00:00",
+    "baseline_files": 516,
+    "changed_existing": [
+      ".asdg/document-reviews.json"
+    ],
+    "missing": [],
+    "new_files": 114,
+    "unexpected_new": [],
+    "ledger_prior_events": 46,
+    "ledger_new_events": 104,
+    "ledger_prefix_preserved": true,
+    "new_human_approvals": 0
+  },
+  "governance_receipt": "build/report-project-status-trial/client/docs/asdg/00-governance/reports/governance-live/receipt.json",
+  "purpose_receipt": "build/report-project-status-trial/client/docs/asdg/02-purpose/reports/purpose-live/receipt.json",
+  "recoverable_governance_events": [
+    {
+      "event": "JavaScript parse error in an in-session source generator draft",
+      "effect": "No tool or filesystem write executed; corrected before source creation"
+    },
+    {
+      "event": "Extra build-directory input rejected by literal-file check-write",
+      "effect": "No build executed on that attempt. Owning checker contract inspected; every exact generated file target passed. No permission or policy changes."
+    },
+    {
+      "event": "Visual inspection corrections",
+      "effect": "Slides 15 and 27 changed from unsupported sequence arrows to parallel relationships; meaning/notes retained; rebuild and scoped readback passed."
+    }
+  ],
+  "limitations": [
+    "This delivery verifies twelve native named-role invocations and packet returns, not auto-discovery of the newly installed adapters.",
+    "Explicit worker release is unobservable; every released_at remains null.",
+    "Embedded Markdown viewing and native PowerPoint UI use were not verified.",
+    "Nested client Git lacks a generated-build ignore rule; .gitignore was not changed.",
+    "PowerPoint visuals are rendered images; SVG/Markdown sources remain editable.",
+    "Stage conclusions retain the common baseline. This later completed report does not retroactively establish lifecycle baselines, reviewer benefit or acceptance."
+  ],
+  "candidate_zip": {
+    "path": "build/distributions/asdg-0.3.0-pilot.4.zip",
+    "sha256": "9be426f99e53af921eca6984ea82623c7a4c47e63fa4e55657eb27223372f77b",
+    "published": false
+  },
+  "file_hashes": {
+    "asdg/00-governance/types/document-reviews.json": "f4a058af7f8fe54aea0dee41e940a81bb30d8063f81d54789d15bb5ea0d4ff5f",
+    "asdg/docs/client-integrations.md": "18f016cf295a1aef3752553ef1272ba46c07b0c0787a1f40fafc6c2489750397",
+    "asdg/metadata/MANIFEST.json": "55581c1f8d3bd727512c62f72bf978105e3574195bd3c5350493bb4b71b4259f",
+    "asdg/metadata/package-files.json": "e38bb870608cc7c60a78e4a8c3bf8a273c21ef01ed9fc1516bc344247169e8c2",
+    "asdg/skills/README.md": "f82541d614b4dbaa1370f5e3730ba31da482f14af9ce8d66ef3ac93b5de7858c",
+    "asdg/skills/asdg-help/SKILL.md": "ef65fe211b570189d4cb4869fcee93da031000ad1907021e6e0b93670c3db2aa",
+    "asdg/skills/asdg-help/command-reference.md": "ee2055185b3615773370ecc0dfb81ea2863788bb29733dbce5b5ffda472937df",
+    "asdg/tests/test_distribution.md": "6345646f08aedcbefa714d9b4a96b052099e139b8226b461418a187a44d7082f",
+    "asdg/tests/test_distribution.py": "d9200fca936c4de344301653fb0ca0362dcfb7d18d951d427eed37e53bd54c82",
+    "asdg/skills/asdg-report-project-status/SKILL.md": "7b13e7bb2a457bbdef377ab7a30a882232f42b977a2dde377edd3a0fc82aefa2",
+    "asdg/skills/asdg-report-project-status/TRY-IT.md": "50d0b91328ed7d18f78084b1b985a949b1d2e7d0e519c309f0ea997861602c52",
+    "asdg/skills/asdg-report-project-status/packets.md": "62d1829fb6d7eaa145757704827e3b95a65da1b4ecd5e309db4cf9fdb87a8899",
+    "asdg/skills/asdg-report-project-status/report-flow.svg": "8aefc99efd658237b89ada67edb605268e65829db01b51cdad0e372727f51cd9",
+    "asdg/skills/asdg-report-project-status/report_packets.md": "cb7c69167406bcf116a6d0c77d269a06347b6c8ed8e0dd6c85921d5ee92aeacb",
+    "asdg/skills/asdg-report-project-status/report_packets.py": "8269469dfc4da917624a53824f65df332e55d3200f16a79b9502d697b1ac969a",
+    "asdg/templates/.agents/skills/asdg-report-project-status/SKILL.md": "9bb4b56e5e92e008082bc2bff26544929a7cb9ed91d863f56206a7c4184c77e4",
+    "asdg/templates/.agents/skills/asdg-report-project-status/agents/openai.yaml": "61d17be1f9e02161aca4412500ec051ec33fc0235da70d7accf14fb61a83a350",
+    "asdg/tests/test_report_project_status.md": "78404cdbc872117d931497c34be8c72f9ebe145cbb91c87809dc0376ebd9834a",
+    "asdg/tests/test_report_project_status.py": "484b8877896f33f1632c776ece9e28338511e0e295473873cf00a54c3bef8ed0",
+    "docs/asdg/07-planning/02.23-review-project-status-report.json": "d3354faba3b7d27b5cb4f01c5059de8ba7d45a43245b9add81e375e761452670",
+    "docs/asdg/07-planning/02.23-review-project-status-report.md": "c35c6778d1e3f4dd74233278245c572a5fc4d0ce6eb268ee603ea667a51231eb",
+    "docs/asdg/07-planning/02.24-review-report-live-trial.md": "496a10233b15bfca31717161f379042073552f5ffd026e5683a116cc25c6b029"
+  },
+  "self_hash_omitted": "Receipt omits its own hash to avoid a recursive definition.",
+  "trial_vs_final_package_differences": [
+    "00-governance/types/document-reviews.json",
+    "metadata/MANIFEST.json"
+  ]
+}

@@ -20028,7 +20028,7 @@
       "recorded_at": "2026-10-29T00:49:43.250418+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       },
       "previous_state": {
         "sha256": "765d988e01a7b8cc2eb775972719f6b670c7b6b0a090c96f9c50b859e1adcb89",
@@ -20043,7 +20043,7 @@
       "recorded_at": "2026-10-29T00:49:43.261832+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       },
       "previous_state": {
         "sha256": "77b3331728354b14cef6ca9013672f7f3410ec41ec53e50fd32e252a90b08f08",
@@ -20058,7 +20058,7 @@
       "recorded_at": "2026-10-29T00:49:43.270997+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       },
       "previous_state": {
         "sha256": "04c12cbdfd880ed4ecc364903263d0b0bae2339d63fdeca20d3b1c2d60e66524",
@@ -20073,7 +20073,7 @@
       "recorded_at": "2026-10-29T00:49:43.281238+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -20083,7 +20083,7 @@
       "recorded_at": "2026-10-29T00:49:43.290907+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -20093,7 +20093,7 @@
       "recorded_at": "2026-10-29T00:49:43.300049+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -20103,7 +20103,7 @@
       "recorded_at": "2026-10-29T00:49:43.309146+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -20113,7 +20113,7 @@
       "recorded_at": "2026-10-29T00:49:43.319702+00:00",
       "human_approval": null,
       "provenance": {
-        "reason": "Explicit first ASDG–OpenSpec integration increment: thin planning wrapper and verification"
+        "reason": "Explicit first ASDG\u2013OpenSpec integration increment: thin planning wrapper and verification"
       }
     },
     {
@@ -32018,6 +32018,299 @@
         "sha256": "2b7a28f67bafa10abaded87c1f2d853bda19369a823305e77f8a193de44a453d",
         "visible_review_markers": [],
         "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/docs/client-integrations.md",
+      "sha256": "18f016cf295a1aef3752553ef1272ba46c07b0c0787a1f40fafc6c2489750397",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T03:33:37Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Project status report integration review"
+      },
+      "previous_state": {
+        "sha256": "c8dfb2778d0af8944fc7380fcb62e652e7bd5586e471f648f0e2e8f662180120",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/README.md",
+      "sha256": "930eb06af165ed172ebc843e70b39cd7416457f65f433c1999cfc6df4516d1f1",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T03:33:37Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Project status report integration review"
+      },
+      "previous_state": {
+        "sha256": "4f0686014734b944370c85263c6f1859b4e787c1161acc5ddaa28bb1f1898551",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-help/SKILL.md",
+      "sha256": "bbbaf4d20aa68c09b2d71852be1fc198cc3311e7a77331f4c3a56c8d39de46bd",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T03:33:37Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Project status report integration review"
+      },
+      "previous_state": {
+        "sha256": "eb55ad8fbc4aecbd55bf8835e83507d2df1ce55bc4c31d17199f297d4803797e",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-help/command-reference.md",
+      "sha256": "f77590dcd0b68480939b070e280089fe3b76f75772107e2cbe8e246f5ea24f8b",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T03:33:37Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Project status report integration review"
+      },
+      "previous_state": {
+        "sha256": "83fc8602bd995f11d6796786fb12f7cb194272e97b5e7ed454909508a2e76da3",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/SKILL.md",
+      "sha256": "2d1e7bf461d6c862d3ac1845dac1d36555a4f9ee213d1e0a61a93817f7857eb6",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T03:33:37Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Project status report integration review"
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/TRY-IT.md",
+      "sha256": "2ed782c42c11bd92518a7b1b7229b98eaf57771602f40a6c3737591d50b36c54",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T03:33:37Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Project status report integration review"
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/packets.md",
+      "sha256": "aeb90b6f78e5441226b2c98a045db94ca6179a054c4a6b8abb43f6f4cf85ef21",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T03:33:37Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Project status report integration review"
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/report-flow.svg",
+      "sha256": "d28b3e98f4e6806ccfbb2d57a78713072436ca56211249334c8925ea5d37af40",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T03:33:37Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Project status report integration review"
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/report_packets.md",
+      "sha256": "5dbc4c15fe7a78ef918f27e59ed73082aaf526f85797527f523ae0d0bc7417fa",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T03:33:37Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Project status report integration review"
+      }
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-report-project-status/SKILL.md",
+      "sha256": "6ae30c7c9e1bdaf74c891ad3c6b9f4fd9613dbabcf2040244628581bc1714f4a",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T03:33:37Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Project status report integration review"
+      }
+    },
+    {
+      "path": "asdg/tests/test_distribution.md",
+      "sha256": "6345646f08aedcbefa714d9b4a96b052099e139b8226b461418a187a44d7082f",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T03:33:37Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Project status report integration review"
+      },
+      "previous_state": {
+        "sha256": "b19f54844001347682b55022586bca011fe1da2690fa16071dfb8e7de7502836",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/tests/test_report_project_status.md",
+      "sha256": "8251670e963ef8a4f6b08c6978325ac952346426afb980b47a7b4705f611b40c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T03:33:37Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Project status report integration review"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.23-review-project-status-report.md",
+      "sha256": "2ce18cfa82d621fc59f468de11423515cb5eba302210216fd3eefca9a6813f33",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T03:33:37Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Project status report integration review"
+      }
+    },
+    {
+      "path": "asdg/skills/README.md",
+      "sha256": "f82541d614b4dbaa1370f5e3730ba31da482f14af9ce8d66ef3ac93b5de7858c",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T04:27:56Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Source-first presentation contract"
+      },
+      "previous_state": {
+        "sha256": "4f0686014734b944370c85263c6f1859b4e787c1161acc5ddaa28bb1f1898551",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-help/SKILL.md",
+      "sha256": "ef65fe211b570189d4cb4869fcee93da031000ad1907021e6e0b93670c3db2aa",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T04:27:56Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Source-first presentation contract"
+      },
+      "previous_state": {
+        "sha256": "eb55ad8fbc4aecbd55bf8835e83507d2df1ce55bc4c31d17199f297d4803797e",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-help/command-reference.md",
+      "sha256": "ee2055185b3615773370ecc0dfb81ea2863788bb29733dbce5b5ffda472937df",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T04:27:56Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Source-first presentation contract"
+      },
+      "previous_state": {
+        "sha256": "83fc8602bd995f11d6796786fb12f7cb194272e97b5e7ed454909508a2e76da3",
+        "visible_review_markers": [],
+        "approval_binding": "Legacy declarations only; no approval inferred or transferred."
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/SKILL.md",
+      "sha256": "7b13e7bb2a457bbdef377ab7a30a882232f42b977a2dde377edd3a0fc82aefa2",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T04:27:56Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Source-first presentation contract"
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/TRY-IT.md",
+      "sha256": "50d0b91328ed7d18f78084b1b985a949b1d2e7d0e519c309f0ea997861602c52",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T04:27:56Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Source-first presentation contract"
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/packets.md",
+      "sha256": "62d1829fb6d7eaa145757704827e3b95a65da1b4ecd5e309db4cf9fdb87a8899",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T04:27:56Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Source-first presentation contract"
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/report-flow.svg",
+      "sha256": "8aefc99efd658237b89ada67edb605268e65829db01b51cdad0e372727f51cd9",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T04:27:56Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Source-first presentation contract"
+      }
+    },
+    {
+      "path": "asdg/skills/asdg-report-project-status/report_packets.md",
+      "sha256": "cb7c69167406bcf116a6d0c77d269a06347b6c8ed8e0dd6c85921d5ee92aeacb",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T04:27:56Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Source-first presentation contract"
+      }
+    },
+    {
+      "path": "asdg/templates/.agents/skills/asdg-report-project-status/SKILL.md",
+      "sha256": "9bb4b56e5e92e008082bc2bff26544929a7cb9ed91d863f56206a7c4184c77e4",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T04:27:56Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Source-first presentation contract"
+      }
+    },
+    {
+      "path": "asdg/tests/test_report_project_status.md",
+      "sha256": "78404cdbc872117d931497c34be8c72f9ebe145cbb91c87809dc0376ebd9834a",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T04:27:56Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Source-first presentation contract"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.23-review-project-status-report.md",
+      "sha256": "c35c6778d1e3f4dd74233278245c572a5fc4d0ce6eb268ee603ea667a51231eb",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T04:27:56Z",
+      "human_approval": null,
+      "provenance": {
+        "work": "Source-first presentation contract"
+      }
+    },
+    {
+      "path": "docs/asdg/07-planning/02.24-review-report-live-trial.md",
+      "sha256": "496a10233b15bfca31717161f379042073552f5ffd026e5683a116cc25c6b029",
+      "event": "AI-MODIFIED",
+      "recorded_at": "2026-11-06T16:35:46.126497+00:00",
+      "human_approval": null,
+      "provenance": {
+        "requester": "Pablo",
+        "acting_role": "ASDG-ADMIN",
+        "work": "Apply reviewed report skill; native Purpose and twelve-specialist Governance trial",
+        "human_acceptance": "Not inferred from application, tests or report generation"
       }
     }
   ],

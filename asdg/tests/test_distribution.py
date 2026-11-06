@@ -82,7 +82,7 @@ class DistributionTests(unittest.TestCase):
 
     def test_post_upgrade_init_adds_new_skill_adapters_without_changing_project(self):
         # Rehearse integration after an independently approved distribution upgrade.
-        names = ('asdg-help', 'asdg-update')
+        names = ('asdg-help', 'asdg-update', 'asdg-report-project-status')
         index = self.core / 'metadata/package-files.json'
         original_index = index.read_bytes()
         saved = {}
@@ -197,6 +197,24 @@ class DistributionTests(unittest.TestCase):
                 self.assertTrue(report['structure_ok'])
                 self.assertEqual((client / '.codex/hooks.json').exists(), choice != 'claude')
                 self.assertEqual((client / '.claude/skills').exists(), choice != 'codex')
+                name = 'asdg-report-project-status'
+                source = client / 'asdg/skills' / name
+                expected_files = ('SKILL.md', 'packets.md', 'report-flow.svg', 'TRY-IT.md',
+                                  'report_packets.py', 'report_packets.md')
+                for file in expected_files:
+                    self.assertEqual((source / file).read_bytes(), (CORE / 'skills' / name / file).read_bytes())
+                self.assertFalse((client / 'asdg/skills/asdg-presentation').exists())
+                for host, directory in [('codex', '.agents/skills'), ('claude', '.claude/skills')]:
+                    adapter = client / directory / name
+                    self.assertEqual((adapter / 'SKILL.md').is_file(), choice in (host, 'both'))
+                    if choice in (host, 'both'):
+                        self.assertEqual((adapter / '../../../asdg/skills' / name / 'SKILL.md').resolve(),
+                                         source / 'SKILL.md')
+                        if host == 'claude':
+                            self.assertIn('disable-model-invocation: true', (adapter / 'SKILL.md').read_text())
+                        else:
+                            self.assertIn('allow_implicit_invocation: false', (adapter / 'agents/openai.yaml').read_text())
+                self.assertEqual((client / '.codex/agents/asdg_02.toml').is_file(), choice != 'claude')
                 self.assertIn('Preserve this guidance.', (client / 'AGENTS.md').read_text())
                 snapshot = {p.relative_to(client): p.read_bytes() for p in client.rglob('*')
                             if p.is_file() and '.git' not in p.relative_to(client).parts}
@@ -205,6 +223,22 @@ class DistributionTests(unittest.TestCase):
                 self.assertEqual(repeat['changed_files'], [])
                 after = {p.relative_to(moved): p.read_bytes() for p in moved.rglob('*')
                          if p.is_file() and '.git' not in p.relative_to(moved).parts}
+                # Use the helper from the relocated ZIP while the provider renderer is absent.
+                payload = self.root / (choice + '-blocked.json')
+                roster = json.loads((moved / 'asdg/00-governance/types/agent-catalog.json').read_text())
+                outcomes = {r['role_id']: {'reason': 'fixture timeout'} for r in roster['agents'] if r['stage']}
+                host = 'claude' if choice == 'claude' else 'codex'
+                payload.write_text(json.dumps(dict(run_id='install', project='fixture', snapshot='r1',
+                                                   owner='ASDG-COORDINATOR', client=host,
+                                                   named_delegation=True, outcomes=outcomes)))
+                result = subprocess.run([sys.executable, '-B', str(moved / 'asdg/skills' / name /
+                                         'report_packets.py'), str(payload)], capture_output=True, text=True)
+                if host == 'claude':
+                    self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+                    self.assertIn('delegation unavailable', result.stderr)
+                else:
+                    self.assertEqual(result.returncode, 1, result.stderr)
+                    self.assertEqual(json.loads(result.stdout)['renderer']['status'], 'UNAVAILABLE')
                 self.assertEqual(snapshot, after)
                 self.assertTrue(json.loads(self.cli(moved, 'verify', '--json'))['structure_ok'])
 

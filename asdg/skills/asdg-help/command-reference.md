@@ -17,6 +17,7 @@ Examples use Claude's `/`; substitute `$` in Codex. Read the linked skill for it
 | `/asdg-update` | Prepare an update from a selected local canonical source; methodology and adapter application need separate exact-plan approval. |
 | `/asdg-admin clear` | Leave Admin and load Governance. |
 | `/asdg-status facts-only` | Request project/session facts without advice. |
+| `/asdg-report-project-status` | Three slides from the active specialist. Codex Governance can collect twelve sections with verified named delegation. The Markdown presentation is primary. PowerPoint export requires a reviewed provider renderer. |
 | `/asdg-decision <question>` | Analyze a decision; explicitly request recording when that is the intended output. |
 | `/asdg-openspec-propose <change>` | Request a bounded planning proposal; requires native `openspec-propose`. |
 

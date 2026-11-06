@@ -1,0 +1,6 @@
+interface:
+  display_name: "ASDG Report Project Status"
+  short_description: "Author a source-first project status presentation"
+  default_prompt: "Use $asdg-report-project-status in this ASDG project."
+policy:
+  allow_implicit_invocation: false

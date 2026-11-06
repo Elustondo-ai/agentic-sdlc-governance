@@ -30,6 +30,7 @@ For “all commands,” include the terminal commands in [the reference](command
 | [/asdg-focus](../asdg-focus/SKILL.md) | Select a role, or use `subject` to change its topic independently. |
 | [/asdg-attitude](../asdg-attitude/SKILL.md) | Select a thinking attitude and scope, clear it, or report it. |
 | [/asdg-status](../asdg-status/SKILL.md) | Report project/session facts and one project-wide next step; facts-only omits advice. |
+| [/asdg-report-project-status](../asdg-report-project-status/SKILL.md) | Deliver editable Markdown, visuals and notes. A reviewed provider renderer produces the PowerPoint export. Governance delegation currently requires Codex named roles. |
 | [/asdg-role](../asdg-role/SKILL.md) | Explain the current role's mandate and boundaries; no selection change. |
 | [/asdg-admin](../asdg-admin/SKILL.md) | Explicitly select methodology Admin, or `clear` back to Governance; selection authorizes no edits. |
 | [/asdg-approve](../asdg-approve/SKILL.md) | Record explicit human acceptance of a previously presented exact documentation bundle. |
