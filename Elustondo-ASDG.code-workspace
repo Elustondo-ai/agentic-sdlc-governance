@@ -11,6 +11,12 @@
 		},
 		{
 			"path": "../lifebuckets"
+		},
+		{
+			"path": "../elustondo.ai.web"
+		},
+		{
+			"path": "../asdg"
 		}
 	],
 	"settings": {}
