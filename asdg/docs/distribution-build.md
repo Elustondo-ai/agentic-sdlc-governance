@@ -1,7 +1,9 @@
 # Build and verify the portable distribution
 
-The canonical repository produces one ZIP with one top-level `asdg/` folder.
-The recommended [repository-URL Quick Start](https://github.com/Elustondo-ai/agentic-sdlc-governance#quick-start--give-your-agent-the-repository-url) delegates acquisition and initialization to an agent; manual extraction and a pinned clone remain alternatives.
+> **Historical maintainer guide:** This describes the predecessor repository's distribution process and is retained for reference only. Active ASDG development and releases are in the [ASDG repository](https://github.com/Elustondo-ai/asdg); current human-readable guidance is in the [ASDG Wiki](https://github.com/Elustondo-ai/asdg/wiki).
+
+This historical repository produced one ZIP with one top-level `asdg/` folder.
+The former [repository-URL Quick Start](https://github.com/Elustondo-ai/agentic-sdlc-governance#quick-start--give-your-agent-the-repository-url) delegated acquisition and initialization to an agent; manual extraction and a pinned clone were alternatives.
 
 ![The provider selects portable files, validates hashes and builds a ZIP; the client extracts it and initializes local integrations and state.](images/distribution-flow.svg)
 

@@ -1,6 +1,8 @@
 # Install ASDG in an existing Git project
 
-The recommended [repository-URL Quick Start](https://github.com/Elustondo-ai/agentic-sdlc-governance#quick-start--give-your-agent-the-repository-url) lets the agent acquire the ZIP safely. Manual ZIP + Prompt and Clone + Prompt remain alternatives using one Python 3.9+ engine on macOS/Linux. The prompts select inputs, show the plan and wait for approval; they never implement a second installer.
+> **Historical instructions:** This guide describes installation from the predecessor repository and is retained for reference only. For current installation instructions, use the [ASDG repository](https://github.com/Elustondo-ai/asdg) and [ASDG Wiki](https://github.com/Elustondo-ai/asdg/wiki).
+
+The former [repository-URL Quick Start](https://github.com/Elustondo-ai/agentic-sdlc-governance#quick-start--give-your-agent-the-repository-url) let the agent acquire the ZIP safely. Manual ZIP + Prompt and Clone + Prompt were alternatives using one Python 3.9+ engine on macOS/Linux. The prompts selected inputs, showed the plan and waited for approval; they did not implement a second installer.
 
 ![Both acquisitions use one integrity, approval and verification engine; Status owns the separately invoked next-step assessment.](images/installation-engine.svg)
 

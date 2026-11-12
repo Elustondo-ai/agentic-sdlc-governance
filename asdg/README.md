@@ -1,7 +1,9 @@
 # ASDG — portable methodology
 
+> **Historical snapshot — not the active ASDG distribution.** The package and instructions below are retained for historical reference. For the current methodology and installation, use the [ASDG repository](https://github.com/Elustondo-ai/asdg) and [ASDG Wiki](https://github.com/Elustondo-ai/asdg/wiki).
+
 ASDG carries twelve lifecycle stages, specialist responsibilities, evidence rules and sprint controls inside your project.
-The canonical repository is [agentic-sdlc-governance](https://github.com/Elustondo-ai/agentic-sdlc-governance).
+The historical source repository for this snapshot is [agentic-sdlc-governance](https://github.com/Elustondo-ai/agentic-sdlc-governance).
 This consolidated pilot is a review candidate; packaging does not establish human approval or native enforcement.
 
 ![A verified ZIP carries one asdg folder into the developer's Git repository, where initialization creates local integrations and state.](docs/images/distribution-flow.svg)

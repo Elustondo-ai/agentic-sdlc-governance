@@ -1,5 +1,7 @@
 # ASDG presentations
 
+> **Historical presentations:** These materials and downloads are preserved from the predecessor repository and may describe earlier designs or instructions. For current methodology and guidance, visit the [ASDG repository](https://github.com/Elustondo-ai/asdg) and [ASDG Wiki](https://github.com/Elustondo-ai/asdg/wiki).
+
 Watch on YouTube, or download the PowerPoint to read at your own pace. For readable slide text, select **1080p HD** in YouTube’s quality settings.
 
 ## Recommended
@@ -41,6 +43,6 @@ The earlier introduction’s downloadable MP4 includes the slide 08 correction; 
 
 Ten videos are public. Eleven narrated videos are ready, awaiting YouTube upload capacity; pending cells will become watch links after publication. All 21 PowerPoints are available now.
 
-Videos are concise narrated adaptations. Drafts and historical snapshots describe their source state; follow the current ASDG README for installation. The earlier recordings retain the “ASDLC” name.
+Videos are concise narrated adaptations. Drafts and historical snapshots describe their source state; follow the [current ASDG repository](https://github.com/Elustondo-ai/asdg) for installation. The earlier recordings retain the “ASDLC” name.
 
 [Presentation sources and build instructions](sources.md) · [Back to ASDG](../../README.md)

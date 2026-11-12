@@ -1,5 +1,7 @@
 # Presentation sources and build instructions
 
+> **Historical sources:** These presentation files are preserved from the predecessor repository. For current methodology and guidance, visit the [ASDG repository](https://github.com/Elustondo-ai/asdg) and [ASDG Wiki](https://github.com/Elustondo-ai/asdg/wiki).
+
 These source folders are the presentation source of truth in `Elustondo-ai/agentic-sdlc-governance`.
 Canonical location, content approval, and publication to GitHub are separate states.
 
